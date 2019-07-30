@@ -3,7 +3,7 @@ seo-title: La gestione dell'applicazione viene interrotta durante la riproduzion
 title: La gestione dell'applicazione viene interrotta durante la riproduzione
 uuid: 1 ccb 4507-bda 6-462 d-bf 67-e 22978 a 4 db 3 d
 translation-type: tm+mt
-source-git-commit: 8c9592ee7ad97de2cf4aefb226ed1390bc5b53a8
+source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
@@ -31,5 +31,5 @@ La riproduzione in un'applicazione multimediale può essere sospesa in diversi m
 
 * _Come riavviare la sessione?_
 
-   For detailed instructions on restarting a tracking session, see this page: [Manually resume a previously closed session.](../../sdk-implement/cookbook/resuming-inactive.md) L'SDK invia una ripetizione per notificare al back-end che l'utente sta rimuovendo manualmente la sessione.
+   For detailed instructions on restarting a tracking session, see this page: [Manually resume a previously closed session.](/help/sdk-implement/cookbook/resuming-inactive.md) L'SDK invia una ripetizione per notificare al back-end che l'utente sta rimuovendo manualmente la sessione.
 
