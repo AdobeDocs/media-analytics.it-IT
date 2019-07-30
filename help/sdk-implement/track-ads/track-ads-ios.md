@@ -3,7 +3,7 @@ seo-title: Tracciare annunci su iOS
 title: Tracciare annunci su iOS
 uuid: e 979 e 679-cde 5-4 c 30-8 f 34-867 feceac 13 a
 translation-type: tm+mt
-source-git-commit: ed200520b9bed990460a444dabdcf956980362ca
+source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
@@ -12,7 +12,7 @@ source-git-commit: ed200520b9bed990460a444dabdcf956980362ca
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l'implementazione tramite gli SDK 2. x. If you are implementing a 1.x version of the SDK, you can download 1.x Developers Guides here: [Download SDKs.](../../sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l'implementazione tramite gli SDK 2. x. If you are implementing a 1.x version of the SDK, you can download 1.x Developers Guides here: [Download SDKs.](/help/sdk-implement/download-sdks.md)
 
 ## Costanti di tracciamento annunci
 
@@ -76,7 +76,7 @@ source-git-commit: ed200520b9bed990460a444dabdcf956980362ca
 
 1. Se necessario, allega metadati standard e/o annuncio alla sessione di tracciamento multimediale attraverso le variabili di dati di contesto.
 
-   * [Implementare i metadati degli annunci standard su iOS](../../sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-ios.md)
+   * [Implementare i metadati degli annunci standard su iOS](/help/sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-ios.md)
    * **Custom annunmetadati:** per i metadati personalizzati, crea un oggetto variabile per le variabili dati personalizzate e popolate i dati per l'annuncio corrente:
 
       ```
@@ -129,4 +129,4 @@ source-git-commit: ed200520b9bed990460a444dabdcf956980362ca
    }
    ```
 
-See the tracking scenario [VOD playback with pre-roll ads](../../sdk-implement/tracking-scenarios/vod-preroll-ads.md) for more information.
+See the tracking scenario [VOD playback with pre-roll ads](/help/sdk-implement/tracking-scenarios/vod-preroll-ads.md) for more information.
