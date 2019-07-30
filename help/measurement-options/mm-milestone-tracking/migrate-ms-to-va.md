@@ -3,7 +3,7 @@ seo-title: Migrazione da Milestone a Media Analytics
 title: Migrazione da Milestone a Media Analytics
 uuid: fdc 96146-af 63-48 ce-b 938-c 0 ca 70729277
 translation-type: tm+mt
-source-git-commit: 27740fc1753e8ac9cf5a4b240a56b1c2dd567010
+source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
@@ -12,7 +12,7 @@ source-git-commit: 27740fc1753e8ac9cf5a4b240a56b1c2dd567010
 
 ## Panoramica {#section_ihl_nbz_cfb}
 
-I concetti principali della misurazione video sono identici per Milestone and Media Analytics (Pietra miliare e Media Analytics), che occupano eventi del lettore video e li mappano sui metodi di analisi, e li mappano anche sui metadati e i valori del lettore e mappatura sulle variabili di analisi. La soluzione Media Analytics è cresciuta da Milestone, molti dei metodi e delle metriche sono la stessa, tuttavia, l'approccio di configurazione e il codice sono cambiati in modo significativo. Dovrebbe essere possibile aggiornare il codice dell'evento del lettore in modo che faccia riferimento ai nuovi metodi di Media Analytics. See [SDK Overview](../../sdk-implement/setup/setup-overview.md) and [Tracking Overview](../../sdk-implement/track-av-playback/track-core-overview.md) for more details on implementing Media Analytics.
+I concetti principali della misurazione video sono identici per Milestone and Media Analytics (Pietra miliare e Media Analytics), che occupano eventi del lettore video e li mappano sui metodi di analisi, e li mappano anche sui metadati e i valori del lettore e mappatura sulle variabili di analisi. La soluzione Media Analytics è cresciuta da Milestone, molti dei metodi e delle metriche sono la stessa, tuttavia, l'approccio di configurazione e il codice sono cambiati in modo significativo. Dovrebbe essere possibile aggiornare il codice dell'evento del lettore in modo che faccia riferimento ai nuovi metodi di Media Analytics. See [SDK Overview](/help/sdk-implement/setup/setup-overview.md) and [Tracking Overview](/help/sdk-implement/track-av-playback/track-core-overview.md) for more details on implementing Media Analytics.
 
 Le tabelle seguenti forniscono traduzioni tra la soluzione Milestone (Pietra miliare) e la soluzione Media Analytics.
 
