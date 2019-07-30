@@ -3,7 +3,7 @@ seo-title: Riproduzione VOD con annunci ignorati
 title: Riproduzione VOD con annunci ignorati
 uuid: f 3 ab 3524-abcb -4051-b 64 e-a 1 aad 6 e 3 dd 3 f
 translation-type: tm+mt
-source-git-commit: b2d2f7078d655c6e50b3f2925002f93d5a0af533
+source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
@@ -16,22 +16,22 @@ Questo scenario comprende la riproduzione di contenuto VOD con un annuncio ignor
 
 ### Un VOD con un annuncio precedente ignorato
 
-This is the same scenario as [VOD playback with pre-roll ads](../../sdk-implement/tracking-scenarios/vod-preroll-ads.md), except the application has a provision to let the user skip the ad, on the click of a skip button perhaps.
+This is the same scenario as [VOD playback with pre-roll ads](/help/sdk-implement/tracking-scenarios/vod-preroll-ads.md), except the application has a provision to let the user skip the ad, on the click of a skip button perhaps.
 
 | Attivatore   | Heartbeat, metodo  | Chiamate di rete  | Note   |
 | --- | --- | --- | --- |
-| User clicks [!UICONTROL Play] | `trackSessionStart()` | Inizio del contenuto di Analytics, Inizio contenuto Heartbeat | La libreria delle misurazioni non riconosce che è presente un annuncio prerelease. These network calls are still exactly the same as [VOD playback with no ads](../../sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario. |
+| User clicks [!UICONTROL Play] | `trackSessionStart()` | Inizio del contenuto di Analytics, Inizio contenuto Heartbeat | La libreria delle misurazioni non riconosce che è presente un annuncio prerelease. These network calls are still exactly the same as [VOD playback with no ads](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario. |
 | L'annuncio inizia. | <ul> <li> `trackEvent:AdBreakStart` </li> <li> `trackEvent:AdStart` </li> </ul> | Analytics Ad Start, Heartbeat Ad Start |  |
 | Viene riprodotto il primo fotogramma dell'annuncio. | `trackPlay()` | Heartbeat Ad Play | Quando il contenuto di un annuncio viene riprodotto prima del contenuto principale, i heartbeat iniziano quando l'annuncio inizia a essere riprodotto. |
 | L'annuncio viene riprodotto. |  | Annunci pubblicitari |  |
 | L'annuncio viene ignorato. | `trackEvent:trackAdSkip` |  | Non c'è una chiamata di rete completa. |
-| Il contenuto viene riprodotto. |  | Heartbeats contenuto | These network calls are exactly the same as the [VOD playback with no ads](../../sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario. |
-| Riproduzione del contenuto completata. | `trackComplete()` | Heartbeat Content Complete | This network call is exactly the same as the [VOD playback with no ads](../../sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario. |
+| Il contenuto viene riprodotto. |  | Heartbeats contenuto | These network calls are exactly the same as the [VOD playback with no ads](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario. |
+| Riproduzione del contenuto completata. | `trackComplete()` | Heartbeat Content Complete | This network call is exactly the same as the [VOD playback with no ads](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario. |
 | La sessione è terminata. | `trackSessionEnd()` |  | `SessionEnd` |
 
 ## Parametri {#section_4A0F92BF3DDD4623A1EE61C76582A4A6}
 
-The parameters are identical to the parameters in the [VOD playback with pre-roll ads](../../sdk-implement/tracking-scenarios/vod-preroll-ads.md) scenario, except there is no ad complete and no ad-break complete call.
+The parameters are identical to the parameters in the [VOD playback with pre-roll ads](/help/sdk-implement/tracking-scenarios/vod-preroll-ads.md) scenario, except there is no ad complete and no ad-break complete call.
 
 ## Codice di esempio {#section_lxt_qz3_x2b}
 
