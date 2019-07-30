@@ -3,7 +3,7 @@ seo-title: Contenuto principale live con tracciamento sequenziale
 title: Contenuto principale live con tracciamento sequenziale
 uuid: b 03477 b 6-9 be 8-4 b 67-a 5 a 0-4 cef 3 cf 262 ab
 translation-type: tm+mt
-source-git-commit: b2d2f7078d655c6e50b3f2925002f93d5a0af533
+source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
@@ -14,13 +14,13 @@ source-git-commit: b2d2f7078d655c6e50b3f2925002f93d5a0af533
 
 In questo scenario, esiste una risorsa live senza annunci pubblicitari per 40 sec dopo aver partecipato al flusso live.
 
-This is the same scenario as the [VOD playback with no ads](../../sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario, but a part of the content is scrubbed through and a seek is completed from one point in main content to another point.
+This is the same scenario as the [VOD playback with no ads](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario, but a part of the content is scrubbed through and a seek is completed from one point in main content to another point.
 
 | Attivatore | Heartbeat, metodo | Chiamate di rete  | Note   |
 | --- | --- | --- | --- |
-| User clicks [!UICONTROL Play] | `trackSessionStart` | Inizio del contenuto di Analytics, Inizio contenuto Heartbeat | The measurement library is unaware that there is a pre-roll ad, so these network calls are identical to the [VOD playback with no ads](../../sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario. |
+| User clicks [!UICONTROL Play] | `trackSessionStart` | Inizio del contenuto di Analytics, Inizio contenuto Heartbeat | The measurement library is unaware that there is a pre-roll ad, so these network calls are identical to the [VOD playback with no ads](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario. |
 | Viene riprodotto il primo fotogramma del contenuto. | `trackPlay` | Riproduzione contenuto heartbeat | Quando il contenuto dei capitoli viene riprodotto prima del contenuto principale, i Heartbeat iniziano all'avvio del capitolo. |
-| Il contenuto viene riprodotto |  | Heartbeats contenuto | This network call is exactly the same as the [VOD playback with no ads](../../sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario. |
+| Il contenuto viene riprodotto |  | Heartbeats contenuto | This network call is exactly the same as the [VOD playback with no ads](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario. |
 | Sessione 1 sopra (Episodio 1 terminato) | `trackComplete` `trackSessionEnd` | Heartbeat Content Complete | Complete significa che la sessione 1 st 1 per l'episodio è stata raggiunta e guardata completamente. Prima di avviare la sessione per l'episodio successivo, questa sessione deve essere terminata. |
 | Episodio 2 avviato (inizio sessione 2) | `trackSessionStart` | Analytics Content Start Heartbeat Content Start | Questo perché l'utente ha guardato il primo episodio e continuava a guardare un altro episodio |
 | 1 st Frame of Media | `trackPlay` | Riproduzione contenuto heartbeat | Questo metodo attiva il timer e da questo momento in poi, heartbebeat verrà inviato ogni 10 secondi finché la riproduzione continua. |
