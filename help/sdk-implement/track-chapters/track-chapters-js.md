@@ -3,7 +3,7 @@ seo-title: Tenere traccia dei capitoli e dei segmenti in javascript
 title: Tenere traccia dei capitoli e dei segmenti in javascript
 uuid: ef 99 edf 7-7 a 77-46 c 4-8429-bc 9 a 856 b 98 d 6
 translation-type: tm+mt
-source-git-commit: b461da1823e45eef86302e14501eac0d4b055c7a
+source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
@@ -12,7 +12,7 @@ source-git-commit: b461da1823e45eef86302e14501eac0d4b055c7a
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l'implementazione con SDK 2. x. If you are implementing a 1.x version of the SDK, you can download the Developers Guide here: [Download SDKs.](../../sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l'implementazione con SDK 2. x. If you are implementing a 1.x version of the SDK, you can download the Developers Guide here: [Download SDKs.](/help/sdk-implement/download-sdks.md)
 
 1. Identify when the chapter start event occurs and create the `ChapterObject` instance by using the chapter information.
 
