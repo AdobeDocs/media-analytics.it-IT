@@ -3,7 +3,7 @@ seo-title: Tracciamento del contenuto scaricato
 title: Tracciamento del contenuto scaricato
 uuid: 0718689 d -9602-4 e 3 f -833 c -8297 aae 1 d 909
 translation-type: tm+mt
-source-git-commit: 501bbfe8b44a2a8e9b2ac2caab49b2317f9ea0f3
+source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
@@ -30,7 +30,7 @@ Ogni approccio presenta vantaggi e svantaggi: le tracce API di Media Collection 
 
 ### Schemi evento
 
-L'API Contenuto scaricato si basa sull'API Media Collection, quindi i dati dell'evento che i batch di lettore e invia richiedono che gli stessi schemi eventi siano utilizzati come nell'API di Media Collection. For information on these schemas, see: [Overview;](../media-collection-api/mc-api-overview.md) and [Validating event requests.](../media-collection-api/mc-api-impl/mc-api-validate-reqs.md)
+L'API Contenuto scaricato si basa sull'API Media Collection, quindi i dati dell'evento che i batch di lettore e invia richiedono che gli stessi schemi eventi siano utilizzati come nell'API di Media Collection. For information on these schemas, see: [Overview;](/help/media-collection-api/mc-api-overview.md) and [Validating event requests.](/help/media-collection-api/mc-api-impl/mc-api-validate-reqs.md)
 
 ### Ordine degli eventi
 
