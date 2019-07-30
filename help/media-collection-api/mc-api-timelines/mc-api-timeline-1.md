@@ -3,7 +3,7 @@ seo-title: Timeline 1 - Visualizza alla fine del contenuto
 title: Timeline 1 - Visualizza alla fine del contenuto
 uuid: 0 ff 591 d 3-fa 99-4123-9 e 09-c 4 e 71 ea 1060 b
 translation-type: tm+mt
-source-git-commit: a7ddd2b281252bee2686a0fa53ce8da59553df4b
+source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
@@ -31,7 +31,7 @@ I diagrammi seguenti illustrano la timeline della linea di scansione e la cronol
 
 **Dettagli implementazione**
 
-This call signals _the user's intention to play_ a video. <br/><br/>Restituisce un ID sessione ( `{sid}`) al client utilizzato per identificare tutte le chiamate di tracciamento successive all'interno della sessione. Lo stato del lettore non è ancora "playing", ma viene invece "starting". <br/><br/>[I parametri di sessione obbligatori ](../../media-collection-api/mc-api-ref/mc-api-sessions-req.md) devono essere inclusi nella `params` mappa nel corpo della richiesta. <br/><br/>Sul retro, questa chiamata genera una chiamata ad Adobe Analytics.
+This call signals _the user's intention to play_ a video. <br/><br/>Restituisce un ID sessione ( `{sid}`) al client utilizzato per identificare tutte le chiamate di tracciamento successive all'interno della sessione. Lo stato del lettore non è ancora "playing", ma viene invece "starting". <br/><br/>[I parametri di sessione obbligatori ](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) devono essere inclusi nella `params` mappa nel corpo della richiesta. <br/><br/>Sul retro, questa chiamata genera una chiamata ad Adobe Analytics.
 
 **Corpo della richiesta di esempio**
 
