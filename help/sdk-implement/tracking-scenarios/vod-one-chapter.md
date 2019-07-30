@@ -3,7 +3,7 @@ seo-title: Riproduzione VOD con un capitolo
 title: Riproduzione VOD con un capitolo
 uuid: 1566 a 6 f 5-cf 22-42 e 7-8 e 1 a -6976 c 6 c 4 e 649
 translation-type: tm+mt
-source-git-commit: b2d2f7078d655c6e50b3f2925002f93d5a0af533
+source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
@@ -14,7 +14,7 @@ source-git-commit: b2d2f7078d655c6e50b3f2925002f93d5a0af533
 
 In questo scenario, una parte del contenuto VOD viene contrassegnata come un capitolo.
 
-Unless specified, the network calls in this scenario are the same as the calls in the [VOD playback with no ads](../../sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario. La chiamata di rete avviene contemporaneamente, ma il payload è diverso.
+Unless specified, the network calls in this scenario are the same as the calls in the [VOD playback with no ads](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario. La chiamata di rete avviene contemporaneamente, ma il payload è diverso.
 
 | Attivatore   | Heartbeat, metodo  | Chiamate di rete  | Note   |
 |---|---|---|---|
@@ -23,8 +23,8 @@ Unless specified, the network calls in this scenario are the same as the calls i
 | Viene riprodotto il primo fotogramma del capitolo. | `trackPlay` | Riproduzione contenuto heartbeat | Quando il contenuto dei capitoli viene riprodotto prima del contenuto principale, i Heartbeat iniziano all'avvio del capitolo. |
 | Il capitolo viene riprodotto. |  | Heartbeats capitolo |  |
 | Il capitolo è completo. | `trackEvent:trackChapterComplete` | Completamento del capitolo Heartbeat | Questo è il momento in cui viene raggiunta la fine del capitolo. |
-| Il contenuto viene riprodotto. |  | Heartbeats contenuto | This network call is exactly the same as the [VOD playback with no ads](../../sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario. |
-| Il contenuto è completo. | `trackComplete` | Heartbeat Content Complete | This network call is exactly the same as the [VOD playback with no ads](../../sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario. |
+| Il contenuto viene riprodotto. |  | Heartbeats contenuto | This network call is exactly the same as the [VOD playback with no ads](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario. |
+| Il contenuto è completo. | `trackComplete` | Heartbeat Content Complete | This network call is exactly the same as the [VOD playback with no ads](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario. |
 | La sessione è terminata. | `trackSessionEnd` |  | `SessionEnd` indica che è stata raggiunta la fine di una sessione di visualizzazione. Questa API deve essere chiamata anche se l'utente non guarda il supporto per il completamento. |
 
 ## Parametri {#section_869319D99A474FEA8EA840415EA97FBD}
