@@ -3,7 +3,7 @@ seo-title: Timeline 2 - Sessione utenti abbandonati
 title: Timeline 2 - Sessione utenti abbandonati
 uuid: 74 b 89 e 8 f-ef 56-4 e 0 c-b 9 a 8-40739 e 15 b 4 cf
 translation-type: tm+mt
-source-git-commit: 69057b2abf7140d52b1897af3dc9d9fd01ca87ad
+source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
@@ -31,7 +31,7 @@ I diagrammi seguenti illustrano la timeline della linea di scansione e la timeli
 
 **Dettagli di implementazione**
 
-This call signals _the user's intention to play_ a video. It returns a Session ID ( `{sid}` ) to the client that is used to identify all subsequent tracking calls within the session. Lo stato del lettore non è ancora "playing", ma viene invece "starting". [I parametri di sessione obbligatori](../../media-collection-api/mc-api-ref/mc-api-sessions-req.md) devono essere inclusi nella `params` mappa nel corpo della richiesta. Sul retro, questa chiamata genera una chiamata ad Adobe Analytics.
+This call signals _the user's intention to play_ a video. It returns a Session ID ( `{sid}` ) to the client that is used to identify all subsequent tracking calls within the session. Lo stato del lettore non è ancora "playing", ma viene invece "starting". [I parametri di sessione obbligatori](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) devono essere inclusi nella `params` mappa nel corpo della richiesta. Sul retro, questa chiamata genera una chiamata ad Adobe Analytics.
 
 **Corpo della richiesta di esempio**
 
