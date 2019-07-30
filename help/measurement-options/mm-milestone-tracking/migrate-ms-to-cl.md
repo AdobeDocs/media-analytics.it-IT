@@ -3,7 +3,7 @@ seo-title: Migrazione da milestone a Custom Link (Migrazione da pietra miliare a
 title: Migrazione da milestone a Custom Link (Migrazione da pietra miliare a collegamento personalizzato)
 uuid: 1 c 8 edde 5-0 ef 1-4 bc 0-a 62 d -1747 f 4907 f 09
 translation-type: tm+mt
-source-git-commit: 530973abc12fcb2567a3742c202d992944048b8b
+source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
@@ -12,7 +12,7 @@ source-git-commit: 530973abc12fcb2567a3742c202d992944048b8b
 
 ## Panoramica {#section_xlc_fc2_dfb}
 
-I concetti principali della misurazione video sono identici per i tracciamenti milestone (Pietra miliare) e Custom Links (Tracciamento collegamenti personalizzati), che occupano eventi del lettore video e li mappano sui metodi di analisi, e li mappano anche sui metadati e i valori del lettore, e mappandoli alle variabili di analisi. L'approccio Collegamento personalizzato deve essere considerato come sliminare e semplificare sia l'implementazione che i dati raccolti. Con la soluzione Custom Link (Collegamento personalizzato), nessuna variabile o metodo è predefinito per la misurazione video, richiede una configurazione personalizzata completa. Dovrebbe essere possibile aggiornare il codice dell'evento del lettore in modo che punti alle chiamate di tracciamento dei collegamenti personalizzate per eventi di base quali avvio e completamento. See [Custom Link implementation guide](../../measurement-options/cl-in-aa/cl-impl-guide.md) and [Manual Link Tracking Using Custom Link Code](https://marketing.adobe.com/resources/help/en_US/sc/implement/link_manual.html) for more details.
+I concetti principali della misurazione video sono identici per i tracciamenti milestone (Pietra miliare) e Custom Links (Tracciamento collegamenti personalizzati), che occupano eventi del lettore video e li mappano sui metodi di analisi, e li mappano anche sui metadati e i valori del lettore, e mappandoli alle variabili di analisi. L'approccio Collegamento personalizzato deve essere considerato come sliminare e semplificare sia l'implementazione che i dati raccolti. Con la soluzione Custom Link (Collegamento personalizzato), nessuna variabile o metodo è predefinito per la misurazione video, richiede una configurazione personalizzata completa. Dovrebbe essere possibile aggiornare il codice dell'evento del lettore in modo che punti alle chiamate di tracciamento dei collegamenti personalizzate per eventi di base quali avvio e completamento. See [Custom Link implementation guide](/help/measurement-options/cl-in-aa/cl-impl-guide.md) and [Manual Link Tracking Using Custom Link Code](https://marketing.adobe.com/resources/help/en_US/sc/implement/link_manual.html) for more details.
 
 Le tabelle seguenti forniscono traduzioni tra la soluzione Milestone (Pietra miliare) e la soluzione Custom Link (Collegamento personalizzato).
 
