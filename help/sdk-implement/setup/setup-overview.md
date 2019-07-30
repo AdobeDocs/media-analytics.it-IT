@@ -3,7 +3,7 @@ seo-title: Panoramica della configurazione
 title: Panoramica della configurazione
 uuid: 06 fefedb-b 0 c 8-4 f 7 d -90 c 8-e 374 cdde 1695
 translation-type: tm+mt
-source-git-commit: 63fb6332694675cd03843995f8f86ae45973d399
+source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
@@ -12,7 +12,7 @@ source-git-commit: 63fb6332694675cd03843995f8f86ae45973d399
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti sono valide per gli SDK 2. x multimediali. If you are implementing a 1.x version of the Media SDK, see the [1.x Media SDK Documentation.](../download-sdks.md) Per gli integratori Primetime, vedi _la documentazione Primetime Media SDK_ di seguito.
+>Le istruzioni seguenti sono valide per gli SDK 2. x multimediali. If you are implementing a 1.x version of the Media SDK, see the [1.x Media SDK Documentation.](/help/sdk-implement/download-sdks.md) Per gli integratori Primetime, vedi _la documentazione Primetime Media SDK_ di seguito.
 
 
 ## Minimum Platform Version Support {#minimum-platform-version}
