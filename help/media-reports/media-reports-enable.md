@@ -3,7 +3,7 @@ seo-title: Abilitazione dei rapporti sui file multimediali
 title: Abilitazione dei rapporti sui file multimediali
 uuid: d 306068 d-a 308-4 b 6 e -8 a 72-742 dda 0 de 428
 translation-type: tm+mt
-source-git-commit: ae51df03ef9e57508a50f6928fee140f3b136b58
+source-git-commit: ab400b673e97f9b47c6088e09b7e7d9e7b1c9ee6
 
 ---
 
@@ -65,4 +65,4 @@ Ogni suite di rapporti che raccoglie metriche multimediali deve essere configura
 
 >[!IMPORTANT]
 >
->Do not change the classification names for any variables listed in the Metrics and metadata tables (e.g., [Audio and video parameters](../metrics-and-metadata/audio-video-parameters.md)) that are described there under Reporting/Reserved Variable as "classification". Le classificazioni multimediali vengono definite quando una suite di rapporti è abilitata per il tracciamento multimediale. Di tanto in tanto, Adobe aggiunge nuove proprietà e, quando ciò accade, i clienti devono riabilitare le suite di rapporti a ottenere l'accesso alle nuove proprietà del supporto. Durante il processo di aggiornamento Adobe determina se le classificazioni sono abilitate controllando i nomi delle variabili. Se mancano alcuni di essi, Adobe ne aggiunge di nuovo quelli mancanti.
+>Do not change the classification names for any variables listed in the Metrics and metadata tables (e.g., [Audio and video parameters](/help/metrics-and-metadata/audio-video-parameters.md)) that are described there under Reporting/Reserved Variable as "classification". Le classificazioni multimediali vengono definite quando una suite di rapporti è abilitata per il tracciamento multimediale. Di tanto in tanto, Adobe aggiunge nuove proprietà e, quando ciò accade, i clienti devono riabilitare le suite di rapporti a ottenere l'accesso alle nuove proprietà del supporto. Durante il processo di aggiornamento Adobe determina se le classificazioni sono abilitate controllando i nomi delle variabili. Se mancano alcuni di essi, Adobe ne aggiunge di nuovo quelli mancanti.
