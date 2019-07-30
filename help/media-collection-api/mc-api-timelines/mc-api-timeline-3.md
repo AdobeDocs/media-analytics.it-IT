@@ -3,7 +3,7 @@ seo-title: Timeline 3 - Capitoli
 title: Timeline 3 - Capitoli
 uuid: 41 b 52072-e 1 cd -4 dda -9253-31 f 3408924 f 6
 translation-type: tm+mt
-source-git-commit: 6ada4d04824a3e501ecc58a9ca719cc9445aee12
+source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
@@ -33,7 +33,7 @@ I diagrammi seguenti illustrano la timeline della linea di scansione e la timeli
 
 **Dettagli di implementazione**
 
-This call signals _the intention of the user to play_ a video. It returns a Session ID ( `{sid}` ) to the client that is used to identify all subsequent tracking calls within the session. Lo stato del lettore non è ancora "playing", ma viene invece "starting". [I parametri di sessione obbligatori](../../media-collection-api/mc-api-ref/mc-api-sessions-req.md) devono essere inclusi nella `params` mappa nel corpo della richiesta. Sul retro, questa chiamata genera una chiamata ad Adobe Analytics.
+This call signals _the intention of the user to play_ a video. It returns a Session ID ( `{sid}` ) to the client that is used to identify all subsequent tracking calls within the session. Lo stato del lettore non è ancora "playing", ma viene invece "starting". [I parametri di sessione obbligatori](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) devono essere inclusi nella `params` mappa nel corpo della richiesta. Sul retro, questa chiamata genera una chiamata ad Adobe Analytics.
 
 **Corpo della richiesta di esempio**
 
