@@ -3,7 +3,7 @@ seo-title: Panoramica
 title: Panoramica
 uuid: 3 fe 32425-5 e 2 a -4886-8 fea-d 91 d 15671 bb 0
 translation-type: tm+mt
-source-git-commit: b461da1823e45eef86302e14501eac0d4b055c7a
+source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
@@ -12,7 +12,7 @@ source-git-commit: b461da1823e45eef86302e14501eac0d4b055c7a
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l'implementazione con SDK 2. x. If you are implementing a 1.x version of the SDK, you can download the Developers Guide here: [Download SDKs.](../../sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l'implementazione con SDK 2. x. If you are implementing a 1.x version of the SDK, you can download the Developers Guide here: [Download SDKs.](/help/sdk-implement/download-sdks.md)
 
 I capitoli e il tracciamento dei segmenti sono disponibili per capitoli o segmenti di supporti personalizzati. Alcuni usi comuni per il tracciamento dei capitoli sono per definire segmenti personalizzati basati sul contenuto multimediale (come ad esempio il baseball innings) o per definire segmenti di contenuto tra interruzioni pubblicitarie. Chapter tracking is **not** required for core media tracking implementations.
 
