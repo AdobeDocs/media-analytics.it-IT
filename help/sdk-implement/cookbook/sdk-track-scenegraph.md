@@ -3,7 +3,7 @@ seo-title: Tracciamento in scenegraph (Roku)
 title: Tracciamento in scenegraph (Roku)
 uuid: fa 85 e 546-c 79 b -4 df 4-8 c 03-d 6593 fa 296 d 5
 translation-type: tm+mt
-source-git-commit: 654aaef5d816e75429975d04c4e81ad4d4b6f706
+source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
@@ -186,8 +186,8 @@ Return Type: `SceneGraphConstants`
 | Gestione versioni | `version` | Costante per il retreiving di adobemobilelibrary verison info |
 | Privacy/Rinuncia | `PRIVACY_STATUS_OPT_IN` | Costante per lo stato di privacy selezionata |
 |  | `PRIVACY_STATUS_OPT_OUT` | La costante per lo stato di privacy ha acconsentito |
-| Costanti mediaheartbeat | Refer to the constants on this page: <br/><br/>[Media Heartbeat Methods.](../../sdk-implement/track-av-playback/track-core/track-core-roku.md) | Utilizzare queste costanti con le API mediaheartbeat |
-| Metadati standard | Refer to the constants on this page: <br/><br/>[Standard Metadata Parameters.](../../sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md) | Utilizzate queste costanti per allegare metadati Video/Annuncio standard nelle API mediaheartbeat |
+| Costanti mediaheartbeat | Refer to the constants on this page: <br/><br/>[Media Heartbeat Methods.](/help/sdk-implement/track-av-playback/track-core/track-core-roku.md) | Utilizzare queste costanti con le API mediaheartbeat |
+| Metadati standard | Refer to the constants on this page: <br/><br/>[Standard Metadata Parameters.](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md) | Utilizzate queste costanti per allegare metadati Video/Annuncio standard nelle API mediaheartbeat |
 
 Globally defined utility `MediaHeartbeat` APIs on the legacy AdobeMobileLibrary are accessible *as is* in the SceneGraph enviromnent because they do not use any Brightscript components that are unavailable in SceneGraph nodes. Per ulteriori informazioni su questi metodi, fare riferimento alla tabella seguente:
 
