@@ -3,7 +3,7 @@ seo-title: Panoramica sul tracciamento
 title: Panoramica sul tracciamento
 uuid: 7 b 8 e 2 f 76-bc 4 e -4721-8933-3 e 4453 b 01788
 translation-type: tm+mt
-source-git-commit: 63fb6332694675cd03843995f8f86ae45973d399
+source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
@@ -12,7 +12,7 @@ source-git-commit: 63fb6332694675cd03843995f8f86ae45973d399
 
 >[!IMPORTANT]
 >
->Questa documentazione copre il tracciamento nella versione 2. x dell'SDK. If you are implementing a 1.x version of the SDK, you can download 1.x Developers Guides here: [Download SDKs.](../../sdk-implement/download-sdks.md)
+>Questa documentazione copre il tracciamento nella versione 2. x dell'SDK. If you are implementing a 1.x version of the SDK, you can download 1.x Developers Guides here: [Download SDKs.](/help/sdk-implement/download-sdks.md)
 
 ## Eventi del lettore
 
@@ -59,7 +59,7 @@ Il tracciamento della riproduzione di base include il caricamento di supporti, l
 
 >[!TIP]
 >
->La posizione della linea di scansione viene impostata come parte del codice di configurazione e di configurazione. For more information about `getCurrentPlayheadTime`, see [Overview: General Implementation Guidelines.](../../sdk-implement/setup/setup-overview.md#section_965A3B699A8248DDB9B2B3EA3CC20E41)
+>La posizione della linea di scansione viene impostata come parte del codice di configurazione e di configurazione. For more information about `getCurrentPlayheadTime`, see [Overview: General Implementation Guidelines.](/help/sdk-implement/setup/setup-overview.md#section_965A3B699A8248DDB9B2B3EA3CC20E41)
 
 ## Implementate {#section_BB217BE6585D4EDEB34C198559575004}
 
@@ -105,7 +105,7 @@ Il tracciamento della riproduzione di base include il caricamento di supporti, l
 
       Crea un'istanza di un oggetto di metdati standard, compila le variabili desiderate e imposta l'oggetto metadati sull'oggetto Media Heartbeat.
 
-      See the comprehensive list of metadata here: [Audio and video parameters.](../../metrics-and-metadata/audio-video-parameters.md)
+      See the comprehensive list of metadata here: [Audio and video parameters.](/help/metrics-and-metadata/audio-video-parameters.md)
 
    * **Metadati personalizzati:** crea un oggetto variabile per le variabili personalizzate e popolate i dati per questo contenuto.
 
