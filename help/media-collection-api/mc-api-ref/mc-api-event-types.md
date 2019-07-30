@@ -3,7 +3,7 @@ seo-title: Tipi di evento e descrizioni
 title: Tipi di evento e descrizioni
 uuid: bc 4 f 75 a 7-ea 22-47 eb-a 50 d -5 f 41274 c 41 d 6
 translation-type: tm+mt
-source-git-commit: 69057b2abf7140d52b1897af3dc9d9fd01ca87ad
+source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
@@ -85,5 +85,5 @@ Inviato al raggiungimento della fine del contenuto principale
 
 >[!IMPORTANT]
 >
->You should refer to the [JSON validation schemas](../../media-collection-api/mc-api-ref/mc-api-json-validation.md) for each event type, to verify correct event parameter types and requirements.
+>You should refer to the [JSON validation schemas](/help/media-collection-api/mc-api-ref/mc-api-json-validation.md) for each event type, to verify correct event parameter types and requirements.
 
