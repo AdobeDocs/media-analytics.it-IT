@@ -3,7 +3,7 @@ seo-title: Riproduzione di Test 1 Standard
 title: Riproduzione di Test 1 Standard
 uuid: c 4 b 3 fead -1 b 27-484 b-ab 6 a -39 f 1 ae 0 f 03 f 2
 translation-type: tm+mt
-source-git-commit: ee6eebac803410c1c4da1ccb80083025a9c817df
+source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
@@ -83,7 +83,7 @@ Le implementazioni dei video sono costituite dai seguenti tipi di chiamate di tr
    1. Inizio analisi video
    1. Avvio heartbeat
    1. Analytics Analytics start
-   Le prime due chiamate sopra contengono metadati e variabili aggiuntive. For call parameters and metadata, see [Test call details.](../../sdk-implement/validation/test-call-details.md)
+   Le prime due chiamate sopra contengono metadati e variabili aggiuntive. For call parameters and metadata, see [Test call details.](/help/sdk-implement/validation/test-call-details.md)
 
 1. **Visualizza interruzione di annuncio se disponibile**
 
@@ -93,7 +93,7 @@ Le implementazioni dei video sono costituite dai seguenti tipi di chiamate di tr
    1. Inizio analisi annunci video
    1. Avvio heartbeat
    1. Inizio analisi annunci heartbeat
-   Le prime due chiamate contengono metadati e variabili aggiuntive. For call parameters and metadata, see [Test call details.](../../sdk-implement/validation/test-call-details.md#section_wz3_yff_f2b)
+   Le prime due chiamate contengono metadati e variabili aggiuntive. For call parameters and metadata, see [Test call details.](/help/sdk-implement/validation/test-call-details.md#section_wz3_yff_f2b)
 
    * **Ad Play**
 
@@ -122,7 +122,7 @@ Le implementazioni dei video sono costituite dai seguenti tipi di chiamate di tr
    * La posizione dell'indicatore di riproduzione deve essere incrementata di 10 con ogni chiamata di riproduzione.
    * The `l:event:duration` value represents the number of milliseconds since the last tracking call and should be roughly the same value on each 10 second call.
 
-      For call parameters and metadata, see [Test call details](../../sdk-implement/validation/test-call-details.md#section_u1l_1gf_f2b) in *Test Call Details*
+      For call parameters and metadata, see [Test call details](/help/sdk-implement/validation/test-call-details.md#section_u1l_1gf_f2b) in *Test Call Details*
 
 1. **Sospendi durante la riproduzione per almeno 30 secondi.** Alla pausa del lettore video, le chiamate all'evento sospenderanno ogni 10 secondi. Dopo la pausa, gli eventi di riproduzione dovrebbero riprendere.
 
