@@ -5,7 +5,7 @@ seo-title: Implementare i metadati standard su Roku
 title: Implementare i metadati standard su Roku
 uuid: ae 14 d 809-343 f -452 c -832 a-f 94 bd 3 d 83 a 90
 translation-type: tm+mt
-source-git-commit: c6c7afee72d21c832be77c723750ae0551793613
+source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
@@ -36,5 +36,5 @@ standardMetadata[ADBMobile().MEDIA_AudioMetadataKeyLABEL] = "sample label"
 mediaInfo[ADBMobile().MEDIA_STANDARD_MEDIA_METADATA] = standardMetadata 
 ```
 
-See the comprehensive list of video metadata here: [Audio and video parameters](../../../metrics-and-metadata/audio-video-parameters.md)
+See the comprehensive list of video metadata here: [Audio and video parameters](/help/metrics-and-metadata/audio-video-parameters.md)
 
