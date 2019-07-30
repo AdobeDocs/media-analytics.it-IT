@@ -3,7 +3,7 @@ seo-title: Tenere traccia della riproduzione di base su Android
 title: Tenere traccia della riproduzione di base su Android
 uuid: ab 5 fab 95-76 ed -4 ae 6-aedb -2 e 66 emask 7607
 translation-type: tm+mt
-source-git-commit: 959ff714d3546a06123293cac8a17b94fae1c1ff
+source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
@@ -11,7 +11,7 @@ source-git-commit: 959ff714d3546a06123293cac8a17b94fae1c1ff
 # Track core playback on Android{#track-core-playback-on-android}
 
 >[!IMPORTANT]
->Questa documentazione copre il tracciamento nella versione 2. x dell'SDK. If you are implementing a 1.x version of the SDK, you can download the 1.x Developers Guide for Android here: [Download SDKs](../../../sdk-implement/download-sdks.md)
+>Questa documentazione copre il tracciamento nella versione 2. x dell'SDK. If you are implementing a 1.x version of the SDK, you can download the 1.x Developers Guide for Android here: [Download SDKs](/help/sdk-implement/download-sdks.md)
 
 1. **Configurazione di tracciamento iniziale**
 
@@ -56,14 +56,14 @@ source-git-commit: 959ff714d3546a06123293cac8a17b94fae1c1ff
 
    * **Metadati standard**
 
-      [Implementare i metadati standard su Android](../../../sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-android.md)
+      [Implementare i metadati standard su Android](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-android.md)
 
       >[!NOTE]
       >
       >Allegare l'oggetto metadati standard all'oggetto multimediale è facoltativo.
 
       * Media metadata keys API Reference - [Standard metadata keys - Android](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/com/adobe/primetime/va/simple/MediaHeartbeat.VideoMetadataKeys.html)
-      * See the comprehensive set of available video metadata here: [Audio and video parameters](../../../metrics-and-metadata/audio-video-parameters.md)
+      * See the comprehensive set of available video metadata here: [Audio and video parameters](/help/metrics-and-metadata/audio-video-parameters.md)
    * **Metadati personalizzati**
 
       Creare un dizionario per le variabili personalizzate e compilare i dati per questi contenuti multimediali. Ad esempio:
@@ -170,6 +170,6 @@ source-git-commit: 959ff714d3546a06123293cac8a17b94fae1c1ff
 
 Per ulteriori informazioni sulla riproduzione di base di tracciamento, consultate quanto segue:
 
-* Tracking scenarios: [VOD playback with no ads](../../../sdk-implement/tracking-scenarios/vod-no-intrs-details.md)
+* Tracking scenarios: [VOD playback with no ads](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)
 * Lettore di esempio incluso con Android SDK per un esempio di tracciamento completo.
 
