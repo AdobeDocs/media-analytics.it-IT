@@ -3,7 +3,7 @@ seo-title: Ripresa delle sessioni inattive
 title: Ripresa delle sessioni inattive
 uuid: 3 ff 1205 d -7 bbe -4016-9 bd 7-6 e 34 b 7862 c 4 c
 translation-type: tm+mt
-source-git-commit: 8c20af925a1043c90b84d7d13021848725e05500
+source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
@@ -19,7 +19,7 @@ Media SDK monitora automaticamente quanto tempo la riproduzione del file multime
 * Bloccato
 * Buffering
 
-Se una sessione di tracciamento multimediale rimane inattiva per oltre 30 minuti, la sessione verrà chiusa automaticamente. If the user resumes after a previously inactive video tracking session (`trackPlay`), Media Heartbeat automatically creates a new video session using the previously used video information and metadata, and sends a resume heartbeat event. For more information, see [Audio and video parameters.](../../metrics-and-metadata/audio-video-parameters.md)
+Se una sessione di tracciamento multimediale rimane inattiva per oltre 30 minuti, la sessione verrà chiusa automaticamente. If the user resumes after a previously inactive video tracking session (`trackPlay`), Media Heartbeat automatically creates a new video session using the previously used video information and metadata, and sends a resume heartbeat event. For more information, see [Audio and video parameters.](/help/metrics-and-metadata/audio-video-parameters.md)
 
 ## Riprende manualmente la sessione chiusa precedentemente
 
