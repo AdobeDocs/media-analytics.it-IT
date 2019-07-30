@@ -3,7 +3,7 @@ seo-title: Panoramica
 title: Panoramica
 uuid: 4 d 73 c 47 f-d 0 a 4-4228-9040-d 6432311 c 9 eb
 translation-type: tm+mt
-source-git-commit: 654aaef5d816e75429975d04c4e81ad4d4b6f706
+source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
@@ -12,7 +12,7 @@ source-git-commit: 654aaef5d816e75429975d04c4e81ad4d4b6f706
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l'implementazione in tutti gli SDK 2. x. If you are implementing a 1.x version of the SDK, you can download the 1.x Developers Guides here: [Download SDKs.](../../sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l'implementazione in tutti gli SDK 2. x. If you are implementing a 1.x version of the SDK, you can download the 1.x Developers Guides here: [Download SDKs.](/help/sdk-implement/download-sdks.md)
 
 Quality of experience tracking includes quality of service (QoS) and error tracking, both are optional elements and are **not** required for core media tracking implementations. Potete utilizzare l'API del lettore multimediale per identificare le variabili correlate a qos e il tracciamento degli errori. Ecco gli elementi chiave del tracciamento della qualità dell'esperienza:
 
