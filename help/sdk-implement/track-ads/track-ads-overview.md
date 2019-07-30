@@ -3,7 +3,7 @@ seo-title: Panoramica
 title: Panoramica
 uuid: 1607798 b-c 6 ef -4 d 60-8 e 40-e 958 c 345 b 09 c
 translation-type: tm+mt
-source-git-commit: 56e8716ea37049b95a59a82144bbad0e882c16b4
+source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
@@ -12,9 +12,9 @@ source-git-commit: 56e8716ea37049b95a59a82144bbad0e882c16b4
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l'implementazione tramite gli SDK 2. x. If you are implementing a 1.x version of the SDK, you can download 1.x Developers Guides here: [Download SDKs.](../../sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l'implementazione tramite gli SDK 2. x. If you are implementing a 1.x version of the SDK, you can download 1.x Developers Guides here: [Download SDKs.](/help/sdk-implement/download-sdks.md)
 
-La riproduzione di annunci include interruzioni di annunci pubblicitari, avvii annunci, annunci pubblicitari e annunci. Utilizzate l'API del lettore multimediale per identificare gli eventi del lettore chiave e compilare le variabili pubblicitarie richieste e facoltative. See the comprehensive list of metadata here: [Ad parameters.](../../metrics-and-metadata/ad-parameters.md)
+La riproduzione di annunci include interruzioni di annunci pubblicitari, avvii annunci, annunci pubblicitari e annunci. Utilizzate l'API del lettore multimediale per identificare gli eventi del lettore chiave e compilare le variabili pubblicitarie richieste e facoltative. See the comprehensive list of metadata here: [Ad parameters.](/help/metrics-and-metadata/ad-parameters.md)
 
 ## Player events {#player-events}
 
