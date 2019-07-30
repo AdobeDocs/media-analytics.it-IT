@@ -3,7 +3,7 @@ seo-title: Parametri di qualità
 title: Parametri di qualità
 uuid: 0 d 9 fa 764-edef -4178-8650-90 c 9 a 0852 a 57
 translation-type: tm+mt
-source-git-commit: 180eafdfc536039820ade0b52e5c55f874719d8e
+source-git-commit: aca428989370037efcb82ca9af342c904c3d9bce
 
 ---
 
@@ -224,7 +224,7 @@ Descrizione dati tabella:
 
 |   Implementazione   | Parametri di rete | Generazione di rapporti   |
 | --- | --- | --- |
-| <ul> <li> **Chiave SDK:**<br/> Set automatico </li> <li> **Chiave API:**<br/> N/D </li> <li> **Richiesto:**<br/> No </li> <li> **Tipo:**<br/> stringa </li> <li> **Inviato con:**<br/> Chiudi supporto </li> <li> **Min. SDK Version:** Any </li> <li> **Valore campione:**<br/> TRUE </li><li> **Descrizione:**<br/>Il numero di flussi in cui si sono verificati cambiamenti di bitrate. Questa metrica è impostata su 1 solo se durante una sessione di riproduzione si è verificato almeno un evento di modifica bitrate.  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a. media. qoe.<br/>error) </li> <li> **Heartbeat:**<br/> (s: evento:<br/>type = error) </li> </ul> | <ul> <li> **Disponibile:**<br/> Sì </li> <li> **Variabile riservata:**<br/> evento </li> <li> **Nome rapporto:**<br/> Flussi interessati dall'errore </li> <li> **Dati contestuali:**<br/> (a. media. qoe.<br/>error) </li> <li> **Feed dati:**<br/> videoqoeerror </li> <li> **Audience Manager:**<br/> (c_ contextdata.<br/>a. media. qoe.<br/>error) </li> </ul> |
+| <ul> <li> **Chiave SDK:**<br/> Set automatico </li> <li> **Chiave API:**<br/> N/D </li> <li> **Richiesto:**<br/> No </li> <li> **Tipo:**<br/> stringa </li> <li> **Inviato con:**<br/> Chiudi supporto </li> <li> **Min. SDK Version:** Any </li> <li> **Valore campione:**<br/> TRUE </li><li> **Descrizione:**<br/>Il numero di flussi in cui si è verificato un evento di errore è `trackError` stato chiamato durante la sessione di riproduzione ed è stata `type=error` generata una chiamata heartbeat. </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a. media. qoe.<br/>error) </li> <li> **Heartbeat:**<br/> (s: evento:<br/>type = error) </li> </ul> | <ul> <li> **Disponibile:**<br/> Sì </li> <li> **Variabile riservata:**<br/> evento </li> <li> **Nome rapporto:**<br/> Flussi interessati dall'errore </li> <li> **Dati contestuali:**<br/> (a. media. qoe.<br/>error) </li> <li> **Feed dati:**<br/> videoqoeerror </li> <li> **Audience Manager:**<br/> (c_ contextdata.<br/>a. media. qoe.<br/>error) </li> </ul> |
 
 
 
