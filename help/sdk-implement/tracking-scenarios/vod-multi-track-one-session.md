@@ -3,7 +3,7 @@ seo-title: VOD un tracciatore per più sessioni
 title: VOD un tracciatore per più sessioni
 uuid: 355 c 83 f 4-52 bd -4 bdd -92 dc-ab 506 e 412 d 0 a
 translation-type: tm+mt
-source-git-commit: b2d2f7078d655c6e50b3f2925002f93d5a0af533
+source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
@@ -14,7 +14,7 @@ source-git-commit: b2d2f7078d655c6e50b3f2925002f93d5a0af533
 
 In this scenario, the `MediaHeartbeat` instance is used to create two separate sessions in sequence.
 
-This scenario is the same as the [VOD playback with no ads](../../sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario.
+This scenario is the same as the [VOD playback with no ads](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario.
 
 ## Parametri {#section_D52B325B99DA42108EF560873907E02C}
 
