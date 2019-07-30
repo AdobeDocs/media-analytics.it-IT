@@ -3,7 +3,7 @@ seo-title: Panoramica
 title: Panoramica
 uuid: c 14 bdbef -5846-4 d 31-8 a 14-8 e 9 e 0 e 9 c 9861
 translation-type: tm+mt
-source-git-commit: a7ddd2b281252bee2686a0fa53ce8da59553df4b
+source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
@@ -16,7 +16,7 @@ L'API Media Collection è l'alternativa restful di Adobe all'SDK lato client. Co
 
    Questa funzione consente di tenere traccia dei supporti mentre un utente è offline, tramite la memorizzazione locale dei dati dell'evento fino alla restituzione online del dispositivo. (See [Track downloaded content](track-downloaded-content.md) for details.)
 
-L'API Media Collection è essenzialmente un'adattatore che funge da versione lato server di Media SDK. Ciò significa che alcuni aspetti della documentazione di Media SDK sono pertinenti anche all'API di Media Collection. For example, both solutions use the same [Audio and Video Parameters](../metrics-and-metadata/audio-video-parameters.md), and the collected Audio and Video tracking data leads to the same [Reporting and Analysis.](../media-reports/media-reports-enable.md)
+L'API Media Collection è essenzialmente un'adattatore che funge da versione lato server di Media SDK. Ciò significa che alcuni aspetti della documentazione di Media SDK sono pertinenti anche all'API di Media Collection. For example, both solutions use the same [Audio and Video Parameters](/help/metrics-and-metadata/audio-video-parameters.md), and the collected Audio and Video tracking data leads to the same [Reporting and Analysis.](/help/media-reports/media-reports-enable.md)
 
 ## Media Tracking Data Flows {#section_pwq_n34_qbb}
 
