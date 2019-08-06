@@ -3,12 +3,12 @@ seo-title: Analisi federate
 title: Analisi federate
 uuid: a 82 ace 81-c 2 f 6-4799-9 a 62-4 c 6 a 737 a 7 dab
 translation-type: tm+mt
-source-git-commit: 5ff3566fae2c1df559341057fafdd289774e4b2f
+source-git-commit: a9e1c8ba7c8a95120e4c66460ff6d742c0855652
 
 ---
 
 
-# Federated Analytics{#federated-analytics}
+# Analisi federate{#federated-analytics}
 
 Il servizio Federtics Federtics offre un sistema per la condivisione di dati di Analytics (audio e video) tra due partner. I dati standardizzati di misurazione creati da Media Analytics rappresentano il marchio per Analytics Federated, consentendo agli stessi dati di confluire in un singolo report da più fonti. Seguendo le regole e la logica di Analytics Federate, i dati sono facilmente controllati e personalizzati in base alle esigenze di ogni partnership. Analisi federate rende la misurazione audio e video più efficiente, ottimizzata e fruibile.
 
@@ -33,7 +33,7 @@ Il servizio Federtics Federtics offre un sistema per la condivisione di dati di 
 
 * **Contratto flussi multimediali:** Il ricevitore e il mittente devono aver stipulato Adobe Analytics for Media Stream prima di poter accedere ai dati audio e video in Adobe Analytics. Per ulteriori informazioni, contattate il team dell'account.
 * **Addendum Federated:** Ogni mittente e destinatario deve disporre di un addendum firmato presso Adobe prima di inviare o ricevere dati. È necessario un addendum per cliente, non un addendum per partnership. Per ulteriori informazioni, contattate il team dell'account.
-* **Implementazione di Media Analytics:** Il mittente deve avere Media Analytics implementato in tutti i lettori che faranno parte del set di dati federato. Solo i dati di Media Analytics sono disponibili per la federazione. See documentation: [Measuring audio and video in Adobe Analytics](media-overview.md)
+* **Implementazione di Media Analytics:** Il mittente deve avere Media Analytics implementato in tutti i lettori che faranno parte del set di dati federato. Solo i dati di Media Analytics sono disponibili per la federazione. Consulta la documentazione: [Misurazione di audio e video in Adobe Analytics](media-overview.md)
 
 * **Adobe Consulting Contract:** Per la configurazione iniziale di regole federate tra destinatari e mittente, è importante lavorare con i servizi di consulenza per esaminare i dati e creare il contratto di condivisione dei dati.
 
@@ -41,7 +41,7 @@ Il servizio Federtics Federtics offre un sistema per la condivisione di dati di 
 
 1. Il mittente e il ricevitore lavorano insieme per completare il modulo Contratto regole federazione.
 
-   **Scarica la versione corrente del modulo qui:**[https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/hbvideo/federated_analytics_form.pdf.](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/hbvideo/federated_analytics_form.pdf)
+   **Scarica la versione corrente del modulo qui:**[Contratto sulle regole della federazione](./federated_analytics_form.pdf)
 
    >[!NOTE]
    >
