@@ -3,36 +3,38 @@ seo-title: Riproduzione di Test 1 Standard
 title: Riproduzione di Test 1 Standard
 uuid: c 4 b 3 fead -1 b 27-484 b-ab 6 a -39 f 1 ae 0 f 03 f 2
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: 1b785378750349c4f316748d228754cb64f70bca
 
 ---
 
 
-# Test 1: Standard playback{#test-standard-playback}
+# Test 1: Riproduzione standard{#test-standard-playback}
 
-Questo caso di test convalida la riproduzione generica e la sequenza ed è richiesto come parte del modulo di richiesta di certificazione. Download the certification request form here: [Certification Request Form.](cert_req_form_nielsen.docx)
+Questo caso di test convalida la riproduzione generale e la sequenza. È richiesto come parte del modulo richiesta di certificazione.
 
-Le implementazioni dei video sono costituite dai seguenti tipi di chiamate di tracciamento:
-* Le chiamate Video e Avvio annunci vengono inviate direttamente al server appmeasurement.
-* Le chiamate heartbeat di Media Analytics (MA) vengono inviate all'inizio e ogni dieci secondi al server di tracciamento Adobe VA.
+**Scarica il modulo della richiesta di certificazione qui: = = &gt;**  [Modulo di richiesta certificazione.](cert_req_form.docx)
+
+Le implementazioni dei file multimediali sono costituite dai seguenti tipi di chiamate di tracciamento:
+* Le chiamate per file multimediali e Ad avvio vengono inviate direttamente al server appmeasurement (Adobe Analytics).
+* Le chiamate heartbeat di Media Analytics vengono inviate all'inizio e ogni dieci secondi (per contenuto) o di un secondo (per annunci) al server di tracciamento Media Analytics.
 
 >[!NOTE]
->Il monitoraggio dei video si comporta allo stesso modo su tutte le piattaforme, su desktop e dispositivi mobili.
+>Il monitoraggio dei contenuti multimediali si comporta allo stesso modo su tutte le piattaforme.
 
-È necessario completare e registrare le azioni nell'ordine seguente:
+È necessario completare e registrare queste azioni nel seguente ordine:
 
 1. **Caricare la pagina o l'app**
 
    **Server di tracciamento** (per tutti i siti Web e le app mobili):
 
-   * **Appmeasurement (Adobe Analytics):** un server di tracciamento RDC o un CNAME che risolve un server RDC è richiesto per il servizio ID visitatore Experience Cloud. The analytics tracking server should end in `.sc.omtrdc.net` or be a CNAME.
+   * **Appmeasurement (Adobe Analytics):** un server di tracciamento RDC o un CNAME che risolve un server di tracciamento RDC è richiesto per il servizio ID visitatore Experience Cloud. Il server di tracciamento di Analytics deve terminare con "`.sc.omtrdc.net`oppure essere un CNAME.
 
-   * **Media Analytics (Heartbeats):** questo server ha sempre il formato `[namespace].hb.omtrdc.net`, dove `[namespace]` viene definito dalla società di accesso e fornito da Adobe.
-   Devi convalidare determinate variabili chiave, universali in tutte le chiamate di tracciamento:
+   * **Media Analytics (Heartbeats) -** Questo server ha sempre il formato "`[namespace].hb.omtrdc.net`, dove `[namespace]` specifica il nome della società. Questo nome viene fornito da Adobe.
+   Devi convalidare alcune variabili chiave universali in tutte le chiamate di tracciamento:
 
-   **ID visitatore Adobe (`mid`):** La `mid` variabile viene utilizzata per acquisire il valore impostato nel cookie AMCV. The `mid` variable is the primary identification value for both websites and mobile apps, and also indicates that the Experience Cloud Visitor ID service is set up properly. Si trova sia nelle chiamate appmeasurement che Media Analytics (MA).
+   **ID visitatore Adobe (`mid`):** La `mid` variabile viene utilizzata per acquisire il valore impostato nel cookie AMCV. La `mid` variabile è il valore di identificazione principale sia per i siti Web che per le app mobili, e indica anche che il servizio ID visitatore Experience Cloud è configurato correttamente. Si trova sia nelle chiamate appmeasurement che Media Analytics.
 
-   * **Chiamata Heartbeat Play**
+   * **Chiamata di riproduzione Media Analytics**
 
       | Parametro | Valore (esempio) |
       |---|---|
@@ -69,31 +71,31 @@ Le implementazioni dei video sono costituite dai seguenti tipi di chiamate di tr
 
       >[!NOTE]
       >
-      >On VA Start Calls ( `s:event:type=start`) the `mid` values may not be present. Questo è OK. They may not appear until the VA Play Calls ( `s:event:type=play`).
+      >In VA Start Calls (`s:event:type=start`) i `mid` valori potrebbero non essere presenti. Questo è OK. Possono essere visualizzati solo fino a quando VA Play ( `s:event:type=play`).
 
       | Parametro | Valore (esempio) |
       |---|---|
       | `pev2` | ms_ s |
 
 
-1. **Avviare il lettore video**
+1. **Avviare il lettore multimediale**
 
-   All'avvio del lettore video, le chiamate principali vengono inviate nel seguente ordine:
+   All'avvio del lettore multimediale, le chiamate principali vengono inviate nel seguente ordine:
 
-   1. Inizio analisi video
+   1. Inizio analisi file multimediali
    1. Avvio heartbeat
    1. Analytics Analytics start
-   Le prime due chiamate sopra contengono metadati e variabili aggiuntive. For call parameters and metadata, see [Test call details.](/help/sdk-implement/validation/test-call-details.md)
+   Le prime due chiamate sopra contengono metadati e variabili aggiuntive. Per i parametri e i metadati delle chiamate, consultate [Dettagli sulle chiamate di test.](/help/sdk-implement/validation/test-call-details.md)
 
 1. **Visualizza interruzione di annuncio se disponibile**
 
    * **Inizio annuncio**
-   All'avvio dell'annuncio video, le seguenti chiamate chiave vengono inviate nel seguente ordine:
+   All'avvio dell'annuncio multimediale, le seguenti chiamate chiave vengono inviate nel seguente ordine:
 
-   1. Inizio analisi annunci video
+   1. Inizio analisi annunci multimediali
    1. Avvio heartbeat
    1. Inizio analisi annunci heartbeat
-   Le prime due chiamate contengono metadati e variabili aggiuntive. For call parameters and metadata, see [Test call details.](/help/sdk-implement/validation/test-call-details.md#section_wz3_yff_f2b)
+   Le prime due chiamate contengono metadati e variabili aggiuntive. Per i parametri e i metadati delle chiamate, consultate [Dettagli sulle chiamate di test.](/help/sdk-implement/validation/test-call-details.md#section_wz3_yff_f2b)
 
    * **Ad Play**
 
@@ -113,24 +115,24 @@ Le implementazioni dei video sono costituite dai seguenti tipi di chiamate di tr
    >
    >Il valore della linea di scansione deve rimanere costante durante la pausa.
 
-1. **Riproduci video principale per 10 minuti senza interruzioni.**** Riproduzione contenuto**
+1. **Riproduci contenuti multimediali principali per 10 minuti senza interruzioni.****Riproduzione contenuto**
 
-   Durante la riproduzione di contenuto principale normale, le chiamate Heartbeat vengono inviate al server Heartbeat ogni dieci secondi.
+   Durante la riproduzione del contenuto principale, le chiamate heartbeat vengono inviate al server Media Analytics ogni dieci secondi.
 
    Note:
 
    * La posizione dell'indicatore di riproduzione deve essere incrementata di 10 con ogni chiamata di riproduzione.
-   * The `l:event:duration` value represents the number of milliseconds since the last tracking call and should be roughly the same value on each 10 second call.
+   * Il `l:event:duration` valore rappresenta il numero di millisecondi trascorsi dall'ultima chiamata di tracciamento e dovrebbe essere circa lo stesso valore per ogni chiamata di 10 secondi.
 
-      For call parameters and metadata, see [Test call details](/help/sdk-implement/validation/test-call-details.md#section_u1l_1gf_f2b) in *Test Call Details*
+      Per i parametri e i metadati delle chiamate, consultate [Dettagli sulle chiamate di test.](/help/sdk-implement/validation/test-call-details.md#section_u1l_1gf_f2b)
 
-1. **Sospendi durante la riproduzione per almeno 30 secondi.** Alla pausa del lettore video, le chiamate all'evento sospenderanno ogni 10 secondi. Dopo la pausa, gli eventi di riproduzione dovrebbero riprendere.
+1. **Sospendi durante la riproduzione per almeno 30 secondi.** Alla pausa del lettore multimediale, le chiamate all'evento pause verranno inviate ogni 10 secondi. Dopo la pausa, gli eventi di riproduzione dovrebbero riprendere.
 
-1. **Ricerca/scorrimento video.** Quando si esegue lo scorrimento dell'indicatore di riproduzione video, non vengono inviate chiamate di tracciamento speciali, tuttavia, quando la riproduzione video riprende dopo lo scorrimento del valore dell'indicatore di riproduzione deve riflettere la nuova posizione all'interno del contenuto principale.
+1. **Cercare/scorrere gli elementi multimediali.** Quando si esegue lo scorrimento dell'indicatore di riproduzione multimediale, non vengono inviate chiamate di tracciamento speciali, tuttavia, quando la riproduzione multimediale riprende dopo lo scorrimento del valore dell'indicatore di riproduzione deve riflettere la nuova posizione all'interno del contenuto principale.
 
-1. **Riproduci video (solo VOD).** Quando un video viene riprodotto, è necessario inviare una nuova serie di chiamate di avvio video, come se si trattasse di una nuova visualizzazione video.
+1. **Riproduci i supporti (solo VOD).** Quando si riproducono i contenuti multimediali, è necessario inviare una nuova serie di chiamate per iniziare, come se si trattasse di una nuova visualizzazione multimediale.
 
-1. **Visualizzare il video successivo nella playlist.** All'inizio del video del video successivo in una playlist, è necessario inviare una nuova serie di chiamate di avvio video.
+1. **Visualizza i contenuti multimediali successivi nella playlist.** Quando si avvia l'inizio del supporto successivo in una playlist, è necessario inviare una nuova serie di chiamate di avvio multimediale.
 
-1. **Consente di scambiare video o flusso.** Quando si passano i flussi dal vivo, non è necessario inviare una chiamata completa Heartbeat per il primo flusso. Le chiamate di avvio video e le chiamate di riproduzione video devono iniziare con il nuovo nome e il nome del flusso e con i valori corretti della linea di scansione e della durata per il nuovo show.
+1. **Consente di scambiare supporti o flusso.** Quando si passano i flussi dal vivo, non è necessario inviare una chiamata completa Heartbeat per il primo flusso. Le chiamate di avvio multimediale e le chiamate di riproduzione per file multimediali devono iniziare con il nome del nuovo show e del flusso e con i valori corretti della linea di scansione e della durata per la nuova visualizzazione.
 
