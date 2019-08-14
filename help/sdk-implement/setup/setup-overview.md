@@ -3,19 +3,19 @@ seo-title: Panoramica della configurazione
 title: Panoramica della configurazione
 uuid: 06 fefedb-b 0 c 8-4 f 7 d -90 c 8-e 374 cdde 1695
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: 1b785378750349c4f316748d228754cb64f70bca
 
 ---
 
 
-# Setup Overview{#setup-overview}
+# Panoramica della configurazione{#setup-overview}
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti sono valide per gli SDK 2. x multimediali. If you are implementing a 1.x version of the Media SDK, see the [1.x Media SDK Documentation.](/help/sdk-implement/download-sdks.md) Per gli integratori Primetime, vedi _la documentazione Primetime Media SDK_ di seguito.
+>Le istruzioni seguenti sono valide per gli SDK 2. x multimediali. Se implementhi una versione 1. x di Media SDK, consulta la documentazione di Media SDK [1. x.](/help/sdk-implement/download-sdks.md) Per gli integratori Primetime, vedi _la documentazione Primetime Media SDK_ di seguito.
 
 
-## Minimum Platform Version Support {#minimum-platform-version}
+## Supporto versione minima piattaforma {#minimum-platform-version}
 
 La tabella seguente descrive le versioni minime della piattaforma supportate per ciascun SDK, a partire dal 19 febbraio 2019.
 
@@ -28,7 +28,7 @@ La tabella seguente descrive le versioni minime della piattaforma supportate per
 | Safari | v 7 + |
 | IE | v 11 + |
 
-## General Implementation Guidelines {#section_965A3B699A8248DDB9B2B3EA3CC20E41}
+## Linee guida generali sull'implementazione {#section_965A3B699A8248DDB9B2B3EA3CC20E41}
 
 Il tracciamento multimediale include tre componenti SDK principali:
 * Configurazione Media Heartbeat - La configurazione contiene le impostazioni di base per il reporting.
@@ -37,7 +37,7 @@ Il tracciamento multimediale include tre componenti SDK principali:
 
 Completa i seguenti passaggi di implementazione:
 
-1. Create a `MediaHeartbeatConfig` instance and set your config parameter values.
+1. Create un `MediaHeartbeatConfig` 'istanza e impostate i valori dei parametri di configurazione.
 
    |  Nome della variabile  | Descrizione  | Obbligatorio |  Valore predefinito  |
    |---|---|:---:|---|
@@ -49,11 +49,11 @@ Completa i seguenti passaggi di implementazione:
    | `ssl` | Indica se le chiamate devono essere effettuate mediante HTTPS | No | false |
    | `debugLogging` | Indica se la registrazione di debug è abilitata | No | false |
 
-1. Implement the `MediaHeartbeatDelegate`.
+1. Implementare l ' `MediaHeartbeatDelegate`.
 
    | Nome metodo  |  Descrizione  | Obbligatorio |
    | --- | --- | :---: |
-   | `getQoSObject()` | Returns the `MediaObject` instance that contains the current QoS information. Questo metodo verrà chiamato più volte durante una sessione di riproduzione. L'implementazione del lettore deve restituire sempre i dati qos disponibili più di recente. | Sì |
+   | `getQoSObject()` | Restituisce l' `MediaObject` istanza che contiene le informazioni qos correnti. Questo metodo verrà chiamato più volte durante una sessione di riproduzione. L'implementazione del lettore deve restituire sempre i dati qos disponibili più di recente. | Sì |
    | `getCurrentPlaybackTime()` | Restituisce la posizione corrente dell'indicatore di riproduzione. Per il tracciamento VOD, il valore è specificato in secondi dall'inizio dell'elemento multimediale. Per il monitoraggio LINEARE/LIVE, il valore viene specificato in secondi dall'inizio del programma. | Sì |
 
    >[!TIP]
@@ -67,13 +67,13 @@ Completa i seguenti passaggi di implementazione:
    | `fps` | Fotogrammi visualizzati al secondo. | Sì |
    | `droppedFrames` | Numero di fotogrammi rilasciati finora. | Sì |
 
-1. Create the `MediaHeartbeat` instance.
+1. Create l' `MediaHeartbeat` istanza.
 
-   Use the `MediaHertbeatConfig` and `MediaHertbeatDelegate` to create the `MediaHeartbeat` instance.
+   Utilizzate `MediaHertbeatConfig` e `MediaHertbeatDelegate` per creare l' `MediaHeartbeat` istanza.
 
    >[!IMPORTANT]
    >
-   >Make sure that your `MediaHeartbeat` instance is accessible and does not get deallocated until the end of the session. Questa istanza verrà utilizzata per tutti i seguenti eventi di tracciamento multimediali.
+   >Accertatevi che `MediaHeartbeat` l'istanza sia accessibile e che non venga caricata fino alla fine della sessione. Questa istanza verrà utilizzata per tutti i seguenti eventi di tracciamento multimediali.
 
    >[!TIP]
    >
@@ -91,7 +91,7 @@ Completa i seguenti passaggi di implementazione:
    
    //Media Heartbeat Config 
    var mediaConfig = new MediaHeartbeatConfig(); 
-   mediaConfig.trackingServer = "namespace.hb.omtrdc.net"; 
+   mediaConfig.trackingServer = "[your_namespace].hb.omtrdc.net"; 
    mediaConfig.playerName = "HTML5 Basic"; 
    mediaConfig.channel = "Video Channel"; 
    mediaConfig.debugLogging = true; 
@@ -119,7 +119,7 @@ Completa i seguenti passaggi di implementazione:
      new MediaHeartbeat(mediaDelegate, mediaConfig, appMeasurementInstance);  
    ```
 
-## Validate {#section_D4D46F537A4E442B8AB0BB979DDAA4CC}
+## Convalida {#section_D4D46F537A4E442B8AB0BB979DDAA4CC}
 
 Le implementazioni multimediali sono costituite da due tipi di chiamate di tracciamento:
 
@@ -135,23 +135,23 @@ Per ulteriori informazioni sulle opzioni del server di tracciamento, vedi [Compi
    >
    >Per il servizio ID visitatore di Experience Cloud è necessario un server di tracciamento RDC o CNAME che risolve un server RDC.
 
-   The analytics tracking server should end in "`.sc.omtrdc.net`" or be a CNAME.
+   Il server di tracciamento analisi deve terminare con "`.sc.omtrdc.net`oppure essere un CNAME.
 
-* **Heartbeats (Media Analytics)**
-È sempre dotato del formato "`[namespace].hb.omtrdc.net`, dove"`[namespace]`è definito dalla società di accesso e fornito da Adobe.
+* ** Media Analytics (Heartbeats)**
+Questo ha sempre il formato "`[your_namespace].hb.omtrdc.net`. Il valore di "`[your_namespace]`specifica la società e viene fornito da Adobe.
 
-## SDK 1.x Documentation {#section_acj_tkk_t2b}
+## Documentazione SDK 1. x {#section_acj_tkk_t2b}
 
 | SDK di Video Analytics 1. x  | Guide per sviluppatori (solo PDF) |
 | --- | --- |
 | Android | [Configurazione per Android ](vhl-dev-guide-v15_android.pdf) |
 | AppleTV | [Configura per appletv ](vhl-dev-guide-v1x_appletv.pdf) |
 | Chromecast | [Configura per Chromecast ](chromecast_1.x_sdk.pdf) |
-| App | [Configurazione per iOS ](vhl-dev-guide-v15_ios.pdf) |
+| iOS | [Configurazione per iOS ](vhl-dev-guide-v15_ios.pdf) |
 | JavaScript | [Configurare per javascript ](vhl-dev-guide-v15_js.pdf) |
-| Primetime | <ul> <li> Android:   [Configure Media Analytics](https://help.adobe.com/en_US/primetime/psdk/android/1.4/index.html#PSDKs-task-Initialize_and_configure_video_analytics_) </li> <li> DHLS:   [Configure Media Analytics](https://help.adobe.com/en_US/primetime/psdk/dhls/index.html#PSDKs-task-Initialize_and_configure_video_analytics_) </li> <li> iOS:   [Configure Media Analytics](https://help.adobe.com/en_US/primetime/psdk/ios/1.4/index.html#PSDKs-task-Initialize_and_configure_video_analytics_) </li> </ul> |
+| Primetime | <ul> <li> Android: [Configurare i file multimediali Analytics](https://help.adobe.com/en_US/primetime/psdk/android/1.4/index.html#PSDKs-task-Initialize_and_configure_video_analytics_) </li> <li> DHLS: [Configurare i file multimediali Analytics](https://help.adobe.com/en_US/primetime/psdk/dhls/index.html#PSDKs-task-Initialize_and_configure_video_analytics_) </li> <li> iOS: [Configurare i file multimediali Analytics](https://help.adobe.com/en_US/primetime/psdk/ios/1.4/index.html#PSDKs-task-Initialize_and_configure_video_analytics_) </li> </ul> |
 | TVML | [Configurare per TVML ](vhl_tvml.pdf) |
 
-## Primetime Media SDK Documentation {#primetime-docs}
+## Documentazione di Primetime Media SDK {#primetime-docs}
 
 * [Guide utente Primetime](https://helpx.adobe.com/primetime/user-guide.html)
