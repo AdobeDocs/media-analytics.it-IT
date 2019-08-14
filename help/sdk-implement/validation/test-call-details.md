@@ -3,14 +3,14 @@ seo-title: Dettagli della chiamata di test
 title: Dettagli della chiamata di test
 uuid: d 3 a 0 e 62 f -2 fc 3-413 d-ac 56-adbbc 9 b 3 e 983
 translation-type: tm+mt
-source-git-commit: 400c7ada4ab269017c3c2948c9056b4c1031d793
+source-git-commit: 1b785378750349c4f316748d228754cb64f70bca
 
 ---
 
 
-# Test call details{#test-call-details}
+# Dettagli della chiamata di test{#test-call-details}
 
-## Start the video player {#section_qts_xff_f2b}
+## Avviare il lettore video {#section_qts_xff_f2b}
 
 ### Chiamata start di Media Analytics
 
@@ -57,15 +57,15 @@ source-git-commit: 400c7ada4ab269017c3c2948c9056b4c1031d793
 | `s:event:type` | start |
 | `l:event:playhead` | 0 |
 | `l:event:duration` | 4 |
-| `l:asset:name` | Titolo episodio |
-| `l:asset:video_id` | 123456 |
+| `s:asset:name` | Titolo episodio |
+| `s:asset:video_id` | 123456 |
 | `l:asset:length` | 120 |
-| `l:stream:type` | vod |
+| `s:stream:type` | vod |
 | `s:asset:type` | main |
 | `s:meta:custom.[value]` | Campi di metadati personalizzati |
 | `s:meta:a.media.[value]` | Campi di metadati standard |
 
-### Metadati video nella chiamata di avvio di Media Analytics
+### Metadati multimediali nella chiamata di avvio di Media Analytics
 
 | Parametro | Valore (esempio)  |
 |---|---|
@@ -84,13 +84,13 @@ source-git-commit: 400c7ada4ab269017c3c2948c9056b4c1031d793
 | `s:event:type` | aa_ start |
 | `l:event:playhead` | 0 |
 | `l:event:duration` | 4 |
-| `l:asset:name` | Titolo episodio |
-| `l:asset:video_id` | 123456 |
+| `s:asset:name` | Titolo episodio |
+| `s:asset:video_id` | 123456 |
 | `l:asset:length` | 120 |
-| `l:stream:type` | vod |
+| `s:stream:type` | vod |
 | `s:asset:type` | main |
 
-### Metadati video nella chiamata di avvio Heartbeat
+### Metadati multimediali nella chiamata di avvio Heartbeat
 
 | Parametro | Valore (esempio)  |
 |---|---|
@@ -121,7 +121,7 @@ source-git-commit: 400c7ada4ab269017c3c2948c9056b4c1031d793
 * Questa chiamata indica che la libreria heartbeat ha richiesto che una chiamata di analisi 2 = ms_ s venga inviata al server di analisi.
 * Questa chiamata non contiene metadati personalizzati.
 
-## View ad playback {#section_wz3_yff_f2b}
+## Visualizzare la riproduzione degli annunci {#section_wz3_yff_f2b}
 
 ### Chiamata Avvio annunci di Media Analytics
 
@@ -150,14 +150,14 @@ source-git-commit: 400c7ada4ab269017c3c2948c9056b4c1031d793
 | `s:event:type` | start |
 | `l:event:playhead` | 0 |
 | `l:event:duration` | 4 |
-| `l:asset:ad_id` | 9378 |
+| `s:asset:ad_id` | 9378 |
 | `l:asset:length` | 120 |
-| `l:stream:type` | vod |
+| `s:stream:type` | vod |
 | `s:asset:type` | ad |
 | `s:meta:custom.[value]` | Campi di metadati personalizzati |
 | `s:meta:a.media.[value]` | Campi di metadati standard |
 
-### Metadati video nella chiamata introduttiva ad Analytics
+### Metadati per file multimediali nella chiamata di avvio annunci di Media Analytics
 
 | Parametro | Valore (esempio)  |
 |---|---|
@@ -195,12 +195,12 @@ source-git-commit: 400c7ada4ab269017c3c2948c9056b4c1031d793
 | `s:event:type` | aa_ ad_ start |
 | `l:event:playhead` | 0 |
 | `l:event:duration` | 0 |
-| `l:asset:ad_id` | 9378 |
+| `s:asset:ad_id` | 9378 |
 | `l:asset:ad_length` | 15 |
-| `l:stream:type` | vod |
+| `s:stream:type` | vod |
 | `s:asset:type` | ad |
 
-### Metadati video nella chiamata introduttiva ad Heartbeat
+### Metadati per file multimediali nella call call di Heartbeat
 
 | Parametro | Valore (esempio)  |
 |---|---|
@@ -238,9 +238,9 @@ source-git-commit: 400c7ada4ab269017c3c2948c9056b4c1031d793
 | `s:event:type` | completato |
 | `l:event:playhead` | 15 |
 | `l:event:duration` | 0 |
-| `l:asset:ad_id` | 9378 |
+| `s:asset:ad_id` | 9378 |
 | `l:asset:ad_length` | 15 |
-| `l:stream:type` | vod |
+| `s:stream:type` | vod |
 | `s:asset:type` | ad |
 
 ### Chiamata di riproduzione heartbeat
@@ -250,12 +250,12 @@ source-git-commit: 400c7ada4ab269017c3c2948c9056b4c1031d793
 | `s:event:type` | play |
 | `l:event:playhead` | 15 |
 | `l:event:duration` | 0 |
-| `l:asset:ad_id` | 9378 |
+| `s:asset:ad_id` | 9378 |
 | `l:asset:ad_length` | 15 |
-| `l:stream:type` | vod |
+| `s:stream:type` | vod |
 | `s:asset:type` | ad |
 
-## Play main content {#section_u1l_1gf_f2b}
+## Riproduci contenuto principale {#section_u1l_1gf_f2b}
 
 ### Chiamata di riproduzione Heartbeat
 
@@ -264,14 +264,14 @@ source-git-commit: 400c7ada4ab269017c3c2948c9056b4c1031d793
 | `s:event:type` | play |
 | `l:event:playhead` | 29 |
 | `l:event:duration` | 10189 |
-| `l:asset:name` | Titolo episodio |
-| `l:asset:video_id` | 123456 |
+| `s:asset:name` | Titolo episodio |
+| `s:asset:video_id` | 123456 |
 | `l:asset:length` | 120 |
-| `l:stream:type` | vod |
+| `s:stream:type` | vod |
 | `s:asset:type` | main |
 
 **Note:**
 
 * La posizione dell'indicatore di riproduzione deve essere incrementata di 10 con ogni chiamata di riproduzione.
-* The `l:event:duration` value represents the number of milliseconds since the last tracking call and should be roughly the same value on each 10 second call.
+* Il `l:event:duration` valore rappresenta il numero di millisecondi trascorsi dall'ultima chiamata di tracciamento e dovrebbe essere circa lo stesso valore per ogni chiamata di 10 secondi.
 
