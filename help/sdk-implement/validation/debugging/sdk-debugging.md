@@ -3,14 +3,14 @@ seo-title: Debugging SDK
 title: Debugging SDK
 uuid: a 5972 d 87-c 593-4 b 4 f-a 56 f-dca 6 e 25268 e 1
 translation-type: tm+mt
-source-git-commit: 6b6caa59ac9ea14a42337e2f133ecb31f30491c7
+source-git-commit: f2b08663a928e27625a9ff63f783c510f41e7a8c
 
 ---
 
 
-# SDK debugging{#sdk-debugging}
+# Debugging SDK{#sdk-debugging}
 
-Potete abilitare e disabilitare la registrazione. Media SDK offre un meccanismo di registrazione/di registrazione esteso che viene messo a disposizione nell'intero stack di tracciamento video. You can enable or disable this logging by setting the `debugLogging` flag on the Config object.
+Potete abilitare e disabilitare la registrazione. L'SDK di Media fornisce un meccanismo di registrazione/registrazione esteso per tutta la pila di tracciamento multimediale. Potete attivare o disattivare la registrazione impostando `debugLogging` il flag sull'oggetto Config.
 
 ## Codice di esempio per la registrazione di debug
 
@@ -48,7 +48,7 @@ this._mediaHeartbeat = new MediaHeartbeat(mediaDelegate, mediaConfig, appMeasure
 
 ### OTT (Chromecast, Roku)
 
-The ADBMobile library provides debug logging through the `setDebugLogging` method. Debug logging should be set to `false` for all the production apps.
+La libreria adbmobile fornisce il debug di debug attraverso il `setDebugLogging` metodo. La registrazione di debug deve essere impostata per `false` tutte le app di produzione.
 
 #### Roku
 
@@ -62,7 +62,7 @@ ADBMobile().setDebugLogging(true)
 ADBMobile.config.setDebugLogging(true)
 ```
 
-**Utilizzo di Adobe Bloodhound per testare applicazioni Chromecast -**
+## Utilizzo di Adobe Bloodhound per testare le applicazioni Chromecast
 
 Durante lo sviluppo dell'applicazione, Bloodhound consente di visualizzare le chiamate al server localmente e, facoltativamente, di inoltrare i dati ai server di raccolta Adobe. Per ulteriori informazioni su Bloodhound, consulta le guide seguenti:
 
@@ -73,7 +73,7 @@ Durante lo sviluppo dell'applicazione, Bloodhound consente di visualizzare le ch
 >
 >Dal 30 aprile 2017, Adobe Bloodhound è stato ritirato. A partire dal 1° maggio 2017, non verranno più forniti ulteriori miglioramenti né supporto aggiuntivo Engineering o Adobe Expert Care.
 
-### Messaggi registro
+## Messaggi registro
 
 I messaggi di registro seguono questo formato:
 
@@ -91,9 +91,9 @@ Example: [16:10:29 GMT­0700 (PDT).245] [DEBUG] [plugin::player] Resolving qos.s
 * **tag:** Nome del componente secondario che ha emesso il messaggio di registro (in genere il nome della classe)
 * **message:** Il messaggio di trace effettivo
 
-Puoi utilizzare i file di registro per la libreria heartbeat video per verificare l'implementazione. A good strategy is to search through the logs for the string `#track`. This will highlight all the `track*()` calls made by your application.
+Per verificare l'implementazione, puoi utilizzare i file di registro della libreria Media SDK. Una strategia valida consiste nel cercare i registri per la stringa `#track`. Questo evidenzia tutte `track*()` le chiamate effettuate dall'applicazione.
 
-For instance, this is what the logs filtered for `#track` could look like:
+Ad esempio, i file di registro per i quali `#track` sono stati filtrati possono essere:
 
 ```js
 [16:10:29 GMT­0700 (PDT).222] [INFO] [plugin::player] #trackVideoLoad() 
