@@ -3,24 +3,24 @@ seo-title: Contenuto principale live con tracciamento sequenziale
 title: Contenuto principale live con tracciamento sequenziale
 uuid: b 03477 b 6-9 be 8-4 b 67-a 5 a 0-4 cef 3 cf 262 ab
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: 46710c621f00374aeb55a88e51d4b720dcb941a6
 
 ---
 
 
-# Live main content with sequential tracking{#live-main-content-with-sequential-tracking}
+# Contenuto principale live con tracciamento sequenziale{#live-main-content-with-sequential-tracking}
 
 ## Scenario {#section_E4B558253AD84ED59256EDB60CED02AE}
 
 In questo scenario, esiste una risorsa live senza annunci pubblicitari per 40 sec dopo aver partecipato al flusso live.
 
-This is the same scenario as the [VOD playback with no ads](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario, but a part of the content is scrubbed through and a seek is completed from one point in main content to another point.
+Si tratta dello stesso scenario della [riproduzione VOD senza](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) uno scenario ads, ma una parte del contenuto scorre e una ricerca viene completata da un punto del contenuto principale a un altro punto.
 
 | Attivatore | Heartbeat, metodo | Chiamate di rete  | Note   |
 | --- | --- | --- | --- |
-| User clicks [!UICONTROL Play] | `trackSessionStart` | Inizio del contenuto di Analytics, Inizio contenuto Heartbeat | The measurement library is unaware that there is a pre-roll ad, so these network calls are identical to the [VOD playback with no ads](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario. |
+| Clic sugli utenti [!UICONTROL Play] | `trackSessionStart` | Inizio del contenuto di Analytics, Inizio contenuto Heartbeat | La libreria delle misurazioni non riconosce che è presente un annuncio prerelease, quindi queste chiamate di rete sono identiche alla riproduzione [VOD senza](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) uno scenario ads. |
 | Viene riprodotto il primo fotogramma del contenuto. | `trackPlay` | Riproduzione contenuto heartbeat | Quando il contenuto dei capitoli viene riprodotto prima del contenuto principale, i Heartbeat iniziano all'avvio del capitolo. |
-| Il contenuto viene riprodotto |  | Heartbeats contenuto | This network call is exactly the same as the [VOD playback with no ads](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario. |
+| Il contenuto viene riprodotto |  | Heartbeats contenuto | Questa chiamata di rete è esattamente identica alla [riproduzione VOD senza](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) uno scenario ads. |
 | Sessione 1 sopra (Episodio 1 terminato) | `trackComplete` `trackSessionEnd` | Heartbeat Content Complete | Complete significa che la sessione 1 st 1 per l'episodio è stata raggiunta e guardata completamente. Prima di avviare la sessione per l'episodio successivo, questa sessione deve essere terminata. |
 | Episodio 2 avviato (inizio sessione 2) | `trackSessionStart` | Analytics Content Start Heartbeat Content Start | Questo perché l'utente ha guardato il primo episodio e continuava a guardare un altro episodio |
 | 1 st Frame of Media | `trackPlay` | Riproduzione contenuto heartbeat | Questo metodo attiva il timer e da questo momento in poi, heartbebeat verrà inviato ogni 10 secondi finché la riproduzione continua. |
@@ -42,7 +42,7 @@ This is the same scenario as the [VOD playback with no ads](/help/sdk-implement/
 | `s:stream:type` | `live` |  |
 | `s:meta:*` | *facoltativo* | Set di metadati personalizzati sul supporto |
 
-## Heartbeat Content Play {#section_B6AD9225747943F881DCA8E6A1D5710E}
+## Riproduzione contenuto heartbeat {#section_B6AD9225747943F881DCA8E6A1D5710E}
 
 Dovrebbe essere simile alla chiamata di Avvio contenuto Heartbeat, ma con la differenza chiave in «s: evento: type ". Tutti i parametri devono essere inseriti qui.
 
@@ -51,9 +51,9 @@ Dovrebbe essere simile alla chiamata di Avvio contenuto Heartbeat, ma con la dif
 | `s:event:type` | `"play"` |  |
 | `s:asset:type` | `"main"` |  |
 
-## Content Heartbeats {#section_7B387303851A43E5993F937AE2B146FE}
+## Heartbeats contenuto {#section_7B387303851A43E5993F937AE2B146FE}
 
-Durante la riproduzione di contenuti multimediali, è presente un timer che invierà uno o più heartbebeat ogni 10 secondi. Tali heartbeat contengono informazioni su riproduzione, annunci pubblicitari, buffering e molti altri elementi. Il contenuto esatto di ogni heartbeat va oltre l'ambito di questo documento, il punto critico da convalidare è che i heartbeat vengono attivati in modo coerente mentre la riproduzione continua.
+Durante la riproduzione di contenuti multimediali, esiste un timer che invierà uno o più heartbebeat ogni 10 secondi per il contenuto principale e ogni secondo per annunci. Tali heartbeat contengono informazioni su riproduzione, annunci pubblicitari, buffering e molti altri elementi. Il contenuto esatto di ogni heartbeat va oltre l'ambito di questo documento, il punto critico da convalidare è che i heartbeat vengono attivati in modo coerente mentre la riproduzione continua.
 
 Nei heartbeat del contenuto, cerca alcuni elementi specifici:
 
@@ -162,7 +162,7 @@ _mediaHeartbeat.trackSessionEnd();
 // Continue similarly tracking further sessions in the live stream if required 
 ```
 
-### App
+### iOS
 
 Ecco il previsto ordine delle chiamate API:
 
