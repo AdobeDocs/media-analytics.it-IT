@@ -3,7 +3,7 @@ seo-title: Panoramica della configurazione
 title: Panoramica della configurazione
 uuid: 06 fefedb-b 0 c 8-4 f 7 d -90 c 8-e 374 cdde 1695
 translation-type: tm+mt
-source-git-commit: 1b785378750349c4f316748d228754cb64f70bca
+source-git-commit: 46710c621f00374aeb55a88e51d4b720dcb941a6
 
 ---
 
@@ -121,15 +121,13 @@ Completa i seguenti passaggi di implementazione:
 
 ## Convalida {#section_D4D46F537A4E442B8AB0BB979DDAA4CC}
 
-Le implementazioni multimediali sono costituite da due tipi di chiamate di tracciamento:
+Le implementazioni di tracciamento di Media Analytics generano due tipi di chiamate di tracciamento:
 
-* Le chiamate a supporti e avvio annunci vengono inviate direttamente al server appmeasurement.
-* Le chiamate Heartbeat vengono inviate al server di tracciamento Heartbeat all'avvio, ogni dieci secondi per il contenuto e ogni secondo per annunci pubblicitari.
+* Le chiamate per file multimediali e annunci pubblicitari vengono inviate direttamente al server Adobe Analytics (appmeasurement).
+* Le chiamate Heartbeat vengono inviate al server di tracciamento Media Analytics (heartbeats), elaborate e trasmesse al server Adobe Analytics.
 
-Il monitoraggio dei contenuti multimediali funziona allo stesso modo su tutte le piattaforme, desktop e dispositivi mobili. Il tracciamento audio attualmente funziona sulle piattaforme mobili. Per tutte le chiamate di tracciamento è possibile convalidare alcune variabili universali chiave:
-
-* **Appmeasurement (Analytics)**
-Per ulteriori informazioni sulle opzioni del server di tracciamento, vedi [Compilazione corretta delle variabili trackingserver e trackingserversecure.](https://marketing.adobe.com/resources/help/kb/en_US/analytics/kb/determining-data-center.html)
+* **Server
+Adobe Analytics (appmeasurement)** Per ulteriori informazioni sulle opzioni del server di tracciamento, vedi [Compilazione corretta delle variabili trackingserver e trackingserversecure.](https://helpx.adobe.com/analytics/kb/determining-data-center.html)
 
    >[!IMPORTANT]
    >
@@ -137,8 +135,10 @@ Per ulteriori informazioni sulle opzioni del server di tracciamento, vedi [Compi
 
    Il server di tracciamento analisi deve terminare con "`.sc.omtrdc.net`oppure essere un CNAME.
 
-* ** Media Analytics (Heartbeats)**
+* ** Server Media Analytics (Heartbeats)**
 Questo ha sempre il formato "`[your_namespace].hb.omtrdc.net`. Il valore di "`[your_namespace]`specifica la società e viene fornito da Adobe.
+
+Il monitoraggio dei contenuti multimediali funziona allo stesso modo su tutte le piattaforme, desktop e dispositivi mobili. Il tracciamento audio funziona attualmente sulle piattaforme mobili. Per tutte le chiamate di tracciamento è possibile convalidare alcune variabili universali chiave:
 
 ## Documentazione SDK 1. x {#section_acj_tkk_t2b}
 
