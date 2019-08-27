@@ -3,12 +3,12 @@ seo-title: Contenuto principale live
 title: Contenuto principale live
 uuid: e 92 e 99 f 4-c 395-48 aa -8 a 30-cbdd 2 f 5 fc 07 c
 translation-type: tm+mt
-source-git-commit: 9dbd621e10ba198b9331e5a7579fcbd3b6173ecd
+source-git-commit: 46710c621f00374aeb55a88e51d4b720dcb941a6
 
 ---
 
 
-# Live main content{#live-main-content}
+# Contenuto principale live{#live-main-content}
 
 ## Scenario {#section_13BD203CBF7546D2A6AD0129B1EEB735}
 
@@ -16,7 +16,7 @@ In questo scenario, esiste una risorsa live senza annunci pubblicitari per 40 se
 
 | Attivatore | Heartbeat, metodo | Chiamate di rete | Note   |
 |---|---|---|---|
-| User clicks **[!UICONTROL Play]** | `trackSessionStart` | Inizio del contenuto di Analytics, Inizio contenuto Heartbeat | This can be a user clicking **[!UICONTROL Play]** or an auto-play event. |
+| Clic sugli utenti **[!UICONTROL Play]** | `trackSessionStart` | Inizio del contenuto di Analytics, Inizio contenuto Heartbeat | Può trattarsi di un evento di riproduzione **[!UICONTROL Play]** automatica o di un evento di riproduzione automatica. |
 | Viene riprodotto il primo fotogramma del supporto. | `trackPlay` | Riproduzione contenuto heartbeat | Questo metodo attiva il timer. Heartbeats viene inviato ogni 10 secondi a condizione che la riproduzione continui. |
 | Il contenuto viene riprodotto. |  | Heartbeats contenuto |  |
 | La sessione è terminata. | `trackSessionEnd` |  | `SessionEnd` indica la fine di una sessione di visualizzazione. Questa API deve essere chiamata anche se l'utente non utilizza il supporto per il completamento. |
@@ -38,9 +38,9 @@ Molti degli stessi valori disponibili sulle chiamate di avvio del contenuto di A
 | `s:stream:type` | live |  |
 | `s:meta:*` | facoltativo | Set di metadati personalizzati sul supporto |
 
-## Content Heartbeats {#section_7B387303851A43E5993F937AE2B146FE}
+## Heartbeats contenuto {#section_7B387303851A43E5993F937AE2B146FE}
 
-Durante la riproduzione di contenuti multimediali, è presente un timer che invierà uno o più heartbebeat ogni 10 secondi. Tali heartbeat contengono informazioni su riproduzione, annunci pubblicitari, buffering e molti altri elementi. Il contenuto esatto di ogni heartbeat va oltre l'ambito di questo documento, il punto critico da convalidare è che i heartbeat vengono attivati in modo coerente mentre la riproduzione continua.
+Durante la riproduzione di contenuti multimediali, esiste un timer che invierà uno o più heartbebeat (o coppie) ogni 10 secondi per il contenuto principale e ogni secondo per annunci. Tali heartbeat contengono informazioni su riproduzione, annunci pubblicitari, buffering e molti altri elementi. Il contenuto esatto di ogni heartbeat va oltre l'ambito di questo documento, il punto critico da convalidare è che i heartbeat vengono attivati in modo coerente mentre la riproduzione continua.
 
 Nei heartbeat del contenuto, cerca alcuni elementi specifici:
 
@@ -59,13 +59,13 @@ Per i flussi LIVE, è necessario impostare l'indicatore di riproduzione su un of
 
 ### All'inizio
 
-For LIVE media, when a user starts playing the stream, you need to set `l:event:playhead` to the current offset, in seconds. Ciò si trova invece di VOD, dove si imposta l'indicatore di riproduzione su "0".
+Per i supporti LIVE, quando un utente avvia la riproduzione del flusso, in secondi dovete impostare `l:event:playhead` l'offset corrente. Ciò si trova invece di VOD, dove si imposta l'indicatore di riproduzione su "0".
 
-For example, say a LIVE streaming event starts at midnight and runs for 24 hours (`a.media.length=86400`; `l:asset:length=86400`). Quindi, supponiamo che un utente inizi a riprodurre lo streaming LIVE alle 12:00. In this scenario, you should set `l:event:playhead` to 43200 (12 hours into the stream).
+Ad esempio, supponiamo che un evento di streaming LIVE inizi a mezzanotte ed esegua per 24 ore (`a.media.length=86400`; `l:asset:length=86400`). Quindi, supponiamo che un utente inizi a riprodurre lo streaming LIVE alle 12:00. In questo scenario, impostate `l:event:playhead` su 43200 (12 ore nel flusso).
 
 ### Pausa
 
-La stessa logica di riproduzione live applicata all'inizio della riproduzione deve essere applicata quando un utente mette in pausa la riproduzione. When the user returns to playing the LIVE stream, you must set the `l:event:playhead` value to the new offset playhead position, _not_ to the point where the user paused the LIVE stream.
+La stessa logica di riproduzione live applicata all'inizio della riproduzione deve essere applicata quando un utente mette in pausa la riproduzione. Quando l'utente torna a riprodurre lo streaming LIVE, è necessario impostare il `l:event:playhead` valore sulla nuova posizione dell'indicatore di riproduzione offset, _non_ sul punto in cui l'utente ha messo in pausa lo streaming LIVE.
 
 ## Codice di esempio {#section_vct_j2j_x2b}
 
@@ -110,7 +110,7 @@ _mediaHeartbeat.trackSessionEnd();
 ....... 
 ```
 
-### App
+### iOS
 
 Ecco il previsto ordine delle chiamate API:
 
