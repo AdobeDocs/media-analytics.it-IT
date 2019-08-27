@@ -3,16 +3,16 @@ seo-title: Creare un nuovo rapporto debug
 title: Creare un nuovo rapporto debug
 uuid: 438 fde 3 d -98 f 9-46 d 1-9672-75 d 204361568
 translation-type: tm+mt
-source-git-commit: ee6eebac803410c1c4da1ccb80083025a9c817df
+source-git-commit: f2b08663a928e27625a9ff63f783c510f41e7a8c
 
 ---
 
 
-# Create a new Debug report{#create-a-new-debug-report}
+# Creare un nuovo rapporto debug{#create-a-new-debug-report}
 
 Per creare un nuovo rapporto Debug:
 
-1. In [!UICONTROL Create New Debug Report] select the following:
+1. Selezionate [!UICONTROL Create New Debug Report] quanto segue:
 
    ![](assets/create-new-debug-report.png)
 
@@ -29,7 +29,7 @@ Per creare un nuovo rapporto Debug:
          * [!UICONTROL Analytics > Admin > User Management > Users > Individual User Settings] Per creare una credenziale API servizi Web per un nuovo utente, aggiungete [!UICONTROL User Management]l'utente al gruppo di utenti **Web Service Access** .
       * [!UICONTROL Default Endpoint] - I dati in questo campo sono forniti da Adobe e non possono essere modificati.
       * [!UICONTROL Extra Endpoint] - Aggiungi `CNAMES`, se li usi, per il server di tracciamento `metrics.companyname.com`
-   * **Heartheartbeat multimediali**
+   * **Heartbeats video (Media Analytics)**
 
       * [!UICONTROL Default Endpoint] - I dati in questo campo sono forniti da Adobe e non possono essere modificati.
       * [!UICONTROL Extra Endpoint] - Aggiungi `CNAMES`, se li usi, per il server di tracciamento, ad `metrics.companyname.com`esempio.
