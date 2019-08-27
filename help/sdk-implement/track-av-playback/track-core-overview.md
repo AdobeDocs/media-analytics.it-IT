@@ -3,16 +3,16 @@ seo-title: Panoramica sul tracciamento
 title: Panoramica sul tracciamento
 uuid: 7 b 8 e 2 f 76-bc 4 e -4721-8933-3 e 4453 b 01788
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: 46710c621f00374aeb55a88e51d4b720dcb941a6
 
 ---
 
 
-# Tracking Overview{#tracking-overview}
+# Panoramica sul tracciamento{#tracking-overview}
 
 >[!IMPORTANT]
 >
->Questa documentazione copre il tracciamento nella versione 2. x dell'SDK. If you are implementing a 1.x version of the SDK, you can download 1.x Developers Guides here: [Download SDKs.](/help/sdk-implement/download-sdks.md)
+>Questa documentazione copre il tracciamento nella versione 2. x dell'SDK. Se implementhi una versione 1. x dell'SDK, puoi scaricare le guide per sviluppatori 1. x qui: [Scarica gli SDK.](/help/sdk-implement/download-sdks.md)
 
 ## Eventi del lettore
 
@@ -22,7 +22,7 @@ Il tracciamento della riproduzione di base include il caricamento di supporti, l
 
 * Creare l'oggetto multimediale
 * Compilazione dei metadati
-* Call `trackSessionStart`; For example: `trackSessionStart(mediaObject, contextData)`
+* Chiamata `trackSessionStart`; Ad esempio: `trackSessionStart(mediaObject, contextData)`
 
 ### Avvio multimediale
 
@@ -31,7 +31,7 @@ Il tracciamento della riproduzione di base include il caricamento di supporti, l
 ### Pausa/Ripresa
 
 * Chiamata `trackPause`
-* Call `trackPlay`   _when playback resumes_
+* Chiamata  `trackPlay`_alla ripresa della riproduzione_
 
 ### Contenuto multimediale completato
 
@@ -59,7 +59,7 @@ Il tracciamento della riproduzione di base include il caricamento di supporti, l
 
 >[!TIP]
 >
->La posizione della linea di scansione viene impostata come parte del codice di configurazione e di configurazione. For more information about `getCurrentPlayheadTime`, see [Overview: General Implementation Guidelines.](/help/sdk-implement/setup/setup-overview.md#section_965A3B699A8248DDB9B2B3EA3CC20E41)
+>La posizione della linea di scansione viene impostata come parte del codice di configurazione e di configurazione. Per ulteriori informazioni, `getCurrentPlayheadTime`consulta [Panoramica: Linee guida generali sull'implementazione.](/help/sdk-implement/setup/setup-overview.md#section_965A3B699A8248DDB9B2B3EA3CC20E41)
 
 ## Implementate {#section_BB217BE6585D4EDEB34C198559575004}
 
@@ -93,7 +93,7 @@ Il tracciamento della riproduzione di base include il caricamento di supporti, l
    | `Audio` | Tipo di file multimediale per i flussi audio. |
    | `Video` | Tipo di supporto per i flussi video. |
 
-   The general format for creating the `MediaObject` is `MediaHeartbeat.createMediaObject(<MEDIA_NAME>, <MEDIA_ID>, <MEDIA_LENGTH>, <STREAM_TYPE>, <MEDIA_TYPE>);`
+   Il formato generale per la creazione `MediaObject` di `MediaHeartbeat.createMediaObject(<MEDIA_NAME>, <MEDIA_ID>, <MEDIA_LENGTH>, <STREAM_TYPE>, <MEDIA_TYPE>);`
 
 1. **Allega metadati -** Facoltativamente allega oggetti di metadati standard e/o personalizzati alla sessione di tracciamento attraverso variabili di dati contestuali.
 
@@ -105,7 +105,7 @@ Il tracciamento della riproduzione di base include il caricamento di supporti, l
 
       Crea un'istanza di un oggetto di metdati standard, compila le variabili desiderate e imposta l'oggetto metadati sull'oggetto Media Heartbeat.
 
-      See the comprehensive list of metadata here: [Audio and video parameters.](/help/metrics-and-metadata/audio-video-parameters.md)
+      Consultate l'elenco completo dei metadati qui: [Parametri audio e video.](/help/metrics-and-metadata/audio-video-parameters.md)
 
    * **Metadati personalizzati:** crea un oggetto variabile per le variabili personalizzate e popolate i dati per questo contenuto.
 
@@ -113,11 +113,11 @@ Il tracciamento della riproduzione di base include il caricamento di supporti, l
 
    >[!IMPORTANT]
    >
-   >`trackSessionStart` monitora l'intento utente di riproduzione, non l'inizio della riproduzione. This API is used to load the data/metadata and to estimate the time-to-start QoS metric (the time duration between `trackSessionStart` and `trackPlay`).
+   >`trackSessionStart` monitora l'intento utente di riproduzione, non l'inizio della riproduzione. Questa API viene utilizzata per caricare dati/metadati e per stimare la metrica Time-to-start qos (durata temporale tra `trackSessionStart` e `trackPlay`).
 
    >[!NOTE]
    >
-   >If you are not using custom metadata, simply send an empty object for the `data` argument in `trackSessionStart`.
+   >Se non utilizzate metadati personalizzati, inviate semplicemente un oggetto vuoto per l' `data` argomento in `trackSessionStart`.
 
 1. **Tracciate l'inizio effettivo della riproduzione:** identificate l'evento dal lettore multimediale all'inizio della riproduzione, dove viene eseguito il rendering del primo fotogramma del contenuto sullo schermo e chiamate `trackPlay`.
 
@@ -127,27 +127,27 @@ Il tracciamento della riproduzione di base include il caricamento di supporti, l
 
    >[!IMPORTANT]
    >
-   >`trackSessionEnd` segna la fine di una sessione di tracciamento. If the session was successfully watched to completion, where the user watched the content until the end, ensure that `trackComplete` is called before `trackSessionEnd`. Any other `track*` API call is ignored after `trackSessionEnd`, except for `trackSessionStart` for a new tracking session.
+   >`trackSessionEnd` segna la fine di una sessione di tracciamento. Se la sessione è stata visualizzata in modo corretto, in cui l'utente ha visualizzato il contenuto fino alla fine, assicuratevi che `trackComplete` venga richiamata prima `trackSessionEnd`. Qualsiasi altra `track*` chiamata API viene ignorata dopo `trackSessionEnd`, fatta eccezione per `trackSessionStart` una nuova sessione di tracciamento.
 
 1. **Tenere traccia di tutti i possibili scenari di pausa -** Identificare l'evento dal lettore multimediale per mettere in pausa e chiamare `trackPause`.
 
-   **Scenari in pausa -** Identificate qualsiasi scenario in cui il lettore si interromperà e assicuratevi che `trackPause` venga chiamato correttamente. The following scenarios all require that your app call `trackPause()`:
+   **Scenari in pausa -** Identificate qualsiasi scenario in cui il lettore si interromperà e assicuratevi che `trackPause` venga chiamato correttamente. Gli scenari seguenti richiedono che la chiamata all'app sia chiamata `trackPause()`:
 
    * L'utente si mette in pausa in modo esplicito nell'app.
    * Il lettore si attiva nello stato Pausa.
-   * (*Mobile Apps*) - The user puts the application into the background, but you want the app to keep the session open.
-   * (*Mobile Apps*) - Any type of system interrupt occurs that causes an application to be backgrounded. Ad esempio, l'utente riceve una chiamata oppure si verifica un pop-up da un'altra applicazione, ma si desidera che l'applicazione mantenga la sessione viva per consentire all'utente di riprendere il contenuto dal punto di interruzione.
+   * (*App mobili*): l'utente inserisce l'applicazione in background, ma desiderate che l'app rimanga aperta.
+   * (*App mobili*): si verifica un qualsiasi tipo di interruzione di sistema che causa la messa in background di un'applicazione. Ad esempio, l'utente riceve una chiamata oppure si verifica un pop-up da un'altra applicazione, ma si desidera che l'applicazione mantenga la sessione viva per consentire all'utente di riprendere il contenuto dal punto di interruzione.
 
-1. Identify the event from the player for play and/or resume from pause and call `trackPlay`.
+1. Identificare l'evento dal lettore per la riproduzione e/o riprendere dalla pausa e chiamare `trackPlay`.
 
    >[!TIP]
    >
-   >Potrebbe trattarsi della stessa origine dell'evento utilizzata al passaggio 4. Ensure that each `trackPause()` API call is paired with a following `trackPlay()` API call when the playback resumes.
+   >Potrebbe trattarsi della stessa origine dell'evento utilizzata al passaggio 4. Assicuratevi che ogni `trackPause()` chiamata API sia associata a una chiamata API successiva `trackPlay()` al momento della ripresa della riproduzione.
 
-1. Ascoltare gli eventi di riproduzione della riproduzione dal lettore multimediale. On seek start event notification, track seeking using the `SeekStart` event.
-1. On seek complete notification from the media player, track the end of seeking using the `SeekComplete` event.
-1. Listen for the playback buffering events from media player, and on buffer start event notification, track buffering using the `BufferStart` event.
-1. On buffer complete notification from the media player, track the end of buffering using the `BufferComplete` event.
+1. Ascoltare gli eventi di riproduzione della riproduzione dal lettore multimediale. Nella notifica di avvio dell'evento, tracciare la ricerca utilizzando l' `SeekStart` evento.
+1. In ricerca di una notifica completa dal lettore multimediale, tracciate la fine della ricerca utilizzando l' `SeekComplete` evento.
+1. Ascoltare gli eventi di buffering di riproduzione dal lettore multimediale e sulla notifica dell'evento iniziale del buffer, tracciare il buffering utilizzando l `BufferStart` 'evento.
+1. Al buffer completo di una notifica dal lettore multimediale, tracciate la fine del buffering utilizzando l' `BufferComplete` evento.
 
 Esempi di ogni passaggio nei seguenti argomenti specifici della piattaforma e guardate i lettori di esempio inclusi negli SDK.
 
@@ -232,34 +232,7 @@ if (e.type == “buffered”) {
 };
 ```
 
-## Validate {#section_ABCFB92C587B4CAABDACF93452EFA78F}
+## Convalida {#section_ABCFB92C587B4CAABDACF93452EFA78F}
 
-### Inizio contenuto
+Per informazioni sulla convalida della propria implementazione, vedere [Convalida.](/help/sdk-implement/validation/validation-overview.md)
 
-All'inizio di un lettore multimediale, queste chiamate chiave vengono inviate nel seguente ordine:
-
-1. Inizio analisi file multimediali
-1. Avvio heartbeat
-1. Analytics Analytics start
-
-Le chiamate 1 e 2 contengono ulteriori variabili di metadati sia per le versioni personalizzate che per quelle standard.
-
-### Riproduzione contenuto
-
-Durante la riproduzione di contenuto principale normale, le chiamate Heartbeat vengono inviate al server Heartbeat ogni dieci secondi.
-
-### Completamento contenuto
-
-A 100% punti, sul contenuto o in corrispondenza di un bordo di visualizzazione su un flusso lineare, viene inviata una chiamata completa Heartbeat.
-
-### Pausa contenuto
-
-Quando il lettore viene messo in pausa, le chiamate all'evento pause del lettore verranno inviate ogni 10 secondi. Una volta terminata la pausa, gli eventi di riproduzione dovrebbero riprendere.
-
-### Scorrimento contenuto B/Seek
-
-Nello scorrimento dell'indicatore di riproduzione, non vengono inviate chiamate di tracciamento speciali. Tuttavia, quando la riproduzione riprende dopo lo scorrimento, il valore dell'indicatore di riproduzione deve riflettere la nuova posizione nel contenuto principale.
-
-### Buffer contenuto
-
-Quando i buffer del lettore multimediale sono buffer, le chiamate all'evento buffer del lettore vengono inviate ogni 10 secondi. Al termine del buffering, gli eventi di riproduzione dovrebbero riprendere.
