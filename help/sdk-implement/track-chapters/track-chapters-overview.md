@@ -3,7 +3,7 @@ seo-title: Panoramica
 title: Panoramica
 uuid: 3 fe 32425-5 e 2 a -4886-8 fea-d 91 d 15671 bb 0
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: 46710c621f00374aeb55a88e51d4b720dcb941a6
 
 ---
 
@@ -12,9 +12,9 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l'implementazione con SDK 2. x. If you are implementing a 1.x version of the SDK, you can download the Developers Guide here: [Download SDKs.](/help/sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l'implementazione con SDK 2. x. Se implementhi una versione 1. x dell'SDK, puoi scaricare la Guida sviluppatori qui: [Scarica gli SDK.](/help/sdk-implement/download-sdks.md)
 
-I capitoli e il tracciamento dei segmenti sono disponibili per capitoli o segmenti di supporti personalizzati. Alcuni usi comuni per il tracciamento dei capitoli sono per definire segmenti personalizzati basati sul contenuto multimediale (come ad esempio il baseball innings) o per definire segmenti di contenuto tra interruzioni pubblicitarie. Chapter tracking is **not** required for core media tracking implementations.
+I capitoli e il tracciamento dei segmenti sono disponibili per capitoli o segmenti di supporti personalizzati. Alcuni usi comuni per il tracciamento dei capitoli sono per definire segmenti personalizzati basati sul contenuto multimediale (come ad esempio il baseball innings) o per definire segmenti di contenuto tra interruzioni pubblicitarie. Il tracciamento dei capitoli **non** è richiesto per le implementazioni di tracciamento dei contenuti multimediali principali.
 
 Il tracciamento dei capitoli include l'avvio del capitolo, il completamento del capitolo e l'eliminazione del capitolo. Puoi utilizzare l'API del lettore multimediale con logica di segmentazione personalizzata per identificare gli eventi dei capitoli e compilare le variabili di capitolo richieste e facoltative.
 
@@ -22,8 +22,8 @@ Il tracciamento dei capitoli include l'avvio del capitolo, il completamento del 
 
 ### Inizio capitolo
 
-* Create the chapter object instance for the chapter, `chapterObject`
-* Populate the chapter metadata, `chapterCustomMetadata`
+* Create l'istanza di oggetto capitoli per il capitolo, `chapterObject`
+* Compilare i metadati del capitolo, `chapterCustomMetadata`
 * Chiamata `trackEvent(MediaHeartbeat.Event.ChapterStart, chapterObject, chapterCustomMetadata);`
 
 ### Completato il capitolo
@@ -34,11 +34,11 @@ Il tracciamento dei capitoli include l'avvio del capitolo, il completamento del 
 
 * Chiamata `trackEvent(MediaHeartbeat.Event.ChapterSkip);`
 
-## Implement chapter tracking {#section_52221B3A9BFD46B3A22DA6BCE97CCD75}
+## Implementare il tracciamento dei capitoli {#section_52221B3A9BFD46B3A22DA6BCE97CCD75}
 
-1. Identify when the chapter start event occurs and create the `ChapterObject` instance by using the chapter information.
+1. Identificare l'evento di inizio del capitolo e creare l' `ChapterObject` istanza utilizzando le informazioni sul capitolo.
 
-   Here is the `ChapterObject` chapter tracking reference:
+   Di seguito è riportato `ChapterObject` il riferimento di tracciamento dei capitoli:
 
    >[!NOTE]
    >
@@ -52,9 +52,9 @@ Il tracciamento dei capitoli include l'avvio del capitolo, il completamento del 
    | `startTime` | Ora di inizio capitolo | Sì |
 
 1. Se includete metadati personalizzati per il capitolo, create le variabili di dati di contesto per i metadati.
-1. To begin tracking the chapter playback, call the `ChapterStart` event in the `MediaHeartbeat` instance.
-1. When playback reaches the chapter end boundary, as defined by your custom code, call the `ChapterComplete` event in the `MediaHeartbeat` instance.
-1. If chapter playback did not complete because the user chose to skip the chapter (for example, if the user seeks out of the chapter boundary), call the `ChapterSkip` event in the MediaHeartbeat instance.
+1. Per iniziare a tracciare la riproduzione del capitolo, richiamare l' `ChapterStart` evento nell `MediaHeartbeat` 'istanza.
+1. Quando la riproduzione raggiunge il bordo finale del capitolo, come definito dal codice personalizzato, chiamate l' `ChapterComplete` evento nell `MediaHeartbeat` 'istanza.
+1. Se la riproduzione dei capitoli non è stata completata perché l'utente ha scelto di ignorare il capitolo (ad esempio, se l'utente cerca il limite dei capitoli), chiama l' `ChapterSkip` evento nell'istanza mediaheartbeat.
 1. In caso di capitoli aggiuntivi, ripetete i passaggi da 1 a 5.
 
 Il seguente codice di esempio utilizza l'SDK javascript 2. x per un lettore multimediale HTML 5. Utilizzate questo codice con il codice di riproduzione multimediale principale.
@@ -85,18 +85,3 @@ if (e.type == "chapter skip") {
 }; 
 ```
 
-## Validate {#section_07EC2811BE3249249494596BFE9BF869}
-
-### Inizio capitolo
-
-All'avvio di una riproduzione di un capitolo, viene inviata una chiamata di chiave:
-
-* Inizio del capitolo Heartbeat (questa chiamata contiene ulteriori variabili di metadati capitolo).
-
-### Completamento capitolo
-
-Al termine del capitolo, viene inviato un capitolo Heartbeat complete.
-
-### Ignora capitolo
-
-Quando un capitolo viene ignorato, viene inviata una chiamata di ignora dei capitoli Heartbeat.
