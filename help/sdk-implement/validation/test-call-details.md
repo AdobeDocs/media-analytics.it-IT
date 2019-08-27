@@ -3,37 +3,37 @@ seo-title: Dettagli della chiamata di test
 title: Dettagli della chiamata di test
 uuid: d 3 a 0 e 62 f -2 fc 3-413 d-ac 56-adbbc 9 b 3 e 983
 translation-type: tm+mt
-source-git-commit: 1b785378750349c4f316748d228754cb64f70bca
+source-git-commit: d694ced982140c1f8020c0be304492aee0495cdc
 
 ---
 
 
 # Dettagli della chiamata di test{#test-call-details}
 
-## Avviare il lettore video {#section_qts_xff_f2b}
+## Avviare il lettore multimediale {#start-the-media-player}
 
-### Chiamata start di Media Analytics
+### Chiamata di avvio di Adobe Analytics (appmeasurement) {#aa-start-call}
 
-| Parametro | Valore (esempio)  |
+| Parametro | Valore (campione)  |
 |---|---|
 | `pev2` | ms_ s |
 | `a.media.friendlyName` | Titolo episodio |
-| `a.media.name` | 123456 |
-| `a.media.length` | 120 |
+| _**`a.media.name`**_ | _**123456**_ |
+| _**`a.media.length`**_ | _**120**_ |
 | `a.media.playerName` | HTML5 |
-| `a.media.view` | true |
+| _**`a.media.view`**_ | _**true**_ |
 | `a.contentType` | vod |
-| `custom.[value]` | Campi di metadati personalizzati |
-| `a.media.[value]` | Campi di metadati standard |
+| _**`custom.[value]`**_ | _**Campi di metadati personalizzati**_ |
+| _**`a.media.[value]`**_ | _**Campi di metadati standard**_ |
 
 **Note:**
 
 * Devono essere presenti e contenenti metadati ulteriori variabili di dati di contesto. Consultate i dettagli sui metadati di seguito.
 * La lunghezza dei flussi lineari deve essere impostata sulla stima migliore per l'attuale visualizzazione.
 
-### Metadati standard nella chiamata di avvio di Media Analytics
+### Metadati standard nella chiamata di avvio di Adobe Analytics (appmeasurement) {#std-metadata-aa}
 
-| Parametro | Valore (esempio)  |
+| Parametro | Valore (campione)  |
 |---|---|
 | `a.media.show` | Mostra titolo |
 | `a.media.season` | 6 |
@@ -50,56 +50,36 @@ source-git-commit: 1b785378750349c4f316748d228754cb64f70bca
 | `a.media.feed` | nessun feed |
 | `a.media.stream_format` | 0 |
 
-### Chiamata di avvio heartbeat
+### Metadati personalizzati nella chiamata di avvio di Adobe Analytics (appmeasurement) {#custom-metadata-aa}
 
-| Parametro | Valore (esempio)  |
+| Parametro | Valore (campione)  |
+|---|---|
+| `custom.metadataA` | value |
+| `custom.metadataB` | value |
+
+### Media Analytics (heartbeats) Chiamata di inizio {#ma-start-call}
+
+| Parametro | Valore (campione)  |
 |---|---|
 | `s:event:type` | start |
-| `l:event:playhead` | 0 |
+| _**`l:event:playhead`**_ | _**0**_ |
 | `l:event:duration` | 4 |
 | `s:asset:name` | Titolo episodio |
 | `s:asset:video_id` | 123456 |
 | `l:asset:length` | 120 |
 | `s:stream:type` | vod |
 | `s:asset:type` | main |
-| `s:meta:custom.[value]` | Campi di metadati personalizzati |
-| `s:meta:a.media.[value]` | Campi di metadati standard |
-
-### Metadati multimediali nella chiamata di avvio di Media Analytics
-
-| Parametro | Valore (esempio)  |
-|---|---|
-| `custom.metadataA` | value |
-| `custom.metadataB` | value |
+| _**`s:meta:custom.[value]`**_ | _**Campi di metadati personalizzati**_ |
+| _**`s:meta:a.media.[value]`**_ | _**Campi di metadati standard**_ |
 
 **Note:**
 
 * Devono essere presenti e contenenti metadati ulteriori variabili di dati di contesto. Consultate i dettagli sui metadati di seguito.
 * La posizione della linea di scansione per i flussi lineari all'avvio del video deve essere impostata sui secondi trascorsi dall'inizio della visualizzazione corrente, non da 0.
 
-### Chiamata di avvio Heartbeat Analytics
+### Metadati standard in Media Analytics (heartbeats) Chiamata di inizio {#std-metadata-ma}
 
-| Parametro | Valore (esempio)  |
-|---|---|
-| `s:event:type` | aa_ start |
-| `l:event:playhead` | 0 |
-| `l:event:duration` | 4 |
-| `s:asset:name` | Titolo episodio |
-| `s:asset:video_id` | 123456 |
-| `l:asset:length` | 120 |
-| `s:stream:type` | vod |
-| `s:asset:type` | main |
-
-### Metadati multimediali nella chiamata di avvio Heartbeat
-
-| Parametro | Valore (esempio)  |
-|---|---|
-| `s:meta:custom.metadata` | value |
-| `s:meta:custom.metadata` | value |
-
-### Metadati standard nella chiamata di avvio Heartbeat
-
-| Parametro | Valore (esempio)  |
+| Parametro | Valore (campione)  |
 |---|---|
 | `s:meta:a.media.show` | Mostra le informazioni |
 | `s:meta:a.media.season` | 6 |
@@ -116,57 +96,59 @@ source-git-commit: 1b785378750349c4f316748d228754cb64f70bca
 | `s:meta:a.media.feed` | nessun feed |
 | `s:meta:a.media.stream_format` | 0 |
 
+### Metadati personalizzati in Media Analytics (heartbeats) Chiamata di inizio {#custom-metadata-ma}
+
+| Parametro | Valore (campione)  |
+|---|---|
+| `s:meta:custom.metadata` | value |
+| `s:meta:custom.metadata` | value |
+
+### Media Analytics (heartbeats) Chiamata di avvio di Adobe Analytics {#ma-aa-start}
+
+| Parametro | Valore (campione)  |
+|---|---|
+| _**`s:event:type`**_ | _**aa_ start**_ |
+| `l:event:playhead` | 0 |
+| `l:event:duration` | 4 |
+| `s:asset:name` | Titolo episodio |
+| `s:asset:video_id` | 123456 |
+| `l:asset:length` | 120 |
+| `s:stream:type` | vod |
+| `s:asset:type` | main |
+
 **Note:**
 
-* Questa chiamata indica che la libreria heartbeat ha richiesto che una chiamata di analisi 2 = ms_ s venga inviata al server di analisi.
+* Questa chiamata indica che Media SDK ha richiesto l'invio di una `pev2=ms_s` chiamata Adobe Analytics al server di Adobe Analytics (appmeasurement).
 * Questa chiamata non contiene metadati personalizzati.
 
-## Visualizzare la riproduzione degli annunci {#section_wz3_yff_f2b}
+## Visualizzare la riproduzione degli annunci {#view-ad-playback}
 
-### Chiamata Avvio annunci di Media Analytics
+### Chiamata ad Adobe Analytics (appmeasurement) Ad Start {#aa-ad-start-call}
 
-| Parametro | Valore (esempio)  |
+| Parametro | Valore (campione)  |
 |---|---|
-| `pev2` | msa_ s |
+| _**`pev2`**_ | _**msa_ s**_ |
 | `a.media.name` | 123456 |
-| `a.media.ad.name` | 9378 |
+| _**`a.media.ad.name`**_ | _**9378**_ |
 | `a.media.ad.friendlyName` | Video_ VPAID_ DFA |
 | `a.media.ad.podFriendlyName` | preroll |
-| `a.media.ad.length` | 15 |
+| _**`a.media.ad.length`**_ | _**15**_ |
 | `a.media.ad.playerName` | HTML5 |
 | `a.media.ad.pod` | c 27 aaf 3 ff 8224 bb 6 b 9 ebfe 1 b 2 e 79073 d_ 1 |
 | `a.media.ad.podPosition` | 1 |
 | `a.media.ad.podSecond` | 0.0 |
-| `a.media.ad.view` | True |
-| `custom.[value]` | Campi metadati |
-| `a.media.[value]` | Campi di metadati standard |
+| _**`a.media.ad.view`**_ | _**True**_ |
+| _**`custom.[value]`**_ | _**Campi metadati**_ |
+| _**`a.media.[value]`**_ | _**Campi di metadati standard**_ |
 
-**Nota:** Devono essere presenti e contenenti metadati ulteriori variabili di dati di contesto. Consultate i dettagli sui metadati di seguito.
+**Note:**
 
-### Chiamata avvio heartbeat
+* Devono essere presenti e contenenti metadati ulteriori variabili di dati di contesto. Consultate i dettagli sui metadati di seguito.
+* La lunghezza dell'annuncio può essere impostata su -1 se non è disponibile all'avvio.
 
-| Parametro | Valore (esempio)  |
-|---|---|
-| `s:event:type` | start |
-| `l:event:playhead` | 0 |
-| `l:event:duration` | 4 |
-| `s:asset:ad_id` | 9378 |
-| `l:asset:length` | 120 |
-| `s:stream:type` | vod |
-| `s:asset:type` | ad |
-| `s:meta:custom.[value]` | Campi di metadati personalizzati |
-| `s:meta:a.media.[value]` | Campi di metadati standard |
+### Metadati standard in Adobe Analytics (appmeasurement) Call Start {#std-metadata-aa-ad-start}
 
-### Metadati per file multimediali nella chiamata di avvio annunci di Media Analytics
-
-| Parametro | Valore (esempio)  |
-|---|---|
-| `custom.metadata` | value |
-| `custom.metadata` | value |
-
-### Metadati standard nella chiamata di avvio annunci di Media Analytics
-
-| Parametro | Valore (esempio)  |
+| Parametro | Valore (campione)  |
 |---|---|
 | `a.media.show` | Mostra titolo |
 | `a.media.season` | 6 |
@@ -183,33 +165,35 @@ source-git-commit: 1b785378750349c4f316748d228754cb64f70bca
 | `a.media.feed` | nessun feed |
 | `a.media.stream_format` | 0 |
 
+### Metadati personalizzati in Adobe Analytics (appmeasurement) Call Start {#custom-metadata-aa-ad-start}
+
+| Parametro | Valore (campione)  |
+|---|---|
+| `custom.metadata` | value |
+| `custom.metadata` | value |
+
+### Media Analytics (heartbeats) Chiamata Ad Avvio {#ma-ad-start-call}
+
+| Parametro | Valore (campione)  |
+|---|---|
+| _**`s:event:type`**_ | _**start**_ |
+| `l:event:playhead` | 0 |
+| `l:event:duration` | 4 |
+| `s:asset:ad_id` | 9378 |
+| _**`l:asset:length`**_ | _**120**_ |
+| `s:stream:type` | vod |
+| _**`s:asset:type`**_ | _**ad**_ |
+| _**`s:meta:custom.[value]`**_ | _**Campi di metadati personalizzati**_ |
+| _**`s:meta:a.media.[value]`**_ | _**Campi di metadati standard**_ |
+
 **Note:**
 
 * Devono essere presenti e contenenti metadati ulteriori variabili di dati di contesto. Consultate i dettagli sui metadati di seguito.
 * La lunghezza dell'annuncio può essere impostata su -1 se non è disponibile all'avvio.
 
-### Chiamata introduttiva ad Analytics Analytics
+### Metadati standard in Media Analytics (heartbeats) Chiamata Ad Avvio {#std-metadata-ma-ad-start}
 
-| Parametro | Valore (esempio)  |
-|---|---|
-| `s:event:type` | aa_ ad_ start |
-| `l:event:playhead` | 0 |
-| `l:event:duration` | 0 |
-| `s:asset:ad_id` | 9378 |
-| `l:asset:ad_length` | 15 |
-| `s:stream:type` | vod |
-| `s:asset:type` | ad |
-
-### Metadati per file multimediali nella call call di Heartbeat
-
-| Parametro | Valore (esempio)  |
-|---|---|
-| `s:meta:custom.metadata` | value |
-| `s:meta:custom.metadata` | value |
-
-### Metadati standard nella chiamata Avvio annunci Heartbeat
-
-| Parametro | Valore (esempio)  |
+| Parametro | Valore (campione)  |
 |---|---|
 | `s:meta:a.media.show` | Mostra le informazioni |
 | `s:meta:a.media.season` | 6 |
@@ -226,43 +210,89 @@ source-git-commit: 1b785378750349c4f316748d228754cb64f70bca
 | `s:meta:a.media.feed` | nessun feed |
 | `s:meta:a.media.stream_format` | 0 |
 
+### Metadati personalizzati in Media Analytics (heartbeats) Chiamata Ad Avvio {#custom-metadata-ma-ad-start}
+
+| Parametro | Valore (campione)  |
+|---|---|
+| `s:meta:custom.metadata` | value |
+| `s:meta:custom.metadata` | value |
+
+### Media Analytics (heartbeats) Chiamata di Adobe Analytics Ad Start {#ma-aa-ad-start-call}
+
+| Parametro | Valore (campione)  |
+|---|---|
+| _**`s:event:type`**_ | _**aa_ ad_ start**_ |
+| `l:event:playhead` | 0 |
+| `l:event:duration` | 0 |
+| `s:asset:ad_id` | 9378 |
+| `l:asset:ad_length` | 15 |
+| `s:stream:type` | vod |
+| `s:asset:type` | ad |
+
+### Call Analytics (heartbeats) Call Play {#ma-ad-play-call}
+
+| Parametro | Valore (campione)  |
+|---|---|
+| _**`s:event:type`**_ | _**play**_ |
+| `l:event:playhead` | 15 |
+| `l:event:duration` | 0 |
+| `s:asset:ad_id` | 9378 |
+| `l:asset:ad_length` | 15 |
+| `s:stream:type` | vod |
+| _**`s:asset:type`**_ | _**ad**_ |
+
+### Chiamata Media Analytics (heartbeats) Ad Pause call {#ma-ad-pause-call}
+
+| Parametro | Valore (campione)  |
+|---|---|
+| _**`s:event:type`**_ | _**pause**_ |
+| `l:event:playhead` | 15 |
+| `l:event:duration` | 0 |
+| `s:asset:ad_id` | 9378 |
+| `l:asset:ad_length` | 15 |
+| `s:stream:type` | vod |
+| _**`s:asset:type`**_ | _**ad**_ |
+
+### Media Analytics (heartbeats) Chiamata ad Adobe Analytics Ad Complete {#ma-aa-ad-complete-call}
+
+| Parametro | Valore (campione)  |
+|---|---|
+| _**`s:event:type`**_ | _**complete**_ |
+| `l:event:playhead` | 15 |
+| `l:event:duration` | 0 |
+| `s:asset:ad_id` | 9378 |
+| `l:asset:ad_length` | 15 |
+| `s:stream:type` | vod |
+| _**`s:asset:type`**_ | _**ad**_ |
+
+## Riproduci contenuto principale {#play-main-content}
+
+### Chiamata di Media Analytics (heartbeats) Play {#ma-play-call}
+
+| Parametro | Valore (campione)  |
+|---|---|
+| `s:event:type` | play |
+| _**`l:event:playhead`**_ | _**29**_ |
+| _**`l:event:duration`**_ | _**10189**_ |
+| `s:asset:name` | Titolo episodio |
+| `s:asset:video_id` | 123456 |
+| `l:asset:length` | 120 |
+| `s:stream:type` | vod |
+| `s:asset:type` | main |
+
 **Note:**
 
-* Devono essere presenti e contenenti metadati ulteriori variabili di dati di contesto. Consultate i dettagli sui metadati di seguito.
-* La lunghezza dell'annuncio può essere impostata su -1 se non è disponibile all'avvio.
+* La posizione dell'indicatore di riproduzione deve essere incrementata di 10 secondi con ogni chiamata di riproduzione.
+* Il `l:event:duration` valore rappresenta il numero di millisecondi trascorsi dall'ultima chiamata di tracciamento e dovrebbe essere circa lo stesso valore per ogni chiamata di 10 secondi.
 
-### Chiamata completa ad Heartbeat
+## Mettere in pausa il contenuto principale {#pause-main-content}
 
-| Parametro | Valore (esempio)  |
+### Media Analytics (heartbeats) Pausa chiamata {#ma-pause-call}
+
+| Parametro | Valore (campione)  |
 |---|---|
-| `s:event:type` | completato |
-| `l:event:playhead` | 15 |
-| `l:event:duration` | 0 |
-| `s:asset:ad_id` | 9378 |
-| `l:asset:ad_length` | 15 |
-| `s:stream:type` | vod |
-| `s:asset:type` | ad |
-
-### Chiamata di riproduzione heartbeat
-
-| Parametro | Valore (esempio)  |
-|---|---|
-| `s:event:type` | play |
-| `l:event:playhead` | 15 |
-| `l:event:duration` | 0 |
-| `s:asset:ad_id` | 9378 |
-| `l:asset:ad_length` | 15 |
-| `s:stream:type` | vod |
-| `s:asset:type` | ad |
-
-## Riproduci contenuto principale {#section_u1l_1gf_f2b}
-
-### Chiamata di riproduzione Heartbeat
-
-| Parametro | Valore (esempio)  |
-|---|---|
-| `s:event:type` | play |
-| `l:event:playhead` | 29 |
+| _**`s:event:type`**_ | _**pause**_ |
+| _**`l:event:playhead`**_ | _**29**_ |
 | `l:event:duration` | 10189 |
 | `s:asset:name` | Titolo episodio |
 | `s:asset:video_id` | 123456 |
@@ -270,8 +300,4 @@ source-git-commit: 1b785378750349c4f316748d228754cb64f70bca
 | `s:stream:type` | vod |
 | `s:asset:type` | main |
 
-**Note:**
-
-* La posizione dell'indicatore di riproduzione deve essere incrementata di 10 con ogni chiamata di riproduzione.
-* Il `l:event:duration` valore rappresenta il numero di millisecondi trascorsi dall'ultima chiamata di tracciamento e dovrebbe essere circa lo stesso valore per ogni chiamata di 10 secondi.
 
