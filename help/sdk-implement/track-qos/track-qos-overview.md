@@ -3,7 +3,7 @@ seo-title: Panoramica
 title: Panoramica
 uuid: 4 d 73 c 47 f-d 0 a 4-4228-9040-d 6432311 c 9 eb
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: 46710c621f00374aeb55a88e51d4b720dcb941a6
 
 ---
 
@@ -12,11 +12,11 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l'implementazione in tutti gli SDK 2. x. If you are implementing a 1.x version of the SDK, you can download the 1.x Developers Guides here: [Download SDKs.](/help/sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l'implementazione in tutti gli SDK 2. x. Se implementhi una versione 1. x dell'SDK, puoi scaricare le guide per sviluppatori 1. x qui: [Scarica gli SDK.](/help/sdk-implement/download-sdks.md)
 
-Quality of experience tracking includes quality of service (QoS) and error tracking, both are optional elements and are **not** required for core media tracking implementations. Potete utilizzare l'API del lettore multimediale per identificare le variabili correlate a qos e il tracciamento degli errori. Ecco gli elementi chiave del tracciamento della qualità dell'esperienza:
+La qualità del tracciamento delle esperienze include la qualità del servizio (qos) e il tracciamento degli errori, entrambi sono elementi facoltativi e **non** sono necessari per le implementazioni di tracciamento dei contenuti multimediali principali. Potete utilizzare l'API del lettore multimediale per identificare le variabili correlate a qos e il tracciamento degli errori. Ecco gli elementi chiave del tracciamento della qualità dell'esperienza:
 
-## Player events {#player-events}
+## Eventi del lettore {#player-events}
 
 ### In qualsiasi modifica di metrica qos:
 
@@ -28,7 +28,7 @@ Chiamata `trackEvent(Media.Heartbeat.Event.BitrateChange);`
 
 ## Implementazione di QOS
 
-1. Identify when any of QOS metrics change during media playback, create the `MediaObject` using the QoS information, and update the new QoS information.
+1. Identificate quando una delle metriche QOS cambia durante la riproduzione del file multimediale, create le `MediaObject` informazioni qos e aggiornate le nuove informazioni su qos.
 
    Variabili qosobject:
 
@@ -43,8 +43,8 @@ Chiamata `trackEvent(Media.Heartbeat.Event.BitrateChange);`
    | `fps` | Valore FPS | Sì |
    | `droppedFrames` | Numero di fotogrammi rilasciati | Sì |
 
-1. Make sure that `getQoSObject()` method returns the most updated QoS information.
-1. When playback switches bitrates, call the `BitrateChange` event in the Media Heartbeat instance.
+1. Accertatevi che `getQoSObject()` il metodo restituisca le informazioni qos più aggiornate.
+1. Quando la riproduzione attiva bitrate, chiama l' `BitrateChange` evento nell'istanza Media Heartbeat.
 
    >[!IMPORTANT]
    >
@@ -71,12 +71,3 @@ if (e.type == "bitrate_change") {
 };
 ```
 
-## Validate {#section_F3174831408947A893F7E8C15659E5AA}
-
-### Modifica bitrate
-
-On each bitrate change, a Heartbeat `bitrate_change` call will be sent.
-
-### Errore
-
-Durante l'errore del lettore, viene inviata una chiamata di errore Heartbeat con il valore di errore incluso.
