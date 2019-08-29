@@ -3,7 +3,7 @@ seo-title: Analisi federate
 title: Analisi federate
 uuid: a 82 ace 81-c 2 f 6-4799-9 a 62-4 c 6 a 737 a 7 dab
 translation-type: tm+mt
-source-git-commit: 5e067a664a97292902c847af5e913584a2b62fc8
+source-git-commit: 2760ff12ef9125f724cc98d263ba0d6961ffe35c
 
 ---
 
@@ -41,7 +41,7 @@ Il servizio Federtics Federtics offre un sistema per la condivisione di dati di 
 
 1. Il mittente e il ricevitore lavorano insieme per completare il modulo Contratto regole federazione.
 
-   **Scarica la versione corrente del modulo qui:**
+   **Scarica la versione corrente del modulo:**
 
    [Contratto sulle regole della federazione](federated_analytics_form.pdf)
 
