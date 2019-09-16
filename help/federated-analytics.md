@@ -1,57 +1,55 @@
 ---
 seo-title: Analisi federate
 title: Analisi federate
-uuid: a 82 ace 81-c 2 f 6-4799-9 a 62-4 c 6 a 737 a 7 dab
+uuid: a82ace81-c2f6-4799-9a62-4c6a737a7dab
 translation-type: tm+mt
-source-git-commit: 9d456d26caf4adf0a4688425251c798b15d1e7ef
+source-git-commit: fd7adbe328171a1f7773b2e65f80eccefc6fb34d
 
 ---
 
 
 # Analisi federate{#federated-analytics}
 
-Il servizio Federtics Federtics offre un sistema per la condivisione di dati di Analytics (audio e video) tra due partner. I dati standardizzati di misurazione creati da Media Analytics rappresentano il marchio per Analytics Federated, consentendo agli stessi dati di confluire in un singolo report da più fonti. Seguendo le regole e la logica di Analytics Federate, i dati sono facilmente controllati e personalizzati in base alle esigenze di ogni partnership. Analisi federate rende la misurazione audio e video più efficiente, ottimizzata e fruibile.
+Il servizio Analisi federata fornisce un sistema per la condivisione di dati Adobe Media (audio e video) Analytics tra due partner. I dati di misurazione standardizzati creati da Media Analytics sono il marchio distintivo per Federated Analytics, consentendo lo scorrimento degli stessi dati in un singolo report da più origini. Attraverso le regole e la logica che regolano l'analisi federata, i dati sono facilmente controllati e individualizzati per soddisfare le esigenze di ogni partnership. La funzione Analisi federata rende la misurazione audio e video più efficiente, semplice e utilizzabile.
 
 ## Vantaggi {#section_804FFE8671594A6FB769CBE79EF9D627}
 
-* **Trasparente:** Svuotare la casella nera della creazione dei dati utilizzando la stessa logica tra le aziende
-* **Ampio:** Comprendere la portata e l'impatto completi dell'uso audio e video su partnership, piattaforme e dispositivi
-* **Protetto:** Controllare la condivisione dei dati lato server tramite regole e logica
-* **Standardizzato:** Parla la stessa lingua dati dei partner
-* **Fruibili:** Quantificare i dati audio e video ai lettori di benchmark, monitorare le tendenze e rilevare anomalie attraverso Adobe Analytics
-* **Centralizzato:** Raccogliere i dati di misurazione audio e video in una posizione Adobe
-* **Contratto:** Soddisfare facilmente i requisiti di condivisione dati legali
-* **Tempestivo:** Inviare e ricevere dati in tempo reale
-* **Semplice:** Assegnare un tag una volta ai lettori Adobe, condividere i dati a molti partner
+* **** Trasparente: Elimina dalla casella nera la creazione dei dati utilizzando la stessa logica tra le aziende
+* **** Ampia: Comprendere appieno la portata e l'impatto del consumo audio e video tra partnership, piattaforme e dispositivi
+* **** Protetto: Controllo della condivisione dei dati lato server tramite regole e logica
+* **** Standard: Parla la stessa lingua dati dei tuoi partner
+* **** Azioni: Quantificazione di dati audio e video per eseguire il benchmark dei lettori, monitorare le tendenze e rilevare le anomalie tramite Adobe Analytics
+* **** Centralizzato: Raccogliere i dati di misurazione audio e video in una posizione Adobe
+* **** Contrattuale: Soddisfare facilmente i requisiti legali per la condivisione dei dati
+* **** Temporaneamente: Inviare e ricevere dati in tempo reale
+* **** Facile: Assegnare tag ai lettori una sola volta con gli SDK Adobe, condividere i dati a molti partner
 
 ## Definizioni {#section_ypl_mb3_vbb}
 
-* **Mittente:** Clienti che generano dati di analisi audio e video sui lettori di proprietà
-* **Destinatario:** Clienti che ricevono dati analitici audio e video dal mittente
+* **** Mittente: Generazione di dati di analisi audio e video da parte dei clienti sui lettori di proprietà
+* **** Ricevitore: Ricezione da parte del cliente dei dati di analisi audio e video dal mittente
 
 ## Requisiti {#section_4758843A8941441B9A4D0D7A61077A6E}
 
-* **Contratto flussi multimediali:** Il ricevitore e il mittente devono aver stipulato Adobe Analytics for Media Stream prima di poter accedere ai dati audio e video in Adobe Analytics. Per ulteriori informazioni, contattate il team dell'account.
-* **Addendum Federated:** Ogni mittente e destinatario deve disporre di un addendum firmato presso Adobe prima di inviare o ricevere dati. È necessario un addendum per cliente, non un addendum per partnership. Per ulteriori informazioni, contattate il team dell'account.
-* **Implementazione di Media Analytics:** Il mittente deve avere Media Analytics implementato in tutti i lettori che faranno parte del set di dati federato. Solo i dati di Media Analytics sono disponibili per la federazione. Consulta la documentazione: [Misurazione di audio e video in Adobe Analytics](media-overview.md)
+* **** Contratto Streams Media: Per poter accedere ai dati audio e video in Adobe Analytics, il destinatario e il mittente devono aver stipulato un contratto con Adobe Analytics per i flussi di dati multimediali. Per ulteriori informazioni, contattate il team di account.
+* **** Federated Addendum: Prima di inviare o ricevere i dati, ogni mittente e ricevente deve disporre di un addendum firmato insieme ad Adobe. È richiesto un addendum per cliente, non un addendum per partnership. Per ulteriori informazioni, contattate il team di account.
+* **** Implementazione di Media Analytics: Il mittente deve avere Media Analytics implementato su tutti i lettori che faranno parte del set di dati federati. Solo i dati di Media Analytics sono disponibili per la federazione. Consulta la documentazione: Misurazione [di audio e video in Adobe Analytics](media-overview.md)
 
-* **Adobe Consulting Contract:** Per la configurazione iniziale di regole federate tra destinatari e mittente, è importante lavorare con i servizi di consulenza per esaminare i dati e creare il contratto di condivisione dei dati.
+* **** Contratto di consulenza Adobe: Per la configurazione iniziale di regole federate tra il destinatario e il mittente è utile lavorare con i servizi di consulenza per rivedere i dati e creare il contratto di condivisione dei dati.
 
 ## Processo {#section_byb_kb3_vbb}
 
-1. Il mittente e il ricevitore lavorano insieme per completare il modulo Contratto regole federazione.
-
-   _Scarica la versione corrente del modulo qui:_[ Contratto sulle regole della federazione](federated_analytics_form.pdf)
+1. Mittente e Ricevitore collaborano per completare il modulo del contratto per le regole federative. **** Scarica la versione corrente del modulo qui: Modulo accordo regole [federative](/assets/federated_analytics_form.pdf)
 
    >[!NOTE]
    >
-   >Questo modulo contiene campi speciali per il team tecnico e deve essere modificato solo con Adobe Acrobat. [Scaricare Acrobat gratuitamente.](https://get.adobe.com/reader/)
+   >Questo modulo contiene campi speciali per il nostro team di progettazione e deve essere modificato SOLO con Adobe Acrobat. [Scarica Acrobat gratuitamente.](https://get.adobe.com/reader/)
 
-1. I servizi di consulenza forniscono un file di dati di esempio al ricevitore con dati effettivi dai lettori mittente. Per confermare ulteriormente le regole di condivisione dei dati corrette, sono disponibili i file di dati forniti.
-1. Il mittente e il destinatario assicurano che il contratto di condivisione dei dati soddisfi tutti i requisiti contrattuali tra le due parti.
+1. I servizi di consulenza forniscono un file di dati di esempio a Receiver con dati effettivi provenienti dai lettori Mender, per confermare ulteriormente che le regole di condivisione dei dati corrette sono definite, a condizione che i file di dati siano disponibili.
+1. Il mittente e il ricevente garantiscono che il contratto di condivisione dei dati soddisfi tutti i requisiti contrattuali tra le due parti.
 1. I servizi di consulenza inviano il modulo compilato ad Adobe Engineering per configurare le regole di condivisione dei dati.
-1. I dati vengono condivisi con la suite di rapporti di sviluppo in cui il ricevitore controlla e convalida i dati.
-1. Una volta che il ricevitore conferma i dati è corretto, Adobe Engineering aggiorna le regole in modo che puntino a una suite di rapporti di produzione.
-1. Il ricevitore controlla e convalida i dati nella suite di rapporti di produzione.
-1. Se si verificano modifiche al dataset in futuro, il mittente o il ricevitore possono inviare un ticket di assistenza clienti a scopo di assistenza.
+1. I dati vengono condivisi con la suite di rapporti per lo sviluppo in cui il destinatario rivede e convalida i dati.
+1. Una volta che il ricevente conferma che i dati sono corretti, Adobe Engineering aggiorna le regole per puntare a una suite di rapporti sulla produzione.
+1. Il ricevente rivede e convalida i dati nella suite di rapporti di produzione.
+1. Se si verificano modifiche al set di dati in futuro, Mittente o Ricevitore può inviare un ticket di assistenza clienti per l'assistenza.
 
