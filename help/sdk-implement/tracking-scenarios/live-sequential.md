@@ -1,70 +1,70 @@
 ---
-seo-title: Contenuto principale live con tracciamento sequenziale
-title: Contenuto principale live con tracciamento sequenziale
-uuid: b 03477 b 6-9 be 8-4 b 67-a 5 a 0-4 cef 3 cf 262 ab
+seo-title: Contenuto principale live con monitoraggio sequenziale
+title: Contenuto principale live con monitoraggio sequenziale
+uuid: b03477b6-9be8-4b67-a5a0-4cef3cf262ab
 translation-type: tm+mt
-source-git-commit: 46710c621f00374aeb55a88e51d4b720dcb941a6
+source-git-commit: 3dd053c81090172ab53b8b7a367ca0cccad382c3
 
 ---
 
 
-# Contenuto principale live con tracciamento sequenziale{#live-main-content-with-sequential-tracking}
+# Contenuto principale live con monitoraggio sequenziale{#live-main-content-with-sequential-tracking}
 
 ## Scenario {#section_E4B558253AD84ED59256EDB60CED02AE}
 
-In questo scenario, esiste una risorsa live senza annunci pubblicitari per 40 sec dopo aver partecipato al flusso live.
+In questo scenario, dopo l'unione del flusso live è disponibile una risorsa live senza annunci riprodotti per 40 secondi.
 
-Si tratta dello stesso scenario della [riproduzione VOD senza](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) uno scenario ads, ma una parte del contenuto scorre e una ricerca viene completata da un punto del contenuto principale a un altro punto.
+Questo è lo stesso scenario della riproduzione [VOD senza scenari di annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) , ma una parte del contenuto viene estesa e una ricerca viene completata da un punto del contenuto principale a un altro punto.
 
-| Attivatore | Heartbeat, metodo | Chiamate di rete  | Note   |
+| Attivatore | Metodo Heartbeat |  Chiamate di rete |  Note   |
 | --- | --- | --- | --- |
-| Clic sugli utenti [!UICONTROL Play] | `trackSessionStart` | Inizio del contenuto di Analytics, Inizio contenuto Heartbeat | La libreria delle misurazioni non riconosce che è presente un annuncio prerelease, quindi queste chiamate di rete sono identiche alla riproduzione [VOD senza](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) uno scenario ads. |
-| Viene riprodotto il primo fotogramma del contenuto. | `trackPlay` | Riproduzione contenuto heartbeat | Quando il contenuto dei capitoli viene riprodotto prima del contenuto principale, i Heartbeat iniziano all'avvio del capitolo. |
-| Il contenuto viene riprodotto |  | Heartbeats contenuto | Questa chiamata di rete è esattamente identica alla [riproduzione VOD senza](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) uno scenario ads. |
-| Sessione 1 sopra (Episodio 1 terminato) | `trackComplete` `trackSessionEnd` | Heartbeat Content Complete | Complete significa che la sessione 1 st 1 per l'episodio è stata raggiunta e guardata completamente. Prima di avviare la sessione per l'episodio successivo, questa sessione deve essere terminata. |
-| Episodio 2 avviato (inizio sessione 2) | `trackSessionStart` | Analytics Content Start Heartbeat Content Start | Questo perché l'utente ha guardato il primo episodio e continuava a guardare un altro episodio |
-| 1 st Frame of Media | `trackPlay` | Riproduzione contenuto heartbeat | Questo metodo attiva il timer e da questo momento in poi, heartbebeat verrà inviato ogni 10 secondi finché la riproduzione continua. |
-| Il contenuto viene riprodotto |  | Heartbeats contenuto |  |
-| Sessione Over (Episodio 2 terminato) | `trackComplete` `trackSessionEnd` | Heartbeat Content Complete | Completato significa che l'episodio della sessione 2 per il 2 nd è stato raggiunto e controllato completamente. Prima di avviare la sessione per l'episodio successivo, questa sessione deve essere terminata. |
+| Clic utente [!UICONTROL Play] | trackSessionStart | Inizio contenuto Analytics, Inizio contenuto Heartbeat | La libreria delle misurazioni non è a conoscenza dell'esistenza di un annuncio pre-roll, pertanto queste chiamate di rete sono identiche alla riproduzione [VOD senza scenari di annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . |
+| Viene riprodotto il primo fotogramma del contenuto. | trackPlay | Heartbeat Content Play | Quando il contenuto dei capitoli viene riprodotto prima del contenuto principale, i heartbeat iniziano quando inizia il capitolo. |
+| Riproduzione di contenuto |  | Heartbeat di contenuto | Questa chiamata di rete è esattamente la stessa della riproduzione [VOD senza scenari di annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . |
+| Passaggio sessione1 (episodio1 terminato) | trackComplete / trackSessionEnd | Heartbeat Content Complete | Completa significa che session1 per il primo episodio è stato raggiunto e guardato completamente. Prima di iniziare la sessione per il prossimo episodio, questa sessione deve essere terminata. |
+| Episode2 avviato (avvio sessione2) | trackSessionStart | Inizio contenuto di Analytics Start Heartbeat Content Start | Questo perché l'utente ha visto il primo episodio e ha continuato a guardare in un altro episodio |
+| 1° frame del supporto | trackPlay | Heartbeat Content Play | Questo metodo attiva il timer e da questo momento in avanti, heartbeat verrà inviato ogni 10 secondi fintanto che la riproduzione continua. |
+| Riproduzioni contenuto |  | Heartbeat di contenuto |  |
+| Durata sessione (episodio 2 terminato) | trackComplete / trackSessionEnd | Heartbeat Content Complete | Completa significa che session2 per il secondo episodio è stato raggiunto e guardato completamente. Prima di iniziare la sessione per il prossimo episodio, questa sessione deve essere terminata. |
 
 ## Parametri {#section_D52B325B99DA42108EF560873907E02C}
 
-### Inizio contenuto heartbeat
+### Avvio contenuto Heartbeat
 
 | Parametro | Valore | Note |
 |---|---|---|
-| `s:sc:rsid` | &lt; ID suite di rapporti &gt; |  |
-| `s:sc:tracking_serve` | &lt; URL del server di tracciamento Analytics &gt; |  |
-| `s:user:mid` | `s:user:mid` | Deve corrispondere al valore mid in Adobe Analytics Content Start Call |
+| `s:sc:rsid` | &lt;ID suite di rapporti Adobe&gt; |  |
+| `s:sc:tracking_serve` | &lt;URL del server di tracciamento Analytics&gt; |  |
+| `s:user:mid` | `s:user:mid` | Deve corrispondere al valore mid nella chiamata di avvio contenuto di Adobe Analytics |
 | `s:event:type` | `"start"` |  |
 | `s:asset:type` | `"main"` |  |
-| `s:asset:media_id` | &lt; Nome file multimediali &gt; |  |
+| `s:asset:media_id` | &lt;Nome file multimediale&gt; |  |
 | `s:stream:type` | `live` |  |
-| `s:meta:*` | *facoltativo* | Set di metadati personalizzati sul supporto |
+| `s:meta:*` | *optional* | Metadati personalizzati impostati per il supporto |
 
-## Riproduzione contenuto heartbeat {#section_B6AD9225747943F881DCA8E6A1D5710E}
+## Heartbeat Content Play {#section_B6AD9225747943F881DCA8E6A1D5710E}
 
-Dovrebbe essere simile alla chiamata di Avvio contenuto Heartbeat, ma con la differenza chiave in «s: evento: type ". Tutti i parametri devono essere inseriti qui.
+Questo dovrebbe assomigliare quasi esattamente alla chiamata Heartbeat Content Start, ma con la differenza chiave nel parametro "s:event:type". Tutti i parametri devono essere ancora presenti.
 
 | Parametro | Valore | Note |
 |---|---|---|
 | `s:event:type` | `"play"` |  |
 | `s:asset:type` | `"main"` |  |
 
-## Heartbeats contenuto {#section_7B387303851A43E5993F937AE2B146FE}
+## Heartbeat di contenuto {#section_7B387303851A43E5993F937AE2B146FE}
 
-Durante la riproduzione di contenuti multimediali, esiste un timer che invierà uno o più heartbebeat ogni 10 secondi per il contenuto principale e ogni secondo per annunci. Tali heartbeat contengono informazioni su riproduzione, annunci pubblicitari, buffering e molti altri elementi. Il contenuto esatto di ogni heartbeat va oltre l'ambito di questo documento, il punto critico da convalidare è che i heartbeat vengono attivati in modo coerente mentre la riproduzione continua.
+Durante la riproduzione dei contenuti multimediali, è presente un timer che invia uno o più heartbeat ogni 10 secondi per i contenuti principali e ogni secondo per gli annunci. Questi heartbeat contengono informazioni su riproduzione, annunci pubblicitari, buffering e molti altri elementi. Il contenuto esatto di ogni heartbeat va oltre l'ambito di questo documento, la cosa fondamentale da convalidare è che i heartbeat vengono attivati in modo coerente mentre la riproduzione continua.
 
-Nei heartbeat del contenuto, cerca alcuni elementi specifici:
+Nei heartbeat dei contenuti, cercate alcuni punti specifici:
 
 | Parametro | Valore | Note |
 |---|---|---|
 | `s:event:type` | `"play"` |  |
-| `l:event:playhead` | &lt; posizione della linea di scansione &gt;, ad esempio 50, 60, 70 | Deve riflettere la posizione corrente dell'indicatore di riproduzione. |
+| `l:event:playhead` | &lt;posizione dell'indicatore di riproduzione&gt; ad esempio, 50, 60, 70 | Questo deve riflettere la posizione corrente dell'indicatore di riproduzione. |
 
 ## Heartbeat Content Complete {#section_2CA970213AF2457195901A93FC9D4D0D}
 
-Quando la riproduzione per un determinato episodio è completata (l'indicatore di riproduzione attraversa il limite di un episodio), viene inviata una chiamata Heartbeat Content Complete. Questo aspetto si presenta come altre chiamate Heartbeat, ma contiene un paio di elementi specifici:
+Al termine della riproduzione di un dato episodio (l'indicatore di riproduzione attraversa il limite dell'episodio), viene inviata una chiamata Heartbeat Content Complete. Questo è simile ad altre chiamate Heartbeat, ma contiene un paio di cose specifiche:
 
 | Parametro | Valore | Note |
 |---|---|---|
@@ -77,7 +77,7 @@ Quando la riproduzione per un determinato episodio è completata (l'indicatore d
 
 ### Android
 
-Ecco il previsto ordine delle chiamate API:
+Di seguito è riportato l'ordine di chiamata API previsto:
 
 ```java
 // Set up mediaObject 
@@ -164,7 +164,7 @@ _mediaHeartbeat.trackSessionEnd();
 
 ### iOS
 
-Ecco il previsto ordine delle chiamate API:
+Di seguito è riportato l'ordine di chiamata API previsto:
 
 ```
 // Set up mediaObject 
@@ -241,7 +241,7 @@ NSMutableDictionary *mediaContextData = [[NSMutableDictionary alloc] init];
 
 ### JavaScript
 
-Ecco il previsto ordine delle chiamate API:
+Di seguito è riportato l'ordine di chiamata API previsto:
 
 ```js
 // Set up mediaObject 
