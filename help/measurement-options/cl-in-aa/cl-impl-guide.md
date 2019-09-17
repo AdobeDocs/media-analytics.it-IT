@@ -1,32 +1,32 @@
 ---
-seo-title: Guida all'implementazione dei collegamenti personalizzati
-title: Guida all'implementazione dei collegamenti personalizzati
-uuid: 83315 e 73-20 ca -4 db 5-9 d 43-33 daade 45 a 13
+seo-title: Guida all’implementazione dei collegamenti personalizzati
+title: Guida all’implementazione dei collegamenti personalizzati
+uuid: 83315e73-20ca-4db5-9d43-33daade45a13
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: fe245e766ab8ee48a8e8aaf247cfd552fed816e9
 
 ---
 
 
-# Custom Link implementation guide{#custom-link-implementation-guide}
+# Guida all’implementazione dei collegamenti personalizzati{#custom-link-implementation-guide}
 
-Custom Video Tracking utilizes the [manual link tracking using custom link code](https://marketing.adobe.com/resources/help/en_US/sc/implement/link_manual.html) within Analytics `appMeasurement`. Nella maggior parte dei casi, il tracciamento video personalizzato per i collegamenti video è utilizzato su piattaforme e dispositivi in cui è necessaria una misurazione minima del video.
+Il tracciamento video personalizzato utilizza il tracciamento [manuale dei collegamenti tramite codice](https://marketing.adobe.com/resources/help/en_US/sc/implement/link_manual.html) di collegamento personalizzato in Analytics `appMeasurement`. Nella maggior parte dei casi, il tracciamento video del collegamento video personalizzato viene utilizzato su piattaforme e dispositivi in cui è necessaria una misurazione video minima.
 
-* In JavaScript: `s.tl()` function
-* In Mobile Apps: [trackAction() Android](https://marketing.adobe.com/resources/help/en_US/mobile/android/actions.html), [trackAction() iOS](https://marketing.adobe.com/resources/help/en_US/mobile/ios/actions.html), [trackAction() OTT](/help/sdk-implement/analytics-with-ott/track-app-actions.md)
+* In JavaScript: la `s.tl()` funzione
+* Nelle App Mobile: [trackAction() Android](https://marketing.adobe.com/resources/help/en_US/mobile/android/actions.html), [trackAction() iOS](https://marketing.adobe.com/resources/help/en_US/mobile/ios/actions.html), [trackAction() OTT](/help/sdk-implement/analytics-with-ott/track-app-actions.md)
 
-* In Data Insertion API: [linktype tag](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/reference/r_supported_tags.md)
+* Nell'API di inserimento dati: tag [linktype](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/reference/r_supported_tags.md)
 
-**Requisiti:**
+## Requisiti
 
-* Accesso agli eventi e ai dati API del lettore video
-* Possibilità di aggiungere script se utilizzano Analytics SDK
-* Possibilità di aggiungere beacon di monitoraggio (script o hardcode personalizzati) se utilizzano API di inserimento dati
+* Accesso a eventi e dati API del lettore video
+* Aggiunta di script se si utilizza Analytics SDK
+* Possibilità di aggiungere beacon di tracciamento (script personalizzati o hardcode) se si utilizza l'API di inserimento dati
 
-**Metadati:**
+## Metadati
 
 * I metadati possono essere aggiunti a qualsiasi chiamata di tracciamento come parte dei dati del collegamento
-* Remember to update the `linkTrackVars` and `linkTrackEvents`
+* Ricorda di aggiornare il `linkTrackVars` e `linkTrackEvents`
 
 ```javascript
 /* Call on video complete */ 
@@ -44,16 +44,16 @@ if (e.type == "ended") {
 };
 ```
 
-**Perché usare il collegamento personalizzato:**
+## Perché utilizzare il collegamento personalizzato
 
-* Prerequisiti minimi necessari
-* Funziona su qualsiasi piattaforma, incluso nessuno script
-* Eventuali calcoli, ad esempio il tempo trascorso o le quariture, devono essere calcolati in uno script personalizzato
+* Sono necessari prerequisiti minimi
+* Funziona su qualsiasi piattaforma, incluso senza script
+* Eventuali calcoli, ad esempio il tempo trascorso o i quarti, devono essere calcolati in uno script personalizzato
 * Molto semplice senza librerie o script nascosti
 * Controllo totale su ogni aspetto dei dati video
-* Rimuovi collegamento al lettore di esempio
+* Rimuovere il collegamento al lettore di esempio
 
-**Esempio di javascript per il lettore HTML 5**
+## Esempio di JavaScript per HTML5 Player
 
 ```javascript
 <script type="text/javascript"> 
