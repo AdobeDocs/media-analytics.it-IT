@@ -3,7 +3,7 @@ seo-title: Analisi federate
 title: Analisi federate
 uuid: a82ace81-c2f6-4799-9a62-4c6a737a7dab
 translation-type: tm+mt
-source-git-commit: fd7adbe328171a1f7773b2e65f80eccefc6fb34d
+source-git-commit: d3501c6290f9c932a3dcd0bab8ec2cda3554576c
 
 ---
 
@@ -39,12 +39,7 @@ Il servizio Analisi federata fornisce un sistema per la condivisione di dati Ado
 
 ## Processo {#section_byb_kb3_vbb}
 
-1. Mittente e Ricevitore collaborano per completare il modulo del contratto per le regole federative. **** Scarica la versione corrente del modulo qui: Modulo accordo regole [federative](/assets/federated_analytics_form.pdf)
-
-   >[!NOTE]
-   >
-   >Questo modulo contiene campi speciali per il nostro team di progettazione e deve essere modificato SOLO con Adobe Acrobat. [Scarica Acrobat gratuitamente.](https://get.adobe.com/reader/)
-
+1. Mittente e Ricevitore collaborano per completare il modulo del contratto per le regole federative. **** Scarica la versione corrente del modulo qui: Modulo di accordo sulle regole [federative.](/assets/federated_analytics_form.pdf) (Questo modulo contiene campi speciali per il nostro team di progettazione e deve essere modificato SOLO con Adobe Acrobat.) [Scarica Acrobat gratuitamente.](https://get.adobe.com/reader/)
 1. I servizi di consulenza forniscono un file di dati di esempio a Receiver con dati effettivi provenienti dai lettori Mender, per confermare ulteriormente che le regole di condivisione dei dati corrette sono definite, a condizione che i file di dati siano disponibili.
 1. Il mittente e il ricevente garantiscono che il contratto di condivisione dei dati soddisfi tutti i requisiti contrattuali tra le due parti.
 1. I servizi di consulenza inviano il modulo compilato ad Adobe Engineering per configurare le regole di condivisione dei dati.
