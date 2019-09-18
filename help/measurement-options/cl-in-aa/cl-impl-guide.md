@@ -3,7 +3,7 @@ seo-title: Guida all’implementazione dei collegamenti personalizzati
 title: Guida all’implementazione dei collegamenti personalizzati
 uuid: 83315e73-20ca-4db5-9d43-33daade45a13
 translation-type: tm+mt
-source-git-commit: fe245e766ab8ee48a8e8aaf247cfd552fed816e9
+source-git-commit: f790d60c7c19dc203ea5dd48e1e55ec20a341900
 
 ---
 
