@@ -3,7 +3,7 @@ seo-title: Guida all’implementazione dei collegamenti personalizzati
 title: Guida all’implementazione dei collegamenti personalizzati
 uuid: 83315e73-20ca-4db5-9d43-33daade45a13
 translation-type: tm+mt
-source-git-commit: f790d60c7c19dc203ea5dd48e1e55ec20a341900
+source-git-commit: 799199b2891558dca72aa167c0061066578802ca
 
 ---
 
@@ -14,7 +14,6 @@ Il tracciamento video personalizzato utilizza il tracciamento [manuale dei colle
 
 * In JavaScript: la `s.tl()` funzione
 * Nelle App Mobile: [trackAction() Android](https://marketing.adobe.com/resources/help/en_US/mobile/android/actions.html), [trackAction() iOS](https://marketing.adobe.com/resources/help/en_US/mobile/ios/actions.html), [trackAction() OTT](/help/sdk-implement/analytics-with-ott/track-app-actions.md)
-
 * Nell'API di inserimento dati: tag [linktype](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/reference/r_supported_tags.md)
 
 ## Requisiti
