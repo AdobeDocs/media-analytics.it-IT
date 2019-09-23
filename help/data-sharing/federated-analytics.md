@@ -3,7 +3,7 @@ seo-title: Analisi federate
 title: Analisi federate
 uuid: a82ace81-c2f6-4799-9a62-4c6a737a7dab
 translation-type: tm+mt
-source-git-commit: 37a73c1e6610f2c5596167d65005b7681359ea22
+source-git-commit: ef6e37791cd365b12d964b2a06831a563f605104
 
 ---
 
@@ -33,7 +33,7 @@ Il servizio Analisi federata fornisce un sistema per la condivisione di dati Ado
 
 * **** Contratto Streams Media: Per poter accedere ai dati audio e video in Adobe Analytics, il destinatario e il mittente devono aver stipulato un contratto con Adobe Analytics per i flussi di dati multimediali. Per ulteriori informazioni, contattate il team di account.
 * **** Federated Addendum: Prima di inviare o ricevere i dati, ogni mittente e ricevente deve disporre di un addendum firmato insieme ad Adobe. È richiesto un addendum per cliente, non un addendum per partnership. Per ulteriori informazioni, contattate il team di account.
-* **** Implementazione di Media Analytics: Il mittente deve avere Media Analytics implementato su tutti i lettori che faranno parte del set di dati federati. Solo i dati di Media Analytics sono disponibili per la federazione. Consulta la documentazione: Misurazione [di audio e video in Adobe Analytics](media-overview.md)
+* **** Implementazione di Media Analytics: Il mittente deve avere Media Analytics implementato su tutti i lettori che faranno parte del set di dati federati. Solo i dati di Media Analytics sono disponibili per la federazione. Consulta la documentazione: Misurazione [di audio e video in Adobe Analytics](/help/media-overview.md)
 
 * **** Contratto di consulenza Adobe: Per la configurazione iniziale di regole federate tra il destinatario e il mittente è utile lavorare con i servizi di consulenza per rivedere i dati e creare il contratto di condivisione dei dati.
 
