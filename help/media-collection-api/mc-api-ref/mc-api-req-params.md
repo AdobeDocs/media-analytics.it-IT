@@ -1,9 +1,9 @@
 ---
 seo-title: Parametri di richiesta
 title: Parametri di richiesta
-uuid: f 83 e 9 ef 1-803 d -4152-a 6 c 7-acaa 325036 b 9
+uuid: f83e9ef1-803d-4152-a6c7-acaa325036b9
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: 9b6e61e8d97ca44772f5dc2e31472a4f6c54e29c
 
 ---
 
@@ -12,133 +12,133 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ## Dati di Analytics
 
-| Chiave richiesta  | Obbligatorio | Imposta su… |  Descrizione  |
+| Chiave richiesta | Obbligatorio | Imposta su... |  Descrizione  |
 | --- | :---: | :---: | --- |
 | `analytics.trackingServer` | Y | `sessionStart` | L'URL del server Adobe Analytics |
 | `analytics.reportSuite` | Y | `sessionStart` | ID che identifica i dati di reporting di Analytics |
 | `analytics.enableSSL` | N | `sessionStart` | True o false per abilitare SSL |
-| `analytics.visitorId` | N | `sessionStart` | L'ID visitatore Adobe è un ID personalizzato che puoi utilizzare tra più applicazioni Adobe. The Heartbeat `visitorId` equals the Analytics `VID.` |
+| `analytics.visitorId` | N | `sessionStart` | L’ID visitatore Adobe è un ID personalizzato che puoi utilizzare in più applicazioni Adobe. Heartbeat `visitorId` è uguale ad Analytics `VID.` |
 
 ## Dati visitatore
 
-| Chiave richiesta  | Obbligatorio | Imposta su… |  Descrizione  |
+| Chiave richiesta | Obbligatorio | Imposta su... |  Descrizione  |
 | --- | :---: | :---: | --- |
-| `visitor.marketingCloudOrgId` | Y | `sessionStart` | L'ID organizzazione Experience Cloud; identifica la tua organizzazione nell'ecosistema Adobe Experience Cloud |
-| `visitor.marketingCloudUserId` | N | `sessionStart` | Questo è l'ID utente di Experience Cloud (ECID). Nella maggior parte dei casi, questo è l'ID che devi usare per identificare un utente. The Heartbeat `marketingCloudUserId` equals the `MID` in Adobe Analytics. Anche se tecnicamente non richiesto, questo parametro è necessario per accedere alla famiglia di app Experience Cloud. |
-| `visitor.aamLocationHint` | N | `sessionStart` | Fornisce i dati di Adobe Audience Manager Edge |
-| `appInstallationId` | N | `sessionStart` | Appinstallationid identifica l'app e il dispositivo in modo univoco |
+| `visitor.marketingCloudOrgId` | Y | `sessionStart` | L’ID organizzazione Experience Cloud; identifica la tua organizzazione all'interno del sistema eco di Adobe Experience Cloud |
+| `visitor.marketingCloudUserId` | N | `sessionStart` | Questo è l’ID utente di Experience Cloud (ECID). Nella maggior parte dei casi si tratta dell’ID da utilizzare per identificare un utente. Heartbeat `marketingCloudUserId` equivale a `MID` in Adobe Analytics. Sebbene non sia tecnicamente richiesto, questo parametro è necessario per accedere alla famiglia di app Experience Cloud. |
+| `visitor.aamLocationHint` | N | `sessionStart` | Fornisce i dati Edge di Adobe Audience Manager |
+| `appInstallationId` | N | `sessionStart` | L'appInstallationId identifica in modo univoco l'app e il dispositivo |
 
 ## Dati contenuto
 
-| Chiave richiesta  | Obbligatorio | Imposta su… |  Descrizione  |
+| Chiave richiesta | Obbligatorio | Imposta su... |  Descrizione  |
 | --- | :---: | :---: | --- |
 | `media.id` | Y | `sessionStart` | Identificatore univoco per il contenuto |
-| `media.name` | N | `sessionStart` | Nome del contenuto per il contenuto |
+| `media.name` | N | `sessionStart` | Nome leggibile per il contenuto |
 | `media.length` | Y | `sessionStart` | Lunghezza contenuto (secondi) |
-| `media.contentType` | Y | `sessionStart` | Formato del flusso (può essere qualsiasi stringa, alcuni valori ridirezionati sono "Live", "VOD" o "Linear") |
+| `media.contentType` | Y | `sessionStart` | Formato del flusso (può essere una qualsiasi stringa, alcuni valori consigliati sono "Live", "VOD" o "Lineare") |
 | `media.playerName` | Y | `sessionStart` | Nome del lettore responsabile del rendering del contenuto |
-| `media.channel` | Y | `sessionStart` | Canale di distribuzione del contenuto. Potrebbe trattarsi di un nome applicazione mobile o di un nome di sito Web, nome proprietà |
+| `media.channel` | Y | `sessionStart` | Canale di distribuzione del contenuto. Può trattarsi di un nome di applicazione mobile o di un nome di sito Web, di un nome di proprietà |
 | `media.resume` | N | `sessionStart` | Indica se un utente sta riprendendo una sessione precedente (anziché avviare una nuova sessione) |
-| `media.sdkVersion` | N | `sessionStart` | Il vertice dell'SDK utilizzato dal lettore |
+| `media.sdkVersion` | N | `sessionStart` | Versione SDK utilizzata dal lettore |
 
-## Metadati standard di contenuto
+## Metadati standard contenuto
 
-| Chiave richiesta  | Obbligatorio | Imposta su… |  Descrizione  |
+| Chiave richiesta | Obbligatorio | Imposta su... |  Descrizione  |
 | --- | :---: | :---: | --- |
 | `media.show` | N | `sessionStart` | Il nome del programma o della serie |
-| `media.season` | N | `sessionStart` | Il numero di stagione che mostra o serie appartiene a |
+| `media.season` | N | `sessionStart` | Numero di stagione a cui appartiene lo spettacolo o la serie |
 | `media.episode` | N | `sessionStart` | Numero dell'episodio |
-| `media.assetId` | N | `sessionStart` | L'identificatore univoco del contenuto della risorsa video, ad esempio l'identificatore dell'episodio serie TV, l'identificatore delle risorse del filmato o l'identificatore eventi live. In genere questi ID sono derivati da autorità di metadati quali EIDR, TMS/Gracenote o Rovi. Tali identificatori possono essere di altri sistemi proprietari o interni. |
+| `media.assetId` | N | `sessionStart` | Identificatore univoco per il contenuto della risorsa video, ad esempio l’identificatore episodio della serie TV, l’identificatore della risorsa filmato o l’identificatore evento live. In genere questi ID sono derivati da autorità di metadati quali EIDR, TMS/Gracenote o Rovi. Questi identificatori possono provenire anche da altri sistemi proprietari o interni. |
 | `media.genre` | N | `sessionStart` | Tipo di contenuto definito dal produttore del contenuto |
-| `media.firstAirDate` | N | `sessionStart` | Data di inizio del contenuto per la televisione |
-| `media.firstDigitalDate` | N | `sessionStart` | Data in cui il contenuto viene messo in primo piano su qualsiasi piattaforma digitale |
-| `media.rating` | N | `sessionStart` | Classificazione come definito dalle linee guida per i genitori TV |
-| `media.originator` | N | `sessionStart` | Autore del contenuto |
-| `media.network` | N | `sessionStart` | Il nome di rete/canale |
-| `media.showType` | N | `sessionStart` | Il tipo di contenuto, espresso sotto forma di numero intero compreso tra 0 e 3: <ul> <li>0 - Episodio completo </li> <li>1 - Anteprima </li> <li>2 - Clip </li> <li>3 - Altro </li> </ul> |
-| `media.adLoad` | N | `sessionStart` | Tipo di annuncio caricato |
+| `media.firstAirDate` | N | `sessionStart` | Data in cui il contenuto è stato trasmesso per la prima volta in televisione |
+| `media.firstDigitalDate` | N | `sessionStart` | Data in cui il contenuto è stato trasmesso per la prima volta su qualsiasi piattaforma digitale |
+| `media.rating` | N | `sessionStart` | La valutazione definita dalle linee guida TV per i genitori |
+| `media.originator` | N | `sessionStart` | Il creatore del contenuto |
+| `media.network` | N | `sessionStart` | Nome rete/canale |
+| `media.showType` | N | `sessionStart` | Il tipo di contenuto, espresso come numero intero compreso tra 0 e 3: <ul> <li>0 - Episodio completo </li> <li>1 - Anteprima </li> <li>2 - Clip </li> <li>3 - Altro </li> </ul> |
+| `media.adLoad` | N | `sessionStart` | Il tipo di annuncio caricato |
 | `media.pass.mvpd` | N | `sessionStart` | MVPD fornito dall'autenticazione Adobe |
-| `media.pass.auth` | N | `sessionStart` | Indica che l'utente è stato autorizzato dall'autenticazione Adobe (può essere true solo se impostato) |
-| `media.dayPart` | N | `sessionStart` | L'ora del giorno in cui è stato trasmesso il contenuto |
+| `media.pass.auth` | N | `sessionStart` | Indica che l'utente è stato autorizzato dall'autenticazione Adobe (può essere true solo se è impostato) |
+| `media.dayPart` | N | `sessionStart` | Ora del giorno in cui è stato trasmesso il contenuto |
 | `media.feed` | N | `sessionStart` | Tipo di feed, ad esempio "West-HD" |
 
 ## Dati annuncio
 
-| Chiave richiesta  | Obbligatorio | Imposta su… |  Descrizione  |
+| Chiave richiesta | Obbligatorio | Imposta su... |  Descrizione  |
 | --- | :---: | :---: | --- |
-| `media.ad.podFriendlyName` | N | `adBreakStart` | Nome intuitivo dell'interruzione di annuncio |
+| `media.ad.podFriendlyName` | N | `adBreakStart` | Nome descrittivo dell'interruzione dell'annuncio |
 | `media.ad.podIndex` | Y | `adBreakStart` | Indice del contenitore annuncio nel video |
-| `media.ad.podSecond` | Y | `adBreakStart` | Il secondo in cui il contenitore è iniziato |
-| `media.ad.podPosition` | Y | `adStart` | Indice dell'annuncio all'interno dell'interruzione di annuncio a partire da 1 |
-| `media.ad.name` | N | `adStart` | Nome intuitivo dell'annuncio |
+| `media.ad.podSecond` | Y | `adBreakStart` | Il secondo all’inizio del contenitore |
+| `media.ad.podPosition` | Y | `adStart` | L'indice dell'annuncio all'interno dell'interruzione dell'annuncio a partire da 1 |
+| `media.ad.name` | N | `adStart` | Nome descrittivo dell'annuncio |
 | `media.ad.id` | Y | `adStart` | Nome dell'annuncio |
-| `media.ad.length` | Y | `adStart` | Lunghezza del video ad secondi |
+| `media.ad.length` | Y | `adStart` | Lunghezza del video annuncio in secondi |
 | `media.ad.playerName` | Y | `adStart` | Nome del lettore responsabile del rendering dell'annuncio |
 
-## Metadati standard
+## Aggiungi metadati standard
 
-| Chiave richiesta  | Obbligatorio | Imposta su… |  Descrizione  |
+| Chiave richiesta | Obbligatorio | Imposta su... |  Descrizione  |
 | --- | :---: | :---: | --- |
-| `media.ad.advertiser` | N | `adStart` | La società o il marchio il cui prodotto viene presentato nell'annuncio |
+| `media.ad.advertiser` | N | `adStart` | La società o il marchio il cui prodotto è presente nell'annuncio |
 | `media.ad.campaignId` | N | `adStart` | ID della campagna pubblicitaria |
-| `media.ad.creativeId` | N | `adStart` | ID dell'annuncio creativo |
-| `media.ad.siteId` | N | `adStart` | ID del sito di annunci |
+| `media.ad.creativeId` | N | `adStart` | L'ID dell'annuncio creativo |
+| `media.ad.siteId` | N | `adStart` | L'ID del sito dell'annuncio |
 | `media.ad.creativeURL` | N | `adStart` | L'URL dell'annuncio creativo |
-| `media.ad.placementId` | N | `adStart` | ID posizionamento dell'annuncio |
+| `media.ad.placementId` | N | `adStart` | L'ID di posizionamento dell'annuncio |
 
-## Dati capitolo
+## Dati del capitolo
 
-| Chiave richiesta  | Obbligatorio | Imposta su… |  Descrizione  |
+| Chiave richiesta | Obbligatorio | Imposta su... |  Descrizione  |
 | --- | :---: | :---: | --- |
 | `media.chapter.index` | Y | `chapterStart` | Identifica la posizione del capitolo nel contenuto |
-| `media.chapter.offset` | Y | `chapterStart` | Il secondo nella riproduzione in cui inizia il capitolo |
+| `media.chapter.offset` | Y | `chapterStart` | Seconda fase della riproduzione in cui inizia il capitolo |
 | `media.chapter.length` | Y | `chapterStart` | Lunghezza del capitolo in secondi |
-| `media.chapter.friendlyName` | N | `chapterStart` | Il nome intuitivo del capitolo |
+| `media.chapter.friendlyName` | N | `chapterStart` | Il nome umano del capitolo |
 
 ## Dati di qualità
 
-| Chiave richiesta  | Obbligatorio | Imposta su… |  Descrizione  |
+| Chiave richiesta | Obbligatorio | Imposta su... |  Descrizione  |
 | --- | :---: | :---: | --- |
 | `media.qoe.bitrate` | N | Any | Bitrate del flusso |
-| `media.qoe.droppedFrames` | N | Any | Numero di fotogrammi rilasciati nel flusso |
-| `media.qoe.framesPerSecond` | N | Any | Il numero di fotogrammi al secondo |
-| `media.qoe.timeToStart` | N | Any | Il tempo trascorso (in millisecondi) trascorsi tra la riproduzione degli hit degli utenti e il caricamento e la riproduzione del contenuto |
+| `media.qoe.droppedFrames` | N | Any | Numero di fotogrammi saltati nel flusso |
+| `media.qoe.framesPerSecond` | N | Any | Numero di fotogrammi al secondo |
+| `media.qoe.timeToStart` | N | Any | Tempo (in millisecondi) trascorso tra il momento in cui l'utente accede al programma di riproduzione e il momento in cui il contenuto viene caricato e riprodotto |
 
-## Additional Details {#section_ryt_ccy_lcb}
+## Dettagli aggiuntivi {#section_ryt_ccy_lcb}
 
-### visitor. marketingclouduserid
+### visitor.marketingCloudUserId
 
-Pass the Experience Cloud User ID (also known as the `MID` or `MCID`) on the `sessionStart` call by including it inside the `params` map using the following key: **visitor.marketingCloudUserId**. Questa funzione è utile se ti sei già integrato con altri prodotti Experience Cloud e hai già ottenuto il MCID.
-
->[!NOTE]
->
->Media Analytics (MA) è integrato con la famiglia di app Experience Cloud (Adobe Analytics, Audience Manager, Target e così via). Hai bisogno di un Experience Cloud ID per accedere a queste app. _L'ECID è ciò che dovrebbe essere utilizzato per identificare gli utenti nella maggior parte dei casi._
-
-### Appinstallationid
-
-* **Se non trasmettete *un*`appInstallationId`valore -** il back-end MA non genererà più un MCID, ma si affiderà ad Adobe Analytics per farlo. Adobe's recommendation is to either send a MCID if available, or an `appInstallationId` (along with the still mandatory `marketingCloudOrgId`) so that the Media Collection API generates the MCID and sends it on all calls.
-
-* ***Se*trasmettete`appInstallationId`valore -** L'MCID *può essere* generato dal back-end MA, se trasmettete valori per `appInstallationId` e i `marketingCloudOrgId` parametri (richiesti). If you do pass `appInstallationId` yourself, you must persist its value on the client side. Deve essere univoco per l'app su un dispositivo e deve rimanere persistente fintanto che l'app non viene nuovamente installata.
+Passa l’ID utente di Experience Cloud (noto anche come `MID` o `MCID`) alla `sessionStart` chiamata inserendolo nella `params` mappa utilizzando la seguente chiave: **visitor.marketingCloudUserId**. Questa funzione è utile se hai già effettuato l’integrazione con altri prodotti Experience Cloud e hai già ottenuto il MCID.
 
 >[!NOTE]
 >
->The `appInstallationId` uniquely identifies the app *and the device*. It needs to be unique for each app on each device, i.e., two users using the same version of the same app on different devices must each send a different (unique) `appInstallationId`.
+>Media Analytics (MA) è integrato con la famiglia di app Experience Cloud (Adobe Analytics, Audience Manager, Target e così via). Per accedere a queste app è necessario un Experience Cloud ID. _L’ECID è l’elemento da utilizzare per identificare gli utenti nella maggior parte degli scenari._
+
+### appInstallationId
+
+* **Se *non*trasmettete un`appInstallationId`valore,** il back-end MA non genererà più un MCID, ma si affiderà ad Adobe Analytics per farlo. Adobe consiglia di inviare un MCID, se disponibile, oppure un `appInstallationId` (insieme al file ancora obbligatorio `marketingCloudOrgId`) in modo che l'API di Media Collection generi il MCID e lo invii a tutte le chiamate.
+
+* **Se si *passa*il valore -`appInstallationId`Il MCID** può essere *generato dal back-end MA, se si passano i valori per* e i `appInstallationId` `marketingCloudOrgId` parametri (obbligatori). Se `appInstallationId` si passa da soli, è necessario mantenere il relativo valore sul lato client. Deve essere univoco per l'app su un dispositivo e deve essere persistente finché l'app non viene reinstallata.
+
+>[!NOTE]
+>
+>L'utente identifica in `appInstallationId` modo univoco l'app *e il dispositivo*. Deve essere univoco per ogni app su ciascun dispositivo, ovvero due utenti che utilizzano la stessa versione della stessa app su dispositivi diversi devono inviare ciascuno un'app diversa (univoca) `appInstallationId`.
 
 <!-- Initially, there were no browser-based customers. In future this will be part of a two-bullet list, one bullet for Native Apps, the other for Browser apps. The . 
 \<ul id="ul_iwc_fqt_pbb"\> 
  \<li\>For Browser Apps, this should be a first-party cookie that is persistent for as long as the user stays in the same browser. If clients have multiple websites, they need to have different cookies for each site.</li> 
 </ul> -->
 
-### visitor. marketingcloudorgid
+### visitor.marketingCloudOrgId
 
-In addition to being necessary for MCID generation when that is not provided, this parameter is also used as the value for the publisher ID (based on which Media Analytics performs [federation rule matching.](/help/federated-analytics.md))
+Oltre a essere necessario per la generazione MCID quando non viene fornito, questo parametro viene utilizzato anche come valore per l'ID editore (in base al quale Media Analytics esegue la corrispondenza della regola di [federazione.](/help/data-sharing/federated-analytics.md))
 
-### ID utente legacy di Analytics (aid) e ID utente dichiarati (customerids)
+### ID utente legacy di Analytics (aid) e ID utente dichiarati (customerID)
 
-* **analytics. aid:**
+* **analytics.aid:**
 
    Il valore di questa chiave deve essere una stringa che rappresenta l'ID utente legacy di Analytics
-* **visitor. customerids:**
+* **visitor.customerIDs:**
 
    Il valore di questa chiave deve essere un oggetto del seguente formato:
 
@@ -149,15 +149,15 @@ In addition to being necessary for MCID generation when that is not provided, th
    }
    ```
 
-Note that the `visitor.customerIDs` value can have any number of objects in the presented format.
+Il `visitor.customerIDs` valore può avere un numero qualsiasi di oggetti nel formato presentato.
 
-### visitor. aamlocationhint
+### visitor.aamLocationHint
 
-Questo parametro indica quale Adobe Audience Manager (AAM) viene raggiunto quando Adobe Analytics invia i dati dei clienti ad Audience Manager. Se non trasmettete questo parametro, Adobe lo codifica a 1. Questo è particolarmente importante quando gli utenti finali tendono a utilizzare i propri dispositivi in posizioni geograficamente remote (ad es., USA-East, USA-West, Europa, Asia). In caso contrario, i dati utente verranno distribuiti su più bordi AAM.
+Questo parametro indica quale Adobe Audience Manager (AAM) Edge verrebbe colpito quando Adobe Analytics invia i dati del cliente ad Audience Manager. Se non trasmettete questo parametro, Adobe lo codifica a 1. Ciò è particolarmente importante quando gli utenti finali tendono a utilizzare i loro dispositivi in posizioni geograficamente distanti (ad esempio, USA-est, USA-Ovest, Europa, Asia). In caso contrario, i dati dell'utente verranno distribuiti su più bordi AAM.
 
-### media. resume
+### media.curriculum
 
-If the app determines that a session was closed and then resumed at a later time, e.g., the user left the video but eventually came back, and the player resumed the video from the playhead where it was stopped, you can send an optional boolean **media.resume** parameter inside the params bucket of the `sessionStart` call.
+Se l’app determina che una sessione è stata chiusa e quindi ripresa in un secondo momento, ad esempio, l’utente ha lasciato il video ma alla fine è tornato e il lettore ha ripreso il video dall’indicatore di riproduzione in cui è stato interrotto, potete inviare un parametro booleano facoltativo **media.curriculum** all’interno del bucket params della `sessionStart` chiamata.
 
 <!--
 | `media.uniqueTimePlayed` | N | Close | The value in seconds of the unique segments of content played during a session. Excludes time played on seek back scenarios in which a viewer is watching the same segment of the content multiple times.  |
