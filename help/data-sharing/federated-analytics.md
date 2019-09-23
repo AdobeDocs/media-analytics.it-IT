@@ -3,7 +3,7 @@ seo-title: Analisi federate
 title: Analisi federate
 uuid: a82ace81-c2f6-4799-9a62-4c6a737a7dab
 translation-type: tm+mt
-source-git-commit: ef6e37791cd365b12d964b2a06831a563f605104
+source-git-commit: dd88b69bdbb33e48585f32de5a6a78fbbdc4bd2a
 
 ---
 
@@ -37,10 +37,13 @@ Il servizio Analisi federata fornisce un sistema per la condivisione di dati Ado
 
 * **** Contratto di consulenza Adobe: Per la configurazione iniziale di regole federate tra il destinatario e il mittente è utile lavorare con i servizi di consulenza per rivedere i dati e creare il contratto di condivisione dei dati.
 
+## Download del modulo di analisi federata
+
+**Download the current version of the form here:  Federation Rules Agreement Form.**[](/assets/federated_analytics_form.pdf)
+
 ## Processo {#section_byb_kb3_vbb}
 
 1. Mittente e Ricevitore collaborano per completare il modulo del contratto per le regole federative.
-1. Scarica la versione corrente del modulo qui: Modulo di accordo sulle regole [federative.](/assets/federated_analytics_form.pdf)
 1. The Federated Rules Agreement form contains special fields for our engineering team and should ONLY be edited using Adobe Acrobat. [Download Acrobat for free.](https://get.adobe.com/reader/)
 1. Consulting services provides a sample data file to Receiver with actual data from Sender players, to further confirm correct data sharing rules are defined, provided data files are available.
 1. Sender and Receiver ensure the data sharing agreement will meet all contractual requirements between the two parties.
