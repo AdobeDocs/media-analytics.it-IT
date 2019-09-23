@@ -3,7 +3,7 @@ seo-title: Analisi federate
 title: Analisi federate
 uuid: a82ace81-c2f6-4799-9a62-4c6a737a7dab
 translation-type: tm+mt
-source-git-commit: a80097ac92c422bcf9c04a18ee91a20d3d383af4
+source-git-commit: 02f68cf887011e64a2f1a0e84d1e2bad1569b0e7
 
 ---
 
@@ -39,14 +39,14 @@ Il servizio Analisi federata fornisce un sistema per la condivisione di dati Ado
 
 ## Processo {#section_byb_kb3_vbb}
 
-1. Mittente e Ricevitore collaborano per completare il modulo del contratto per le regole federative. **** Scarica la versione corrente del modulo qui: Modulo di accordo sulle regole [federative.](/assets/federated_analytics_form.pdf)
-
-   [!NOTA Questo modulo contiene campi speciali per il nostro team di progettazione e deve essere modificato SOLO tramite Adobe Acrobat. [Scarica Acrobat gratuitamente.](https://get.adobe.com/reader/)
-1. I servizi di consulenza forniscono un file di dati di esempio a Receiver con dati effettivi provenienti dai lettori Mender, per confermare ulteriormente che le regole di condivisione dei dati corrette sono definite, a condizione che i file di dati siano disponibili.
-1. Il mittente e il ricevente garantiscono che il contratto di condivisione dei dati soddisfi tutti i requisiti contrattuali tra le due parti.
-1. I servizi di consulenza inviano il modulo compilato ad Adobe Engineering per configurare le regole di condivisione dei dati.
-1. I dati vengono condivisi con la suite di rapporti per lo sviluppo in cui il destinatario rivede e convalida i dati.
-1. Una volta che il ricevente conferma che i dati sono corretti, Adobe Engineering aggiorna le regole per puntare a una suite di rapporti sulla produzione.
-1. Il ricevente rivede e convalida i dati nella suite di rapporti di produzione.
-1. Se si verificano modifiche al set di dati in futuro, Mittente o Ricevitore può inviare un ticket di assistenza clienti per l'assistenza.
+1. Mittente e Ricevitore collaborano per completare il modulo del contratto per le regole federative.
+1. Scarica la versione corrente del modulo qui: Modulo di accordo sulle regole [federative.](/assets/federated_analytics_form.pdf)
+1. The Federated Rules Agreement form contains special fields for our engineering team and should ONLY be edited using Adobe Acrobat. [Download Acrobat for free.](https://get.adobe.com/reader/)
+1. Consulting services provides a sample data file to Receiver with actual data from Sender players, to further confirm correct data sharing rules are defined, provided data files are available.
+1. Sender and Receiver ensure the data sharing agreement will meet all contractual requirements between the two parties.
+1. Consulting services sends the completed form to Adobe Engineering to set-up data sharing rules.
+1. Data is shared to the development report suite where Receiver will review and validate data.
+1. Once Receiver confirms data is correct, Adobe Engineering updates the rules to point to a production report suite.
+1. Receiver will review and validate data in the production report suite.
+1. If changes occur to the data set in the future, Sender or Receiver can submit a customer care ticket for support.
 
