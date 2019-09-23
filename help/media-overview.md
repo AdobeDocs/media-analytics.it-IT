@@ -1,113 +1,113 @@
 ---
 seo-title: Misurazione di audio e video in Adobe Analytics
 title: Misurazione di audio e video in Adobe Analytics
-uuid: b 3 cbe 240-b 94 d -42 b 8-a 99 c -0280334 aaa 14
+uuid: b3cbe240-b94d-42b8-a99c-0280334aaa14
 translation-type: tm+mt
-source-git-commit: 1915261ec21679f510350663a472096abe7fdf63
+source-git-commit: 9b6e61e8d97ca44772f5dc2e31472a4f6c54e29c
 
 ---
 
 
-# Measuring audio and video in Adobe Analytics{#measuring-audio-and-video-in-adobe-analytics}
+# Misurazione di audio e video in Adobe Analytics{#measuring-audio-and-video-in-adobe-analytics}
 
 ![Banner](./assets/media_analytics_banner.png)
 
 >[!IMPORTANT]
 >
->The documentation provided here is specific to clients utilizing version 1.5 or higher of Adobe's *Media SDK* for heartbeat measurement, or Adobe's newer *Media Collection API* for heartbeat measurement. Non include istruzioni sulla precedente implementazione di video Pietra miliare. Invitiamo tutti i clienti ad adottare una o entrambe le soluzioni di tracciamento dei contenuti multimediali più recenti, al fine di sfruttare i miglioramenti e la misurazione estesa. You can view the [benefits of transitioning to the latest solutions](media-overview.md#section_cnj_5st_p1b) below. Anche se continueremo a supportare il metodo milestone (Pietra miliare) dei video, non verranno pianificati aggiornamenti, correzioni o miglioramenti pianificati. Contattate il vostro Adobe Account Manager per ulteriori domande.
+>La documentazione fornita di seguito è specifica per i client che utilizzano la versione 1.5 o successiva dell’SDK *Adobe* Media per la misurazione heartbeat o l’API *Adobe* Media Collection più recente per la misurazione heartbeat. Non include istruzioni relative all’implementazione video legacy di Milestone. Invitiamo tutti i clienti ad adottare una o entrambe le più recenti soluzioni di monitoraggio dei supporti, al fine di sfruttare al meglio i miglioramenti e l'espansione delle misurazioni. Puoi visualizzare i [vantaggi della transizione alle soluzioni](media-overview.md#section_cnj_5st_p1b) più recenti riportate di seguito. Anche se continueremo a supportare il metodo Milestone (pietra miliare) per il tracciamento dei video, non ci saranno aggiornamenti, correzioni o miglioramenti delle funzionalità pianificati. Per ulteriori domande, contattate il vostro Adobe Account Manager.
 
 ## Panoramica {#section_8BFE4F8DA64B4A5F826A4940B11AA466}
 
-Adobe Analytics for Media (denominato anche Media Analytics) è un componente aggiuntivo all'offerta di base Analytics che offre ai client una misurazione solida dei contenuti multimediali per contenuto, audio e annunci pubblicitari. Media Analytics offre molti vantaggi ai clienti per consentire il monitoraggio in tempo reale, analisi dettagliate, approfondimenti fruibili e opportunità di monetizzazione.
+Adobe Analytics for Media (altrimenti denominato Media Analytics) è un componente aggiuntivo dell'offerta Analytics di base che fornisce ai client una misurazione affidabile dei contenuti multimediali per contenuti, audio e annunci pubblicitari. Media Analytics offre molti vantaggi ai clienti per consentire il monitoraggio in tempo reale, analisi dettagliate, informazioni fruibili e opportunità di monetizzazione.
 
-Il tracciamento file multimediali è abilitato tramite una delle seguenti operazioni:
+Il tracciamento dei file multimediali è abilitato tramite una delle seguenti opzioni:
 
-* **Media SDK -** Integrazione con i lettori multimediali più comunemente utilizzati.
-* **API di Media Collection -** (API restful) si integrano con lettori per i quali non è supportato alcun supporto SDK (o con lettori per i quali non è richiesta alcuna integrazione SDK).
+* **Media SDK -** Si integra con i lettori multimediali più comunemente utilizzati.
+* **API di Media Collection -** (RESTful API) Si integra con lettori per i quali non è disponibile alcun supporto SDK (o con lettori per i quali non è richiesta alcuna integrazione SDK).
 
-   L'API di Media Collection fornisce inoltre una funzionalità aggiuntiva non ancora disponibile nell'SDK:
+   L'API Media Collection fornisce inoltre una funzionalità aggiuntiva non ancora disponibile nell'SDK:
 
-   * **Tracciamento dei contenuti scaricato -** Fornisce supporto per il tracciamento del contenuto multimediale (video e audio) che viene scaricato e riprodotto da un dispositivo, a prescindere dalla connettività. Questa funzionalità è basata sull'API Media Collection e segue la stessa specifica di tracciamento del lettore. (Al momento il supporto per l’SDK non è disponibile.)
+   * **Tracciamento del contenuto scaricato -** Fornisce il supporto per il tracciamento del contenuto multimediale (video e audio) che viene scaricato e riprodotto da un dispositivo indipendentemente dalla connettività. Questa funzionalità è integrata nell'API di Media Collection e segue la stessa specifica di tracciamento del lettore. (Al momento il supporto per l’SDK non è disponibile.)
 
-Adobe Analytics for Media consente ai client di monitorare l'intero percorso del cliente nel sito, incluso il consumo di contenuti multimediali, e tali misure sono facilmente integrate nei report di Analytics e in altri prodotti Experience Cloud. La misurazione file multimediali consente di suddividere e adattare i dati in più dimensioni e segmenti, acquisendo tutti i metadati necessari per un'analisi dettagliata e per attribuire criteri di successo a supporti completamente consumati, tempo medio trascorso e annunci completati.
+Adobe Analytics per Media consente ai clienti di monitorare l'intero percorso del cliente attraverso il sito, che include il consumo di supporti, e queste misure sono facilmente integrate nei report di Analytics e in altri prodotti Experience Cloud. La misurazione dei file multimediali consente di suddividere i dati in più dimensioni e segmenti, acquisire tutti i metadati necessari per eseguire un’analisi completa e dettagliata e attribuire i criteri di successo a supporti completamente utilizzati, al tempo medio trascorso e agli annunci completati.
 
-Le soluzioni per contenuti multimediali non solo misurano metriche di consegna fondamentali correlate a QOS, come fotogrammi rilasciati, buffering trascorso e bitrate medio. Possono anche essere combinati con i dati del sito Web o dell'app per visualizzare il flusso del cliente e i relativi interessi, in modo da riuscire a formulare raccomandazioni e personalizzare le loro esperienze tramite Adobe Experience Cloud.
+Le soluzioni per i media non solo misurano le metriche di distribuzione vitali correlate ai QoS, come fotogrammi saltati, tempo impiegato nel buffering e bitrate medio. Possono anche essere combinati con i dati del tuo sito web o dell'app per visualizzare il flusso del cliente e i loro interessi, per essere in grado di formulare raccomandazioni e personalizzare le loro esperienze tramite Adobe Experience Cloud.
 
 ## Vantaggi {#section_7712BA90EAE64C118218D1C581EF68B7}
 
-Alcuni dei numerosi vantaggi offerti dalle soluzioni di misurazione dei contenuti multimediali di Adobe includono:
+Tra i numerosi vantaggi offerti dalle soluzioni di misurazione dei supporti di Adobe, figurano:
 
-* **Analisi tempestiva -** Prendere decisioni fruibili in tempo reale utilizzando metriche chiave delle prestazioni (ad es. durata) su più canali. Main content events are measured in **10-second** intervals to capture all activity as it occurs. Ad tracking events occur at **1-second** intervals.
-* **Coinvolgimento del coinvolgimento -** Coinvolgere completamente gli utenti tramite un minor numero di eventi di buffering e capire dove e quando gli annunci devono essere riprodotti all'interno del contenuto per fornire un'esperienza fluida e meno coinvolgente che reindirizza gli utenti e distribuisca visite ripetute.
-* **Illustrazione olistica -** Combinate più punti dati tra tutti i distributori di contenuti per visualizzare una visione completa di tutte le attività multimediali, misurare il coinvolgimento e visualizzare e ascoltare in tutti i canali possibili tramite la [funzione Federated Analytics](federated-analytics.md) .
-* **Granularità aumentata:** valuta il comportamento di visualizzazione al livello più granulare, incluso l'ora del singolo visitatore, i visualizzatori/listener simultanei per minuto e la durata media del contenuto.
-* **Misurazione precisa -** Misura tra i diversi dispositivi utilizzati per il consumo di contenuti multimediali, tra cui OTT, smartphone, tablet, desktop e altro ancora, per monitorare i pattern e le abitudini di coinvolgimento degli utenti.
-* **Segmentazione -** Applica classificazioni ai tuoi giocatori, dispositivi, genres, capitoli e mostra il modo in cui ciascuna ha un impatto sulla vista/ascolto globale e sul coinvolgimento dei clienti con contenuto, audio, annunci e combinazione.
+* **Analisi tempestiva: prendere decisioni in tempo reale e fruibili utilizzando metriche delle prestazioni chiave (ad esempio, durata) su più canali.** Gli eventi di contenuto principale vengono misurati a intervalli di **10 secondi** per acquisire tutte le attività mentre si verifica. Gli eventi di tracciamento degli annunci si verificano a intervalli di **1 secondo** .
+* **Stimolare il coinvolgimento degli utenti -** Coinvolgere gli utenti in un numero minore di eventi di buffering e comprendere dove e quando gli annunci dovrebbero essere riprodotti all'interno dei contenuti per fornire un'esperienza fluida e meno intrusiva che possa richiamare gli utenti e offrire visite ripetute.
+* **Immagine olistica: combinare più punti dati tra tutti i distributori di contenuti per ottenere una visione completa di tutte le attività multimediali e misurare il coinvolgimento e le visualizzazioni/gli accessi tra tutti i possibili canali attraverso la funzione** Federated Analytics [](data-sharing/federated-analytics.md) .
+* **Maggiore granularità:** valutate il comportamento di visualizzazione al livello più granulare, inclusa l'ora del giorno per singolo visitatore, gli utenti simultanei/i listener per minuto e la durata media del consumo del contenuto.
+* **Misurazione precisa - Misurate** tra i diversi dispositivi utilizzati per il consumo di contenuti multimediali, inclusi OTT, smartphone, tablet, desktop e molto altro, per monitorare i pattern e le abitudini di coinvolgimento degli utenti.
+* **Segmentazione: applica le classificazioni ai tuoi lettori, dispositivi, generi, capitoli e presentazioni per vedere in che modo ciascuno di essi ha un impatto sulle viste/sugli ascolti complessivi e sul coinvolgimento dei clienti con contenuti, audio, annunci pubblicitari e insieme.**
 
-## Heartbeat versus Milestone benefits {#section_cnj_5st_p1b}
+## Vantaggi di Heartbeat e Milestone {#section_cnj_5st_p1b}
 
-Adobe Analytics for Media può essere misurato tramite due metodi: il metodo milestone legacy (solo video) e il metodo Heartbeats corrente (audio e video, contenuti sia in Media SDK che nell'API Media Collection). Il metodo Heartbeats è il metodo di misura preferito e invitiamo tutti i client a passare a questa versione, se non lo hanno già fatto, per sfruttare i vantaggi descritti di seguito.
+Adobe Analytics for Media può essere misurato in due modi: il metodo Milestone (solo video) e il metodo Heartbeats corrente (audio e video, disponibile sia in Media SDK che nell’API di Media Collection). Il metodo Heartbeats è il metodo di misura preferito e invitiamo tutti i clienti a passare a questa versione, se non lo hanno già fatto, per sfruttare i vantaggi descritti di seguito.
 
-Il metodo milestone legacy si basa su singole chiamate server al server Analytics, per avvii di video, quariture, durata e completamenti. Il metodo Heartbeats offre una soluzione di tracciamento multimediale più solida che misura il contenuto principale a intervalli di 10 secondi per fornire metriche migliorate e standardizzate. Inoltre, Adobe ha derivato dal nostro metodo milestone per fornire un processo di implementazione più semplice e ottimizzato tramite Media SDK o Media Collection API utilizzato da Heartbeats.
+Il metodo Milestone (legacy) è basato su singole chiamate server al server Analytics, per avvii video, quartili, durata e completati. Il metodo Heartbeats fornisce una soluzione di monitoraggio dei supporti più affidabile che misura i contenuti principali a intervalli di 10 secondi per fornire metriche migliorate e standardizzate. Inoltre, Adobe ha tratto insegnamenti dal nostro metodo Milestone per fornire un processo di implementazione più fluido e semplificato tramite Media SDK o Media Collection API utilizzata da Heartbeats.
 
-Alcuni dei numerosi vantaggi del metodo Heartbeat includono:
+Alcuni dei molti vantaggi del metodo Heartbeats includono:
 
-* **Processo di implementazione semplificato -** Mappate le variabili più facilmente attraverso l'API del lettore e convalidate le implementazioni tramite Adobe Debug Tool per assicurarvi che tutte le variabili necessarie vengano tracciate con precisione.
-* **Integrazione automatica di Adobe Experience Cloud** - Sfruttate l'integrazione automatica con Adobe Experience Cloud tramite Experience Cloud ID, segmentate i tipi di pubblico, impostateli e realizzate raccomandazioni sui supporti in base alle preferenze utente.
-* **Dati condivisi tramite Analytics Federated -** Capitalize on our industry-first media sharing capabilities, to evaluate data oloriically in a media distribution partners (operatori, programmatori e distributori).
-* **Partnership con partner di valutazione certificati -** Partner Adobe con partner Nielsen per fornire misurazioni di terze parti neutre per consentire valutazioni affidabili e certificate.
-* **Soluzione standardizzata su tutte le piattaforme -** Abilita variabili coerenti e standardizzate su tutti i supporti e le piattaforme, per consentire un confronto più efficiente tra più campagne, dispositivi e fornitori.
+* **Processo di implementazione semplificato: mappate più facilmente le variabili tramite l'API del lettore e convalidate le implementazioni tramite Adobe Debug Tool per garantire che tutte le variabili necessarie siano tracciate con precisione.**
+* **Integrazione** automatica di Adobe Experience Cloud - Sfruttate l'integrazione automatica con Adobe Experience Cloud tramite Experience Cloud ID, segmentate il pubblico dei supporti, miratelo e formulate raccomandazioni sui supporti in base alle preferenze degli utenti.
+* **Dati condivisi tramite Federated Analytics -** Sfruttate le nostre prime funzionalità di condivisione dei contenuti multimediali per valutare i dati in modo olistico tra tutti i partner di distribuzione dei contenuti multimediali: operatori, programmatori e distributori.
+* **Partnership con i partner di classificazioni certificate -** Adobe collabora con il partner Nielsen per la valutazione del pubblico allo scopo di fornire misurazioni neutre del censimento di terze parti per consentire valutazioni affidabili e certificate.
+* **Soluzione standardizzata su tutte le piattaforme: abilita variabili coerenti e standardizzate su tutti i supporti e le piattaforme per consentire un confronto tra campagne, dispositivi e fornitori più efficiente.**
 
 ### Grafico di confronto
 
-|  | Analisi video - Pietra miliare | Media Analytics - Heartbeats |
+|  | Video Analytics - Milestone | Media Analytics - Heartbeat |
 |---|---|---|
-| **Eventi multimediali** | Eventi standard di alto livello | Eventi dettagliati e personalizzati ogni 10 s per il contenuto principale, ogni 1 per annunci pubblicitari |
-| **Metriche e dimensioni** | Varianti tra fornitori, metriche non standardizzate e dimensioni | Cancella, Metriche standardizzate, dimensioni e benchmark tra i fornitori |
-| **Integrazioni w/Prodotti Adobe** | Sessioni individuali con mappature e integrazioni | ID di Experience Cloud completo collegato a Adobe Experience Cloud completo per una più semplice analisi incrociata |
-| **Prezzi** | Tracciamento e fatturazione rispetto a ogni chiamata server | Tracciamento trasparente per flusso multimediale (singolo) |
-| **Implementazione e supporto** | Integrazioni più lunghe con supporto limitato su versioni precedenti e nessun aggiornamento | Configurazione semplificata con aggiornamenti e miglioramenti continui |
+| **Eventi multimediali** | Eventi standard di alto livello | Eventi dettagliati e personalizzati ogni 10 anni per i contenuti principali, ogni 1 anno per gli annunci |
+| **Metriche e dimensioni** | Variazioni tra fornitori, metriche e dimensioni non standardizzate | Metriche, dimensioni e benchmark chiari e standardizzati tra fornitori |
+| **Integrazioni con i prodotti Adobe** | Sessioni singole con alcune mappature e integrazioni | ID Experience Cloud unito collegato ad Adobe Experience Cloud completo per facilitare l’analisi incrociata |
+| **Prezzi** | Tracciato e fatturato rispetto a ogni chiamata al server | Tracciamento trasparente per flusso multimediale (singolo) |
+| **Implementazione e supporto** | Integrazioni più lunghe con supporto limitato alle versioni precedenti e nessun aggiornamento | Configurazione semplificata con aggiornamenti e miglioramenti continui |
 | **Condivisione partner** | N/D | Analisi federate e metriche certificate |
-| **Tracciamento avanzato** | N/D | Errori di recupero errori e visualizzatori simultanei |
+| **Tracciamento avanzato** | N/D | Tracciamento del recupero errori e visualizzatori simultanei |
 
-## Devices supported {#section_lkm_l5t_p1b}
+## Dispositivi supportati {#section_lkm_l5t_p1b}
 
-Adobe Analytics for Media si è evoluto con il settore per fornire sofisticati strumenti di raccolta dati per garantire che ogni flusso multimediale venga raccolto e segnalato su tutti i dispositivi significativi. Il nostro SDK Media è sviluppato per tutti i dispositivi più utilizzati, tra cui:
+Adobe Analytics for Media si è evoluto con il settore per fornire potenti strumenti di raccolta dati che garantiscano la raccolta e la generazione di report su tutti i dispositivi significativi. Il nostro Media SDK è sviluppato per tutti i dispositivi più utilizzati, tra cui:
 
-* Smartphone iOS e Android e tablet
-* Dispositivi OTT per dispositivi ROKU, appletv, firetv e Android TV
-* Browser javascript per Desktop e Laptop
+* Smartphone e tablet iOS e Android
+* Dispositivi OTT per ROKU, AppleTV, FireTV e Android TV
+* Browser JavaScript per desktop e notebook
 
-Gli SDK vengono costantemente aggiornati quando vengono rilasciate nuove versioni dei dispositivi, e puoi usare questi SDK per l'integrazione con la maggior parte dei principali lettori multimediali oggi, inclusi Brightcove e Ooyala.
+Gli SDK vengono costantemente aggiornati quando vengono rilasciate nuove versioni di dispositivi e puoi utilizzare questi SDK per integrarsi con la maggior parte dei lettori multimediali più grandi di oggi, inclusi Brightcove e Ooyala.
 
-Per i dispositivi o le piattaforme che al momento non dispongono di supporto SDK (o anche se sono), puoi implementare l'API Media Collection API tramite la quale effettuerai chiamate API restful direttamente dal dispositivo o dalla piattaforma al back-backend di Media Analytics.
+Per i dispositivi o le piattaforme che al momento non dispongono del supporto SDK (o anche se lo fanno), puoi implementare l'API Media Collection, tramite la quale effettuerai chiamate RESTful API direttamente dal dispositivo/piattaforma al backend di Media Analytics.
 
-La tabella seguente fornisce un elenco dei dispositivi attualmente supportati tramite l'implementazione Media SDK e l'implementazione API di Media Collection. To download the most recent version of the SDK, see [Download SDKs.](sdk-implement/download-sdks.md) Se esiste un dispositivo a cui stai cercando la misurazione, contatta l'assistenza clienti o il consulente della soluzione per lo stato del dispositivo.
+La tabella seguente fornisce un elenco dei dispositivi attualmente supportati tramite l’implementazione di Media SDK e l’implementazione di Media Collection API. Per scaricare la versione più recente dell’SDK, consulta [Scaricare gli SDK.](sdk-implement/download-sdks.md) Se esiste un dispositivo che non è elencato e su cui si desidera effettuare la misurazione, contattare l'assistenza clienti o il consulente della soluzione per informazioni sullo stato del dispositivo.
 
 |      | Media SDK | API di raccolta multimediale |
 |---|:---:|:---:|
-| **Browser javascript** | ![](assets/icon-blue-check.png) | ![](assets/icon-blue-check.png) |
+| **Browser JavaScript** | ![](assets/icon-blue-check.png) | ![](assets/icon-blue-check.png) |
 | **Dispositivi iOS** | ![](assets/icon-blue-check.png) | ![](assets/icon-blue-check.png) |
 | **Dispositivi Android** | ![](assets/icon-blue-check.png) | ![](assets/icon-blue-check.png) |
-| **Piattaforme Windows (UWP) unificate** |  | ![](assets/icon-blue-check.png) |
+| **Piattaforme Windows unificate (UWP)** |  | ![](assets/icon-blue-check.png) |
 | **Blackberry** |  | ![](assets/icon-blue-check.png) |
-| **Apple TV (nuovo/legacy)** | ![](assets/icon-blue-check.png) | ![](assets/icon-blue-check.png) |
+| **Apple TV (nuovo/precedente)** | ![](assets/icon-blue-check.png) | ![](assets/icon-blue-check.png) |
 | **ROKU (JS)** | ![](assets/icon-blue-check.png) | ![](assets/icon-blue-check.png) |
 | **ROKU (app nativa)** |  | ![](assets/icon-blue-check.png) |
 | **OSX** |  | ![](assets/icon-blue-check.png) |
-| **Fire TV** | ![](assets/icon-blue-check.png) | ![](assets/icon-blue-check.png) |
+| **TV a fuoco** | ![](assets/icon-blue-check.png) | ![](assets/icon-blue-check.png) |
 | **Android TV** | ![](assets/icon-blue-check.png) | ![](assets/icon-blue-check.png) |
 | **Chromecast** | ![](assets/icon-blue-check.png) | ![](assets/icon-blue-check.png) |
 | **Xbox One/360** |  | ![](assets/icon-blue-check.png) |
-| **Sony PS 3/PS 4** |  | ![](assets/icon-blue-check.png) |
-| **(Altri dispositivi connessi)** |  | ![](assets/icon-blue-check.png) |
+| **Sony PS3/PS4** |  | ![](assets/icon-blue-check.png) |
+| **(altri/nuovi dispositivi collegati)** |  | ![](assets/icon-blue-check.png) |
 
-For Media SDK, also see [Minimum Platform Version Support](./sdk-implement/setup/setup-overview.md#minimum-platform-version)
+Per Media SDK, consulta anche Supporto versione [minima della piattaforma](./sdk-implement/setup/setup-overview.md#minimum-platform-version)
 
-## Transport Layer Security {#transport-layer-security}
+## Sicurezza dei livelli di trasporto {#transport-layer-security}
 
-**Avviso TLS —** Adobe offre standard di conformità alla sicurezza che richiedono la fine di vecchi protocolli di sicurezza. Per continuare a soddisfare gli standard del protocollo di protezione in evoluzione, Adobe si sposta verso l'utilizzo di TLS 1.2, per disporre della versione più aggiornata e sicura utilizzata. Dal 20 febbraio 2019, Adobe supporterà solo TLS 1.1 o versione successiva. Con questa modifica, Adobe non raccoglierà più i dati degli utenti finali con dispositivi meno recenti o browser Web che implementano TLS 1.0. La migrazione a TLS 1.2 offre una maggiore protezione. È importante che esamini a fondo le specifiche e pianifichi le modifiche per una transizione senza problemi.
+**Avviso TLS —** Adobe ha standard di conformità per la sicurezza che richiedono la fine del ciclo di vita dei vecchi protocolli di sicurezza. Per continuare a soddisfare gli standard in continua evoluzione relativi ai protocolli di sicurezza, Adobe si sta muovendo verso l'uso di TLS 1.2, al fine di disporre della versione più aggiornata e sicura in uso. Dal 20 febbraio 2019, Adobe supporterà solo TLS 1.1 o versione successiva. Con questa modifica, Adobe non raccoglierà più dati dagli utenti finali con dispositivi o browser Web meno recenti che implementano TLS 1.0. La migrazione a TLS 1.2 offre una maggiore sicurezza. È importante che esamini a fondo le specifiche e pianifichi le modifiche per una transizione senza problemi.
 
 >[!NOTE]
 >
->TLS è il protocollo di protezione più diffuso utilizzato nei browser Web e in altre applicazioni che richiedono la sicurezza sicura dei dati attraverso una rete.
+>TLS è attualmente il protocollo di sicurezza più diffuso utilizzato nei browser Web e in altre applicazioni che richiedono lo scambio sicuro dei dati in rete.
