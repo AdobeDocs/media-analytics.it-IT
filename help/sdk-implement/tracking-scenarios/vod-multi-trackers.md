@@ -1,22 +1,22 @@
 ---
-seo-title: Più tracciatori VOD in parallelo
-title: Più tracciatori VOD in parallelo
-uuid: 6 e 25 dd 92-522 f -455 c -8 e 71-99 d 71 d 352 e 06
+seo-title: Tracker multipli VOD in parallelo
+title: Tracker multipli VOD in parallelo
+uuid: 6e25dd92-522f-455c-8e71-99d71d352e06
 translation-type: tm+mt
 source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
 
-# VOD multiple trackers in parallel{#vod-multiple-trackers-in-parallel}
+# Tracker multipli VOD in parallelo{#vod-multiple-trackers-in-parallel}
 
 ## Scenario {#section_1AFCA33B322B46818BA4F1BDD3B40B4E}
 
-In this scenario, there are two sessions running in parallel for two separate medias and using two separate instances of `MediaHeartbeat`.
+In questo scenario, ci sono due sessioni in esecuzione parallela per due supporti separati e che utilizzano due istanze separate di `MediaHeartbeat`.
 
-This scenario is identical to the [VOD playback with no ads](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario, except there are two sessions that are running in parallel for two separate medias. Each of these sessions uses a separate instance of `MediaHeartbeat`.
+Questo scenario è identico alla riproduzione [VOD senza scenari di annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) , tranne nel caso di due sessioni in esecuzione parallela per due supporti separati. Ciascuna di queste sessioni utilizza un'istanza separata di `MediaHeartbeat`.
 
-Unless specified, the network calls are the same as the [VOD playback with no ads](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario.
+Se non viene specificato, le chiamate di rete sono le stesse della riproduzione [VOD senza scenari di annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) .
 
 ## Parametri {#section_45D7B10031524411B91E2C569F7818B0}
 
@@ -24,7 +24,7 @@ Unless specified, the network calls are the same as the [VOD playback with no ad
 
 | Parametro | Valore | Note   |
 |---|---|---|
-| `s:event:sid` | ID sessione univoco | A unique session ID that exists in all of the heartbeat network calls until the `trackSessionEnd` method is called. |
+| `s:event:sid` | ID sessione univoco | Un ID sessione univoco che esiste in tutte le chiamate di rete heartbeat fino alla chiamata del `trackSessionEnd` metodo. |
 
 ## Codice di esempio {#section_qpy_4dj_x2b}
 
@@ -108,7 +108,7 @@ protected void onCreate(Bundle savedInstanceState) {
 } 
 ```
 
-Both instances of `MediaAnalyticsProvider` and `MediaHeartbeat` track two separate sessions, each with its own unique session IDs. Le due sessioni nello strumento di debug Charles o nei registri di debug possono essere identificate utilizzando il valore ID sessione. Per visualizzare questo scenario in Android, impostate il seguente codice:
+Sia le istanze che `MediaAnalyticsProvider` `MediaHeartbeat` il tracciamento di due sessioni separate, ciascuna con i propri ID di sessione univoci. Le due sessioni nello strumento di debug Charles o nei registri di debug possono essere identificate utilizzando il valore ID sessione. Per visualizzare questo scenario in Android, imposta il seguente codice:
 
 ```java
 // Set up mediaObject 
@@ -152,7 +152,7 @@ _mediaHeartbeat.trackSessionEnd();
 ........ 
 ```
 
-### App
+### iOS
 
 ```
 @interface MediaAnalyticsProvider : NSObject <ADBMediaHeartbeatDelegate> 
@@ -272,7 +272,7 @@ _mediaHeartbeat.trackSessionEnd();
 } 
 ```
 
-Both instances of `MediaAnalyticsProvider` and `ADBMediaHeartbeat` track two separate sessions, each with its own unique session IDs. Le due sessioni nello strumento di debug Charles o nei registri di debug possono essere identificate utilizzando il valore ID sessione.
+Sia le istanze che `MediaAnalyticsProvider` `ADBMediaHeartbeat` il tracciamento di due sessioni separate, ciascuna con i propri ID di sessione univoci. Le due sessioni nello strumento di debug Charles o nei registri di debug possono essere identificate utilizzando il valore ID sessione.
 
 Per visualizzare questo scenario in iOS, imposta il seguente codice:
 
@@ -373,5 +373,5 @@ analyticsProvider2 = new MediaAnalyticsProvider(_player2);
 _player2.loadContent(URL_TO_MEDIA_2); 
 ```
 
-Both instances of `MediaAnalyticsProvider` and `MediaHeartbeat` track two separate sessions, each with its own unique session IDs. Potete visualizzare le due sessioni nello strumento di debug Charles.
+Sia le istanze che `MediaAnalyticsProvider` `MediaHeartbeat` il tracciamento di due sessioni separate, ciascuna con i propri ID di sessione univoci. Potete visualizzare le due sessioni nello strumento di debug Charles.
 
