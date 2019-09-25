@@ -1,35 +1,33 @@
 ---
-seo-title: Configurare javascript
-title: Configurare javascript
-uuid: 0269 d 8 ad -0 af 8-4 bf 1-9 d 15-e 06 c 2952 a 005
+seo-title: Configurare JavaScript
+title: Configurare JavaScript
+uuid: 0269d8ad-0af8-4bf1-9d15-e06c2952a005
 translation-type: tm+mt
 source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
 
-# Set up JavaScript{#set-up-javascript}
+# Configurare JavaScript{#set-up-javascript}
 
 ## Prerequisiti
 
-* **Ottenete parametri
-di configurazione validi** Questi parametri possono essere ottenuti da un rappresentante Adobe dopo aver configurato il vostro account Analytics.
-* **Implementazione`AppMeasurement`per javascript nell'applicazione
-multimediale** Per ulteriori informazioni sulla documentazione SDK di Adobe Mobile, consulta [Implementazione di analisi tramite javascript.](https://marketing.adobe.com/resources/help/en_US/sc/implement/js_implementation.html)
+* **Ottenete parametri** di configurazione validi Questi parametri possono essere ottenuti da un rappresentante Adobe dopo aver configurato l'account di analisi.
+* **Implementazione`AppMeasurement`di JavaScript nell’applicazione** multimediale. Per ulteriori informazioni sulla documentazione SDK di Adobe Mobile, consulta [Implementazione di Analytics tramite JavaScript.](https://marketing.adobe.com/resources/help/en_US/sc/implement/js_implementation.html)
 
 * **Fornite le seguenti funzionalità nel lettore multimediale:**
 
-   * *API per l'iscrizione agli eventi del lettore* - L'SDK di Media richiede che venga chiamato un set di API semplici quando si verificano eventi nel lettore.
-   * *API che fornisce informazioni* sul lettore: informazioni dettagliate quali il nome del supporto e la posizione della testina di riproduzione.
+   * *Un'API per iscriversi agli eventi* del lettore - L'SDK di Media richiede che venga chiamato un set di API semplici quando si verificano eventi nel lettore.
+   * *API che fornisce informazioni* sul lettore - Queste informazioni includono dettagli quali il nome del supporto e la posizione della testina di riproduzione.
 
-1. Add your [downloaded](/help/sdk-implement/download-sdks.md#section_551A10AD7880426BB29AE52482BB4211) library to your project. Creare riferimenti locali alle classi per comodità.
+1. Aggiungete la libreria [scaricata](/help/sdk-implement/download-sdks.md#section_551A10AD7880426BB29AE52482BB4211) al progetto. Create riferimenti locali alle classi per comodità.
 
-   1. Expand the `MediaSDK-js-v2.*.zip` file that you downloaded.
-   1. Verify that the `MediaSDK.min.js` file exists in the `libs` directory:
+   1. Espandete il `MediaSDK-js-v2.*.zip` file scaricato.
+   1. Verificate che il `MediaSDK.min.js` file esista nella `libs` directory:
 
-   1. Host the `MediaSDK.min.js` file.
+   1. Ospita il `MediaSDK.min.js` file.
 
-      Questo file javascript di base deve essere ospitato su un server Web accessibile a tutte le pagine del sito. È necessario definire il percorso di questi file per il passaggio successivo.
+      Questo file JavaScript di base deve essere ospitato su un server Web accessibile a tutte le pagine del sito. È necessario che il percorso di questi file venga completato nel passaggio successivo.
 
    1. Fate riferimento a `MediaSDK.min.js` su tutte le pagine del sito.
 
@@ -40,13 +38,13 @@ multimediale** Per ulteriori informazioni sulla documentazione SDK di Adobe Mobi
       src="https://INSERT-DOMAIN-AND-PATH-TO-CODE-HERE/MediaSDK.min.js"></script>
       ```
 
-   1. To quickly verify that the library was successfully imported, instantiate the `ADB.va.MediaHeartbeatConfig` class.
+   1. Per verificare rapidamente che la libreria sia stata importata correttamente, create un'istanza della `ADB.va.MediaHeartbeatConfig` classe.
 
       >[!NOTE]
       >
-      >From Version 2.1.0, the JavaScript SDK is compliant with the AMD and CommonJS module specifications, and `VideoHeartbeat.min.js` can also be used with compatible module loaders.
+      >Dalla versione 2.1.0, l’SDK JavaScript è conforme alle specifiche dei moduli AMD e CommonJS e `VideoHeartbeat.min.js` può essere utilizzato anche con caricatori di moduli compatibili.
 
-1. For easy access to the APIs, create local references to the `MediaHeartbeat` classes.
+1. Per un accesso facilitato alle API, create riferimenti locali alle `MediaHeartbeat` classi.
 
    ```js
    var MediaHeartbeat = ADB.va.MediaHeartbeat; 
@@ -54,9 +52,9 @@ multimediale** Per ulteriori informazioni sulla documentazione SDK di Adobe Mobi
    var MediaHeartbeatDelegate = ADB.va.MediaHeartbeatDelegate; 
    ```
 
-1. Create a `MediaHeartbeatConfig` instance.
+1. Create un' `MediaHeartbeatConfig` istanza.
 
-   This section helps you to understand `MediaHeartbeat` config parameters and how to set correct config values on your `MediaHeartbeat` instance, for accurate tracking.
+   Questa sezione descrive i parametri di `MediaHeartbeat` configurazione e come impostare i valori di configurazione corretti nell’ `MediaHeartbeat` istanza, per un monitoraggio accurato.
 
    Esempio `MediaHeartbeatConfig` di inizializzazione:
 
@@ -72,7 +70,7 @@ multimediale** Per ulteriori informazioni sulla documentazione SDK di Adobe Mobi
    mediaConfig.ovp = Configuration.HEARTBEAT.OVP; 
    ```
 
-1. Implement the `MediaHeartbeatDelegate` protocol.
+1. Implementa il `MediaHeartbeatDelegate` protocollo.
 
    ```js
    var mediaDelegate = new MediaHeartbeatDelegate(); 
@@ -88,9 +86,9 @@ multimediale** Per ulteriori informazioni sulla documentazione SDK di Adobe Mobi
    };
    ```
 
-1. Create the `MediaHeartbeat` instance.
+1. Create l’ `MediaHeartbeat` istanza.
 
-   Use the `MediaHeartbeatConfig` and `MediaHeartbeatDelegate` to create the `MediaHeartbeat` instance.
+   Utilizzate l'icona `MediaHeartbeatConfig` e `MediaHeartbeatDelegate` per creare l' `MediaHeartbeat` istanza.
 
    ```js
    this.mediaHeartbeat = new MediaHeartbeat(mediaDelegate, mediaConfig, appMeasurement);
@@ -98,7 +96,7 @@ multimediale** Per ulteriori informazioni sulla documentazione SDK di Adobe Mobi
 
    >[!IMPORTANT]
    >
-   >Make sure that your `MediaHeartbeat` instance is accessible and does not get deallocated until the end of the media session. Questa istanza verrà utilizzata per tutti i seguenti eventi di tracciamento.
+   >Accertatevi che l’ `MediaHeartbeat` istanza sia accessibile e non venga deallocata fino alla fine della sessione multimediale. Questa istanza verrà utilizzata per tutti i seguenti eventi di tracciamento.
 
    >[!TIP]
    >
@@ -113,8 +111,8 @@ multimediale** Per ulteriori informazioni sulla documentazione SDK di Adobe Mobi
    appMeasurement.charSet = "UTF­8";
    ```
 
-## Migrazione dalla versione 1. x alla 2. x in javascript
+## Migrazione dalla versione 1.x alla 2.x in JavaScript
 
-In version 2.x, all of the public methods are consolidated into the `ADB.va.MediaHeartbeat` class to make it easier on developers. Also, all configs are now consolidated into the `ADB.va.MediaHeartbeatConfig` class.
+Nella versione 2.x, tutti i metodi pubblici sono consolidati nella `ADB.va.MediaHeartbeat` classe per semplificare gli sviluppatori. Inoltre, tutte le configurazioni sono ora consolidate nella `ADB.va.MediaHeartbeatConfig` classe.
 
-For detailed information about migrating from 1.x to 2.x, see [VHL 1.x to 2.x Migration.](/help/sdk-implement/va-1x-to-2x/mig-1x-2x-overview.md)
+Per informazioni dettagliate sulla migrazione da 1.x a 2.x, consultate Migrazione [VHL 1.x a 2.x.](/help/sdk-implement/va-1x-to-2x/mig-1x-2x-overview.md)
