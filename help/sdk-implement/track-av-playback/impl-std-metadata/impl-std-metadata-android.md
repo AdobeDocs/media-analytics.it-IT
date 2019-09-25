@@ -3,28 +3,28 @@ description: nulle
 seo-description: nulle
 seo-title: Implementare i metadati standard su Android
 title: Implementare i metadati standard su Android
-uuid: c 48 b 4190-b 062-4 c 4 e -9 c 40-8 dde 4598 a 50 e
+uuid: c48b4190-b062-4c4e-9c40-8dde4598a50e
 translation-type: tm+mt
 source-git-commit: 46797deb402fed1c4d4781507c279407f8c13f2e
 
 ---
 
 
-# Implement standard metadata on Android{#implement-standard-metadata-on-android}
+# Implementare i metadati standard su Android{#implement-standard-metadata-on-android}
 
-## Costanti di metadati standard
+## Costanti metadati standard
 
 | Nome costante | Descrizione   |
 |---|---|
-| `MediaHeartbeat.MediaObjectKey.StandardMediaMetadata` | Constant for attaching standard metadata on `MediaObject`. |
+| `MediaHeartbeat.MediaObjectKey.StandardMediaMetadata` | Costante per l’associazione di metadati standard a `MediaObject`. |
 
-## Riferimento API per i tasti metadati
+## Riferimento API per le chiavi di metadati
 
-* Create a `HashMap` of standard metadata key value pairs.
-   * [Tasti video sui metadati](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/com/adobe/primetime/va/simple/MediaHeartbeat.VideoMetadataKeys.html)
+* Create una serie `HashMap` di coppie standard di valori di metadati.
+   * [Tasti di metadati video](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/com/adobe/primetime/va/simple/MediaHeartbeat.VideoMetadataKeys.html)
    * [Chiavi metadati audio](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/com/adobe/primetime/va/simple/MediaHeartbeat.AudioMetadataKeys.html)
-* Set the standard metadata `HashMap` on `MediaInfo` using the Standard Metadata constant for the metadata.
-* Provide this `MediaInfo` object while invoking the `trackSessionStart()` API.
+* Impostate i metadati standard `HashMap` su `MediaInfo` usando la costante Metadati standard per i metadati.
+* Fornire questo `MediaInfo` oggetto durante la chiamata dell' `trackSessionStart()` API.
 
 ## Implementazioni di esempio
 
