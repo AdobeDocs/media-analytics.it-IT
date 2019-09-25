@@ -1,40 +1,40 @@
 ---
 seo-title: Riproduzione VOD con ricerca nel contenuto principale
 title: Riproduzione VOD con ricerca nel contenuto principale
-uuid: 5 c 2392 f 6-9 b 9 c -42 f 5-833 f -77423 d 1 e 6222
+uuid: 5c2392f6-9b9c-42f5-833f-77423d1e6222
 translation-type: tm+mt
 source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
 
-# VOD playback with seeking in the main content{#vod-playback-with-seeking-in-the-main-content}
+# Riproduzione VOD con ricerca nel contenuto principale{#vod-playback-with-seeking-in-the-main-content}
 
 ## Scenario {#section_E4B558253AD84ED59256EDB60CED02AE}
 
 Questo scenario include la ricerca nel contenuto principale durante la riproduzione.
 
-This is the same scenario as the [VOD playback with no ads](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario, but a part of the content is scrubbed through and a seek is completed from one point in main content to another point.
+Questo è lo stesso scenario della riproduzione [VOD senza scenari di annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) , ma una parte del contenuto viene estesa e una ricerca viene completata da un punto del contenuto principale a un altro punto.
 
-| Attivatore   | Heartbeat, metodo  | Chiamate di rete  | Note   |
+| Attivatore   | Metodo Heartbeat | Chiamate di rete | Note   |
 | --- | --- | --- | --- |
-| User clicks [!UICONTROL Play] | `trackSessionStart` | Inizio del contenuto di Analytics, Inizio contenuto Heartbeat | The measurement library is unaware that there is a pre-roll ad, so these network calls are identical to the [VOD playback with no ads](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario. |
-| Viene riprodotto il primo fotogramma del contenuto. | `trackPlay` | Riproduzione contenuto heartbeat | Quando il contenuto dei capitoli viene riprodotto prima del contenuto principale, i Heartbeat iniziano all'avvio del capitolo. |
-| Il contenuto viene riprodotto |  | Heartbeats contenuto | This network call is exactly the same as the [VOD playback with no ads](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario. |
-| L'utente inizia l'operazione di ricerca sul contenuto | `trackSeekStart` |  | No heartbeats go out till seek is complete, for example, `trackSeekComplete` |
-| Operazione di ricerca completata | `trackSeekComplete` |  | Heartbeats inizia a uscire dalla ricerca. Suggerimento: Il valore della linea di scansione deve rappresentare la nuova linea di scansione corretta dopo la ricerca. |
-| Il contenuto è completo | `trackComplete` | Heartbeat Content Complete | This network call is exactly the same as the [VOD playback with no ads](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario. |
-| Sessione over | `trackSessionEnd` |  | `SessionEnd` |
+| Clic utente [!UICONTROL Play] | `trackSessionStart` | Inizio contenuto Analytics, Inizio contenuto Heartbeat | La libreria delle misurazioni non è a conoscenza dell'esistenza di un annuncio pre-roll, pertanto queste chiamate di rete sono identiche alla riproduzione [VOD senza scenari di annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . |
+| Viene riprodotto il primo fotogramma del contenuto. | `trackPlay` | Heartbeat Content Play | Quando il contenuto dei capitoli viene riprodotto prima del contenuto principale, i heartbeat iniziano quando inizia il capitolo. |
+| Riproduzione di contenuto |  | Heartbeat di contenuto | Questa chiamata di rete è esattamente la stessa della riproduzione [VOD senza scenari di annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . |
+| L'utente inizia la ricerca sul contenuto | `trackSeekStart` |  | Nessun battito cardiaco va fuori finché la ricerca non è completa, per esempio, `trackSeekComplete` |
+| Operazione di ricerca completata | `trackSeekComplete` |  | I battiti cardiaci iniziano a uscire dal momento che la ricerca è completa.  Suggerimento:  Il valore dell'indicatore di riproduzione deve rappresentare il nuovo indicatore di riproduzione corretto dopo la ricerca. |
+| Contenuto completato | `trackComplete` | Heartbeat Content Complete | Questa chiamata di rete è esattamente la stessa della riproduzione [VOD senza scenari di annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . |
+| Sessione | `trackSessionEnd` |  | `SessionEnd` |
 
 ## Codice di esempio {#section_q2d_wcj_x2b}
 
-In questo scenario, l'utente sta cercando quando viene riprodotto il contenuto principale.
+In questo scenario, l'utente cerca quando viene riprodotto il contenuto principale.
 
 ![](assets/seek-main-to-main.png)
 
 ### Android
 
-Per visualizzare questo scenario in Android, impostate il seguente codice:
+Per visualizzare questo scenario in Android, imposta il seguente codice:
 
 ```java
 // Set up mediaObject 
@@ -90,7 +90,7 @@ _mediaHeartbeat.trackSessionEnd();
 ........ 
 ```
 
-### App
+### iOS
 
 Per visualizzare questo scenario in iOS, imposta il seguente codice:
 
@@ -148,7 +148,7 @@ NSMutableDictionary *mediaContextData = [[NSMutableDictionary alloc] init];
 
 ### JavaScript
 
-Per visualizzare questo scenario, immettete il testo seguente:
+Per visualizzare questo scenario, immettere il testo seguente:
 
 ```js
 // Set up mediaObject 
