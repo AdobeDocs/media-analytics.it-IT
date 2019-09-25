@@ -1,7 +1,7 @@
 ---
 seo-title: Avvio rapido
 title: Avvio rapido
-uuid: ca 20 bad 4-2 c 8 f -406 b -833 e-b 4883 a 9 aa 534
+uuid: ca20bad4-2c8f-406b-833e-b4883a9aa534
 translation-type: tm+mt
 source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
@@ -12,16 +12,16 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 >[!TIP]
 >
->Gather the request data necessary for completing a successful [Session request](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) to the Media Analytics (MA) Collection API back-end server. You can quickly verify your request data by sending requests manually (with `curl`, or Postman, etc.). Questo vi fornirà un feedback immediato sulla presenza di problemi con tipi di dati errati o su informazioni errate nella richiesta. Use the [JSON validation schemas](/help/media-collection-api/mc-api-ref/mc-api-json-validation.md) to verify that you are supplying proper request data.
+>Raccogli i dati della richiesta necessari per completare la richiesta [di](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) sessione con esito positivo al server back-end API di Media Analytics (MA) Collection. Potete verificare rapidamente i dati della richiesta inviando manualmente le richieste (tramite `curl`, o Postman, ecc.). Questo ti darà un feedback immediato se hai dei problemi con tipi di dati errati o informazioni errate nella tua richiesta. Utilizzate gli schemi [di convalida](/help/media-collection-api/mc-api-ref/mc-api-json-validation.md) JSON per verificare di fornire dati di richiesta corretti.
 
-1. Raccogli lo standard, i dati Adobe Analytics e i dati visitatore richiesti per eseguire una qualsiasi delle applicazioni Experience Cloud:
+1. Raccogliere i dati standard e richiesti di Adobe Analytics e dei visitatori da fornire per eseguire una qualsiasi delle applicazioni Experience Cloud:
 
-   * ID organizzazione Experience Cloud per visitatore
-   * ID utente di Experience Cloud
+   * ID organizzazione Experience Cloud per visitatori
+   * ID utente Experience Cloud visitatori
    * ID suite di rapporti di Analytics
-   * URL del server di tracciamento di Analytics
+   * URL del server di tracciamento Analytics
 
-1. Create a JSON object for your `sessions` request body, containing the minimum data required for a successful call. Ad esempio:
+1. Create un oggetto JSON per il corpo della `sessions` richiesta, contenente i dati minimi richiesti per una chiamata riuscita. Ad esempio:
 
    ```
    { 
@@ -49,9 +49,9 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
    >[!NOTE]
    >
-   >Devi utilizzare i tipi di dati corretti nel corpo della richiesta JSON. E.g., `analytics.enableSSL` requires a boolean, `media.length` is numeric, etc. You can check parameter types and mandatory versus optional requirements by checking the [JSON validation schemas.](/help/media-collection-api/mc-api-impl/mc-api-validate-reqs.md)
+   >Devi usare i tipi di dati corretti nel corpo della richiesta JSON. Ad esempio, `analytics.enableSSL` richiede un valore booleano, `media.length` è numerico, ecc. È possibile controllare i tipi di parametri e i requisiti obbligatori e facoltativi controllando gli schemi di convalida [JSON.](/help/media-collection-api/mc-api-impl/mc-api-validate-reqs.md)
 
-1. Inviate le richieste sessioni all'endpoint API raccolta. If your request payload is invalid, identify the problem and retry until you get a `201 Created` response. In this `curl` example, the JSON request body is in a file named `sample_data_session`:
+1. Inviare le richieste di sessioni all'endpoint API della raccolta MA. Se il payload della richiesta non è valido, identificate il problema e riprovate fino a ottenere una `201 Created` risposta. In questo `curl` esempio, il corpo della richiesta JSON si trova in un file denominato `sample_data_session`:
 
    ```
    $ curl -i -d \ 
@@ -72,4 +72,4 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
    Access-Control-Expose-Headers: Location
    ```
 
-If the [Sessions request](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) succeeds, you receive a `201 Created` response similar to the one above. La risposta include un ID sessione nell'intestazione Posizione. L'ID sessione è l'elemento fondamentale della risposta, in quanto è richiesto per tutte le chiamate di tracciamento successive. After a successful return of a [Sessions request](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md), you can confidently proceed with implementing video tracking using the MA API in your video player.
+Se la richiesta [](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) Sessioni ha esito positivo, riceverete una `201 Created` risposta simile a quella precedente. La risposta include un ID sessione nell’intestazione Posizione. L’ID sessione è il elemento fondamentale delle informazioni nella risposta, in quanto è richiesto per tutte le chiamate di tracciamento successive. Dopo il ritorno corretto di una richiesta [di](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md)sessioni, potete procedere con l'implementazione del tracciamento video mediante l'API MA nel lettore video.
