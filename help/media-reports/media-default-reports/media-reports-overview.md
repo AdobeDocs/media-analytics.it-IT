@@ -1,30 +1,30 @@
 ---
-seo-title: Panoramica sui file multimediali
-title: Panoramica sui file multimediali
-uuid: bdbd 998 f -9 b 5 e -40 c 9-a 8 ea -12 dfa 5 acd 35 c
+seo-title: Panoramica dei supporti
+title: Panoramica dei supporti
+uuid: bdbd998f-9b5e-40c9-a8ea-12dfa5acd35c
 translation-type: tm+mt
 source-git-commit: 6e13e9a6250949a3a7f059445da772b4db1fdb71
 
 ---
 
 
-# Media overview{#media-overview}
+# Panoramica dei supporti{#media-overview}
 
-Il dashboard Panoramica file multimediali consente di monitorare i contenuti multimediali nel sito. La visualizzazione Panoramica file multimediali mostra diverse misure aggregate che consentono di monitorare rapidamente i contenuti multimediali come previsto. Un grafico mostra che il contenuto inizia accanto all'annuncio e inizia a visualizzare rapidamente queste metriche per ogni elemento multimediale.
+Il dashboard Panoramica file multimediali è progettato per consentire il monitoraggio dei contenuti multimediali nel sito. La visualizzazione Panoramica file multimediali mostra diverse misurazioni aggregate in modo da poter monitorare rapidamente le prestazioni dei supporti come previsto. Un grafico mostra il contenuto che inizia accanto all’annuncio e inizia a consentirvi di visualizzare rapidamente queste metriche per ciascun elemento multimediale.
 
-![](assets/media_overview.png){width = "672 px"}
+![](assets/media_overview.png){width="672px"}
 
-## Quick Filters {#section_8DF3E4A6734145B082657C6BECFA0BBE}
+## Filtri rapidi {#section_8DF3E4A6734145B082657C6BECFA0BBE}
 
-Visualizzazione rapida delle metriche multimediali per dispositivo o paese geografica:
+Visualizzare rapidamente le metriche relative agli elementi multimediali in base al dispositivo o al paese geografico:
 
-![](assets/video-overview-report-filters.png){width = "400 px"}
+![](assets/video-overview-report-filters.png){width="400px"}
 
 ## Media Performance {#section_288FB476EDA44761BB8A86551F0A110C}
 
-Fai clic e trascina per ingrandire, quindi passa il mouse per visualizzare le metriche granulari per contenuti multimediali specifici. Clic  ![](assets/video-overview-report-revert.png)
+Fate clic e trascinate per ingrandire, quindi passate il mouse per visualizzare le metriche granulari per specifici supporti. Fai clic su  ![](assets/video-overview-report-revert.png)
 
-per ripristinare la visualizzazione dopo aver effettuato lo zoom.
+per ripristinare la visualizzazione dopo lo zoom.
 
-![](assets/media_overview_zoom.png){width = "400 px"}
+![](assets/media_overview_zoom.png){width="400px"}
 
