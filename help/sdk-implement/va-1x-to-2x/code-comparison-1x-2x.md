@@ -1,48 +1,48 @@
 ---
-seo-title: Confronto del codice da 1. x a 2. x
-title: Confronto del codice da 1. x a 2. x
-uuid: 9 f 0 a 1660-2100-446 d-ab 75-afdf 966478 b 3
+seo-title: Confronto dei codici da 1.x a 2.x
+title: Confronto dei codici da 1.x a 2.x
+uuid: 9f0a1660-2100-446d-ab75-afdf966478b3
 translation-type: tm+mt
 source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
 
-# Code comparison: 1.x to 2.x {#code-comparison-x-to-x}
+# Confronto dei codici: Da 1,x a 2,x {#code-comparison-x-to-x}
 
-All of the configuration parameters and tracking APIs are now consolidated into the `MediaHeartbeats` and `MediaHeartbeatConfig` classes.
+Tutti i parametri di configurazione e le API di tracciamento ora sono consolidati nelle `MediaHeartbeats` classi e `MediaHeartbeatConfig` .
 
-**Modifiche API di configurazione:**
+**Modifiche dell'API di configurazione:**
 
 * `AdobeHeartbeatPluginConfig.sdk` - Rinominato in `MediaConfig.appVersion`
-* `MediaHeartbeatConfig.playerName` - Ora è impostato `MediaHeartbeatConfig` tramite `VideoPlayerPluginDelegate`
-* (For JavaScript only): The `AppMeasurement` instance - Now sent through the `MediaHeartbeat` constructor.
+* `MediaHeartbeatConfig.playerName` - Ora impostato `MediaHeartbeatConfig` invece di `VideoPlayerPluginDelegate`
+* (solo per JavaScript): L' `AppMeasurement` istanza - Ora inviata tramite il `MediaHeartbeat` costruttore.
 
-**Le proprietà di configurazione cambiano:**
+**Modifiche delle proprietà di configurazione:**
 
 * `sdk` - Rinominato in `appVersion`
-* `publisher` - Rimosso; ID organizzazione Experience Cloud utilizzato come editore
+* `publisher` - Rimosso; L’ID organizzazione Experience Cloud viene utilizzato come editore
 * `quiteMode` - Rimosso
 
-**Collegamenti ai lettori di esempio 1. x e 2. x:**
+**Collegamenti ai lettori di esempio 1.x e 2.x:**
 
-* [Lettore di esempio 1. x ](https://github.com/Adobe-Marketing-Cloud/video-heartbeat/blob/master/sdks/js/samples/BasicPlayerSample/script/app/analytics/video.analytics.provider.js#L58)
-* [Lettore di esempio 2. x ](https://github.com/Adobe-Marketing-Cloud/media-sdks/blob/master/sdks/js/samples/BasicPlayerSample/script/app/analytics/video.analytics.provider.js#L47)
+* [1.x Lettore di esempio ](https://github.com/Adobe-Marketing-Cloud/video-heartbeat/blob/master/sdks/js/samples/BasicPlayerSample/script/app/analytics/video.analytics.provider.js#L58)
+* [2.x Lettore di esempio ](https://github.com/Adobe-Marketing-Cloud/media-sdks/blob/master/sdks/js/samples/BasicPlayerSample/script/app/analytics/video.analytics.provider.js#L47)
 
-Le sezioni seguenti forniscono confronti di codice tra 1. x e 2. x, che coprono Initialization, Core Playback, Ad Playback, Chapter Playback e alcuni altri eventi.
+Le sezioni seguenti forniscono confronti tra i codici da 1.x a 2.x, inclusi Inizializzazione, Riproduzione di base, Riproduzione annunci pubblicitari, Riproduzione di capitolo e alcuni eventi aggiuntivi.
 
-## Confronto dei codici VHL: INITIALIZATION
+## Confronto codici VHL: INIZIALIZZAZIONE
 
 ### Inizializzazione oggetto
 
-| API 1. x | API 2. x |
+| API 1.x | API 2.x |
 | --- | --- |
 | `Heartbeat()` | `MediaHeartbeat()` |
 | `VideoPlayerPlugin()` | `MediaHeartbeatConfig()` |
 | `AdobeAnalyticsPlugin()` |  |
 | `HeartbeatPlugin()` |  |
 
-#### Video player plugin initialization (1.x) {#plugin-init-1.x}
+#### Inizializzazione plug-in del lettore video (1.x) {#plugin-init-1.x}
 
 ```js
 this._playerPlugin = new VideoPlayerPlugin( new SampleVideoPlayerPluginDelegate(this._player));
@@ -71,7 +71,7 @@ configData.debugLogging = true;
 this._heartbeat.configure(configData);
 ```
 
-#### Media Heartbeat initialization (2.x) {#mh-init-2.x}
+#### Inizializzazione di Media Heartbeat (2.x) {#mh-init-2.x}
 
 ```js
 var mediaConfig = new MediaHeartbeatConfig();
@@ -87,7 +87,7 @@ this._mediaHeartbeat = new MediaHeartbeat( new SampleMediaHeartbeatDelegate(this
 
 ### Delegati
 
-| API 1. x | API 2. x |
+| API 1.x | API 2.x |
 | --- | --- |
 | `VideoPlayerPluginDelegate()` | `MediaHeartbeatDelegate()` |
 | `VideoPlayerPluginDelegate().getVideoInfo` | `MediaHeartbeatDelegate().getCurrentPlaybackTime` |
@@ -172,16 +172,16 @@ SampleMediaHeartbeatDelegate.prototype.getQoSObject = function() {
 this._mediaHeartbeat = new MediaHeartbeat(new SampleMediaHeartbeatDelegate(this._player), mediaConfig, appMeasurement);
 ```
 
-## Confronto dei codici VHL: CORE PLAYBACK
+## Confronto codici VHL: RIPRODUZIONE PRINCIPALE
 
-### Inizio sessione
+### Avvio sessione
 
-| VHL 1. x | VHL 2. x |
+| VHL 1.x | VHL 2.x |
 | --- | --- |
 | `VideoPlayerPluginDelegate.trackVideoLoad()` | `MediaHeartbeat.createMediaObject()` |
 | `VideoPlayerPluginDelegate.getVideoInfo()` | `MediaHeartbeat.trackSessionStart()` |
 
-#### Session Start (1.x) {#session-start-1.x}
+#### Avvio sessione (1.x) {#session-start-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onLoad = function() { 
@@ -198,7 +198,7 @@ VideoPlayer.prototype.getVideoInfo = function() {
 };
 ```
 
-#### Session Start (2.x) {#session-start-2.x}
+#### Avvio sessione (2.x) {#session-start-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onLoad = function() { 
@@ -211,12 +211,12 @@ VideoAnalyticsProvider.prototype._onLoad = function() {
 
 ### Metadati video standard
 
-| API 1. x | API 2. x |
+| API 1.x | API 2.x |
 | --- | --- |
 | `VideoMetadataKeys()` | `MediaHeartbeat.createMediaObject()` |
 | `AdobeAnalyticsPlugin.setVideoMetadata()` | `MediaHeartbeat.trackSessionStart()` |
 
-#### Standard Metadata (1.x) {#std-meta-1.x}
+#### Metadati standard (1.x) {#std-meta-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onLoad = function() {
@@ -238,7 +238,7 @@ VideoAnalyticsProvider.prototype._onLoad = function() {
 };
 ```
 
-#### Standard Metadata (2.x) {#std-meta-2.x}
+#### Metadati standard (2.x) {#std-meta-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onLoad = function() {
@@ -262,16 +262,16 @@ VideoAnalyticsProvider.prototype._onLoad = function() {
 ```
 
 >[!NOTE]
->Instead of setting the Standard Video Metadata through the `AdobeAnalyticsPlugin.setVideoMetadata()` API, in VHL 2.0, the Standard Video Metadata is set through the MediaObject key `MediaObject.MediaObjectKey.StandardVideoMetadata()`.
+>Invece di impostare i metadati video standard tramite l’ `AdobeAnalyticsPlugin.setVideoMetadata()` API, in VHL 2.0 i metadati video standard vengono impostati tramite la chiave MediaObject `MediaObject.MediaObjectKey.StandardVideoMetadata()`.
 
 ### Metadati video personalizzati
 
-| API 1. x | API 2. x |
+| API 1.x | API 2.x |
 | --- | --- |
 | `VideoMetadataKeys()` | `MediaHeartbeat.createMediaObject()` |
 | `AdobeAnalyticsPlugin.setVideoMetadata()` | `MediaHeartbeat.trackSessionStart()` |
 
-#### Custom Metadata (1.x) {#custom-meta-1.x}
+#### Metadati personalizzati (1.x) {#custom-meta-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onLoad = function() { 
@@ -285,7 +285,7 @@ VideoAnalyticsProvider.prototype._onLoad = function() {
 };
 ```
 
-#### Custom Metadata (2.x) {#custom-meta-2.x}
+#### Metadati personalizzati (2.x) {#custom-meta-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onLoad = function() { 
@@ -302,16 +302,16 @@ VideoAnalyticsProvider.prototype._onLoad = function() {
 ```
 
 >[!NOTE]
->Instead of setting the Custom Video Metadata through the `AdobeAnalyticsPlugin.setVideoMetadata()` API, in VHL 2.0, the Standard Video Metadata is set through the `MediaHeartbeat.trackSessionStart()` API.
+>Invece di impostare i metadati video personalizzati tramite l' `AdobeAnalyticsPlugin.setVideoMetadata()` API, in VHL 2.0 i metadati video standard vengono impostati tramite l' `MediaHeartbeat.trackSessionStart()` API.
 
 
 ### Riproduzione
 
-| API 1. x | API 2. x |
+| API 1.x | API 2.x |
 | --- | --- |
 | `VideoPlayerPlugin.trackPlay()` | `MediaHeartbeat.trackPlay()` |
 
-#### Playback (1.x) {#playback-1.x}
+#### Riproduzione (1.x) {#playback-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onSeekStart = function() { 
@@ -320,7 +320,7 @@ VideoAnalyticsProvider.prototype._onSeekStart = function() {
 };
 ```
 
-#### Playback (2.x) {#playback-2.x}
+#### Riproduzione (2.x) {#playback-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onSeekStart = function() { 
@@ -331,11 +331,11 @@ VideoAnalyticsProvider.prototype._onSeekStart = function() {
 
 ### Pausa
 
-| API 1. x | API 2. x |
+| API 1.x | API 2.x |
 | --- | --- |
 | `VideoPlayerPlugin.trackPause()` | `MediaHeartbeat.trackPausel()` |
 
-#### Pause (1.x) {#pause-1.x}
+#### Pausa (1.x) {#pause-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onPause = function() { 
@@ -344,7 +344,7 @@ VideoAnalyticsProvider.prototype._onPause = function() {
 };
 ```
 
-#### Pause (2.x) {#pause-2.x}
+#### Pausa (2.x) {#pause-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onBufferComplete = function() { 
@@ -353,13 +353,13 @@ VideoAnalyticsProvider.prototype._onBufferComplete = function() {
 };
 ```
 
-### Seek Complete
+### Ricerca completata
 
-| API 1. x | API 2. x |
+| API 1.x | API 2.x |
 | --- | --- |
 | `VideoPlayerPlugin.trackSeekComplete()` | `MediaHeartbeat.`<br/>  `trackEvent(MediaHeartbeat.Event.SeekComplete)` |
 
-#### Seeking (1.x) {#seek-1.x}
+#### Ricerca (1.x) {#seek-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onSeekComplete = function() { 
@@ -368,7 +368,7 @@ VideoAnalyticsProvider.prototype._onSeekComplete = function() {
 };
 ```
 
-#### Seeking (2.x) {#seek-2.x}
+#### Ricerca (2.x) {#seek-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onSeekComplete = function() { 
@@ -377,13 +377,13 @@ VideoAnalyticsProvider.prototype._onSeekComplete = function() {
 };
 ```
 
-### Inizio buffer
+### Avvio buffer
 
-| API 1. x | API 2. x |
+| API 1.x | API 2.x |
 | --- | --- |
 | `VideoPlayerPlugin.trackBufferStart()` | `MediaHeartbeat.trackEvent(`<br/>  `MediaHeartbeat.Event.BufferStart)` |
 
-#### Buffer Start (1.x) {#buffer-start-1.x}
+#### Avvio buffer (1.x) {#buffer-start-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onBufferStart = function() { 
@@ -392,7 +392,7 @@ VideoAnalyticsProvider.prototype._onBufferStart = function() {
 };
 ```
 
-#### Buffer Start (2.x) {#buffer-start-2.x}
+#### Avvio buffer (2.x) {#buffer-start-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onBufferStart = function() { 
@@ -403,11 +403,11 @@ VideoAnalyticsProvider.prototype._onBufferStart = function() {
 
 ### Buffer completo
 
-| API 1. x | API 2. x |
+| API 1.x | API 2.x |
 | --- | --- |
 | `VideoPlayerPlugin.trackBufferComplete()` | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.BufferComplete)` |
 
-#### Buffer Complete (1.x) {#buffer-complete-1.x}
+#### Buffer completo (1.x) {#buffer-complete-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onBufferComplete = function() { 
@@ -416,7 +416,7 @@ VideoAnalyticsProvider.prototype._onBufferComplete = function() {
 };
 ```
 
-#### Buffer Complete (2.x) {#buffer-complete-2.x}
+#### Buffer completo (2.x) {#buffer-complete-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onBufferComplete = function() { 
@@ -427,11 +427,11 @@ VideoAnalyticsProvider.prototype._onBufferComplete = function() {
 
 ### Riproduzione completata
 
-| API 1. x | API 2. x |
+| API 1.x | API 2.x |
 | --- | --- |
 | `VideoPlayerPlugin.trackComplete()` | `MediaHeartbeat.trackComplete()` |
 
-#### Playback Complete (1.x) {#playback-complete-1.x}
+#### Riproduzione completata (1.x) {#playback-complete-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onComplete = function() { 
@@ -442,7 +442,7 @@ VideoAnalyticsProvider.prototype._onComplete = function() {
 };
 ```
 
-#### Playback Complete (2.x) {#playback-complete-2.x}
+#### Riproduzione completata (2.x) {#playback-complete-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onComplete = function() { 
@@ -451,18 +451,18 @@ VideoAnalyticsProvider.prototype._onComplete = function() {
 };
 ```
 
-## Confronto dei codici VHL: AD PLAYBACK
+## Confronto codici VHL: RIPRODUZIONE AD
 
-### Inizio annuncio
+###  Inizio annuncio
 
-| VHL 1. x | VHL 2. x |
+| VHL 1.x | VHL 2.x |
 | --- | --- |
 | `VideoPlayerPlugin.trackAdStart()` | `MediaHeartbeat.createAdBreakObject()` |
 | `VideoPlayerPluginDelegate.getAdBreakInfo()` | `MediaHeartbeat.createAdObject()` |
 | `VideoPlayerPluginDelegate.getAdInfo()` | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.AdBreakStart)` |
 |  | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.AdStart)` |
 
-#### Ad Start (1.x) {#ad-start-1.x}
+#### Inizio annuncio (1.x) {#ad-start-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onAdStart = function() { 
@@ -477,7 +477,7 @@ SampleVideoPlayerPluginDelegate.prototype.getAdInfo = function() {
 };
 ```
 
-#### Ad Start (2.x) {#ad-start-2.x}
+#### Inizio annuncio (2.x) {#ad-start-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onAdStart = function() { 
@@ -496,14 +496,14 @@ VideoAnalyticsProvider.prototype._onAdStart = function() {
 };
 ```
 
-### Metadati annunci standard
+### Metadati annuncio standard
 
-| API 1. x | API 2. x |
+| API 1.x | API 2.x |
 | --- | --- |
 | `AdMetadataKeys()` | `MediaHeartbeat.createAdObject()` |
 | `AdobeAnalyticsPlugin.setAdMetadata()` | `MediaHeartbeat.trackAdStart()` |
 
-#### Standard Ad Metadata (1.x) {#ad-meta-1.x}
+#### Metadati annuncio standard (1.x) {#ad-meta-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onAdStart = function() {
@@ -522,7 +522,7 @@ VideoAnalyticsProvider.prototype._onAdStart = function() {
 };
 ```
 
-#### Standard Ad Metadata (2.x) {#ad-meta-2.x}
+#### Metadati annuncio standard (2.x) {#ad-meta-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onAdStart = function() { 
@@ -548,16 +548,16 @@ VideoAnalyticsProvider.prototype._onAdStart = function() {
 ```
 
 >[!NOTE]
->Instead of setting the Standard Ad Metadata through the `AdobeAnalyticsPlugin.setVideoMetadata()` API, in VHL 2.0, the Standard Ad Metadata is set through the `AdMetadata` key `MediaObject.MediaObjectKey.StandardVideoMetadata`
+>Invece di impostare i metadati annuncio standard tramite l' `AdobeAnalyticsPlugin.setVideoMetadata()` API, in VHL 2.0, i metadati annuncio standard sono impostati tramite la `AdMetadata` chiave `MediaObject.MediaObjectKey.StandardVideoMetadata`
 
-### Custom Annuncio Metadati
+### Metadati annuncio personalizzati
 
-| API 1. x | API 2. x |
+| API 1.x | API 2.x |
 | --- | --- |
 | `AdobeAnalyticsPlugin.setAdMetadata()` | `MediaHeartbeat.createAdObject()` |
 |  | `MediaHeartbeat.trackAdStart()` |
 
-#### Custom Ad Metadata (1.x) {#custom-ad-meta-1.x}
+#### Metadati annuncio personalizzati (1.x) {#custom-ad-meta-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onAdStart = function() { 
@@ -576,7 +576,7 @@ VideoAnalyticsProvider.prototype._onAdStart = function() {
 };
 ```
 
-#### Custom Ad Metadata (2.x) {#custom-ad-meta-2.x}
+#### Metadati annuncio personalizzati (2.x) {#custom-ad-meta-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onAdStart = function() { 
@@ -599,16 +599,16 @@ VideoAnalyticsProvider.prototype._onAdStart = function() {
 ```
 
 >[!NOTE]
->Instead of setting the Custom Ad Metadata through the `AdobeAnalyticsPlugin.setVideoMetadata` API, in VHL 2.0, the Standard Ad Metadata is set through the `MediaHeartbeat.trackAdStart()` API.
+>Invece di impostare i metadati personalizzati dell'annuncio tramite l' `AdobeAnalyticsPlugin.setVideoMetadata` API, in VHL 2.0 i metadati dell'annuncio standard vengono impostati tramite l' `MediaHeartbeat.trackAdStart()` API.
 
-### Ad Skip
+### Salta annuncio
 
-| API 1. x | API 2. x |
+| API 1.x | API 2.x |
 | --- | --- |
 | `AdobeAnalyticsPlugin.setAdMetadata()` | `MediaHeartbeat.createAdObject()` |
 |  | `MediaHeartbeat.trackAdStart()` |
 
-#### Ad Skip (1.x) {#ad-skip-1.x}
+#### Salto annuncio (1.x) {#ad-skip-1.x}
 
 ```js
 SampleVideoPlayerPluginDelegate.prototype.getAdInfo = function() { 
@@ -616,7 +616,7 @@ SampleVideoPlayerPluginDelegate.prototype.getAdInfo = function() {
 };
 ```
 
-#### Ad Skip (2.x) {#ad-skip-2.x}
+#### Salto annuncio (2.x) {#ad-skip-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onAdSkip = function() { 
@@ -626,16 +626,16 @@ VideoAnalyticsProvider.prototype._onAdSkip = function() {
 ```
 
 >[!NOTE]
->In VHL 1.5.X APIs; `getAdinfo()` and `getAdBreakInfo()` must return null if the player is outside the Ad break boundaries.
+>nelle API VHL 1.5.X; `getAdinfo()` e `getAdBreakInfo()` deve restituire null se il lettore si trova al di fuori dei limiti di interruzione annuncio.
 
-### Annuncio completo
+### Annuncio completato
 
-| API 1. x | API 2. x |
+| API 1.x | API 2.x |
 | --- | --- |
 | `VideoPlayerPlugin.trackAdComplete()` | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.AdComplete)` |
 |  | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.AdBreakComplete)` |
 
-#### Ad Complete (1.x) {#ad-complete-1.x}
+#### Annuncio completo (1.x) {#ad-complete-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onAdComplete = function() { 
@@ -644,7 +644,7 @@ VideoAnalyticsProvider.prototype._onAdComplete = function() {
 };
 ```
 
-#### Ad Complete (2.x) {#ad-complete-2.x}
+#### Annuncio completo (2.x) {#ad-complete-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onAdComplete = function() { 
@@ -654,16 +654,16 @@ VideoAnalyticsProvider.prototype._onAdComplete = function() {
 };
 ```
 
-## Confronto dei codici VHL: RIPRODUZIONE CAPITOLO
+## Confronto codici VHL: RIPRODUZIONE CAPITOLO
 
 ### Inizio capitolo
 
-| VHL 1. x | VHL 2. x |
+| VHL 1.x | VHL 2.x |
 | --- | --- |
 | `VideoPlayerPluginDelegate.getChapterInfo()` | `MediaHeartbeat.createChapterObject` |
 | `VideoPlayerPlugin.trackChapterStart()` | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.ChapterStart)` |
 
-#### Chapter Start (1.x) {#chap-start-1.x}
+#### Inizio capitolo (1.x) {#chap-start-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onChapterStart = function() { 
@@ -678,7 +678,7 @@ SampleVideoPlayerPluginDelegate.prototype.getChapterInfo = function() {
 };
 ```
 
-#### Chapter Start (2.x) {#chap-start-2.x}
+#### Inizio capitolo (2.x) {#chap-start-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onChapterStart = function() { 
@@ -692,13 +692,13 @@ VideoAnalyticsProvider.prototype._onChapterStart = function() {
 };
 ```
 
-### Ignora capitolo
+### Salta capitolo
 
-| API 1. x | API 2. x |
+| API 1.x | API 2.x |
 | --- | --- |
 | `VideoPlayerPluginDelegate.getChapterInfo()` | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.ChapterSkip)` |
 
-#### Chapter Skip (1.x) {#chap-skip-1.x}
+#### Salto capitolo (1.x) {#chap-skip-1.x}
 
 ```js
 SampleVideoPlayerPluginDelegate.prototype.getChapterInfo = function() { 
@@ -707,9 +707,9 @@ SampleVideoPlayerPluginDelegate.prototype.getChapterInfo = function() {
 ```
 
 >[!NOTE]
->In VHL 1.5.X APIs; `getChapterinfo()` must return null if the player is outside the Chapter boundaries.
+>nelle API VHL 1.5.X; Se il lettore non si trova entro i limiti del Capitolo, `getChapterinfo()` deve restituire null.
 
-#### Chapter Skip (2.x) {#chap-skip-2.x}
+#### Salto capitolo (2.x) {#chap-skip-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onChapterSkip = function() { 
@@ -719,12 +719,12 @@ VideoAnalyticsProvider.prototype._onChapterSkip = function() {
 
 ### Metadati personalizzati capitolo
 
-| API 1. x | API 2. x |
+| API 1.x | API 2.x |
 | --- | --- |
 | `VideoPlayerPlugin.trackChapterStart()` | `MediaHeartbeat.createChapterObject()` |
 | `AdobeAnalyticsPlugin.setChapterMetadata()` | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.ChapterStart)` |
 
-#### Chapter Custom Metadata (1.x) {#chap-cust-meta-1.x}
+#### Metadati personalizzati capitolo (1.x) {#chap-cust-meta-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onChapterStart = function() { 
@@ -736,7 +736,7 @@ VideoAnalyticsProvider.prototype._onChapterStart = function() {
 };
 ```
 
-#### Chapter Custom Metadata (2.x) {#chap-cust-meta-2.x}
+#### Metadati personalizzati capitolo (2.x) {#chap-cust-meta-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onChapterStart = function() { 
@@ -752,13 +752,13 @@ VideoAnalyticsProvider.prototype._onChapterStart = function() {
 };
 ```
 
-### Completamento capitolo
+### Capitolo Completa
 
-| API 1. x | API 2. x |
+| API 1.x | API 2.x |
 | --- | --- |
 | `trackChapterComplete()` | `trackEvent(MediaHeartbeat.Event.ChapterComplete)` |
 
-#### Chapter Complete (1.x) {#chap-complete-1.x}
+#### Capitolo completo (1.x) {#chap-complete-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onChapterComplete = function() { 
@@ -767,7 +767,7 @@ VideoAnalyticsProvider.prototype._onChapterComplete = function() {
 };
 ```
 
-#### Chapter Complete (2.x) {#chap-complete-2.x}
+#### Capitolo completo (2.x) {#chap-complete-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onChapterComplete = function() { 
@@ -776,15 +776,15 @@ VideoAnalyticsProvider.prototype._onChapterComplete = function() {
 };
 ```
 
-## Confronto dei codici VHL: ALTRI EVENTI
+## Confronto codici VHL: ALTRI EVENTI
 
 ### Modifica bitrate
 
-| VHL 1. x | VHL 2. x |
+| VHL 1.x | VHL 2.x |
 | --- | --- |
 | `VideoPlayerPlugin.trackBitrateChange()` | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.BitrateChange)` |
 
-#### Bitrate Change (1.x) {#bitrate-chg-1.x}
+#### Modifica bitrate (1.x) {#bitrate-chg-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onBitrateChange = function() { 
@@ -795,7 +795,7 @@ VideoAnalyticsProvider.prototype._onBitrateChange = function() {
 };
 ```
 
-#### Bitrate Change (2.x) {#bitrate-chg-2.x}
+#### Modifica bitrate (2.x) {#bitrate-chg-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onBitrateChange = function() { 
@@ -808,13 +808,13 @@ VideoAnalyticsProvider.prototype._onBitrateChange = function() {
 
 ### Ripresa video
 
-| API 1. x | API 2. x |
+| API 1.x | API 2.x |
 | --- | --- |
 | `VideoInfo.resumed()` | `MediaObject()` |
 | `VideoPlayerPluginDelegate.getVideoInfo()` | `MediaHeartbeat.trackSessionStart()` |
 | `VideoPlayerPlugin.trackVideoLoad()` |  |
 
-#### Video Resume (1.x) {#video-resume-1.x}
+#### Ripresa video (1.x) {#video-resume-1.x}
 
 ```js
 this._videoInfo.resumed=true;
@@ -827,7 +827,7 @@ VideoPlayer.prototype.getVideoInfo = function() {
 };
 ```
 
-#### Video Resume (2.x) {#video-resume-2.x}
+#### Ripresa video (2.x) {#video-resume-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onLoad = function() { 
