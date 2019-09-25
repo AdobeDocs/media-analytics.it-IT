@@ -1,39 +1,37 @@
 ---
 seo-title: Configurare Android
 title: Configurare Android
-uuid: 3 ffe 3276-a 104-4182-9220-038729 e 9 f 3 d 5
+uuid: 3ffe3276-a104-4182-9220-038729e9f3d5
 translation-type: tm+mt
 source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
 
-# Set up Android{#set-up-android}
+# Configurare Android{#set-up-android}
 
 ## Prerequisiti
 
-* **Ottenete parametri di configurazione validi per Media SDK**
-Questi parametri possono essere ottenuti da un rappresentante Adobe dopo aver configurato il vostro account Analytics.
-* **Implementa adbmobile per Android nell'applicazione**
-Per ulteriori informazioni sulla documentazione SDK di Adobe Mobile, consulta [Android SDK 4. x per soluzioni Experience Cloud.](https://marketing.adobe.com/resources/help/en_US/mobile/android/)
+* **Ottenete parametri di configurazione validi per Media SDK** Questi parametri possono essere ottenuti da un rappresentante Adobe dopo la configurazione dell'account di analisi.
+* **Implementa ADBMobile per Android nella tua applicazione** Per ulteriori informazioni sulla documentazione SDK per Adobe Mobile, consulta [Android SDK 4.x per le soluzioni Experience Cloud.](https://marketing.adobe.com/resources/help/en_US/mobile/android/)
 * **Fornite le seguenti funzionalità nel lettore multimediale:**
-   * *API per l'iscrizione agli eventi del lettore* - L'SDK di Media richiede che venga chiamato un set di API semplici quando si verificano eventi nel lettore.
-   * *API che fornisce informazioni* sul lettore: informazioni dettagliate quali il nome del supporto e la posizione della testina di riproduzione.
+   * *Un'API per iscriversi agli eventi* del lettore - L'SDK di Media richiede che venga chiamato un set di API semplici quando si verificano eventi nel lettore.
+   * *API che fornisce informazioni* sul lettore - Queste informazioni includono dettagli quali il nome del supporto e la posizione della testina di riproduzione.
 
 ## Implementazione SDK
 
-1. Add your [downloaded](/help/sdk-implement/download-sdks.md#section_551A10AD7880426BB29AE52482BB4211) Media SDK to your project.
+1. Aggiungi l’SDK per file multimediali [scaricato](/help/sdk-implement/download-sdks.md#section_551A10AD7880426BB29AE52482BB4211) al progetto.
 
-   1. Expand the Android zip file (e.g., `MediaSDK-android-v2.*.zip`).
-   1. Verify that the `MediaSDK.jar` file exists in the `libs/` directory.
+   1. Espandete il file zip Android (ad esempio, `MediaSDK-android-v2.*.zip`).
+   1. Verificate che il `MediaSDK.jar` file esista nella `libs/` directory.
 
-   1. Aggiungete la libreria al progetto.
+   1. Aggiungi la libreria al progetto.
 
-      **Intellij IDEA:**
+      **IDEA IntelliJ:**
 
       1. Right click your project in the **[!UICONTROL Project navigation]** panel.
-      1. Select **[!UICONTROL Open Module Settings]**.
-      1. Under **[!UICONTROL Project Settings]**, select **[!UICONTROL Libraries]**.
+      1. Seleziona **[!UICONTROL Open Module Settings]**.
+      1. In **[!UICONTROL Project Settings]**, selezionare **[!UICONTROL Libraries]**.
 
       1. Click **[!UICONTROL +]** to add a new library.
       1. Select **[!UICONTROL Java]** and navigate to the `MediaSDK.jar` file.
@@ -42,14 +40,14 @@ Per ulteriori informazioni sulla documentazione SDK di Adobe Mobile, consulta [A
       1. Click **[!UICONTROL Apply]** and then **[!UICONTROL OK]** to close the Module Settings window.
       **Eclipse:**
 
-      1. Nell'IDE Eclipse, fai clic con il pulsante destro del mouse sul nome del progetto.
-      1. Click  **[!UICONTROL Build Path]** &gt; **[!UICONTROL Add External Archives]** .
+      1. Nell’IDE Eclipse, fai clic con il pulsante destro del mouse sul nome del progetto.
+      1. Clic  **[!UICONTROL Build Path]** &gt; **[!UICONTROL Add External Archives]** .
       1. Seleziona `MediaSDK.jar`.
       1. Fai clic su **[!UICONTROL Open]**.
-      1. Right-click the project again, and click  **[!UICONTROL Build Path]** &gt; **[!UICONTROL Configure Build Path]** .
-      1. Click the **[!UICONTROL Order]** and **[!UICONTROL Export]** tabs.
+      1. Fate nuovamente clic con il pulsante destro del mouse sul progetto e fate clic su **[!UICONTROL Build Path]** &gt; **[!UICONTROL Configure Build Path]** .
+      1. Fare clic sulle schede **[!UICONTROL Order]** e **[!UICONTROL Export]** .
 
-      1. Ensure that the `MediaSDK.jar` file is selected.
+      1. Assicurarsi che il `MediaSDK.jar` file sia selezionato.
 
 
 1. Importa la libreria.
@@ -61,7 +59,7 @@ Per ulteriori informazioni sulla documentazione SDK di Adobe Mobile, consulta [A
    import com.adobe.primetime.va.simple.MediaObject; 
    ```
 
-1. Create the `MediaHeartbeatConfig` instance.
+1. Create l’ `MediaHeartbeatConfig` istanza.
 
    Esempio `MediaHeartbeatConfig` di inizializzazione:
 
@@ -76,7 +74,7 @@ Per ulteriori informazioni sulla documentazione SDK di Adobe Mobile, consulta [A
    config.debugLogging = <true/false>; 
    ```
 
-1. Implement the `MediaHeartbeatDelegate` interface.
+1. Implementare l' `MediaHeartbeatDelegate` interfaccia.
 
    ```java
    public class VideoAnalyticsProvider implements Observer, MediaHeartbeatDelegate{}
@@ -100,9 +98,9 @@ Per ulteriori informazioni sulla documentazione SDK di Adobe Mobile, consulta [A
    }
    ```
 
-1. Create the `MediaHeartbeat` instance.
+1. Create l’ `MediaHeartbeat` istanza.
 
-   Use the `MediaHeartbeatConfig` instance and the `MediaHertbeatDelegate` instance to create the `MediaHeartbeat` instance.
+   Utilizzate l' `MediaHeartbeatConfig` istanza e l' `MediaHertbeatDelegate` istanza per creare l' `MediaHeartbeat` istanza.
 
    ```java
    // Replace <MediaHertbeatDelegate> with your delegate instance 
@@ -112,11 +110,11 @@ Per ulteriori informazioni sulla documentazione SDK di Adobe Mobile, consulta [A
 
    >[!IMPORTANT]
    >
-   >Make sure that your `MediaHeartbeat` instance is accessible and *does not get deallocated until the end of the session*. Questa istanza verrà utilizzata per tutti i seguenti eventi di tracciamento.
+   >Accertatevi che l’ `MediaHeartbeat` istanza sia accessibile e che *non venga deallocata fino alla fine della sessione*. Questa istanza verrà utilizzata per tutti i seguenti eventi di tracciamento.
 
-**Aggiunta delle autorizzazioni dell'app**
+**Aggiunta di autorizzazioni per l'app**
 
-L'app che utilizza Media SDK richiede le seguenti autorizzazioni per inviare dati nelle chiamate di tracciamento:
+L’app che utilizza Media SDK richiede le seguenti autorizzazioni per inviare dati nelle chiamate di tracciamento:
 
 * `INTERNET`
 * `ACCESS_NETWORK_STATE`
@@ -126,8 +124,8 @@ To add these permissions, add the following lines to your `AndroidManifest.xml` 
 * `<uses-permission android:name="android.permission.INTERNET" />`
 * `<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />`
 
-**Migrazione dalla versione 1. x alla 2. x in Android**
+**Migrazione dalla versione 1.x alla 2.x in Android**
 
-In versions 2.x, all of the public methods are consolidated into the `com.adobe.primetime.va.simple.MediaHeartbeat` class to make it easier on developers. Also, all configs are now consolidated into the `com.adobe.primetime.va.simple.MediaHeartbeatConfig` class.
+Nelle versioni 2.x, tutti i metodi pubblici sono consolidati nella `com.adobe.primetime.va.simple.MediaHeartbeat` classe per semplificare gli sviluppatori. Inoltre, tutte le configurazioni sono ora consolidate nella `com.adobe.primetime.va.simple.MediaHeartbeatConfig` classe.
 
-For detailed information about migrating from 1.x to 2.x, see [mig-1x-2x-overview.md.](/help/sdk-implement/va-1x-to-2x/mig-1x-2x-overview.md)
+Per informazioni dettagliate sulla migrazione da 1.x a 2.x, consultate [mig-1x-2x-overview.md.](/help/sdk-implement/va-1x-to-2x/mig-1x-2x-overview.md)
