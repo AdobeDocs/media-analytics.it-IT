@@ -1,22 +1,22 @@
 ---
-seo-title: Tenere traccia degli errori in javascript
-title: Tenere traccia degli errori in javascript
-uuid: 5 a 4 fc 5 df -2677-4189-92 af -5 cd 074847 b 39
+seo-title: Tenere traccia degli errori in JavaScript
+title: Tenere traccia degli errori in JavaScript
+uuid: 5a4fc5df-2677-4189-92af-5cd074847b39
 translation-type: tm+mt
 source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
 
-# Track errors on JavaScript{#track-errors-on-javascript}
+# Tenere traccia degli errori in JavaScript{#track-errors-on-javascript}
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l'implementazione in tutti gli SDK 2. x. If you are implementing a 1.x version of the SDK, you can download the 1.x Developers Guides here: [Download SDKs.](/help/sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l’implementazione in tutti gli SDK 2.x. Se stai implementando una versione 1.x dell’SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
 ## Implementazione del tracciamento degli errori
 
-1. Errori del lettore multimediale:
+1. Tracciare gli errori del lettore multimediale:
 
    ```js
    onPlayerError = function() { 
@@ -26,5 +26,5 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 >[!NOTE]
 >
->Il tracciamento degli errori del lettore multimediale non interrompe la sessione di tracciamento multimediale. If the media player error prevents the playback from continuing, make sure that the media tracking session is closed by calling `trackSessionEnd` after calling `trackError`.
+>Il tracciamento degli errori del lettore multimediale non interrompe la sessione di tracciamento del supporto. Se l’errore del lettore multimediale impedisce il proseguimento della riproduzione, accertatevi che la sessione di tracciamento dei contenuti multimediali sia chiusa chiamando `trackSessionEnd` dopo la chiamata `trackError`.
 
