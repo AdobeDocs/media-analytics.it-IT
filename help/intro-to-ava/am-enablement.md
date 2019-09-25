@@ -1,28 +1,28 @@
 ---
 seo-title: Abilitazione di Audience Manager
 title: Abilitazione di Audience Manager
-uuid: 8 a 7 f 9343-ebc 3-4087-9 d 7 e -5972640 d 2455
+uuid: 8a7f9343-ebc3-4087-9d7e-5972640d2455
 translation-type: tm+mt
 source-git-commit: 8ae15f1e14731a97d212ab66816a777b4dcc897e
 
 ---
 
 
-# Audience Manager enablement{#audience-manager-enablement}
+# Abilitazione di Audience Manager{#audience-manager-enablement}
 
-Adobe Audience Manager (AAM), una piattaforma di gestione dati (DMP), consente di riunire le risorse dati relative al pubblico, semplificando la raccolta di informazioni commerciali sui visitatori del sito, la creazione di segmenti commercializzabili e la trasmissione di pubblicità e contenuti mirati al pubblico giusto.
+Adobe Audience Manager (AAM), una piattaforma di gestione dei dati (DMP), consente di unire le risorse dei dati sul pubblico, semplificando la raccolta di informazioni rilevanti dal punto di vista commerciale sui visitatori del sito, la creazione di segmenti commerciabili e l'invio di contenuti e pubblicità mirati al pubblico giusto.
 
-Con AAM non sei legato a un venditore di dati, a uno scambio o a una piattaforma lato domanda. Inoltre, AAM è totalmente agnostico per quanto riguarda le risorse dati dei tuoi partner. Con l'accesso a più origini dati, AAM offre agli editori digitali la possibilità di utilizzare un'ampia gamma di dati di terze parti e la nostra co-op dati privata. To learn more about AAM, see the AAM documentation [Audience Manager Product Documentation.](https://docs-author.corp.adobe.com/content/help/en/audience-manager/user-guide/aam-home.html)
+Con AAM, non sei legato a un venditore di dati, a uno scambio o a una piattaforma lato domanda. Inoltre, AAM è completamente agnostico quando si tratta delle risorse di dati dei tuoi partner. Con l'accesso a più origini dati, AAM offre agli editori digitali la possibilità di utilizzare un'ampia gamma di dati di terze parti e la nostra cooperativa privata di dati. Per ulteriori informazioni su AAM, consulta la documentazione di AAM relativa al prodotto [Audience Manager.](https://docs-author.corp.adobe.com/content/help/en/audience-manager/user-guide/aam-home.html)
 
-**Trasferimento di dati VA nel trasferimento di dati di AAM -** Per i contenuti video e i video pubblicitari, le metriche e i metadati raccolti utilizzando le variabili della soluzione (riservato) possono essere inviati automaticamente ad AAM. Il trasferimento di dati è disponibile su tutte le piattaforme, inclusi desktop, dispositivi mobili e OTT. Per abilitare questo trasferimento di dati lato server, dovete contattare Adobe Client Care e chiedere di abilitare il feed.
+**Da VA a trasferimento dati AAM: per contenuti video e annunci video,** le metriche e i metadati raccolti utilizzando le variabili della soluzione (riservate) possono essere inviati automaticamente ad AAM. Il trasferimento dei dati è disponibile su tutte le piattaforme, inclusi desktop, dispositivi mobili e OTT. Per abilitare questo trasferimento di dati lato server, devi contattare Adobe Client Care e richiedere che il feed sia abilitato.
 
 >[!IMPORTANT]
 >
->Per garantire il trasferimento uniforme dei dati ad AAM, dovresti essere nelle versioni più recenti delle librerie di Media SDK.
+>Per garantire un trasferimento fluido dei dati ad AAM, devi disporre delle versioni più recenti delle librerie Media SDK.
 
-I dati Federati supportano completamente la condivisione di dati in AAM. Per confermare le impostazioni dei dati federati, contattate il team Adobe.
+Federated Data supporta completamente la condivisione dei dati su AAM. Consulta il tuo team Adobe per la conferma delle impostazioni dei dati federati.
 
-## OTT / AAM methods {#section_yqq_5br_v2b}
+## Metodi OTT/AAM {#section_yqq_5br_v2b}
 
 Puoi usare questi metodi per inviare segnali e recuperare segmenti di visitatori da Audience Manager:
 
@@ -80,7 +80,7 @@ Puoi usare questi metodi per inviare segnali e recuperare segmenti di visitatori
 
 * `audienceDpid -`
 
-   Restituisce il profilo del visitatore ottenuto più di recente. Restituisce un obje vuoto se non è stato ancora inviato alcun segnale.
+   Restituisce il profilo del visitatore ottenuto più di recente. Restituisce un oggetto vuoto t se non è stato ancora inviato alcun segnale.
 
    ```js
    ADBMobile().audienceDpid()
