@@ -1,57 +1,56 @@
 ---
-seo-title: Migrazione da Milestone a Media Analytics
-title: Migrazione da Milestone a Media Analytics
-uuid: fdc 96146-af 63-48 ce-b 938-c 0 ca 70729277
+seo-title: Migrazione da Milestone ad Media Analytics
+title: Migrazione da Milestone ad Media Analytics
+uuid: fdc96146-af63-48ce-b938-c0ca70729277
 translation-type: tm+mt
 source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
 
-# Migrating from Milestone to Media Analytics {#migrating-from-milestone-to-media-analytics}
+# Migrazione da Milestone ad Media Analytics {#migrating-from-milestone-to-media-analytics}
 
 ## Panoramica {#section_ihl_nbz_cfb}
 
-I concetti principali della misurazione video sono identici per Milestone and Media Analytics (Pietra miliare e Media Analytics), che occupano eventi del lettore video e li mappano sui metodi di analisi, e li mappano anche sui metadati e i valori del lettore e mappatura sulle variabili di analisi. La soluzione Media Analytics è cresciuta da Milestone, molti dei metodi e delle metriche sono la stessa, tuttavia, l'approccio di configurazione e il codice sono cambiati in modo significativo. Dovrebbe essere possibile aggiornare il codice dell'evento del lettore in modo che faccia riferimento ai nuovi metodi di Media Analytics. See [SDK Overview](/help/sdk-implement/setup/setup-overview.md) and [Tracking Overview](/help/sdk-implement/track-av-playback/track-core-overview.md) for more details on implementing Media Analytics.
+I concetti di base della misurazione video sono gli stessi per Milestone e Media Analytics, ovvero prendere gli eventi dei lettori video e mapparli ai metodi di analisi, acquisire anche i metadati e i valori dei lettori e mapparli alle variabili di analisi. La soluzione Media Analytics è nata da Milestone, quindi molti dei metodi e delle metriche sono gli stessi, ma l'approccio di configurazione e il codice sono cambiati in modo significativo. Dovrebbe essere possibile aggiornare il codice evento del lettore per puntare ai nuovi metodi di Media Analytics. Per ulteriori informazioni sull’implementazione di Media Analytics, consulta Panoramica [](/help/sdk-implement/setup/setup-overview.md) SDK e Panoramica sul [tracciamento](/help/sdk-implement/track-av-playback/track-core-overview.md) .
 
-Le tabelle seguenti forniscono traduzioni tra la soluzione Milestone (Pietra miliare) e la soluzione Media Analytics.
+Le tabelle seguenti contengono le traduzioni tra la soluzione Milestone e la soluzione Media Analytics.
 
 ## Migration guide {#section_iyb_pbz_cfb}
 
 ### Riferimento variabile
 
-| Milestone Metric (Metrica milestone Metrica) | Tipo di variabile | Metrica Media Analytics |
+| Metrica cardine | Tipo di variabile | Metrica di Media Analytics |
 | --- | --- | --- |
-| Contenuto | eVar<br/><br/>Default expiration: Visit | Contenuto |
+| Contenuto | Scadenza<br/><br/>eVarDefault: Visita | Contenuto |
 | Tipo di contenuto | eVar<br/><br/> Default expiration: Page view | Tipo di contenuto |
-| Tempo contenuto trascorso | Event<br/><br/> Type: Counter | Tempo contenuto trascorso |
-| Video avviato | Event<br/><br/> Type: Counter | Video avviato |
-| Completamenti video | Event<br/><br/> Type: Counter | Completamento contenuto |
+|  Tempo contenuto trascorso | Tipo evento<br/><br/> : Contatore |  Tempo contenuto trascorso |
+| Avvio video | Tipo evento<br/><br/> : Contatore | Avvio video |
+| Completamento video | Tipo evento<br/><br/> : Contatore | Content Complete |
 
-### Variabili modulo Media
+### Variabili del modulo multimediale
 
 <table>
 <thead>
 <tr>
 <th>Milestone
 </th>
-<th>Sintassi milestone (Pietra miliare)
+<th>Sintassi pietra miliare
 </th>
 <th>Media Analytics
 </th>
-<th>Sintassi Media Analytics
+<th>Sintassi di Media Analytics
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>
-Media. trackusingcontextdata
+Media.trackUsingContextData
 </td>
 <td>
 <pre>
-s. Media. trackusingcontextdata
- = true;
+s.Media.trackUsingContextData = true;
 </pre>
 </td>
 <td>N/D
@@ -61,69 +60,44 @@ s. Media. trackusingcontextdata
 </tr>
 <tr>
 <td>
-Media. contextdatamapping
+Media.contextDataMapping
 </td>
 <td>
 <pre>
-s. Media. contextdatamapping = {"a. media. name": " Evar 2, prop 2 ","
- a. media. segment ": " Evar 3 ","
- a. contenttype ": " Evar 1 ","
- a. media. timeplayed ": " event 3 ","
- a. media. view ": " event 1 ","
- a. media. segmentview ": " event 2 ","
- a. media. complete ": " event 7 ","
- a. media. milestones ": {25: " event 4 ",
- 50: " event 5 ",
- 75: " event 6 "}};
+s.Media.contextDataMapping = { "a.media.name":"eVar2,prop2", "a.media.segment":"eVar3", "a.contentType":"eVar1", "a.media.timePlayed":"event3", "a.media.view":"event1", "a.media.segmentView":"event2", "a.media.complete":"event7", "a.media.milestones": { 25:"event4", 50:"event5", 75:"event6" }};
 </pre>
 </td>
 <td>N/D
 </td>
-<td>I dati contestuali di Media Analytics vengono compilati automaticamente in
-variabili riservate. Mappatura su evar, prop ed eventi non più necessaria all'interno del codice di implementazione. I clienti possono mappare i dati contestuali
-alle variabili utilizzando le regole di elaborazione.
+<td>I dati contestuali di Media Analytics vengono inseriti automaticamente nelle variabili memorizzate. Mappatura a eVar, prop ed eventi non più necessari all'interno del codice di implementazione. I clienti possono mappare i dati di contesto alle variabili utilizzando le regole di elaborazione.
 </td>
 </tr>
 <tr>
 <td>
-Media. trackvars
+Media.trackVars
 </td>
 <td>
 <pre>
-s. Media. trackvars = 
- " events,
- prop 2,
- evar 1,
- evar 2,
- evar 3 ";
+s.Media.trackVars = "events, prop2, eVar1, eVar2, eVar3";
 </pre>
 </td>
 <td>N/D
 </td>
-<td>Non è più necessario perché la mappatura avviene tramite variabili riservate e
-regole di elaborazione.
+<td>Non è più necessario in quanto la mappatura avviene tramite variabili riservate e regole di elaborazione.
 </td>
 </tr>
 <tr>
 <td>
-Media. trackevents
+Media.trackEvents
 </td>
 <td>
 <pre>
-s. Media. trackevents = 
- " event 1,
- event 2,
- event 3,
- event 4,
- event 5,
- event 6,
- event 7 "
+s.Media.trackEvents = "event1, event2, event3, event4, event5, event6, event7"
 </pre>
 </td>
 <td>N/D
 </td>
-<td>Non è più necessario perché la mappatura avviene tramite variabili riservate e
-regole di elaborazione.
+<td>Non è più necessario in quanto la mappatura avviene tramite variabili riservate e regole di elaborazione.
 </td>
 </tr>
 </tbody>
@@ -136,159 +110,146 @@ regole di elaborazione.
 <tr>
 <th>Milestone
 </th>
-<th>Sintassi milestone (Pietra miliare)
+<th>Sintassi pietra miliare
 </th>
 <th>Media Analytics
 </th>
-<th>Sintassi Media Analytics
+<th>Sintassi di Media Analytics
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>
-Media. autotrack
+Media.autoTrack
 </td>
 <td>
 <pre>
-s. Media. autotrack
- = true;
+s.Media.autoTrack = true;
 </pre>
 </td>
 <td>N/D
 </td>
-<td>Non forniamo più mappature del lettore pre-costruite.
+<td>Non vengono più fornite mappature di lettore preconfigurate.
 </td>
 </tr>
 <tr>
 <td>
-Media. autotracknetstreams
+Media.autoTrackNetStreams
 </td>
 <td>
 <pre>
-s. Media.
- Autotracknetstreams
- = true
+s.Media.
+  autoTrackNetStreams = true
 </pre>
 </td>
 <td>N/D
 </td>
-<td>Non forniamo più mappature del lettore pre-costruite.
+<td>Non vengono più fornite mappature di lettore preconfigurate.
 </td>
 </tr>
 <tr>
 <td>
-Media. completebycloseoffset
+Media.completeByCloseOffset
 </td>
 <td>
 <pre>
-s. Media.
- Completebycloseoffset
- = true
+s.Media.
+  completeByCloseOffset = true
 </pre>
 </td>
 <td>N/D
 </td>
-<td>Contenuto completato supporta solo un marcatore di avanzamento 100%.
+<td>Content Complete (Completo contenuto) supporta solo un indicatore di avanzamento del 100%.
 </td>
 </tr>
 <tr>
 <td>
-Media. completecloseoffsetthreshold
+Media.completeCloseOffsetThreshold
 </td>
 <td>
 <pre>
-s. Media.
- Completecloseoffsetthreshold
- = 1
+s.Media.
+  completeCloseOffsetThreshold = 1
 </pre>
 </td>
 <td>N/D
 </td>
-<td>Contenuto completato supporta solo un marcatore di avanzamento 100%.
+<td>Content Complete (Completo contenuto) supporta solo un indicatore di avanzamento del 100%.
 </td>
 </tr>
 <tr>
 <td>
-Media. playername
+Media.playerName
 </td>
 <td>
 <pre>
-s. Media. playername
- = "Custom Player Name"
+s.Media.playerName = "Nome lettore personalizzato"
 </pre>
 </td>
 <td>
-Chiave SDK: Playername; 
-Chiave API: media. playername
+Chiave SDK: playerName;Chiave API: media.playerName
 </td>
 <td>
 <pre>
-Mediaheartbeatconfig.
- Playername
+MediaHeartbeatConfig.
+  playerName
 </pre>
 </p>
 </td>
 </tr>
 <tr>
 <td>
-Media. trackseconds
+Media.trackSeconds
 </td>
 <td>
 <pre>
-s. Media.
- Trackseconds
- = 15
+s.Media.
+  trackSeconds = 15
 </pre>
 </td>
 <td>N/D
 </td>
-<td>Media Analytics è impostato su 10 secondi per il contenuto e su 1 secondo per
-gli annunci. Non sono disponibili altre opzioni.
+<td>Media Analytics è impostato su 10 secondi per il contenuto e su 1 secondo per il contenuto. Non sono disponibili altre opzioni.
 </td>
 </tr>
 <tr>
 <td>
-Media. trackmilestones
+Media.trackMilestones
 </td>
 <td>
 <pre>
-s. Media.
- Trackmilestones
- = "25,50,75";
+s.Media.
+  trackMilestones = "25,50,75";
 </pre>
 </td>
 <td>N/D
 </td>
-<td>Media Analytics tiene traccia sempre dei marcatori di avanzamento al 10%, 25%, 50%,
-75%, 95%
+<td>Media Analytics tiene sempre traccia dei marcatori di avanzamento a 10%, 25%, 50%, 75%, 95%
 </td>
 </tr>
 <tr>
 <td>
-Media. trackoffsetmilestones
+Media.trackOffsetMilestones
 </td>
 <td>
 <pre>
-s. Media.
- Trackoffsetmilestones
- = "20,40,60";
+s.Media.
+  trackOffsetMilestones = "20,40,60";
 </pre>
 </td>
 <td>N/D
 </td>
-<td>Media Analytics tiene traccia sempre dei marcatori di avanzamento al 10%, 25%, 50%,
-75%, 95%
+<td>Media Analytics tiene sempre traccia dei marcatori di avanzamento a 10%, 25%, 50%, 75%, 95%
 </td>
 </tr>
 <tr>
 <td>
-Media. segmentbymilestones
+Media.segmentByMilestones
 </td>
 <td>
 <pre>
-s. Media. segmentbymilestones
- = true;
+s.Media.segmentByMilestones = true;
 </pre>
 </td>
 <td>N/D
@@ -298,13 +259,12 @@ s. Media. segmentbymilestones
 </tr>
 <tr>
 <td>
-Media. segmentbyoffsetmilestones
+Media.segmentByOffsetMilestones
 </td>
 <td>
 <pre>
-s. Media.
- Segmentbyoffsetmilestones
- = true;
+s.Media.
+  segmentByOffsetMilestones = true;
 </pre>
 </td>
 <td>N/D
@@ -322,58 +282,53 @@ s. Media.
 <tr>
 <th>Milestone
 </th>
-<th>Sintassi milestone (Pietra miliare)
+<th>Sintassi pietra miliare
 </th>
 <th>Media Analytics
 </th>
-<th>Sintassi Media Analytics
+<th>Sintassi di Media Analytics
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>
-Media. adtrackseconds
+Media.adTrackSeconds
 </td>
 <td>
 <pre>
-s. Media.
- Adtrackseconds
- = 15
+s.Media.
+  adTrackSeconds = 15
 </pre>
 </td>
 <td>N/D
 </td>
-<td>Media Analytics è impostato su 10 secondi per il contenuto e su 1 secondo per
-gli annunci. Non sono disponibili altre opzioni.
+<td>Media Analytics è impostato su 10 secondi per il contenuto e su 1 secondo per il contenuto. Non sono disponibili altre opzioni.
 </td>
 </tr>
 <tr>
 <td>
-Media. adtrackmilestones
+Media.adTrackMilestones
 </td>
 <td>
 <pre>
-s. Media.
- Adtrackmilestones
- = "25,50,75";
+s.Media.
+  adTrackMilestones = "25,50,75";
 </pre>
 </td>
 <td>N/D
 </td>
-<td>I marcatori di progresso non sono forniti per impostazione predefinita per gli annunci. Utilizzate
-le metriche calcolate per creare marcatori di avanzamento annunci.
+<td>Gli indicatori di avanzamento non sono forniti per impostazione predefinita per gli annunci. Metriche calcolate per creare marcatori di avanzamento annunci.
 </td>
 </tr>
 <tr>
 <td>
-Media. adtrackoffsetmilestones
+Media.adTrackOffsetMilestones
 </td>
 <td>
 <pre>
-s. Media.
- Adtrackoffsetmilestones
- = "20,40,60";
+s.Media.
+  adTrackOffsetMilestones = "20,40,60";
 </pre>
 </td>
 <td>N/D
@@ -383,13 +338,12 @@ s. Media.
 </tr>
 <tr>
 <td>
-Media. adsegmentbymilestones
+Media.adSegmentByMilestones
 </td>
 <td>
 <pre>
-s. Media.
- Adsegmentbymilestones
- = true;
+s.Media.
+  adSegmentByMilestones = true;
 </pre>
 </td>
 <td>N/D
@@ -399,13 +353,12 @@ s. Media.
 </tr>
 <tr>
 <td>
-Media. adsegmentbyoffsetmilestones
+Media.adSegmentByOffsetMilestones
 </td>
 <td>
 <pre>
-s. Media.
- Adsegmentbyoffsetmilestones
- = true;
+s.Media.
+  adSegmentByOffsetMilestones = true;
 </pre>
 </td>
 <td>N/D
@@ -416,53 +369,49 @@ s. Media.
 </tbody>
 </table>
 
-### Metodi modulo Media
+### Metodi del modulo multimediale
 
 <table>
 <thead>
 <tr>
 <th>Milestone
 </th>
-<th>Sintassi milestone (Pietra miliare)
+<th>Sintassi pietra miliare
 </th>
 <th>Media Analytics
 </th>
-<th>Sintassi Media Analytics
+<th>Sintassi di Media Analytics
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>
-File multimediali. open
+Media.open
 </td>
 <td>
 <pre>
-s. Media. open (medianame,
- medialength,
- mediaplayername)
+s.Media.open( mediaName, mediaLength, mediaPlayerName)
 </pre>
 </td>
 <td>
 <pre>
-Tracksessionstart
+trackSessionStart
 </pre>
 </td>
 <td>
 <pre>
-Tracksessionstart (mediaobject, 
- Contextdata)
+trackSessionStart( mediaObject, contextData)
 </pre>
 </td>
 </tr>
 <tr>
 <td>
-Medianame - (obbligatorio) Il nome del video che viene
-visualizzato nei rapporti video.
+mediaName - (Obbligatorio) Il nome del video come desiderate venga visualizzato nei rapporti video.
 </td>
 <td>
 <pre>
-Medianame
+mediaName
 </pre>
 </td>
 <td>
@@ -472,21 +421,17 @@ name
 </td>
 <td>
 <pre>
-Createmediaobject (name, 
- Mediaid, 
- length, 
- Streamtype)
+createMediaObject( nome, mediaId, lunghezza, streamType)
 </pre>
 </td>
 </tr>
 <tr>
 <td>
-Medialength - (obbligatorio) La lunghezza del video
-in secondi.
+mediaLength - (Obbligatorio) La lunghezza del video in secondi.
 </td>
 <td>
 <pre>
-Medialength
+mediaLength
 </pre>
 </td>
 <td>
@@ -496,47 +441,38 @@ length
 </td>
 <td>
 <pre>
-Createmediaobject (name, 
- Mediaid, 
- length, 
- Streamtype)
+createMediaObject( nome, mediaId, lunghezza, streamType)
 </pre>
 </td>
 </tr>
 <tr>
 <td>
-Mediaplayername - (obbligatorio) Il nome del lettore multimediale utilizzato per visualizzare il video, in modo che venga visualizzato nei rapporti video.
+mediaPlayerName - (Obbligatorio) Il nome del lettore multimediale utilizzato per visualizzare il video, così come si desidera venga visualizzato nei rapporti video.
 </td>
 <td>
 <pre>
-Mediaplayername
+mediaPlayerName
 </pre>
 </td>
 <td>
 <pre>
-Playername
+playerName
 </pre>
 </td>
 <td>
 <pre>
-Mediaheartbeatconfig.
- Playername
+MediaHeartbeatConfig.
+  playerName
 </pre>
 </td>
 </tr>
 <tr>
 <td>
-Media. openad
+Media.openAd
 </td>
 <td>
 <pre>
-s. Media. openad (nome,
- lunghezza,
- playername,
- parentname,
- parentpod,
- parentpodposition,
- CPM)
+s.Media.openAd( nome, lunghezza, nomeLettore, nomePadre, contenitorePadre, posizionePodPadre, CPM)
 </pre>
 </td>
 <td>
@@ -546,22 +482,17 @@ trackEvent
 </td>
 <td>
 <pre>
-Mediaheartbeat. trackevent (mediaheartbeat.
- Evento.
-    Adbreakstart, 
- Adbreakobject);
-…
-Trackevent (mediaheartbeat.
- Evento.
-    Adstart, 
- Adobject, 
- Adcustommetadata);
+mediaHeartbeat.trackEvent( MediaHeartbeat.
+    Evento.
+    AdBreakStart, adBreakObject); ...trackEvent( MediaHeartbeat.
+    Evento.
+    AdStart, adObject, adCustomMetadata);
 </pre>
 </td>
 </tr>
 <tr>
 <td>
-name - (obbligatorio) Il nome o l'ID dell'annuncio.
+name - (Obbligatorio) Il nome o l'ID dell'annuncio.
 </td>
 <td>
 <pre>
@@ -575,17 +506,13 @@ name
 </td>
 <td>
 <pre>
-Createadobject (nome, 
- Adid, 
- position, 
- length)
+createAdObject( nome, adId, posizione, lunghezza)
 </pre>
 </td>
 </tr>
 <tr>
 <td>
-length
-(obbligatorio) Lunghezza dell'annuncio.
+length(Obbligatorio) La lunghezza dell'annuncio.
 </td>
 <td>
 <pre>
@@ -599,56 +526,52 @@ length
 </td>
 <td>
 <pre>
-Createadobject (nome, 
- Adid, 
- position, 
- length)
+createAdObject( nome, adId, posizione, lunghezza)
 </pre>
 </td>
 </tr>
 <tr>
 <td>
-Playername - (obbligatorio) Il nome del lettore multimediale
-utilizzato per visualizzare l'annuncio.
+playerName - (Obbligatorio) Il nome del mediaplayer utilizzato per visualizzare l'annuncio.
 </td>
 <td>
 <pre>
-Playername
+playerName
 </pre>
 </td>
 <td>
 <pre>
-Playername
+playerName
 </pre>
 </td>
 <td>
 <pre>
-Mediaheartbeatconfig.
- Playername
+MediaHeartbeatConfig.
+  playerName
 </pre>
 </td>
 </tr>
 <tr>
 <td>
-Parentname: nome o ID del contenuto principale in cui è incorporato l'annuncio.
+parentName - Il nome o l'ID del contenuto principale in cui l'annuncio è incorporato.
 </td>
 <td>
 <pre>
-Parentname
+parentName
 </pre>
 </td>
 <td>N/D
 </td>
-<td>Ereditata automaticamente
+<td>ereditato automaticamente
 </td>
 </tr>
 <tr>
 <td>
-Parentpod: posizione nel contenuto principale in cui è stato riprodotto l'annuncio.
+parentPod - La posizione nel contenuto principale in cui è stato riprodotto l'annuncio.
 </td>
 <td>
 <pre>
-Parentpod
+parentPod
 </pre>
 </td>
 <td>
@@ -658,19 +581,17 @@ position
 </td>
 <td>
 <pre>
-Createadbreakobject (name, 
- position, 
- Starttime
+createAdBreakObject( nome, posizione, oraInizio)
 </pre>
 </td>
 </tr>
 <tr>
 <td>
-Parentpodposition - Posizione all'interno del contenitore in cui viene riprodotta l'annuncio.
+parentPodPosition - La posizione all'interno del contenitore in cui viene riprodotto l'annuncio.
 </td>
 <td>
 <pre>
-Parentpodposition
+parentPodPosition
 </pre>
 </td>
 <td>
@@ -680,17 +601,13 @@ position
 </td>
 <td>
 <pre>
-Createadobject (nome, 
- Adid, 
- position, 
- length)
+createAdObject( nome, adId, posizione, lunghezza)
 </pre>
 </td>
 </tr>
 <tr>
 <td>
-CPM:
-CPM o CPM cifrato (prefisso a " ~") che si applica a questa riproduzione.
+CPMTil CPM o CPM crittografato (con il prefisso "~") che si applica a questa riproduzione.
 </td>
 <td>
 <pre>
@@ -704,101 +621,94 @@ CPM
 </tr>
 <tr>
 <td>
-Media. click
+Media.click
 </td>
 <td>
 <pre>
-s. Media. click (nome,
- offset)
+s.Media.click( nome, offset)
 </pre>
 </td>
 <td>N/D
 </td>
-<td>Utilizzare una chiamata di analisi dei collegamenti personalizzata per tenere traccia dei clic
+<td>Utilizza una chiamata di analisi dei collegamenti personalizzata per tenere traccia dei clic
 </td>
 </tr>
 <tr>
 <td>
-File multimediali. close
+Media.close
 </td>
 <td>
 <pre>
-s. Media. close (medianame)
+s.Media.close( mediaName)
 </pre>
 </td>
 <td>
 <pre>
-Tracksessionend
+trackSessionEnd
 </pre>
 </td>
 <td>
 <pre>
-Tracksessionend ()
-</pre>
-</td>
-</tr>
-<tr>
-<td>
-File multimediali. complete
-</td>
-<td>
-<pre>
-s. Media. complete (nome,
- offset)
-</pre>
-</td>
-<td>
-<pre>
-Trackcomplete
-</pre>
-</td>
-<td>
-<pre>
-Trackcomplete ()
+trackSessionEnd()
 </pre>
 </td>
 </tr>
 <tr>
 <td>
+Media.complete
+</td>
+<td>
 <pre>
-Media. play
+s.Media.complete( nome, offset)
 </pre>
 </td>
 <td>
 <pre>
-s. Media. play (nome,
- offset,
- segmentnum,
- segmento, 
- Segmentlength
+trackComplete
 </pre>
 </td>
 <td>
 <pre>
-Trackplay
-</pre>
-</td>
-<td>
-<pre>
-Trackplay ()
+trackComplete()
 </pre>
 </td>
 </tr>
 <tr>
 <td>
 <pre>
-Media. stop
+Media.play
 </pre>
 </td>
 <td>
 <pre>
-s. Media. stop (medianame,
- mediaoffset)
+s.Media.play( nome, offset, segmentoNum, segmento, segmentoLunghezza)
 </pre>
 </td>
 <td>
 <pre>
-Trackpause
+trackPlay
+</pre>
+</td>
+<td>
+<pre>
+trackPlay()
+</pre>
+</td>
+</tr>
+<tr>
+<td>
+<pre>
+Media.stop
+</pre>
+</td>
+<td>
+<pre>
+s.Media.stop( mediaName, mediaOffset)
+</pre>
+</td>
+<td>
+<pre>
+trackPause
 </pre>  oppure  
 <pre>
 trackEvent
@@ -806,77 +716,67 @@ trackEvent
 </td>
 <td>
 <pre>
-Trackpause ()
+trackPause()
 </pre> 
  oppure 
 <pre>
-Trackevent (mediaheartbeat.
- Evento.
-  Seekstart
+trackEvent( MediaHeartbeat.
+  Evento.
+  SeekStart)
 </pre>  oppure 
 <pre>
-Trackevent (mediaheartbeat.
- Evento.
-  Bufferstart);
+trackEvent( MediaHeartbeat.
+  Evento.
+  BufferStart);
 </pre>
 </td>
 </tr>
 <tr>
 <td>
 <pre>
-Media. monitor
+Media.monitor
 </pre>
 </td>
 <td>
 <pre>
-s. Media. monitor (s, media)
+s.Media.monitor(s, media)
 </pre>
 </td>
 <td>Utilizzare metadati personalizzati o standard per impostare ulteriori variabili
 </td>
 <td>
 <pre>
-var customvideometadata = 
-{isuserloggedin: 
- " false ",
- tvstation: 
- " Sample TV station ",
- programer: 
- " Sample programer "};
-…
-var standardvideometadata 
- = {};
-Standardvideometadata
- [mediaheartbeat.
- Videometadatakeys.
- EPISODE] = 
- " Sample Episode ";
-Standardvideometadata
- [mediaheartbeat.
- Videometadatakeys.
- SHOW] = "Sample Show";
-…
-Mediaobject. setvalue (mediaheartbeat.
- Mediaobjectkey.
- Standardvideometadata, 
- Standardvideometadata);
+var customVideoMetadata = { isUserLoggedIn: 
+    "false", tvStation: 
+    "Stazione TV di esempio", programmatore: 
+    "Sample programer"}; ...
+var standardVideoMetadata = {};
+standardVideoMetadata [MediaHeartbeat.
+   VideoMetadataKeys.
+   EPISODE] = "Esempio di episodio";
+standardVideoMetadata [MediaHeartbeat.
+   VideoMetadataKeys.
+   SHOW] = "Sample Show"; ...
+mediaObject.setValue( MediaHeartbeat.
+  MediaObjectKey.
+  StandardVideoMetadata, standardVideoMetadata);
 </pre>
 </td>
 </tr>
 <tr>
 <td>
 <pre>
-Media. track
+Media.track
 </pre>
 </td>
 <td>
 <pre>
-s. Media. track (medianame)
+s.Media.track( mediaName)
 </pre>
 </td>
 <td>N/D
 </td>
-<td>La frequenza di chiamata di tracciamento viene impostata automaticamente.
+<td>La frequenza delle chiamate di tracciamento viene impostata automaticamente.
 </td>
 </tr>
 </tbody>
