@@ -1,29 +1,29 @@
 ---
-seo-title: Migrazione da milestone a Custom Link (Migrazione da pietra miliare a collegamento personalizzato)
-title: Migrazione da milestone a Custom Link (Migrazione da pietra miliare a collegamento personalizzato)
-uuid: 1 c 8 edde 5-0 ef 1-4 bc 0-a 62 d -1747 f 4907 f 09
+seo-title: Migrazione da attività cardine a collegamento personalizzato
+title: Migrazione da attività cardine a collegamento personalizzato
+uuid: 1c8edde5-0ef1-4bc0-a62d-1747f4907f09
 translation-type: tm+mt
 source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
 
-# Migrating from Milestone to Custom Link{#migrating-from-milestone-to-custom-link}
+# Migrazione da attività cardine a collegamento personalizzato{#migrating-from-milestone-to-custom-link}
 
 ## Panoramica {#section_xlc_fc2_dfb}
 
-I concetti principali della misurazione video sono identici per i tracciamenti milestone (Pietra miliare) e Custom Links (Tracciamento collegamenti personalizzati), che occupano eventi del lettore video e li mappano sui metodi di analisi, e li mappano anche sui metadati e i valori del lettore, e mappandoli alle variabili di analisi. L'approccio Collegamento personalizzato deve essere considerato come sliminare e semplificare sia l'implementazione che i dati raccolti. Con la soluzione Custom Link (Collegamento personalizzato), nessuna variabile o metodo è predefinito per la misurazione video, richiede una configurazione personalizzata completa. Dovrebbe essere possibile aggiornare il codice dell'evento del lettore in modo che punti alle chiamate di tracciamento dei collegamenti personalizzate per eventi di base quali avvio e completamento. See [Custom Link implementation guide](/help/measurement-options/cl-in-aa/cl-impl-guide.md) and [Manual Link Tracking Using Custom Link Code](https://marketing.adobe.com/resources/help/en_US/sc/implement/link_manual.html) for more details.
+I concetti di base della misurazione video sono gli stessi per il tracciamento Milestone e Custom Link, che consiste nell’eseguire gli eventi dei lettori video e nel mapparli ai metodi di analisi, nonché acquisire i metadati e i valori dei lettori e mapparli alle variabili di analisi. L'approccio "Custom Link" dovrebbe essere considerato un modo per ridurre e semplificare sia l'attuazione che i dati raccolti. Con la soluzione Custom Link, per la misurazione video non sono predefiniti variabili o metodi, ma è necessaria una configurazione completa e personalizzata. Dovrebbe essere possibile aggiornare il codice evento del lettore in modo che punti alle chiamate di tracciamento dei collegamenti personalizzate per gli eventi del lettore di base, come start e complete. Per ulteriori informazioni, consulta la guida [all’implementazione dei collegamenti](/help/measurement-options/cl-in-aa/cl-impl-guide.md) personalizzati e il tracciamento [manuale dei collegamenti tramite codice](https://marketing.adobe.com/resources/help/en_US/sc/implement/link_manual.html) di collegamento personalizzato.
 
-Le tabelle seguenti forniscono traduzioni tra la soluzione Milestone (Pietra miliare) e la soluzione Custom Link (Collegamento personalizzato).
+Le tabelle seguenti contengono le traduzioni tra la soluzione Milestone e la soluzione Custom Link.
 
 ## Migration guide {#section_btt_fc2_dfb}
 
-### Riferimento variabile video
+### Riferimento per la variabile video
 
 <table>
 <thead>
 <tr>
-<th><strong>Milestone Metric (Metrica milestone Metrica)</strong></th>
+<th><strong>Metrica cardine</strong></th>
 <th><strong>Tipo di variabile</strong></th>
 <th><strong>Collegamento personalizzato</strong></th>
 </tr>
@@ -35,7 +35,7 @@ Le tabelle seguenti forniscono traduzioni tra la soluzione Milestone (Pietra mil
 <p>eVar</p>
 <p>Scadenza predefinita: visita</p>
 </td>
-<td>Definire la tua evar</td>
+<td>Definisci la tua eVar</td>
 </tr>
 <tr>
 <td>Tipo di contenuto</td>
@@ -43,7 +43,7 @@ Le tabelle seguenti forniscono traduzioni tra la soluzione Milestone (Pietra mil
 <p>eVar</p>
 <p>Scadenza predefinita: visualizzazioni pagina</p>
 </td>
-<td>Definire la tua evar</td>
+<td>Definisci la tua eVar</td>
 </tr>
 <tr>
 <td>Tempo contenuto trascorso</td>
@@ -51,35 +51,35 @@ Le tabelle seguenti forniscono traduzioni tra la soluzione Milestone (Pietra mil
 <p>Evento</p>
 <p>Tipo: contatore</p>
 </td>
-<td>Definire un evento personale</td>
+<td>Definire un proprio evento</td>
 </tr>
 <tr>
-<td>Video avviato</td>
+<td>Avvio video</td>
 <td>
 <p>Evento</p>
 <p>Tipo: contatore</p>
 </td>
-<td>Definire un evento personale</td>
+<td>Definire un proprio evento</td>
 </tr>
 <tr>
-<td>Completamenti video</td>
+<td>Completamento video</td>
 <td>
 <p>Evento</p>
 <p>Tipo: contatore</p>
 </td>
-<td>Definire un evento personale</td>
+<td>Definire un proprio evento</td>
 </tr>
 </tbody>
 </table>
 
-### Variabili modulo Media
+### Variabili del modulo multimediale
 
 <table>
 <thead>
 <tr>
 <th>Milestone
 </th>
-<th>Sintassi milestone (Pietra miliare)
+<th>Sintassi pietra miliare
 </th>
 <th>Collegamento personalizzato
 </th>
@@ -90,13 +90,12 @@ Le tabelle seguenti forniscono traduzioni tra la soluzione Milestone (Pietra mil
 <tbody>
 <tr>
 <td>
-Media. trackusingcontextdata
+Media.trackUsingContextData
 </td>
 <td>
 <pre>
-s. Media.
- Trackusingcontextdata 
- = true;
+s.Media.
+  trackUsingContextData = true;
 </pre>
 </td>
 <td>
@@ -104,58 +103,40 @@ linkTrackVars
 </td>
 <td>
 <pre>
-s. linktrackvars
- ='events, 
-contextdata. video. namè; 
-s. contextdata ['video. namè]
- = medianame;
+s.linkTrackVars = 'events, contextData.video.name'; 
+s.contextData[‘video.name’] = mediaName;
 </pre>
 </td>
 </tr>
 <tr>
 <td>
-Media. contextdatamapping
+Media.contextDataMapping
 </td>
 <td>
 <pre>
-s. Media.
- Contextdatamapping = {"a. media. name":
- " Evar 2, prop 2 ","
- a. media. segment ":
- " Evar 3 ","
- a. contenttype ":
- " Evar 1 ","
- a. media. timeplayed ":
- " event 3 ","
- a. media. view ":
- " event 1 ","
- a. media. segmentview ":
- " event 2 ","
- a. media. complete ":
- " event 7 ","
- a. media. milestones ": {25: " event 4 ",
- 50: " event 5 ",
- 75: " event 6 "}};
+s.Media.
+  contextDataMapping = { "a.media.name":
+    "eVar2,prop2", "a.media.segment":
+    "eVar3", "a.contentType":
+    "eVar1", "a.media.timePlayed":
+    "event3", "a.media.view":
+    "event1", "a.media.segmentView":
+    "event2", "a.media.complete":
+    "event7", "a.media.milestones":{ 25:"event4", 50:"event5", 75:"event6" }};
 </pre>
 </td>
 <td>N/D
 </td>
-<td>La mappatura dei dati contestuali a evar, prop ed eventi ora viene completata
-tramite le regole di elaborazione.
+<td>La mappatura dei dati contestuali su eVar, prop ed eventi ora viene completata attraverso le regole di elaborazione.
 </td>
 </tr>
 <tr>
 <td>
-Media. trackvars
+Media.trackVars
 </td>
 <td>
 <pre>
-s. Media. trackvars
- = "events,
- prop 2,
- evar 1,
- evar 2,
- evar 3";
+s.Media.trackVars = "events, prop2, eVar1, eVar2, eVar3";
 </pre>
 </td>
 <td>
@@ -163,34 +144,19 @@ linkTrackVars
 </td>
 <td>
 <pre>
-s. linktrackvars
- ='events,
- prop 10,
- evar 10,
- evar 12,
- evar 13,
- evar 15,
- contextdata.
- video. name,
- contextdata.
- video. view ';
+s.linkTrackVars = 'events, prop10, eVar10, eVar12, eVar13, eVar15, contextData.
+       video.name, contextData.
+       video.view';
 </pre>
 </td>
 </tr>
 <tr>
 <td>
-Media. trackevents
+Media.trackEvents
 </td>
 <td>
 <pre>
-s. Media. trackevents
- = "event 1,
- event 2,
- event 3,
- event 4,
- event 5,
- event 6,
- event 7"
+s.Media.trackEvents = "event1, event2, event3, event4, event5, event6, event7"
 </pre>
 </td>
 <td>
@@ -198,8 +164,7 @@ linkTrackEvents
 </td>
 <td>
 <pre>
-s. linktrackevents
- ='event 2 ';
+s.linkTrackEvents = 'event2';
 </pre>
 </td>
 </tr>
@@ -211,7 +176,7 @@ s. linktrackevents
 <tr>
 <th>Milestone
 </th>
-<th>Sintassi milestone (Pietra miliare)
+<th>Sintassi pietra miliare
 </th>
 <th>Collegamento personalizzato
 </th>
@@ -222,13 +187,12 @@ s. linktrackevents
 <tbody>
 <tr>
 <td>
-Media. trackusingcontextdata
+Media.trackUsingContextData
 </td>
 <td>
 <pre>
-s. Media.
- Trackusingcontextdata 
- = true;
+s.Media.
+  trackUsingContextData = true;
 </pre>
 </td>
 <td>
@@ -236,50 +200,32 @@ linkTrackVars
 </td>
 <td>
 <pre>
-s. linktrackvars
- ='events, 
-contextdata. video. namè; 
-s. contextdata ['video. namè]
- = medianame;
+s.linkTrackVars = 'events, contextData.video.name'; 
+s.contextData[‘video.name’] = mediaName;
 </pre>
 </td>
 </tr>
 <tr>
 <td>
-Media. contextdatamapping
+Media.contextDataMapping
 </td>
 <td>
 <pre>
-s. Media. contextdatamapping = {"a. media. name": " Evar 2, prop 2 ","
- a. media. segment ": " Evar 3 ","
- a. contenttype ": " Evar 1 ","
- a. media. timeplayed ": " event 3 ","
- a. media. view ": " event 1 ","
- a. media. segmentview ": " event 2 ","
- a. media. complete ": " event 7 ","
- a. media. milestones ": {25: " event 4 ",
- 50: " event 5 ",
- 75: " event 6 "}};
+s.Media.contextDataMapping = { "a.media.name":"eVar2,prop2", "a.media.segment":"eVar3", "a.contentType":"eVar1", "a.media.timePlayed":"event3", "a.media.view":"event1", "a.media.segmentView":"event2", "a.media.complete":"event7", "a.media.milestones":{ 25:"event4", 50:"event5", 75:"event6" }};
 </pre>
 </td>
 <td>N/D
 </td>
-<td>La mappatura dei dati contestuali a evar, prop ed eventi ora viene completata
-tramite le regole di elaborazione.
+<td>La mappatura dei dati contestuali su eVar, prop ed eventi ora viene completata attraverso le regole di elaborazione.
 </td>
 </tr>
 <tr>
 <td>
-Media. trackvars
+Media.trackVars
 </td>
 <td>
 <pre>
-s. Media. trackvars
- = "events,
- prop 2,
- evar 1,
- evar 2,
- evar 3";
+s.Media.trackVars = "events, prop2, eVar1, eVar2, eVar3";
 </pre>
 </td>
 <td>
@@ -287,34 +233,19 @@ linkTrackVars
 </td>
 <td>
 <pre>
-s. linktrackvars
- ='events,
- prop 10,
- evar 10,
- evar 12,
- evar 13,
- evar 15,
- contextdata.
- video. name,
- contextdata.
- video. view ';
+s.linkTrackVars = 'events, prop10, eVar10, eVar12, eVar13, eVar15, contextData.
+       video.name, contextData.
+       video.view';
 </pre>
 </td>
 </tr>
 <tr>
 <td>
-Media. trackevents
+Media.trackEvents
 </td>
 <td>
 <pre>
-s. Media. trackevents
- = "event 1,
- event 2,
- event 3,
- event 4,
- event 5,
- event 6,
- event 7"
+s.Media.trackEvents = "event1, event2, event3, event4, event5, event6, event7"
 </pre>
 </td>
 <td>
@@ -322,8 +253,7 @@ linkTrackEvents
 </td>
 <td>
 <pre>
-s. linktrackevents
- ='event 2 ';
+s.linkTrackEvents = 'event2';
 </pre>
 </td>
 </tr>
@@ -337,7 +267,7 @@ s. linktrackevents
 <tr>
 <th>Milestone
 </th>
-<th>Sintassi milestone (Pietra miliare)
+<th>Sintassi pietra miliare
 </th>
 <th>Collegamento personalizzato
 </th>
@@ -348,12 +278,11 @@ s. linktrackevents
 <tbody>
 <tr>
 <td>
-Media. autotrack
+Media.autoTrack
 </td>
 <td>
 <pre>
-s. Media. autotrack
- = true;
+s.Media.autoTrack = true;
 </pre>
 </td>
 <td>N/D
@@ -363,12 +292,11 @@ s. Media. autotrack
 </tr>
 <tr>
 <td>
-Media. autotracknetstreams
+Media.autoTrackNetStreams
 </td>
 <td>
 <pre>
-s. Media. autotracknetstreams
- = true
+s.Media.autoTrackNetStreams = true
 </pre>
 </td>
 <td>N/D
@@ -378,12 +306,11 @@ s. Media. autotracknetstreams
 </tr>
 <tr>
 <td>
-Media. completebycloseoffset
+Media.completeByCloseOffset
 </td>
 <td>
 <pre>
-s. Media. completebycloseoffset
- = true
+s.Media.completeByCloseOffset = true
 </pre>
 </td>
 <td>N/D
@@ -393,13 +320,12 @@ s. Media. completebycloseoffset
 </tr>
 <tr>
 <td>
-Media. completecloseoffsetthreshold
+Media.completeCloseOffsetThreshold
 </td>
 <td>
 <pre>
-s. Media.
- Completecloseoffsetthreshold
- = 1
+s.Media.
+  completeCloseOffsetThreshold = 1
 </pre>
 </td>
 <td>N/D
@@ -409,31 +335,29 @@ s. Media.
 </tr>
 <tr>
 <td>
-Media. playername
+Media.playerName
 </td>
 <td>
 <pre>
-s. Media. playername 
- = "Nome lettore personalizzato"
+s.Media.playerName = "Nome lettore personalizzato"
 </pre>
 </td>
 <td>
-Imposta variabile di dati evar o di contesto nella chiamata di collegamento
+Imposta eVar o variabile di dati di contesto nella chiamata di collegamento
 </td>
 <td>
 <pre>
-s. contextdata ['video. player ']
- =» customplayer Name»;
+s.contextData['video.player'] ="CustomPlayer Name";
 </pre>
 </td>
 </tr>
 <tr>
 <td>
-Media. trackseconds
+Media.trackSeconds
 </td>
 <td>
 <pre>
-s. Media. trackseconds = 15
+s.Media.trackSeconds = 15
 </pre>
 </td>
 <td>N/D
@@ -443,12 +367,11 @@ s. Media. trackseconds = 15
 </tr>
 <tr>
 <td>
-Media. trackmilestones
+Media.trackMilestones
 </td>
 <td>
 <pre>
-s. Media. trackmilestones 
- = "25,50,75";
+s.Media.trackMilestones = "25,50,75";
 </pre>
 </td>
 <td>N/D
@@ -458,12 +381,11 @@ s. Media. trackmilestones
 </tr>
 <tr>
 <td>
-Media. trackoffsetmilestones
+Media.trackOffsetMilestones
 </td>
 <td>
 <pre>
-s. Media. trackoffsetmilestones 
- = "20,40,60";
+s.Media.trackOffsetMilestones = "20,40,60";
 </pre>
 </td>
 <td>N/D
@@ -473,12 +395,11 @@ s. Media. trackoffsetmilestones
 </tr>
 <tr>
 <td>
-Media. segmentbymilestones
+Media.segmentByMilestones
 </td>
 <td>
 <pre>
-s. Media. segmentbymilestones
- = true;
+s.Media.segmentByMilestones = true;
 </pre>
 </td>
 <td>N/D
@@ -488,13 +409,12 @@ s. Media. segmentbymilestones
 </tr>
 <tr>
 <td>
-Media. segmentbyoffsetmilestones
+Media.segmentByOffsetMilestones
 </td>
 <td>
 <pre>
-s. Media.
- Segmentbyoffsetmilestones
- = true;
+s.Media.
+  segmentByOffsetMilestones = true;
 </pre>
 </td>
 <td>N/D
@@ -512,7 +432,7 @@ s. Media.
 <tr>
 <th>Milestone
 </th>
-<th>Sintassi milestone (Pietra miliare)
+<th>Sintassi pietra miliare
 </th>
 <th>Collegamento personalizzato
 </th>
@@ -523,12 +443,11 @@ s. Media.
 <tbody>
 <tr>
 <td>
-Media. adtrackseconds
+Media.adTrackSeconds
 </td>
 <td>
 <pre>
-s. Media. adtrackseconds 
- = 15 
+s.Media.adTrackSeconds = 15 
 </pre>
 </td>
 <td>N/D
@@ -538,12 +457,11 @@ s. Media. adtrackseconds
 </tr>
 <tr>
 <td>
-Media. adtrackmilestones
+Media.adTrackMilestones
 </td>
 <td>
 <pre>
-s. Media. adtrackmilestones 
- = "25,50,75";
+s.Media.adTrackMilestones = "25,50,75";
 </pre>
 </td>
 <td>N/D
@@ -553,13 +471,12 @@ s. Media. adtrackmilestones
 </tr>
 <tr>
 <td>
-Media. adtrackoffsetmilestones
+Media.adTrackOffsetMilestones
 </td>
 <td>
 <pre>
-s. Media.
- Adtrackoffsetmilestones 
- = "20,40,60";
+s.Media.
+  adTrackOffsetMilestones = "20,40,60";
 </pre>
 </td>
 <td>N/D
@@ -569,13 +486,12 @@ s. Media.
 </tr>
 <tr>
 <td>
-Media. adsegmentbymilestones
+Media.adSegmentByMilestones
 </td>
 <td>
 <pre>
-s. Media.
- Adsegmentbymilestones
- = true;
+s.Media.
+  adSegmentByMilestones = true;
 </pre>
 </td>
 <td>N/D
@@ -585,13 +501,12 @@ s. Media.
 </tr>
 <tr>
 <td>
-Media. adsegmentbyoffsetmilestones
+Media.adSegmentByOffsetMilestones
 </td>
 <td>
 <pre>
-s. Media.
- Adsegmentbyoffsetmilestones
- = true;
+s.Media.
+  adSegmentByOffsetMilestones = true;
 </pre>
 </td>
 <td>N/D
@@ -602,14 +517,14 @@ s. Media.
 </tbody>
 </table>
 
-### Metodi modulo Media
+### Metodi del modulo multimediale
 
 <table>
 <thead>
 <tr>
 <th>Milestone
 </th>
-<th>Sintassi milestone (Pietra miliare)
+<th>Sintassi pietra miliare
 </th>
 <th>Collegamento personalizzato
 </th>
@@ -619,106 +534,79 @@ s. Media.
 </thead>
 <tbody>
 <tr>
-<td>File multimediali. open</td>
+<td>Media.open</td>
 <td>
 <pre>
-s. Media. open (medianame,
- medialength,
- mediaplayername)
+s.Media.open( mediaName, mediaLength, mediaPlayerName)
 </pre>
 </td>
-<td>s. tl ()</td>
+<td>s.tl()</td>
 <td>
 <pre>
-s. linktrackvars
- ='events,
- prop 10,
- evar 10,
- evar 12,
- evar 15,
- contextdata. video. name,
- contextdata. video. view ';
-s. linktrackevents 
- ='event 2 ';
-s. prop 10 
- = Medianame;
-s. evar 10 
- = Medianame;
-s. evar 12 
- = "video";
-s. evar 15 
- = Mediaplayername;
-s. events 
- ='event 2 ';
-s. contextdata ['video. namè] 
- = Medianame;
-s. contextdata ['video. view '] 
- ='truè;
-s. tl (this,'o ','Video Start ');
+s.linkTrackVars = 'events, prop10, eVar10, eVar12, eVar15, contextData.video.name, contextData.video.view';
+s.linkTrackEvents = 'event2';
+s.prop10 = mediaName;
+s.eVar10 = mediaName;
+s.eVar12 = "video";
+s.eVar15 = mediaPlayerName;
+s.events = 'event2';
+s.contextData['video.name'] = mediaName;
+s.contextData['video.view'] = 'true';
+s.tl(this,'o','Video Start');
 </pre>
 </td>
 </tr>
 <tr>
-<td>Medianame</td>
-<td><b>Medianame:</b> (obbligatorio) Il nome del video che viene visualizzato nei rapporti video.</td>
-<td>Imposta variabile di dati evar o di contesto nella chiamata di collegamento</td>
+<td>mediaName</td>
+<td><b></b> mediaName: (obbligatorio) Il nome del video come desiderate venga visualizzato nei rapporti video.</td>
+<td>Imposta eVar o variabile di dati di contesto nella chiamata di collegamento</td>
 <td>
 <pre>
-s. prop 10 = medianame;
-s. evar 10 = medianame;
-s. contextdata ['video. namè]
- = medianame;
+s.prop10 = mediaName;
+s.eVar10 = mediaName;
+s.contextData['video.name'] = mediaName;
 </pre>
 </td>
 </tr>
 <tr>
 <td>
-Medialength
+mediaLength
 </td>
 <td>
-<b>Medialength:</b> (obbligatorio) La lunghezza del video in secondi.
+<b></b> mediaLength: (richiesto) Lunghezza del video in secondi.
 </td>
 <td>
-Imposta variabile di dati evar o di contesto nella chiamata di collegamento
+Imposta eVar o variabile di dati di contesto nella chiamata di collegamento
 </td>
 <td>
 <pre>
-s. contextdata ['video. length ']
- =» 90»;
+s.contextData['video.length'] ="90";
 </pre>
 </td>
 </tr>
 <tr>
 <td>
-Mediaplayername
+mediaPlayerName
 </td>
 <td>
-<b>Mediaplayername:</b> (obbligatorio) Il nome del lettore
-multimediale utilizzato per visualizzare il video, in modo che venga visualizzato nei rapporti video.
+<b></b> mediaPlayerName: (obbligatorio) Il nome del lettore multimediale utilizzato per visualizzare il video, così come lo si desidera, nei rapporti video.
 </td>
 <td>
-Imposta variabile di dati evar o di contesto nella chiamata di collegamento
+Imposta eVar o variabile di dati di contesto nella chiamata di collegamento
 </td>
 <td>
 <pre>
-s. contextdata ['video. player ']
- =» customplayer Name»;
+s.contextData['video.player'] ="CustomPlayer Name";
 </pre>
 </td>
 </tr>
 <tr>
 <td>
-Media. openad
+Media.openAd
 </td>
 <td>
 <pre>
-s. Media. openad (nome,
- lunghezza,
- playername,
- parentname,
- parentpod,
- parentpodposition,
- CPM)
+s.Media.openAd( nome, lunghezza, nomeLettore, nomePadre, contenitorePadre, posizionePodPadre, CPM)
 </pre>
 </td>
 <td>N/D
@@ -727,7 +615,7 @@ s. Media. openad (nome,
 </tr>
 <tr>
 <td>name</td>
-<td><b>name:</b> (obbligatorio) Nome o ID dell'annuncio.</td>
+<td><b></b> name: (obbligatorio) Nome o ID dell’annuncio.</td>
 <td>N/D</td>
 <td>Non disponibile</td>
 </tr>
@@ -736,7 +624,7 @@ s. Media. openad (nome,
 length
 </td>
 <td>
-<b>lunghezza:</b> (obbligatorio) Lunghezza dell'annuncio.
+<b></b> lunghezza: (obbligatorio) Lunghezza dell’annuncio.
 </td>
 <td>N/D
 </td>
@@ -745,11 +633,10 @@ length
 </tr>
 <tr>
 <td>
-Playername
+playerName
 </td>
 <td>
-<b>Playername:</b> (obbligatorio) Il nome del lettore multimediale utilizzato
-per visualizzare l'annuncio.
+<b></b> playerName: (obbligatorio) Nome del lettore multimediale utilizzato per visualizzare l’annuncio.
 </td>
 <td>N/D
 </td>
@@ -758,11 +645,10 @@ per visualizzare l'annuncio.
 </tr>
 <tr>
 <td>
-Parentname
+parentName
 </td>
 <td>
-<b>Parentname:</b> Nome o ID del contenuto principale in cui
-è incorporato l'annuncio.
+<b></b> parentName: Nome o ID del contenuto principale in cui l’annuncio è incorporato.
 </td>
 <td>N/D
 </td>
@@ -771,10 +657,10 @@ Parentname
 </tr>
 <tr>
 <td>
-Parentpod
+parentPod
 </td>
 <td>
-<b>Parentpod:</b> La posizione nel contenuto principale in cui è stato riprodotto l'annuncio.
+<b></b> parentPod: La posizione nel contenuto principale in cui è stata riprodotta l’annuncio.
 </td>
 <td>N/D
 </td>
@@ -783,10 +669,10 @@ Parentpod
 </tr>
 <tr>
 <td>
-Parentpodposition
+parentPodPosition
 </td>
 <td>
-<b>Parentpodposition:</b> Posizione all'interno del contenitore in cui viene riprodotto l'annuncio.
+<b></b> parentPodPosition: Posizione all’interno del contenitore in cui viene riprodotto il tead.
 </td>
 <td>N/D
 </td>
@@ -798,7 +684,7 @@ Parentpodposition
 CPM
 </td>
 <td>
-<b>CPM:</b> CPM o CPM cifrato (prefisso a " ~") che si applica a questa riproduzione.
+<b></b> CPM: CPM o CPM crittografato (con il prefisso "~") che si applica a questa riproduzione.
 </td>
 <td>N/D
 </td>
@@ -807,91 +693,28 @@ CPM
 </tr>
 <tr>
 <td>
-Media. click
+Media.click
 </td>
 <td>
 <pre>
-s. Media. click (nome, offset)
+s.Media.click(nome, offset)
 </pre>
 </td>
 <td>
 <pre>
-s. tl ()
+s.tl()
 </pre>
 </td>
-<td>Utilizzare una chiamata di analisi dei collegamenti personalizzata per tenere traccia dei clic
+<td>Utilizza una chiamata di analisi dei collegamenti personalizzata per tenere traccia dei clic
 </td>
 </tr>
 <tr>
 <td>
-File multimediali. close
+Media.close
 </td>
 <td>
 <pre>
-s. Media. close (medianame)
-</pre>
-</td>
-<td>N/D
-</td>
-<td>Non disponibile
-</td>
-</tr>
-<tr>
-<td>
-File multimediali. complete
-</td>
-<td>
-<pre>
-s. Media. complete (nome,
- offset)
-</pre>
-</td>
-<td>
-s. tl ()
-</td>
-<td>
-<pre>
-s. linktrackvars
- ='events,
- prop 10,
- evar 10,
- evar 12,
- evar 15,
- contextdata.
- video. name,
- contextdata.
- video. completè;
-s. linktrackevents 
- ='event 3 ';
-s. prop 10 
- = Medianame;
-s. evar 10 
- = Medianame;
-s. evar 12 
- = "video";
-s. evar 15 
- = Mediaplayername;
-s. events 
- ='event 3 ';
-s. contextdata ['video. namè]
- = medianame;
-s. contextdata ['video. completè]
- ='truè;
-s. tl (this,'o ','Video Completè);
-</pre>
-</td>
-</tr>
-<tr>
-<td>
-Media. play
-</td>
-<td>
-<pre>
-s. Media. play (name,
- offset,
- segmentnum,
- segment,
- segmentlength)
+s.Media.close(mediaName)
 </pre>
 </td>
 <td>N/D
@@ -901,12 +724,54 @@ s. Media. play (name,
 </tr>
 <tr>
 <td>
-Media. stop
+Media.complete
 </td>
 <td>
 <pre>
-s. Media. stop (medianame,
- mediaoffset)
+s.Media.complete( nome, offset)
+</pre>
+</td>
+<td>
+s.tl()
+</td>
+<td>
+<pre>
+s.linkTrackVars = 'events, prop10, eVar10, eVar12, eVar15, contextData.
+       video.name, contextData.
+       video.complete";
+s.linkTrackEvents = 'event3';
+s.prop10 = mediaName;
+s.eVar10 = mediaName;
+s.eVar12 = "video";
+s.eVar15 = mediaPlayerName;
+s.events = 'event3';
+s.contextData['video.name'] = mediaName;
+s.contextData['video.complete'] = 'true';
+s.tl(this,'o','Video Complete');
+</pre>
+</td>
+</tr>
+<tr>
+<td>
+Media.play
+</td>
+<td>
+<pre>
+s.Media.play( nome, offset, segmentoNum, segmento, segmentoLunghezza)
+</pre>
+</td>
+<td>N/D
+</td>
+<td>Non disponibile
+</td>
+</tr>
+<tr>
+<td>
+Media.stop
+</td>
+<td>
+<pre>
+s.Media.stop( mediaName, mediaOffset)
 </pre>
 </td>
 <td>N/D 
@@ -916,39 +781,32 @@ s. Media. stop (medianame,
 </tr>
 <tr>
 <td>
-Media. monitor
+Media.monitor
 </td>
 <td>
 <pre>
-s. Media. monitor (s, media)
+s.Media.monitor(s, media)
 </pre>
 </td>
 <td>
-Imposta variabile di dati evar o di contesto nella chiamata di collegamento
+Imposta eVar o variabile di dati di contesto nella chiamata di collegamento
 </td>
 <td>
 <pre>
-s. linktrackvars
- ='events,
- prop 10,
- evar 10,
- evar 12,
- evar 15,
- contextdata.
- video. name,
- contextdata.
- video. view ';
-s. linktrackevents ='event 2 ';
+s.linkTrackVars = 'events, prop10, eVar10, eVar12, eVar15, contextData.
+       video.name, contextData.
+       video.view';
+s.linkTrackEvents = 'event2';
 </pre>
 </td>
 </tr>
 <tr>
 <td>
-Media. track
+Media.track
 </td>
 <td>
 <pre>
-s. Media. track (medianame)
+s.Media.track(mediaName)
 </pre>
 </td>
 <td>N/D
