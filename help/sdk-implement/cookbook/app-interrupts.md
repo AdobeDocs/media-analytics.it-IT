@@ -1,35 +1,35 @@
 ---
-seo-title: La gestione dell'applicazione viene interrotta durante la riproduzione
-title: La gestione dell'applicazione viene interrotta durante la riproduzione
-uuid: 1 ccb 4507-bda 6-462 d-bf 67-e 22978 a 4 db 3 d
+seo-title: Gestione degli arresti dell’applicazione durante la riproduzione
+title: Gestione degli arresti dell’applicazione durante la riproduzione
+uuid: 1ccb4507-bda6-462d-bf67-e22978a4db3d
 translation-type: tm+mt
 source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
 
-# Handling application interrupts during playback{#handling-application-interrupts-during-playback}
+# Gestione degli arresti dell’applicazione durante la riproduzione{#handling-application-interrupts-during-playback}
 
-La riproduzione in un'applicazione multimediale può essere sospesa in diversi modi: un utente preme in modo esplicito la pausa oppure quando un utente inserisce l'applicazione in background. A prescindere da ciò che causa un'interruzione nella riproduzione multimediale, le istruzioni di tracciamento sono le stesse:
+La riproduzione in un'applicazione multimediale può essere interrotta in diversi modi: un utente preme esplicitamente pause o quando un utente mette l'applicazione in background. Indipendentemente dalle cause di un'interruzione nella riproduzione dei supporti, le istruzioni di tracciamento sono le stesse:
 
-1. Call **`trackPause`** when the application is interrupted (goes to background, media pauses, etc.).
-1. Call **`trackPlay`** when the application returns to the foreground and/or the media resumes playing.
+1. Chiamata **`trackPause`** quando l’applicazione viene interrotta (va in background, pause per i supporti, ecc.).
+1. Chiama **`trackPlay`** quando l’applicazione torna in primo piano e/o il supporto riprende la riproduzione.
 
 >[!NOTE]
 >
->The Media Analytics team has seen instances where customers called `trackSessionStart` when their app returned from the background. In tal modo la riproduzione sarà verso l'alto per il tempo di riproduzione totale, insieme alla perdita di marcatori di avanzamento, segmenti e così via. Instead, call `trackPlay` when the app returns and/or the media resumes playing.
+>Il team di Media Analytics ha visto le istanze in cui i clienti hanno chiamato `trackSessionStart` quando la loro app è tornata in background. In questo modo, la riproduzione fino a quel momento non viene conteggiata per il tempo di riproduzione totale, oltre a perdere marcatori di avanzamento precedenti, segmenti e così via. Al contrario, chiamate `trackPlay` quando l'app ritorna e/o il supporto riprende la riproduzione.
 
-## FAQ about handling application interrupts: {#section_osf_xqs_h2b}
+## Domande frequenti sulla gestione degli arresti dell’applicazione: {#section_osf_xqs_h2b}
 
-* _Per quanto tempo un'app deve essere messa in background prima della chiusura della sessione?_
+* _Per quanto tempo deve essere messa in background un'app prima della chiusura della sessione?_
 
-   Se l'applicazione consente la riproduzione in background, può continuare il monitoraggio chiamando le nostre API e invieremo tutti i nostri intervalli di tracciamento regolari. Non molte app video consentono la riproduzione in background, ad eccezione di YouTube rosso, tuttavia, tutte le app audio consentono questa impostazione. Se l'applicazione non consente la riproduzione in background, è consigliabile rimanere in Pausa per un minuto, quindi terminare la sessione di tracciamento. L'applicazione non può continuare a inviare coppie di pause, perché nella maggior parte dei casi non può determinare se l'utente restituirà il contenuto per continuare a visualizzare il contenuto, oppure determinare quando verrà ucciso. Inoltre, è un'esperienza insoddisfacente continuare a inviare gli hit quando sono in background.
+   Se l'applicazione consente la riproduzione in background, può continuare il tracciamento chiamando le nostre API e invieremo tutti i nostri regolari ping di tracciamento. Non molte app video supportano la riproduzione in background tranne YouTube Red, tuttavia, tutte le app audio lo consentono. Se l’applicazione non consente la riproduzione in background, è consigliabile rimanere nello stato di pausa per un minuto, quindi terminare la sessione di tracciamento. L'applicazione non può continuare a inviare ping in pausa, perché nella maggior parte dei casi non è in grado di determinare se l'utente tornerà a visualizzare il supporto, o di determinare quando verrà ucciso. È anche una brutta esperienza per continuare a inviare ping quando in background.
 
-* _Qual è il modo corretto per gestire il tracciamento di riavvio dopo che l'app è rimasta in background per un periodo di tempo prolungato?_
+* _Qual è il modo corretto per gestire il nuovo tracciamento dopo che l'app è stata in background per molto tempo?_
 
-   The application should call `trackSessionEnd` to end the tracking session. Dalla versione 2.1, l'SDK invia un ping "end" per notificare al back-end che la sessione di tracciamento è chiusa.
+   L’applicazione deve chiamare `trackSessionEnd` per terminare la sessione di tracciamento. Dalla versione 2.1, l’SDK invia un ping "end" per notificare al back-end la chiusura della sessione di tracciamento.
 
-* _Come riavviare la sessione?_
+* _E per riavviare la stessa sessione?_
 
-   For detailed instructions on restarting a tracking session, see this page: [Manually resume a previously closed session.](/help/sdk-implement/cookbook/resuming-inactive.md) L'SDK invia una ripetizione per notificare al back-end che l'utente sta rimuovendo manualmente la sessione.
+   Per istruzioni dettagliate sul riavvio di una sessione di tracciamento, consultate questa pagina: Riprendere [manualmente una sessione precedentemente chiusa.](/help/sdk-implement/cookbook/resuming-inactive.md) L’SDK invia un ping di ripresa per notificare al back-end che l’utente sta riprendendo manualmente la sessione.
 
