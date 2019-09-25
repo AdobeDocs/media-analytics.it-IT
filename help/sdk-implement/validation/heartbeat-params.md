@@ -1,81 +1,81 @@
 ---
 seo-title: Descrizioni dei parametri Heartbeat
 title: Descrizioni dei parametri Heartbeat
-uuid: e 9 ddda 32-0952-43 d 0-a 702-49 f 5 b 1 bfd 8 cf
+uuid: e9ddda32-0952-43d0-a702-49f5b1bfd8cf
 translation-type: tm+mt
 source-git-commit: 10a5d921953339bef1cde2f802eb9ce0cb1bbe4b
 
 ---
 
 
-# Descrizioni dei parametri di Media Analytics (heartbeats){#heartbeat-parameter-descriptions}
+# Descrizioni dei parametri di Media Analytics (heartbeat){#heartbeat-parameter-descriptions}
 
-Elenco dei parametri di Media Analytics che Adobe raccoglie e elabora sul server di Media Analytics (heartbeats):
+Elenco dei parametri di Media Analytics raccolti ed elaborati da Adobe sul server Media Analytics (heartbeat):
 
 ## Tutti gli eventi
 
-| Nome | Origine dati |  Descrizione  |
+| Nome | Origine dati |  Descrizione  |
 | ---  | --- | --- |
-| s: evento: type | Media SDK | (Obbligatorio)<br/><br/>Il tipo di evento tracciato. Tipi di evento: <ul> <li> s: evento: type = start </li> <li> s: evento: type = complete </li> <li> s: evento: type = chapter_ start </li> <li> s: evento: type = chapter_ complete </li> <li> s: evento: type = buffer </li> <li> s: evento: type = pause </li> <li> s: evento: type = resume </li> <li> s: evento: type = bitrate_ change </li> <li> s: evento: type = aa_ start </li> <li> s: evento: type = stall </li> <li> s: evento: type = end </li> </ul> |
-| l: evento: prev_ ts | Media SDK | (Obbligatorio)<br/><br/>La marca temporale dell'ultimo evento dello stesso tipo in questa sessione. Il valore è -1. |
-| l: evento: ts | Media SDK | (Obbligatorio)<br/><br/>La marca temporale dell'evento. |
-| l: evento: duration | Media SDK | (Obbligatorio)<br/><br/>Questo valore viene impostato internamente (in millisecondi) da Media SDK, non dal lettore. Viene utilizzato per calcolare il tempo trascorso sul retro. Ad esempio: a. media. totaltimeplayviene calcolato come somma della durata di tutti i heartbebeat Play (type = play) generati. <br/>*Nota:* Questo parametro è impostato su 0 per determinati eventi perché sono "eventi di modifica dello stato" (ad es., type = complete, type = chapter_ complete o type = bitrate_ change.) |
-| l: evento: playhead | Videoinfo | (Obbligatorio)<br/><br/>Quando l'evento è stato registrato, l'indicatore di riproduzione si trovava all'interno della risorsa attualmente attiva (principale o annuncio). |
-| s: evento: sid | Media SDK | (Obbligatorio)<br/><br/>L'ID sessione (una stringa generata in modo casuale). Tutti gli eventi in una determinata sessione (video + ads) devono essere identici. |
-| l: risorse: duration/l: risorse: length <br/>(rinominata dalla durata della lunghezza) | Videoinfo | (Obbligatorio)<br/><br/>Lunghezza della risorsa video della risorsa principale. |
-| s: risorse: editore | Mediaheartbeatconfig | (Obbligatorio)<br/><br/>L'editore della risorsa. |
-| s: risorse: video_ id | Videoinfo | (Obbligatorio)<br/><br/>Un ID che identifica in modo univoco il video nel catalogo dell'editore. |
-| s: risorse: type | Media SDK | (Obbligatorio)<br/><br/>Il tipo di risorsa (principale o annuncio). |
-| s: stream: type | Videoinfo | (Obbligatorio)<br/><br/>Il tipo di flusso. Può essere uno dei seguenti: <ul> <li> live </li> <li> vod </li> <li> linear </li> </ul> |
-| s: utente: id | Oggetto di configurazione per dispositivi mobili, misurazione dell'app visitorid | (Facoltativo) L<br/><br/>'ID visitatore impostato dall'utente. |
-| s: utente: aid | Experience Cloud Organizzazione | (Facoltativo)<br/><br/>Il valore ID visitatore di Analytics dell'utente. |
-| s: utente: mid | Experience Cloud Organizzazione | (Obbligatorio)<br/><br/>Il valore ID visitatore di Experience Cloud dell'utente. |
-| s: cuser: customer_ user_ ids_ x | Mediaheartbeatconfig | (Facoltativo)<br/><br/>Tutti gli ID utente cliente impostati su Audience Manager. |
-| l: aam: loc_ hint | Mediaheartbeatconfig | (Richiesti)<br/><br/>I dati AAM inviati su ciascun payload dopo aa_ start |
-| s: aam: blob | Mediaheartbeatconfig | (Richiesti)<br/><br/>I dati AAM inviati su ciascun payload dopo aa_ start |
-| s: sc: rsid | ID report Report (o ID) | (Obbligatorio)<br/><br/>RSID di Adobe Analytics dove è necessario inviare i rapporti. |
-| s: sc: tracking_ server | Mediaheartbeatconfig | (Obbligatorio)<br/><br/>Server di tracciamento Adobe Analytics. |
-| h: sc: ssl | Mediaheartbeatconfig | (Obbligatorio)<br/><br/>Se il traffico è sopra HTTPS (se è impostato su 1) o su HTTP (impostato su 0). |
-| s: sp: ovp | Mediaheartbeatconfig | (Facoltativo)<br/><br/>Impostare su «primetime» per i lettori Primetime, o l'OVP effettivo per altri lettori. |
-| s: sp: sdk | Mediaheartbeatconfig | (Obbligatorio)<br/><br/>Stringa della versione OVP. |
-| s: sp: player_ name | Videoinfo | (Obbligatorio)<br/><br/>Nome del lettore video (il software del lettore effettivo utilizzato per identificare il lettore). |
-| s: sp: canale | Mediaheartbeatconfig | (Facoltativo)<br/><br/>Il canale in cui l'utente sta visualizzando il contenuto. Per un'app mobile, il nome dell'app. Per un sito Web, il nome del dominio. |
-| s: sp: hb_ version | Media SDK | (Obbligatorio)<br/><br/>Il numero di versione della libreria Media SDK che emette la chiamata. |
-| l: stream: bitrate | Qosinfo | (Obbligatorio)<br/><br/>Il valore corrente del bitrate di streaming (in bps). |
+| s:event:type | Media SDK | (Obbligatorio)<br/><br/>Il tipo di evento di cui tenere traccia. Tipi di evento: <ul> <li> s:event:type=start </li> <li> s:event:type=complete </li> <li> s:event:type=Chapter_start </li> <li> s:event:type=Chapter_complete </li> <li> s:event:type=buffer </li> <li> s:event:type=pause </li> <li> s:event:type=curriculum </li> <li> s:event:type=bitrate_change </li> <li> s:event:type=aa_start </li> <li> s:event:type=stall </li> <li> s:event:type=end </li> </ul> |
+| l:event:prev_ts | Media SDK | (Obbligatorio)<br/><br/>Timestamp dell'ultimo evento dello stesso tipo in questa sessione. Il valore è -1. |
+| l:event:ts | Media SDK | (Obbligatorio)<br/><br/>Marca temporale dell'evento. |
+| l:evento:durata | Media SDK | (Obbligatorio)<br/><br/>Questo valore viene impostato internamente (in millisecondi) dall’SDK di Media, non dal lettore. Viene utilizzato per calcolare il tempo trascorso dalle metriche sul backend. Ad esempio: a.media.totalTimePlayed viene calcolato come somma della durata di tutti i heartbeat Play (type=play) generati. <br/>** Nota: Questo parametro è impostato su 0 per alcuni eventi perché si tratta di "eventi di modifica dello stato" (ad esempio, type=complete, type=Chapter_complete o type=bitrate_change.) |
+| l:event:playhead | VideoInfo | (Obbligatorio)<br/><br/>L'indicatore di riproduzione si trovava all'interno della risorsa attiva (principale o annuncio) al momento della registrazione dell'evento. |
+| s:event:sid | Media SDK | (Obbligatorio)<br/><br/>ID sessione (una stringa generata in modo casuale). Tutti gli eventi in una determinata sessione (video + annunci) devono corrispondere. |
+| l:risorsa:durata / l:risorsa:lunghezza <br/>(rinominata da durata lunghezza) | VideoInfo | (Obbligatorio)<br/><br/>Lunghezza della risorsa video principale. |
+| s:risorsa:editore | MediaHeartbeatConfig | (Obbligatorio)<br/><br/>L’editore della risorsa. |
+| s:asset:video_id | VideoInfo | (Obbligatorio)<br/><br/>Un ID che identifica in modo univoco il video nel catalogo dell'editore. |
+| s:asset:type | Media SDK | (Obbligatorio)<br/><br/>Il tipo di risorsa (principale o annuncio). |
+| s:stream:type | VideoInfo | (Obbligatorio)<br/><br/>Il tipo di flusso. Può essere uno dei seguenti: <ul> <li> live </li> <li> vod </li> <li> linear </li> </ul> |
+| s:user:id | Oggetto Config per mobile, misurazione app VisitorID | (Facoltativo) ID visitatore impostato specificamente dall'<br/><br/>utente. |
+| s:utente:aid | Organizzazione Experience Cloud | (Facoltativo)<br/><br/>Il valore ID visitatore di Analytics dell’utente. |
+| s:utente:mid | Organizzazione Experience Cloud | (Obbligatorio)<br/><br/>Il valore ID visitatore Experience Cloud dell’utente. |
+| s:cuser:customer_user_ids_x | MediaHeartbeatConfig | (Facoltativo)<br/><br/>Tutti gli ID utente cliente impostati su Audience Manager. |
+| l:aam:loc_hint | MediaHeartbeatConfig | (Obbligatorio) Dati<br/><br/>AAM inviati su ogni payload dopo un_start |
+| s:aam:blob | MediaHeartbeatConfig | (Obbligatorio) Dati<br/><br/>AAM inviati su ogni payload dopo un_start |
+| s:sc:rsid | ID suite di rapporti (o ID) | (Obbligatorio)RSID di<br/><br/>Adobe Analytics in cui devono essere inviati i rapporti. |
+| s:sc:tracking_server | MediaHeartbeatConfig | (Obbligatorio)Server di tracciamento<br/><br/>Adobe Analytics. |
+| h:sc:ssl | MediaHeartbeatConfig | (Obbligatorio)<br/><br/>Indica se il traffico si trova su HTTPS (se impostato su 1) o su HTTP (se impostato su 0). |
+| s:sp:ovp | MediaHeartbeatConfig | (Facoltativo)<br/><br/>Impostare su "primetime" per i lettori Primetime, o sull'OVP effettiva per altri lettori. |
+| s:sp:sdk | MediaHeartbeatConfig | (Obbligatorio)<br/><br/>Stringa della versione OVP. |
+| s:sp:player_name | VideoInfo | (Obbligatorio)Nome del lettore<br/><br/>video (il software del lettore utilizzato per identificare il lettore). |
+| s:sp:channel | MediaHeartbeatConfig | (Facoltativo)<br/><br/>Canale in cui l'utente sta guardando il contenuto. Per un'app mobile, il nome dell'app. Per un sito Web, il nome del dominio. |
+| s:sp:hb_version | Media SDK | (Obbligatorio)<br/><br/>Il numero di versione della libreria Media SDK che ha emesso la chiamata. |
+| l:stream:bitrate | QoSInfo | (Obbligatorio)<br/><br/>Il valore corrente del bitrate del flusso (in bps). |
 
-## Eventi errore
+##  Eventi errore
 
-| Nome | Origine dati | Descrizione   |
+| Nome | Origine dati | Descrizione   |
 | ---  | --- | --- |
-| s: evento: source | Media SDK | (Obbligatorio)<br/><br/>L'origine dell'errore, player-interno o applicazione. |
-| s: evento: id | Media SDK | (Obbligatorio)<br/><br/>L'ID errore identifica l'errore in modo univoco. |
+| s:event:source | Media SDK | (Obbligatorio)<br/><br/>L'origine dell'errore, interna al lettore o a livello di applicazione. |
+| s:event:id | Media SDK | (Obbligatorio)ID<br/><br/>errore, che identifica l’errore in modo univoco. |
 
-## Eventi annunci
+## Eventi annuncio
 
-| Nome | Origine dati | Descrizione   |
+| Nome | Origine dati | Descrizione   |
 | ---  | --- | --- |
-| s: risorse: ad_ id | Adinfo | (Obbligatorio)<br/><br/>Il nome dell'annuncio. |
-| s: risorse: ad_ sid | Media SDK | (Obbligatorio)<br/><br/>Un identificatore univoco generato da Media SDK, aggiunto a tutti gli hit ad hoc. |
-| s: risorse: pod_ id | Media SDK | (Obbligatorio)<br/><br/>ID contenitore all'interno del video. Questo valore viene calcolato automaticamente in base alla formula seguente: <br/>`MD5(video_id) + `<br/>`"_" + `<br/>`[pod index]` |
-| s: risorse: pod_ position | Adbreakinfo | (Obbligatorio)<br/><br/>Indice dell'annuncio all'interno del contenitore (il primo ad ha indice 0, il secondo ad indice 1, ecc.). |
-| s: risorse: resolver | Adbreakinfo | (Obbligatorio)<br/><br/>Il resolver. |
-| s: meta: custom_ ad_ metadata. x | Mediaheartbeat | (Facoltativo)<br/><br/>I metadati degli annunci personalizzati. |
+| s:asset:ad_id | AdInfo | (Obbligatorio)<br/><br/>Il nome dell'annuncio. |
+| s:asset:ad_sid | Media SDK | (Obbligatorio)<br/><br/>Un identificatore univoco generato da Media SDK, aggiunto a tutti i ping relativi agli annunci. |
+| s:asset:pod_id | Media SDK | (Obbligatorio)ID<br/><br/>contenitore all’interno del video. Questo valore viene calcolato automaticamente in base alla seguente formula: <br/>`MD5(video_id) + `<br/>`"_" + `<br/>`[pod index]` |
+| s:asset:pod_position | AdBreakInfo | (Obbligatorio)<br/><br/>Indice dell'annuncio all'interno del contenitore (il primo annuncio ha indice 0, il secondo ha indice 1, ecc.). |
+| s:asset:resolver | AdBreakInfo | (Obbligatorio)<br/><br/>Il risolutore di annunci. |
+| s:meta:custom_ad_metadata.x | MediaHeartbeat | (Facoltativo)<br/><br/>Metadati annuncio personalizzati. |
 
 ## Eventi capitolo
 
-| Nome | Origine dati | Descrizione   |
+| Nome | Origine dati | Descrizione   |
 | ---  | --- | --- |
-| s: stream: chapter_ sid | Media SDK | (Obbligatorio)<br/><br/>L'identificatore univoco associato all'istanza di riproduzione del capitolo. <br/> **Nota:** Un capitolo può essere riprodotto più volte a causa di operazioni di ricerca eseguite dall'utente. |
-| s: stream: chapter_ name | Chapterinfo | (Facoltativo)<br/><br/>Il nome è descrittivo (ovvero, leggibile dall'uomo). |
-| s: stream: chapter_ id | Media SDK | (Obbligatorio)<br/><br/>L'ID univoco del capitolo. Questo valore viene calcolato automaticamente in base alla formula seguente: <br/>`MD5(video_id) +`<br/>` "_" +`<br/>`chapter_pos` |
-| l: stream: chapter_ pos | Chapterinfo | (Obbligatorio)<br/><br/>L'indice del capitolo nell'elenco dei capitoli (a partire da 1). |
-| l: stream: chapter_ offset | Chapterinfo | (Obbligatorio) L<br/><br/>'offset del capitolo (espresso in secondi) all'interno del contenuto principale, escludendo gli annunci. |
-| l: stream: chapter_ length | Chapterinfo | (Obbligatorio)<br/><br/>La durata del capitolo (espressa in secondi). |
-| s: meta: custom_ chapter_ metadata. x | Chapterinfo | (Facoltativo)<br/><br/>Metadati dei capitoli personalizzati. |
+| s:stream:capitolo_sid | Media SDK | (Obbligatorio)<br/><br/>Identificatore univoco associato all'istanza di riproduzione del capitolo.  <br/> **** Nota: Un capitolo può essere riprodotto più volte a causa delle operazioni di ricerca eseguite dall'utente. |
+| s:stream:nome_capitolo | ChapterInfo | (Facoltativo)<br/><br/>Nome intuitivo (leggibile dall’uomo) del capitolo. |
+| s:stream:capitolo_id | Media SDK | (Obbligatorio)<br/><br/>ID univoco del capitolo. Questo valore viene calcolato automaticamente in base alla seguente formula: <br/>`MD5(video_id) +`<br/>` "_" +`<br/>`chapter_pos` |
+| l:stream:pos_capitolo | ChapterInfo | (Obbligatorio)<br/><br/>Indice del capitolo nell'elenco dei capitoli (a partire da 1). |
+| l:stream:Chapter_offset | ChapterInfo | (Obbligatorio)<br/><br/>L'offset del capitolo (espresso in secondi) all'interno del contenuto principale, esclusi gli annunci. |
+| l:stream:lunghezza_capitolo | ChapterInfo | (Obbligatorio)<br/><br/>Durata del capitolo (espressa in secondi). |
+| s:meta:custom_Chapter_metadata.x | ChapterInfo | (Facoltativo) Metadati<br/><br/>personalizzati per i capitoli. |
 
 ## Evento fine sessione
 
-| Nome | Origine dati | Descrizione   |
+| Nome | Origine dati | Descrizione   |
 | ---  | --- | --- |
-| s: evento: type = end | Media SDK | (Obbligatorio) <br/><br/>`end``close` |
+| s:event:type=end | Media SDK | (Obbligatorio)<br/><br/> Il `end``close` |
 
