@@ -1,35 +1,35 @@
 ---
-seo-title: Tenere traccia dei capitoli e dei segmenti in javascript
-title: Tenere traccia dei capitoli e dei segmenti in javascript
-uuid: ef 99 edf 7-7 a 77-46 c 4-8429-bc 9 a 856 b 98 d 6
+seo-title: Tracciare capitoli e segmenti in JavaScript
+title: Tracciare capitoli e segmenti in JavaScript
+uuid: ef99edf7-7a77-46c4-8429-bc9a856b98d6
 translation-type: tm+mt
 source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
 
-# Track chapters and segments on JavaScript{#track-chapters-and-segments-on-javascript}
+# Tracciare capitoli e segmenti in JavaScript{#track-chapters-and-segments-on-javascript}
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l'implementazione con SDK 2. x. If you are implementing a 1.x version of the SDK, you can download the Developers Guide here: [Download SDKs.](/help/sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l’implementazione mediante gli SDK 2.x. Se stai implementando una versione 1.x dell’SDK, puoi scaricare la Guida per gli sviluppatori qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
-1. Identify when the chapter start event occurs and create the `ChapterObject` instance by using the chapter information.
+1. Identificare il momento in cui si verifica l’evento di inizio del capitolo e creare l’ `ChapterObject` istanza utilizzando le informazioni sul capitolo.
 
-   `ChapterObject` riferimento di tracciamento dei capitoli:
+   `ChapterObject` riferimento tracciamento capitoli:
 
    >[!NOTE]
    >
-   >Queste variabili sono necessarie solo se prevedete di tenere traccia dei capitoli.
+   >Queste variabili sono necessarie solo se si prevede di tenere traccia dei capitoli.
 
    | Nome della variabile | Descrizione | Obbligatorio |
    | --- | --- | :---: |
-   | `name` | Nome capitolo | Sì |
-   | `position` | Posizione capitolo | Sì |
+   | `name` | Nome del capitolo | Sì |
+   | `position` | Posizione del capitolo | Sì |
    | `length` | Lunghezza capitolo | Sì |
-   | `startTime` | Ora di inizio capitolo | Sì |
+   | `startTime` | Ora inizio capitolo | Sì |
 
-   Oggetto capitolo:
+   Oggetto Chapter:
 
    ```js
    var chapterInfo =  
@@ -49,7 +49,7 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
    };
    ```
 
-1. To begin tracking the chapter playback, call the `ChapterStart` event in the `MediaHeartbeat` instance:
+1. Per iniziare a monitorare la riproduzione dei capitoli, chiamate l’ `ChapterStart` evento nell’ `MediaHeartbeat` istanza:
 
    ```js
    _onChapterStart = function() { 
@@ -59,7 +59,7 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
    };
    ```
 
-1. When playback reaches the chapter end boundary, as defined by your custom code, call the `ChapterComplete` event in the `MediaHeartbeat` instance:
+1. Quando la riproduzione raggiunge il limite finale del capitolo, come definito dal codice personalizzato, chiamate l’ `ChapterComplete` evento nell’ `MediaHeartbeat` istanza:
 
    ```js
    _onChapterComplete = function() { 
@@ -67,7 +67,7 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
    };
    ```
 
-1. If chapter playback did not complete because the user chose to skip the chapter (for example, if the user seeks out of the chapter boundary), call the `ChapterSkip` event in the MediaHeartbeat instance:
+1. Se la riproduzione del capitolo non è stata completata perché l’utente ha scelto di saltare il capitolo (ad esempio, se l’utente cerca di uscire dal limite del capitolo), chiamate l’ `ChapterSkip` evento nell’istanza MediaHeartbeat:
 
    ```js
    _onChapterSkip = function() { 
@@ -75,5 +75,5 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
    };
    ```
 
-1. In caso di capitoli aggiuntivi, ripetete i passaggi da 1 a 5.
+1. Se sono presenti altri capitoli, ripetete i punti da 1 a 5.
 
