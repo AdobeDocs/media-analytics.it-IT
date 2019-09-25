@@ -1,89 +1,89 @@
 ---
 seo-title: Tipi di evento e descrizioni
 title: Tipi di evento e descrizioni
-uuid: bc 4 f 75 a 7-ea 22-47 eb-a 50 d -5 f 41274 c 41 d 6
+uuid: bc4f75a7-ea22-47eb-a50d-5f41274c6d41
 translation-type: tm+mt
 source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
 
-# Event types and descriptions{#event-types-and-descriptions}
+# Tipi di evento e descrizioni{#event-types-and-descriptions}
 
-## Sessionstart
+## sessionStart
 
-Sent with the `sessions` call. Quando la risposta viene restituita, estraete l'ID sessione dall'intestazione Posizione e lo utilizzate per le chiamate successive all'evento al server di raccolta.
+Inviato con la `sessions` chiamata. Quando la risposta restituisce, l'ID sessione viene estratto dall'intestazione Posizione e utilizzato per le chiamate di eventi successive al server Raccolta.
 
 ## play
 
-Sent when the player changes state to "playing" from another state (i.e., the `on('Playing')` callback is triggered by the player). Gli altri stati da cui il lettore si sposta in "playing" includono "buffering", l'utente ripreso da "paused", il lettore recuperato da un errore, la riproduzione automatica e così via.
+Inviato quando il lettore cambia stato in "play" da un altro stato (ad es., il `on('Playing')` callback viene attivato dal lettore). Altri stati da cui il lettore passa alla "riproduzione" includono "buffering", l'utente riprende dalla "pausa", il lettore recuperato da un errore, la riproduzione automatica e così via.
 
 ## ping
 
-* **Contenuto principale -** Deve essere inviato ogni 10 secondi durante la riproduzione del contenuto principale, a prescindere da altri eventi API che sono stati inviati. Il primo evento di ping dovrebbe attivarsi 10 secondi dopo l'inizializzazione della riproduzione del contenuto principale.
-* **Contenuto annuncio:** deve essere inviato ogni 1 secondi durante il tracciamento degli annunci.
+* **Contenuto principale -** Deve essere inviato ogni 10 secondi durante la riproduzione del contenuto principale, indipendentemente dagli altri eventi API inviati. Il primo evento ping deve essere attivato 10 secondi dopo l’avvio della riproduzione del contenuto principale.
+* **Contenuto annuncio -** Deve essere inviato ogni 1 secondo durante il tracciamento degli annunci.
 
-Ping events should *not* include the `params` map in the request body.
+Gli eventi ping *non* devono includere la `params` mappa nel corpo della richiesta.
 
-## Bitratechange
+## bitrateChange
 
-Inviato quando cambia il bitanger.
+Inviato quando l'immagine cambia.
 
-## Bufferstart
+## bufferStart
 
-Inviato al momento dell'avvio del buffering. There is no `bufferResume` event type. A `bufferResume` is inferred when you send a `play` event after `bufferStart`.
+Inviato quando inizia il buffering. Non esiste un tipo di `bufferResume` evento. Un `bufferResume` dato viene ricavato quando si invia un `play` evento dopo `bufferStart`.
 
-## Pausestart
+## pauseStart
 
-Inviato quando l'utente preme Pausa. There is no `resume` event type. A `resume` is inferred when you send a `play` event after a `pauseStart`.
+Inviato quando l'utente preme Pausa. Non esiste un tipo di `resume` evento. Un `resume` dato viene ricavato quando si invia un `play` evento dopo un `pauseStart`.
 
-## Adbreakstart
+## adBreakStart
 
-Indica l'inizio di un'interruzione di annuncio
+Segnala l'inizio di un'interruzione annuncio
 
-## Adstart
+## adStart
 
-Indica l'inizio di un annuncio
+Segnala l'inizio di un annuncio
 
-## Adcomplete
+## adComplete
 
-Segnala il completamento di un'interruzione di annuncio
+Segnala il completamento di un annuncio
 
-## Adskip
+## adSkip
 
-Segnala un annuncio ad hoc
+Segnala un salto annuncio
 
-## Adbreakcomplete
+## adBreakComplete
 
-Segnala il completamento di un'interruzione di annuncio
+Segnala il completamento di un annuncio
 
-## Chapterstart
+## ChapterStart
 
-Indica l'inizio di un segmento di capitolo
+Segnala l’inizio di un segmento di capitolo
 
-## Chapterskip
+## ChapterSkip
 
 Segnala un salto di capitolo
 
-## Chaptercomplete
+## ChapterComplete
 
-Segnala la compilazione di un capitolo
+Segnala il completamento di un capitolo
 
 ## error
 
-Segnala che si è verificato un errore.
+Segnala un errore.
 
-## Sessionend
+## sessionEnd
 
-Questo viene usato per notificare al back-backend Media Analytics la chiusura immediata della sessione quando l'utente ha abbandonato la visualizzazione del contenuto e non lo restituisce.
+Questo viene utilizzato per notificare al backend di Media Analytics di chiudere immediatamente la sessione quando l’utente ha abbandonato la visualizzazione del contenuto e non è probabile che torni.
 
-If you don't send a `sessionEnd`, an abandoned session will time-out normally (after no events are received for 10 minutes, or when no playhead movement occurs for 30 minutes), and the session is deleted by the backend.
+Se non si invia `sessionEnd`, una sessione abbandonata si interrompe normalmente (dopo che nessun evento viene ricevuto per 10 minuti, o quando non si verifica alcun movimento dell'indicatore di riproduzione per 30 minuti) e la sessione viene eliminata dal backend.
 
-## Sessioncomplete
+## sessionComplete
 
-Inviato al raggiungimento della fine del contenuto principale
+Inviato quando viene raggiunta la fine del contenuto principale
 
 >[!IMPORTANT]
 >
->You should refer to the [JSON validation schemas](/help/media-collection-api/mc-api-ref/mc-api-json-validation.md) for each event type, to verify correct event parameter types and requirements.
+>Per verificare i tipi e i requisiti corretti dei parametri dell'evento, fare riferimento agli schemi [di convalida](/help/media-collection-api/mc-api-ref/mc-api-json-validation.md) JSON per ciascun tipo di evento.
 
