@@ -1,37 +1,37 @@
 ---
-seo-title: Tracciamento della qualità dell'esperienza in javascript
-title: Tracciamento della qualità dell'esperienza in javascript
-uuid: 3 bc 762 a 2-9706-4 b 62-aa 91-747 f 461 dd 13 d
+seo-title: Monitoraggio della qualità dell'esperienza in JavaScript
+title: Monitoraggio della qualità dell'esperienza in JavaScript
+uuid: 3bc762a2-9706-4b62-aa91-747f461dd13d
 translation-type: tm+mt
 source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
 
-# Track quality of experience on JavaScript{#track-quality-of-experience-on-javascript}
+# Monitoraggio della qualità dell'esperienza in JavaScript{#track-quality-of-experience-on-javascript}
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l'implementazione in tutti gli SDK 2. x. If you are implementing a 1.x version of the SDK, you can download the 1.x Developers Guides here: [Download SDKs.](/help/sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l’implementazione in tutti gli SDK 2.x. Se stai implementando una versione 1.x dell’SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
 ## Implementazione di QOS
 
-1. Identify when the bitrate changes during media playback and create the `MediaObject` instance using the QoS information.
+1. Identificare quando il bitrate cambia durante la riproduzione del contenuto multimediale e creare l’ `MediaObject` istanza utilizzando le informazioni QoS.
 
-   Variabili qosobject:
+   Variabili QoSObject:
 
    >[!TIP]
    >
-   >Queste variabili sono necessarie solo se prevedete di tenere traccia dei QOS.
+   >Queste variabili sono necessarie solo se si prevede di tenere traccia dei QoS.
 
    | Variabile | Descrizione | Obbligatorio |
    | --- | --- | :---: |
    | `bitrate` | Bitrate corrente | Sì |
-   | `startupTime` | Ora di avvio | Sì |
+   | `startupTime` | Tempo di avvio | Sì |
    | `fps` | Valore FPS | Sì |
-   | `droppedFrames` | Numero di fotogrammi rilasciati | Sì |
+   | `droppedFrames` | Numero di fotogrammi saltati | Sì |
 
-   Creazione di oggetti qos:
+   Creazione di oggetti QoS:
 
    ```js
    // Replace <bitrate>, <startuptime>, <fps> and  
@@ -42,7 +42,7 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
                                                   <droppedFrames>); 
    ```
 
-1. When playback switches bitrates, call the `BitrateChange` event in the Media Heartbeat instance:
+1. Quando la riproduzione cambia bitrate, chiamate l’ `BitrateChange` evento nell’istanza di Media Heartbeat:
 
    ```js
    _onBitrateChange = function() { 
@@ -52,12 +52,12 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
    >[!IMPORTANT]
    >
-   >Aggiornate l'oggetto qos e richiamate l'evento change bitrate su ogni modifica bitrate. Questo fornisce i dati qos più precisi.
+   >Aggiornare l'oggetto QoS e richiamare l'evento di modifica del bitrate su ogni modifica del bitrate. Questo fornisce i dati QoS più precisi.
 
-1. Make sure that `getQoSObject()` method returns the most updated QoS information.
-1. When the media player encounters an error, and the error event is available to the player API, use `trackError()` to capture the error information. (Consulta [Panoramica](/help/sdk-implement/track-errors/track-errors-overview.md).)
+1. Accertatevi che `getQoSObject()` il metodo restituisca le informazioni QoS più aggiornate.
+1. Quando il lettore multimediale rileva un errore e l'evento di errore è disponibile per l'API del lettore, utilizzare `trackError()` per acquisire le informazioni sull'errore. (Consulta [Panoramica](/help/sdk-implement/track-errors/track-errors-overview.md).)
 
    >[!TIP]
    >
-   >Il tracciamento degli errori del lettore multimediale non interrompe la sessione di tracciamento multimediale. If the media player error prevents the playback from continuing, make sure that the media tracking session is closed by calling `trackSessionEnd()` after calling `trackError()`.
+   >Il tracciamento degli errori del lettore multimediale non interrompe la sessione di tracciamento del supporto. Se l’errore del lettore multimediale impedisce il proseguimento della riproduzione, accertatevi che la sessione di tracciamento dei contenuti multimediali sia chiusa chiamando `trackSessionEnd()` dopo la chiamata `trackError()`.
 
