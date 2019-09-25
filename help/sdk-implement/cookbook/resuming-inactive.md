@@ -1,29 +1,29 @@
 ---
 seo-title: Ripresa delle sessioni inattive
 title: Ripresa delle sessioni inattive
-uuid: 3 ff 1205 d -7 bbe -4016-9 bd 7-6 e 34 b 7862 c 4 c
+uuid: 3ff1205d-7bbe-4016-9bd7-6e34b7862c4c
 translation-type: tm+mt
 source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
 
-# Resuming inactive sessions{#resuming-inactive-sessions}
+# Ripresa delle sessioni inattive{#resuming-inactive-sessions}
 
-## Pause lunghe
+## Interruzioni lunghe
 
-Media SDK monitora automaticamente quanto tempo la riproduzione del file multimediale si trova in uno dei seguenti stati inattivi:
+L’SDK per file multimediali tiene automaticamente traccia della durata della riproduzione in uno dei seguenti stati inattivi:
 
 * In pausa
 * Ricerca
 * Bloccato
 * Buffering
 
-Se una sessione di tracciamento multimediale rimane inattiva per oltre 30 minuti, la sessione verrà chiusa automaticamente. If the user resumes after a previously inactive video tracking session (`trackPlay`), Media Heartbeat automatically creates a new video session using the previously used video information and metadata, and sends a resume heartbeat event. For more information, see [Audio and video parameters.](/help/metrics-and-metadata/audio-video-parameters.md)
+Se una sessione di tracciamento dei contenuti multimediali rimane inattiva per più di 30 minuti, la sessione viene chiusa automaticamente. Se l’utente riprende dopo una sessione di tracciamento video (`trackPlay`) precedentemente inattiva, Media Heartbeat crea automaticamente una nuova sessione video utilizzando le informazioni video e i metadati utilizzati in precedenza e invia un evento heartbeat di ripresa. Per ulteriori informazioni, consultate Parametri [audio e video.](/help/metrics-and-metadata/audio-video-parameters.md)
 
-## Riprende manualmente la sessione chiusa precedentemente
+## Riprendere manualmente la sessione precedentemente chiusa
 
-Se l'applicazione non è stata chiusa, Media SDK riprende automaticamente le sessioni. Se l'applicazione memorizza i dati utente e ha la possibilità di riprendere un supporto chiuso in precedenza, è possibile attivare manualmente un evento di ripresa. Quando avviate la sessione di tracciamento video, impostate la proprietà opzionale Video Resumed (Riprendi video).
+Media SDK riprenderà automaticamente le sessioni solo se l'applicazione non è stata chiusa. Se l'applicazione memorizza i dati utente e dispone della capacità di riprendere un supporto precedentemente chiuso, è possibile attivare manualmente un evento di ripresa. All’avvio della sessione di tracciamento video, impostate la proprietà video ripresa facoltativa.
 
 ### Android
 
