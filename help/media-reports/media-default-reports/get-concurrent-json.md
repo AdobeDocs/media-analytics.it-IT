@@ -1,7 +1,7 @@
 ---
-seo-title: Ottenere i dati dei rapporti JSON per visualizzatori simultanei
-title: Ottenere i dati dei rapporti JSON per visualizzatori simultanei
-uuid: 9168 f 114-2459-4951-a 06 c -57 b 735 d 09 dc 0
+seo-title: Get concurrent viewers JSON report data
+title: Get concurrent viewers JSON report data
+uuid: 9168f114-2459-4951-a06c-57b735d09dc0
 translation-type: tm+mt
 source-git-commit: 82317dfd0e6eaef20890d03c32fe088a7574ead2
 
@@ -10,19 +10,20 @@ source-git-commit: 82317dfd0e6eaef20890d03c32fe088a7574ead2
 
 # Get concurrent viewers JSON report data{#get-concurrent-viewers-json-report-data}
 
-You can obtain concurrent viewers report data using the _* 1.4 version *_ of the Analytics APIs:
-* [API di Analytics](https://github.com/AdobeDocs/analytics-1.4-apis)
+You can obtain concurrent viewers report data using the 1.4 version of the Analytics APIs:_**_
+* [Analytics APIs](https://github.com/AdobeDocs/analytics-1.4-apis)
 * [Swagger](https://adobedocs.github.io/analytics-1.4-apis/swagger-docs.html#/Report/Report.Get)
 
-1. Filtrare i dati utilizzando qualsiasi segmento creato nell'interfaccia utente. Per filtrare in base a un ID contenuto specifico, crea un nuovo segmento.
-1. Set the `elements` -&gt; `id` in the request body to `videoconcurrentviewers`.
-1. Richiedete una quantità sufficiente di dati. Adobe consiglia 3200 punti dati, per assicurare che nei dati non siano presenti spazi vuoti.
+1. Filter the data using any segment that built on the UI. To filter by a specific Content ID, create a new segment.
+1. Impostate `elements` -&gt; `id` nel corpo della richiesta su `videoconcurrentviewers`.
+1. Request a sufficient amount of data. Adobe consiglia 3200 punti dati per garantire che non vi siano lacune nei dati.
 
-   * The data range you specify in the report gathers all concurrent viewer data _at the time the video session ended._ Pertanto, devi tener conto delle sessioni che iniziano un giorno e termina dopo mezzanotte (ovvero il giorno successivo).
+   * L’intervallo di dati specificato nel rapporto raccoglie tutti i dati del visualizzatore simultaneo al _termine della sessione video._
+È quindi necessario tenere conto delle sessioni che iniziano un giorno e terminano dopo mezzanotte (cioè il giorno successivo).
 
-   * Request more than one day of data, but in your analysis _* use only the first day of the data.*_
+   * Richiedete più di un giorno di dati, ma nella vostra analisi _* utilizzate solo il primo giorno dei dati.*_
 
-Esempio di payload richiesta per questo scenario:
+Esempio di payload di richiesta per questo scenario:
 
 ```
 {
