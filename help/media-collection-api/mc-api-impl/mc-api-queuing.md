@@ -1,24 +1,24 @@
 ---
-seo-title: Invio in coda di eventi quando la risposta delle sessioni è lenta
-title: Invio in coda di eventi quando la risposta delle sessioni è lenta
-uuid: 39 ea 59 d 9-89 d 3-4087-a 806-48 a 43 ecf 0 c 98
+seo-title: Eventi in coda quando la risposta delle sessioni è lenta
+title: Eventi in coda quando la risposta delle sessioni è lenta
+uuid: 39ea59d9-89d3-4087-a806-48a43ecf0c98
 translation-type: tm+mt
 source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
 
-# Queueing events when sessions response is slow{#queueing-events-when-sessions-response-is-slow}
+# Eventi in coda quando la risposta delle sessioni è lenta{#queueing-events-when-sessions-response-is-slow}
 
-L'API Media Collection è parametful: ad esempio, eseguite una richiesta HTTP e attendete la risposta. This is an important point only for when you make a [Sessions request](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) to obtain a Session ID at the beginning of video playback. Questo è importante perché l'ID sessione è richiesto per tutte le chiamate di tracciamento successive.
+L'API Media Collection è RESTful: ad esempio, effettuerete una richiesta HTTP e attenderete la risposta. Si tratta di un punto importante solo quando effettuate una richiesta [di](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) sessioni per ottenere un ID sessione all’inizio della riproduzione video. Questo è importante perché l'ID sessione è richiesto per tutte le chiamate di tracciamento successive.
 
-It is possible that your player may fire events _before the Sessions response returns_ (with the Session ID parameter) from the backend. If this occurs, your app must queue any tracking events that arrive between the [Sessions request](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) and its response. When the Sessions response arrives, you should first process any queued [events](/help/media-collection-api/mc-api-ref/mc-api-events-req.md), then you can start processing _live_ events with the [Events](/help/media-collection-api/mc-api-ref/mc-api-events-req.md) calls.
+È possibile che il lettore attivi eventi _prima che la risposta Sessioni restituisca_ (con il parametro ID sessione) dal backend. In tal caso, l'app deve mettere in coda tutti gli eventi di tracciamento che arrivano tra la richiesta [](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) Sessioni e la relativa risposta. Quando arriva la risposta Sessioni, devi prima elaborare qualsiasi [evento](/help/media-collection-api/mc-api-ref/mc-api-events-req.md)in coda, quindi puoi iniziare a elaborare eventi _live_ con le chiamate [Eventi](/help/media-collection-api/mc-api-ref/mc-api-events-req.md) .
 
 >[!NOTE]
 >
->The [Events request](/help/media-collection-api/mc-api-ref/mc-api-events-req.md) does not return data back to the client beyond an HTTP response code.
+>La richiesta [](/help/media-collection-api/mc-api-ref/mc-api-events-req.md) Eventi non restituisce i dati al client oltre un codice di risposta HTTP.
 
-Controllate il lettore di riferimento nella distribuzione per un modo di elaborazione prima di ricevere un ID sessione. Ad esempio:
+Controllate il lettore di riferimento nella distribuzione per trovare un modo per elaborare gli eventi prima di ricevere un ID sessione. Ad esempio:
 
 ```js
 var eventData = {};            // JSON payload 
@@ -88,4 +88,4 @@ VideoPlayer.prototype._processPendingEvents =
 }
 ```
 
-Continuate a monitorare gli eventi di tracciamento quando si verificano.
+Continuate a elaborare gli eventi di tracciamento man mano che si verificano.
