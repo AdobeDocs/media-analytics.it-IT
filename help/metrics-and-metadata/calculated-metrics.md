@@ -1,7 +1,7 @@
 ---
 seo-title: Metriche calcolate
 title: Metriche calcolate
-uuid: 9 dd 35155-58 aa -4 f 05-896 e-c 5 cbc 4 b 13 d 59
+uuid: 9dd35155-58aa-4f05-896e-c5cbc4b13d59
 translation-type: tm+mt
 source-git-commit: 5582243074a712e53dd23071d319a9ad1f89e10e
 
@@ -12,22 +12,22 @@ source-git-commit: 5582243074a712e53dd23071d319a9ad1f89e10e
 
 >[!NOTE]
 >
->Queste metriche calcolate sono state introdotte il 9/13/18.
+>Queste metriche calcolate sono state introdotte il 13/9/18.
 
 | Metrica | Descrizione | Formula |
 |---|---|---|
-| Avg. Annunci per Media Stream | L'annuncio inizia per inizio | `Ad Starts / Media Starts` |
-| Avg. Capitoli per Media Stream | Inizio del capitolo per inizio file multimediali | `Chapter Start / Media Starts` |
-| Avg. Tempo medio trascorso | Tempo totale trascorso per file multimediali (HH: MM: SS) | `Media Time Spent / Media Starts` |
-| Avg. Tempo contenuto trascorso | Tempo di contenuto trascorso per avvio di contenuto (HH: MM: SS) | `Content Time Spent / Content Start` |
-| Avg. Tempo pubblicitario | Tempo pubblicitario speso per Avvio ad avvio (HH: MM: SS) | `Ad Time Spent / Ad Start` |
-| Avg. Durata capitolo | Tempo dei capitoli trascorso per inizio capitolo (HH: MM: SS) | `Chapter Time Spent / Chapter Start` |
-| Tasso di completamento file multimediali | Rate del contenuto completato rispetto ai supporti avviati (%) | `Content Completes/ Media Starts` |
-| Tasso di completamento dei contenuti | Rate del contenuto completato rispetto al contenuto Inizia (%) | `Content Completes / Content Starts` |
-| Tasso di completamento annunci | Rate di Annunci pubblicitari rispetto ad Avvio (%) | `Ad Completes / Ad Starts` |
-| Frequenza completamento capitoli | Rate del capitolo completato rispetto al capitolo (%) | `Chapter Completes / Chapter Starts` |
-| Rilascia prima del tasso di avvio | Velocità dei rilasci prima dell'avvio del file multimediale (%) | `Drops before Starts / Media Starts` |
-| Frequenza durata pausa contenuto | Rate della durata totale pausa rispetto al tempo contenuto trascorso (%) | `Total Pause Duration / Content Time Spent` |
-| Frequenza durata buffer contenuto | Rate della durata totale buffer rispetto al tempo contenuto trascorso (%) | `Total Buffer Duration / Content Time Spent` |
-| Tempo di inizio del contenuto | Velocità di inizio rispetto al tempo contenuto trascorso (%) | `Time to Start / Content Time Spent` |
-| Tasso di annuncio trascorso | Tasso di tempo pubblicitario trascorso rispetto al tempo contenuto (%) | `Ad Time Spent / Content Time Spent` |
+| Media Annunci per flusso multimediale | Avvii annuncio per inizio supporto | `Ad Starts / Media Starts` |
+| Media Capitoli per Media Stream | Inizio capitolo per inizio supporto | `Chapter Start / Media Starts` |
+| Media Tempo contenuto multimediale trascorso | Tempo totale trascorso per inizio supporto (HH:MM:SS) | `Media Time Spent / Media Starts` |
+| Media Tempo contenuto trascorso | Tempo contenuto trascorso per inizio contenuto (HH:MM:SS) | `Content Time Spent / Content Start` |
+| Media  Tempo annuncio trascorso | Tempo annuncio trascorso per Ad Start (HH:MM:SS) | `Ad Time Spent / Ad Start` |
+| Media Tempo capitolo trascorso | Tempo capitolo trascorso per inizio capitolo (HH:MM:SS) | `Chapter Time Spent / Chapter Start` |
+| Frequenza completamento file multimediali | Tasso di contenuti completati rispetto ai file multimediali avviati (%) | `Content Completes/ Media Starts` |
+| Content Completion Rate | Rate of Content Completed vs Content Starts (%) | `Content Completes / Content Starts` |
+| Tasso di completamento annuncio | Tasso di completamento annunci rispetto agli avvii annunci (%) | `Ad Completes / Ad Starts` |
+| Tasso di completamento capitolo | Tasso di completamento del capitolo rispetto agli inizi del capitolo (%) | `Chapter Completes / Chapter Starts` |
+| Drop before Start Rate | Tasso di cadute prima dell'inizio rispetto all'inizio del file multimediale (%) | `Drops before Starts / Media Starts` |
+| Content Pause Duration Rate | Rate of Total Pause Duration vs Content Time Spent (%) | `Total Pause Duration / Content Time Spent` |
+| Content Buffer Duration Rate | Rate of Total Buffer Duration vs Content Time Spent (% ) | `Total Buffer Duration / Content Time Spent` |
+| Content Time to Start Rate | Rate of Time to Start vs Content Time Spent (%) | `Time to Start / Content Time Spent` |
+| Ad Time Spent Rate | Rate of Ad Time Spent vs Content Time Spent (%) | `Ad Time Spent / Content Time Spent` |
