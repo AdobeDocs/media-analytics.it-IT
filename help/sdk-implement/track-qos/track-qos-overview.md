@@ -1,7 +1,7 @@
 ---
 seo-title: Panoramica
 title: Panoramica
-uuid: 4 d 73 c 47 f-d 0 a 4-4228-9040-d 6432311 c 9 eb
+uuid: 4d73c47f-d0a4-4228-9040-d6432311c9eb
 translation-type: tm+mt
 source-git-commit: 46710c621f00374aeb55a88e51d4b720dcb941a6
 
@@ -12,45 +12,45 @@ source-git-commit: 46710c621f00374aeb55a88e51d4b720dcb941a6
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l'implementazione in tutti gli SDK 2. x. Se implementhi una versione 1. x dell'SDK, puoi scaricare le guide per sviluppatori 1. x qui: [Scarica gli SDK.](/help/sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l’implementazione in tutti gli SDK 2.x. Se stai implementando una versione 1.x dell’SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
-La qualità del tracciamento delle esperienze include la qualità del servizio (qos) e il tracciamento degli errori, entrambi sono elementi facoltativi e **non** sono necessari per le implementazioni di tracciamento dei contenuti multimediali principali. Potete utilizzare l'API del lettore multimediale per identificare le variabili correlate a qos e il tracciamento degli errori. Ecco gli elementi chiave del tracciamento della qualità dell'esperienza:
+Il monitoraggio della qualità dell'esperienza include la qualità del servizio (QoS) e il monitoraggio degli errori, entrambi elementi facoltativi e **non** sono richiesti per le implementazioni di tracciamento dei supporti di base. Potete utilizzare l'API Media Player per identificare le variabili relative ai QoS e al tracciamento degli errori. Gli elementi chiave per il monitoraggio della qualità dell'esperienza sono i seguenti:
 
 ## Eventi del lettore {#player-events}
 
-### In qualsiasi modifica di metrica qos:
+### In caso di modifiche della metrica QoS:
 
-Create o aggiornate l'istanza dell'oggetto qos per la riproduzione. [Riferimento API qos](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html#.createQoSObject)
+Creare o aggiornare l'istanza dell'oggetto QoS per la riproduzione. [Riferimento API QoS](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html#.createQoSObject)
 
-### Su tutti gli eventi modifica bitrate
+### Su tutti gli eventi di modifica del bitrate
 
 Chiamata `trackEvent(Media.Heartbeat.Event.BitrateChange);`
 
 ## Implementazione di QOS
 
-1. Identificate quando una delle metriche QOS cambia durante la riproduzione del file multimediale, create le `MediaObject` informazioni qos e aggiornate le nuove informazioni su qos.
+1. Identificare il momento in cui una qualsiasi delle metriche QOS cambia durante la riproduzione multimediale, creare l' `MediaObject` oggetto utilizzando le informazioni QoS e aggiornare le nuove informazioni QoS.
 
-   Variabili qosobject:
+   Variabili QoSObject:
 
    >[!TIP]
    >
-   >Queste variabili sono necessarie solo se prevedete di tenere traccia dei QOS.
+   >Queste variabili sono necessarie solo se si prevede di tenere traccia dei QoS.
 
    | Variabile | Descrizione | Obbligatorio |
    | --- | --- | :---: |
    | `bitrate` | Bitrate corrente | Sì |
-   | `startupTime` | Ora di avvio | Sì |
+   | `startupTime` | Tempo di avvio | Sì |
    | `fps` | Valore FPS | Sì |
-   | `droppedFrames` | Numero di fotogrammi rilasciati | Sì |
+   | `droppedFrames` | Numero di fotogrammi saltati | Sì |
 
-1. Accertatevi che `getQoSObject()` il metodo restituisca le informazioni qos più aggiornate.
-1. Quando la riproduzione attiva bitrate, chiama l' `BitrateChange` evento nell'istanza Media Heartbeat.
+1. Accertatevi che `getQoSObject()` il metodo restituisca le informazioni QoS più aggiornate.
+1. Quando la riproduzione cambia bitrate, chiamate l’ `BitrateChange` evento nell’istanza Media Heartbeat.
 
    >[!IMPORTANT]
    >
-   >Aggiornate l'oggetto qos e richiamate l'evento change bitrate su ogni modifica bitrate. Questo fornisce i dati qos più precisi.
+   >Aggiornare l'oggetto QoS e richiamare l'evento di modifica del bitrate su ogni modifica del bitrate. Questo fornisce i dati QoS più precisi.
 
-Il seguente codice di esempio utilizza l'SDK javascript 2. x per un lettore multimediale HTML 5. Utilizzate questo codice con il codice di riproduzione multimediale principale.
+Il codice di esempio seguente utilizza l’SDK JavaScript 2.x per un lettore multimediale HTML5. Utilizzare questo codice con il codice di riproduzione del contenuto multimediale di base.
 
 ```js
 var mediaDelegate = new MediaHeartbeatDelegate(); 
