@@ -1,25 +1,25 @@
 ---
 seo-title: Panoramica dei report predefiniti
 title: Panoramica dei report predefiniti
-uuid: a 078 aa 59-3 b 2 d -45 b 2-9 e 66-3 d 9 c 29 c 82 f 0 c
+uuid: a078aa59-3b2d-45b2-9e66-3d9c29c82f0c
 translation-type: tm+mt
 source-git-commit: 36d65c188e341e18f55d0d0f8b84833f76f07392
 
 ---
 
 
-# Default reports overview{#default-reports-overview}
+# Panoramica dei report predefiniti{#default-reports-overview}
 
-Adobe Analytics offre diversi report e metriche per tenere traccia delle prestazioni dei supporti sul sito Web.
+Adobe Analytics fornisce diversi report e metriche per monitorare le prestazioni dei supporti nel sito Web.
 
-Oltre alle metriche e alle dimensioni disponibili quando attivate ogni modulo, sono disponibili tre report dashboard aggiuntivi che diventano disponibili quando attivate il modulo Media Core. L'abilitazione del modulo Ads (Annunci) modifica anche l'aspetto di alcuni di questi rapporti di stile dashboard aggiungendo metriche e filtri aggiuntivi.
+Oltre alle metriche e alle dimensioni disponibili quando si abilita ogni modulo, all’attivazione del modulo Media Core diventano disponibili tre rapporti in stile dashboard aggiuntivi. Abilitando il modulo Ads (Annunci) si modifica anche l'aspetto di alcuni di questi rapporti in stile dashboard aggiungendo ulteriori metriche e filtri.
 
-Media reports are listed on the **[!UICONTROL Reports]** tab. Navigate to &gt; **[!UICONTROL Media]** &gt; **[!UICONTROL Media Engagement]** and select from:
+I rapporti sui file multimediali sono elencati nella **[!UICONTROL Reports]** scheda. Passa a &gt; **[!UICONTROL Media]** &gt; **[!UICONTROL Media Engagement]** e seleziona da:
 
-| Rapporto file multimediali | Descrizione     | Approfondimenti comuni aziendali  |
+| Report multimediale | Descrizione     | Approfondimenti aziendali comuni |
 | --- | --- | --- |
-| [Panoramica sui file multimediali](media-reports-overview.md) | Visualizza diverse misure aggregate per monitorare rapidamente i contenuti multimediali come previsto. Un grafico visualizza i contenuti multimediali accanto ad ad impression per visualizzare e confrontare rapidamente queste metriche. | <ul> <li>Totals for top metrics including content start, completion rate, average time on stream, and average media items per visit.  </li> <li>Il contenuto totale e l'annuncio vengono avviati per i supporti filtrati in base al tipo di dispositivo o al paese.  </li> </ul> |
-| [Dettagli file multimediali](media-reports-detail.md) | Visualizza metriche dettagliate per tutti gli elementi multimediali inclusi avvii, visualizzatori simultanei, tasso di completamento, percentuale di riproduzione e ad impression. | <ul> <li>Totali per metriche principali, inclusi i contenuti multimediali avviati, il contenuto e l'annuncio e il contenuto medio per visita.  </li> <li>Il contenuto totale e l'annuncio vengono avviati per i supporti filtrati in base al tipo di dispositivo o al paese.  </li> </ul> |
-| [Media media](media-reports-daypart.md) | Consente di visualizzare il contenuto in base all'ora del giorno per visualizzare rapidamente il coinvolgimento del pubblico. | <ul> <li>Coinvolgimento pubblico per ora del giorno.  </li> <li>Coinvolgimento pubblico rispetto agli intervalli di date precedenti.  </li> </ul> |
-| [Visualizzatori simultanei](media-concurrent-viewers.md) | Visualizza i visualizzatori simultanei durante un giorno. I dati possono essere filtrati in base al contenuto, al tipo di dispositivo o al Paese. | <ul> <li>Coinvolgimento dell'audience per minuto su un intervallo di 24 ore.  </li> </ul> |
-| Eventi multimediali e variabili multimediali | Sono disponibili altri rapporti. Le metriche e le dimensioni per file multimediali sono variabili di Analytics standard che possono essere riportate direttamente e aggiunte ad altri report di Analytics. | <ul> <li>Conversione file multimediali (Eventi che si verificano dopo la visualizzazione del supporto) generando un rapporto con le visite che includono un tipo di contenuto multimediale.  </li> <li>Flusso di supporto successivo/precedente utilizzando il prop del nome multimediale.  </li> </ul> |
+| [Panoramica dei supporti](media-reports-overview.md) | Visualizza diverse misurazioni aggregate per monitorare rapidamente le prestazioni del supporto come previsto. Un grafico mostra l’inizio dei file multimediali accanto alle impression degli annunci per consentirvi di visualizzare e confrontare rapidamente tali metriche. | <ul> <li>Totali per le metriche principali, inclusi gli avvii del contenuto, la frequenza di completamento, il tempo medio in streaming ed elementi multimediali medi per visita.  </li> <li>Il contenuto totale e l'annuncio iniziano per i supporti filtrati per tipo di dispositivo o paese.  </li> </ul> |
+| [Dettagli del supporto](media-reports-detail.md) | Visualizza le metriche dettagliate per tutti gli elementi multimediali, compresi avvii, visualizzatori simultanei, frequenza di completamento, percentuale di riproduzione e impressioni degli annunci. | <ul> <li>Totali per le metriche principali, inclusi avvii di contenuti multimediali, avvii di annunci e contenuti medi per visita.  </li> <li>Il contenuto totale e l'annuncio iniziano per i supporti filtrati per tipo di dispositivo o paese.  </li> </ul> |
+| [Media daypart](media-reports-daypart.md) | Consente di visualizzare i contenuti a partire dall'ora del giorno per visualizzare rapidamente il momento in cui il pubblico è coinvolto. | <ul> <li>Partecipazione del pubblico in base all'ora del giorno.  </li> <li>Partecipazione del pubblico rispetto agli intervalli di date precedenti.  </li> </ul> |
+| [Visualizzatori simultanei di contenuti multimediali](media-concurrent-viewers.md) | Visualizza i visualizzatori simultanei in un giorno. I dati possono essere filtrati in base al contenuto, al tipo di dispositivo o al Paese. | <ul> <li>Partecipazione del pubblico di 24 ore al minuto.  </li> </ul> |
+| Eventi multimediali e variabili multimediali | Sono disponibili altri rapporti. Le metriche e le dimensioni dei supporti sono variabili Analytics standard che possono essere riportate direttamente e aggiunte ad altri report Analytics. | <ul> <li>Conversione file multimediali (eventi che si verificano dopo la visualizzazione dei contenuti multimediali) generando un rapporto con visite che includono un tipo di contenuto multimediale.  </li> <li>Flusso multimediale successivo/precedente tramite la proprietà del nome del file multimediale.  </li> </ul> |
