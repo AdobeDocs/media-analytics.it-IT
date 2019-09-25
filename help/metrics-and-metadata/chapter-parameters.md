@@ -1,93 +1,93 @@
 ---
-seo-title: Parametri dei capitoli
-title: Parametri dei capitoli
-uuid: 2 a 6 b 9247-a 694-46 e 9-98 e 1-424 c 08 c 27 ec 2
+seo-title: Parametri del capitolo
+title: Parametri del capitolo
+uuid: 2a6b9247-a694-46e9-98e1-424c08c27ec2
 translation-type: tm+mt
 source-git-commit: af8da9da6cbe36e56f13cd7819f3682522e169bf
 
 ---
 
 
-# Chapter parameters{#chapter-parameters}
+# Parametri del capitolo{#chapter-parameters}
 
-Questo argomento presenta un elenco di dati relativi ai capitoli e/o ai segmenti, inclusi i valori dei dati contestuali, che Adobe raccoglie tramite variabili della soluzione.
+Questo argomento presenta un elenco dei dati relativi ai capitoli e/o ai segmenti, compresi i valori dei dati contestuali, raccolti da Adobe tramite variabili della soluzione.
 
 Descrizione dati tabella:
 
-* **Implementazione:** Informazioni sui valori e i requisiti di implementazione
-   * *Chiave* - Variabile, impostata manualmente nell'app o automaticamente da Adobe Media SDK.
-   * *Obbligatorio* - Indica se il parametro è obbligatorio per il tracciamento video di base.
-   * *Tipo* : specifica il tipo della variabile da impostare, stringa o numero.
-   * *Inviato con* - Indica la data di invio dei dati: *Media Start* è la chiamata di analisi inviata sull'avvio dei supporti, *Ad Avvio* è la chiamata di analisi inviata all'avvio e così via. Le *chiamate Close* sono le chiamate di analisi compilate inviate direttamente dal server heartbeat al server di analisi alla fine della sessione multimediale, o alla fine dell'annuncio, del capitolo, ecc. Le chiamate close non sono disponibili nelle chiamate del pacchetto di rete.
-   * *Min. SDK Version* - Indicates which SDK version you would need to access the parameter.
-   * *Valore di esempio* - Fornisce esempi di utilizzo variabile delle variabili.
-* **Parametri di rete:** Visualizza i valori passati ai server Adobe Analytics o Heartbeat. Questa colonna mostra i nomi dei parametri visualizzati nelle chiamate di rete generate da Adobe Media SDK.
-* **Reporting:** Informazioni su come visualizzare e analizzare i dati video.
-   * *Disponibile* - Indica se i dati sono disponibili nel reporting per impostazione predefinita (*Yes*) o richiedono un set personalizzato (*personalizzato*)
-   * *Variabile riservata* - Indica se i dati sono acquisiti come evento, evar, prop o classificati in una variabile riservata.
-   * *Nome rapporto* - Nome del rapporto Adobe Aanlytics per la variabile
-   * *Dati contestuali* - Nome dei dati contestuali di Adobe Analytics passati al server di reporting e utilizzati nelle regole di elaborazione.
-   * *Feed dati* - Nome colonna per la variabile trovata nei feed dati Clickstream o Live Stream
+* **** Implementazione: Informazioni su valori e requisiti di implementazione
+   * *Chiave* - Variabile, impostata manualmente nell’app o automaticamente dall’SDK di Adobe Media.
+   * *Obbligatorio* - Indica se il parametro è richiesto per il tracciamento video di base.
+   * *Tipo* - Specifica il tipo di variabile da impostare, stringa o numero.
+   * *Inviato con* - Indica quando i dati vengono inviati: *Media Start* è la chiamata di analisi inviata all’avvio del supporto, *Ad Start* è la chiamata di analisi inviata all’inizio e all’inizio dell’annuncio, e così via; le chiamate *Close* sono le chiamate di analisi compilate inviate direttamente dal server Heartbeat al server di analisi alla fine della sessione multimediale, o la fine dell'annuncio, del capitolo, ecc. Le chiamate di chiusura non sono disponibili nelle chiamate dei pacchetti di rete.
+   * *Min. Versione* SDK - Indica la versione SDK a cui sarà necessario accedere per il parametro.
+   * *Valore* di esempio - Fornisce un esempio di utilizzo comune delle variabili.
+* **** Parametri di rete: Visualizza i valori passati ai server Adobe Analytics o Heartbeat. Questa colonna mostra i nomi dei parametri visualizzati nelle chiamate di rete generate dagli SDK di Adobe Media.
+* **** Reporting: Informazioni su come visualizzare e analizzare i dati video.
+   * *Disponibile* - Indica se i dati sono disponibili nel reporting per impostazione predefinita (*Sì*) o richiedono una configurazione personalizzata (*Personalizzato*)
+   * *Variabile* riservata - Indica se i dati vengono acquisiti come evento, eVar, prop o classificazione in una variabile riservata.
+   * *Nome* report - Nome del report Adobe Analytics per la variabile
+   * *Dati* contestuali - Nome dei dati contestuali di Adobe Analytics passati al server di reporting e utilizzati nelle regole di elaborazione.
+   * *Feed* dati - Nome colonna per la variabile trovata nei feed di dati Clickstream o Live Stream
    * *Audience Manager* - Nome caratteristica trovato in Adobe Audience Manager
 
 >[!IMPORTANT]
 >
->Non modificare i nomi delle classificazioni per tutte le variabili elencate di seguito, descritte in Reporting/Variabile riservata come "classificazione".\
->Le classificazioni multimediali vengono definite quando una suite di rapporti è abilitata per il tracciamento multimediale. Di tanto in tanto, Adobe aggiunge nuove proprietà e, in tal caso, i clienti devono riabilitare le suite di rapporti a ottenere l'accesso alle nuove proprietà del supporto. Durante il processo di aggiornamento Adobe determina se le classificazioni sono abilitate controllando i nomi delle variabili. Se mancano alcuni di essi, Adobe ne aggiunge di nuovo quelli mancanti.
+>Non modificare i nomi delle classificazioni per le variabili elencate di seguito che sono descritte in Reporting/Riservato Variabile come "classificazione".\
+>Le classificazioni dei supporti vengono definite quando una suite di rapporti è abilitata per il tracciamento dei supporti. Di tanto in tanto, Adobe aggiunge nuove proprietà e, in questo caso, i clienti devono riabilitare le suite di rapporti per poter accedere alle nuove proprietà del supporto. Durante il processo di aggiornamento, Adobe determina se le classificazioni sono abilitate controllando i nomi delle variabili. Se manca qualcuno di essi, Adobe aggiunge di nuovo quelli mancanti.
 
 ## Chapter Metadata {#section_534D3A6BFEB24D1884F80AD6A50BF13C}
 
 ### Nome capitolo
 
-|   Implementazione   | Parametri di rete | Generazione di rapporti   |
+|   Implementazione   | Network Parameters | Generazione di rapporti   |
 | --- | --- | --- |
-| <ul> <li> **Chiave SDK:**<br/>  [name](./chapter-parameters.md#related_apis_section) </li> <li> **Chiave API:**<br/> media. chapter. friendlyname </li> <li> **Richiesto:**<br/> No </li> <li> **Tipo:**<br/> stringa </li> <li> **Inviato con:**<br/> Inizio capitolo, Chiudi capitolo </li> <li> **Min. SDK Version:** 1.3 </li> <li> **Valore campione:**<br/> «The Big Bang Chapter 2 - Dating» </li><li> **Descrizione:**<br/>Nome del capitolo e/o del segmento.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a. media. chapter.<br/>Friendlyname) </li> <li> **Heartbeat:**<br/> (s: stream: chapter_ name) </li> </ul> | <ul> <li> **Disponibile:**<br/> Creato per impostazione predefinita…  </li> <li> **Variabile riservata:**<br/> Classificazione </li> <li> **Nome rapporto:**<br/> Nome capitolo </li> <li> **Dati contestuali:**<br/> (a. media. chapter.<br/>Friendlyname) </li> <li> **Feed dati:**<br/> N/D </li> <li> **Audience Manager:**<br/> (c_ contextdata.<br/>a. media. chapter.<br/>Friendlyname) </li> </ul> |
+| <ul> <li> **SDK Key:**<br/>  [name](./chapter-parameters.md#related_apis_section) </li> <li> ****<br/> API Key: media.chapter.friendlyName </li> <li> ****<br/> Obbligatorio: No </li> <li> ****<br/> Tipo: string </li> <li> ****<br/> Inviato con: Inizio capitolo, Chiudi capitolo </li> <li> **Min.** Versione SDK: 1.3 </li> <li> ****<br/> Valore campione: "Il Big Bang Capitolo 2 - Dating" </li><li> **Descrizione:**<br/>il nome del capitolo e/o del segmento.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.Chapter.<br/>friendlyName) </li> <li> ****<br/> Heartbeat: (s:stream:nome_capitolo) </li> </ul> | <ul> <li> ****<br/> Disponibile: Creato per impostazione predefinita..  </li> <li> ****<br/> Variabile riservata: Classificazione </li> <li> ****<br/> Nome rapporto: Nome capitolo </li> <li> ****<br/> Dati contestuali: (a.media.Chapter.<br/>friendlyName) </li> <li> ****<br/> Feed dati: N/D </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.Chapter.<br/>friendlyName) </li> </ul> |
 
 ### Posizione capitolo
 
-|   Implementazione   | Parametri di rete | Generazione di rapporti   |
+|   Implementazione   | Parametri di rete | Generazione di rapporti   |
 | --- | --- | --- |
-| <ul> <li> **Chiave SDK:**<br/>  [position](./chapter-parameters.md#related_apis_section) </li> <li> **Chiave API:**<br/> media. chapter. index </li> <li> **Richiesto:**<br/> SDK: No; API: Sì. </li> <li> **Tipo:**<br/> numero </li> <li> **Inviato con:**<br/> Chiudi capitolo </li> <li> **Min. SDK Version:** 1.3 </li> <li> **Valore campione:**<br/> 2 </li><li> **Descrizione:**<br/>Posizione (indice, integer) del capitolo all'interno del contenuto.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a. media. chapter.<br/>position) </li> <li> **Heartbeat:**<br/> (l: stream: chapter_ pos) </li> </ul> | <ul> <li> **Disponibile:**<br/> Sì </li> <li> **Variabile riservata:**<br/> Classificazione </li> <li> **Nome rapporto:**<br/> Posizione capitolo </li> <li> **Dati contestuali:**<br/> (a. media. chapter.<br/>position) </li> <li> **Feed di dati:**<br/> </li> <li> **Audience Manager:**<br/> (c_ contextdata.<br/>a. media. chapter.<br/>position) </li> </ul> |
+| <ul> <li> **Chiave SDK:**<br/>  [position](./chapter-parameters.md#related_apis_section) </li> <li> ****<br/> Chiave API: media.capitolo.index </li> <li> ****<br/> Obbligatorio: SDK: No; API: Sì. </li> <li> ****<br/> Tipo: number </li> <li> ****<br/> Inviato con: Chiudi capitolo </li> <li> **Min.** Versione SDK: 1.3 </li> <li> ****<br/> Valore campione: 2 </li><li> **Descrizione:**<br/>la posizione (indice, numero intero) del capitolo all'interno del contenuto.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.Chapter.<br/>posizione) </li> <li> ****<br/> Heartbeat: (l:stream:chapter_pos) </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata: Classificazione </li> <li> ****<br/> Nome rapporto:Posizione capitolo </li> <li> ****<br/> Dati contestuali: (a.media.Chapter.<br/>posizione) </li> <li> **Feed di dati:**<br/> </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.Chapter.<br/>posizione) </li> </ul> |
 
-### Offset capitolo
+###  Offset capitolo
 
-|   Implementazione   | Parametri di rete | Generazione di rapporti   |
+|   Implementazione   | Parametri di rete | Generazione di rapporti   |
 | --- | --- | --- |
-| <ul> <li> **Chiave SDK:**<br/>  [Starttime](./chapter-parameters.md#related_apis_section) </li> <li> **Chiave API:**<br/> media. chapter. offset </li> <li> **Richiesto:**<br/> SDK: No; API: Sì. </li> <li> **Tipo:**<br/> numero </li> <li> **Inviato con:**<br/> Chiudi capitolo </li> <li> **Min. SDK Version:** 1.3 </li> <li> **Valore campione:**<br/> 58 </li><li> **Descrizione:**<br/>L'offset del capitolo all'interno del contenuto (in secondi) dall'inizio.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a. media. chapter.<br/>offset) </li> <li> **Heartbeat:**<br/> (l: stream: chapter_ offset </li> </ul> | <ul> <li> **Disponibile:**<br/> Sì </li> <li> **Variabile riservata:**<br/> Classificazione </li> <li> **Nome rapporto:**<br/> Offset capitolo </li> <li> **Dati contestuali:**<br/> (a. media. chapter.<br/>offset) </li> <li> **Feed di dati:**<br/> </li> <li> **Audience Manager:**<br/> (c_ contextdata.<br/>a. media. chapter.<br/>offset) </li> </ul> |
+| <ul> <li> **Chiave SDK:**<br/>  [startTime](./chapter-parameters.md#related_apis_section) </li> <li> ****<br/> Chiave API: media.Chapter.offset </li> <li> ****<br/> Obbligatorio: SDK: No; API: Sì. </li> <li> ****<br/> Tipo: number </li> <li> ****<br/> Inviato con: Chiudi capitolo </li> <li> **Min.** Versione SDK: 1.3 </li> <li> ****<br/> Valore campione: 58 </li><li> **Descrizione:**<br/>l’offset del capitolo all’interno del contenuto (in secondi) dall’inizio.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.Chapter.<br/>offset) </li> <li> ****<br/> Heartbeat: (l:stream:Chapter_offset) </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata: Classificazione </li> <li> ****<br/> Nome rapporto: Offset capitolo </li> <li> ****<br/> Dati contestuali: (a.media.Chapter.<br/>offset) </li> <li> **Feed di dati:**<br/> </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.Chapter.<br/>offset) </li> </ul> |
 
 ### Lunghezza capitolo
 
-|   Implementazione   | Parametri di rete | Generazione di rapporti   |
+|   Implementazione   | Parametri di rete | Generazione di rapporti   |
 | --- | --- | --- |
-| <ul> <li> **Chiave SDK:**<br/> </li> <li> **Chiave API:**<br/> media. chapter. length </li> <li> **Richiesto:**<br/> SDK: No; API: Sì. </li> <li> **Tipo:**<br/> numero </li> <li> **Inviato con:**<br/> Chiudi capitolo </li> <li> **Min. SDK Version:** 1.3 </li> <li> **Valore campione:**<br/> 486 </li><li> **Descrizione:**<br/>Lunghezza del capitolo, in secondi.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a. media. chapter.<br/>length) </li> <li> **Heartbeat:**<br/> (l: stream: chapter_ length </li> </ul> | <ul> <li> **Disponibile:**<br/> Sì </li> <li> **Variabile riservata:**<br/> Classificazione </li> <li> **Nome rapporto:**<br/> Lunghezza capitolo </li> <li> **Dati contestuali:**<br/> (a. media. chapter.<br/>length) </li> <li> **Feed di dati:**<br/> </li> <li> **Audience Manager:**<br/> (c_ contextdata.<br/>a. media. chapter.<br/>length) </li> </ul> |
+| <ul> <li> **Chiave SDK:**<br/> </li> <li> ****<br/> Chiave API: media.Chapter.length </li> <li> ****<br/> Obbligatorio: SDK: No; API: Sì. </li> <li> ****<br/> Tipo: number </li> <li> ****<br/> Inviato con: Chiudi capitolo </li> <li> **Min.** Versione SDK: 1.3 </li> <li> ****<br/> Valore campione: 486 </li><li> **Descrizione:**<br/>la lunghezza del capitolo, in secondi.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.Chapter.<br/>length) </li> <li> ****<br/> Heartbeat: (l:flusso:lunghezza_capitolo) </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata: Classificazione </li> <li> ****<br/> Nome rapporto:Lunghezza capitolo </li> <li> ****<br/> Dati contestuali: (a.media.Chapter.<br/>length) </li> <li> **Feed di dati:**<br/> </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.Chapter.<br/>length) </li> </ul> |
 
-### Capitolo
+###  Capitolo
 
-|   Implementazione   | Parametri di rete | Generazione di rapporti   |
+|   Implementazione   | Parametri di rete | Generazione di rapporti   |
 | --- | --- | --- |
-| <ul> <li> **Chiave SDK:**<br/> Set automatico </li> <li> **Chiave API:**<br/> N/D </li> <li> **Richiesto:**<br/> No </li> <li> **Tipo:**<br/> stringa </li> <li> **Inviato con:**<br/> Chiudi capitolo </li> <li> **Min. SDK Version:** 1.3 </li> <li> **Valore campione:**<br/> </li><li> **Descrizione:**<br/>L'ID generato automaticamente del capitolo.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a. media. chapter.<br/>name) </li> <li> **Heartbeat:**<br/> (s: stream: chapter_ id) </li> </ul> | <ul> <li> **Disponibile:**<br/> Sì </li> <li> **Variabile riservata:**<br/> Evar </li> <li> **Scadenza:**<br/> Su hit </li> <li> **Nome rapporto:**<br/> Capitolo </li> <li> **Dati contestuali:**<br/> (a. media. chapter.<br/>name) </li> <li> **Feed dati:**<br/> videocapitolo </li> <li> **Audience Manager:**<br/> (c_ contextdata.<br/>a. media. chapter.<br/>name) </li> </ul> |
+| <ul> <li> ****<br/> Chiave SDK: Imposta automaticamente </li> <li> ****<br/> Chiave API: N/D </li> <li> ****<br/> Obbligatorio: No </li> <li> ****<br/> Tipo: string </li> <li> ****<br/> Inviato con: Chiudi capitolo </li> <li> **Min.** Versione SDK: 1.3 </li> <li> **Valore campione:**<br/> </li><li> **Descrizione:**<br/>ID generato automaticamente del capitolo.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.Chapter.<br/>name) </li> <li> ****<br/> Heartbeat: (s:stream:capitolo_id) </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata: eVar </li> <li> ****<br/> Scadenza: HIT </li> <li> ****<br/> Nome rapporto: Capitolo </li> <li> ****<br/> Dati contestuali: (a.media.Chapter.<br/>name) </li> <li> ****<br/> Feed dati: videocapitolo </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.Chapter.<br/>name) </li> </ul> |
 
-## Chapter Metrics {#section_1C47D6FB1DF343C39CE7A8F724406F33}
+## Metriche del capitolo {#section_1C47D6FB1DF343C39CE7A8F724406F33}
 
-### Inizio capitolo
+###  Inizio capitolo
 
-|   Implementazione   | Parametri di rete | Generazione di rapporti   |
+|   Implementazione   | Parametri di rete | Generazione di rapporti   |
 | --- | --- | --- |
-| <ul> <li> **Chiave SDK:**<br/> Set automatico  </li> <li> **Chiave API:**<br/> N/D </li> <li> **Richiesto:**<br/> Sì </li> <li> **Tipo:**<br/> stringa </li> <li> **Inviato con:**<br/> Inizio capitolo </li> <li> **Min. SDK Version:** 1.3 </li> <li> **Valore campione:**<br/> TRUE </li><li> **Descrizione:**<br/>Viene avviato il numero del capitolo. **Importante:** Se l'evento è impostato, l'unico valore possibile è TRUE. Se questo evento non viene impostato, non viene inviato alcun valore.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a. media. chapter.<br/>view) </li> <li> **Heartbeat:**<br/> (s: evento:<br/>type = chapter_ start) </li> </ul> | <ul> <li> **Disponibile:**<br/> Sì </li> <li> **Variabile riservata:**<br/> evento </li> <li> **Nome rapporto:**<br/> Inizio capitolo g </li> <li> **Dati contestuali:**<br/> (a. media. chapter.<br/>view) </li> <li> **Feed dati:**<br/> videochapterstart </li> <li> **Audience Manager:**<br/> (c_ contextdata.<br/>a. media. chapter.<br/>view) </li> </ul> |
+| <ul> <li> ****<br/> Chiave SDK: Imposta automaticamente  </li> <li> ****<br/> Chiave API: N/D </li> <li> ****<br/> Obbligatorio: Yes </li> <li> ****<br/> Tipo: string </li> <li> ****<br/> Inviato con:Inizio capitolo </li> <li> **Min.** Versione SDK: 1.3 </li> <li> ****<br/> Valore campione: TRUE </li><li> **Descrizione:**<br/>il numero di inizio del capitolo.  **** Importante:Se questo evento è impostato, l'unico valore possibile è TRUE. Se questo evento non è impostato, non viene inviato alcun valore.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.Chapter.<br/>view) </li> <li> ****<br/> Heartbeat: (s:event:<br/>type=Chapter_start) </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata:event </li> <li> ****<br/> Nome rapporto: Inizio capitolo g </li> <li> ****<br/> Dati contestuali: (a.media.Chapter.<br/>view) </li> <li> ****<br/> Feed dati: videochapterstart </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.Chapter.<br/>view) </li> </ul> |
 
-### Completamento capitolo
+### Capitolo Completa
 
-|   Implementazione   | Parametri di rete | Generazione di rapporti   |
+|   Implementazione   | Parametri di rete | Generazione di rapporti   |
 | --- | --- | --- |
-| <ul> <li> **Chiave SDK:**<br/> Set automatico  </li> <li> **Chiave API:**<br/> N/D </li> <li> **Richiesto:**<br/> Sì </li> <li> **Tipo:**<br/> stringa </li> <li> **Inviato con:**<br/> Chiudi capitolo </li> <li> **Min. SDK Version:** 1.3</li> <li> **Valore campione:**<br/> TRUE </li><li> **Descrizione:**<br/>Il numero di completamento del capitolo. **Importante:** Se l'evento è impostato, l'unico valore possibile è TRUE. Se questo evento non viene impostato, non viene inviato alcun valore.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a. media. chapter.<br/>completato) </li> <li> **Heartbeat:**<br/> (s: evento:<br/>type = chapter_ complete) </li> </ul> | <ul> <li> **Disponibile:**<br/> Sì </li> <li> **Variabile riservata:**<br/> evento </li> <li> **Nome rapporto:**<br/> Completamento capitolo g </li> <li> **Dati contestuali:**<br/> (a. media. chapter.<br/>completato) </li> <li> **Feed dati:**<br/> videochaptercomplete </li> <li> **Audience Manager:**<br/> (c_ contextdata.<br/>a. media. chapter.<br/>completato) </li> </ul> |
+| <ul> <li> ****<br/> Chiave SDK: Imposta automaticamente  </li> <li> ****<br/> Chiave API: N/D </li> <li> ****<br/> Obbligatorio: Yes </li> <li> ****<br/> Tipo: string </li> <li> ****<br/> Inviato con: Chiudi capitolo </li> <li> **Min.** Versione SDK: 1.3</li> <li> ****<br/> Valore campione: TRUE </li><li> **Descrizione:**<br/>Numero di completamento del capitolo.  **** Importante:Se questo evento è impostato, l'unico valore possibile è TRUE. Se questo evento non è impostato, non viene inviato alcun valore.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.Chapter.<br/>completato) </li> <li> ****<br/> Heartbeat: (s:event:<br/>type=Chapter_complete) </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata:event </li> <li> ****<br/> Nome rapporto: Capitolo Completamento g </li> <li> ****<br/> Dati contestuali: (a.media.Chapter.<br/>completato) </li> <li> ****<br/> Feed dati: videochaptercomplete </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.Chapter.<br/>completato) </li> </ul> |
 
-### Durata capitolo
+### Tempo capitolo trascorso
 
-|   Implementazione   | Parametri di rete | Generazione di rapporti   |
+|   Implementazione   | Parametri di rete | Generazione di rapporti   |
 | --- | --- | --- |
-| <ul> <li> **Chiave SDK:**<br/> Set automatico  </li> <li> **Chiave API:**<br/> N/D </li> <li> **Richiesto:**<br/> Sì </li> <li> **Tipo:**<br/> numero </li> <li> **Inviato con:**<br/> Chiudi capitolo </li> <li> **Min. SDK Version:** 1.3 </li> <li> **Valore campione:**<br/> </li><li> **Descrizione:**<br/>Il tempo trascorso sul capitolo. Il valore verrà visualizzato nel formato temporale (HH: MM: SS) in Analysis Workspace e Reporting e analisi. In Feed dati, Data Warehouse e API di reporting i valori saranno visualizzati in secondi. <br/>**Data di rilascio: 09/13/18**   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a. media. chapter.<br/>Timeplayed) </li> <li> **Heartbeat:**<br/> </li> </ul> | <ul> <li> **Disponibile:**<br/> Sì </li> <li> **Variabile riservata:**<br/> evento </li> <li> **Nome rapporto:**<br/> Tempo capitolo impiegato g </li> <li> **Dati contestuali:**<br/> (a. media. chapter.<br/>Timeplayed) </li> <li> **Feed dati:**<br/> videochaptertime </li> <li> **Audience Manager:**<br/> (c_ contextdata.<br/>a. media. chapter.<br/>Timeplayed) </li> </ul> |
+| <ul> <li> ****<br/> Chiave SDK: Imposta automaticamente  </li> <li> ****<br/> Chiave API: N/D </li> <li> ****<br/> Obbligatorio: Yes </li> <li> ****<br/> Tipo: number </li> <li> ****<br/> Inviato con: Chiudi capitolo </li> <li> **Min.** Versione SDK: 1.3 </li> <li> **Valore campione:**<br/> </li><li> **Descrizione:**<br/>Tempo trascorso sul capitolo.  Il valore verrà visualizzato nel formato ora (HH:MM:SS) in Analysis Workspace e Reporting e analisi. Nelle API Feed dati, Data Warehouse e Reporting i valori verranno visualizzati in secondi. <br/>**Data di rilascio: 13/09/18**   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.Chapter.<br/>timePlayed) </li> <li> **Heartbeat:**<br/> </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata:event </li> <li> ****<br/> Nome rapporto: Tempo capitolo trascorso g </li> <li> ****<br/> Dati contestuali: (a.media.Chapter.<br/>timePlayed) </li> <li> ****<br/> Feed dati: videoclip </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.Chapter.<br/>timePlayed) </li> </ul> |
 
-## Related APIs {#related_apis_section}
+## API correlate {#related_apis_section}
 
 * Android - [createChapterObject](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/com/adobe/primetime/va/simple/MediaHeartbeat.html#createChapterObject-java.lang.String-java.lang.Long-java.lang.Double-java.lang.Double-)
 * iOS - [createChapterObjectWithName](https://adobe-marketing-cloud.github.io/media-sdks/reference/ios/Classes/ADBMediaHeartbeat.html#//api/name/createChapterObjectWithName:position:length:startTime:)
