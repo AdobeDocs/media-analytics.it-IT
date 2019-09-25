@@ -1,7 +1,7 @@
 ---
-seo-title: Tracciamento delle azioni dell'app
-title: Tracciamento delle azioni dell'app
-uuid: 9 cdc 048 a -419 a -4725-bd 61-6 ca 6 d 909 cf 10
+seo-title: Tracciare le azioni dell'app
+title: Tracciare le azioni dell'app
+uuid: 9cdc048a-419a-4725-bd61-6ca6d909cf10
 translation-type: tm+mt
 source-git-commit: ee6eebac803410c1c4da1ccb80083025a9c817df
 
@@ -16,7 +16,7 @@ A ogni azione corrispondono una o più metriche che vengono incrementate ogni vo
 
 Actions are not tracked automatically, so call `trackAction` when an event that you want to track occurs, and map the action to a custom event.
 
-1. When an event that you want to track occurs, call `trackAction`.
+1. Quando si verifica un evento che si desidera monitorare, chiama `trackAction`.
 
    * **Roku:**
 
@@ -30,7 +30,7 @@ Actions are not tracked automatically, so call `trackAction` when an event that 
       ADBMobile.analytics.trackAction("myapp.ActionName", {});
       ```
 
-1. Mappate l'azione su un evento personalizzato.
+1. Mappare l'azione su un evento personalizzato.
 
    * **Roku:**
 
@@ -48,5 +48,5 @@ Actions are not tracked automatically, so call `trackAction` when an event that 
       ADBMobile.analytics.trackAction("myapp.SocialShare", dictionary);
       ```
 
-Con ogni chiamata di tracciamento delle azioni puoi anche inviare dati di contesto aggiuntivi.
+Puoi anche inviare dati di contesto aggiuntivi con ogni chiamata di tracciamento delle azioni.
 
