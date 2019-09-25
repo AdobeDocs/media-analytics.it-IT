@@ -1,37 +1,37 @@
 ---
 seo-title: Tracciare capitoli e segmenti su Roku
 title: Tracciare capitoli e segmenti su Roku
-uuid: 15 c 07131-77 d 7-4 a 97-92 c 6-0 a 190 c 6 b 08 d 3
+uuid: 15c07131-77d7-4a97-92c6-0a190c6b08d3
 translation-type: tm+mt
 source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
 
-# Track chapters and segments on Roku{#track-chapters-and-segments-on-roku}
+# Tracciare capitoli e segmenti su Roku{#track-chapters-and-segments-on-roku}
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l'implementazione con SDK 2. x. If you are implementing a 1.x version of the SDK, you can download the Developers Guide here: [Download SDKs.](/help/sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l’implementazione mediante gli SDK 2.x. Se stai implementando una versione 1.x dell’SDK, puoi scaricare la Guida per gli sviluppatori qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
-## Metadati annunci standard
+## Implementazione di metadati annuncio standard
 
-1. Identify when the chapter start event occurs and create the `ChapterObject` instance by using the chapter information.
+1. Identificare il momento in cui si verifica l’evento di inizio del capitolo e creare l’ `ChapterObject` istanza utilizzando le informazioni sul capitolo.
 
-   `ChapterObject` riferimento di tracciamento dei capitoli:
+   `ChapterObject` riferimento tracciamento capitoli:
 
    >[!NOTE]
    >
-   >Queste variabili sono necessarie solo se prevedete di tenere traccia dei capitoli.
+   >Queste variabili sono necessarie solo se si prevede di tenere traccia dei capitoli.
 
    | Nome della variabile | Descrizione | Obbligatorio |
    | --- | --- | :---: |
-   | `name` | Nome capitolo | Sì |
-   | `position` | Posizione capitolo | Sì |
+   | `name` | Nome del capitolo | Sì |
+   | `position` | Posizione del capitolo | Sì |
    | `length` | Lunghezza capitolo | Sì |
-   | `startTime` | Ora di inizio capitolo | Sì |
+   | `startTime` | Ora inizio capitolo | Sì |
 
-   Oggetto capitolo:
+   Oggetto Chapter:
 
    ```
    chapterInfo =  
@@ -50,25 +50,25 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
    chapterContextData["seg_info"] = "seg_info"
    ```
 
-1. To begin tracking the chapter playback, call the `ChapterStart` event in the `MediaHeartbeat` instance:
+1. Per iniziare a monitorare la riproduzione dei capitoli, chiamate l’ `ChapterStart` evento nell’ `MediaHeartbeat` istanza:
 
    ```
    ADBMobile().mediaTrackEvent(MEDIA_CHAPTER_START, chapterInfo, chapterContextData)
    ```
 
-1. When playback reaches the chapter end boundary, as defined by your custom code, call the `ChapterComplete` event in the `MediaHeartbeat` instance.
+1. Quando la riproduzione raggiunge il limite finale del capitolo, come definito dal codice personalizzato, chiamate l’ `ChapterComplete` evento nell’ `MediaHeartbeat` istanza.
 
    ```
    chapterContextData = {} 
    ADBMobile().mediaTrackEvent(MEDIA_CHAPTER_COMPLETE, chapterInfo, chapterContextData)
    ```
 
-1. If chapter playback did not complete because the user chose to skip the chapter (for example, if the user seeks out of the chapter boundary), call the `ChapterSkip` event in the MediaHeartbeat instance.
+1. Se la riproduzione del capitolo non è stata completata perché l’utente ha scelto di saltare il capitolo (ad esempio, se l’utente cerca di uscire dal limite del capitolo), chiamate l’ `ChapterSkip` evento nell’istanza MediaHeartbeat.
 
    ```
    chapterContextData = {} 
    ADBMobile().mediaTrackEvent(MEDIA_CHAPTER_SKIP, chapterInfo, chapterContextData)
    ```
 
-1. In caso di capitoli aggiuntivi, ripetete i passaggi da 1 a 5.
+1. Se sono presenti altri capitoli, ripetete i punti da 1 a 5.
 
