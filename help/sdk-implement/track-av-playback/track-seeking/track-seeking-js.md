@@ -1,29 +1,29 @@
 ---
-seo-title: Tracciare la ricerca in javascript
-title: Tracciare la ricerca in javascript
-uuid: 089947 fb -8 bae -4 ae 8-b 215-53793620 efd 7
+seo-title: Tracciare la ricerca in JavaScript
+title: Tracciare la ricerca in JavaScript
+uuid: 089947fb-8bae-4ae8-b215-53793620efd7
 translation-type: tm+mt
 source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
 
-# Track seeking on JavaScript{#track-seeking-on-javascript}
+# Tracciare la ricerca in JavaScript{#track-seeking-on-javascript}
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l'implementazione in tutti gli SDK 2. x. If you are implementing a 1.x version of the SDK, you can download the 1.x Developers Guides here: [Download SDKs.](/help/sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l’implementazione in tutti gli SDK 2.x. Se stai implementando una versione 1.x dell’SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
-## Costanti di tracciamento ricerca
+## Costanti di tracciamento delle ricerche
 
 | Nome costante | Descrizione     |
 |---|---|
 | `SeekStart` | Costante per il tracciamento dell'evento Seek Start. |
 | `SeekComplete` | Costante per il tracciamento dell'evento Seek Complete. |
 
-## Implementazione della ricerca
+## Implementa ricerca
 
-1. Listen for the playback seeking events from the media player, and on seek start event notification, track seeking using the `SeekStart` event:
+1. Ascoltare gli eventi di ricerca della riproduzione dal lettore multimediale e, durante la ricerca, avviare la notifica dell’evento, tenere traccia della ricerca mediante l’ `SeekStart` evento:
 
    ```js
    _onSeekStart = function() { 
@@ -31,7 +31,7 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
    };
    ```
 
-1. On seek complete notification from the media player, track the end of seeking using the `SeekComplete` event:
+1. Alla ricerca della notifica completa dal lettore multimediale, tenete traccia della fine della ricerca mediante l’ `SeekComplete` evento:
 
    ```js
    _onSeekComplete = function() { 
@@ -39,4 +39,4 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
    };
    ```
 
-See the tracking scenario [VOD playback with seeking in the main content](/help/sdk-implement/tracking-scenarios/vod-seeking.md) for more information.
+Per ulteriori informazioni, vedi la riproduzione [VOD dello scenario di tracciamento con la ricerca nel contenuto](/help/sdk-implement/tracking-scenarios/vod-seeking.md) principale.
