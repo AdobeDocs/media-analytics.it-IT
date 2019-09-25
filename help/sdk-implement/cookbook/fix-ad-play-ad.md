@@ -1,80 +1,80 @@
 ---
-seo-title: Risoluzione della riproduzione principale tra annunci pubblicitari
-title: Risoluzione della riproduzione principale tra annunci pubblicitari
-uuid: 228 b 4812-c 23 e -40 c 8-ae 2 b-e 15 ca 69 b 0 bc 2
+seo-title: Risoluzione della riproduzione principale tra gli annunci
+title: Risoluzione della riproduzione principale tra gli annunci
+uuid: 228b4812-c23e-40c8-ae2b-e15ca69b0bc2
 translation-type: tm+mt
 source-git-commit: 8c20af925a1043c90b84d7d13021848725e05500
 
 ---
 
 
-# Resolving main:play appearing between ads{#resolving-main-play-appearing-between-ads}
+# Risoluzione principale:riproduzione tra annunci{#resolving-main-play-appearing-between-ads}
 
 ## PROBLEMA
 
-In some ad tracking scenarios, you could encounter `main:play` calls occurring unexpectedly between the end of one ad and the start of the next ad. If the delay between the ad complete call and the next ad start call is greater than 250 milliseconds, the Media SDK will fall back to sending `main:play` calls. If this fallback to `main:play` occurs during a pre-roll ad break, the content start metric may be set early.
+In alcuni scenari di monitoraggio degli annunci, si potrebbero verificare `main:play` chiamate che si verificano inaspettatamente tra la fine di un annuncio e l'inizio dell'annuncio successivo. Se il ritardo tra la chiamata ad complete e la successiva chiamata ad start è superiore a 250 millisecondi, Media SDK tornerà a inviare `main:play` le chiamate. Se questo fallback `main:play` si verifica durante un'interruzione di annuncio pre-roll, la metrica di inizio contenuto potrebbe essere impostata in anticipo.
 
-Uno spazio tra annunci come descritto in precedenza viene interpretato da Media SDK come contenuto principale, in quanto non ci si sovrappone ad alcun contenuto pubblicitario. In Media SDK non sono presenti informazioni di annunci pubblicitari, mentre il lettore è in stato di riproduzione. Se non sono presenti informazioni Ad e lo stato del lettore sta per essere riprodotto, l'SDK di Media SDK imposta la durata del vuoto verso il contenuto principale per impostazione predefinita. Non è possibile utilizzare la durata di riproduzione del credito per informazioni sull'annuncio null.
+Uno spazio vuoto tra gli annunci come descritto in precedenza viene interpretato dall’SDK di Media come contenuto principale, perché non vi è alcuna sovrapposizione con alcun contenuto pubblicitario. L’SDK per file multimediali non contiene informazioni sugli annunci e il lettore è in stato di riproduzione. Se non sono presenti informazioni pubblicitarie e lo stato del lettore è in fase di riproduzione, per impostazione predefinita Media SDK attribuisce la durata dello spazio vuoto al contenuto principale. Non può accreditare la durata della riproduzione a informazioni di annunci nulli.
 
 ## IDENTIFICAZIONE
 
-Quando usi Adobe Debug o un sniffer di pacchetti di rete come Charles, se vedi le seguenti chiamate Heartbeat in questo ordine durante un'interruzione di annunci precedente:
+Durante l'utilizzo di Adobe Debug o di un annusatore di pacchetti di rete come Charles, se durante un'interruzione di annuncio pre-roll vengono visualizzate le seguenti chiamate Heartbeat:
 
-* Session Start: `s:event:type=start` &amp; `s:asset:type=main`
-* Ad Start: `s:event:type=start` &amp; `s:asset:type=ad`
-* Ad Play: `s:event:type=play` &amp; `s:asset:type=ad`
-* Ad Complete: `s:event:type=complete` &amp; `s:asset:type=ad`
-* Main Content Play: `s:event:type=play` &amp; `s:asset:type=main` **(unexpected)**
+* Avvio sessione: `s:event:type=start` &amp; `s:asset:type=main`
+* Inizio annuncio: `s:event:type=start` &amp; `s:asset:type=ad`
+* Riproduzione annuncio: `s:event:type=play` &amp; `s:asset:type=ad`
+* Annuncio completo: `s:event:type=complete` &amp; `s:asset:type=ad`
+* Riproduzione contenuto principale: `s:event:type=play` &amp; `s:asset:type=main`(**imprevisto)**
 
-* Ad Start: `s:event:type=start` &amp; `s:asset:type=ad`
-* Ad Play: `s:event:type=play` &amp; `s:asset:type=ad`
-* Ad Complete: `s:event:type=complete` &amp; `s:asset:type=ad`
-* Main Content Play: `s:event:type=play` &amp; `s:asset:type=main` **(expected)**
+* Inizio annuncio: `s:event:type=start` &amp; `s:asset:type=ad`
+* Riproduzione annuncio: `s:event:type=play` &amp; `s:asset:type=ad`
+* Annuncio completo: `s:event:type=complete` &amp; `s:asset:type=ad`
+* Riproduzione contenuto principale: `s:event:type=play` &amp; `s:asset:type=main`**(previsto)**
 
-## RESOLUTION
+## RISOLUZIONE
 
-***Ritardo nell'attivazione della chiamata Ad Complete.***
+***Ritardo che attiva la chiamata Ad Complete.***
 
-Handle the gap from within the player by calling `trackEvent:AdComplete` late for the first ad, followed immediately by `trackEvent:AdStart` for the second ad. The app should hold off on calling the `AdComplete` event after the first ad finishes. Make sure you call `trackEvent:AdComplete` for the last ad in the ad break. If the player can identify that the current ad asset is the final one in the ad break, call `trackEvent:AdComplete` immediately. Questa risoluzione darà luogo a meno di 1 secondi di tempo supplementare impiegato per essere attribuito all'unità di annunci precedente.
+Gestire il gap dall'interno del lettore chiamando `trackEvent:AdComplete` tardi per il primo annuncio, seguito immediatamente da `trackEvent:AdStart` per il secondo annuncio. L'app deve essere sospesa quando si chiama l' `AdComplete` evento al termine del primo annuncio. Accertatevi di chiamare `trackEvent:AdComplete` l'ultimo annuncio nell'interruzione di annuncio. Se il lettore è in grado di identificare la risorsa dell’annuncio corrente come ultima nell’interruzione dell’annuncio, invoca `trackEvent:AdComplete` immediatamente. Con questa risoluzione, meno di un secondo del tempo aggiuntivo trascorso viene attribuito all’unità pubblicitaria precedente.
 
-**All'avvio di un annuncio, incluso l'anteprima:**
+**Avvio dell'interruzione dell'annuncio, compreso il pre-roll:**
 
-* Create the `adBreak` object instance for the ad break; for example, `adBreakObject`.
+* Creare l'istanza dell' `adBreak` oggetto per l'interruzione annuncio; ad esempio, `adBreakObject`.
 
 * Chiamata `trackEvent(MediaHeartbeat.Event.AdBreakStart, adBreakObject);`.
 
-**In ogni avvio di risorse pubblicitarie:**
+**Per ogni avvio di risorse di annunci:**
 
-* **Chiamata`trackEvent(MediaHeartbeat.Event.AdComplete);`**
+* **Chiama`trackEvent(MediaHeartbeat.Event.AdComplete);`**
 
    >[!NOTE]
    >
-   >Invoca questa opzione solo se l'annuncio precedente non è stato completato. Consider a Boolean value to maintain an "`isinAd`" state for the previous ad.
+   >Chiama questo solo se l’annuncio precedente non è stato completato. Considerate un valore booleano per mantenere lo stato "`isinAd`" dell'annuncio precedente.
 
-* Create the ad object instance for the ad asset: for example, `adObject`.
-* Populate the ad metadata, `adCustomMetadata`.
+* Create l'istanza dell'oggetto annuncio per la risorsa annuncio: ad esempio, `adObject`.
+* Compilate i metadati dell'annuncio, `adCustomMetadata`.
 * Chiamata `trackEvent(MediaHeartbeat.Event.AdStart, adObject, adCustomMetadata);`.
-* Call `trackPlay()` if this is the first ad in a pre-roll ad break.
+* Chiama `trackPlay()` se si tratta del primo annuncio in un annuncio pre-roll.
 
-**Per tutte le risorse pubblicitarie complete:**
+**Per ogni risorsa annuncio completata:**
 
 * **Non effettuare una chiamata**
 
    >[!NOTE]
    >
-   >If the application knows it is the last ad in the ad break, call `trackEvent:AdComplete` here and skip setting `trackEvent:AdComplete` in the `trackEvent:AdBreakComplete`
+   >Se l'applicazione sa che si tratta dell'ultimo annuncio nell'interruzione dell'annuncio, chiama `trackEvent:AdComplete` qui e salta l'impostazione `trackEvent:AdComplete` nel `trackEvent:AdBreakComplete`
 
-**On jump:**
+**Salta annuncio attivato:**
 
 * Chiamata `trackEvent(MediaHeartbeat.Event.AdSkip);`.
 
-**All'interruzione di annuncio completa:**
+**Interruzione annuncio completata:**
 
-* **Chiamata`trackEvent(MediaHeartbeat.Event.AdComplete);`**
+* **Chiama`trackEvent(MediaHeartbeat.Event.AdComplete);`**
 
    >[!NOTE]
    >
-   >If this step is already performed above as part of the last `trackEvent:AdComplete` call then this can be skipped.
+   >Se questo passaggio è già stato eseguito come parte dell’ultima `trackEvent:AdComplete` chiamata, è possibile ignorarlo.
 
 * Chiamata `trackEvent(MediaHeartbeat.Event.AdBreakComplete);`.
 
