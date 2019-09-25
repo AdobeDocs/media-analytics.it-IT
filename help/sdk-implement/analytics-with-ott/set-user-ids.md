@@ -1,20 +1,20 @@
 ---
-seo-title: Impostazione degli ID utente
-title: Impostazione degli ID utente
-uuid: fdd 54 fec -79 cd -4 bf 8-b 17 e -4 d 61 d 84 f 6310
+seo-title: Impostare gli ID utente
+title: Impostare gli ID utente
+uuid: fdd54fec-79cd-4bf8-b17e-4d61d84f6310
 translation-type: tm+mt
 source-git-commit: ee6eebac803410c1c4da1ccb80083025a9c817df
 
 ---
 
 
-# Set user IDs{#set-user-ids}
+# Impostare gli ID utente{#set-user-ids}
 
-L'ID utente è un identificatore visitatore univoco definito dall'applicazione per un utente.
+L’ID utente è un identificatore visitatore personalizzato univoco definito dall’applicazione per un utente.
 
-Imposta e ottieni l'ID utente univoco sull'SDK adbmobile, come segue:
+Imposta e ottieni l’ID utente univoco nell’SDK ADBMobile come segue:
 
-* **Imposta:**
+* **Set:**
 
    * **Roku:**
 
@@ -28,7 +28,7 @@ Imposta e ottieni l'ID utente univoco sull'SDK adbmobile, come segue:
       ADBMobile().config.setUserIdentifer("app-generated-unique-id");
       ```
 
-* **Ottieni:**
+* **Get:**
 
    * **Roku:**
 
