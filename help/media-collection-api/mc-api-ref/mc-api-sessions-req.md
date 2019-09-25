@@ -1,14 +1,14 @@
 ---
 seo-title: Richiesta sessioni
 title: Richiesta sessioni
-uuid: 9609192 d -4 f 7 f -4 fb 5-844 f-ea 89 d 47 c 4 e 30
+uuid: 9609192d-4f7f-4fb5-844f-ea89d47c4e30
 translation-type: tm+mt
 source-git-commit: f1c9f5f4cbcd4c043e1c7b4a5037c134b2bdd380
 
 ---
 
 
-# Sessions request{#sessions-request}
+# Richiesta sessioni{#sessions-request}
 
 ```
 POST 
@@ -19,9 +19,9 @@ https://{uri}/api/v1/sessions
 
 Nessuno
 
-## Corpo richiesta
+## Corpo della richiesta
 
-Il corpo della richiesta deve essere JSON e deve avere la stessa struttura di questo corpo della richiesta di esempio:
+Il corpo della richiesta deve essere JSON e deve avere la stessa struttura del corpo della richiesta di esempio:
 
 ```
 { 
@@ -58,8 +58,8 @@ Il corpo della richiesta deve essere JSON e deve avere la stessa struttura di qu
 ```
 
 * `playerTime` (Obbligatorio)
-   * `playhead` - Deve essere in secondi, ma può essere un mobile.
-   * `ts` - Marca temporale; deve essere in millisecondi.
+   * `playhead` - Deve essere in secondi, ma può essere un float.
+   * `ts` - marca temporale; deve essere in millisecondi.
 * `eventType` (Obbligatorio)
 
    **Valore valido:**`sessionStart`
@@ -84,13 +84,13 @@ Age: 0
 Via: 1.1 wsg.sanjose08
 ```
 
-`Location:` header - `/api/v1/` La parte fornisce la versione API. The part after `[…]sessions/` is the Session ID.
+`Location:` header - La `/api/v1/` parte fornisce la versione API. La parte dopo `[…]sessions/` è l'ID sessione.
 
 ## Codici di risposta
 
-| Codice risposta HTTP | Descrizione |
+| Codice di risposta HTTP | Descrizione |
 |---|---|
 | 201 | Sessione creata |
 | 400 | Richiesta non valida |
-| 500 | Errore server |
+| 500 | Errore del server |
 
