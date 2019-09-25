@@ -1,20 +1,20 @@
 ---
-seo-title: Convalida delle richieste degli eventi
-title: Convalida delle richieste degli eventi
-uuid: 1 fc 92 f 21-b 510-4 c 96-8 ea 2-47 e 819 f 4 a 96 e
+seo-title: Convalida delle richieste evento
+title: Convalida delle richieste evento
+uuid: 1fc92f21-b510-4c96-8ea2-47e819f4a96e
 translation-type: tm+mt
 source-git-commit: 6468ace2e30db1a427a3d7f1b080ab42c578351a
 
 ---
 
 
-# Validating event requests{#validating-event-requests}
+# Convalida delle richieste evento{#validating-event-requests}
 
-Il corpo della richiesta JSON per ogni tipo di evento viene convalidato sul backend con gli schemi JSON. Il corpo della risposta HTTP viene compilato con un messaggio di errore quando la convalida non riesce per una chiamata API.
+Il corpo della richiesta JSON per ciascun tipo di evento viene convalidato sul back-end con gli schemi JSON. Il corpo della risposta HTTP viene popolato con un messaggio di errore quando la convalida non riesce per una chiamata API.
 
-JSON validation schemas for each event type are publicly accessible here: `{uri}/api/v1/schemas/{eventType}` (e.g., `{uri}/api/v1/schemas/sessionEnd`). Questi schemi di convalida JSON sono l'autorità assoluta per determinare i parametri del corpo della richiesta corretti per ogni tipo di evento.
+Gli schemi di convalida JSON per ciascun tipo di evento sono accessibili al pubblico qui: `{uri}/api/v1/schemas/{eventType}` (ad esempio, `{uri}/api/v1/schemas/sessionEnd`). Questi schemi di convalida JSON sono l'autorità assoluta per determinare i parametri corretti del corpo della richiesta per ciascun tipo di evento.
 
-For example, the response to a request for the `sessionStart` validation schema appears something like this sample (slightly formatted for readability here):
+Ad esempio, la risposta a una richiesta per lo schema di `sessionStart` convalida ha un aspetto simile al seguente (formattato leggermente per la leggibilità):
 
 ```
 HTTP/1.1 200 OK
@@ -125,5 +125,5 @@ Connection: keep-alive
 
 >[!NOTE]
 >
->La convalida a livello di sessione non è possibile, poiché il contesto della sessione non è disponibile nel livello della raccolta.
+>La convalida a livello di sessione non è possibile, in quanto il contesto della sessione non è disponibile nel livello della raccolta.
 
