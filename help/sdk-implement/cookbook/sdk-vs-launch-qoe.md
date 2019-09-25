@@ -10,49 +10,49 @@ source-git-commit: 932af09a0692ef35ab46fb6f34b2dec5f2e1e562
 
 # Comprendere le differenze tra Launch e Media SDK
 
-## Differenze tra le funzionalità
+## Differenze tra le funzioni
 
-* *Launch* - Launch fornisce un'interfaccia utente che illustra come configurare, configurare e distribuire le soluzioni di tracciamento per contenuti multimediali basate sul Web. Launch migliora la gestione dinamica dei tag (DTM).
-* *Media SDK* - Media SDK offre librerie di tracciamento multimediale progettate per piattaforme specifiche (ad es.: Android, iOS, ecc.). Adobe consiglia Media SDK di tenere traccia dell'utilizzo dei supporti nelle app mobili.
+* *Launch* - Launch offre un’interfaccia utente che descrive come impostare, configurare e distribuire soluzioni di monitoraggio dei contenuti multimediali basate su Web. Launch migliora Gestione dinamica dei tag.
+* *SDK* per file multimediali - L’SDK per file multimediali fornisce librerie di tracciamento dei contenuti multimediali progettate per piattaforme specifiche (ad esempio: Android, iOS, ecc.) Adobe consiglia Media SDK per tenere traccia dell’utilizzo dei supporti nelle app mobili.
 
-## Differenze di creazione tracciatore
+## Differenze di creazione del tracciatore
 
 ### Launch
 
-Launch offre due approcci per creare l'infrastruttura di tracciamento. Entrambi gli approcci utilizzano l'estensione Lancio di Media Analytics:
+Launch offre due approcci per la creazione dell'infrastruttura di tracciamento. Entrambi gli approcci utilizzano l’estensione di avvio di Media Analytics:
 
-1. Utilizzate le API di tracciamento multimediali da una pagina Web.
+1. Utilizzate le API di tracciamento dei supporti da una pagina Web.
 
-   In questo scenario, Media Analytics Extension esporta le API di tracciamento multimediale a una variabile configurata nell'oggetto finestra globale:
+   In questo scenario, Media Analytics Extension esporta le API di tracciamento dei supporti in una variabile configurata nell’oggetto finestra globale:
 
    ```
    window["CONFIGURED_VARIABLE_NAME"].MediaHeartbeat.getInstance
    ```
 
-1. Utilizzate le API di tracciamento multimediale da un'altra estensione Lancio.
+1. Utilizzate le API di tracciamento dei supporti da un'altra estensione Launch.
 
-   In questo scenario, utilizzate le API di tracciamento multimediali esposte dal `get-instance` modulo e `media-heartbeat` da Moduli condivisi.
+   In questo scenario, utilizzate le API di tracciamento dei supporti esposte dai moduli `get-instance` e `media-heartbeat` condivisi.
 
    >[!NOTE]
    >
-   >I moduli condivisi non sono disponibili per l'uso nelle pagine Web. Potete utilizzare solo i moduli condivisi da un'altra estensione.
+   >I moduli condivisi non sono disponibili per l'uso nelle pagine Web. È possibile utilizzare i moduli condivisi solo da un'altra estensione.
 
-   Create un `MediaHeartbeat` 'istanza utilizzando il `get-instance` modulo condiviso.
-Passate un oggetto delegato a `get-instance` cui esporre `getQoSObject()` e `getCurrentPlaybackTime()` funzioni.
+   Create un' `MediaHeartbeat` istanza utilizzando il modulo `get-instance` condiviso.
+Passa un oggetto delegato a `get-instance` che espone `getQoSObject()` e `getCurrentPlaybackTime()` funzioni.
 
    ```
    var getMediaHeartbeatInstance =
    turbine.getSharedModule('adobe-video-analytics', 'get-instance');
    ```
 
-   Accedere `MediaHeartbeat` a costanti tramite il `media-heartbeat` modulo condiviso.
+   Accedere `MediaHeartbeat` alle costanti tramite il modulo `media-heartbeat` condiviso.
 
 ### Media SDK
 
-1. Aggiungi la libreria Media Analytics al progetto di sviluppo.
-1. Creare un oggetto di configurazione (`MediaHeartbeatConfig`).
-1. Implementare il protocollo delegate, esporre le `getQoSObject()``getCurrentPlaybackTime()` funzioni e.
-1. Create un'istanza Media Heartbeat (`MediaHeartbeat`).
+1. Aggiungi la libreria Media Analytics al tuo progetto di sviluppo.
+1. Creare un oggetto config (`MediaHeartbeatConfig`).
+1. Implementa il protocollo delegato, esponendo le funzioni `getQoSObject()` e `getCurrentPlaybackTime()` .
+1. Create un’istanza di heartbeat multimediale (`MediaHeartbeat`).
 
 ```
 // Media Heartbeat initialization
