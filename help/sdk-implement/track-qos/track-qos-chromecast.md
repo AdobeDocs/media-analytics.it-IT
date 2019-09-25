@@ -1,28 +1,28 @@
 ---
-seo-title: Tracciamento della qualità dell'esperienza su Chromecast
-title: Tracciamento della qualità dell'esperienza su Chromecast
-uuid: d 0 cdc 8 cd -4 db 0-45 ef -9470-1 cba 3996305 b
+seo-title: Monitoraggio della qualità dell'esperienza su Chromecast
+title: Monitoraggio della qualità dell'esperienza su Chromecast
+uuid: d0cdc8cd-4db0-45ef-9470-1cba3996305b
 translation-type: tm+mt
 source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
 
-# Track quality of experience on Chromecast{#track-quality-of-experience-on-chromecast}
+# Monitoraggio della qualità dell'esperienza su Chromecast{#track-quality-of-experience-on-chromecast}
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l'implementazione in tutti gli SDK 2. x. If you are implementing a 1.x version of the SDK, you can download the 1.x Developers Guides here: [Download SDKs.](/help/sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l’implementazione in tutti gli SDK 2.x. Se stai implementando una versione 1.x dell’SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
 ## Panoramica {#section_DDB8DFA47C5744AB9A04392AD5959BF7}
 
-Quality of experience tracking includes quality of service (QoS) and error tracking, both are optional elements and are **not** required for core media tracking implementations. Potete utilizzare l'API del lettore multimediale per identificare le variabili correlate a qos e il tracciamento degli errori.
+Il monitoraggio della qualità dell'esperienza include la qualità del servizio (QoS) e il monitoraggio degli errori, entrambi elementi facoltativi e **non** sono richiesti per le implementazioni di tracciamento dei supporti di base. Potete utilizzare l'API Media Player per identificare le variabili relative ai QoS e al tracciamento degli errori.
 
-## Player events {#player-events}
+## Eventi del lettore {#player-events}
 
-### Su tutti gli eventi modifica bitrate
+### Su tutti gli eventi di modifica del bitrate
 
-* Create/update the QoS object instance for the playback, `qosObject`
+* Creare/aggiornare l'istanza dell'oggetto QoS per la riproduzione, `qosObject`
 * Chiamata `trackEvent(Media.Heartbeat.Event.BitrateChange, qosObject);`
 
 ### Errori del lettore
@@ -31,28 +31,28 @@ Chiamata `trackError(“media error id”);`
 
 ## Implementate {#section_3B8EBEB167624D0481E8AF4761F83047}
 
-1. Identify when the bitrate changes during media playback and create the `MediaObject` instance using the QoS information.
+1. Identificare quando il bitrate cambia durante la riproduzione del contenuto multimediale e creare l’ `MediaObject` istanza utilizzando le informazioni QoS.
 
-   **Variabili qosobject:**
+   **Variabili QoSObject:**
 
    >[!TIP]
    >
-   >Queste variabili sono necessarie solo se prevedete di tenere traccia dei QOS.
+   >Queste variabili sono necessarie solo se si prevede di tenere traccia dei QoS.
 
    | Variabile | Descrizione | Obbligatorio |
    | --- | --- | :---: |
    | `bitrate` | Bitrate corrente | Sì |
-   | `startupTime` | Ora di avvio | Sì |
+   | `startupTime` | Tempo di avvio | Sì |
    | `fps` | Valore FPS | Sì |
-   | `droppedFrames` | Numero di fotogrammi rilasciati | Sì |
+   | `droppedFrames` | Numero di fotogrammi saltati | Sì |
 
-   **Creazione di oggetti qos:**[Createqosobject](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.createQoSObject)
+   **** Creazione di oggetti QoS: [createQoSObject](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.createQoSObject)
 
    ```
    qosInfo = ADBMobile.media.createQoSObject(50000, 0, 24, 10); 
    ```
 
-1. When playback switches bitrates, call the `BitrateChange` event in the Media Heartbeat instance: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
+1. Quando la riproduzione cambia bitrate, chiamate l’ `BitrateChange` evento nell’istanza di Media Heartbeat: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
 
    ```
    ADBMobile.media.trackEvent(ADBMobile.media.Event.BitrateChange); 
@@ -60,12 +60,12 @@ Chiamata `trackError(“media error id”);`
 
    >[!IMPORTANT]
    >
-   >Aggiornate l'oggetto qos e richiamate l'evento change bitrate su ogni modifica bitrate. Questo fornisce i dati qos più precisi.
+   >Aggiornare l'oggetto QoS e richiamare l'evento di modifica del bitrate su ogni modifica del bitrate. Questo fornisce i dati QoS più precisi.
 
-1. Make sure that `getQoSObject()` method returns the most updated QoS information.
-1. When the media player encounters an error, and the error event is available to the player API, use `trackError()` to capture the error information. (Consulta [Panoramica](/help/sdk-implement/track-errors/track-errors-overview.md).)
+1. Accertatevi che `getQoSObject()` il metodo restituisca le informazioni QoS più aggiornate.
+1. Quando il lettore multimediale rileva un errore e l'evento di errore è disponibile per l'API del lettore, utilizzare `trackError()` per acquisire le informazioni sull'errore. (Consulta [Panoramica](/help/sdk-implement/track-errors/track-errors-overview.md).)
 
    >[!TIP]
    >
-   >Il tracciamento degli errori del lettore multimediale non interrompe la sessione di tracciamento multimediale. If the media player error prevents the playback from continuing, make sure that the media tracking session is closed by calling `trackSessionEnd()` after calling `trackError()`.
+   >Il tracciamento degli errori del lettore multimediale non interrompe la sessione di tracciamento del supporto. Se l’errore del lettore multimediale impedisce il proseguimento della riproduzione, accertatevi che la sessione di tracciamento dei contenuti multimediali sia chiusa chiamando `trackSessionEnd()` dopo la chiamata `trackError()`.
 
