@@ -1,26 +1,26 @@
 ---
 description: nulle
 seo-description: nulle
-seo-title: Implementare i metadati degli annunci standard in javascript
-title: Implementare i metadati degli annunci standard in javascript
-uuid: 4 ea 10 c 5 a-ae 2 b -45 d 0-aad 3-9 f 10028 ee 7 c 3
+seo-title: Implementazione di metadati di annunci standard in JavaScript
+title: Implementazione di metadati di annunci standard in JavaScript
+uuid: 4ea10c5a-ae2b-45d0-aad3-9f10028ee7c3
 translation-type: tm+mt
 source-git-commit: ed200520b9bed990460a444dabdcf956980362ca
 
 ---
 
 
-# Implement standard ad metadata on JavaScript{#implement-standard-ad-metadata-on-javascript}
+# Implementazione di metadati di annunci standard in JavaScript{#implement-standard-ad-metadata-on-javascript}
 
 ## Costanti annuncio
 
 | Nome costante | Descrizione   |
 |---|---|
-| `StandardAdMetadata` | Costante per allegare metadati pubblicitari standard su Oggetto Ad |
+| `StandardAdMetadata` | Costante per l'associazione di metadati di annunci standard su oggetto annuncio |
 
-## Metadati annunci standard
+## Implementazione di metadati annuncio standard
 
-Per i metadati degli annunci standard, create un dizionario di coppie di valori chiave di metadati standard utilizzando le chiavi per la piattaforma:
+Per i metadati di annunci standard, create un dizionario di coppie di valori chiave standard e metadati utilizzando le chiavi per la vostra piattaforma:
 
 ```js
 var adObject =  
