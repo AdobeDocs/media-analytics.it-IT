@@ -1,7 +1,7 @@
 ---
 seo-title: Prerequisiti
 title: Prerequisiti
-uuid: 4 c 0 b 37 f 3-8615-4 cc 0-b 9 c 9-eeb 029067064
+uuid: 4c0b37f3-8615-4cc0-b9c9-eeb029067064
 translation-type: tm+mt
 source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
@@ -10,27 +10,27 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 # Prerequisiti{#prerequisites}
 
-## Decisions {#decision}
+## Decisioni {#decision}
 
-Prima di iniziare l'implementazione del tracciamento, hai alcune decisioni introduttive da prendere in considerazione di quale implementazione rende più rilevante la tua situazione:
+Prima di iniziare l'implementazione di tracciamento, devi prendere alcune decisioni anticipate, riguardo a quale implementazione è più appropriata per la tua situazione:
 
-* **Media Analytics -** Utilizzo degli SDK multimediali più recenti (implementazione standard consigliata) e/o dell'API di Media Collection (restful)
-* **Milestone -** The old Adobe tracking implementation
-* **API di inserimento dati -** Implementazione del tracciamento senza usare gli SDK multimediali
+* **Media Analytics -** Utilizzo degli SDK Media più recenti (implementazione standard e consigliata) e/o dell'API Media Collection (RESTful)
+* **Milestone -** Implementazione di tracciamento Adobe meno recente
+* **API di inserimento dei dati - Implementazione del tracciamento** senza utilizzare gli SDK di Media
 
-## Tasks {#prereq-tasks}
+## Attività {#prereq-tasks}
 
-For a *Media Analytics* implementation, here are the tasks you must complete before you begin:
+Per un'implementazione di *Media Analytics* , prima di iniziare devi completare le seguenti attività:
 
 1. **Abilita Experience Cloud.**
 
    Devi implementare Adobe Experience Platform Identity Service.
 
-   Il servizio identità abilita il framework comune di identificazione dei servizi di base, delle soluzioni e degli attributi del cliente di Experience Cloud nel servizio di base Persone. Funziona tramite l'assegnazione di un ID univoco persistente a un visitatore del sito. Quando l'organizzazione implementa il servizio ID, tale ID consente di identificare lo stesso visitatore del sito e i relativi dati in diverse soluzioni Experience Cloud.
+   Il servizio identità abilita il framework comune di identificazione per i servizi di base, le soluzioni e gli attributi cliente e pubblico di Experience Cloud nel servizio di base Persone. Funziona tramite l'assegnazione di un ID univoco persistente a un visitatore del sito. Quando l'organizzazione implementa il servizio ID, tale ID consente di identificare lo stesso visitatore del sito e i relativi dati in diverse soluzioni Experience Cloud.
 
    ![](assets/mc_id_service_graphic.png)
 
-   Il servizio ID può anche sostituire i diversi ID specifici della soluzione (ad esempio, AID di Analytics). Through the [Customer IDs and Authentication States](https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-authenticated-state.html) functionality, the ID service lets you pass in your own customer IDs to the Experience Cloud. Ricorda però che il servizio ID funziona solo con le soluzioni che hai già sottoscritto. Se non sei iscritto ad altri prodotti, il servizio ID non fornisce l'accesso.
+   Il servizio ID può anche sostituire i diversi ID specifici della soluzione (ad esempio, AID di Analytics). Through the [Customer IDs and Authentication States](https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-authenticated-state.html) functionality, the ID service lets you pass in your own customer IDs to the Experience Cloud. Ricorda, tuttavia, che il servizio ID funziona solo con le soluzioni alle quali hai già effettuato la sottoscrizione. Se non ti sei registrato per l’accesso ad altri prodotti, il servizio ID non fornisce l’accesso.
 
    Il servizio ID è un componente integrale di un gran numero di funzioni, miglioramenti e servizi correnti e futuri di Experience Cloud. Currently, the ID service supports [Analytics,](https://www.adobe.com/marketing-cloud/web-analytics.html) [Audience Manager,](https://www.adobe.com/marketing-cloud/data-management-platform.html) and [Target.](https://www.adobe.com/marketing-cloud/testing-targeting.html)
 
@@ -42,11 +42,11 @@ For a *Media Analytics* implementation, here are the tasks you must complete bef
 
    >[!IMPORTANT]
    >
-   >In the absence of any user ID information present on the media-specific calls, the default analytics [Fallback ID Methods](https://docs-author.corp.adobe.com/content/help/en/analytics/implementation/javascript-implementation/unique-visitors/visid-fallback.html) will apply.
+   >In assenza di informazioni ID utente presenti nelle chiamate specifiche per i supporti, si applicano i metodi [ID](https://docs-author.corp.adobe.com/content/help/en/analytics/implementation/javascript-implementation/unique-visitors/visid-fallback.html) fallback di analisi predefiniti.
 
-   For additional information about the Experience Cloud ID, see [Experience Cloud ID Overview,](https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-overview.html) and [Adobe Experience Platform Identity Service.](https://marketing.adobe.com/resources/help/en_US/mcvid/)
+   Per ulteriori informazioni sull'Experience Cloud ID, consulta Panoramica [Experience Cloud ID,](https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-overview.html) e Servizio identità [Adobe Experience Platform.](https://marketing.adobe.com/resources/help/en_US/mcvid/)
 
-1. **Abilitare i report di Adobe Analytics.**
+1. **Abilita rapporti di Adobe Analytics.**
 
-   To enable reports in Analytics and see the content and ad data you are collecting, see [Media reports enablement.](/help/media-reports/media-reports-enable.md)
+   Per abilitare i report in Analytics e visualizzare il contenuto e i dati degli annunci che stai raccogliendo, consulta Abilitazione dei report [multimediali.](/help/media-reports/media-reports-enable.md)
 
