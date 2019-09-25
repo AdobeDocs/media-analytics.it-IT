@@ -1,26 +1,26 @@
 ---
 description: nulle
 seo-description: nulle
-seo-title: Implementazione di metadati standard in javascript
-title: Implementazione di metadati standard in javascript
-uuid: 523 d 29 e 3-0 a 62-40 d 7-ac 74-da 645024 cdcb
+seo-title: Implementare i metadati standard in JavaScript
+title: Implementare i metadati standard in JavaScript
+uuid: 523d29e3-0a62-40d7-ac74-da645024cdcb
 translation-type: tm+mt
 source-git-commit: 959ff714d3546a06123293cac8a17b94fae1c1ff
 
 ---
 
 
-# Implement standard metadata on JavaScript{#implement-standard-metadata-on-javascript}
+# Implementare i metadati standard in JavaScript{#implement-standard-metadata-on-javascript}
 
 ## Costante metadati
 
 | Nome costante | Descrizione   |
 | --- | --- |
-| `StandardMediaMetadata` | Constant for attaching standard metadata on `MediaObject` |
+| `StandardMediaMetadata` | Costante per l'associazione di metadati standard a `MediaObject` |
 
 ## Implementazione
 
-Crea un'istanza di un oggetto di metdati standard, compila le variabili desiderate e imposta l'oggetto metadati sull'oggetto Media Heartbeat. Ad esempio:
+Creare un'istanza di un oggetto metdata standard, compilare le variabili desiderate e impostare l'oggetto metadati sull'oggetto Media Heartbeat. Ad esempio:
 
 ```js
 _onVideoLoad = function () { 
