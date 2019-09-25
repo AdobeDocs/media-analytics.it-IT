@@ -1,37 +1,37 @@
 ---
-seo-title: Tracciamento della qualità dell'esperienza su Android
-title: Tracciamento della qualità dell'esperienza su Android
-uuid: 81 ff 3939-48 a 6-45 c 1-8837-ddfa 33490559
+seo-title: Monitoraggio della qualità dell'esperienza su Android
+title: Monitoraggio della qualità dell'esperienza su Android
+uuid: 81ff3939-48a6-45c1-8837-dfa33490559
 translation-type: tm+mt
 source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
 
-# Track quality of experience on Android{#track-quality-of-experience-on-android}
+# Monitoraggio della qualità dell'esperienza su Android{#track-quality-of-experience-on-android}
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l'implementazione in tutti gli SDK 2. x. If you are implementing a 1.x version of the SDK, you can download the 1.x Developers Guides here: [Download SDKs.](/help/sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l’implementazione in tutti gli SDK 2.x. Se stai implementando una versione 1.x dell’SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
-## Informazioni su qos
+## Implementazione di QoS
 
-1. Identify when the bitrate changes during media playback and create the `MediaObject` instance using the QoS information.
+1. Identificare quando il bitrate cambia durante la riproduzione del contenuto multimediale e creare l’ `MediaObject` istanza utilizzando le informazioni QoS.
 
-   Variabili qosobject:
+   Variabili QoSObject:
 
    >[!TIP]
    >
-   >Queste variabili sono necessarie solo se prevedete di tenere traccia dei QOS.
+   >Queste variabili sono necessarie solo se si prevede di tenere traccia dei QoS.
 
    | Variabile | Descrizione | Obbligatorio |
    | --- | --- | :---: |
    | `bitrate` | Bitrate corrente | Sì |
-   | `startupTime` | Ora di avvio | Sì |
+   | `startupTime` | Tempo di avvio | Sì |
    | `fps` | Valore FPS | Sì |
-   | `droppedFrames` | Numero di fotogrammi rilasciati | Sì |
+   | `droppedFrames` | Numero di fotogrammi saltati | Sì |
 
-   Creazione di oggetti qos:
+   Creazione di oggetti QoS:
 
    ```java
    MediaObject qosObject =  
@@ -41,8 +41,8 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
                                     <DROPPED_FRAMES>);
    ```
 
-1. Make sure that `getQoSObject()` method returns the most updated QoS information.
-1. When playback switches bitrates, call the `BitrateChange` event in the Media Heartbeat instance:
+1. Accertatevi che `getQoSObject()` il metodo restituisca le informazioni QoS più aggiornate.
+1. Quando la riproduzione cambia bitrate, chiamate l’ `BitrateChange` evento nell’istanza di Media Heartbeat:
 
    ```java
    public void onBitrateChange(Observable observable, Object data) {  
@@ -52,5 +52,5 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
    >[!IMPORTANT]
    >
-   >Aggiornate l'oggetto qos e richiamate l'evento change bitrate su ogni modifica bitrate. Questo fornisce i dati qos più precisi.
+   >Aggiornare l'oggetto QoS e richiamare l'evento di modifica del bitrate su ogni modifica del bitrate. Questo fornisce i dati QoS più precisi.
 
