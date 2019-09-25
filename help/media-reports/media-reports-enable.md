@@ -1,7 +1,7 @@
 ---
-seo-title: Abilitazione dei rapporti sui file multimediali
-title: Abilitazione dei rapporti sui file multimediali
-uuid: d 306068 d-a 308-4 b 6 e -8 a 72-742 dda 0 de 428
+seo-title: Abilitazione dei rapporti multimediali
+title: Media reports enablement
+uuid: d306068d-a308-4b6e-8a72-742dda0de428
 translation-type: tm+mt
 source-git-commit: ab400b673e97f9b47c6088e09b7e7d9e7b1c9ee6
 
@@ -10,59 +10,59 @@ source-git-commit: ab400b673e97f9b47c6088e09b7e7d9e7b1c9ee6
 
 # Media reports enablement{#media-reports-enablement}
 
-Ogni suite di rapporti che raccoglie metriche multimediali deve essere configurata prima dell'invio dei dati multimediali.
+Each report suite that collects media metrics must be configured before media data is sent.
 
 >[!TIP]
 >
->Per sfruttare le nuove funzionalità, i clienti esistenti di Media Analytics devono riattivare il tracciamento dei contenuti multimediali per i loro RSIDS.
+>Per sfruttare le nuove funzionalità, i clienti esistenti di Media Analytics dovrebbero riabilitare il tracciamento dei supporti per i loro RSID.
 
-1. In [Reports &amp; Analytics](https://my.omniture.com/login/) click [!UICONTROL Admin] &gt; [!UICONTROL Report Suites].
-1. Select the report suite(s) where you are collecting media data and click [!UICONTROL Edit Settings] &gt; [!UICONTROL Media Management] &gt; [!UICONTROL Media Reporting].
+1. In [Reporting e analisi](https://my.omniture.com/login/) fate clic su [!UICONTROL Admin] &gt; [!UICONTROL Report Suites].
+1. Selezionate le suite di rapporti in cui state raccogliendo i dati multimediali e fate clic su [!UICONTROL Edit Settings] &gt; [!UICONTROL Media Management] &gt; [!UICONTROL Media Reporting].
 
-   ![](assets/media-reporting.png){width = "400 px"}
+   ![](assets/media-reporting.png){width="400px"}
 
-1. On the **[!UICONTROL Media Reporting]** page, enable **[!UICONTROL Media Core]**, and optionally enable **[!UICONTROL Media Ads]**, **[!UICONTROL Media Chapters]**, and **[!UICONTROL Media Quality]**.
+1. On the  page, enable , and optionally enable , , and .**[!UICONTROL Media Reporting]****[!UICONTROL Media Core]****[!UICONTROL Media Ads]****[!UICONTROL Media Chapters]****[!UICONTROL Media Quality]**
 
-   La misurazione file multimediali include i seguenti moduli:
+   Media measurement includes the following modules:
 
    * **Media Core**
 
-      La misurazione media media viene utilizzata per i contenuti multimediali. Questo utilizzerà le evar della soluzione (o Personalizzate) per tenere traccia di Contenuto, Tipo di contenuto, Nome lettore contenuto e Canale contenuto. Gli eventi della soluzione (o Personalizzato) saranno utilizzati per gli avvii Contenuti multimediali, i contenuti, i completamenti dei contenuti e il tempo trascorso.
+      La misurazione dei contenuti multimediali di base viene utilizzata per i contenuti multimediali. In questo modo si utilizzeranno le eVar della soluzione (o personalizzate) per tenere traccia di Contenuto, Tipo di contenuto, Nome lettore contenuto e Canale contenuto. Gli eventi della soluzione (o personalizzati) verranno utilizzati per gli avvii dei contenuti multimediali, gli avvii dei contenuti, i completamenti dei contenuti e il tempo trascorso per i contenuti.
 
    * **Annunci multimediali**
 
-      La misurazione degli annunci multimediali viene utilizzata per la misurazione degli annunci nel contenuto multimediale. Questa opzione utilizza evvars della soluzione per misurare Ad, Ad Player Name, Ad Pod e Ad nella posizione del contenitore. Gli eventi della soluzione saranno utilizzati per Avvii annunci, Annunci pubblicitari, Tempo trascorso trascorso e Tempo video trascorso.
+      La misura degli annunci multimediali viene utilizzata per la misurazione degli annunci all'interno del contenuto multimediale. Questo utilizzerà le eVar della soluzione per misurare Annuncio, Nome lettore pubblicitario, Contenitore annunci e Annuncio nella posizione del contenitore. Gli eventi della soluzione verranno utilizzati per Avvii annunci, Completamento annunci, Tempo annunci trascorso e Tempo video trascorso.
 
-   * **Capitoli media**
+   * **Media Chapters**
 
-      La misurazione dei capitoli video viene utilizzata per misurare i capitoli. Un capitolo è una suddivisione di contenuto all'interno di un singolo elemento multimediale. Verrà utilizzato un evar della soluzione per memorizzare l'ID capitolo. Gli eventi della soluzione verranno utilizzati per Avvii capitolo, Completamento capitolo e Durata capitolo. I metadati capitolo aggiuntivi del Nome capitolo e della Posizione dei capitoli saranno forniti come classificazioni dell'ID capitolo.
+      Video chapters measurement is used for the measurement of chapters. A chapter is a sub-division of content within a single media. Questo utilizzerà una eVar soluzione per memorizzare l'ID capitolo. Gli eventi della soluzione verranno utilizzati per gli avvii dei capitoli, per i completamenti dei capitoli e per il tempo trascorso per i capitoli. I metadati aggiuntivi del capitolo Nome e Posizione capitolo verranno forniti come classificazioni dell’ID capitolo.
 
-   * **Qualità file multimediali**
+   * **Media Quality**
 
-      La misurazione della qualità video viene utilizzata per misurare la qualità della riproduzione del contenuto. Questo utilizza le evar della soluzione per memorizzare il tempo in Avvio, Eventi buffer, Durata buffer totale, Switch bitrate, Bitrate medio, Errori e Fotogrammi rilasciati. Gli eventi della soluzione saranno utilizzati per il tempo all'avvio, i rilasci prima dell'avvio, i flussi interessati dal buffer, gli eventi buffer, la durata totale buffer, flussi interessati da bitrate, variazioni di bitrate, bitrate medio, flussi interessati dagli errori, eventi errore, flussi interessati dai fotogrammi rilasciati e fotogrammi rilasciati.
+      Video quality measurement is used for measuring the quality of the content playback. This will use Solution eVars to store Time to Start, Buffer Events, Total Buffer Duration, Bitrate Switches, Average Bitrate, Errors, and Dropped Frames. Solution events will be used for Time to Start, Drops before Start, Buffer Impacted Streams, Buffer Events, Total Buffer Duration, Bitrate Change Impacted Streams, Bitrate Changes, Avg Bitrate, Error Impacted Streams, Error Events, Dropped Frame Impacted Streams, and Dropped Frames.
 
-   * **Video e metadati annuncio video**
+   * **Video &amp; Video Ad Metadata**
 
-      I metadati possono essere allegati a un file multimediale e/o ad un annuncio per descrivere e classificare ulteriormente questi elementi. I supporti standardizzati e i metadati degli annunci verranno raccolti tramite variabili e classificazioni della soluzione. Valori da includere: Show, Season, Episode, Asset ID, Genre, First Air Date, First Digital Date, Content Rating, Originator, Network, Show Type, Ad Upload, MVPD, Authorized, Day Part, Media Session ID, Advertiser, Campaign ID, and Creative ID.
+      I metadati possono essere allegati a un supporto e/o a un annuncio per descrivere e classificare ulteriormente tale supporto o annuncio. I supporti standardizzati e i metadati degli annunci verranno raccolti tramite variabili e classificazioni della soluzione. Valori da includere: Mostra, Stagione, Episodio, ID risorsa, Genere, Data prima aria, Prima data digitale, Valutazione contenuto, Creatore, Rete, Tipo di spettacolo, Caricamenti annunci, MVPD, Autorizzato, Parte giorno, ID sessione media, Inserzionista, ID campagna e ID creativo.
 
-   * **Metadati audio e audio**
+   * **Metadati annuncio audio e audio**
 
-      I metadati possono essere associati all'audio e/o a un annuncio per descrivere e classificare ulteriormente tale audio o annuncio. L'audio standardizzato e i metadati degli annunci verranno raccolti tramite variabili e classificazioni della soluzione. Valori da includere: Artist, Album, Label, Author, Publisher, Station, Show, Season, Episode ID, Genre, First Air Date, First Digital Date, Content Ratings, Originator, Show Type, Ad Upload, Day Part, Media Session ID, Advertiser, Campaign ID, and Creative ID.
-   L'abilitazione di ogni modulo riserva una serie di variabili e crea un nuovo set di report. A eccezione della Qualità, nei rapporti non saranno presenti dati, a meno che l'implementazione corrispondente sia stata completata. L'implementazione del modulo Core implementa anche il modulo Quality se lo attivate.
+      I metadati possono essere allegati all'audio e/o a un annuncio per descrivere e classificare ulteriormente tale audio/annuncio. L'audio standardizzato e i metadati degli annunci verranno raccolti tramite variabili e classificazioni della soluzione. Valori da includere: Artista, Album, Label, Author, Publisher, Station, Show, Stagione, Episodio, ID risorsa, Genere, Prima Aria Data, Prima Digitale, Valutazione contenuto, Creatore, Tipo di evento, Caricamenti annuncio, Giorno Parte, ID sessione multimediale, Inserzionista, ID campagna e ID creativo.
+   Abilitando ciascun modulo si riserva un set di variabili e si crea un nuovo set di rapporti. Ad eccezione di Qualità, i rapporti non conterranno alcun dato, a meno che l'implementazione corrispondente non sia stata completata. L'implementazione del modulo Core implementa anche il modulo Quality se lo si abilita.
 
-   Se non state ancora tracciando annunci, capitoli o qualità di riproduzione, potete abilitare opzioni aggiuntive in qualsiasi momento.
+   Se non state ancora tracciando annunci, capitoli o qualità di riproduzione, potete attivare opzioni aggiuntive in qualsiasi momento.
 
 1. Fai clic su **[!UICONTROL Save]**.
 
-   If this report suite is already configured to collect media data, after you click **[!UICONTROL Save]**, an additional configuration page is displayed. If you see the [!UICONTROL Media Core measurement] page, continue to the next step.
+   Se questa suite di rapporti è già configurata per la raccolta dei dati multimediali, dopo aver fatto clic su di essa **[!UICONTROL Save]**, viene visualizzata una pagina di configurazione aggiuntiva. Se viene visualizzata la [!UICONTROL Media Core measurement] pagina, continuate con il passaggio successivo.
 
-1. (Conditional) On the [!UICONTROL Media Core measurement] page, choose to continue using custom variables or choose to use solution variables.
+1. (Condizionale) Nella [!UICONTROL Media Core measurement] pagina, scegliere di continuare a utilizzare variabili personalizzate o scegliere di utilizzare variabili della soluzione.
 
    | Opzione | Note |
    | --- | --- |
-   | Continuare a utilizzare variabili personalizzate | Pros and Cons:<ul> <li> **Professionisti:** Il tracciamento dei contenuti continua a funzionare dopo la migrazione. </li> <li> **Cons:** Richiede di mantenere due evar personalizzati e tre eventi personalizzati allocati ai supporti. Riassumi l'utilizzo di una evar personalizzata e di un evento personalizzato. </li> </ul> Per continuare a utilizzare variabili personalizzate: <ol> <li>Selezionate Usa variabili personalizzate, quindi fate clic su Salva. </li> <li>Quando richiesto, mappate le evar e gli eventi correnti e fate clic su Salva: </li> </ol> |
-   | Migrazione alle variabili della soluzione | Pros and Cons:<ul> <li> **Professionisti:** Riassumi l'uso di tre evar personalizzati e quattro eventi personalizzati. </li> <li> **Cons:** Perderai **tutte** le tendenze e il confronto storico per i rapporti sui contenuti multimediali. Non è quindi possibile visualizzare le visualizzazioni di contenuto o il tempo di contenuto per qualsiasi data prima della migrazione ai heartbeat. </li> </ul> **Limitazione:** Non effettuare la migrazione alle variabili della soluzione, a meno che non desideri mantenere questa tendenza. Tutti i clienti devono utilizzare variabili di soluzione e regole di elaborazione per inserire i dati multimediali in prop ed evar esistenti, solo se devono mantenere continuità storica. To migrate to solution variables: Select [!UICONTROL Use Solution Variables] and click [!UICONTROL Save]. <br><br> IMPORTANTE: La migrazione alle variabili della soluzione comporta la perdita **di tutte** le tendenze e il confronto storico per i rapporti sui contenuti multimediali. |
+   | Continua utilizzando variabili personalizzate | Pro e Cons:<ul> <li> **** Pro: La tendenza dei contenuti continua a funzionare dopo la migrazione. </li> <li> **** Cons: Richiede di mantenere due eVar personalizzate e tre eventi personalizzati assegnati ai supporti. È possibile riutilizzare un'eVar personalizzata e un evento personalizzato. </li> </ul> Per continuare a utilizzare variabili personalizzate: <ol> <li>Selezionate Usa variabili personalizzate, quindi fate clic su Salva. </li> <li>Quando richiesto, mappate le eVar ed eventi personalizzati correnti e fate clic su Salva: </li> </ol> |
+   | Migrazione alle variabili della soluzione | Pro e Cons:<ul> <li> **** Pro: Puoi nuovamente utilizzare tre eVar personalizzate e quattro eventi personalizzati. </li> <li> **** Cons: Perdi **tutte** le tendenze storiche e i confronti per i report sui media. Ciò significa che non è possibile visualizzare i trend relativi alle visualizzazioni dei contenuti o al tempo di riproduzione dei contenuti per date precedenti alla migrazione a heartbeat. </li> </ul> **** Limitazione:  Non eseguire la migrazione alle variabili della soluzione a meno che non si sia certi di non voler mantenere questa tendenza. Tutti i clienti devono utilizzare le variabili di soluzione e le regole di elaborazione per inserire i dati multimediali nelle proprietà e nelle eVar esistenti, solo se devono preservare la continuità storica. Per migrare alle variabili della soluzione:Selezionate [!UICONTROL Use Solution Variables] e fate clic su [!UICONTROL Save]. <br><br> IMPORTANTE: La migrazione alle variabili della soluzione comporta la perdita di **tutte** le tendenze storiche e il confronto per i report multimediali. |
 
 >[!IMPORTANT]
 >
->Do not change the classification names for any variables listed in the Metrics and metadata tables (e.g., [Audio and video parameters](/help/metrics-and-metadata/audio-video-parameters.md)) that are described there under Reporting/Reserved Variable as "classification". Le classificazioni multimediali vengono definite quando una suite di rapporti è abilitata per il tracciamento multimediale. Di tanto in tanto, Adobe aggiunge nuove proprietà e, quando ciò accade, i clienti devono riabilitare le suite di rapporti a ottenere l'accesso alle nuove proprietà del supporto. Durante il processo di aggiornamento Adobe determina se le classificazioni sono abilitate controllando i nomi delle variabili. Se mancano alcuni di essi, Adobe ne aggiunge di nuovo quelli mancanti.
+>Non modificate i nomi delle classificazioni per le variabili elencate nelle tabelle Metriche e metadati (ad esempio, parametri [](/help/metrics-and-metadata/audio-video-parameters.md)audio e video) che sono qui descritti in Variabile Reporting/Riservato come "classificazione". Le classificazioni dei supporti vengono definite quando una suite di rapporti è abilitata per il tracciamento dei supporti. Di tanto in tanto, Adobe aggiunge nuove proprietà e, in questo caso, i clienti devono riabilitare le suite di rapporti per poter accedere alle nuove proprietà del supporto. Durante il processo di aggiornamento, Adobe determina se le classificazioni sono abilitate controllando i nomi delle variabili. Se manca qualcuno di essi, Adobe aggiunge di nuovo quelli mancanti.
