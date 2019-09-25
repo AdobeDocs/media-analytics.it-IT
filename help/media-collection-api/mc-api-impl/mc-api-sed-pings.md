@@ -1,20 +1,20 @@
 ---
 seo-title: Invio di eventi di ping
 title: Invio di eventi di ping
-uuid: c 92 c 1 a 92-3 af 6-4474-9 e 42-ffb 8 f 6 c 94 b 33
+uuid: c92c1a92-3af6-4474-9e42-ffb8f6c94b33
 translation-type: tm+mt
 source-git-commit: 6468ace2e30db1a427a3d7f1b080ab42c578351a
 
 ---
 
 
-# Sending ping events{#sending-ping-events}
+# Invio di eventi di ping{#sending-ping-events}
 
-**Per il contenuto principale, dovete attivare gli eventi ogni 10 secondi, a partire da 10 secondi di riproduzione, indipendentemente dagli altri eventi API che avete inviato. For Ad tracking, you must fire ping events every 1 second.**
+**Per il contenuto principale, è necessario attivare gli eventi di ping ogni 10 secondi, a partire da 10 secondi di riproduzione, indipendentemente dagli altri eventi API inviati. Per il tracciamento degli annunci, devi attivare gli eventi di ping ogni 1 secondo.**
 
-Gli eventi di ping sono letteralmente "heartbeat" di Media Analytics. The only required parameters for a ping call are `eventType: ping` along with the `playerTime` object (playhead position and timestamp).
+Gli eventi ping sono letteralmente il "battito di cuore" di Media Analytics. Gli unici parametri richiesti per una chiamata ping sono `eventType: ping` insieme all' `playerTime` oggetto (posizione dell'indicatore di riproduzione e marca temporale).
 
-Lo snippet di codice seguente mostra uno dei metodi per implementare un meccanismo di aggancio temporizzato per il contenuto principale (10 secondo intervallo):
+Il frammento di codice seguente mostra un modo per implementare un meccanismo di ping temporizzato per il contenuto principale (10 secondi di intervallo):
 
 ```js
 ... 
