@@ -1,37 +1,37 @@
 ---
-seo-title: Tracciare la qualità dell'esperienza su iOS
-title: Tracciare la qualità dell'esperienza su iOS
-uuid: cae 2 c 142-ed 39-4234-a 711-765 dcabc 5415
+seo-title: Monitoraggio della qualità dell'esperienza su iOS
+title: Monitoraggio della qualità dell'esperienza su iOS
+uuid: cae2c142-ed39-4234-a711-765dcabc5415
 translation-type: tm+mt
 source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
 
-# Track quality of experience on iOS{#track-quality-of-experience-on-ios}
+# Monitoraggio della qualità dell'esperienza su iOS{#track-quality-of-experience-on-ios}
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l'implementazione in tutti gli SDK 2. x. If you are implementing a 1.x version of the SDK, you can download the 1.x Developers Guides here: [Download SDKs.](/help/sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l’implementazione in tutti gli SDK 2.x. Se stai implementando una versione 1.x dell’SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
 ## Implementazione di QOS
 
-1. Identify when the bitrate changes during media playback and create the `MediaObject` instance using the QoS information.
+1. Identificare quando il bitrate cambia durante la riproduzione del contenuto multimediale e creare l’ `MediaObject` istanza utilizzando le informazioni QoS.
 
-   Variabili qosobject:
+   Variabili QoSObject:
 
    | Variabile | Descrizione | Obbligatorio |
    | --- | --- | :---: |
    | `bitrate` | Bitrate corrente | Sì |
-   | `startupTime` | Ora di avvio | Sì |
+   | `startupTime` | Tempo di avvio | Sì |
    | `fps` | Valore FPS | Sì |
-   | `droppedFrames` | Numero di fotogrammi rilasciati | Sì |
+   | `droppedFrames` | Numero di fotogrammi saltati | Sì |
 
    >[!TIP]
    >
-   >Queste variabili sono necessarie solo se prevedete di tenere traccia dei QOS.
+   >Queste variabili sono necessarie solo se si prevede di tenere traccia dei QoS.
 
-   Creazione di oggetti qos:
+   Creazione di oggetti QoS:
 
    ```
    id qosObject = [ADBMediaHeartbeat createQoSObjectWithBitrate:[BITRATE] 
@@ -40,8 +40,8 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
                                      droppedFrames:[DROPPED_FRAMES]];
    ```
 
-1. Make sure that `getQoSObject` method returns the most updated QoS information.
-1. When playback switches bitrates, call the `BitrateChange` event in the Media Heartbeat instance:
+1. Accertatevi che `getQoSObject` il metodo restituisca le informazioni QoS più aggiornate.
+1. Quando la riproduzione cambia bitrate, chiamate l’ `BitrateChange` evento nell’istanza di Media Heartbeat:
 
    ```
    - (void)onBitrateChange:(NSNotification *)notification { 
@@ -53,5 +53,5 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
    >[!IMPORTANT]
    >
-   >Aggiornate l'oggetto qos e richiamate l'evento change bitrate su ogni modifica bitrate. Questo fornisce i dati qos più precisi.
+   >Aggiornare l'oggetto QoS e richiamare l'evento di modifica del bitrate su ogni modifica del bitrate. Questo fornisce i dati QoS più precisi.
 
