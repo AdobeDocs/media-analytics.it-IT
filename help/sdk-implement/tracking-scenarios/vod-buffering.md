@@ -1,32 +1,32 @@
 ---
 seo-title: Riproduzione VOD con buffering
 title: Riproduzione VOD con buffering
-uuid: 958 f 7692-7193-40 fb-a 8 e 7-2 ff 4 fa 805330
+uuid: 958f7692-7193-40fb-a8e7-2ff4fa805330
 translation-type: tm+mt
 source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
 
-# VOD playback with buffering{#vod-playback-with-buffering}
+# Riproduzione VOD con buffering{#vod-playback-with-buffering}
 
 ## Scenario {#section_13BD203CBF7546D2A6AD0129B1EEB735}
 
-In questo scenario, alcune buffering si verificano quando il contenuto VOD viene riprodotto.
+In questo scenario, si verifica un buffering durante la riproduzione del contenuto VOD.
 
-Unless specified, the network calls in this scenario are the same as the calls in the [VOD playback with no ads](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario.
+Se non viene specificato, le chiamate di rete in questo scenario sono le stesse delle chiamate nella riproduzione [VOD senza scenari di annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) .
 
-| Attivatore   | Heartbeat, metodo  | Chiamate di rete  | Note   |
+| Attivatore   | Metodo Heartbeat | Chiamate di rete | Note   |
 |---|---|---|---|
-| User clicks **[!UICONTROL Play]** | `trackSessionStart` | Inizio del contenuto di Analytics, Inizio contenuto Heartbeat | This can be a user clicking **[!UICONTROL Play]** or an auto-play event. |
-| Viene riprodotto il primo fotogramma del video. | `trackPlay` | Riproduzione contenuto heartbeat | Questo metodo attiva il timer. Heartbeats viene inviato ogni 10 secondi a condizione che la riproduzione continui. |
-| Il contenuto viene riprodotto. |  | Heartbeats contenuto |  |
-| Viene avviato il buffering. | `trackEvent:BufferStart` | Buffer Heartbeat |  |
-| Il contenuto viene bufferizzato. |  | Heartbeats contenuto |  |
-| Il buffering viene completato. | `trackEvent:BufferComplete` | Buffer Heartbeat, Heartbeat Play |  |
-| Il contenuto viene riprodotto. |  | Heartbeats contenuto |  |
-| Riproduzione del contenuto completata. | `trackComplete` | Heartbeat Content Complete | È stata raggiunta la fine dell'indicatore di riproduzione. |
-| La sessione è terminata. | `trackSessionEnd` |  | `SessionEnd` indica la fine di una sessione di visualizzazione. Questa API deve essere chiamata anche se l'utente non guarda il video al completamento. |
+| Clic utente **[!UICONTROL Play]** | `trackSessionStart` | Inizio contenuto Analytics, Inizio contenuto Heartbeat | Può trattarsi di un clic dell'utente **[!UICONTROL Play]** o di un evento di riproduzione automatica. |
+| Viene riprodotto il primo fotogramma del video. | `trackPlay` | Heartbeat Content Play | Questo metodo attiva il timer. Gli heartbeat vengono inviati ogni 10 secondi fintanto che la riproduzione continua. |
+| Il contenuto viene riprodotto. |  | Heartbeat di contenuto |  |
+| Il buffering inizia. | `trackEvent:BufferStart` | Buffer Heartbeat |  |
+| Il contenuto viene memorizzato nel buffer. |  | Heartbeat di contenuto |  |
+| Il buffering è completo. | `trackEvent:BufferComplete` | Buffer Heartbeat, Heartbeat Play |  |
+| Il contenuto viene riprodotto. |  | Heartbeat di contenuto |  |
+| La riproduzione del contenuto viene completata. | `trackComplete` | Heartbeat Content Complete | È stata raggiunta la fine del playhead. |
+| La sessione è finita. | `trackSessionEnd` |  | `SessionEnd` indica la fine di una sessione di visualizzazione. Questa API deve essere chiamata anche se l'utente non guarda il video al termine. |
 
 ## Parametri {#section_A52A57C9FB1C41CEA6C0E2D53E01048E}
 
@@ -44,7 +44,7 @@ In questo scenario, il buffering si verifica quando il contenuto VOD viene ripro
 
 ### Android
 
-Per visualizzare questo scenario in Android, impostate il seguente codice:
+Per visualizzare questo scenario in Android, imposta il seguente codice:
 
 ```java
 // Set up mediaObject 
@@ -103,7 +103,7 @@ _mediaHeartbeat.trackSessionEnd();
 ........ 
 ```
 
-### App
+### iOS
 
 Per visualizzare questo scenario in iOS, imposta il seguente codice:
 
@@ -161,7 +161,7 @@ NSMutableDictionary *videoContextData = [[NSMutableDictionary alloc] init];
 
 ### JavaScript
 
-Per visualizzare questo scenario, immettete il testo seguente:
+Per visualizzare questo scenario, immettere il testo seguente:
 
 ```js
 // Set up mediaObject 
