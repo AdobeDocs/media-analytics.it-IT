@@ -1,48 +1,48 @@
 ---
-seo-title: Tenere traccia della riproduzione di base su Android
-title: Tenere traccia della riproduzione di base su Android
-uuid: ab 5 fab 95-76 ed -4 ae 6-aedb -2 e 66 emask 7607
+seo-title: Tracciare la riproduzione di base su Android
+title: Tracciare la riproduzione di base su Android
+uuid: ab5fab95-76ed-4ae6-aedb-2e66eece7607
 translation-type: tm+mt
 source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
 
-# Track core playback on Android{#track-core-playback-on-android}
+# Tracciare la riproduzione di base su Android{#track-core-playback-on-android}
 
 >[!IMPORTANT]
->Questa documentazione copre il tracciamento nella versione 2. x dell'SDK. If you are implementing a 1.x version of the SDK, you can download the 1.x Developers Guide for Android here: [Download SDKs](/help/sdk-implement/download-sdks.md)
+>Questa documentazione descrive il tracciamento nella versione 2.x dell’SDK. Se stai implementando una versione 1.x dell’SDK, puoi scaricare la guida per sviluppatori 1.x per Android qui: [Download di SDK](/help/sdk-implement/download-sdks.md)
 
-1. **Configurazione di tracciamento iniziale**
+1. **Configurazione iniziale tracciamento**
 
-   Identify when the user triggers the intention of playback (the user clicks play and/or autoplay is on) and create a `MediaObject` instance.
+   Identificare quando l'utente attiva l'intenzione di riproduzione (l'utente fa clic su play e/o la riproduzione automatica è attivata) e creare un' `MediaObject` istanza.
 
-   [API createmediaobject](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/com/adobe/primetime/va/simple/MediaHeartbeat.html#createMediaObject-java.lang.String-java.lang.String-java.lang.Double-java.lang.String-com.adobe.primetime.va.simple.MediaHeartbeat.MediaType-)
+   [createMediaObject API](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/com/adobe/primetime/va/simple/MediaHeartbeat.html#createMediaObject-java.lang.String-java.lang.String-java.lang.Double-java.lang.String-com.adobe.primetime.va.simple.MediaHeartbeat.MediaType-)
 
    | Nome della variabile | Descrizione | Obbligatorio |
    | --- | --- | :---: |
-   | `name` | Nome file multimediali | Sì |
-   | `mediaId` | Identificatore univoco multimediale | Sì |
-   | `length` | Lunghezza media | Sì |
-   | `streamType` | Stream type (see _StreamType constants_ below) | Sì |
-   | `mediaType` | Media type (see _MediaType constants_ below) | Sì |
+   | `name` | Nome file multimediale | Sì |
+   | `mediaId` | Identificatore univoco del supporto | Sì |
+   | `length` | Lunghezza del supporto | Sì |
+   | `streamType` | Tipo di flusso (vedere le costanti __ StreamType riportate di seguito) | Sì |
+   | `mediaType` | Tipo di supporto (vedere le costanti __ MediaType riportate di seguito) | Sì |
 
    **`StreamType`costanti:**
 
    | Nome costante | Descrizione |
    |---|---|
-   | `VOD` | Tipo di flusso per Video su richiesta. |
-   | `LIVE` | Tipo di flusso per il contenuto Live. |
+   | `VOD` | Tipo di flusso per Video on Demand. |
+   | `LIVE` | Tipo di flusso per il contenuto live. |
    | `LINEAR` | Tipo di flusso per il contenuto lineare. |
-   | `AOD` | Tipo di flusso per Audio on demand |
-   | `AUDIOBOOK` | Tipo di flusso per il libro audio |
+   | `AOD` | Tipo di flusso per Audio On Demand |
+   | `AUDIOBOOK` | Tipo di flusso per la Rubrica audio |
    | `PODCAST` | Tipo di flusso per Podcast |
 
    **`MediaType`costanti:**
 
    | Nome costante | Descrizione |
    |---|---|
-   | `Audio` | Tipo di file multimediale per i flussi audio. |
+   | `Audio` | Tipo di supporto per i flussi audio. |
    | `Video` | Tipo di supporto per i flussi video. |
 
    ```
@@ -52,7 +52,7 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 1. **Allega metadati**
 
-   Allega, facoltativamente, oggetti di metadati standard e/o personalizzati alla sessione di tracciamento attraverso variabili di dati contestuali.
+   È possibile allegare oggetti metadati standard e/o personalizzati alla sessione di tracciamento tramite variabili di dati di contesto.
 
    * **Metadati standard**
 
@@ -60,13 +60,13 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
       >[!NOTE]
       >
-      >Allegare l'oggetto metadati standard all'oggetto multimediale è facoltativo.
+      >Il collegamento dell'oggetto metadati standard all'oggetto multimediale è facoltativo.
 
-      * Media metadata keys API Reference - [Standard metadata keys - Android](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/com/adobe/primetime/va/simple/MediaHeartbeat.VideoMetadataKeys.html)
-      * See the comprehensive set of available video metadata here: [Audio and video parameters](/help/metrics-and-metadata/audio-video-parameters.md)
+      * Riferimento API per le chiavi di metadati multimediali - chiavi di metadati [standard - Android](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/com/adobe/primetime/va/simple/MediaHeartbeat.VideoMetadataKeys.html)
+      * Consultate il set completo di metadati video disponibili qui: Parametri [audio e video](/help/metrics-and-metadata/audio-video-parameters.md)
    * **Metadati personalizzati**
 
-      Creare un dizionario per le variabili personalizzate e compilare i dati per questi contenuti multimediali. Ad esempio:
+      Create un dizionario per le variabili personalizzate e inserite i dati per questo supporto. Ad esempio:
 
       ```java
       HashMap<String, String> mediaMetadata =  
@@ -77,9 +77,9 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
       ```
 
 
-1. **Tenere traccia dell'intenzione di avviare la riproduzione**
+1. **Tenere traccia dell’intenzione di avviare la riproduzione**
 
-   To begin tracking a media session, call `trackSessionStart` on the Media Heartbeat instance. Ad esempio:
+   Per avviare il tracciamento di una sessione multimediale, invocate `trackSessionStart` l’istanza Media Heartbeat. Ad esempio:
 
    ```java
    public void onVideoLoad(Observable observable, Object data) {  
@@ -89,19 +89,19 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
    >[!TIP]
    >
-   >Il secondo valore è il nome dell'oggetto metadati personalizzato creato nel passaggio 2.
+   >Il secondo valore è il nome dell'oggetto metadati multimediale personalizzato creato al punto 2.
 
    >[!IMPORTANT]
    >
-   >`trackSessionStart` monitora l'intento utente di riproduzione, non l'inizio della riproduzione. This API is used to load the media data/metadata and to estimate the time-to-start QoS metric (the time duration between `trackSessionStart` and `trackPlay`).
+   >`trackSessionStart` tiene traccia delle intenzioni dell’utente in merito alla riproduzione, non dell’inizio della riproduzione. Questa API viene utilizzata per caricare i dati/metadati multimediali e per stimare la metrica QoS time-to-start (la durata tra `trackSessionStart` e `trackPlay`).
 
    >[!NOTE]
    >
-   >If you are not using custom media metadata, simply send an empty object for the second argument in `trackSessionStart`.
+   >Se non utilizzate metadati multimediali personalizzati, inviate semplicemente un oggetto vuoto per il secondo argomento in `trackSessionStart`.
 
-1. **Tenere traccia dell'inizio effettivo della riproduzione**
+1. **Tracciare l’inizio effettivo della riproduzione**
 
-   Identify the event from the media player for the beginning of the media playback, where the first frame of the media is rendered on the screen, and call `trackPlay`:
+   Mediante questo componente, potete identificare l’evento dal lettore multimediale per l’inizio della riproduzione, in cui viene riprodotto il primo fotogramma del file multimediale sullo schermo, e chiamare `trackPlay`:
 
    ```java
    // Video is rendered on the screen) and call trackPlay.  
@@ -112,7 +112,7 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 1. **Tenere traccia del completamento della riproduzione**
 
-   Identify the event from the media player for the completion of the media playback, where the user has watched the content until the end, and call `trackComplete`:
+   Identificate l’evento dal lettore multimediale per il completamento della riproduzione, in cui l’utente ha guardato il contenuto fino alla fine, e chiamate `trackComplete`:
 
    ```java
    public void onVideoComplete(Observable observable, Object data) { 
@@ -120,9 +120,9 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
    }
    ```
 
-1. **Tracciamento della fine della sessione**
+1. **Tenere traccia della fine della sessione**
 
-   Identify the event from the media player for the unloading/closing of the media playback, where the user closes the media and/or the media is completed and has been unloaded, and call `trackSessionEnd`:
+   Identificare l’evento dal lettore multimediale per lo scaricamento/la chiusura della riproduzione multimediale, in cui l’utente chiude il supporto e/o il supporto è stato completato e scaricato, e chiamare `trackSessionEnd`:
 
    ```java
    // Closes the media and/or the media completed and unloaded,  
@@ -134,11 +134,11 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
    >[!IMPORTANT]
    >
-   >`trackSessionEnd` segna la fine di una sessione di tracciamento multimediale. If the session was successfully watched to completion, where the user watched the content until the end, ensure that `trackComplete` is called before `trackSessionEnd`. Any other `track*` API call is ignored after `trackSessionEnd`, except for `trackSessionStart` for a new media tracking session.
+   >`trackSessionEnd` segna la fine di una sessione di tracciamento dei supporti. Se la sessione è stata guardata con successo e l’utente ha guardato il contenuto fino alla fine, accertatevi che `trackComplete` venga chiamato prima `trackSessionEnd`. Qualsiasi altra chiamata `track*` API viene ignorata dopo `trackSessionEnd`, fatta eccezione per `trackSessionStart` una nuova sessione di tracciamento dei supporti.
 
-1. **Tenere traccia di tutti i possibili scenari di pausa**
+1. **Tenere traccia di tutti gli scenari di pausa possibili**
 
-   Identify the event from the media player for media pause and call `trackPause`:
+   Identificare l’evento dal lettore multimediale per la pausa e la chiamata del supporto `trackPause`:
 
    ```java
    public void onVideoPause(Observable observable, Object data) {  
@@ -146,16 +146,16 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
    }
    ```
 
-   **Scenari in pausa**
+   **Pausa scenari**
 
-   Identify any scenario in which the Video Player will pause and make sure that `trackPause` is properly called. The following scenarios all require that your app call `trackPause()`:
+   Identificate eventuali situazioni in cui il lettore video si interrompe e accertatevi che venga chiamato `trackPause` correttamente. Tutti gli scenari seguenti richiedono che la chiamata dell'app `trackPause()`:
 
-   * L'utente si mette in pausa in modo esplicito nell'app.
-   * Il lettore si attiva nello stato Pausa.
-   * (*Mobile Apps*) - The user puts the application into the background, but you want the app to keep the session open.
-   * (*Mobile Apps*) - Any type of system interrupt occurs that causes an application to be backgrounded. Ad esempio, l'utente riceve una chiamata, oppure un pop-up da un'altra applicazione si verifica, ma si desidera che l'applicazione mantenga la sessione viva per consentire all'utente di riprendere i contenuti multimediali dal punto di interruzione.
+   * L'utente interrompe esplicitamente la pausa nell'app.
+   * Il lettore si mette nello stato Pausa.
+   * (App *mobili*) - L'utente mette l'applicazione in background, ma si desidera che l'app tenga aperta la sessione.
+   * (App *mobili*) - Si verifica qualsiasi tipo di interruzione del sistema che causa il background di un'applicazione. Ad esempio, l'utente riceve una chiamata, o si verifica un pop-up da un'altra applicazione, ma si desidera che l'applicazione mantenga in vita la sessione per dare all'utente la possibilità di riprendere il supporto dal punto di interruzione.
 
-1. Identify the event from the player for media play and/or media resume from pause and call `trackPlay`.
+1. Identificare l’evento dal lettore per la riproduzione di contenuti multimediali e/o la ripresa di contenuti multimediali dalla pausa e dalla chiamata `trackPlay`.
 
    ```java
    // trackPlay() 
@@ -166,10 +166,10 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
    >[!TIP]
    >
-   >Potrebbe trattarsi della stessa origine dell'evento utilizzata al passaggio 4. Ensure that each `trackPause()` API call is paired with a following `trackPlay()` API call when the media playback resumes.
+   >Può trattarsi della stessa origine evento utilizzata nel passaggio 4. Quando la riproduzione dei contenuti multimediali riprende, accertatevi che ogni chiamata `trackPause()` API sia associata alla seguente chiamata `trackPlay()` API.
 
-Per ulteriori informazioni sulla riproduzione di base di tracciamento, consultate quanto segue:
+Per ulteriori informazioni sul tracciamento della riproduzione di base, consultate:
 
-* Tracking scenarios: [VOD playback with no ads](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)
+* Scenari di tracciamento: Riproduzione [VOD senza annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)
 * Lettore di esempio incluso con Android SDK per un esempio di tracciamento completo.
 
