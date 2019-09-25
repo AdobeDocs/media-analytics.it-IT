@@ -1,20 +1,20 @@
 ---
 seo-title: Tenere traccia degli errori su Android
 title: Tenere traccia degli errori su Android
-uuid: 7 d 0 c 77 e 5-924 c -4619-8 e 29-3484748 ab 736
+uuid: 7d0c77e5-924c-4619-8e29-3484748ab736
 translation-type: tm+mt
 source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ---
 
 
-# Track errors on Android{#track-errors-on-android}
+# Tenere traccia degli errori su Android{#track-errors-on-android}
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l'implementazione in tutti gli SDK 2. x. If you are implementing a 1.x version of the SDK, you can download the 1.x Developers Guides here: [Download SDKs.](/help/sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l’implementazione in tutti gli SDK 2.x. Se stai implementando una versione 1.x dell’SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
-1. Errori del lettore multimediale:
+1. Tracciare gli errori del lettore multimediale:
 
    ```java
    public void onPlayerError(Observable observable, Object data) {  
@@ -24,5 +24,5 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 >[!NOTE]
 >
->Il tracciamento degli errori del lettore multimediale non interrompe la sessione di tracciamento multimediale. If the media player error prevents the playback from continuing, make sure that the media tracking session is closed by calling `trackSessionEnd` after calling `trackError`.
+>Il tracciamento degli errori del lettore multimediale non interrompe la sessione di tracciamento del supporto. Se l’errore del lettore multimediale impedisce il proseguimento della riproduzione, accertatevi che la sessione di tracciamento dei contenuti multimediali sia chiusa chiamando `trackSessionEnd` dopo la chiamata `trackError`.
 
