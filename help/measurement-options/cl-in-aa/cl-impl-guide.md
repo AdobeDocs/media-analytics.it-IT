@@ -3,7 +3,7 @@ seo-title: Guida all’implementazione dei collegamenti personalizzati
 title: Guida all’implementazione dei collegamenti personalizzati
 uuid: 83315e73-20ca-4db5-9d43-33daade45a13
 translation-type: tm+mt
-source-git-commit: ca44520b532aee7a0647f0c5be69af58ead61444
+source-git-commit: 8727044729eb98634eaab129cbfdc88f90892a51
 
 ---
 
@@ -24,7 +24,7 @@ Il tracciamento video personalizzato utilizza il tracciamento [manuale dei colle
 
 ## Metadati
 
-* I metadati possono essere aggiunti a qualsiasi chiamata di tracciamento come parte dei dati del collegamento
+* Metadata can be added to any tracking call as part of the link data
 * Ricorda di aggiornare il `linkTrackVars` e `linkTrackEvents`
 
 ```javascript
@@ -43,16 +43,16 @@ if (e.type == "ended") {
 };
 ```
 
-## Perché utilizzare il collegamento personalizzato
+## Why use Custom Link
 
-* Sono necessari prerequisiti minimi
-* Funziona su qualsiasi piattaforma, incluso senza script
-* Eventuali calcoli, ad esempio il tempo trascorso o i quarti, devono essere calcolati in uno script personalizzato
-* Molto semplice senza librerie o script nascosti
-* Controllo totale su ogni aspetto dei dati video
-* Rimuovere il collegamento al lettore di esempio
+* Minimal prerequisites are needed
+* Works on any platform, including no-script
+* Any calculations, such as time spent or quartiles, must be calculated in a custom script
+* Very straightforward with no hidden libraries or scripts
+* Total control over every aspect of the video data
+* Remove link to sample player
 
-## Esempio di JavaScript per HTML5 Player
+## Sample JavaScript for HTML5 Player
 
 ```javascript
 <script type="text/javascript"> 
