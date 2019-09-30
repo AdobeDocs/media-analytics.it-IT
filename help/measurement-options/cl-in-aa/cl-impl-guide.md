@@ -1,18 +1,19 @@
 ---
-seo-title: Guida all’implementazione dei collegamenti personalizzati
-title: Guida all’implementazione dei collegamenti personalizzati
+seo-title: Custom Link implementation guide
+title: Custom Link implementation guide
 uuid: 83315e73-20ca-4db5-9d43-33daade45a13
 translation-type: tm+mt
-source-git-commit: 8727044729eb98634eaab129cbfdc88f90892a51
+source-git-commit: 445a5037b1875db3f1f13a3733aa431c3b3031a0
 
 ---
 
 
 # Guida all’implementazione dei collegamenti personalizzati{#custom-link-implementation-guide}
 
-Il tracciamento video personalizzato utilizza il tracciamento [manuale dei collegamenti tramite codice](https://marketing.adobe.com/resources/help/en_US/sc/implement/link_manual.html) di collegamento personalizzato in Analytics `appMeasurement`. Nella maggior parte dei casi, il tracciamento video del collegamento video personalizzato viene utilizzato su piattaforme e dispositivi in cui è necessaria una misurazione video minima.
+Custom Video Tracking uses [manual link tracking using custom link code](https://marketing.adobe.com/resources/help/en_US/sc/implement/link_manual.html) within Analytics `appMeasurement`.
+Most often, custom video link video tracking is used on platforms and devices where minimal video measurement is needed.
 
-* In JavaScript: la `s.tl()` funzione
+* In JavaScript: the `s.tl()` function
 * Nelle App Mobile: [trackAction() Android](https://marketing.adobe.com/resources/help/en_US/mobile/android/actions.html), [trackAction() iOS](https://marketing.adobe.com/resources/help/en_US/mobile/ios/actions.html), [trackAction() OTT](/help/sdk-implement/analytics-with-ott/track-app-actions.md)
 * Nell'API di inserimento dati: tag [linktype](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/reference/r_supported_tags.md)
 
@@ -24,7 +25,7 @@ Il tracciamento video personalizzato utilizza il tracciamento [manuale dei colle
 
 ## Metadati
 
-* Metadata can be added to any tracking call as part of the link data
+* I metadati possono essere aggiunti a qualsiasi chiamata di tracciamento come parte dei dati del collegamento
 * Ricorda di aggiornare il `linkTrackVars` e `linkTrackEvents`
 
 ```javascript
@@ -43,16 +44,15 @@ if (e.type == "ended") {
 };
 ```
 
-## Why use Custom Link
+## Perché utilizzare il collegamento personalizzato
 
-* Minimal prerequisites are needed
-* Works on any platform, including no-script
-* Any calculations, such as time spent or quartiles, must be calculated in a custom script
-* Very straightforward with no hidden libraries or scripts
-* Total control over every aspect of the video data
-* Remove link to sample player
+* Sono necessari prerequisiti minimi
+* Funziona su qualsiasi piattaforma, incluso senza script
+* Eventuali calcoli, ad esempio il tempo trascorso o i quarti, devono essere calcolati in uno script personalizzato
+* Molto semplice senza librerie o script nascosti
+* Controllo totale su ogni aspetto dei dati video
 
-## Sample JavaScript for HTML5 Player
+## Esempio di JavaScript per HTML5 Player
 
 ```javascript
 <script type="text/javascript"> 
@@ -126,4 +126,3 @@ if (e.type == "ended") {
   }; 
 </script>
 ```
-
