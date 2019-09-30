@@ -3,7 +3,7 @@ seo-title: Analisi federate
 title: Analisi federate
 uuid: a82ace81-c2f6-4799-9a62-4c6a737a7dab
 translation-type: tm+mt
-source-git-commit: 8727044729eb98634eaab129cbfdc88f90892a51
+source-git-commit: 445a5037b1875db3f1f13a3733aa431c3b3031a0
 
 ---
 
@@ -42,11 +42,11 @@ La funzione Analisi federata rende la misurazione audio e video più efficiente,
 
 ## Download del modulo di analisi federata
 
-**`===>`Download the current version here:   Federation Rules Agreement Form.**[](/assets/federated_analytics_form.pdf)**`<===`**
+**`===>`Scarica la versione corrente del modulo qui: Modulo**[ di accordo sulle regole](/assets/federated_analytics_form.pdf)federative. **`<===`**
 
 ## Processo {#section_byb_kb3_vbb}
 
-1. Mittente e Ricevitore collaborano per completare il modulo del contratto per le regole federative. The Federated Rules Agreement form contains special fields for our engineering team and should ONLY be edited using Adobe Acrobat. [Download Acrobat for free.](https://get.adobe.com/reader/)
+1. Sender and Receiver work together to complete the Federation Rules Agreement form. The Federated Rules Agreement form contains special fields for our engineering team and should ONLY be edited using Adobe Acrobat. [Download Acrobat for free.](https://get.adobe.com/reader/)
 1. Consulting services provides a sample data file to Receiver with actual data from Sender players, to further confirm correct data sharing rules are defined, provided data files are available.
 1. Sender and Receiver ensure the data sharing agreement will meet all contractual requirements between the two parties.
 1. Consulting services sends the completed form to Adobe Engineering to set-up data sharing rules.
