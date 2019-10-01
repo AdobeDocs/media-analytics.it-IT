@@ -1,31 +1,31 @@
 ---
-seo-title: Analisi federate
-title: Analisi federate
+seo-title: Federated Analytics
+title: Federated Analytics
 uuid: a82ace81-c2f6-4799-9a62-4c6a737a7dab
 translation-type: tm+mt
-source-git-commit: 445a5037b1875db3f1f13a3733aa431c3b3031a0
+source-git-commit: 99a8908499ab0e43964fd3d7e6e419b5a78ce66b
 
 ---
 
 
-# Analisi federate{#federated-analytics}
+# Federated Analytics{#federated-analytics}
 
-Il servizio Analisi federata fornisce un sistema per la condivisione di dati Adobe Media Analytics (audio e video) tra due partner.
-I dati di misurazione standardizzati creati da Media Analytics sono il marchio distintivo per Federated Analytics, consentendo lo scorrimento degli stessi dati in un singolo report da più origini.
-Attraverso le regole e la logica che regolano l'analisi federata, i dati sono facilmente controllati e individualizzati per soddisfare le esigenze di ogni partnership.
-La funzione Analisi federata rende la misurazione audio e video più efficiente, semplice e utilizzabile.
+The Federated Analytics service provides a system for sharing Adobe Media Analytics data (audio and video) between two partners.
+The standardized measurement data created by Media Analytics is the hallmark for Federated Analytics, allowing the same data to flow into a single report from multiple sources.
+Through the rules and logic governing Federated Analytics, data is easily controlled and individualized to meet the needs of each partnership.
+Federated Analytics makes audio and video measurement more efficient, streamlined, and actionable.
 
 ## Vantaggi {#section_804FFE8671594A6FB769CBE79EF9D627}
 
-* **** Trasparente: Elimina dalla casella nera la creazione dei dati utilizzando la stessa logica tra le aziende
+* **Transparent:** Strip away the black box of data creation by using the same logic across companies
 * **** Ampia: Comprendere appieno la portata e l'impatto del consumo audio e video tra partnership, piattaforme e dispositivi
 * **** Protetto: Controllo della condivisione dei dati lato server tramite regole e logica
-* **** Standard: Parla la stessa lingua dati dei tuoi partner
+* **Standardized:** Speak the same data language as your partners
 * **** Azioni: Quantificazione di dati audio e video per eseguire il benchmark dei lettori, monitorare le tendenze e rilevare le anomalie tramite Adobe Analytics
-* **** Centralizzato: Raccogliere i dati di misurazione audio e video in una posizione Adobe
+* **** Centralized: Collect audio and video measurement data in one Adobe location
 * **** Contrattuale: Soddisfare facilmente i requisiti legali per la condivisione dei dati
 * **** Temporaneamente: Inviare e ricevere dati in tempo reale
-* **** Facile: Assegnare tag ai lettori una sola volta con gli SDK Adobe, condividere i dati a molti partner
+* **** Easy: Tag players once with Adobe SDKs, share data to many partners
 
 ## Definizioni {#section_ypl_mb3_vbb}
 
@@ -42,16 +42,16 @@ La funzione Analisi federata rende la misurazione audio e video più efficiente,
 
 ## Download del modulo di analisi federata
 
-**`===>`Scarica la versione corrente del modulo qui: Modulo**[ di accordo sulle regole](/assets/federated_analytics_form.pdf)federative. **`<===`**
+Scarica la versione corrente del modulo qui: Modulo accordo regole [federative](/assets/federated_analytics_form.pdf)
 
 ## Processo {#section_byb_kb3_vbb}
 
-1. Sender and Receiver work together to complete the Federation Rules Agreement form. The Federated Rules Agreement form contains special fields for our engineering team and should ONLY be edited using Adobe Acrobat. [Download Acrobat for free.](https://get.adobe.com/reader/)
-1. Consulting services provides a sample data file to Receiver with actual data from Sender players, to further confirm correct data sharing rules are defined, provided data files are available.
-1. Sender and Receiver ensure the data sharing agreement will meet all contractual requirements between the two parties.
-1. Consulting services sends the completed form to Adobe Engineering to set-up data sharing rules.
-1. Data is shared to the development report suite where Receiver will review and validate data.
-1. Once Receiver confirms data is correct, Adobe Engineering updates the rules to point to a production report suite.
-1. Receiver will review and validate data in the production report suite.
-1. If changes occur to the data set in the future, Sender or Receiver can submit a customer care ticket for support.
+1. Mittente e Ricevitore collaborano per completare il modulo del contratto per le regole federative. Il modulo del contratto Federated Rules contiene campi speciali per il nostro team di progettazione e deve essere modificato SOLO con Adobe Acrobat. [Scarica Acrobat gratuitamente.](https://get.adobe.com/reader/)
+1. I servizi di consulenza forniscono un file di dati di esempio a Receiver con dati effettivi provenienti dai lettori Mender, per confermare ulteriormente che le regole di condivisione dei dati corrette sono definite, a condizione che i file di dati siano disponibili.
+1. Il mittente e il ricevente garantiscono che il contratto di condivisione dei dati soddisfi tutti i requisiti contrattuali tra le due parti.
+1. I servizi di consulenza inviano il modulo compilato ad Adobe Engineering per configurare le regole di condivisione dei dati.
+1. I dati vengono condivisi con la suite di rapporti per lo sviluppo in cui il destinatario rivede e convalida i dati.
+1. Una volta che il ricevente conferma che i dati sono corretti, Adobe Engineering aggiorna le regole per puntare a una suite di rapporti sulla produzione.
+1. Il ricevente rivede e convalida i dati nella suite di rapporti di produzione.
+1. Se si verificano modifiche al set di dati in futuro, Mittente o Ricevitore può inviare un ticket di assistenza clienti per l'assistenza.
 
