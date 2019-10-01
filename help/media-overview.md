@@ -3,7 +3,7 @@ seo-title: Misurazione di audio e video in Adobe Analytics
 title: Misurazione di audio e video in Adobe Analytics
 uuid: b3cbe240-b94d-42b8-a99c-0280334aaa14
 translation-type: tm+mt
-source-git-commit: 9b6e61e8d97ca44772f5dc2e31472a4f6c54e29c
+source-git-commit: 4a14e2faae6401a3f885eb5e341c1344d7f1e94d
 
 ---
 
@@ -24,10 +24,6 @@ Il tracciamento dei file multimediali è abilitato tramite una delle seguenti op
 
 * **Media SDK -** Si integra con i lettori multimediali più comunemente utilizzati.
 * **API di Media Collection -** (RESTful API) Si integra con lettori per i quali non è disponibile alcun supporto SDK (o con lettori per i quali non è richiesta alcuna integrazione SDK).
-
-   L'API Media Collection fornisce inoltre una funzionalità aggiuntiva non ancora disponibile nell'SDK:
-
-   * **Tracciamento del contenuto scaricato -** Fornisce il supporto per il tracciamento del contenuto multimediale (video e audio) che viene scaricato e riprodotto da un dispositivo indipendentemente dalla connettività. Questa funzionalità è integrata nell'API di Media Collection e segue la stessa specifica di tracciamento del lettore. (Al momento il supporto per l’SDK non è disponibile.)
 
 Adobe Analytics per Media consente ai clienti di monitorare l'intero percorso del cliente attraverso il sito, che include il consumo di supporti, e queste misure sono facilmente integrate nei report di Analytics e in altri prodotti Experience Cloud. La misurazione dei file multimediali consente di suddividere i dati in più dimensioni e segmenti, acquisire tutti i metadati necessari per eseguire un’analisi completa e dettagliata e attribuire i criteri di successo a supporti completamente utilizzati, al tempo medio trascorso e agli annunci completati.
 
@@ -57,6 +53,7 @@ Alcuni dei molti vantaggi del metodo Heartbeats includono:
 * **Dati condivisi tramite Federated Analytics -** Sfruttate le nostre prime funzionalità di condivisione dei contenuti multimediali per valutare i dati in modo olistico tra tutti i partner di distribuzione dei contenuti multimediali: operatori, programmatori e distributori.
 * **Partnership con i partner di classificazioni certificate -** Adobe collabora con il partner Nielsen per la valutazione del pubblico allo scopo di fornire misurazioni neutre del censimento di terze parti per consentire valutazioni affidabili e certificate.
 * **Soluzione standardizzata su tutte le piattaforme: abilita variabili coerenti e standardizzate su tutti i supporti e le piattaforme per consentire un confronto tra campagne, dispositivi e fornitori più efficiente.**
+* **Tracciamento dei contenuti scaricati - Consente di tenere traccia dei contenuti multimediali (video e audio) scaricati e riprodotti su un dispositivo, indipendentemente dalla connettività.**
 
 ### Grafico di confronto
 
