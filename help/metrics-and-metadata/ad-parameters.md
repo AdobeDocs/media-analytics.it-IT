@@ -3,7 +3,7 @@ seo-title: Parametri annuncio
 title: Parametri annuncio
 uuid: 92cd7f97-bb5a-4de6-8946-453d30271d0f
 translation-type: tm+mt
-source-git-commit: af8da9da6cbe36e56f13cd7819f3682522e169bf
+source-git-commit: 4a14e2faae6401a3f885eb5e341c1344d7f1e94d
 
 ---
 
@@ -36,18 +36,18 @@ Descrizione dati tabella:
 >descritto in Segnalazione/Riservata Variabile come "classificazione".
 >Le classificazioni dei supporti vengono definite quando una suite di rapporti è abilitata per i supporti
 >tracking. Di tanto in tanto, Adobe aggiunge nuove proprietà e, quando ciò si verifica,
->i clienti devono riabilitare le loro suite di rapporti per poter accedere ai nuovi supporti
+>customers must re-enable their report suites to get access to the new media
 >proprietà. Durante il processo di aggiornamento, Adobe determina se la variabile
->Le classificazioni sono abilitate controllando i nomi delle variabili. Se uno dei
->se mancano, Adobe aggiunge di nuovo quelli mancanti.
+>classifications are enabled by checking the names of the variables. Se uno dei
+>them is missing, Adobe adds the missing ones again.
 
-## Aggiungi dati video {#section_hq3_nbv_51b}
+## Ad Video Data {#section_hq3_nbv_51b}
 
-### ID annuncio
+### Ad ID
 
-|   Implementazione   | Parametri di rete | Generazione di rapporti   |
+|   Implementazione   | Network Parameters | Generazione di rapporti   |
 | --- | --- | --- |
-| <ul> <li> **Chiave SDK:**<br/> [adId](./ad-parameters.md#section_Related_APIs) </li> <li> ****<br/> Chiave API: media.ad.id </li> <li> ****<br/> Obbligatorio: Yes </li> <li> ****<br/> Tipo: string </li> <li> ****<br/> Inviato con: Inizio annuncio, Chiudi annuncio </li> <li> **Min.** Versione SDK: Qualsiasi  </li> <li> ****<br/> Valore campione: "2125" </li><li> **Descrizione:**<br/>ID dell’annuncio. (Qualsiasi combinazione di numeri interi e/o lettere)  </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>name) </li> <li> ****<br/> Heartbeat: (s:asset:ad_id) </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata: eVar </li> <li> ****<br/> Scadenza: In visita </li> <li> ****<br/> Nome rapporto: Annuncio </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>name) </li> <li> ****<br/> Feed dati: videoad </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.name) </li> </ul> |
+| <ul> <li> **SDK Key:**<br/> [adId](./ad-parameters.md#section_Related_APIs) </li> <li> ****<br/> API Key: media.ad.id </li> <li> ****<br/> Required: Yes </li> <li> **Type:**<br/> string </li> <li> ****<br/> Sent with: Ad Start, Ad Close </li> <li> **Min.** SDK Version: Any  </li> <li> ****<br/> Sample Value: "2125" </li><li> **Description:ID of the ad.**<br/> (Any integer and/or letter combination)  </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>name) </li> <li> ****<br/> Heartbeat: (s:asset:ad_id) </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata: eVar </li> <li> ****<br/> Scadenza: In visita </li> <li> ****<br/> Nome rapporto: Annuncio </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>name) </li> <li> ****<br/> Feed dati: videoad </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.name) </li> </ul> |
 
 
 
@@ -55,15 +55,15 @@ Descrizione dati tabella:
 
 |   Implementazione   | Parametri di rete | Generazione di rapporti   |
 | --- | --- | --- |
-| <ul> <li> **Chiave SDK:**<br/> [position](./ad-parameters.md#section_Related_APIs) </li> <li> ****<br/> Chiave API: media.ad.podPosition </li> <li> ****<br/> Obbligatorio: Yes </li> <li> ****<br/> Tipo: number </li> <li> ****<br/> Inviato con: Inizio annuncio, Chiudi annuncio </li> <li> **Min.** Versione SDK: Qualsiasi </li> <li> ****<br/> Valore campione: 1 </li><li> **Descrizione:**<br/>la posizione (indice) dell'annuncio all'interno dell'interruzione pubblicitaria principale. Il primo annuncio ha indice 0, il secondo annuncio ha indice 1, ecc.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>podPosition) </li> <li> ****<br/> Heartbeat: (s:asset:pod_position) </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata: eVar </li> <li> ****<br/> Scadenza: HIT </li> <li> ****<br/> Nome rapporto:Aggiungi in posizione contenitore </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>podPosition) </li> <li> ****<br/> Feed dati: videoadinpod </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.podPosition) </li> </ul> |
+| <ul> <li> **Chiave SDK:**<br/> [position](./ad-parameters.md#section_Related_APIs) </li> <li> ****<br/> Chiave API: media.ad.podPosition </li> <li> ****<br/> Obbligatorio: Yes </li> <li> ****<br/> Tipo: number </li> <li> ****<br/> Inviato con: Inizio annuncio, Chiudi annuncio </li> <li> **Min.** Versione SDK: Qualsiasi </li> <li> ****<br/> Valore campione: 1 </li><li> **Descrizione:**<br/>la posizione (indice) dell'annuncio all'interno dell'interruzione pubblicitaria principale. Il primo annuncio ha indice 0, il secondo annuncio ha indice 1, ecc.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>podPosition) </li> <li> ****<br/> Heartbeat: (s:asset:pod_position) </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata: eVar </li> <li> ****<br/> Scadenza: HIT </li> <li> ****<br/> Nome rapporto: Aggiungi in posizione contenitore </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>podPosition) </li> <li> ****<br/> Data Feed: videoadinpod </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.podPosition) </li> </ul> |
 
 
 
-### Lunghezza annuncio
+### Ad Length
 
-|   Implementazione   | Parametri di rete | Generazione di rapporti   |
+|   Implementazione   | Network Parameters | Generazione di rapporti   |
 | --- | --- | --- |
-| <ul> <li> **Chiave SDK:**<br/>  [length](./ad-parameters.md#section_Related_APIs) </li> <li> ****<br/> Chiave API: media.ad.length </li> <li> ****<br/> Obbligatorio: Yes </li> <li> ****<br/> Tipo: number </li> <li> ****<br/> Inviato con: Inizio annuncio, Chiudi annuncio </li> <li> **Min.** Versione SDK: 1.5.1 </li> <li> ****<br/> Valore campione: "15"  </li><li> **Descrizione:**<br/>Lunghezza del video annuncio in secondi.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>length) </li> <li> ****<br/> Heartbeat: (l:asset:ad_length) </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata: eVar e classificazione </li> <li> ****<br/> Scadenza: HIT </li> <li> ****<br/> Nome rapporto: Lunghezza annuncio e Lunghezza annuncio (variabile) </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>length) </li> <li> ****<br/> Feed dati: videoadlength </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.length) </li> </ul> |
+| <ul> <li> **SDK Key:**<br/>  [length](./ad-parameters.md#section_Related_APIs) </li> <li> ****<br/> API Key: media.ad.length </li> <li> ****<br/> Required: Yes </li> <li> ****<br/> Tipo: number </li> <li> ****<br/> Sent with: Ad Start, Ad Close </li> <li> **Min.** Versione SDK: 1.5.1 </li> <li> ****<br/> Sample Value: "15"  </li><li> **Description:Length of video ad in seconds.**<br/>   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>length) </li> <li> ****<br/> Heartbeat: (l:asset:ad_length) </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata: eVar e classificazione </li> <li> ****<br/> Scadenza: HIT </li> <li> ****<br/> Nome rapporto: Lunghezza annuncio e Lunghezza annuncio (variabile) </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>length) </li> <li> ****<br/> Feed dati: videoadlength </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.length) </li> </ul> |
 
 
 
@@ -71,15 +71,15 @@ Descrizione dati tabella:
 
 |   Implementazione   | Parametri di rete | Generazione di rapporti   |
 | --- | --- | --- |
-| <ul> <li> **Chiave SDK:**<br/>  [playerName](./ad-parameters.md#section_Related_APIs) </li> <li> ****<br/> Chiave API: media.ad.playerName </li> <li> ****<br/> Obbligatorio: Yes </li> <li> ****<br/> Tipo: string </li> <li> ****<br/> Inviato con: Inizio annuncio, Chiudi annuncio </li> <li> **Min.** Versione SDK: Qualsiasi </li> <li> ****<br/> Valore campione: "ruota libera" </li><li> **Descrizione:**<br/>Nome del lettore responsabile del rendering dell'annuncio.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>playerName) </li> <li> ****<br/> Heartbeat: (s:sp:player_name) </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata: eVar </li> <li> ****<br/> Scadenza: HIT </li> <li> ****<br/> Nome rapporto:Nome lettore annuncio </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>playerName) </li> <li> ****<br/> Feed dati: videoadplayername </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.playerName) </li> </ul> |
+| <ul> <li> **Chiave SDK:**<br/>  [playerName](./ad-parameters.md#section_Related_APIs) </li> <li> ****<br/> Chiave API: media.ad.playerName </li> <li> ****<br/> Obbligatorio: Yes </li> <li> ****<br/> Tipo: string </li> <li> ****<br/> Inviato con: Inizio annuncio, Chiudi annuncio </li> <li> **Min.** SDK Version: Any </li> <li> ****<br/> Valore campione: "ruota libera" </li><li> **Descrizione:**<br/>Nome del lettore responsabile del rendering dell'annuncio.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>playerName) </li> <li> ****<br/> Heartbeat: (s:sp:player_name) </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata: eVar </li> <li> ****<br/> Scadenza: HIT </li> <li> ****<br/> Nome rapporto:Nome lettore annuncio </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>playerName) </li> <li> ****<br/> Feed dati: videoadplayername </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.playerName) </li> </ul> |
 
 
 
-### Nome interruzione annuncio
+### Ad Break Name
 
-|   Implementazione   | Parametri di rete | Generazione di rapporti   |
+|   Implementazione   | Network Parameters | Generazione di rapporti   |
 | --- | --- | --- |
-| <ul> <li> **Chiave SDK:**<br/>  [name](./ad-parameters.md#section_Related_APIs) </li> <li> ****<br/> Chiave API: media.ad.poomeCordiale </li> <li> ****<br/> Obbligatorio: SDK: Sì; API: No. </li> <li> ****<br/> Tipo: string </li> <li> ****<br/> Inviato con: Inizio annuncio, Chiudi annuncio </li> <li> **Min.** Versione SDK: Qualsiasi </li> <li> ****<br/> Valore campione: "pre-roll" </li><li> **Descrizione:**<br/>Il nome descrittivo dell'interruzione annuncio.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>podFriendlyName) </li> <li> ****<br/> Heartbeat: (s:asset:pod_name) </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata: Classificazione </li> <li> ****<br/> Nome rapporto: Nome contenitore </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>podFriendlyName) </li> <li> ****<br/> Feed dati: videoadpod </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.poFriendlyName) </li> </ul> |
+| <ul> <li> **SDK Key:**<br/>  [name](./ad-parameters.md#section_Related_APIs) </li> <li> ****<br/> API Key: media.ad.podFriendlyName </li> <li> ****<br/> Obbligatorio: SDK: Sì; API: No. </li> <li> ****<br/> Tipo: string </li> <li> ****<br/> Inviato con: Inizio annuncio, Chiudi annuncio </li> <li> **Min.** Versione SDK: Qualsiasi </li> <li> ****<br/> Valore campione: "pre-roll" </li><li> **Descrizione:**<br/>Il nome descrittivo dell'interruzione annuncio.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>podFriendlyName) </li> <li> ****<br/> Heartbeat: (s:asset:pod_name) </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata: Classificazione </li> <li> ****<br/> Nome rapporto: Nome contenitore </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>podFriendlyName) </li> <li> ****<br/> Feed dati: N/D </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.poFriendlyName) </li> </ul> |
 
 
 
@@ -87,15 +87,15 @@ Descrizione dati tabella:
 
 |   Implementazione   | Parametri di rete | Generazione di rapporti   |
 | --- | --- | --- |
-| <ul> <li> **Chiave SDK:**<br/>  [position](./ad-parameters.md#section_Related_APIs) </li> <li> ****<br/> Chiave API: media.ad.podPosition </li> <li> ****<br/> Obbligatorio: Yes </li> <li> ****<br/> Tipo: number </li> <li> **Inviato con:**<br/> </li> <li> **Min.** Versione SDK: Qualsiasi </li> <li> ****<br/> Valore campione: 1 </li><li> **Descrizione:**<br/>l'indice dell'interruzione pubblicitaria all'interno del contenuto a partire da 1. Questa proprietà viene utilizzata **solo** da Media SDK per generare l’ID contenitore.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> </li> <li> **Heartbeat:**<br/> </li> </ul> | <ul> <li> ****<br/> Disponibile: No </li> <li> ****<br/> Variabile riservata: N/D </li> <li> ****<br/> Nome rapporto: N/D </li> <li> **Dati contestuali:**<br/> </li> <li> **Feed di dati:**<br/> </li> <li> **Audience Manager:**<br/> </li> </ul> |
+| <ul> <li> **Chiave SDK:**<br/>  [position](./ad-parameters.md#section_Related_APIs) </li> <li> ****<br/> Chiave API: media.ad.podPosition </li> <li> ****<br/> Obbligatorio: Yes </li> <li> ****<br/> Tipo: number </li> <li> **Inviato con:**<br/> </li> <li> **Min.** Versione SDK: Qualsiasi </li> <li> ****<br/> Valore campione: 1 </li><li> **Descrizione:**<br/>l'indice dell'interruzione pubblicitaria all'interno del contenuto a partire da 1. Questa proprietà viene utilizzata **solo** da Media SDK per generare l’ID contenitore.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> </li> <li> **Heartbeat:**<br/> </li> </ul> | <ul> <li> ****<br/> Available: No </li> <li> ****<br/> Reserved Variable: N/A </li> <li> ****<br/> Nome rapporto: N/D </li> <li> **Dati contestuali:**<br/> </li> <li> ****<br/> Data Feed: N/A </li> <li> **Audience Manager:**<br/> </li> </ul> |
 
 
 
-### Posizione interruzione annuncio
+### Ad Break Position
 
 |   Implementazione   | Parametri di rete | Generazione di rapporti   |
 | --- | --- | --- |
-| <ul> <li> **Chiave SDK:**<br/>  [startTime](./ad-parameters.md#section_Related_APIs) </li> <li> ****<br/> Chiave API: media.ad.podSecond </li> <li> ****<br/> Obbligatorio: Yes </li> <li> ****<br/> Tipo: number </li> <li> ****<br/> Inviato con: Inizio annuncio, Chiudi annuncio </li> <li> **Min.** Versione SDK: Qualsiasi </li> <li> ****<br/> Valore campione: 90 </li><li> **Descrizione:**<br/>l'offset dell'interruzione annuncio all'interno del contenuto, in secondi.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>podSecond) </li> <li> ****<br/> Heartbeat: (l:asset:pod_offset) </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata: Classificazione </li> <li> ****<br/> Nome rapporto: Posizione contenitore </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>podSecond) </li> <li> **Feed di dati:**<br/> </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.podSecond) </li> </ul> |
+| <ul> <li> **Chiave SDK:**<br/>  [startTime](./ad-parameters.md#section_Related_APIs) </li> <li> ****<br/> Chiave API: media.ad.podSecond </li> <li> ****<br/> Required: Yes </li> <li> ****<br/> Tipo: number </li> <li> ****<br/> Sent with: Ad Start, Ad Close </li> <li> **Min.** Versione SDK: Qualsiasi </li> <li> ****<br/> Sample Value: 90 </li><li> **Description:The offset of the ad break inside the content, in seconds.**<br/>   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>podSecond) </li> <li> ****<br/> Heartbeat: (l:asset:pod_offset) </li> </ul> | <ul> <li> ****<br/> Available: Yes </li> <li> ****<br/> Variabile riservata: Classificazione </li> <li> ****<br/> Nome rapporto: Posizione contenitore </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>podSecond) </li> <li> ****<br/> Feed dati: N/D </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.podSecond) </li> </ul> |
 
 
 
@@ -103,7 +103,7 @@ Descrizione dati tabella:
 
 |   Implementazione   | Parametri di rete | Generazione di rapporti   |
 | --- | --- | --- |
-| <ul> <li> ****<br/> Chiave SDK: Imposta automaticamente </li> <li> ****<br/> Chiave API: N/D </li> <li> ****<br/> Obbligatorio: Yes </li> <li> ****<br/> Tipo: string </li> <li> ****<br/> Inviato con: Inizio annuncio, Chiudi annuncio </li> <li> **Min.** Versione SDK: Qualsiasi </li> <li> ****<br/> Valore campione: c4a577424c84067899b807c76722d495_1  </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>contenitore) </li> <li> ****<br/> Heartbeat: (s:asset:pod_id) </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata: eVar </li> <li> ****<br/> Scadenza: HIT </li> <li> ****<br/> Nome rapporto: Ad Pod </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>contenitore) </li> <li> ****<br/> Feed dati: videoadpod </li> <li> **Audience Manager:**<br/> </li> </ul> |
+| <ul> <li> ****<br/> Chiave SDK: Imposta automaticamente </li> <li> ****<br/> Chiave API: N/D </li> <li> ****<br/> Obbligatorio: Yes </li> <li> ****<br/> Tipo: string </li> <li> ****<br/> Inviato con: Inizio annuncio, Chiudi annuncio </li> <li> **Min.** Versione SDK: Qualsiasi </li> <li> ****<br/> Valore campione: c4a577424c84067899b807c76722d495_1  </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>contenitore) </li> <li> ****<br/> Heartbeat: (s:asset:pod_id) </li> </ul> | <ul> <li> ****<br/> Available: Yes </li> <li> ****<br/> Variabile riservata: eVar </li> <li> ****<br/> Scadenza: HIT </li> <li> ****<br/> Report Name: Ad Pod </li> <li> ****<br/> Context Data: (a.media.ad.<br/>pod) </li> <li> ****<br/> Feed dati: videoadpod </li> <li> **Audience Manager:**<br/> </li> </ul> |
 
 
 
@@ -111,7 +111,7 @@ Descrizione dati tabella:
 
 |   Implementazione   | Parametri di rete | Generazione di rapporti   |
 | --- | --- | --- |
-| <ul> <li> **Chiave SDK:**<br/>  [name](./ad-parameters.md#section_Related_APIs) </li> <li> ****<br/> Chiave API: media.ad.na </li> <li> ****<br/> Obbligatorio: No </li> <li> ****<br/> Tipo: string </li> <li> ****<br/> Inviato con: Inizio annuncio, Chiudi annuncio </li> <li> **Min.** Versione SDK: 1.5.1 </li> <li> ****<br/> Valore campione: "Ford F-150" </li><li> **Descrizione:**<br/>Nome descrittivo dell'annuncio.  Nel reporting, "Ad Name" è la classificazione e "Ad Name (variabile)" è l'eVar.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>friendlyName) </li> <li> ****<br/> Heartbeat: (s:asset:ad_name) </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata: eVar e classificazione </li> <li> ****<br/> Scadenza: HIT </li> <li> ****<br/> Nome rapporto: Nome annuncio e nome annuncio (variabile) </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>friendlyName) </li> <li> ****<br/> Feed dati: N/D </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.friendlyName) </li> </ul> |
+| <ul> <li> **Chiave SDK:**<br/>  [name](./ad-parameters.md#section_Related_APIs) </li> <li> ****<br/> Chiave API: media.ad.na </li> <li> ****<br/> Obbligatorio: No </li> <li> **Type:**<br/> string </li> <li> ****<br/> Inviato con: Inizio annuncio, Chiudi annuncio </li> <li> **Min. SDK Version:** 1.5.1 </li> <li> ****<br/> Valore campione: "Ford F-150" </li><li> **Descrizione:**<br/>Nome descrittivo dell'annuncio.  Nel reporting, "Ad Name" è la classificazione e "Ad Name (variabile)" è l'eVar.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>friendlyName) </li> <li> ****<br/> Heartbeat: (s:asset:ad_name) </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata: eVar e classificazione </li> <li> ****<br/> Scadenza: HIT </li> <li> ****<br/> Nome rapporto: Nome annuncio e nome annuncio (variabile) </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>friendlyName) </li> <li> ****<br/> Feed dati: N/D </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.friendlyName) </li> </ul> |
 
 
 
@@ -121,7 +121,7 @@ Descrizione dati tabella:
 
 |   Implementazione   | Parametri di rete | Generazione di rapporti   |
 | --- | --- | --- |
-| <ul> <li> ****<br/> Chiave SDK: ADVERTISER </li> <li> ****<br/> Chiave API: media.ad.advertiser </li> <li> ****<br/> Obbligatorio: No </li> <li> ****<br/> Tipo: string </li> <li> ****<br/> Inviato con: Inizio annuncio, Chiudi annuncio </li> <li> **Min.** Versione SDK: 1.5.7 </li> <li> **Valore campione:**<br/> </li><li> **Descrizione:**<br/>Azienda/Marchio il cui prodotto è presente nell'annuncio.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>advertiser) </li> <li> ****<br/> Heartbeat: (s:meta:<br/>a.media.ad.advertiser) </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata: eVar </li> <li> ****<br/> Scadenza: HIT </li> <li> **Nome rapporto:**<br/> <i>Inserzionista </i> </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>advertiser) </li> <li> ****<br/> Feed dati: videoadvertiser </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.advertiser) </li> </ul> |
+| <ul> <li> ****<br/> Chiave SDK: ADVERTISER </li> <li> ****<br/> Chiave API: media.ad.advertiser </li> <li> ****<br/> Obbligatorio: No </li> <li> **Type:**<br/> string </li> <li> ****<br/> Inviato con: Inizio annuncio, Chiudi annuncio </li> <li> **Min. SDK Version:** 1.5.7 </li> <li> **Valore campione:**<br/> </li><li> **Descrizione:**<br/>Azienda/Marchio il cui prodotto è presente nell'annuncio.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>advertiser) </li> <li> ****<br/> Heartbeat: (s:meta:<br/>a.media.ad.advertiser) </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata: eVar </li> <li> ****<br/> Scadenza: HIT </li> <li> **Nome rapporto:**<br/> <i>Inserzionista </i> </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>advertiser) </li> <li> ****<br/> Feed dati: videoadvertiser </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.advertiser) </li> </ul> |
 
 
 
@@ -137,7 +137,7 @@ Descrizione dati tabella:
 
 |   Implementazione   | Parametri di rete | Generazione di rapporti   |
 | --- | --- | --- |
-| <ul> <li> ****<br/> Chiave SDK: CREATIVE_ID </li> <li> ****<br/> Chiave API: media.ad.creativeId </li> <li> ****<br/> Obbligatorio: No </li> <li> ****<br/> Tipo: string </li> <li> ****<br/> Inviato con: Inizio annuncio, Chiudi annuncio </li> <li> **Min.** Versione SDK: 1.5.7 </li> <li> ****<br/> Valore campione: Numero intero o nome (stringa).  </li><li> **Descrizione:**<br/>ID dell'annuncio creativo.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>creative) </li> <li> ****<br/> Heartbeat: (s:meta:<br/>a.media.ad.crative) </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata: eVar </li> <li> ****<br/> Scadenza: HIT </li> <li> **Nome rapporto:**<br/> <i>Creative ID </i> </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>creative) </li> <li> ****<br/> Feed dati: adclassificationcreative </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.crative) </li> </ul> |
+| <ul> <li> ****<br/> Chiave SDK: CREATIVE_ID </li> <li> ****<br/> Chiave API: media.ad.creativeId </li> <li> ****<br/> Obbligatorio: No </li> <li> **Type:**<br/> string </li> <li> ****<br/> Inviato con: Inizio annuncio, Chiudi annuncio </li> <li> **Min.** Versione SDK: 1.5.7 </li> <li> ****<br/> Valore campione: Numero intero o nome (stringa).  </li><li> **Descrizione:**<br/>ID dell'annuncio creativo.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>creative) </li> <li> ****<br/> Heartbeat: (s:meta:<br/>a.media.ad.crative) </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata: eVar </li> <li> ****<br/> Scadenza: HIT </li> <li> **Nome rapporto:**<br/> <i>Creative ID </i> </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>creative) </li> <li> ****<br/> Feed dati: adclassificationcreative </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.crative) </li> </ul> |
 
 
 
@@ -145,7 +145,7 @@ Descrizione dati tabella:
 
 |   Implementazione   | Parametri di rete | Generazione di rapporti   |
 | --- | --- | --- |
-| <ul> <li> ****<br/> Chiave SDK: SITE_ID </li> <li> ****<br/> Chiave API: media.ad.siteId </li> <li> ****<br/> Obbligatorio: No </li> <li> ****<br/> Tipo: string </li> <li> ****<br/> Inviato con: Inizio annuncio, Chiudi annuncio </li> <li> **Min.** Versione SDK: 1.5.7 </li> <li> **Valore campione:**<br/> </li><li> **Descrizione:**<br/>ID del sito dell'annuncio.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>sito) </li> <li> ****<br/> Heartbeat: (s:meta:<br/>a.media.ad.site) </li> </ul> | <ul> <li> **Disponibile:**<br/> <i>Usa regola di elaborazione personalizzata </i> </li> <li> ****<br/> Variabile riservata: eVar </li> <li> ****<br/> Scadenza: HIT </li> <li> **Nome rapporto:**<br/> <i> </i> </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>sito) </li> <li> ****<br/> Feed dati: N/D </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.si) </li> </ul> |
+| <ul> <li> ****<br/> Chiave SDK: SITE_ID </li> <li> ****<br/> Chiave API: media.ad.siteId </li> <li> ****<br/> Obbligatorio: No </li> <li> **Type:**<br/> string </li> <li> ****<br/> Inviato con: Inizio annuncio, Chiudi annuncio </li> <li> **Min.** Versione SDK: 1.5.7 </li> <li> **Valore campione:**<br/> </li><li> **Descrizione:**<br/>ID del sito dell'annuncio.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>sito) </li> <li> ****<br/> Heartbeat: (s:meta:<br/>a.media.ad.site) </li> </ul> | <ul> <li> **Disponibile:**<br/> <i>Usa regola di elaborazione personalizzata </i> </li> <li> ****<br/> Variabile riservata: eVar </li> <li> ****<br/> Scadenza: HIT </li> <li> **Nome rapporto:**<br/> <i> </i> </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>sito) </li> <li> ****<br/> Feed dati: N/D </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.si) </li> </ul> |
 
 
 
@@ -153,7 +153,7 @@ Descrizione dati tabella:
 
 |   Implementazione   | Parametri di rete | Generazione di rapporti   |
 | --- | --- | --- |
-| <ul> <li> ****<br/> Chiave SDK: CREATIVE_URL </li> <li> ****<br/> Chiave API: media.ad.creativeURL </li> <li> ****<br/> Obbligatorio: No </li> <li> ****<br/> Tipo: string </li> <li> ****<br/> Inviato con: Inizio annuncio, Chiudi annuncio </li> <li> **Min.** Versione SDK: 1.5.7 </li> <li> **Valore campione:**<br/> </li><li> **Descrizione:**<br/>URL dell'annuncio creativo.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>creativeURL) </li> <li> ****<br/> Heartbeat: (s:meta:<br/>a.media.ad.crativeURL) </li> </ul> | <ul> <li> **Disponibile:**<br/> <i>Usa regola di elaborazione personalizzata </i> </li> <li> ****<br/> Variabile riservata: eVar </li> <li> ****<br/> Scadenza: HIT </li> <li> **Nome rapporto:**<br/> <i> </i> </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>creativeURL) </li> <li> ****<br/> Feed dati: N/D </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.creativeURL) </li> </ul> |
+| <ul> <li> ****<br/> Chiave SDK: CREATIVE_URL </li> <li> ****<br/> Chiave API: media.ad.creativeURL </li> <li> ****<br/> Obbligatorio: No </li> <li> **Type:**<br/> string </li> <li> ****<br/> Inviato con: Inizio annuncio, Chiudi annuncio </li> <li> **Min.** Versione SDK: 1.5.7 </li> <li> **Valore campione:**<br/> </li><li> **Descrizione:**<br/>URL dell'annuncio creativo.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>creativeURL) </li> <li> ****<br/> Heartbeat: (s:meta:<br/>a.media.ad.crativeURL) </li> </ul> | <ul> <li> **Disponibile:**<br/> <i>Usa regola di elaborazione personalizzata </i> </li> <li> ****<br/> Variabile riservata: eVar </li> <li> ****<br/> Scadenza: HIT </li> <li> **Nome rapporto:**<br/> <i> </i> </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>creativeURL) </li> <li> ****<br/> Feed dati: N/D </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.creativeURL) </li> </ul> |
 
 
 
@@ -168,11 +168,11 @@ Descrizione dati tabella:
 
 ## Metriche annunci {#section_22AA1565F11C4F3990E2AB51CD3213F7}
 
-### Inizio annuncio
+###  Inizio annuncio
 
 |   Implementazione   | Parametri di rete | Generazione di rapporti   |
 | --- | --- | --- |
-| <ul> <li> ****<br/> Chiave SDK: Imposta automaticamente </li> <li> ****<br/> Chiave API: N/D </li> <li> ****<br/> Obbligatorio: Yes </li> <li> ****<br/> Tipo: string </li> <li> ****<br/> Inviato con: Inizio annuncio </li> <li> **Min.** Versione SDK: Qualsiasi </li> <li> ****<br/> Valore campione: TRUE </li><li> **Descrizione:**<br/>numero di avvii di annunci video.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>view) </li> <li> ****<br/> Heartbeat:  (s:event:type=start)<br/> (s:asset:type=ad) </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata: event </li> <li> ****<br/> Nome rapporto: Inizio annuncio </li> <li> ****<br/> Feed dati: videoadstart </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>view) </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.view) </li> </ul> |
+| <ul> <li> ****<br/> Chiave SDK: Imposta automaticamente </li> <li> ****<br/> Chiave API: N/D </li> <li> ****<br/> Obbligatorio: Yes </li> <li> ****<br/> Tipo: string </li> <li> ****<br/> Inviato con: Inizio annuncio </li> <li> **Min.** Versione SDK: Qualsiasi </li> <li> ****<br/> Valore campione: TRUE </li><li> **Descrizione:**<br/>numero di avvii di annunci video.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>view) </li> <li> ****<br/> Heartbeat:  (s:event:type=start)<br/> (s:asset:type=ad) </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata:event </li> <li> ****<br/> Nome rapporto: Inizio annuncio </li> <li> ****<br/> Feed dati: N/D </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>view) </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.view) </li> </ul> |
 
 
 
@@ -180,7 +180,7 @@ Descrizione dati tabella:
 
 |   Implementazione   | Parametri di rete | Generazione di rapporti   |
 | --- | --- | --- |
-| <ul> <li> ****<br/> Chiave SDK: Imposta automaticamente </li> <li> ****<br/> Chiave API: N/D </li> <li> ****<br/> Obbligatorio: Yes </li> <li> ****<br/> Tipo: string </li> <li> ****<br/> Inviato con: Aggiungi chiusura </li> <li> **Min.** Versione SDK: Qualsiasi </li> <li> ****<br/> Valore campione: TRUE </li><li> **Descrizione:**<br/>numero di annunci video completati.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>completato) </li> <li> ****<br/> Heartbeat: (s:event:type=complete)<br/> (s:asset:type=ad)  </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata:event </li> <li> ****<br/> Nome rapporto: Completamento annuncio </li> <li> ****<br/> Feed dati: videoadcomplete </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>completato) </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.complete) </li> </ul> |
+| <ul> <li> ****<br/> Chiave SDK: Imposta automaticamente </li> <li> ****<br/> Chiave API: N/D </li> <li> ****<br/> Obbligatorio: Yes </li> <li> ****<br/> Tipo: string </li> <li> ****<br/> Inviato con: Aggiungi chiusura </li> <li> **Min.** Versione SDK: Qualsiasi </li> <li> ****<br/> Valore campione: TRUE </li><li> **Descrizione:**<br/>numero di annunci video completati.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>completato) </li> <li> ****<br/> Heartbeat: (s:event:type=complete)<br/> (s:asset:type=ad)  </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata: event </li> <li> ****<br/> Nome rapporto: Completamento annuncio </li> <li> ****<br/> Feed dati: N/D </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>completato) </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.complete) </li> </ul> |
 
 
 
@@ -188,7 +188,7 @@ Descrizione dati tabella:
 
 |   Implementazione   | Parametri di rete | Generazione di rapporti   |
 | --- | --- | --- |
-| <ul> <li> ****<br/> Chiave SDK: Imposta automaticamente </li> <li> ****<br/> Chiave API: N/D </li> <li> ****<br/> Obbligatorio: Yes </li> <li> ****<br/> Tipo: string </li> <li> ****<br/> Inviato con: Aggiungi chiusura </li> <li> **Min.** Versione SDK: Qualsiasi </li> <li> ****<br/> Valore campione: 15 </li><li> **Descrizione:**<br/>Il tempo totale, in secondi, trascorso a guardare l'annuncio (ovvero, il numero di secondi riprodotti).  Il valore verrà visualizzato nel formato ora (HH:MM:SS) in Analysis Workspace e Reporting e analisi. Nelle API Feed dati, Data Warehouse e Reporting i valori verranno visualizzati in secondi.  <br/>**Data di rilascio: 13/09/18**  </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>timePlayed) </li> <li> **Heartbeat:**<br/> </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata: event </li> <li> ****<br/> Nome rapporto: Tempo annuncio trascorso </li> <li> ****<br/> Feed dati: videoadtime </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>timePlayed) </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.timePlayed) </li> </ul> |
+| <ul> <li> ****<br/> Chiave SDK: Imposta automaticamente </li> <li> ****<br/> Chiave API: N/D </li> <li> ****<br/> Obbligatorio: Yes </li> <li> ****<br/> Tipo: string </li> <li> ****<br/> Inviato con: Aggiungi chiusura </li> <li> **Min.** Versione SDK: Qualsiasi </li> <li> ****<br/> Valore campione: 15 </li><li> **Descrizione:**<br/>Il tempo totale, in secondi, trascorso a guardare l'annuncio (ovvero, il numero di secondi riprodotti).  Il valore verrà visualizzato nel formato ora (HH:MM:SS) in Analysis Workspace e Reporting e analisi. Nelle API Feed dati, Data Warehouse e Reporting i valori verranno visualizzati in secondi.  <br/>**Data di rilascio: 13/09/18**  </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.ad.<br/>timePlayed) </li> <li> **Heartbeat:**<br/> </li> </ul> | <ul> <li> ****<br/> Disponibile: Yes </li> <li> ****<br/> Variabile riservata:event </li> <li> ****<br/> Nome rapporto: Tempo annuncio trascorso </li> <li> ****<br/> Feed dati: N/D </li> <li> ****<br/> Dati contestuali: (a.media.ad.<br/>timePlayed) </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.ad.timePlayed) </li> </ul> |
 
 
 
