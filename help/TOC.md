@@ -3,7 +3,7 @@ product: Media Analytics
 audience: utente finale
 user-guide-title: Adobe Analytics per audio e video
 translation-type: tm+mt
-source-git-commit: ea727a8364198d64b3699c35234f2d93bd96e77a
+source-git-commit: 1704ef6a637a476fe88d61e0d2edec687ec4b66e
 
 ---
 
@@ -13,25 +13,25 @@ source-git-commit: ea727a8364198d64b3699c35234f2d93bd96e77a
 + [Misurazione di audio e video in Adobe Analytics](media-overview.md)
 + Opzioni di misura {#measurement-options}
    + Tracciamento cardine modulo multimediale {#mm-milestone-tracking}
-      + [Panoramica delle attività cardine](measurement-options/mm-milestone-tracking/milestone-overview.md)
-      + [Migra attività cardine in Media Analytics](measurement-options/mm-milestone-tracking/migrate-ms-to-va.md)
-      + [Migrazione da attività cardine a collegamento personalizzato](measurement-options/mm-milestone-tracking/migrate-ms-to-cl.md)
-   + Collegamento personalizzato in Analytics {#cl-in-aa}
-      + [Guida all’implementazione dei collegamenti personalizzati](measurement-options/cl-in-aa/cl-impl-guide.md)
-+ Introduzione ad Analisi audio e video {#intro-to-ava}
+      + [Milestone overview](measurement-options/mm-milestone-tracking/milestone-overview.md)
+      + [Migrate Milestone to Media Analytics](measurement-options/mm-milestone-tracking/migrate-ms-to-va.md)
+      + [Migrating from Milestone to Custom Link](measurement-options/mm-milestone-tracking/migrate-ms-to-cl.md)
+   + Custom Link in Analytics {#cl-in-aa}
+      + [Custom Link Implementation Guide](measurement-options/cl-in-aa/cl-impl-guide.md)
++ Introduction to Audio and Video Analytics {#intro-to-ava}
    + [Prerequisiti](intro-to-ava/prereqs.md)
-   + Percorsi di implementazione {#implementation-paths}
+   + Implementation Paths {#implementation-paths}
       + [Panoramica](intro-to-ava/implementation-paths/implementation-paths.md)
-      + [Lato client](intro-to-ava/implementation-paths/client-side-path.md)
+      + [Client-side](intro-to-ava/implementation-paths/client-side-path.md)
       + [Adobe Experience Platform Launch](intro-to-ava/implementation-paths/launch-path.md)
       + [Primetime](intro-to-ava/implementation-paths/primetime-path.md)
-   + [Abilitazione di Audience Manager](intro-to-ava/am-enablement.md)
+   + [Audience Manager Enablement](intro-to-ava/am-enablement.md)
 + Media Analytics SDK {#sdk-implement}
-   + [Download di SDK](sdk-implement/download-sdks.md)
+   + [Download SDKs](sdk-implement/download-sdks.md)
    + Configurare e configurare {#setup}
       + [Panoramica](sdk-implement/setup/setup-overview.md)
-      + [Configurare Android](sdk-implement/setup/set-up-android.md)
-      + [Configurare iOS](sdk-implement/setup/set-up-ios.md)
+      + [Set up Android](sdk-implement/setup/set-up-android.md)
+      + [Set up iOS](sdk-implement/setup/set-up-ios.md)
       + [Configurare JavaScript](sdk-implement/setup/set-up-js.md)
       + [Imposta Chromecast](sdk-implement/setup/set-up-chromecast.md)
       + [Impostazione di Roku](sdk-implement/setup/set-up-roku.md)
@@ -59,26 +59,26 @@ source-git-commit: ea727a8364198d64b3699c35234f2d93bd96e77a
          + [Implementare i metadati standard su Android](sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-android.md)
          + [Implementazione di metadati standard su iOS](sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-ios.md)
          + [Chiavi metadati iOS](sdk-implement/track-av-playback/impl-std-metadata/ios-metadata-keys.md)
-         + [Implementare i metadati standard in JavaScript](sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-js.md)
-         + [Implementazione di metadati standard su Chromecast](sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-chromecast.md)
+         + [Implement standard metadata on JavaScript](sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-js.md)
+         + [Implement standard metadata on Chromecast](sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-chromecast.md)
          + [Parametri metadati standard - Chromecast](sdk-implement/track-av-playback/impl-std-metadata/chromecast-metadata.md)
          + [Implementare i metadati standard su Roku](sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
-         + [Parametri metadati standard - Roku](sdk-implement/track-av-playback/impl-std-metadata/roku-metadata.md)
+         + [Standard Metadata Parameters - Roku](sdk-implement/track-av-playback/impl-std-metadata/roku-metadata.md)
    + Track Ads {#track-ads}
       + [Panoramica](sdk-implement/track-ads/track-ads-overview.md)
       + [Tracciare annunci su Android](sdk-implement/track-ads/track-ads-android.md)
-      + [Tracciare gli annunci su iOS](sdk-implement/track-ads/track-ads-ios.md)
-      + [Tracciare annunci su JavaScript](sdk-implement/track-ads/track-ads-js.md)
+      + [Track Ads on iOS](sdk-implement/track-ads/track-ads-ios.md)
+      + [Track Ads on JavaScript](sdk-implement/track-ads/track-ads-js.md)
       + [Track Ads on Chromecast](sdk-implement/track-ads/track-ads-chromecast.md)
       + [Track Ads on Roku](sdk-implement/track-ads/track-ads-roku.md)
-      + Implementazione di metadati di annunci standard {#impl-std-ad-metadata}
-         + [Implementazione di metadati di annunci standard su Android](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-android.md)
-         + [Implementazione di metadati di annunci standard su iOS](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-ios.md)
-         + [Implementazione di metadati di annunci standard in JavaScript](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-js.md)
-         + [Implementazione di metadati di annunci standard su Roku](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-roku.md)
-   + Tracciare capitoli e segmenti {#track-chapters}
+      + Implement standard ad metadata {#impl-std-ad-metadata}
+         + [Implement standard ad metadata on Android](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-android.md)
+         + [Implement standard ad metadata on iOS](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-ios.md)
+         + [Implement standard ad metadata on JavaScript](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-js.md)
+         + [Implement standard ad metadata on Roku](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-roku.md)
+   + Track Chapters and Segments {#track-chapters}
       + [Panoramica](sdk-implement/track-chapters/track-chapters-overview.md)
-      + [Tracciare capitoli e segmenti su Android](sdk-implement/track-chapters/track-chapters-android.md)
+      + [Track Chapters and Segments on Android](sdk-implement/track-chapters/track-chapters-android.md)
       + [Tracciare capitoli e segmenti su iOS](sdk-implement/track-chapters/track-chapters-ios.md)
       + [Tracciare capitoli e segmenti in JavaScript](sdk-implement/track-chapters/track-chapters-js.md)
       + [Tracciare capitoli e segmenti su Chromecast](sdk-implement/track-chapters/track-chapters-chromecast.md)
@@ -107,20 +107,20 @@ source-git-commit: ea727a8364198d64b3699c35234f2d93bd96e77a
       + [Riproduzione VOD con ricerca nel contenuto principale](sdk-implement/tracking-scenarios/vod-seeking.md)
       + [Riproduzione VOD con buffering](sdk-implement/tracking-scenarios/vod-buffering.md)
       + [Tracker multipli VOD in parallelo](sdk-implement/tracking-scenarios/vod-multi-trackers.md)
-      + [VOD un tracciatore per più sessioni](sdk-implement/tracking-scenarios/vod-multi-track-one-session.md)
+      + [VOD one tracker for multiple sessions](sdk-implement/tracking-scenarios/vod-multi-track-one-session.md)
       + [Contenuto principale live](sdk-implement/tracking-scenarios/live-main-content.md)
       + [Contenuto principale live con monitoraggio sequenziale](sdk-implement/tracking-scenarios/live-sequential.md)
    + Convalida {#validation}
-      + [Panoramica sulla convalida](sdk-implement/validation/validation-overview.md)
-      + [Prova 1: Riproduzione standard](sdk-implement/validation/test1-standard-playback.md)
+      + [Validation Overview](sdk-implement/validation/validation-overview.md)
+      + [Test 1: Standard Playback](sdk-implement/validation/test1-standard-playback.md)
       + [Test 2: Interruzione dei media](sdk-implement/validation/test2-media-interrupt.md)
       + [Dettagli chiamata di prova](sdk-implement/validation/test-call-details.md)
       + [Descrizioni dei parametri Heartbeat](sdk-implement/validation/heartbeat-params.md)
       + Eseguire il debug {#debugging}
-         + [Debug SDK](sdk-implement/validation/debugging/sdk-debugging.md)
+         + [SDK Debugging](sdk-implement/validation/debugging/sdk-debugging.md)
          + [Configurare Adobe Debug](sdk-implement/validation/debugging/config-adobe-debug.md)
          + [Creare un nuovo rapporto di debug](sdk-implement/validation/debugging/create-new-debug-report.md)
-         + [Debug di dashboard e report](sdk-implement/validation/debugging/debug-dash-repts.md)
+         + [Debug Dashboards and Reports](sdk-implement/validation/debugging/debug-dash-repts.md)
    + Analisi nelle app OTT {#analytics-with-ott}
       + [Tracciare gli stati dell'app](sdk-implement/analytics-with-ott/track-app-states.md)
       + [Tracciare le azioni eseguite nell'app](sdk-implement/analytics-with-ott/track-app-actions.md)
@@ -149,15 +149,15 @@ source-git-commit: ea727a8364198d64b3699c35234f2d93bd96e77a
       + [Guida introduttiva](media-collection-api/mc-api-impl/mc-api-quick-start.md)
       + [Impostazione del tipo di richiesta HTTP nel lettore](media-collection-api/mc-api-impl/mc-api-set-http-req.md)
       + [Ottenimento di un ID sessione](media-collection-api/mc-api-impl/mc-api-obtain-sid.md)
-      + [Implementazione di una richiesta di eventi](media-collection-api/mc-api-impl/mc-api-impl-events-req.md)
+      + [Implementing an Events Request](media-collection-api/mc-api-impl/mc-api-impl-events-req.md)
       + [Convalida delle richieste evento](media-collection-api/mc-api-impl/mc-api-validate-reqs.md)
-      + [Invio Di Eventi Ping](media-collection-api/mc-api-impl/mc-api-sed-pings.md)
+      + [Sending Ping Events](media-collection-api/mc-api-impl/mc-api-sed-pings.md)
       + [Invio di dati QoE](media-collection-api/mc-api-impl/mc-api-sending-qoe.md)
       + [Supporto per metadati personalizzati](media-collection-api/mc-api-impl/mc-api-custom-meta.md)
       + [Condizioni di timeout](media-collection-api/mc-api-impl/mc-api-timeout.md)
-      + [Controllo dell'ordine degli eventi](media-collection-api/mc-api-impl/mc-api-ctrl-order.md)
+      + [Controlling the Order of Events](media-collection-api/mc-api-impl/mc-api-ctrl-order.md)
       + [Eventi in coda quando la risposta delle sessioni è lenta](media-collection-api/mc-api-impl/mc-api-queuing.md)
-   + Tempistiche per il tracciamento dei file multimediali {#mc-api-timelines}
+   + Media Tracking Timelines {#mc-api-timelines}
       + [Timeline 1 - Visualizzazione alla fine del contenuto](media-collection-api/mc-api-timelines/mc-api-timeline-1.md)
       + [Timeline 2 - Sessione di abbandono utenti](media-collection-api/mc-api-timelines/mc-api-timeline-2.md)
       + [Timeline 3 - Capitoli](media-collection-api/mc-api-timelines/mc-api-timeline-3.md)
@@ -169,7 +169,7 @@ source-git-commit: ea727a8364198d64b3699c35234f2d93bd96e77a
    + [Parametri di qualità](metrics-and-metadata/quality-parameters.md)
    + [Segmenti](metrics-and-metadata/segments.md)
    + [Metriche calcolate](metrics-and-metadata/calculated-metrics.md)
-+ Reporting e analisi {#media-reports}
++ Reporting and Analysis {#media-reports}
    + [Abilitazione di Media Reports](media-reports/media-reports-enable.md)
    + Report predefiniti per file multimediali {#media-default-reports}
       + [Panoramica dei report predefiniti](media-reports/media-default-reports/default-reports-overview.md)
@@ -182,4 +182,3 @@ source-git-commit: ea727a8364198d64b3699c35234f2d93bd96e77a
 + [Analisi federate](data-sharing/federated-analytics.md)
 + Risorse aggiuntive {#additional-resources}
    + [Aggiornamenti alla documentazione](additional-resources/doc-updates.md)
-
