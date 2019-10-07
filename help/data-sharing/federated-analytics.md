@@ -1,31 +1,31 @@
 ---
-seo-title: Federated Analytics
-title: Federated Analytics
+seo-title: Analisi federate
+title: Analisi federate
 uuid: a82ace81-c2f6-4799-9a62-4c6a737a7dab
 translation-type: tm+mt
-source-git-commit: 99a8908499ab0e43964fd3d7e6e419b5a78ce66b
+source-git-commit: 65a9ae618a7d96f0571cff47bdc47e5b77a3745e
 
 ---
 
 
-# Federated Analytics{#federated-analytics}
+# Analisi federate{#federated-analytics}
 
-The Federated Analytics service provides a system for sharing Adobe Media Analytics data (audio and video) between two partners.
-The standardized measurement data created by Media Analytics is the hallmark for Federated Analytics, allowing the same data to flow into a single report from multiple sources.
-Through the rules and logic governing Federated Analytics, data is easily controlled and individualized to meet the needs of each partnership.
-Federated Analytics makes audio and video measurement more efficient, streamlined, and actionable.
+Il servizio Analisi federata fornisce un sistema per la condivisione di dati Adobe Media Analytics (audio e video) tra due partner.
+I dati di misurazione standardizzati creati da Media Analytics sono il marchio distintivo per Federated Analytics, consentendo lo scorrimento degli stessi dati in un singolo report da più origini.
+Attraverso le regole e la logica che regolano l'analisi federata, i dati sono facilmente controllati e individualizzati per soddisfare le esigenze di ogni partnership.
+La funzione Analisi federata rende la misurazione audio e video più efficiente, semplice e utilizzabile.
 
 ## Vantaggi {#section_804FFE8671594A6FB769CBE79EF9D627}
 
-* **Transparent:** Strip away the black box of data creation by using the same logic across companies
+* **** Trasparente: Elimina dalla casella nera la creazione dei dati utilizzando la stessa logica tra le aziende
 * **** Ampia: Comprendere appieno la portata e l'impatto del consumo audio e video tra partnership, piattaforme e dispositivi
 * **** Protetto: Controllo della condivisione dei dati lato server tramite regole e logica
-* **Standardized:** Speak the same data language as your partners
+* **** Standard: Parla la stessa lingua dati dei tuoi partner
 * **** Azioni: Quantificazione di dati audio e video per eseguire il benchmark dei lettori, monitorare le tendenze e rilevare le anomalie tramite Adobe Analytics
-* **** Centralized: Collect audio and video measurement data in one Adobe location
+* **** Centralizzato: Raccogliere i dati di misurazione audio e video in una posizione Adobe
 * **** Contrattuale: Soddisfare facilmente i requisiti legali per la condivisione dei dati
 * **** Temporaneamente: Inviare e ricevere dati in tempo reale
-* **** Easy: Tag players once with Adobe SDKs, share data to many partners
+* **** Facile: Assegnare tag ai lettori una sola volta con gli SDK Adobe, condividere i dati a molti partner
 
 ## Definizioni {#section_ypl_mb3_vbb}
 
@@ -42,7 +42,7 @@ Federated Analytics makes audio and video measurement more efficient, streamline
 
 ## Download del modulo di analisi federata
 
-Scarica la versione corrente del modulo qui: Modulo accordo regole [federative](/assets/federated_analytics_form.pdf)
+Scarica la versione corrente del modulo qui: Modulo accordo regole [federative](federated_analytics_form.pdf)
 
 ## Processo {#section_byb_kb3_vbb}
 
