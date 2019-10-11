@@ -3,7 +3,7 @@ seo-title: Parametri di richiesta
 title: Parametri di richiesta
 uuid: f83e9ef1-803d-4152-a6c7-acaa325036b9
 translation-type: tm+mt
-source-git-commit: 9b6e61e8d97ca44772f5dc2e31472a4f6c54e29c
+source-git-commit: 5fc38098bcd497f3305f76ae2b23757b5f81ac69
 
 ---
 
@@ -131,7 +131,7 @@ Passa l’ID utente di Experience Cloud (noto anche come `MID` o `MCID`) alla `s
 
 ### visitor.marketingCloudOrgId
 
-Oltre a essere necessario per la generazione MCID quando non viene fornito, questo parametro viene utilizzato anche come valore per l'ID editore (in base al quale Media Analytics esegue la corrispondenza della regola di [federazione.](/help/data-sharing/federated-analytics.md))
+Oltre a essere necessario per la generazione MCID quando non viene fornito, questo parametro viene utilizzato anche come valore per l'ID editore (in base al quale Media Analytics esegue la corrispondenza della regola di [federazione.](/help/federated-analytics.md))
 
 ### ID utente legacy di Analytics (aid) e ID utente dichiarati (customerID)
 
