@@ -3,7 +3,7 @@ seo-title: Misurazione di audio e video in Adobe Analytics
 title: Misurazione di audio e video in Adobe Analytics
 uuid: b3cbe240-b94d-42b8-a99c-0280334aaa14
 translation-type: tm+mt
-source-git-commit: 4a14e2faae6401a3f885eb5e341c1344d7f1e94d
+source-git-commit: 5fc38098bcd497f3305f76ae2b23757b5f81ac69
 
 ---
 
@@ -35,7 +35,7 @@ Tra i numerosi vantaggi offerti dalle soluzioni di misurazione dei supporti di A
 
 * **Analisi tempestiva: prendere decisioni in tempo reale e fruibili utilizzando metriche delle prestazioni chiave (ad esempio, durata) su più canali.** Gli eventi di contenuto principale vengono misurati a intervalli di **10 secondi** per acquisire tutte le attività mentre si verifica. Gli eventi di tracciamento degli annunci si verificano a intervalli di **1 secondo** .
 * **Stimolare il coinvolgimento degli utenti -** Coinvolgere gli utenti in un numero minore di eventi di buffering e comprendere dove e quando gli annunci dovrebbero essere riprodotti all'interno dei contenuti per fornire un'esperienza fluida e meno intrusiva che possa richiamare gli utenti e offrire visite ripetute.
-* **Immagine olistica: combinare più punti dati tra tutti i distributori di contenuti per ottenere una visione completa di tutte le attività multimediali e misurare il coinvolgimento e le visualizzazioni/gli accessi tra tutti i possibili canali attraverso la funzione** Federated Analytics [](data-sharing/federated-analytics.md) .
+* **Immagine olistica: combinare più punti dati tra tutti i distributori di contenuti per ottenere una visione completa di tutte le attività multimediali e misurare il coinvolgimento e le visualizzazioni/gli accessi tra tutti i possibili canali attraverso la funzione** Federated Analytics [](/help/federated-analytics.md) .
 * **Maggiore granularità:** valutate il comportamento di visualizzazione al livello più granulare, inclusa l'ora del giorno per singolo visitatore, gli utenti simultanei/i listener per minuto e la durata media del consumo del contenuto.
 * **Misurazione precisa - Misurate** tra i diversi dispositivi utilizzati per il consumo di contenuti multimediali, inclusi OTT, smartphone, tablet, desktop e molto altro, per monitorare i pattern e le abitudini di coinvolgimento degli utenti.
 * **Segmentazione: applica le classificazioni ai tuoi lettori, dispositivi, generi, capitoli e presentazioni per vedere in che modo ciascuno di essi ha un impatto sulle viste/sugli ascolti complessivi e sul coinvolgimento dei clienti con contenuti, audio, annunci pubblicitari e insieme.**
