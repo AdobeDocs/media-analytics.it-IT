@@ -3,7 +3,7 @@ seo-title: Modelli per aree di lavoro multimediali
 title: Modelli per aree di lavoro multimediali
 uuid: 0024b06a-eaf5-4d2e-be45-aeda9d0554c1
 translation-type: tm+mt
-source-git-commit: 6e13e9a6250949a3a7f059445da772b4db1fdb71
+source-git-commit: c8aa81660fe55dba673d3d53f780f3533a50cc93
 
 ---
 
@@ -18,7 +18,7 @@ Quando create o gestite un progetto, potete utilizzare i modelli della scheda Ar
 
    ![](assets/all-templates-audio.png)
 
-   Ad esempio, se scegliete il modello Consumo audio, viene presentato un progetto con la seguente dashboard orientata all’audio:
+   Ad esempio, se scegliete il **[!UICONTROL Audio Consumption]** modello, viene presentato un progetto con il seguente dashboard orientato all’audio:
 
    ![](assets/aa-workspace.png)
 
