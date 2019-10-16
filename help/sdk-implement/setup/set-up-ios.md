@@ -3,7 +3,7 @@ seo-title: Configurare iOS
 title: Configurare iOS
 uuid: a1c6be79-a6dc-47b6-93b3-ac7b42f1f3eb
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: f745d64c9cf843ef7237ee3c3c96c63d7edbc1c2
 
 ---
 
@@ -12,8 +12,7 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ## Prerequisiti
 
-* **Obtain valid configuration parameters for the Media SDK**
-These parameters can be obtained from an Adobe representative after you set up your analytics account.
+* **Ottenete parametri di configurazione validi per Media SDK** Questi parametri possono essere ottenuti da un rappresentante Adobe dopo la configurazione dell'account di analisi.
 * **Implementa ADBMobile per iOS nella tua applicazione** Per ulteriori informazioni sulla documentazione SDK per Adobe Mobile, consulta SDK 4.x per [iOS per le soluzioni Experience Cloud.](https://marketing.adobe.com/resources/help/en_US/mobile/ios/)
 
    >[!IMPORTANT]
@@ -23,7 +22,7 @@ These parameters can be obtained from an Adobe representative after you set up y
 * **Fornite le seguenti funzionalità nel lettore multimediale:**
 
    * _Un'API per iscriversi agli eventi_ del lettore - L'SDK di Media richiede che venga chiamato un set di API semplici quando si verificano eventi nel lettore.
-   * _An API that provides player information - This information includes details such as the media name and the play head position._
+   * _API che fornisce informazioni_ sul lettore - Queste informazioni includono dettagli quali il nome del supporto e la posizione della testina di riproduzione.
 
 ## Implementazione SDK
 
@@ -43,14 +42,14 @@ These parameters can be obtained from an Adobe representative after you set up y
    1. Aggiungi la libreria al progetto:
 
       1. Avvia l'IDE di Xcode e apri la tua app.
-      1. In , drag the  directory and drop it under your project.**[!UICONTROL Project Navigator]**`libs`
+      1. In **[!UICONTROL Project Navigator]**, trascinate la `libs` directory e rilasciatela sotto il progetto.
 
-      1. Ensure that the  checkbox is selected, the  is selected, and none of the checkboxes in  are selected.**[!UICONTROL Copy Items if Needed]****[!UICONTROL Create Groups]****[!UICONTROL Add to Target]**
+      1. Assicurarsi che la **[!UICONTROL Copy Items if Needed]** casella di controllo sia selezionata, che **[!UICONTROL Create Groups]** sia selezionata e che nessuna delle caselle di controllo in **[!UICONTROL Add to Target]** sia selezionata.
 
          ![](assets/choose-options_ios.png)
 
       1. Fai clic su **[!UICONTROL Finish]**.
-      1. In , select your app and select your targets.**[!UICONTROL Project Navigator]**
+      1. In **[!UICONTROL Project Navigator]**, selezionate l'app e le destinazioni.
       1. Link the required frameworks and libraries in the **[!UICONTROL Linked Frameworks]** and **[!UICONTROL Libraries]** section on the **[!UICONTROL General]** tab.
 
          **Destinazioni di app iOS:**
@@ -76,9 +75,9 @@ These parameters can be obtained from an Adobe representative after you set up y
    #import "ADBMediaHeartbeatConfig.h" 
    ```
 
-1. Create a  instance.`ADBMediaHeartbeatConfig`
+1. Create un' `ADBMediaHeartbeatConfig` istanza.
 
-   This section helps you to understand the  config parameters, and to set correct config values on your  instance for accurate tracking.`MediaHeartbeat``MediaHeartbeat`
+   Questa sezione spiega come comprendere i parametri di `MediaHeartbeat` configurazione e impostare i valori di configurazione corretti nell’istanza per un `MediaHeartbeat` monitoraggio accurato.
 
    Esempio `ADBMediaHeartbeatConfig` di inizializzazione:
 
@@ -94,7 +93,7 @@ These parameters can be obtained from an Adobe representative after you set up y
    config.debugLogging   = <YES/NO>; 
    ```
 
-1. Implement the  protocol.`ADBMediaHeartbeatDelegate`
+1. Implementa il `ADBMediaHeartbeatDelegate` protocollo.
 
    ```
    @interface VideoAnalyticsProvider : NSObject <ADBMediaHeartbeatDelegate> 
@@ -121,7 +120,7 @@ These parameters can be obtained from an Adobe representative after you set up y
    @end
    ```
 
-1. Use the  and  to create the  instance.`ADBMediaHeartBeatConfig``ADBMediaHeartBeatDelegate``ADBMediaHeartbeat`
+1. Utilizzate l'icona `ADBMediaHeartBeatConfig` e `ADBMediaHeartBeatDelegate` per creare l' `ADBMediaHeartbeat` istanza.
 
    ```
    //Replace <ADBMediaHeartBeatDelegate> with your delegate instance 
@@ -131,17 +130,17 @@ These parameters can be obtained from an Adobe representative after you set up y
 
    >[!IMPORTANT]
    >
-   >Make sure that your  instance is accessible and does not get deallocated until the end of the session. `ADBMediaHeartbeat`** Questa istanza verrà utilizzata per tutti i seguenti eventi di tracciamento.
+   >Accertatevi che l’ `ADBMediaHeartbeat` istanza sia accessibile e che *non venga deallocata fino alla fine della sessione*. Questa istanza verrà utilizzata per tutti i seguenti eventi di tracciamento.
 
 ## Migrazione dalla versione 1.x alla 2.x in iOS {#migrate-to-two-x}
 
-In version 2.x, all of the public methods are consolidated into the  class to make it easier on developers. `ADBMediaHeartbeat` Tutte le configurazioni sono state consolidate nella `ADBMediaHeartbeatConfig` classe.
+Nella versione 2.x, tutti i metodi pubblici sono consolidati nella `ADBMediaHeartbeat` classe per semplificare gli sviluppatori. Tutte le configurazioni sono state consolidate nella `ADBMediaHeartbeatConfig` classe.
 
 Per ulteriori informazioni sulla migrazione da 1.x a 2.x, consulta Migrazione [VHL 1.x a 2.x.](/help/sdk-implement/va-1x-to-2x/mig-1x-2x-overview.md)
 
 ## Configurare un'app nativa per tvOS
 
-Con il rilascio della nuova Apple TV, ora è possibile creare applicazioni da eseguire nell'ambiente tvOS nativo. Potete creare un'app puramente nativa, utilizzando diversi framework disponibili in iOS, oppure potete creare l'app utilizzando modelli XML e JavaScript. A partire da MediaSDK versione 2.0, è disponibile il supporto per tvOS. Per ulteriori informazioni su tvOS, vedi [tvOS Developer site.](https://developer.apple.com/tvos/documentation/)
+Con il rilascio della nuova Apple TV, ora è possibile creare applicazioni da eseguire nell'ambiente tvOS nativo. Potete creare un'app puramente nativa, utilizzando diversi framework disponibili in iOS, oppure potete creare l'app utilizzando modelli XML e JavaScript. A partire da MediaSDK versione 2.0, è disponibile il supporto per tvOS. Per ulteriori informazioni su tvOS, vedi [tvOS Developer site.](https://developer.apple.com/tvos/)
 
 Effettuare le seguenti operazioni nel progetto Xcode. Questa guida viene scritta partendo dal presupposto che il progetto abbia una destinazione che sia un'app Apple TV per tvOS:
 
