@@ -1,29 +1,29 @@
 ---
 seo-title: Abilitazione dei rapporti multimediali
-title: Media reports enablement
+title: Abilitazione dei rapporti multimediali
 uuid: d306068d-a308-4b6e-8a72-742dda0de428
 translation-type: tm+mt
-source-git-commit: ab400b673e97f9b47c6088e09b7e7d9e7b1c9ee6
+source-git-commit: c8aa81660fe55dba673d3d53f780f3533a50cc93
 
 ---
 
 
-# Media reports enablement{#media-reports-enablement}
+# Abilitazione dei rapporti multimediali{#media-reports-enablement}
 
-Each report suite that collects media metrics must be configured before media data is sent.
+Ogni suite di rapporti che raccoglie le metriche relative ai supporti deve essere configurata prima dell'invio dei dati multimediali.
 
 >[!TIP]
 >
 >Per sfruttare le nuove funzionalità, i clienti esistenti di Media Analytics dovrebbero riabilitare il tracciamento dei supporti per i loro RSID.
 
-1. In [Reporting e analisi](https://my.omniture.com/login/) fate clic su [!UICONTROL Admin] &gt; [!UICONTROL Report Suites].
-1. Selezionate le suite di rapporti in cui state raccogliendo i dati multimediali e fate clic su [!UICONTROL Edit Settings] &gt; [!UICONTROL Media Management] &gt; [!UICONTROL Media Reporting].
+1. In [Reporting e analisi](https://my.omniture.com/login/) fate clic su **[!UICONTROL Admin > Report Suites].**
+1. Selezionate le suite di rapporti in cui state raccogliendo i dati multimediali e fate clic **[!UICONTROL Edit Settings > Media Management > Media Reporting].**
 
    ![](assets/media-reporting.png){width="400px"}
 
-1. On the  page, enable , and optionally enable , , and .**[!UICONTROL Media Reporting]****[!UICONTROL Media Core]****[!UICONTROL Media Ads]****[!UICONTROL Media Chapters]****[!UICONTROL Media Quality]**
+1. Nella **[!UICONTROL Media Reporting]** pagina, abilita **[!UICONTROL Media Core],** e facoltativamente abilita **[!UICONTROL Media Ads],** **[!UICONTROL Media Chapters]** , **[!UICONTROL Media Quality]e.**
 
-   Media measurement includes the following modules:
+   La misura del supporto include i seguenti moduli:
 
    * **Media Core**
 
@@ -33,15 +33,15 @@ Each report suite that collects media metrics must be configured before media da
 
       La misura degli annunci multimediali viene utilizzata per la misurazione degli annunci all'interno del contenuto multimediale. Questo utilizzerà le eVar della soluzione per misurare Annuncio, Nome lettore pubblicitario, Contenitore annunci e Annuncio nella posizione del contenitore. Gli eventi della soluzione verranno utilizzati per Avvii annunci, Completamento annunci, Tempo annunci trascorso e Tempo video trascorso.
 
-   * **Media Chapters**
+   * **Capitoli multimediali**
 
-      Video chapters measurement is used for the measurement of chapters. A chapter is a sub-division of content within a single media. Questo utilizzerà una eVar soluzione per memorizzare l'ID capitolo. Gli eventi della soluzione verranno utilizzati per gli avvii dei capitoli, per i completamenti dei capitoli e per il tempo trascorso per i capitoli. I metadati aggiuntivi del capitolo Nome e Posizione capitolo verranno forniti come classificazioni dell’ID capitolo.
+      La misurazione dei capitoli video viene utilizzata per la misurazione dei capitoli. Un capitolo è una suddivisione dei contenuti all’interno di un singolo supporto. Questo utilizzerà una eVar soluzione per memorizzare l'ID capitolo. Gli eventi della soluzione verranno utilizzati per gli avvii dei capitoli, per i completamenti dei capitoli e per il tempo trascorso per i capitoli. I metadati aggiuntivi del capitolo Nome e Posizione capitolo verranno forniti come classificazioni dell’ID capitolo.
 
-   * **Media Quality**
+   * **Qualità del supporto**
 
-      Video quality measurement is used for measuring the quality of the content playback. This will use Solution eVars to store Time to Start, Buffer Events, Total Buffer Duration, Bitrate Switches, Average Bitrate, Errors, and Dropped Frames. Solution events will be used for Time to Start, Drops before Start, Buffer Impacted Streams, Buffer Events, Total Buffer Duration, Bitrate Change Impacted Streams, Bitrate Changes, Avg Bitrate, Error Impacted Streams, Error Events, Dropped Frame Impacted Streams, and Dropped Frames.
+      La misurazione della qualità video viene utilizzata per misurare la qualità della riproduzione dei contenuti. Le eVar della soluzione consentono di memorizzare il tempo di avvio, gli eventi del buffer, la durata totale del buffer, gli switch bitrate, il bitrate medio, gli errori e i fotogrammi rilasciati. Gli eventi della soluzione verranno utilizzati per l'avvio, le perdite prima dell'avvio, i flussi interessati dal buffer, gli eventi del buffer, la durata totale del buffer, i flussi interessati dalle modifiche del bitrate, le modifiche del bitrate, il bitrate medio, i flussi interessati dagli errori, gli eventi di errore, i flussi interessati dai fotogrammi rilasciati e i fotogrammi rilasciati.
 
-   * **Video &amp; Video Ad Metadata**
+   * **Video e metadati annuncio video**
 
       I metadati possono essere allegati a un supporto e/o a un annuncio per descrivere e classificare ulteriormente tale supporto o annuncio. I supporti standardizzati e i metadati degli annunci verranno raccolti tramite variabili e classificazioni della soluzione. Valori da includere: Mostra, Stagione, Episodio, ID risorsa, Genere, Data prima aria, Prima data digitale, Valutazione contenuto, Creatore, Rete, Tipo di spettacolo, Caricamenti annunci, MVPD, Autorizzato, Parte giorno, ID sessione media, Inserzionista, ID campagna e ID creativo.
 
@@ -52,16 +52,16 @@ Each report suite that collects media metrics must be configured before media da
 
    Se non state ancora tracciando annunci, capitoli o qualità di riproduzione, potete attivare opzioni aggiuntive in qualsiasi momento.
 
-1. Fai clic su **[!UICONTROL Save]**.
+1. Fai clic su **[!UICONTROL Save].**
 
-   Se questa suite di rapporti è già configurata per la raccolta dei dati multimediali, dopo aver fatto clic su di essa **[!UICONTROL Save]**, viene visualizzata una pagina di configurazione aggiuntiva. Se viene visualizzata la [!UICONTROL Media Core measurement] pagina, continuate con il passaggio successivo.
+   Se questa suite di rapporti è già configurata per la raccolta dei dati multimediali, dopo aver fatto clic su di essa **[!UICONTROL Save]**, viene visualizzata una pagina di configurazione aggiuntiva. Se viene visualizzata la **[!UICONTROL Media Core measurement]** pagina, continuate con il passaggio successivo.
 
-1. (Condizionale) Nella [!UICONTROL Media Core measurement] pagina, scegliere di continuare a utilizzare variabili personalizzate o scegliere di utilizzare variabili della soluzione.
+1. (Condizionale) Nella **[!UICONTROL Media Core measurement]** pagina, scegliere di continuare a utilizzare variabili personalizzate o scegliere di utilizzare variabili della soluzione.
 
    | Opzione | Note |
    | --- | --- |
-   | Continua utilizzando variabili personalizzate | Pro e Cons:<ul> <li> **** Pro: La tendenza dei contenuti continua a funzionare dopo la migrazione. </li> <li> **** Cons: Richiede di mantenere due eVar personalizzate e tre eventi personalizzati assegnati ai supporti. È possibile riutilizzare un'eVar personalizzata e un evento personalizzato. </li> </ul> Per continuare a utilizzare variabili personalizzate: <ol> <li>Selezionate Usa variabili personalizzate, quindi fate clic su Salva. </li> <li>Quando richiesto, mappate le eVar ed eventi personalizzati correnti e fate clic su Salva: </li> </ol> |
-   | Migrazione alle variabili della soluzione | Pro e Cons:<ul> <li> **** Pro: Puoi nuovamente utilizzare tre eVar personalizzate e quattro eventi personalizzati. </li> <li> **** Cons: Perdi **tutte** le tendenze storiche e i confronti per i report sui media. Ciò significa che non è possibile visualizzare i trend relativi alle visualizzazioni dei contenuti o al tempo di riproduzione dei contenuti per date precedenti alla migrazione a heartbeat. </li> </ul> **** Limitazione:  Non eseguire la migrazione alle variabili della soluzione a meno che non si sia certi di non voler mantenere questa tendenza. Tutti i clienti devono utilizzare le variabili di soluzione e le regole di elaborazione per inserire i dati multimediali nelle proprietà e nelle eVar esistenti, solo se devono preservare la continuità storica. Per migrare alle variabili della soluzione:Selezionate [!UICONTROL Use Solution Variables] e fate clic su [!UICONTROL Save]. <br><br> IMPORTANTE: La migrazione alle variabili della soluzione comporta la perdita di **tutte** le tendenze storiche e il confronto per i report multimediali. |
+   | Continua utilizzando variabili personalizzate | Pro e Cons:<ul> <li> **** Pro: La tendenza dei contenuti continua a funzionare dopo la migrazione. </li> <li> **** Cons: Richiede di mantenere due eVar personalizzate e tre eventi personalizzati assegnati ai supporti. È possibile riutilizzare un'eVar personalizzata e un evento personalizzato. </li> </ul> Per continuare a utilizzare variabili personalizzate: <ol> <li>Seleziona **[!UICONTROL Use Custom Variables,]** e fai clic su **[!UICONTROL Save.]** </li> <li>Quando richiesto, mappate le eVar ed eventi personalizzati correnti e fate clic su **[!UICONTROL Save:]** </li> </ol> |
+   | Migrazione alle variabili della soluzione | Pro e Cons:<ul> <li> **** Pro: Puoi nuovamente utilizzare tre eVar personalizzate e quattro eventi personalizzati. </li> <li> **** Cons: Perdi **tutte** le tendenze storiche e i confronti per i report sui media. Ciò significa che non è possibile visualizzare i trend relativi alle visualizzazioni dei contenuti o al tempo di riproduzione dei contenuti per date precedenti alla migrazione a heartbeat. </li> </ul> **** Limitazione:  Non eseguire la migrazione alle variabili della soluzione a meno che non si sia certi di non voler mantenere questa tendenza. Tutti i clienti devono utilizzare le variabili di soluzione e le regole di elaborazione per inserire i dati multimediali nelle proprietà e nelle eVar esistenti, solo se devono preservare la continuità storica. Per migrare alle variabili della soluzione:Selezionate **[!UICONTROL Use Solution Variables]** e fate clic su **[!UICONTROL Save].** <br><br> IMPORTANTE: La migrazione alle variabili della soluzione comporta la perdita di **tutte** le tendenze storiche e il confronto per i report multimediali. |
 
 >[!IMPORTANT]
 >
