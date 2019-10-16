@@ -3,7 +3,7 @@ seo-title: Analisi federate
 title: Analisi federate
 uuid: a82ace81-c2f6-4799-9a62-4c6a737a7dab
 translation-type: tm+mt
-source-git-commit: d5673ea5bf96e7ea0a43d176c182423ccece6870
+source-git-commit: 498546566d1dcb8c4ad84482332d46142eecd1ca
 
 ---
 
@@ -42,7 +42,7 @@ La funzione Analisi federata rende la misurazione audio e video più efficiente,
 
 ## Download del modulo di analisi federata
 
-Scarica la versione corrente del modulo qui: Accordo sulle regole [federative](federated-analytics-form.pdf)
+Scarica la versione corrente del modulo qui: Accordo sulle regole [federative](https://github.com/AdobeDocs/media-analytics.en/blob/master/help/federated-analytics-form.pdf)
 
 ## Processo {#section_byb_kb3_vbb}
 
