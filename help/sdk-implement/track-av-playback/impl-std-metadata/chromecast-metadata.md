@@ -3,7 +3,7 @@ seo-title: Chromecast, chiavi di metadati
 title: Chromecast, chiavi di metadati
 uuid: c446ad41-51b8-46d6-9bc1-abfae866023f
 translation-type: tm+mt
-source-git-commit: 959ff714d3546a06123293cac8a17b94fae1c1ff
+source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
 
 ---
 
@@ -12,7 +12,7 @@ source-git-commit: 959ff714d3546a06123293cac8a17b94fae1c1ff
 
 I metadati video e degli annunci standard possono essere impostati rispettivamente sugli oggetti multimediali e sulle informazioni degli annunci. Utilizzando le chiavi costanti per i metadati video/ad, impostate il dizionario contenente i metadati standard sull'oggetto info prima di chiamare le API track. Per l’elenco completo delle costanti di metadati standard, consultate le tabelle di seguito, seguite da un esempio.
 
-## Costanti di metadati {#section_D26B0478688D4DC5AEFD82E9AC0F0C0D}
+## Costanti di metadati {#video-metadata-constants}
 
 | Nome metadati | Chiave dati contestuali | Nome costante |
 | --- | --- | --- |
@@ -34,18 +34,18 @@ I metadati video e degli annunci standard possono essere impostati rispettivamen
 | Feed | `a.media.feed` | `ADBMobile.media.VideoMetadataKeys.FEED` |
 | Formato flusso | `a.media.format` | `ADBMobile.media.VideoMetadataKeys.STREAM_FORMAT` |
 
-## Aggiungi costanti di metadati {#section_5290E1BA54A24D30875F4F55C6CF9458}
+## Aggiungi costanti di metadati {#ad-metadata-constants}
 
 | Nome metadati | Chiave dati contestuali | Nome costante |
 | --- | --- | --- |
 | Inserzionista | `a.media.ad.advertiser` | `ADBMobile.media.AdMetadataKeys.ADVERTISER` |
 | ID campagna | `a.media.ad.campaign` | `ADBMobile.media.AdMetadataKeys.CAMPAIGN_ID` |
 | Creative ID | `a.media.ad.creative` | `ADBMobile.media.AdMetadataKeys.CREATIVE_ID` |
-| Placement ID | `a.media.ad.placement` | `ADBMobile.media.AdMetadataKeys.PLACEMENT_ID` |
-| Site ID | `a.media.ad.site` | `ADBMobile.media.AdMetadataKeys.SITE_ID` |
-| Creative URL | `a.media.ad.creativeURL` | `ADBMobile.media.AdMetadataKeys.CREATIVE_URL` |
+| ID posizionamento | `a.media.ad.placement` | `ADBMobile.media.AdMetadataKeys.PLACEMENT_ID` |
+| ID sito | `a.media.ad.site` | `ADBMobile.media.AdMetadataKeys.SITE_ID` |
+| URL creativo | `a.media.ad.creativeURL` | `ADBMobile.media.AdMetadataKeys.CREATIVE_URL` |
 
-## Sample implementations for Chromecast {#section_wvy_bdn_w2b}
+## Implementazioni di esempio per Chromecast {#sample-implementations-for-chromecast}
 
 ### Video
 
@@ -94,7 +94,7 @@ mediaObject[ADBMobile.media.MediaObjectKey.StandardAudiooMetadata] = standardAud
 ADBMobile.media.trackSessionStart(mediaObject, mediaMetadata); 
 ```
 
-### Ads
+### Annunci
 
 ```js
 // setting Standard Ad Metadata as context data on ad start event 
