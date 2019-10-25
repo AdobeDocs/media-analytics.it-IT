@@ -3,23 +3,23 @@ seo-title: Tracciamento in SceneGraph (Roku)
 title: Tracciamento in SceneGraph (Roku)
 uuid: fa85e546-c79b-4df4-8c03-d6593fa296d5
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
 
 ---
 
 
-# Tracking in SceneGraph (Roku){#tracking-in-scenegraph-roku}
+# Tracciamento in SceneGraph (Roku){#tracking-in-scenegraph-roku}
 
-## Introduzione {#section_vfr_zcz_y2b}
+## Introduzione {#introduction}
 
-Roku ha introdotto un nuovo quadro di programmazione per lo sviluppo di applicazioni: il framework di programmazione XML di SceneGraph. This new framework features two new key concepts:
+Roku ha introdotto un nuovo quadro di programmazione per lo sviluppo di applicazioni: il framework di programmazione XML di SceneGraph. Questo nuovo framework presenta due nuovi concetti chiave:
 
-* SceneGraph rendering of the application screens
+* Rendering di SceneGraph delle schermate applicazione
 * Configurazione XML delle schermate di SceneGraph
 
 L’SDK di Adobe Mobile per Roku è scritto in BrightScript. L’SDK utilizza molti componenti che non sono disponibili per un’app in esecuzione su SceneGraph (ad esempio, thread). Di conseguenza, uno sviluppatore di app Roku che intende utilizzare il framework SceneGraph non può chiamare le API SDK di Adobe Mobile (queste sono simili a quelle disponibili nelle app BrightScript precedenti).
 
-## Architettura {#section_dj5_1dz_y2b}
+## Architettura {#architecture}
 
 Per aggiungere il supporto di SceneGraph all’SDK di Adobe Mobile, Adobe ha aggiunto una nuova API che crea un ponte di connessione tra l’SDK di Adobe Mobile e `adbmobileTask`. Quest'ultimo è un nodo di SceneGraph utilizzato per l'esecuzione dell'API dell'SDK. (L'utilizzo di `adbmobileTask` è spiegato in dettaglio nel resto del documento.)
 
@@ -31,17 +31,17 @@ Il ponte di connessione è progettato per essere eseguito come segue:
 
 ![](assets/SceneGraph_arch.png)
 
-## Componenti {#section_jwl_wqx_1bb}
+## Componenti {#components}
 
 **Applicazione SceneGraph:**
 
 * Utilizza `AdobeMobileLibrary` le API tramite le API del connettore di SceneGraph.
-* Registers for response callbacks on  for expected output data variables.`adbmobileTask`
+* Registri per i callback di risposta su `adbmobileTask` per le variabili di dati di output previste.
 
 **AdobeMobileLibrary:**
 
-* Exposes a set of public APIs (Legacy), including the connector bridge API.
-* Returns a SceneGraph connector instance that wraps all legacy public APIs.
+* Mostra un set di API pubbliche (legacy), inclusa l'API del bridge di connettore.
+* Restituisce un'istanza del connettore SceneGraph che racchiude tutte le API pubbliche legacy.
 * Comunica con un nodo `adbmobileTask` SceneGraph per l’esecuzione di API.
 
 **nodo adbmobileTask:**
@@ -49,7 +49,7 @@ Il ponte di connessione è progettato per essere eseguito come segue:
 * Nodo attività di SceneGraph che esegue `AdobeMobileLibrary` le API in un thread in background.
 * Funge da delegato per restituire i dati alle scene dell’applicazione.
 
-## API Public SceneGraph {#section_jyd_hdz_y2b}
+## API Public SceneGraph {#public-scenegraph-apis}
 
 ### ADBMobileConnector
 
@@ -195,7 +195,7 @@ Le `MediaHeartbeat` API di utilità definite a livello globale presenti nella pr
 | `adb_media_init_adbreakinfo` | Questo metodo restituisce l'oggetto AdBreak Information inizializzato.  `Function adb_media_init_chapterinfo(name As String, position As Double, length As Double, startTime As Double) As Object` |
 | `adb_media_init_qosinfo` | Questo metodo restituisce un oggetto Informazioni QoS inizializzato.  `Function adb_media_init_qosinfo(bitrate As Double, startupTime as Double, fps as Double, droppedFrames as Double) As Object` |
 
-## Implementazione {#section_dbz_ydz_y2b}
+## Implementazione {#implementation}
 
 1. **Scarica la libreria Roku -** Scarica la libreria Roku [più recente.](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/roku-v2.2.0)
 
@@ -295,7 +295,7 @@ Le `MediaHeartbeat` API di utilità definite a livello globale presenti nella pr
       end function 
       ```
 
-## Implementazione di esempio {#section_mld_lfz_y2b}
+## Implementazione di esempio {#sample-implementation}
 
 ### Chiamate API di esempio per l’SDK legacy
 
