@@ -3,14 +3,14 @@ seo-title: Tenere traccia del contenuto scaricato
 title: Tenere traccia del contenuto scaricato
 uuid: 0718689d-9602-4e3f-833c-8297aae1d909
 translation-type: tm+mt
-source-git-commit: b9298de98eeb85c0e2ea0a456c98eac479f43b51
+source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
 
 ---
 
 
 # Tenere traccia del contenuto scaricato{#track-downloaded-content}
 
-## Panoramica {#section_hcy_3pk_cfb}
+## Panoramica {#overview}
 
 La funzione Contenuto scaricato consente di tenere traccia dell’utilizzo dei contenuti multimediali mentre un utente è offline. Ad esempio, un utente scarica e installa un'app su un dispositivo mobile. L'utente quindi scarica il contenuto utilizzando l'app nell'archivio locale del dispositivo. Per tenere traccia di questi dati scaricati, Adobe ha sviluppato la funzione Contenuto scaricato. Con questa funzione, quando l'utente riproduce il contenuto dallo spazio di archiviazione di un dispositivo, i dati di tracciamento vengono memorizzati sul dispositivo, indipendentemente dalla connettività del dispositivo. Al termine della sessione di riproduzione, e il dispositivo torna online, le informazioni di tracciamento memorizzate vengono inviate al back-end API di Media Collection all’interno di un singolo payload. Da qui, l'elaborazione e la generazione di rapporti avvengono normalmente nell'API di Media Collection.
 
@@ -28,7 +28,7 @@ Ogni approccio presenta vantaggi e svantaggi:
 * Lo scenario online segue in tempo reale; questo richiede un controllo della connettività prima di ogni chiamata di rete.
 * Lo scenario offline (funzione Contenuto scaricato) richiede un solo controllo della connettività di rete, ma richiede anche un maggiore spazio di memoria sul dispositivo.
 
-## Implementazione {#section_jhp_jpk_cfb}
+## Implementazione {#implementation}
 
 ### Schemi evento
 
@@ -47,11 +47,11 @@ La funzione Contenuto scaricato è semplicemente la versione offline dell'API Me
 * 201 - Creato: Richiesta Di Successo; i dati sono validi e la sessione è stata creata e verrà elaborata.
 * 400 - Richiesta Cattiva; convalida dello schema non riuscita. Tutti i dati vengono scartati, non verranno elaborati dati delle sessioni.
 
-## Integrazione con Adobe Analytics {#section_cty_kpk_cfb}
+## Integrazione con Adobe Analytics {#integration-with-adobe-analtyics}
 
 Quando si calcolano le chiamate di avvio/chiusura di Analytics per lo scenario di contenuto scaricato, il back-end imposta un campo Analytics aggiuntivo denominato `ts.` Queste sono marche temporali per il primo e l'ultimo evento ricevuto (inizio e completamento). Questo meccanismo consente di posizionare una sessione multimediale completata nel momento giusto (anche se l’utente non torna online per diversi giorni, la sessione multimediale si riferisce al momento della visualizzazione del contenuto). È necessario abilitare questo meccanismo dal lato di Adobe Analytics creando una suite di rapporti opzionale per le _marche temporali._ Per abilitare una suite di rapporti opzionale per marca temporale, vedi [Marca temporale opzionale.](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/timestamp-optional.html)
 
-## Esempio di confronto delle sessioni {#section_qnk_lpk_cfb}
+## Esempio di confronto delle sessioni {#sample-session-comparison}
 
 ```
 [url]/api/v1/sessions
