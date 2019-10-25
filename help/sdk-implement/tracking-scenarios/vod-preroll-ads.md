@@ -5,7 +5,7 @@ description: In questo scenario, gli annunci pre-roll sono stati inseriti prima 
 seo-description: In questo scenario in Adobe Media Analytics, gli annunci pre-roll sono stati inseriti prima del contenuto principale.
 uuid: 5d1022a8-88cb-40aa-919c-60dd592a639e
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
 
 ---
 
@@ -28,7 +28,7 @@ In questo scenario, gli annunci pre-roll sono stati inseriti prima del contenuto
 | Il contenuto è completo. | `trackComplete` | Heartbeat Content Complete | Questa chiamata di rete è identica alla riproduzione [VOD senza scenari di annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . |
 | La sessione è finita | `trackSessionEnd` |  | `SessionEnd` |
 
-## Parametri {#section_33CDFB6CB230437480B67A3D149EC44E}
+## Parametri {#parameters}
 
 Quando inizia la riproduzione di un annuncio, viene `Heartbeat Ad Start` inviata una chiamata. Se l’inizio dell’annuncio non coincide con il timer di 10 secondi, la `Heartbeat Ad Start` chiamata viene ritardata di alcuni secondi e la chiamata va al successivo intervallo di 10 secondi. In questo caso, un evento `Content Heartbeat` si verifica nello stesso intervallo ed è possibile distinguere tra le due chiamate osservando il tipo di evento e il tipo di risorsa:
 
@@ -68,7 +68,7 @@ Come per `Heartbeat Content Complete` le chiamate, al termine della riproduzione
 | `s:event:type` | `complete` |  |
 | `s:asset:type` | `ad` |  |
 
-## Codice di esempio per un'interruzione annuncio pre-roll {#section_nwf_xy3_x2b}
+## Codice di esempio per un'interruzione annuncio pre-roll {#sample-code-for-a-pre-roll-ad-break}
 
 In questo scenario, il VOD è costituito da un annuncio pre-roll, un secondo annuncio pre-roll e quindi il contenuto viene riprodotto.
 
@@ -378,7 +378,7 @@ In questo scenario, il VOD è costituito da un annuncio pre-roll, un secondo ann
    .......
    ```
 
-## Codice di esempio per più interruzioni pubblicitarie {#section_ojy_zy3_x2b}
+## Codice di esempio per più interruzioni pubblicitarie {#sample-code-for-multiple-ad-breaks}
 
 In questo scenario, il contenuto VOD viene riprodotto con un annuncio pre-roll, il contenuto, un annuncio mid-roll, il contenuto e un annuncio post-roll.
 
