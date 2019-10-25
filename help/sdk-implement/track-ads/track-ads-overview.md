@@ -3,7 +3,7 @@ seo-title: Panoramica
 title: Panoramica
 uuid: 1607798b-c6ef-4d60-8e40-e958c345b09c
 translation-type: tm+mt
-source-git-commit: 46710c621f00374aeb55a88e51d4b720dcb941a6
+source-git-commit: 8938e324d570b7e3e2c3c3e971c00ade7e6be8b6
 
 ---
 
@@ -14,7 +14,7 @@ source-git-commit: 46710c621f00374aeb55a88e51d4b720dcb941a6
 >
 >Le istruzioni seguenti forniscono indicazioni per l’implementazione mediante gli SDK 2.x. Se stai implementando una versione 1.x dell’SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
-La riproduzione di annunci include il tracciamento di interruzioni di annunci, avvii di annunci, completamenti di annunci e salti di annunci. Utilizzate l'API del lettore multimediale per identificare gli eventi del lettore chiave e per compilare le variabili di annuncio richieste e facoltative. Consultate l'elenco completo dei metadati qui: Parametri [annuncio.](/help/metrics-and-metadata/ad-parameters.md)
+La riproduzione di annunci include il tracciamento di interruzioni di annunci, avvii annunci, completamenti di annunci e salti di annunci. Utilizzate l'API del lettore multimediale per identificare gli eventi del lettore chiave e per compilare le variabili di annuncio richieste e facoltative. Consultate l'elenco completo dei metadati qui: Parametri [annuncio.](/help/metrics-and-metadata/ad-parameters.md)
 
 ## Eventi del lettore {#player-events}
 
@@ -46,7 +46,7 @@ La riproduzione di annunci include il tracciamento di interruzioni di annunci, a
 
 * Chiamata `trackEvent` per l'interruzione dell'annuncio completata.
 
-## Implementazione del tracciamento degli annunci {#section_83E0F9406A7743E3B57405D4CDA66F68}
+## Implementazione del tracciamento degli annunci {#implement-ad-tracking}
 
 ### Costanti di tracciamento annunci
 
