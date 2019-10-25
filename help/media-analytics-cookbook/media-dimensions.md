@@ -1,17 +1,19 @@
 ---
-title: Tracciamento delle dimensioni del supporto esterno
-seo-title: Tracciamento delle dimensioni del supporto esterno
+title: Attribuzione flusso multimediale
+seo-title: Attribuzione flusso multimediale
 translation-type: tm+mt
-source-git-commit: 5d20df537cd244a10f6c2e66cea622e98aa17a16
+source-git-commit: 44b12731c4a701f0f2536c1c83a9ad4a8b27b49b
 
 ---
 
 
-# Tracciamento delle dimensioni del supporto esterno
+# Attribuzione flusso multimediale
 
 Questa funzione consente di collegare le azioni dell’applicazione ai dati di tracciamento dei supporti senza la necessità di ulteriori regole di elaborazione e variabili personalizzate.
 
-I clienti possono ora aggiungere qualsiasi dimensione media a tutte le altre chiamate di analisi, come visualizzazioni di pagina e collegamenti personalizzati. Durante l'implementazione, devi aggiungere i parametri dei dati contestuali dei supporti alle chiamate di tracciamento di Analytics. L'elenco completo dei parametri dei dati contestuali utilizzati per gli elementi multimediali è disponibile qui: Parametri [audio e video.](/help/metrics-and-metadata/audio-video-parameters.md)
+## Tracciamento delle dimensioni del supporto esterno
+
+Con Attribuzione flusso multimediale, i clienti possono ora aggiungere qualsiasi dimensione media a tutte le altre chiamate di analisi, come visualizzazioni di pagina e collegamenti personalizzati. Durante l'implementazione, devi aggiungere i parametri dei dati contestuali ai dati multimediali alle chiamate di tracciamento di Analytics. L'elenco completo dei parametri dei dati contestuali utilizzati per gli elementi multimediali è disponibile qui: Parametri [audio e video.](/help/metrics-and-metadata/audio-video-parameters.md)
 
 Sarà inoltre necessario riabilitare la configurazione del tracciamento dei supporti dalla console di amministrazione per ogni rapporto per il quale si desidera abilitare questa funzione.
 
