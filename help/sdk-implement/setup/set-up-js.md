@@ -3,7 +3,7 @@ seo-title: Configurare JavaScript
 title: Configurare JavaScript
 uuid: 0269d8ad-0af8-4bf1-9d15-e06c2952a005
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: a3a81609046ab5e3c84fe4bf99c92c3dabc58247
 
 ---
 
@@ -20,7 +20,7 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
    * *Un'API per iscriversi agli eventi* del lettore - L'SDK di Media richiede che venga chiamato un set di API semplici quando si verificano eventi nel lettore.
    * *API che fornisce informazioni* sul lettore - Queste informazioni includono dettagli quali il nome del supporto e la posizione della testina di riproduzione.
 
-1. Aggiungete la libreria [scaricata](/help/sdk-implement/download-sdks.md#section_551A10AD7880426BB29AE52482BB4211) al progetto. Create riferimenti locali alle classi per comodità.
+1. Aggiungete la libreria [scaricata](/help/sdk-implement/download-sdks.md#download-2x-sdks) al progetto. Create riferimenti locali alle classi per comodità.
 
    1. Espandete il `MediaSDK-js-v2.*.zip` file scaricato.
    1. Verificate che il `MediaSDK.min.js` file esista nella `libs` directory:
