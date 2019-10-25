@@ -3,14 +3,14 @@ seo-title: Tracker multipli VOD in parallelo
 title: Tracker multipli VOD in parallelo
 uuid: 6e25dd92-522f-455c-8e71-99d71d352e06
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
 
 ---
 
 
 # Tracker multipli VOD in parallelo{#vod-multiple-trackers-in-parallel}
 
-## Scenario {#section_1AFCA33B322B46818BA4F1BDD3B40B4E}
+## Scenario {#scenario}
 
 In questo scenario, ci sono due sessioni in esecuzione parallela per due supporti separati e che utilizzano due istanze separate di `MediaHeartbeat`.
 
@@ -18,7 +18,7 @@ Questo scenario è identico alla riproduzione [VOD senza scenari di annunci](/he
 
 Se non viene specificato, le chiamate di rete sono le stesse della riproduzione [VOD senza scenari di annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) .
 
-## Parametri {#section_45D7B10031524411B91E2C569F7818B0}
+## Parametri {#parameters}
 
 ### Sessione Heartbeat
 
@@ -26,7 +26,7 @@ Se non viene specificato, le chiamate di rete sono le stesse della riproduzione 
 |---|---|---|
 | `s:event:sid` | ID sessione univoco | Un ID sessione univoco che esiste in tutte le chiamate di rete heartbeat fino alla chiamata del `trackSessionEnd` metodo. |
 
-## Codice di esempio {#section_qpy_4dj_x2b}
+## Codice di esempio {#sample-code}
 
 ![](assets/multi-sessions-in-parallel.png)
 
