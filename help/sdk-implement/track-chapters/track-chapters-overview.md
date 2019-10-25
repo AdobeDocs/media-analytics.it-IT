@@ -3,7 +3,7 @@ seo-title: Panoramica
 title: Panoramica
 uuid: 3fe32425-5e2a-4886-8fea-d91d15671bb0
 translation-type: tm+mt
-source-git-commit: 46710c621f00374aeb55a88e51d4b720dcb941a6
+source-git-commit: 8938e324d570b7e3e2c3c3e971c00ade7e6be8b6
 
 ---
 
@@ -34,7 +34,7 @@ Il tracciamento dei capitoli include gli inizi dei capitoli, i completamenti dei
 
 * Chiamata `trackEvent(MediaHeartbeat.Event.ChapterSkip);`
 
-## Implementare il tracciamento dei capitoli {#section_52221B3A9BFD46B3A22DA6BCE97CCD75}
+## Implementare il tracciamento dei capitoli {#implement-chapter-tracking}
 
 1. Identificare il momento in cui si verifica l’evento di inizio del capitolo e creare l’ `ChapterObject` istanza utilizzando le informazioni sul capitolo.
 
