@@ -1,24 +1,24 @@
 ---
-seo-title: VOD playback with a skipped chapter
-title: VOD playback with a skipped chapter
+seo-title: Riproduzione VOD con un capitolo ignorato
+title: Riproduzione VOD con un capitolo ignorato
 uuid: 19fb020c-eb7a-4942-9212-94f4d47195b9
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
 
 ---
 
 
-# VOD playback with a skipped chapter{#vod-playback-with-a-skipped-chapter}
+# Riproduzione VOD con un capitolo ignorato{#vod-playback-with-a-skipped-chapter}
 
-## Scenario {#section_34DCAFE0E64949C4A6DF2D98F8A12B41}
+## Scenario {#scenario}
 
-In this scenario, the user skips a chapter in the main content.
+In questo scenario, l'utente salta un capitolo nel contenuto principale.
 
-This is the same scenario as VOD playback with one chapter, except the user in this case intends to seek out of the chapter thereby skipping it to land into main content.[](/help/sdk-implement/tracking-scenarios/vod-one-chapter.md)
+Questo è lo stesso scenario della riproduzione [VOD con un capitolo](/help/sdk-implement/tracking-scenarios/vod-one-chapter.md), tranne che l'utente in questo caso intende cercare fuori dal capitolo, saltando così il contenuto principale.
 
-| Attivatore | Heartbeat method | Network calls   | Note |
+| Attivatore | Metodo Heartbeat | Chiamate di rete | Note |
 |---|---|---|---|
-| Clic utente **[!UICONTROL Play]** | `trackSessionStart` | Analytics Content Start, Heartbeat Content Start | The measurement library is unaware that there is a pre-roll ad. These network calls are still exactly the same as Playback with no interruptions in iOS scenario.[](vod-no-intrs-details.md) |
+| Clic utente **[!UICONTROL Play]** | `trackSessionStart` | Inizio contenuto Analytics, Inizio contenuto Heartbeat | La libreria delle misurazioni non è a conoscenza della presenza di un annuncio pre-roll. Queste chiamate di rete sono ancora esattamente le stesse di [Playback senza interruzioni nello scenario iOS](vod-no-intrs-details.md) . |
 | Il capitolo inizia. | `trackEvent:ChapterStart` | Heartbeat Chapter Start |  |
 | Viene riprodotto il primo fotogramma del capitolo. | `trackPlay` | Heartbeat Chapter Play | Quando il contenuto del capitolo viene riprodotto prima del contenuto principale, desideriamo iniziare il heartbeat all'inizio del capitolo. |
 | Il capitolo suona. |  | Capitolo Heartbeat |  |
@@ -29,11 +29,11 @@ This is the same scenario as VOD playback with one chapter, except the user in t
 | La riproduzione del contenuto viene completata. | `trackComplete` | Heartbeat Content Complete | Questa chiamata di rete è esattamente la stessa della [riproduzione senza interruzioni nello scenario iOS](vod-no-intrs-details.md) . |
 | La sessione è finita. | `trackSessionEnd` |  | `SessionEnd` indica la fine di una sessione di visualizzazione. Questa API deve essere chiamata anche se l'utente non guarda il supporto al termine. |
 
-## Parametri {#section_1874F6B7880B43C5856BD11FF85B382E}
+## Parametri {#parameters}
 
 I parametri utilizzati durante la riproduzione dei capitoli sono identici ai parametri della riproduzione [VOD con uno scenario di capitolo](/help/sdk-implement/tracking-scenarios/vod-one-chapter.md) , fatta eccezione per il fatto che non esiste una chiamata di rete completa dei capitoli.
 
-## Codice di esempio {#section_fyl_ncj_x2b}
+## Codice di esempio {#sample-code}
 
 ![](assets/chapter-skip.png)
 
