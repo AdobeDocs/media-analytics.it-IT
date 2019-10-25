@@ -3,7 +3,7 @@ seo-title: Configurare Android
 title: Configurare Android
 uuid: 3ffe3276-a104-4182-9220-038729e9f3d5
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: a3a81609046ab5e3c84fe4bf99c92c3dabc58247
 
 ---
 
@@ -20,7 +20,7 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 
 ## Implementazione SDK
 
-1. Aggiungi l’SDK per file multimediali [scaricato](/help/sdk-implement/download-sdks.md#section_551A10AD7880426BB29AE52482BB4211) al progetto.
+1. Aggiungi l’SDK per file multimediali [scaricato](/help/sdk-implement/download-sdks.md#download-2x-sdks) al progetto.
 
    1. Espandete il file zip Android (ad esempio, `MediaSDK-android-v2.*.zip`).
    1. Verificate che il `MediaSDK.jar` file esista nella `libs/` directory.
@@ -34,14 +34,14 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
       1. In **[!UICONTROL Project Settings]**, selezionare **[!UICONTROL Libraries]**.
 
       1. Click **[!UICONTROL +]** to add a new library.
-      1. Select **[!UICONTROL Java]** and navigate to the `MediaSDK.jar` file.
+      1. Seleziona **[!UICONTROL Java]** e naviga fino al file `MediaSDK.jar`.
 
       1. Selezionate i moduli in cui intendete utilizzare la libreria mobile.
       1. Click **[!UICONTROL Apply]** and then **[!UICONTROL OK]** to close the Module Settings window.
       **Eclipse:**
 
       1. Nell’IDE Eclipse, fai clic con il pulsante destro del mouse sul nome del progetto.
-      1. Clic  **[!UICONTROL Build Path]** &gt; **[!UICONTROL Add External Archives]** .
+      1. Fai clic su  **[!UICONTROL Build Path]** &gt; **[!UICONTROL Add External Archives]** .
       1. Seleziona `MediaSDK.jar`.
       1. Fai clic su **[!UICONTROL Open]**.
       1. Fate nuovamente clic con il pulsante destro del mouse sul progetto e fate clic su **[!UICONTROL Build Path]** &gt; **[!UICONTROL Configure Build Path]** .
