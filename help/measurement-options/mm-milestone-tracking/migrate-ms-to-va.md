@@ -3,20 +3,20 @@ seo-title: Migrazione da Milestone ad Media Analytics
 title: Migrazione da Milestone ad Media Analytics
 uuid: fdc96146-af63-48ce-b938-c0ca70729277
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
 
 ---
 
 
 # Migrazione da Milestone ad Media Analytics {#migrating-from-milestone-to-media-analytics}
 
-## Panoramica {#section_ihl_nbz_cfb}
+## Panoramica {#overview}
 
 I concetti di base della misurazione video sono gli stessi per Milestone e Media Analytics, ovvero prendere gli eventi dei lettori video e mapparli ai metodi di analisi, acquisire anche i metadati e i valori dei lettori e mapparli alle variabili di analisi. La soluzione Media Analytics è nata da Milestone, quindi molti dei metodi e delle metriche sono gli stessi, ma l'approccio di configurazione e il codice sono cambiati in modo significativo. Dovrebbe essere possibile aggiornare il codice evento del lettore per puntare ai nuovi metodi di Media Analytics. Per ulteriori informazioni sull’implementazione di Media Analytics, consulta Panoramica [](/help/sdk-implement/setup/setup-overview.md) SDK e Panoramica sul [tracciamento](/help/sdk-implement/track-av-playback/track-core-overview.md) .
 
 Le tabelle seguenti contengono le traduzioni tra la soluzione Milestone e la soluzione Media Analytics.
 
-## Migration guide {#section_iyb_pbz_cfb}
+## Migration guide {#migration-guide}
 
 ### Riferimento variabile
 
@@ -24,7 +24,7 @@ Le tabelle seguenti contengono le traduzioni tra la soluzione Milestone e la sol
 | --- | --- | --- |
 | Contenuto | Scadenza<br/><br/>eVarDefault: Visita | Contenuto |
 | Tipo di contenuto | eVar<br/><br/> Default expiration: Page view | Tipo di contenuto |
-|  Tempo contenuto trascorso | Tipo evento<br/><br/> : Contatore |  Tempo contenuto trascorso |
+| Tempo contenuto trascorso | Tipo evento<br/><br/> : Contatore | Tempo contenuto trascorso |
 | Avvio video | Tipo evento<br/><br/> : Contatore | Avvio video |
 | Completamento video | Tipo evento<br/><br/> : Contatore | Content Complete |
 
@@ -188,7 +188,8 @@ s.Media.playerName = "Nome lettore personalizzato"
 </pre>
 </td>
 <td>
-Chiave SDK: playerName;Chiave API: media.playerName
+Chiave SDK: playerName; 
+Chiave API: media.playerName
 </td>
 <td>
 <pre>
@@ -484,7 +485,8 @@ trackEvent
 <pre>
 mediaHeartbeat.trackEvent( MediaHeartbeat.
     Evento.
-    AdBreakStart, adBreakObject); ...trackEvent( MediaHeartbeat.
+    AdBreakStart, adBreakObject);...
+trackEvent( MediaHeartbeat.
     Evento.
     AdStart, adObject, adCustomMetadata);
 </pre>
@@ -720,11 +722,13 @@ trackPause()
 </pre> 
  oppure 
 <pre>
+
 trackEvent( MediaHeartbeat.
   Evento.
   SeekStart)
 </pre>  oppure 
 <pre>
+
 trackEvent( MediaHeartbeat.
   Evento.
   BufferStart);
@@ -749,14 +753,14 @@ s.Media.monitor(s, media)
 var customVideoMetadata = { isUserLoggedIn: 
     "false", tvStation: 
     "Stazione TV di esempio", programmatore: 
-    "Sample programer"}; ...
+    "Sample programer"};...
 var standardVideoMetadata = {};
 standardVideoMetadata [MediaHeartbeat.
    VideoMetadataKeys.
    EPISODE] = "Esempio di episodio";
 standardVideoMetadata [MediaHeartbeat.
    VideoMetadataKeys.
-   SHOW] = "Sample Show"; ...
+   SHOW] = "Sample Show";...
 mediaObject.setValue( MediaHeartbeat.
   MediaObjectKey.
   StandardVideoMetadata, standardVideoMetadata);
