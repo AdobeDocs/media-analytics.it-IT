@@ -3,14 +3,14 @@ seo-title: Contenuto principale live con monitoraggio sequenziale
 title: Contenuto principale live con monitoraggio sequenziale
 uuid: b03477b6-9be8-4b67-a5a0-4cef3cf262ab
 translation-type: tm+mt
-source-git-commit: 3dd053c81090172ab53b8b7a367ca0cccad382c3
+source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
 
 ---
 
 
 # Contenuto principale live con monitoraggio sequenziale{#live-main-content-with-sequential-tracking}
 
-## Scenario {#section_E4B558253AD84ED59256EDB60CED02AE}
+## Scenario {#scenario}
 
 In questo scenario, dopo l'unione del flusso live è disponibile una risorsa live senza annunci riprodotti per 40 secondi.
 
@@ -27,7 +27,7 @@ Questo è lo stesso scenario della riproduzione [VOD senza scenari di annunci](/
 | Riproduzioni contenuto |  | Heartbeat di contenuto |  |
 | Durata sessione (episodio 2 terminato) | trackComplete / trackSessionEnd | Heartbeat Content Complete | Completa significa che session2 per il secondo episodio è stato raggiunto e guardato completamente. Prima di iniziare la sessione per il prossimo episodio, questa sessione deve essere terminata. |
 
-## Parametri {#section_D52B325B99DA42108EF560873907E02C}
+## Parametri {#parameters}
 
 ### Avvio contenuto Heartbeat
 
@@ -42,7 +42,7 @@ Questo è lo stesso scenario della riproduzione [VOD senza scenari di annunci](/
 | `s:stream:type` | `live` |  |
 | `s:meta:*` | *optional* | Metadati personalizzati impostati per il supporto |
 
-## Heartbeat Content Play {#section_B6AD9225747943F881DCA8E6A1D5710E}
+## Heartbeat Content Play {#heartbeat-content-play}
 
 Questo dovrebbe assomigliare quasi esattamente alla chiamata Heartbeat Content Start, ma con la differenza chiave nel parametro "s:event:type". Tutti i parametri devono essere ancora presenti.
 
@@ -51,7 +51,7 @@ Questo dovrebbe assomigliare quasi esattamente alla chiamata Heartbeat Content S
 | `s:event:type` | `"play"` |  |
 | `s:asset:type` | `"main"` |  |
 
-## Heartbeat di contenuto {#section_7B387303851A43E5993F937AE2B146FE}
+## Heartbeat di contenuto {#content-heartbeats}
 
 Durante la riproduzione dei contenuti multimediali, è presente un timer che invia uno o più heartbeat ogni 10 secondi per i contenuti principali e ogni secondo per gli annunci. Questi heartbeat contengono informazioni su riproduzione, annunci pubblicitari, buffering e molti altri elementi. Il contenuto esatto di ogni heartbeat va oltre l'ambito di questo documento, la cosa fondamentale da convalidare è che i heartbeat vengono attivati in modo coerente mentre la riproduzione continua.
 
@@ -62,7 +62,7 @@ Nei heartbeat dei contenuti, cercate alcuni punti specifici:
 | `s:event:type` | `"play"` |  |
 | `l:event:playhead` | &lt;posizione dell'indicatore di riproduzione&gt; ad esempio, 50, 60, 70 | Questo deve riflettere la posizione corrente dell'indicatore di riproduzione. |
 
-## Heartbeat Content Complete {#section_2CA970213AF2457195901A93FC9D4D0D}
+## Heartbeat Content Complete {#heartbeat-content-complete}
 
 Al termine della riproduzione di un dato episodio (l'indicatore di riproduzione attraversa il limite dell'episodio), viene inviata una chiamata Heartbeat Content Complete. Questo è simile ad altre chiamate Heartbeat, ma contiene un paio di cose specifiche:
 
@@ -71,7 +71,7 @@ Al termine della riproduzione di un dato episodio (l'indicatore di riproduzione 
 | `s:event:type` | `"complete"` |  |
 | `s:asset:type` | `"main"` |  |
 
-## Codice di esempio {#section_mpx_q2j_x2b}
+## Codice di esempio {#sample-code}
 
 ![](assets/ios-live-noads-multiplesessions.png)
 
