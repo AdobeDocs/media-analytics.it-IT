@@ -3,14 +3,14 @@ seo-title: Riproduzione VOD con un capitolo
 title: Riproduzione VOD con un capitolo
 uuid: 1566a6f5-cf22-42e7-8e1a-6976c6c4e649
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
 
 ---
 
 
 # Riproduzione VOD con un capitolo{#vod-playback-with-one-chapter}
 
-## Scenario {#section_E4B558253AD84ED59256EDB60CED02AE}
+## Scenario {#scenario}
 
 In questo scenario, una parte del contenuto VOD viene contrassegnata come capitolo.
 
@@ -27,7 +27,7 @@ Se non viene specificato, le chiamate di rete in questo scenario sono le stesse 
 | Il contenuto è completo. | `trackComplete` | Heartbeat Content Complete | Questa chiamata di rete è esattamente la stessa della riproduzione [VOD senza scenari di annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . |
 | La sessione è finita. | `trackSessionEnd` |  | `SessionEnd` indica che è stata raggiunta la fine di una sessione di visualizzazione. Questa API deve essere chiamata anche se l'utente non guarda il supporto al termine. |
 
-## Parametri {#section_869319D99A474FEA8EA840415EA97FBD}
+## Parametri {#parameters}
 
 Quando inizia la riproduzione di un capitolo, viene `Heartbeat Chapter Start` inviata una chiamata. Se l’inizio del capitolo non coincide con il timer di 10 secondi, la `Heartbeat Chapter Start` chiamata viene ritardata di alcuni secondi e la chiamata va al successivo intervallo di 10 secondi.
 
@@ -42,7 +42,7 @@ In questo caso, una `Content Heartbeat` chiamata viene effettuata nello stesso i
 | `s:stream:chapter_*` |  | Informazioni sul flusso specifiche per i dati del capitolo. |
 | `s:meta:*` |  | Capitolo con dati contestuali specifici. |
 
-## Codice di esempio, capitolo al centro {#section_icd_5bj_x2b}
+## Codice di esempio, capitolo al centro {#sample-code-chapter-in-the-middle}
 
 In questo scenario, parte del contenuto del VOD è un capitolo.
 
@@ -254,7 +254,7 @@ this._mediaHeartbeat.trackSessionEnd();
 ........ 
 ```
 
-## Codice di esempio, capitolo all'inizio {#section_flj_5bj_x2b}
+## Codice di esempio, capitolo all'inizio {#sample-code-chapter-at-the-beginning}
 
 In questo scenario, il contenuto VOD viene riprodotto con un capitolo all’inizio della riproduzione.
 
