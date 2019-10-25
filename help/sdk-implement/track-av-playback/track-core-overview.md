@@ -3,7 +3,7 @@ seo-title: Panoramica di tracciamento
 title: Panoramica di tracciamento
 uuid: 7b8e2f76-bc4e-4721-8933-3e4453b01788
 translation-type: tm+mt
-source-git-commit: 46710c621f00374aeb55a88e51d4b720dcb941a6
+source-git-commit: 8938e324d570b7e3e2c3c3e971c00ade7e6be8b6
 
 ---
 
@@ -59,9 +59,9 @@ Il tracciamento della riproduzione di base include il caricamento del supporto, 
 
 >[!TIP]
 >
->La posizione dell'indicatore di riproduzione è impostata come parte del codice di configurazione e configurazione. Per ulteriori informazioni su `getCurrentPlayheadTime`, consulta [Panoramica: Linee guida generali sull’implementazione](/help/sdk-implement/setup/setup-overview.md#section_965A3B699A8248DDB9B2B3EA3CC20E41)
+>La posizione dell'indicatore di riproduzione è impostata nel codice di configurazione e configurazione. Per ulteriori informazioni su `getCurrentPlayheadTime`, consulta [Panoramica: Linee guida generali sull’implementazione](/help/sdk-implement/setup/setup-overview.md#general-implementation-guidelines)
 
-## Implementate {#section_BB217BE6585D4EDEB34C198559575004}
+## Implementate {#implement}
 
 1. **Configurazione iniziale tracciamento: identificate quando l'utente attiva l'intenzione di riproduzione (l'utente fa clic su play e/o la riproduzione automatica è attivata) e create un'** `MediaObject` istanza utilizzando le informazioni sui supporti per il nome del contenuto, l'ID del contenuto, la lunghezza del contenuto e il tipo di flusso.
 
@@ -232,7 +232,7 @@ if (e.type == “buffered”) {
 };
 ```
 
-## Convalida {#section_ABCFB92C587B4CAABDACF93452EFA78F}
+## Convalida {#validate}
 
 Per informazioni sulla convalida dell'implementazione, vedi [Convalida.](/help/sdk-implement/validation/validation-overview.md)
 
