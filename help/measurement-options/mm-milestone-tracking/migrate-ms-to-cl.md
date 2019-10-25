@@ -3,20 +3,20 @@ seo-title: Migrazione da attività cardine a collegamento personalizzato
 title: Migrazione da attività cardine a collegamento personalizzato
 uuid: 1c8edde5-0ef1-4bc0-a62d-1747f4907f09
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
 
 ---
 
 
 # Migrazione da attività cardine a collegamento personalizzato{#migrating-from-milestone-to-custom-link}
 
-## Panoramica {#section_xlc_fc2_dfb}
+## Panoramica {#overview}
 
 I concetti di base della misurazione video sono gli stessi per il tracciamento Milestone e Custom Link, che consiste nell’eseguire gli eventi dei lettori video e nel mapparli ai metodi di analisi, nonché acquisire i metadati e i valori dei lettori e mapparli alle variabili di analisi. L'approccio "Custom Link" dovrebbe essere considerato un modo per ridurre e semplificare sia l'attuazione che i dati raccolti. Con la soluzione Custom Link, per la misurazione video non sono predefiniti variabili o metodi, ma è necessaria una configurazione completa e personalizzata. Dovrebbe essere possibile aggiornare il codice evento del lettore in modo che punti alle chiamate di tracciamento dei collegamenti personalizzate per gli eventi del lettore di base, come start e complete. Per ulteriori informazioni, consulta la guida [all’implementazione dei collegamenti](/help/measurement-options/cl-in-aa/cl-impl-guide.md) personalizzati e il tracciamento [manuale dei collegamenti tramite codice](https://marketing.adobe.com/resources/help/en_US/sc/implement/link_manual.html) di collegamento personalizzato.
 
 Le tabelle seguenti contengono le traduzioni tra la soluzione Milestone e la soluzione Custom Link.
 
-## Migration guide {#section_btt_fc2_dfb}
+## Migration guide {#migration-guide}
 
 ### Riferimento per la variabile video
 
