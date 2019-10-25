@@ -3,7 +3,7 @@ seo-title: Panoramica dei supporti
 title: Panoramica dei supporti
 uuid: bdbd998f-9b5e-40c9-a8ea-12dfa5acd35c
 translation-type: tm+mt
-source-git-commit: 6e13e9a6250949a3a7f059445da772b4db1fdb71
+source-git-commit: 8938e324d570b7e3e2c3c3e971c00ade7e6be8b6
 
 ---
 
@@ -14,13 +14,13 @@ Il dashboard Panoramica file multimediali è progettato per consentire il monito
 
 ![](assets/media_overview.png){width="672px"}
 
-## Filtri rapidi {#section_8DF3E4A6734145B082657C6BECFA0BBE}
+## Filtri rapidi {#quick-filters}
 
 Visualizzare rapidamente le metriche relative agli elementi multimediali in base al dispositivo o al paese geografico:
 
 ![](assets/video-overview-report-filters.png){width="400px"}
 
-## Media Performance {#section_288FB476EDA44761BB8A86551F0A110C}
+## Media Performance {#media-performance}
 
 Fate clic e trascinate per ingrandire, quindi passate il mouse per visualizzare le metriche granulari per specifici supporti. Fai clic su  ![](assets/video-overview-report-revert.png)
 
