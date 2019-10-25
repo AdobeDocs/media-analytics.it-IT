@@ -3,7 +3,7 @@ seo-title: Gestione degli arresti dell’applicazione durante la riproduzione
 title: Gestione degli arresti dell’applicazione durante la riproduzione
 uuid: 1ccb4507-bda6-462d-bf67-e22978a4db3d
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
 
 ---
 
@@ -19,7 +19,7 @@ La riproduzione in un'applicazione multimediale può essere interrotta in divers
 >
 >Il team di Media Analytics ha visto le istanze in cui i clienti hanno chiamato `trackSessionStart` quando la loro app è tornata in background. In questo modo, la riproduzione fino a quel momento non viene conteggiata per il tempo di riproduzione totale, oltre a perdere marcatori di avanzamento precedenti, segmenti e così via. Al contrario, chiamate `trackPlay` quando l'app ritorna e/o il supporto riprende la riproduzione.
 
-## Domande frequenti sulla gestione degli arresti dell’applicazione: {#section_osf_xqs_h2b}
+## Domande frequenti sulla gestione degli arresti dell’applicazione: {#faq-about-handling-application-interrupts}
 
 * _Per quanto tempo deve essere messa in background un'app prima della chiusura della sessione?_
 
