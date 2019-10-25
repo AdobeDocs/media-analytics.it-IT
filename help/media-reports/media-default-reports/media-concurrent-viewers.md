@@ -3,7 +3,7 @@ seo-title: Visualizzatori simultanei di contenuti multimediali
 title: Visualizzatori simultanei di contenuti multimediali
 uuid: e61c50e5-8196-4538-b67c-ebc01c6e6ba7
 translation-type: tm+mt
-source-git-commit: 6e13e9a6250949a3a7f059445da772b4db1fdb71
+source-git-commit: 8938e324d570b7e3e2c3c3e971c00ade7e6be8b6
 
 ---
 
@@ -18,7 +18,7 @@ Il dashboard Visualizzatori simultanei di file multimediali mostra gli utenti si
 
 ![](assets/video-concurrent-viewers.png)
 
-## Report features {#section_11F8BCB98042490DAD0EA0B7EDA80569}
+## Report features {#report-features}
 
 Di seguito sono riportate alcune caratteristiche di questo rapporto:
 
@@ -30,7 +30,7 @@ Di seguito sono riportate alcune caratteristiche di questo rapporto:
 * Il rapporto funziona solo in un giorno.
 * Il cliente può esaminare i rapporti storici dei visualizzatori simultanei (limitati a un solo giorno).
 
-## Limitazioni {#section_F159BC0213134FE4A997E52EECC7BB9D}
+## Limitazioni {#limitations}
 
 Di seguito sono riportati alcuni limiti per questo rapporto:
 
