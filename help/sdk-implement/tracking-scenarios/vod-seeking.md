@@ -3,14 +3,14 @@ seo-title: Riproduzione VOD con ricerca nel contenuto principale
 title: Riproduzione VOD con ricerca nel contenuto principale
 uuid: 5c2392f6-9b9c-42f5-833f-77423d1e6222
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
 
 ---
 
 
 # Riproduzione VOD con ricerca nel contenuto principale{#vod-playback-with-seeking-in-the-main-content}
 
-## Scenario {#section_E4B558253AD84ED59256EDB60CED02AE}
+## Scenario {#scenario}
 
 Questo scenario include la ricerca nel contenuto principale durante la riproduzione.
 
@@ -26,7 +26,7 @@ Questo è lo stesso scenario della riproduzione [VOD senza scenari di annunci](/
 | Contenuto completato | `trackComplete` | Heartbeat Content Complete | Questa chiamata di rete è esattamente la stessa della riproduzione [VOD senza scenari di annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . |
 | Sessione | `trackSessionEnd` |  | `SessionEnd` |
 
-## Codice di esempio {#section_q2d_wcj_x2b}
+## Codice di esempio {#sample-code}
 
 In questo scenario, l'utente cerca quando viene riprodotto il contenuto principale.
 
