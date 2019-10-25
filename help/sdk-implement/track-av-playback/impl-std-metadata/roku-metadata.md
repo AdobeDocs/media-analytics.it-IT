@@ -1,9 +1,9 @@
 ---
-seo-title: Roku metadata keys
+seo-title: Tasti di metadati Roku
 title: Tasti di metadati Roku
 uuid: 2ca6bb1d-c545-43d3-9c3e-63b890aa268d
 translation-type: tm+mt
-source-git-commit: 959ff714d3546a06123293cac8a17b94fae1c1ff
+source-git-commit: 8938e324d570b7e3e2c3c3e971c00ade7e6be8b6
 
 ---
 
@@ -12,7 +12,7 @@ source-git-commit: 959ff714d3546a06123293cac8a17b94fae1c1ff
 
 I metadati video, audio e degli annunci standard possono essere impostati rispettivamente sugli oggetti multimediali e sulle informazioni degli annunci. Utilizzando le chiavi costanti per i metadati video/ad, impostate il dizionario contenente i metadati standard sull'oggetto info prima di chiamare le API track. Per l’elenco completo delle costanti di metadati standard, consultate le tabelle di seguito, seguite da un esempio.
 
-## Costanti di metadati video {#section_D26B0478688D4DC5AEFD82E9AC0F0C0D}
+## Costanti di metadati video {#video-metadata-constants}
 
 | Nome metadati | Chiave dati contestuali | Nome costante |
 | --- | --- | --- |
@@ -43,20 +43,20 @@ I metadati video, audio e degli annunci standard possono essere impostati rispet
 | Etichetta | `a.media.label` | `MEDIA_AudioMetadataKeyLABEL` |
 | Autore | `a.media.author` | `MEDIA_AudioMetadataKeyAUTHOR` |
 | Stazione | `a.media.station` | `MEDIA_AudioMetadataKeySTATION` |
-| Publisher | `a.media.publisher` | `MEDIA_AudioMetadataKeyPUBLISHER` |
+| Editore | `a.media.publisher` | `MEDIA_AudioMetadataKeyPUBLISHER` |
 
-## Aggiungi costanti di metadati {#section_5290E1BA54A24D30875F4F55C6CF9458}
+## Aggiungi costanti di metadati {#ad-metadata-constants}
 
-| Metadata Name | Chiave dati contestuali | Constant Name |
+| Nome metadati | Chiave dati contestuali | Nome costante |
 | --- | --- | --- |
 | Inserzionista | `a.media.ad.advertiser` | `MEDIA_AdMetadataKeyADVERTISER` |
-| Campaign ID | `a.media.ad.campaign` | `MEDIA_AdMetadataKeyCAMPAIGN_ID` |
+| ID campagna | `a.media.ad.campaign` | `MEDIA_AdMetadataKeyCAMPAIGN_ID` |
 | Creative ID | `a.media.ad.creative` | `MEDIA_AdMetadataKeyCREATIVE_ID` |
-| Placement ID | `a.media.ad.placement` | `MEDIA_AdMetadataKeyPLACEMENT_ID` |
+| ID posizionamento | `a.media.ad.placement` | `MEDIA_AdMetadataKeyPLACEMENT_ID` |
 | ID sito | `a.media.ad.site` | `MEDIA_AdMetadataKeyPLACEMENT_ID` |
 | URL creativo | `a.media.ad.creativeURL` | `MEDIA_AdMetadataKeyCREATIVE_URL` |
 
-## Costanti {#section_F55145DBE77F45B988849C42C044C7DA}
+## Costanti {#constants}
 
 Per tenere traccia degli eventi multimediali potete usare le seguenti costanti:
 
@@ -90,9 +90,9 @@ Per tenere traccia degli eventi multimediali potete usare le seguenti costanti:
 | `MEDIA_SEEK_START` | Tipo di evento per la ricerca |
 | `MEDIA_SEEK_COMPLETE` | Tipo evento per ricerca completa |
 | `MEDIA_BITRATE_CHANGE` | Tipo evento per modifica bitrate |
-| `MEDIA_CHAPTER_START` | Event Type for Chapter Start |
+| `MEDIA_CHAPTER_START` | Tipo evento per inizio capitolo |
 | `MEDIA_CHAPTER_COMPLETE` | Tipo evento per il capitolo completo |
-| `MEDIA_CHAPTER_SKIP` | Event Type for Ad Start |
+| `MEDIA_CHAPTER_SKIP` | Tipo evento per Ad Start |
 | `MEDIA_AD_BREAK_START` | Tipo evento per Ad Start |
 | `MEDIA_AD_BREAK_COMPLETE` | Tipo evento per AdBreak Complete |
 | `MEDIA_AD_BREAK_SKIP` | Tipo di evento per AdBreak Skip |
