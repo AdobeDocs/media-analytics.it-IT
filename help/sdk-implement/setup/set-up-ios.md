@@ -3,7 +3,7 @@ seo-title: Configurare iOS
 title: Configurare iOS
 uuid: a1c6be79-a6dc-47b6-93b3-ac7b42f1f3eb
 translation-type: tm+mt
-source-git-commit: f745d64c9cf843ef7237ee3c3c96c63d7edbc1c2
+source-git-commit: a3a81609046ab5e3c84fe4bf99c92c3dabc58247
 
 ---
 
@@ -26,7 +26,7 @@ source-git-commit: f745d64c9cf843ef7237ee3c3c96c63d7edbc1c2
 
 ## Implementazione SDK
 
-1. Aggiungi l’SDK per file multimediali [scaricato](/help/sdk-implement/download-sdks.md#section_551A10AD7880426BB29AE52482BB4211) al progetto.
+1. Aggiungi l’SDK per file multimediali [scaricato](/help/sdk-implement/download-sdks.md#download-2x-sdks) al progetto.
 
    1. Verificate che nella `libs` directory siano presenti i seguenti componenti software:
 
