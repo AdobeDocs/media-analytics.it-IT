@@ -1,28 +1,28 @@
 ---
 seo-title: Panoramica delle attività cardine
-title: Milestone overview
+title: Panoramica delle attività cardine
 uuid: 2f9ec6bb-8860-4863-98bc-5cffb356ccc5
 translation-type: tm+mt
-source-git-commit: 7eb14c8e4da742fb426a6e5d0d60ebf8c2063bb6
+source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
 
 ---
 
 
-# Milestone overview{#milestone-overview}
+# Panoramica delle attività cardine{#milestone-overview}
 
 >[!CAUTION]
 >
->This measurement option has been deprecated.
+>Questa opzione di misura è stata rimossa.
 
 [Documentazione precedente di Milestone](milestone_analytics_video.pdf)
 
-## Configurazione {#section_rzx_j1z_cfb}
+## Configurazione {#configuration}
 
-### Milestone Video Configuration
+### Configurazione video cardine
 
-Per tracciare il video, specificate un set di variabili *di conversione* personalizzate (eVar) ed eventi ** personalizzati da usare per il tracciamento e il reporting. One Custom Insight variable (  ) is also used for pathing.**`s.prop`
+Per tracciare il video, specificate un set di variabili *di conversione* personalizzate (eVar) ed eventi ** personalizzati da usare per il tracciamento e il reporting. Per il percorso viene utilizzata anche una variabile *Custom Insight* ( `s.prop` ).
 
-The variables you select for each metric are added to the video configuration page. Questo consente al sistema di generare e formattare automaticamente i rapporti video standard. Il nome ** video eVar e il contatore delle viste ** video sono entrambi obbligatori. Altre variabili sono facoltative ma consigliate per la misurazione completa. Dopo aver abilitato il tracciamento video, potete visualizzare i rapporti generati dai dati video segnalati mediante il tracciamento video.
+Le variabili selezionate per ciascuna metrica vengono aggiunte alla pagina di configurazione video. Questo consente al sistema di generare e formattare automaticamente i rapporti video standard. Il nome ** video eVar e il contatore delle viste ** video sono entrambi obbligatori. Altre variabili sono facoltative ma consigliate per la misurazione completa. Dopo aver abilitato il tracciamento video, potete visualizzare i rapporti generati dai dati video segnalati mediante il tracciamento video.
 
 Potete anche tenere traccia di un numero qualsiasi di metriche aggiuntive per i video. Ad esempio, se usate più lettori video sul sito, potreste compilare un eVar con il nome del lettore. Alcune delle variabili selezionate possono essere utilizzate anche in altre aree del sito. Ad esempio, se utilizzata in tutto il sito, la variabile del tipo *di* contenuto può consentire di misurare la percentuale di visualizzazioni di pagina che proviene dal video e consentire di collegare gli eventi di conversione al video.
 
@@ -47,7 +47,7 @@ Nella schermata finale, selezionate le due eVar e i tre eventi da usare per la m
 <!--![](assets/0clip_image008_-92166399.png)-->
 ![](assets/rs3.png)
 
-## Riferimento variabile video {#section_emg_c1z_cfb}
+## Riferimento variabile video {#video-variable-reference}
 
 La tabella seguente contiene ulteriori dettagli sulle variabili commerce e gli eventi personalizzati per i video:
 
@@ -59,9 +59,9 @@ La tabella seguente contiene ulteriori dettagli sulle variabili commerce e gli e
 | Avvio video | Tipo <br/>evento: Contatore | Indica che un visitatore ha visualizzato una parte di un video. Tuttavia, non fornisce informazioni sulla parte specifica visualizzata, né sulla durata della visualizzazione. |
 | Completamento video | Tipo <br/>evento: Contatore | Indica che un utente ha visualizzato un video completo. Per impostazione predefinita, l'evento completo è misurato 1 secondo prima della fine del video.  <br/>Durante l'implementazione, puoi specificare quanti secondi dalla fine del video considerare come una visualizzazione dell'intero video. Per i video in diretta e altri flussi che non hanno una fine definita, puoi specificare un punto personalizzato per misurare il completamento. Ad esempio, dopo un tempo di visualizzazione specifico. |
 
-## Variabili del modulo multimediale {#section_ts5_11z_cfb}
+## Variabili del modulo multimediale {#media-module-variables}
 
-Le seguenti variabili consentono di configurare la misurazione video. You must define values for the variables in the Required Variables table. Additionally, to track events in your video player, you must enable autoTrack (for supported players) or implement custom player event tracking using the open, play, stop, and close methods.
+Le seguenti variabili consentono di configurare la misurazione video. È necessario definire i valori per le variabili nella tabella Variabili richieste. Inoltre, per tenere traccia degli eventi nel lettore video, è necessario abilitare autoTrack (per i lettori supportati) o implementare il tracciamento personalizzato degli eventi del lettore utilizzando i metodi open, play, stop e close.
 
 | Variabile    | Descrizione |
 | --- | --- |
@@ -70,7 +70,7 @@ Le seguenti variabili consentono di configurare la misurazione video. You must d
 | `Media.trackVars` | **Sintassi:** <br/><br/> `s.Media.trackVars =` <br/>    `"events,``prop2,` `eVar1,` `eVar2,` `eVar3";` <br/><br/>Elenco separato da virgole di tutte le variabili impostate nel codice di tracciamento video. |
 | `Media.trackEvents` | **Sintassi:** <br/><br/> `s.Media.trackEvents =` <br/>    `"event1,``event2,``event3,``event4,``event5,` `event6,` `event7"` <br/><br/>Elenco separato da virgole di tutti gli eventi impostati nel codice di tracciamento video. |
 
-## Variabili facoltative {#section_ufg_zzy_cfb}
+## Variabili facoltative {#optional-variables}
 
 |  Variabile    | Descrizione |
 | --- | --- |
@@ -85,7 +85,7 @@ Le seguenti variabili consentono di configurare la misurazione video. You must d
 | `Media.segmentByMilestones` | **Sintassi:** <br/><br/> `s.Media.segmentByMilestones = true;` Genera <br/><br/>automaticamente i dati relativi al nome del segmento, al numero del segmento e alla lunghezza del segmento, in base alla lunghezza del supporto e alle tappe specificate in `Media.trackMilestones` Segmentazione per <br/><br/>fasi miliari è l’unico modo per definire i segmenti quando si utilizza `autoTrack`. <br/><br/>Valore predefinito: `false` |
 | `Media.segmentByOffsetMilestones` | **Sintassi:** <br/><br/> `s.Media.segmentByOffsetMilestones = true;` Genera <br/><br/>automaticamente i dati relativi al nome del segmento, al numero del segmento e alla lunghezza del segmento, in base alla lunghezza del supporto e alle tappe specificate in `Media.trackOffsetMilestones` Segmentazione per <br/><br/>fasi miliari è l’unico modo per definire i segmenti quando si utilizza `autoTrack`.  <br/><br/>Valore predefinito: `false` |
 
-## Variabili di tracciamento annunci {#section_bhv_xzy_cfb}
+## Variabili di tracciamento annunci {#ad-tracking-variables}
 
 Queste variabili vengono utilizzate per inviare informazioni sugli annunci insieme al metodo openAd. Consultate [VAST Video Ad Tracking.](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/video_ads.html)
 
@@ -97,7 +97,7 @@ Queste variabili vengono utilizzate per inviare informazioni sugli annunci insie
 | `Media.adSegmentByMilestones` | **Sintassi:** <br/><br/> `s.Media.adSegmentByMilestones = true;` Genera <br/><br/>automaticamente i dati relativi al nome del segmento, al numero del segmento e alla lunghezza del segmento, in base alla lunghezza del supporto e alle tappe specificate in `Media.adTrackMilestones` Segmentazione per <br/><br/>fasi miliari è l’unico modo per definire i segmenti quando si utilizza `autoTrack`.  <br/><br/>Valore predefinito: `false` |
 | `Media.adSegmentByOffsetMilestones` | **Sintassi:** <br/><br/> `s.Media.adSegmentByOffsetMilestones = true;` Genera <br/><br/>automaticamente i dati relativi al nome del segmento, al numero del segmento e alla lunghezza del segmento, in base alla lunghezza del supporto e alle tappe specificate in `Media.adTrackOffsetMilestones` Segmentazione per <br/><br/>fasi miliari è l’unico modo per definire i segmenti quando si utilizza `autoTrack`. <br/><br/>Valore predefinito: `false` |
 
-## Metodi del modulo multimediale {#section_xp1_wzy_cfb}
+## Metodi del modulo multimediale {#media-module-methods}
 
 I metodi del modulo multimediale sono utilizzati per monitorare manualmente gli eventi del lettore e per tenere traccia di metriche aggiuntive che non fanno parte dei rapporti video standard.
 
@@ -117,7 +117,7 @@ Se utilizzi `Media.autoTrack` e non esegui il tracciamento di metriche aggiuntiv
 | `Media.track` | **Sintassi:** <br/><br/> `s.Media.track(mediaName)` Invia <br/><br/>immediatamente lo stato del video corrente, insieme a qualsiasi `Media.trackVars` e Media.trackEvents definito. Questo metodo viene utilizzato all’interno `Media.monitor`. <br/><br/>Consultate [Misurazione di metriche aggiuntive tramite Media.monitor.](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/video_mediamonitor.html) Chiamare <br/><br/>Call `Media.open` e `Media.play` il video prima di chiamare questo metodo. Questo metodo utilizza il seguente parametro: <ul> <li> **mediaName**: Nome del video. Deve corrispondere al nome utilizzato in `Media.open`.</li> </ul> Questo metodo è l’unico modo per inviare variabili aggiuntive durante la riproduzione del video. Ripristina a zero l’intervallo di secondi e la percentuale dei contatori delle attività cardine per evitare più hit di tracciamento. |
 
 
-## Tracciare gli eventi dei lettori video {#section_dsg_rzy_cfb}
+## Track video player events {#track-video-player-events}
 
 È possibile tenere traccia dei lettori multimediali creando funzioni collegate ai gestori di eventi del lettore video. Questo consente di chiamare `Media.open`, `Media.play`, `Media.stop`e `Media.close` nei momenti opportuni. Ad esempio:
 
@@ -158,7 +158,7 @@ function endMovie() {
 } 
 ```
 
-## Autotrack JavaScript {#section_ahz_pzy_cfb}
+## Autotrack JavaScript {#javascript-autotrack}
 
 Il modulo multimediale JavaScript identifica tutti `<embed>` i tag o `<object>` i tag presenti nella pagina HTML. quindi cerca i dati di ciascun tag per determinare quale lettore multimediale viene utilizzato, se presente. Se il lettore è Windows Media Player, Quicktime o Real Player, `autoTrack` può essere utilizzato, anche se `autoTrack` per Windows Media Player funziona solo con Internet Explorer. Per supportare tutti gli altri browser, è necessario tenere traccia manuale di Windows Media Player.
 
@@ -168,7 +168,7 @@ L' `classid` attributo deve essere impostato sull'oggetto da monitorare. Il modu
 s.Media.autoTrack = true
 ```
 
-## Codice di esempio JavaScript {#section_i4g_4zy_cfb}
+## Codice di esempio JavaScript {#javascript-sample-code}
 
 ```javascript
 // Sample implementation 
