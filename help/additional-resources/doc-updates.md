@@ -6,19 +6,31 @@ index: y
 internal: n
 snippet: y
 translation-type: tm+mt
-source-git-commit: 654aaef5d816e75429975d04c4e81ad4d4b6f706
+source-git-commit: b0816d87f66f95f347cf391176b5c46457c9a790
 
 ---
 
 
-# Documentation updates{#documentation-updates}
+# Risorse{#resources}
 
-## Last updated: March 7, 2019 {#March-2019-update}
+## Note sulla versione{#release-notes} 
+
+* [Note sulla versione](https://docs.adobe.com/content/help/en/release-notes/experience-cloud/current.html)
+
+## Aggiornamenti alla documentazione{#documentation-updates}
+
+### Last updated: October, 2019 {#October-2019-update}
+
+Numerose correzioni di modifica e formattazione.
+Gli argomenti della guida sono stati estesi oltre a Media SDK, incluso un nuovo argomento della guida "Media Dimensions", al di fuori del tracciamento dei contenuti multimediali.
+
+
+### Last updated: March 7, 2019 {#March-2019-update}
 
 * Questo aggiornamento è stato utilizzato principalmente per la versione 2.2 di Media SDK sulle piattaforme JavaScript e OTT.
 * La release 2.2 Media SDK sulle piattaforme JavaScript e OTT fornisce lo stesso supporto descritto di seguito per le piattaforme iOS e Android (aggiornamento 1 novembre 2018).
 
-## Last updated: November 1, 2018 {#November-2018-update}
+### Last updated: November 1, 2018 {#November-2018-update}
 
 * Questo aggiornamento è stato utilizzato principalmente per la versione 2.2 di Media SDK sulle piattaforme Android e iOS.
 * La versione 2.2 di Media SDK su Android e iOS fornisce il supporto per il tracciamento dell'audio su queste piattaforme, insieme a miglioramenti interni.
@@ -35,11 +47,10 @@ source-git-commit: 654aaef5d816e75429975d04c4e81ad4d4b6f706
 
 * Il modulo Analisi federata è stato aggiornato alla versione 3.2 per riflettere i nuovi parametri coinvolti nel tracciamento dell'audio.
 
-## Aggiorna: 10 ottobre 2018 {#October-2018-update}
+### Aggiorna: 10 ottobre 2018 {#October-2018-update}
 
 * La struttura del documento è stata "modificata" nell’area Implementazione SDK, combinando le singole guide all’implementazione della piattaforma (ma per lo più identiche) in un’unica sezione di implementazione SDK, con esempi di tracciamento specifici della piattaforma presentati nelle sottosezioni sotto argomenti comuni di tracciamento.
 * I file sono stati rinominati in attesa della migrazione a un nuovo sistema doc. Sono stati eliminati tutti i prefissi DITA ( c_, r_, t_ ) che indicano rispettivamente il concetto, il riferimento e i tipi di argomento attività). Tutti i caratteri di sottolineatura ('_') sono stati sostituiti da trattini ('-'). Inoltre, i nomi dei file ora assomigliano maggiormente ai titoli degli argomenti.
 * Aggiornamenti agli argomenti Generali di Convalida e Certificazione.
 * Nuovo materiale introduttivo che include una presentazione delle opzioni di misurazione, aggiornamenti dei prerequisiti, percorsi di implementazione e abilitazione di Audience Manager.
 * Aggiornamenti alle sezioni Metriche e Metadati, Reporting and Analysis, che riflettono l'aggiunta delle funzionalità di analisi audio.
-
