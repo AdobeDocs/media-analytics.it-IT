@@ -3,7 +3,7 @@ seo-title: Lato client
 title: Lato client
 uuid: ba0496e2-585a-4176-b583-c705726fecc6
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: a3a81609046ab5e3c84fe4bf99c92c3dabc58247
 
 ---
 
@@ -22,5 +22,4 @@ Se Media Analytics è il percorso previsto, consulta [Media SDK Implementation](
 
 >[!NOTE]
 >
->I clienti devono contattare il proprio rappresentante commerciale/responsabile commerciale per firmare un nuovo ordine di vendita in quanto Media Analytics dispone di un SKU univoco e le modifiche da un modello di tariffazione basato sulle chiamate server a un modello basato sui flussi multimediali.
-
+>Per firmare un nuovo ordine di vendita, i clienti devono contattare il proprio rappresentante commerciale/responsabile commerciale, perché Media Analytics dispone di un SKU univoco e le modifiche da un modello di tariffazione basato sulle chiamate server a un modello basato sui flussi multimediali.
