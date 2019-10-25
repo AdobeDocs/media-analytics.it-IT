@@ -3,14 +3,14 @@ seo-title: Riproduzione VOD con buffering
 title: Riproduzione VOD con buffering
 uuid: 958f7692-7193-40fb-a8e7-2ff4fa805330
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
 
 ---
 
 
 # Riproduzione VOD con buffering{#vod-playback-with-buffering}
 
-## Scenario {#section_13BD203CBF7546D2A6AD0129B1EEB735}
+## Scenario {#scenario}
 
 In questo scenario, si verifica un buffering durante la riproduzione del contenuto VOD.
 
@@ -28,7 +28,7 @@ Se non viene specificato, le chiamate di rete in questo scenario sono le stesse 
 | La riproduzione del contenuto viene completata. | `trackComplete` | Heartbeat Content Complete | È stata raggiunta la fine del playhead. |
 | La sessione è finita. | `trackSessionEnd` |  | `SessionEnd` indica la fine di una sessione di visualizzazione. Questa API deve essere chiamata anche se l'utente non guarda il video al termine. |
 
-## Parametri {#section_A52A57C9FB1C41CEA6C0E2D53E01048E}
+## Parametri {#parameters}
 
 ### Buffer Heartbeat
 
@@ -36,7 +36,7 @@ Se non viene specificato, le chiamate di rete in questo scenario sono le stesse 
 |---|---|---|
 | `s:event:type` | `"buffer"` |  |
 
-## Codice di esempio {#section_hxn_fdj_x2b}
+## Codice di esempio {#sample-code}
 
 In questo scenario, il buffering si verifica quando il contenuto VOD viene riprodotto.
 
