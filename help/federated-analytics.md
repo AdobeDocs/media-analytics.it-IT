@@ -3,7 +3,7 @@ seo-title: Analisi federate
 title: Analisi federate
 uuid: a82ace81-c2f6-4799-9a62-4c6a737a7dab
 translation-type: tm+mt
-source-git-commit: 498546566d1dcb8c4ad84482332d46142eecd1ca
+source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
 
 ---
 
@@ -15,7 +15,7 @@ I dati di misurazione standardizzati creati da Media Analytics sono il marchio d
 Attraverso le regole e la logica che regolano l'analisi federata, i dati sono facilmente controllati e individualizzati per soddisfare le esigenze di ogni partnership.
 La funzione Analisi federata rende la misurazione audio e video più efficiente, semplice e utilizzabile.
 
-## Vantaggi {#section_804FFE8671594A6FB769CBE79EF9D627}
+## Vantaggi {#benefits}
 
 * **** Trasparente: Elimina dalla casella nera la creazione dei dati utilizzando la stessa logica tra le aziende
 * **** Ampia: Comprendere appieno la portata e l'impatto del consumo audio e video tra partnership, piattaforme e dispositivi
@@ -27,12 +27,12 @@ La funzione Analisi federata rende la misurazione audio e video più efficiente,
 * **** Temporaneamente: Inviare e ricevere dati in tempo reale
 * **** Facile: Assegnare tag ai lettori una sola volta con gli SDK Adobe, condividere i dati a molti partner
 
-## Definizioni {#section_ypl_mb3_vbb}
+## Definizioni {#definitions}
 
 * **** Mittente: Generazione di dati di analisi audio e video da parte dei clienti sui lettori di proprietà
 * **** Ricevitore: Ricezione da parte del cliente dei dati di analisi audio e video dal mittente
 
-## Requisiti {#section_4758843A8941441B9A4D0D7A61077A6E}
+## Requisiti {#requirements}
 
 * **** Contratto Streams Media: Per poter accedere ai dati audio e video in Adobe Analytics, il destinatario e il mittente devono aver stipulato un contratto con Adobe Analytics per i flussi di dati multimediali. Per ulteriori informazioni, contattate il team di account.
 * **** Federated Addendum: Prima di inviare o ricevere i dati, ogni mittente e ricevente deve disporre di un addendum firmato insieme ad Adobe. È richiesto un addendum per cliente, non un addendum per partnership. Per ulteriori informazioni, contattate il team di account.
@@ -44,7 +44,7 @@ La funzione Analisi federata rende la misurazione audio e video più efficiente,
 
 Scarica la versione corrente del modulo qui: Accordo sulle regole [federative](https://github.com/AdobeDocs/media-analytics.en/blob/master/help/federated-analytics-form.pdf)
 
-## Processo {#section_byb_kb3_vbb}
+## Processo {#process}
 
 1. Mittente e Ricevitore collaborano per completare il modulo del contratto per le regole federative. Il modulo del contratto Federated Rules contiene campi speciali per il nostro team di progettazione e deve essere modificato SOLO con Adobe Acrobat. [Scarica Acrobat gratuitamente.](https://get.adobe.com/reader/)
 1. I servizi di consulenza forniscono un file di dati di esempio a Receiver con dati effettivi provenienti dai lettori Mender, per confermare ulteriormente che le regole di condivisione dei dati corrette sono definite, a condizione che i file di dati siano disponibili.
