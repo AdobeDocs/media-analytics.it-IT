@@ -3,7 +3,7 @@ seo-title: Imposta Chromecast
 title: Imposta Chromecast
 uuid: d664e394-02a2-4985-bbad-be1bcc44fb2b
 translation-type: tm+mt
-source-git-commit: ab400b673e97f9b47c6088e09b7e7d9e7b1c9ee6
+source-git-commit: a3a81609046ab5e3c84fe4bf99c92c3dabc58247
 
 ---
 
@@ -31,7 +31,7 @@ L’SDK 2.x per Chromecast per le soluzioni Experience Cloud consente di misurar
 
 ## Implementazione SDK
 
-1. Aggiungete al progetto la libreria Chromecast [scaricata](/help/sdk-implement/download-sdks.md#section_551A10AD7880426BB29AE52482BB4211) .
+1. Aggiungete al progetto la libreria Chromecast [scaricata](/help/sdk-implement/download-sdks.md#download-2x-sdks) .
 
    1. Il file `AdobeMobileLibrary-Chromecast-[version]` zip è costituito dai seguenti componenti software:
 
@@ -41,7 +41,7 @@ L’SDK 2.x per Chromecast per le soluzioni Experience Cloud consente di misurar
 
       * `ADBMobileConfig` config
 
-         Questo file di configurazione SDK è personalizzato per la tua app. Con l’SDK (in `ADBMobileConfig` ) viene fornita un’implementazione di esempio `samples/`. Ottenete le impostazioni corrette da un rappresentante Adobe.
+          Questo file di configurazione SDK è personalizzato per la tua app. Con l’SDK (in `ADBMobileConfig` ) viene fornita un’implementazione di esempio `samples/`. Ottenete le impostazioni corrette da un rappresentante Adobe.
    1. Aggiungete il file della libreria al `index.html` file e create la variabile `ADBMobileConfig` globale come segue (la variabile globale utilizzata per configurare Adobe Mobile per Heartbeats ha una chiave esclusiva denominata `mediaHeartbeat`):
 
       ```js
