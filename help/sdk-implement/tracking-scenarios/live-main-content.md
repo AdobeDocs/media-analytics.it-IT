@@ -3,14 +3,14 @@ seo-title: Contenuto principale live
 title: Contenuto principale live
 uuid: e92e99f4-c395-48aa-8a30-cbdd2f5fc07c
 translation-type: tm+mt
-source-git-commit: 46710c621f00374aeb55a88e51d4b720dcb941a6
+source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
 
 ---
 
 
 # Contenuto principale live{#live-main-content}
 
-## Scenario {#section_13BD203CBF7546D2A6AD0129B1EEB735}
+## Scenario {#scenario}
 
 In questo scenario, dopo l'unione del flusso live è disponibile una risorsa live senza annunci riprodotti per 40 secondi.
 
@@ -21,7 +21,7 @@ In questo scenario, dopo l'unione del flusso live è disponibile una risorsa liv
 | Il contenuto viene riprodotto. |  | Heartbeat di contenuto |  |
 | La sessione è finita. | `trackSessionEnd` |  | `SessionEnd` indica la fine di una sessione di visualizzazione. Questa API deve essere chiamata anche se l'utente non utilizza il supporto per il completamento. |
 
-## Parametri {#section_D52B325B99DA42108EF560873907E02C}
+## Parametri {#parameters}
 
 Molti degli stessi valori visualizzati nelle chiamate di avvio dei contenuti di Adobe Analytics sono visibili anche nelle chiamate di avvio dei contenuti di Heartbeat. Verranno inoltre visualizzati molti altri parametri utilizzati da Adobe per compilare i vari rapporti sui file multimediali in Adobe Analytics. Non li copriremo tutti qui, solo quelli veramente importanti.
 
@@ -38,7 +38,7 @@ Molti degli stessi valori visualizzati nelle chiamate di avvio dei contenuti di 
 | `s:stream:type` | live |  |
 | `s:meta:*` | optional | Metadati personalizzati impostati per il supporto |
 
-## Heartbeat di contenuto {#section_7B387303851A43E5993F937AE2B146FE}
+## Heartbeat di contenuto {#content-heartbeats}
 
 Durante la riproduzione dei contenuti multimediali, è presente un timer che invia uno o più heartbeat (o ping) ogni 10 secondi per i contenuti principali e ogni secondo per gli annunci. Questi heartbeat contengono informazioni su riproduzione, annunci pubblicitari, buffering e molti altri elementi. Il contenuto esatto di ogni heartbeat va oltre l'ambito di questo documento, la cosa fondamentale da convalidare è che i heartbeat vengono attivati in modo coerente mentre la riproduzione continua.
 
@@ -49,7 +49,7 @@ Nei heartbeat dei contenuti, cercate alcuni punti specifici:
 | `s:event:type` | "play" |  |
 | `l:event:playhead` | &lt;posizione dell'indicatore di riproduzione&gt; ad esempio, 50, 60, 70 | Questo deve riflettere la posizione corrente dell'indicatore di riproduzione. |
 
-## Heartbeat Content Complete {#section_2CA970213AF2457195901A93FC9D4D0D}
+## Heartbeat Content Complete {#heartbeat-content-complete}
 
 In questo scenario non verrà eseguita una chiamata completa, perché il flusso live non è mai stato completato.
 
@@ -67,7 +67,7 @@ Ad esempio, supponiamo che un evento di streaming in diretta inizi a mezzanotte 
 
 Quando un utente mette in pausa la riproduzione, deve essere applicata la stessa logica dell'indicatore di riproduzione live applicata all'inizio della riproduzione. Quando l'utente ritorna a riprodurre il flusso LIVE, è necessario impostare il `l:event:playhead` valore sulla nuova posizione dell'indicatore di riproduzione offset, _non_ sul punto in cui l'utente ha messo in pausa il flusso LIVE.
 
-## Codice di esempio {#section_vct_j2j_x2b}
+## Codice di esempio {#sample-code}
 
 ![](assets/live-content-playback.png)
 
