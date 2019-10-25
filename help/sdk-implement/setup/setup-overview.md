@@ -1,9 +1,9 @@
 ---
-seo-title: Setup Overview
-title: Setup Overview
+seo-title: Panoramica configurazione
+title: Panoramica configurazione
 uuid: 06fefedb-b0c8-4f7d-90c8-e374cdde1695
 translation-type: tm+mt
-source-git-commit: 46710c621f00374aeb55a88e51d4b720dcb941a6
+source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
 
 ---
 
@@ -28,7 +28,7 @@ La tabella seguente riassume le versioni minime delle piattaforme supportate per
 | Safari | v7+ |
 | IE | v11+ |
 
-## Linee guida generali per l’implementazione {#section_965A3B699A8248DDB9B2B3EA3CC20E41}
+## Linee guida generali per l’implementazione {#general-implementation-guidelines}
 
 Il tracciamento dei contenuti multimediali è composto da tre componenti SDK principali:
 * Configurazione Media Heartbeat - La configurazione contiene le impostazioni di base per il reporting.
@@ -65,23 +65,23 @@ Completa i seguenti passaggi di implementazione:
    | `bitrate` | Bitrate del supporto in bit al secondo. | Sì |
    | `startupTime` | Tempo di avvio del supporto, in millisecondi. | Sì |
    | `fps` | I fotogrammi visualizzati al secondo. | Sì |
-   | `droppedFrames` | The number of dropped frames so far. | Sì |
+   | `droppedFrames` | Numero di fotogrammi saltati finora. | Sì |
 
 1. Create l’ `MediaHeartbeat` istanza.
 
-   Use the  and  to create the  instance.`MediaHertbeatConfig``MediaHertbeatDelegate``MediaHeartbeat`
+   Utilizzate l'icona `MediaHertbeatConfig` e `MediaHertbeatDelegate` per creare l' `MediaHeartbeat` istanza.
 
    >[!IMPORTANT]
    >
-   >Make sure that your  instance is accessible and does not get deallocated until the end of the session. `MediaHeartbeat` This instance will be used for all the following media tracking events.
+   >Accertatevi che l’ `MediaHeartbeat` istanza sia accessibile e non venga deallocata fino alla fine della sessione. Questa istanza verrà utilizzata per tutti i seguenti eventi di tracciamento dei supporti.
 
    >[!TIP]
    >
-   >`MediaHeartbeat` requires an instance of  to send calls to Adobe Analytics.`AppMeasurement`
+   >`MediaHeartbeat` richiede un'istanza di `AppMeasurement` invio di chiamate ad Adobe Analytics.
 
-1. Combine all of the pieces.
+1. Combinate tutti i pezzi.
 
-   The following sample code utilizes our JavaScript 2.x SDK for an HTML5 video player:
+   Il seguente codice di esempio utilizza l’SDK JavaScript 2.x per un lettore video HTML5:
 
    ```javascript
    // Create local references to the heartbeat classes 
@@ -119,28 +119,26 @@ Completa i seguenti passaggi di implementazione:
      new MediaHeartbeat(mediaDelegate, mediaConfig, appMeasurementInstance);  
    ```
 
-## Validate {#section_D4D46F537A4E442B8AB0BB979DDAA4CC}
+## Convalida {#validate}
 
-Media Analytics tracking implementations generate two types of tracking calls:
+Le implementazioni di tracciamento di Media Analytics generano due tipi di chiamate di tracciamento:
 
-* Media and ad Start calls are sent directly to the Adobe Analytics (AppMeasurement) server.
-* Heartbeat calls are sent to the Media Analytics (heartbeats) tracking server, processed there, and passed on to the Adobe Analytics server.
+* Le chiamate per contenuti multimediali e ad Start vengono inviate direttamente al server Adobe Analytics (AppMeasurement).
+* Le chiamate Heartbeat vengono inviate al server di tracciamento di Media Analytics (heartbeat), elaborate e trasmesse al server Adobe Analytics.
 
-* **Adobe Analytics (AppMeasurement) server
-For more information about tracking server options, see Correctly populate the trackingServer and trackingServerSecure variables.**[](https://helpx.adobe.com/analytics/kb/determining-data-center.html)
+* **Server** Adobe Analytics (AppMeasurement) Per ulteriori informazioni sulle opzioni del server di tracciamento, vedi Compilazione [corretta delle variabili trackingServer e trackingServerSecure.](https://helpx.adobe.com/analytics/kb/determining-data-center.html)
 
    >[!IMPORTANT]
    >
-   >An RDC tracking server or CNAME resolving to an RDC server is required for Experience Cloud Visitor ID service.
+   >Per il servizio ID visitatore Experience Cloud è necessario un server di tracciamento RDC o una risoluzione CNAME per un server RDC.
 
-   The analytics tracking server should end in "" or be a CNAME.`.sc.omtrdc.net`
+   Il server di tracciamento analisi deve terminare in "`.sc.omtrdc.net`" o essere un CNAME.
 
-* ** Media Analytics (Heartbeats) server**
-This always has the format "". `[your_namespace].hb.omtrdc.net` Il valore "`[your_namespace]`" specifica la società e viene fornito da Adobe.
+* ** Server Media Analytics (Heartbeats)**Questo ha sempre il formato "`[your_namespace].hb.omtrdc.net`". Il valore "`[your_namespace]`" specifica la società e viene fornito da Adobe.
 
 Il tracciamento dei file multimediali funziona allo stesso modo su tutte le piattaforme, desktop e dispositivi mobili. Il tracciamento audio funziona attualmente sulle piattaforme mobili. Per tutte le chiamate di tracciamento, sono disponibili alcune variabili universali chiave da convalidare:
 
-## Documentazione SDK 1.x {#section_acj_tkk_t2b}
+## Documentazione SDK 1.x {#sdk-1x-documentation}
 
 | SDK 1.x di Video Analytics |  Guide per sviluppatori (solo PDF) |
 | --- | --- |
