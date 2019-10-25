@@ -3,7 +3,7 @@ seo-title: Panoramica
 title: Panoramica
 uuid: c14bdbef-5846-4d31-8a14-8e9e0e9c9861
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
 
 ---
 
@@ -18,7 +18,7 @@ L’API Media Collection è l’alternativa REST di Adobe all’SDK per file mul
 
 L'API Media Collection è essenzialmente una scheda che agisce come una versione lato server dell'SDK Media. Ciò significa che alcuni aspetti della documentazione di Media SDK sono pertinenti anche per l'API di Media Collection. Ad esempio, entrambe le soluzioni utilizzano gli stessi parametri [](/help/metrics-and-metadata/audio-video-parameters.md)[audio e video, mentre i dati di tracciamento audio e video raccolti portano allo stesso reporting e analisi.](/help/media-reports/media-reports-enable.md)
 
-## Flussi dati di tracciamento file multimediali {#section_pwq_n34_qbb}
+## Flussi dati di tracciamento file multimediali {#media-tracking-data-flows}
 
 Un lettore multimediale che implementa l’API Media Collection effettua chiamate RESTful di tracciamento API direttamente al server back-end di tracciamento dei contenuti multimediali, mentre un lettore che implementa l’SDK di Media effettua chiamate di tracciamento alle API SDK all’interno dell’app lettore. Uno degli effetti delle chiamate sul Web è che il lettore che implementa l’API di Media Collection deve gestire in modo automatico alcune delle elaborazioni gestite dall’SDK di Media. (Dettagli nell’implementazione di [Media Collection.](mc-api-impl/mc-api-quick-start.md))
 
@@ -26,7 +26,7 @@ I dati di tracciamento acquisiti con l’API Media Collection vengono inviati e 
 
 ![](assets/col_api_overview_simple.png)
 
-## Panoramica API {#section_y4n_mcl_kcb}
+## Panoramica API {#api-overview}
 
 **** URI: Ottenete questo risultato dal rappresentante Adobe.
 
