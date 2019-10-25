@@ -3,7 +3,7 @@ seo-title: Monitoraggio della qualità dell'esperienza su Chromecast
 title: Monitoraggio della qualità dell'esperienza su Chromecast
 uuid: d0cdc8cd-4db0-45ef-9470-1cba3996305b
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: 8938e324d570b7e3e2c3c3e971c00ade7e6be8b6
 
 ---
 
@@ -14,7 +14,7 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 >
 >Le istruzioni seguenti forniscono indicazioni per l’implementazione in tutti gli SDK 2.x. Se stai implementando una versione 1.x dell’SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
-## Panoramica {#section_DDB8DFA47C5744AB9A04392AD5959BF7}
+## Panoramica {#overview}
 
 Il monitoraggio della qualità dell'esperienza include la qualità del servizio (QoS) e il monitoraggio degli errori, entrambi elementi facoltativi e **non** sono richiesti per le implementazioni di tracciamento dei supporti di base. Potete utilizzare l'API Media Player per identificare le variabili relative ai QoS e al tracciamento degli errori.
 
@@ -29,7 +29,7 @@ Il monitoraggio della qualità dell'esperienza include la qualità del servizio 
 
 Chiamata `trackError(“media error id”);`
 
-## Implementate {#section_3B8EBEB167624D0481E8AF4761F83047}
+## Implementate {#implement}
 
 1. Identificare quando il bitrate cambia durante la riproduzione del contenuto multimediale e creare l’ `MediaObject` istanza utilizzando le informazioni QoS.
 
