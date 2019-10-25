@@ -3,14 +3,14 @@ seo-title: Rifiuto e privacy
 title: Rifiuto e privacy
 uuid: 7e60c7bd-8dba-4c7a-9c3c-0c634b815397
 translation-type: tm+mt
-source-git-commit: 80208f1c4773857f7907be0b8566c55a03e6106c
+source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
 
 ---
 
 
 # Rifiuto e privacy{#opt-out-and-privacy}
 
-## Consenso/consenso {#section_zfb_syq_v2b}
+## Consenso/consenso {#opt-out-opt-in}
 
 Potete controllare se l'attività di tracciamento è consentita su un dispositivo specifico:
 
@@ -26,7 +26,7 @@ Potete controllare se l'attività di tracciamento è consentita su un dispositiv
 
    * Impostazione `privacyDefault` nel file di `ADBMobile.json` configurazione. Questo controlla l’impostazione iniziale e persiste finché non viene modificata nel codice.
 
-   * Il `ADBMobile().setPrivacyStatus()` metodo.
+   * Il metodo `ADBMobile().setPrivacyStatus()`.
 
       * **Consenso negato:**
 
@@ -73,7 +73,7 @@ Potete controllare se l'attività di tracciamento è consentita su un dispositiv
             ```
    Dopo che l'impostazione della privacy è stata modificata utilizzando `setPrivacyStatus`, la modifica è permanente finché non viene nuovamente modificata con questo metodo, oppure finché l'app non viene disinstallata e reinstallata.
 
-## Recupero Di Identificatori Memorizzati (App OTT) {#section_mky_2yq_v2b}
+## Recupero Di Identificatori Memorizzati (App OTT) {#retrieving-stored-identifiers-ott-apps}
 
 Queste informazioni sono utili per recuperare identità utente memorizzate localmente dall’app Roku.
 
