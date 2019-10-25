@@ -3,7 +3,7 @@ seo-title: Percorsi di implementazione
 title: Percorsi di implementazione
 uuid: 8400c938-e77e-4c88-b23b-5f5977a5316c
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: d339ae295af89a1c2ba2e8c938e1650d82507e2b
 
 ---
 
@@ -24,7 +24,7 @@ Per ciascuno di questi percorsi di implementazione, i clienti devono contattare 
 
 * **Adobe Experience Platform Launch - Adobe Experience Platform Launch,** il prodotto successivo per la gestione tag dinamica, offre un’estensione di lancio di Media Analytics che semplifica l’implementazione del tracciamento video nei lettori.
 
-   Per ulteriori informazioni su Experience Platform Launch, consulta: [Adobe Media Analytics per l'estensione audio e video](https://docs.adobelaunch.com/extension-reference/web/adobe-media-analytics-for-audio-and-video-extension)
+   Per ulteriori informazioni su Experience Platform Launch, consulta: [Adobe Media Analytics per l'estensione audio e video](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html)
 * **Adobe Primetime -** Adobe Primetime è una soluzione Adobe Experience Cloud che aiuta programmatori e distributori di contenuti a monetizzare i contenuti multimediali su ogni schermo connesso.
 
    Primetime elimina la complessità di raggiungere, monetizzare e attivare audience globali tra dispositivi, fornendo una piattaforma modulare per la pubblicazione video, la pubblicità, la personalizzazione e l'analisi. Inoltre, Primetime offre soluzioni e valore in base alle seguenti caratteristiche:
@@ -33,7 +33,10 @@ Per ciascuno di questi percorsi di implementazione, i clienti devono contattare 
    * Supporto per la misurazione di interruzioni pubblicitarie con (o senza) inserimento di annunci dinamici.
    * Il modello di inserimento degli annunci senza soluzione di continuità di TVSDK consente analisi che misurano direttamente la riproduzione degli annunci, aumentando così la precisione.
    * Set affidabile di eventi e metadati per garantire l'accuratezza nei buffering QoS o nelle interruzioni della connettività mobile e nelle interazioni con gli utenti finali, ad esempio per cercare, mettere in pausa e mettere in background i dispositivi mobili.
-   * Supporto integrato per DTVR Nielsen (lineare) con metadati ID3 e DCR con metadati CMS.
-   TVSDK è già integrato con l’SDK Media Analytics (Heartbeats), che semplifica e velocizza notevolmente l’implementazione in tutte le piattaforme supportate. Primetime sostiene anche la partnership con Nielsen. Per sfruttare Primetime, segui le stesse linee guida e gli stessi prerequisiti presenti nel lato [](/help/intro-to-ava/implementation-paths/client-side-path.md) client insieme ai seguenti documenti per le tue piattaforme: Guida utente [Primetime.](https://helpx.adobe.com/primetime/user-guide.html)
+<!--
+   * Integrated support for Nielsen DTVR (linear) with ID3 metadata and DCR with CMS metadata.
+-->
 
-   Contatta anche il tuo rappresentante commerciale/responsabile commerciale per conoscere le attività da intraprendere per acquistare TVSDK.
+TVSDK è già integrato con l’SDK Media Analytics (Heartbeats), che semplifica e velocizza notevolmente l’implementazione in tutte le piattaforme supportate. <!--Primetime also supports the partnership with Nielsen.--> Per sfruttare Primetime, segui le stesse linee guida e gli stessi prerequisiti presenti nel lato [](/help/intro-to-ava/implementation-paths/client-side-path.md) client insieme ai seguenti documenti per le tue piattaforme: Guida utente [Primetime.](https://helpx.adobe.com/primetime/user-guide.html)
+
+Contatta anche il tuo rappresentante commerciale/responsabile commerciale per conoscere le attività da intraprendere per acquistare TVSDK.
