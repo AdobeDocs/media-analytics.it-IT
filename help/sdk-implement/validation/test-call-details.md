@@ -1,9 +1,9 @@
 ---
-seo-title: Test dei dettagli della chiamata
 title: Test dei dettagli della chiamata
+description: In questo argomento vengono elencate le chiamate necessarie per convalidare l’implementazione.
 uuid: d3a0e62f-2fc3-413d-ac56-adbbc9b3e983
 translation-type: tm+mt
-source-git-commit: d694ced982140c1f8020c0be304492aee0495cdc
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
