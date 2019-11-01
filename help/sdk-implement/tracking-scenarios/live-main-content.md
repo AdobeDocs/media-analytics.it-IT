@@ -1,9 +1,9 @@
 ---
-seo-title: Contenuto principale live
 title: Contenuto principale live
+description: Un esempio di come tenere traccia del contenuto live con Media SDK.
 uuid: e92e99f4-c395-48aa-8a30-cbdd2f5fc07c
 translation-type: tm+mt
-source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
