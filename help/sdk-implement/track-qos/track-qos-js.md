@@ -1,9 +1,9 @@
 ---
-seo-title: Monitoraggio della qualità dell'esperienza in JavaScript
 title: Monitoraggio della qualità dell'esperienza in JavaScript
+description: In questo argomento viene descritta l’implementazione del tracciamento della qualità dell’esperienza (QoE, QoS) tramite Media SDK nelle app browser (JS).
 uuid: 3bc762a2-9706-4b62-aa91-747f461dd13d
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
