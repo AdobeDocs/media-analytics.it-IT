@@ -1,9 +1,9 @@
 ---
-seo-title: Tracciare la riproduzione di base su iOS
 title: Tracciare la riproduzione di base su iOS
+description: Questo argomento descrive come implementare il tracciamento di base tramite Media SDK su iOS.
 uuid: bdc0e05c-4fe5-430e-aee2-f331bc59ac6b
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
