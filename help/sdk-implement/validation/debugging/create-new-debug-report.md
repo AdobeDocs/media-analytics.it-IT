@@ -1,9 +1,9 @@
 ---
-seo-title: Creare un nuovo rapporto Debug
 title: Creare un nuovo rapporto Debug
+description: Questo argomento descrive come creare un nuovo rapporto Debug.
 uuid: 438fde3d-98f9-46d1-9672-75d204361568
 translation-type: tm+mt
-source-git-commit: f2b08663a928e27625a9ff63f783c510f41e7a8c
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
