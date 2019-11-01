@@ -1,9 +1,9 @@
 ---
-seo-title: Tracciare capitoli e segmenti su Roku
 title: Tracciare capitoli e segmenti su Roku
+description: In questo argomento viene descritta l’implementazione del tracciamento di capitoli e segmenti mediante l’SDK per file multimediali su Roku.
 uuid: 15c07131-77d7-4a97-92c6-0a190c6b08d3
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
