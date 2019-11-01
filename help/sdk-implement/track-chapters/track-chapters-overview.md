@@ -1,9 +1,9 @@
 ---
-seo-title: Panoramica
 title: Panoramica
+description: Come implementare il tracciamento di capitoli e segmenti con Media SDK.
 uuid: 3fe32425-5e2a-4886-8fea-d91d15671bb0
 translation-type: tm+mt
-source-git-commit: 8938e324d570b7e3e2c3c3e971c00ade7e6be8b6
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
