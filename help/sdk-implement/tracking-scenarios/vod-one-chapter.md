@@ -1,9 +1,9 @@
 ---
-seo-title: Riproduzione VOD con un capitolo
 title: Riproduzione VOD con un capitolo
+description: Esempio di registrazione della riproduzione VOD contenente un capitolo.
 uuid: 1566a6f5-cf22-42e7-8e1a-6976c6c4e649
 translation-type: tm+mt
-source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
