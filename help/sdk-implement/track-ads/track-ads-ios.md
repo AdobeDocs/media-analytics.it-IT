@@ -1,9 +1,9 @@
 ---
-seo-title: Tracciare gli annunci su iOS
 title: Tracciare gli annunci su iOS
+description: Implementare il tracciamento degli annunci nelle applicazioni iOS utilizzando Media SDK.
 uuid: e979e679-cde5-4c30-8f34-867feceac13a
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
