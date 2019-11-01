@@ -1,9 +1,9 @@
 ---
-seo-title: Tracciare capitoli e segmenti in JavaScript
 title: Tracciare capitoli e segmenti in JavaScript
+description: Questo argomento descrive l’implementazione del tracciamento di capitoli e segmenti mediante l’SDK per file multimediali nelle app browser (JS).
 uuid: ef99edf7-7a77-46c4-8429-bc9a856b98d6
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
