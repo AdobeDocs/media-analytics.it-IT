@@ -1,9 +1,9 @@
 ---
-seo-title: Abilitazione dei rapporti multimediali
 title: Abilitazione dei rapporti multimediali
+description: null
 uuid: d306068d-a308-4b6e-8a72-742dda0de428
 translation-type: tm+mt
-source-git-commit: c8aa81660fe55dba673d3d53f780f3533a50cc93
+source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
 
 ---
 
@@ -16,8 +16,8 @@ Ogni suite di rapporti che raccoglie le metriche relative ai supporti deve esser
 >
 >Per sfruttare le nuove funzionalità, i clienti esistenti di Media Analytics dovrebbero riabilitare il tracciamento dei supporti per i loro RSID.
 
-1. In [Reporting e analisi](https://my.omniture.com/login/) fate clic su **[!UICONTROL Admin > Report Suites].**
-1. Selezionate le suite di rapporti in cui state raccogliendo i dati multimediali e fate clic **[!UICONTROL Edit Settings > Media Management > Media Reporting].**
+1. In [Reports &amp; Analytics](https://my.omniture.com/login/) click **[!UICONTROL Admin > Report Suites].**
+1. Seleziona le suite di rapporti in cui stai raccogliendo dati multimediali e fai clic su **[!UICONTROL Edit Settings > Media Management > Media Reporting].**
 
    ![](assets/media-reporting.png){width="400px"}
 
