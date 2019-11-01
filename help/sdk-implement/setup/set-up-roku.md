@@ -1,9 +1,9 @@
 ---
-seo-title: Impostazione di Roku
 title: Impostazione di Roku
+description: Configurazione dell’applicazione Media SDK per l’implementazione su Roku.
 uuid: 904dfda0-4782-41da-b4ab-212e81156633
 translation-type: tm+mt
-source-git-commit: a3a81609046ab5e3c84fe4bf99c92c3dabc58247
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
