@@ -1,9 +1,9 @@
 ---
-seo-title: Eventi, richiesta
 title: Eventi, richiesta
+description: null
 uuid: b237f0a0-dc29-418b-89ee-04c596a27f39
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
 
 ---
 
@@ -41,7 +41,7 @@ Il corpo della richiesta deve essere JSON e deve avere la stessa struttura del c
    * `ts` - marca temporale; deve essere in millisecondi.
 * `eventType` (Obbligatorio)
 * `params` (Facoltativo)
-* `customMetadata` (Facoltativo; send only with `adStart` and `chapterStart` event type)
+* `customMetadata` (Facoltativo; invio solo con `adStart` e con i tipi di `chapterStart` evento)
 * `qoeData` (Facoltativo)
 
 Per un elenco dei tipi di evento validi per questa versione, consultate Tipi di [evento e descrizioni.](/help/media-collection-api/mc-api-ref/mc-api-event-types.md)
