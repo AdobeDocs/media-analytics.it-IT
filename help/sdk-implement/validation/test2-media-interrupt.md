@@ -1,9 +1,9 @@
 ---
-seo-title: Test 2 Interruzione del supporto
 title: Test 2 Interruzione del supporto
+description: Questo argomento descrive il test di interruzione del supporto utilizzato per la convalida.
 uuid: ecd534-63fd-4dd3-b096-0431bc9a11ff
 translation-type: tm+mt
-source-git-commit: 5822e634c51cb53a60400623d115c6d862dad44f
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
@@ -51,9 +51,9 @@ Questo test case convalida il comportamento di interruzione mobile. È un elemen
 
 1. **Riproduci contenuti multimediali principali per almeno 5 minuti senza interruzioni**
 
-   For call parameters and metadata, see Test Call Details.[](/help/sdk-implement/validation/test-call-details.md#play-main-content)
+   Per i parametri e i metadati delle chiamate, vedi Dettagli chiamata di [prova.](/help/sdk-implement/validation/test-call-details.md#play-main-content)
 
 1. **Chiudi lettore multimediale**
 
-   No additional tracking calls should fire after the media player is closed.
+   Dopo la chiusura del lettore multimediale, non devono essere attivate chiamate di tracciamento aggiuntive.
 
