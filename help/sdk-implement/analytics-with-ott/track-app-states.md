@@ -1,14 +1,14 @@
 ---
-seo-title: Tracciare gli stati delle app
-title: Tracciare gli stati delle app
+title: Tracciare gli stati dell'app
+description: 'Gli stati dell’app sono le diverse schermate o viste dell’applicazione, che quando visualizzate dovrebbe dare luogo a una chiamata trackState. '
 uuid: 2f98fb43-c362-4a9b-8732-fa7e963da729
 translation-type: tm+mt
-source-git-commit: 9cdf69e30fa727aeb974213769a7ab61fb05b756
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
 
-# Track app states{#track-app-states}
+# Tracciare gli stati dell'app{#track-app-states}
 
 Per "stati" si intendono le diverse schermate o visualizzazioni disponibili nell'app. Ogni volta che nell’applicazione viene visualizzato un nuovo stato, dovreste inviare una `trackState` chiamata. Ad esempio, quando un utente si sposta dalla home page alla schermata dei dettagli del video, invia una `trackState` chiamata. Gli stati vengono generalmente visualizzati utilizzando un rapporto sui percorsi, per consentire agli utenti di vedere in che modo navigano nell'app e quali stati vengono visualizzati più comunemente.
 
