@@ -1,9 +1,9 @@
 ---
-seo-title: Contenuto principale live con monitoraggio sequenziale
 title: Contenuto principale live con monitoraggio sequenziale
+description: Un esempio di come tenere traccia del contenuto live con il tracciamento sequenziale tramite Media SDK.
 uuid: b03477b6-9be8-4b67-a5a0-4cef3cf262ab
 translation-type: tm+mt
-source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
