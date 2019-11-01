@@ -1,9 +1,9 @@
 ---
-seo-title: Rifiuto e privacy
 title: Rifiuto e privacy
+description: Modalità di gestione di opt-in, opt-out e privacy.
 uuid: 7e60c7bd-8dba-4c7a-9c3c-0c634b815397
 translation-type: tm+mt
-source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
