@@ -1,9 +1,9 @@
 ---
-seo-title: Confronto dei codici da 1.x a 2.x
 title: Confronto dei codici da 1.x a 2.x
+description: In questo argomento viene confrontato il codice nelle versioni 1.x e 2.x dell’SDK per file multimediali.
 uuid: 9f0a1660-2100-446d-ab75-afdf966478b3
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
@@ -453,7 +453,7 @@ VideoAnalyticsProvider.prototype._onComplete = function() {
 
 ## Confronto codici VHL: RIPRODUZIONE AD
 
-###  Inizio annuncio
+### Inizio annuncio
 
 | VHL 1.x | VHL 2.x |
 | --- | --- |
