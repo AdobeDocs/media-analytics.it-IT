@@ -1,9 +1,9 @@
 ---
-seo-title: Gestione degli arresti dell’applicazione durante la riproduzione
 title: Gestione degli arresti dell’applicazione durante la riproduzione
+description: Come gestire le interruzioni al tracciamento durante la riproduzione dei contenuti multimediali.
 uuid: 1ccb4507-bda6-462d-bf67-e22978a4db3d
 translation-type: tm+mt
-source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
