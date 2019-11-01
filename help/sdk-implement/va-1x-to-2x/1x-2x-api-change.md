@@ -1,9 +1,9 @@
 ---
-seo-title: Conversione API da 1.x a 2.x
 title: Conversione API da 1.x a 2.x
+description: Questo argomento include collegamenti ai riferimenti API ed elenchi delle API di tracciamento richieste e facoltative per le versioni 1.x e 2.x dell’SDK di Media.
 uuid: 6e619288-c082-4cb4-8685-e90823dadf4a
 translation-type: tm+mt
-source-git-commit: ee6eebac803410c1c4da1ccb80083025a9c817df
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
