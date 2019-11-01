@@ -2,7 +2,7 @@
 title: Panoramica della libreria di codici SDK
 description: 'Argomenti del libro di cucina specifici per l’SDK '
 translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+source-git-commit: b807835875594a2acfc79ec9cbffce4aadbaac84
 
 ---
 
@@ -17,4 +17,3 @@ Gli argomenti del libro di cucina elencati di seguito sono specifici della versi
 * [Risoluzione principale:riproduzione tra annunci](/help/sdk-implement/cookbook/fix-ad-play-ad.md)
 * [Ripresa di sessioni inattive](/help/sdk-implement/cookbook/resuming-inactive.md)
 * [Tracciamento in SceneGraph (Roku)](/help/sdk-implement/cookbook/sdk-track-scenegraph.md)
-* [SDK e differenze di avvio](/help/sdk-implement/cookbook/sdk-vs-launch-qoe.md)
