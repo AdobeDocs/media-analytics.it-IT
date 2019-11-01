@@ -3,7 +3,7 @@ product: Media Analytics
 audience: utente finale
 user-guide-title: Adobe Analytics per audio e video
 translation-type: tm+mt
-source-git-commit: fa72eba07a06adbd7c278282bd69d0b336529ac8
+source-git-commit: 6bf606e97dc11c20b4523393523feffe632ae287
 
 ---
 
@@ -133,7 +133,6 @@ source-git-commit: fa72eba07a06adbd7c278282bd69d0b336529ac8
       + [Risoluzione principale:riproduzione tra annunci](sdk-implement/cookbook/fix-ad-play-ad.md)
       + [Ripresa di sessioni inattive](sdk-implement/cookbook/resuming-inactive.md)
       + [Tracciamento in SceneGraph (Roku)](sdk-implement/cookbook/sdk-track-scenegraph.md)
-      + [SDK e differenze di avvio](sdk-implement/cookbook/sdk-vs-launch-qoe.md)
    + Migrazione da 1.x a 2.x di Media Analytics {#va-1x-to-2x}
       + [Panoramica sulla migrazione](sdk-implement/va-1x-to-2x/mig-1x-2x-overview.md)
       + [Confronto tra codici: Da 1,x a 2,x](sdk-implement/va-1x-to-2x/code-comparison-1x-2x.md)
