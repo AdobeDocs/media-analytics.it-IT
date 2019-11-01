@@ -1,11 +1,9 @@
 ---
-seo-title: Riproduzione VOD con annunci pre-roll
 title: Riproduzione VOD con annunci pre-roll
-description: In questo scenario, gli annunci pre-roll sono stati inseriti prima del contenuto principale.
-seo-description: In questo scenario in Adobe Media Analytics, gli annunci pre-roll sono stati inseriti prima del contenuto principale.
+description: Un esempio di come tenere traccia del contenuto VOD che contiene annunci pre-roll tramite Media SDK.
 uuid: 5d1022a8-88cb-40aa-919c-60dd592a639e
 translation-type: tm+mt
-source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
