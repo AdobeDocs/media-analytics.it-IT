@@ -1,11 +1,9 @@
 ---
-description: nulle
-seo-description: nulle
-seo-title: Implementazione di metadati di annunci standard su Roku
 title: Implementazione di metadati di annunci standard su Roku
+description: Come utilizzare i metadati di annunci standard nel tracciamento di annunci su Roku.
 uuid: 20a437d7-18b8-4099-ac81-9f3628384236
 translation-type: tm+mt
-source-git-commit: ed200520b9bed990460a444dabdcf956980362ca
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
