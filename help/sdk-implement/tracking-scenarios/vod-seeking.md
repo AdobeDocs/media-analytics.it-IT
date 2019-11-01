@@ -1,9 +1,9 @@
 ---
-seo-title: Riproduzione VOD con ricerca nel contenuto principale
 title: Riproduzione VOD con ricerca nel contenuto principale
+description: Un esempio di come tenere traccia del contenuto VOD in cui si è verificata la ricerca con Media SDK.
 uuid: 5c2392f6-9b9c-42f5-833f-77423d1e6222
 translation-type: tm+mt
-source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
