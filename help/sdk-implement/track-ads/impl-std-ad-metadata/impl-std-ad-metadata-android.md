@@ -1,11 +1,9 @@
 ---
-description: nulle
-seo-description: nulle
-seo-title: Implementazione di metadati di annunci standard su Android
 title: Implementazione di metadati di annunci standard su Android
+description: Come utilizzare i metadati di annunci standard nel tracciamento di annunci su Android.
 uuid: 19b98bc1-c659-4182-a4ff-b3340fe2453c
 translation-type: tm+mt
-source-git-commit: ed200520b9bed990460a444dabdcf956980362ca
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
