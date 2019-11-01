@@ -1,9 +1,9 @@
 ---
-seo-title: Panoramica di tracciamento
 title: Panoramica di tracciamento
+description: 'Questo argomento descrive il tracciamento della riproduzione di base, incluso il caricamento del supporto, l’avvio del supporto, la pausa del supporto e il completamento del supporto. '
 uuid: 7b8e2f76-bc4e-4721-8933-3e4453b01788
 translation-type: tm+mt
-source-git-commit: 8938e324d570b7e3e2c3c3e971c00ade7e6be8b6
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
