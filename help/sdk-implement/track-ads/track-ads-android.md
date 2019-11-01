@@ -1,9 +1,9 @@
 ---
-seo-title: Tracciare gli annunci su Android
 title: Tracciare gli annunci su Android
+description: Implementate il tracciamento degli annunci nelle applicazioni Android tramite Media SDK.
 uuid: 4a4249fb-dc39-4947-a14d-a51d972f32d4
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
