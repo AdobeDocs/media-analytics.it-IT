@@ -1,9 +1,9 @@
 ---
-seo-title: Tracciare la ricerca su Android
 title: Tracciare la ricerca su Android
+description: In questo argomento viene descritta l’implementazione del tracciamento della ricerca tramite Media SDK su Android.
 uuid: 65add99-eebf-4a80-8b4a-d5fbdff8ab06
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
