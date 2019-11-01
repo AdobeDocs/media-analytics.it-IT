@@ -1,9 +1,9 @@
 ---
-seo-title: Tracciare annunci su Roku
 title: Tracciare annunci su Roku
+description: Implementate il tracciamento degli annunci nelle applicazioni Roku mediante l’SDK per file multimediali.
 uuid: b1567265-7043-4efa-a313-aaaa91c4bb01
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
@@ -64,7 +64,7 @@ source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
 1. Se necessario, allegate metadati standard e/o di annunci alla sessione di tracciamento dei supporti tramite le variabili dei dati contestuali.
 
    * [Implementazione di metadati di annunci standard su Roku](/help/sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-roku.md)
-   * **Custom ad metadata -** For custom metadata, create a variable object for the custom data variables and populate with the data for the current ad asset:
+   * **Metadati annuncio personalizzati - Per i metadati personalizzati,** create un oggetto variabile per le variabili di dati personalizzate e inserite i dati per la risorsa annuncio corrente:
 
       ```
       contextData = {} 
