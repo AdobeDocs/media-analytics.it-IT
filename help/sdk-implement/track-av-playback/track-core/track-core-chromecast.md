@@ -1,9 +1,9 @@
 ---
-seo-title: Tracciare la riproduzione del core su Chromecast
 title: Tracciare la riproduzione del core su Chromecast
+description: In questo argomento viene descritto come implementare il tracciamento di base tramite Media SDK su Chromecast.
 uuid: a9fc59d8-a2f4-4889-bdec-55c42a835d06
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
