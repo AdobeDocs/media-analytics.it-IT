@@ -1,9 +1,9 @@
 ---
-seo-title: Ricerca di tracce su Roku
 title: Ricerca di tracce su Roku
+description: In questo argomento viene descritta l’implementazione del tracciamento delle ricerche mediante l’SDK per file multimediali su Roku.
 uuid: 0572252b-397f-4aa2-b4b5-c5346b75244a
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
