@@ -1,9 +1,9 @@
 ---
-seo-title: Parametri del capitolo
 title: Parametri del capitolo
+description: null
 uuid: 2a6b9247-a694-46e9-98e1-424c08c27ec2
 translation-type: tm+mt
-source-git-commit: 8938e324d570b7e3e2c3c3e971c00ade7e6be8b6
+source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
 
 ---
 
@@ -39,31 +39,31 @@ Descrizione dati tabella:
 
 ### Nome capitolo
 
-|   Implementazione   | Parametri di rete | Generazione di rapporti   |
+|   Implementazione   | Parametri di rete | Generazione di rapporti |
 | --- | --- | --- |
 | <ul> <li> **Chiave SDK:**<br/>  [nome](./chapter-parameters.md#related_apis_section) </li> <li> ****<br/>  Chiave API: media.capitolo.friendlyName </li> <li> ****<br/> Obbligatorio:No </li> <li> ****<br/> Tipo:string </li> <li> ****<br/> Inviato con: Inizio capitolo, Chiudi capitolo </li> <li> **Min.** Versione SDK: 1.3 </li> <li> ****<br/> Valore campione: "Il Big Bang Capitolo 2 - Dating" </li><li> **Descrizione:**<br/>il nome del capitolo e/o del segmento.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.Chapter.<br/>friendlyName) </li> <li> ****<br/> Heartbeat: (s:stream:nome_capitolo) </li> </ul> | <ul> <li> ****<br/> Disponibile: Creato per impostazione predefinita..  </li> <li> ****<br/> Variabile riservata: Classificazione </li> <li> ****<br/> Nome rapporto:Nome capitolo </li> <li> ****<br/> Dati contestuali: (a.media.Chapter.<br/>friendlyName) </li> <li> ****<br/> Feed dati:N/D </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.Chapter.<br/>friendlyName) </li> </ul> |
 
 ### Posizione capitolo
 
-|   Implementazione   | Parametri di rete | Generazione di rapporti   |
+|   Implementazione   | Parametri di rete | Generazione di rapporti |
 | --- | --- | --- |
 | <ul> <li> **Chiave SDK:**<br/>  [position](./chapter-parameters.md#related_apis_section) </li> <li> ****<br/>  Chiave API: media.capitolo.index </li> <li> ****<br/> Obbligatorio: SDK: No; API: Sì. </li> <li> ****<br/> Tipo: number </li> <li> ****<br/> Inviato con: Chiudi capitolo </li> <li> **Min.** Versione SDK: 1.3 </li> <li> ****<br/> Valore campione: 2 </li><li> **Descrizione:**<br/>la posizione (indice, numero intero) del capitolo all'interno del contenuto.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.Chapter.<br/>posizione) </li> <li> ****<br/> Heartbeat: (l:stream:capitolo_pos) </li> </ul> | <ul> <li> ****<br/> Disponibile:Yes </li> <li> ****<br/> Variabile riservata: Classificazione </li> <li> ****<br/> Nome rapporto:Posizione capitolo </li> <li> ****<br/> Dati contestuali: (a.media.Chapter.<br/>posizione) </li> <li> ****<br/> Feed dati:N/D </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.Chapter.<br/>posizione) </li> </ul> |
 
 ###  Offset capitolo
 
-|   Implementazione   | Parametri di rete | Generazione di rapporti   |
+|   Implementazione   | Parametri di rete | Generazione di rapporti |
 | --- | --- | --- |
 | <ul> <li> **Chiave SDK:**<br/>  [startTime](./chapter-parameters.md#related_apis_section) </li> <li> ****<br/>  Chiave API: media.Chapter.offset </li> <li> ****<br/> Obbligatorio: SDK: No; API: Sì. </li> <li> ****<br/> Tipo: number </li> <li> ****<br/> Inviato con: Chiudi capitolo </li> <li> **Min.** Versione SDK: 1.3 </li> <li> ****<br/> Valore campione: 58 </li><li> **Descrizione:**<br/>l’offset del capitolo all’interno del contenuto (in secondi) dall’inizio.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.Chapter.<br/>offset) </li> <li> ****<br/> Heartbeat: (l:stream:Chapter_offset) </li> </ul> | <ul> <li> ****<br/> Disponibile:Yes </li> <li> ****<br/> Variabile riservata: Classificazione </li> <li> ****<br/> Nome rapporto: Offset capitolo </li> <li> ****<br/> Dati contestuali: (a.media.Chapter.<br/>offset) </li> <li> ****<br/> Feed dati:N/D </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.Chapter.<br/>offset) </li> </ul> |
 
 ### Lunghezza capitolo
 
-|   Implementazione   | Parametri di rete | Generazione di rapporti   |
+|   Implementazione   | Parametri di rete | Generazione di rapporti |
 | --- | --- | --- |
 | <ul> <li> **Chiave SDK:**<br/> </li> <li> ****<br/>  Chiave API: media.Chapter.length </li> <li> ****<br/> Obbligatorio: SDK: No; API: Sì. </li> <li> ****<br/> Tipo: number </li> <li> ****<br/> Inviato con: Chiudi capitolo </li> <li> **Min.** Versione SDK: 1.3 </li> <li> ****<br/> Valore campione: 486 </li><li> **Descrizione:**<br/>la lunghezza del capitolo, in secondi.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.Chapter.<br/>length) </li> <li> ****<br/> Heartbeat: (l:flusso:lunghezza_capitolo) </li> </ul> | <ul> <li> ****<br/> Disponibile:Yes </li> <li> ****<br/> Variabile riservata: Classificazione </li> <li> ****<br/> Nome rapporto:Lunghezza capitolo </li> <li> ****<br/> Dati contestuali: (a.media.Chapter.<br/>length) </li> <li> ****<br/> Feed dati:N/D </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.Chapter.<br/>length) </li> </ul> |
 
 ###  Capitolo
 
-|   Implementazione   | Parametri di rete | Generazione di rapporti   |
+|   Implementazione   | Parametri di rete | Generazione di rapporti |
 | --- | --- | --- |
 | <ul> <li> ****<br/> Chiave SDK: Imposta automaticamente </li> <li> ****<br/>  Chiave API:N/D </li> <li> ****<br/> Obbligatorio:No </li> <li> ****<br/> Tipo:string </li> <li> ****<br/> Inviato con: Chiudi capitolo </li> <li> **Min.** Versione SDK: 1.3 </li> <li> **Valore campione:**<br/> </li><li> **Descrizione:**<br/>ID generato automaticamente del capitolo.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.Chapter.<br/>nome) </li> <li> ****<br/> Heartbeat: (s:stream:capitolo_id) </li> </ul> | <ul> <li> ****<br/> Disponibile:Yes </li> <li> ****<br/> Variabile riservata: eVar </li> <li> ****<br/> Scadenza: HIT </li> <li> ****<br/> Nome rapporto: Capitolo </li> <li> ****<br/> Dati contestuali: (a.media.Chapter.<br/>nome) </li> <li> ****<br/> Feed dati: videocapitolo </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.Chapter.<br/>nome) </li> </ul> |
 
@@ -71,19 +71,19 @@ Descrizione dati tabella:
 
 ### Inizio capitolo
 
-|   Implementazione   | Parametri di rete | Generazione di rapporti   |
+|   Implementazione   | Parametri di rete | Generazione di rapporti |
 | --- | --- | --- |
 | <ul> <li> ****<br/> Chiave SDK: Imposta automaticamente  </li> <li> ****<br/>  Chiave API:N/D </li> <li> ****<br/> Obbligatorio:Yes </li> <li> ****<br/> Tipo:string </li> <li> ****<br/> Inviato con:Inizio capitolo </li> <li> **Min.** Versione SDK: 1.3 </li> <li> ****<br/> Valore campione: TRUE </li><li> **Descrizione:**<br/>il numero di inizio del capitolo.  **** Importante:Se questo evento è impostato, l'unico valore possibile è TRUE. Se questo evento non è impostato, non viene inviato alcun valore.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.Chapter.<br/>view) </li> <li> ****<br/> Heartbeat: (s:event:<br/>type=Chapter_start) </li> </ul> | <ul> <li> ****<br/> Disponibile:Yes </li> <li> ****<br/> Variabile riservata:event </li> <li> ****<br/> Nome rapporto: Inizio capitolo g </li> <li> ****<br/> Dati contestuali: (a.media.Chapter.<br/>view) </li> <li> ****<br/> Feed dati:N/D </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.Chapter.<br/>view) </li> </ul> |
 
 ### Capitolo Completa
 
-|   Implementazione   | Parametri di rete | Generazione di rapporti   |
+|   Implementazione   | Parametri di rete | Generazione di rapporti |
 | --- | --- | --- |
 | <ul> <li> ****<br/> Chiave SDK: Imposta automaticamente  </li> <li> ****<br/>  Chiave API:N/D </li> <li> ****<br/> Obbligatorio:Yes </li> <li> ****<br/> Tipo:string </li> <li> ****<br/> Inviato con: Chiudi capitolo </li> <li> **Min.** Versione SDK: 1.3</li> <li> ****<br/> Valore campione: TRUE </li><li> **Descrizione:**<br/>Numero di completamento del capitolo.  **** Importante:Se questo evento è impostato, l'unico valore possibile è TRUE. Se questo evento non è impostato, non viene inviato alcun valore.   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.Chapter.<br/>completato) </li> <li> ****<br/> Heartbeat: (s:event:<br/>type=Chapter_complete) </li> </ul> | <ul> <li> ****<br/> Disponibile:Yes </li> <li> ****<br/> Variabile riservata:event </li> <li> ****<br/> Nome rapporto: Capitolo Completamento g </li> <li> ****<br/> Dati contestuali: (a.media.Chapter.<br/>completato) </li> <li> ****<br/> Feed dati:N/D </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.Chapter.<br/>completato) </li> </ul> |
 
 ### Tempo capitolo trascorso
 
-|   Implementazione   | Parametri di rete | Generazione di rapporti   |
+|   Implementazione   | Parametri di rete | Generazione di rapporti |
 | --- | --- | --- |
 | <ul> <li> ****<br/> Chiave SDK: Imposta automaticamente  </li> <li> ****<br/>  Chiave API:N/D </li> <li> ****<br/> Obbligatorio:Yes </li> <li> ****<br/> Tipo: number </li> <li> ****<br/> Inviato con: Chiudi capitolo </li> <li> **Min.** Versione SDK: 1.3 </li> <li> **Valore campione:**<br/> </li><li> **Descrizione:**<br/>Tempo trascorso sul capitolo.  Il valore verrà visualizzato nel formato ora (HH:MM:SS) in Analysis Workspace e Reporting e analisi. Nelle API Feed dati, Data Warehouse e Reporting i valori verranno visualizzati in secondi. <br/>**Data di rilascio: 13/09/18**   </li> </ul> | <ul> <li> ****<br/> Adobe Analytics: (a.media.Chapter.<br/>timePlayed) </li> <li> **Heartbeat:**<br/> </li> </ul> | <ul> <li> ****<br/> Disponibile:Yes </li> <li> ****<br/> Variabile riservata:event </li> <li> ****<br/> Nome rapporto: Tempo capitolo trascorso g </li> <li> ****<br/> Dati contestuali: (a.media.Chapter.<br/>timePlayed) </li> <li> ****<br/> Feed dati:N/D </li> <li> ****<br/> Audience Manager: (c_contextdata.<br/>a.media.Chapter.<br/>timePlayed) </li> </ul> |
 
