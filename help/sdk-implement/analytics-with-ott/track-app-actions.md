@@ -1,14 +1,14 @@
 ---
-seo-title: Tracciare le azioni dell'app
-title: Tracciare le azioni dell'app
+title: Tracciare le azioni eseguite nell'app
+description: Le azioni dell'app sono gli eventi che si verificano nell'app e che desideri misurare.
 uuid: 9cdc048a-419a-4725-bd61-6ca6d909cf10
 translation-type: tm+mt
-source-git-commit: ee6eebac803410c1c4da1ccb80083025a9c817df
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
 
-# Track app actions{#track-app-actions}
+# Tracciare le azioni eseguite nell'app{#track-app-actions}
 
 Per "azioni" si intendono gli eventi che si verificano nell’app oggetto delle misurazioni.
 
