@@ -1,9 +1,9 @@
 ---
-seo-title: Riproduzione standard Test 1
 title: Riproduzione standard Test 1
+description: Questo argomento descrive il test di riproduzione standard utilizzato per la convalida.
 uuid: c4b3fead-1b27-484b-ab6a-39f1ae0f03f2
 translation-type: tm+mt
-source-git-commit: f2b08663a928e27625a9ff63f783c510f41e7a8c
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
