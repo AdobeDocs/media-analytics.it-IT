@@ -1,22 +1,22 @@
 ---
-seo-title: Get concurrent viewers JSON report data
-title: Get concurrent viewers JSON report data
+title: Ottenere i dati del rapporto JSON per visualizzatori simultanei
+description: null
 uuid: 9168f114-2459-4951-a06c-57b735d09dc0
 translation-type: tm+mt
-source-git-commit: 82317dfd0e6eaef20890d03c32fe088a7574ead2
+source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
 
 ---
 
 
-# Get concurrent viewers JSON report data{#get-concurrent-viewers-json-report-data}
+# Ottenere i dati del rapporto JSON per visualizzatori simultanei{#get-concurrent-viewers-json-report-data}
 
-You can obtain concurrent viewers report data using the 1.4 version of the Analytics APIs:_**_
-* [Analytics APIs](https://github.com/AdobeDocs/analytics-1.4-apis)
+Potete ottenere i dati dei rapporti dei visualizzatori simultanei utilizzando la versione _**_ 1.4 delle API di Analytics:
+* [API di Analytics](https://github.com/AdobeDocs/analytics-1.4-apis)
 * [Swagger](https://adobedocs.github.io/analytics-1.4-apis/swagger-docs.html#/Report/Report.Get)
 
-1. Filter the data using any segment that built on the UI. To filter by a specific Content ID, create a new segment.
+1. Filtrare i dati utilizzando qualsiasi segmento creato sull'interfaccia utente. Per filtrare in base a un ID contenuto specifico, create un nuovo segmento.
 1. Impostate `elements` -&gt; `id` nel corpo della richiesta su `videoconcurrentviewers`.
-1. Request a sufficient amount of data. Adobe consiglia 3200 punti dati per garantire che non vi siano lacune nei dati.
+1. Richiedete una quantità sufficiente di dati. Adobe consiglia 3200 punti dati per garantire che non vi siano lacune nei dati.
 
    * L’intervallo di dati specificato nel rapporto raccoglie tutti i dati del visualizzatore simultaneo al _termine della sessione video._
 È quindi necessario tenere conto delle sessioni che iniziano un giorno e terminano dopo mezzanotte (cioè il giorno successivo).
