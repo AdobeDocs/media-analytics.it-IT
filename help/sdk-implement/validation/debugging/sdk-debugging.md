@@ -1,9 +1,9 @@
 ---
-seo-title: Debug SDK
 title: Debug SDK
+description: Questo argomento descrive il tracciamento e la registrazione disponibili in Media SDK.
 uuid: a5972d87-c593-4b4f-a56f-dca6e25268e1
 translation-type: tm+mt
-source-git-commit: f2b08663a928e27625a9ff63f783c510f41e7a8c
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
@@ -71,7 +71,8 @@ Durante lo sviluppo dell’applicazione, Bloodhound consente di visualizzare le 
 
 >[!IMPORTANT]
 >
->A partire dal 30 aprile 2017, Adobe Bloodhound è stato ritirato. A partire dal 1° maggio 2017, non verranno più forniti ulteriori miglioramenti né supporto aggiuntivo Engineering o Adobe Expert Care.
+>Dal 30 aprile 2017, Adobe Bloodhound è stato
+ritirato. A partire dal 1° maggio 2017, non verranno più forniti ulteriori miglioramenti né supporto aggiuntivo Engineering o Adobe Expert Care.
 
 ## Messaggi di registro
 
