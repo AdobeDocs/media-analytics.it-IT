@@ -1,9 +1,9 @@
 ---
-seo-title: Riproduzione VOD con annunci ignorati
 title: Riproduzione VOD con annunci ignorati
+description: Un esempio di come tenere traccia del contenuto VOD in cui l’utente ha saltato gli annunci tramite Media SDK.
 uuid: f3ab3524-abcb-4051-b64e-a1aad6e3dd3f
 translation-type: tm+mt
-source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
