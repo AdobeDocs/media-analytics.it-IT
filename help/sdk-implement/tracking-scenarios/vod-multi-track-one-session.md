@@ -1,9 +1,9 @@
 ---
-seo-title: VOD un tracciatore per più sessioni
 title: VOD un tracciatore per più sessioni
+description: Esempio di utilizzo di un tracciatore per tenere traccia di più sessioni mediante l’SDK di Media.
 uuid: 355c83f4-52bd-4bdd-92dc-ab506e412d0a
 translation-type: tm+mt
-source-git-commit: e24dbf0ab08b9e148f887ef19903ad2d157822ad
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
