@@ -1,9 +1,9 @@
 ---
-seo-title: Panoramica configurazione
 title: Panoramica configurazione
+description: Panoramica dell’impostazione di Media SDK per il tracciamento dei contenuti multimediali nelle applicazioni mobili, OTT e browser (JS).
 uuid: 06fefedb-b0c8-4f7d-90c8-e374cdde1695
 translation-type: tm+mt
-source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
