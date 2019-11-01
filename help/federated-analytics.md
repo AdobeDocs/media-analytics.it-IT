@@ -1,9 +1,9 @@
 ---
-seo-title: Analisi federate
 title: Analisi federate
+description: 'Il servizio Analisi federata fornisce un sistema per la condivisione di dati Adobe Media Analytics (audio e video) tra due partner. '
 uuid: a82ace81-c2f6-4799-9a62-4c6a737a7dab
 translation-type: tm+mt
-source-git-commit: ffb97a0162e0bb609ea427afab81e4d8b532f20b
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
