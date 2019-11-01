@@ -1,11 +1,9 @@
 ---
-description: nulle
-seo-description: nulle
-seo-title: Implementare i metadati standard su Android
 title: Implementare i metadati standard su Android
+description: Descrive l’impostazione di video e metadati di annunci standard da inviare con le chiamate di tracciamento su Android.
 uuid: c48b4190-b062-4c4e-9c40-8dde4598a50e
 translation-type: tm+mt
-source-git-commit: 46797deb402fed1c4d4781507c279407f8c13f2e
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
