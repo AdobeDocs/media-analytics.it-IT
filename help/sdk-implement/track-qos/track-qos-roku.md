@@ -1,9 +1,9 @@
 ---
-seo-title: Monitoraggio della qualità dell'esperienza su Roku
 title: Monitoraggio della qualità dell'esperienza su Roku
+description: In questo argomento viene descritta l’implementazione del tracciamento della qualità dell’esperienza (QoE, QoS) tramite Media SDK su Roku.
 uuid: a8b242ab-da3c-4297-9eef-f0b9684ef56a
 translation-type: tm+mt
-source-git-commit: a8e8ac5a808ff785a348b456dd7d183540c1d594
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
