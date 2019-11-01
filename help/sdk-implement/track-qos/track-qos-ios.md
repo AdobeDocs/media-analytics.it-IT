@@ -1,9 +1,9 @@
 ---
-seo-title: Monitoraggio della qualità dell'esperienza su iOS
 title: Monitoraggio della qualità dell'esperienza su iOS
+description: In questo argomento viene descritta l’implementazione del tracciamento della qualità dell’esperienza (QoE, QoS) tramite Media SDK su iOS.
 uuid: cae2c142-ed39-4234-a711-765dcabc5415
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
