@@ -1,11 +1,9 @@
 ---
-description: nulle
-seo-description: nulle
-seo-title: Implementare i metadati standard su Roku
 title: Implementare i metadati standard su Roku
+description: Descrive l’impostazione di video e metadati di annunci standard da inviare con le chiamate di tracciamento su Roku.
 uuid: ae14d809-343f-452c-832a-f94bd3d83a90
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
