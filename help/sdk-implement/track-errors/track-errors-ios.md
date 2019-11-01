@@ -1,14 +1,14 @@
 ---
-seo-title: Tenere traccia degli errori su iOS
 title: Tenere traccia degli errori su iOS
+description: In questo argomento viene descritta l’implementazione del tracciamento degli errori tramite Media SDK su iOS.
 uuid: 18ea93d3-5948-4375-bcdb-72309268e38d
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
 
-# Track errors on iOS{#track-errors-on-ios}
+# Tenere traccia degli errori su iOS{#track-errors-on-ios}
 
 >[!IMPORTANT]
 >
