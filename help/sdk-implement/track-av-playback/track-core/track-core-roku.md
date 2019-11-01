@@ -1,9 +1,9 @@
 ---
-seo-title: Tracciare la riproduzione di base su Roku
 title: Tracciare la riproduzione di base su Roku
+description: In questo argomento viene descritto come implementare il tracciamento di base tramite Media SDK su Roku.
 uuid: a8aa7b3c-2d39-44d7-8ebc-b101d130101f
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
