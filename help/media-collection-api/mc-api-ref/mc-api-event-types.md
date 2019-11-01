@@ -1,9 +1,9 @@
 ---
-seo-title: Tipi di evento e descrizioni
 title: Tipi di evento e descrizioni
+description: null
 uuid: bc4f75a7-ea22-47eb-a50d-5f41274c6d41
 translation-type: tm+mt
-source-git-commit: e89620ce60a37aa4ba0207e8f5a4f43c76026dcd
+source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
 
 ---
 
@@ -20,7 +20,7 @@ Inviato quando il lettore cambia stato in "play" da un altro stato (ad es., il `
 
 ## ping
 
-* **Contenuto principale -** Deve essere inviato ogni 10 secondi durante la riproduzione del contenuto principale, indipendentemente dagli altri eventi API inviati. Il primo evento ping deve essere attivato 10 secondi dopo l’avvio della riproduzione del contenuto principale.
+* **Contenuto principale -** Deve essere inviato ogni 10 secondi durante la riproduzione del contenuto principale, indipendentemente dagli altri eventi API inviati. Il primo evento di ping deve essere attivato 10 secondi dopo l’avvio della riproduzione del contenuto principale.
 * **Contenuto annuncio -** Deve essere inviato ogni 1 secondo durante il tracciamento degli annunci.
 
 Gli eventi ping *non* devono includere la `params` mappa nel corpo della richiesta.
