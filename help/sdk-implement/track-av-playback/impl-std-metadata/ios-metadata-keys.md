@@ -1,9 +1,9 @@
 ---
-seo-title: Chiavi di metadati iOS
 title: Chiavi di metadati iOS
+description: Questo argomento descrive le chiavi di metadati iOS disponibili.
 uuid: 8eb90111-c9dd-4ca7-9766-91530a8ae6cf
 translation-type: tm+mt
-source-git-commit: 959ff714d3546a06123293cac8a17b94fae1c1ff
+source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 ---
 
@@ -52,9 +52,9 @@ Da `ADBStandardMetadataKeys.h`:
 | Nome costante | Descrizione | Tipo |
 |---|---|---|
 | `ADBAdMetadataKeyADVERTISER` | Inserzionista |  Annuncio |
-| `ADBAdMetadataKeyCAMPAIGN_ID` | ID campagna | Annuncio |
-| `ADBAdMetadataKeyCREATIVE_ID` | Creative Id | Annuncio |
-| `ADBAdMetadataKeyPLACEMENT_ID` | ID posizionamento | Annuncio |
-| `ADBAdMetadataKeySITE_ID` | ID sito | Annuncio |
-| `ADBAdMetadataKeyCREATIVE_URL` | URL creativo | Annuncio |
+| `ADBAdMetadataKeyCAMPAIGN_ID` | ID campagna |  Annuncio |
+| `ADBAdMetadataKeyCREATIVE_ID` | Creative Id |  Annuncio |
+| `ADBAdMetadataKeyPLACEMENT_ID` | ID posizionamento |  Annuncio |
+| `ADBAdMetadataKeySITE_ID` | ID sito |  Annuncio |
+| `ADBAdMetadataKeyCREATIVE_URL` | URL creativo |  Annuncio |
 
