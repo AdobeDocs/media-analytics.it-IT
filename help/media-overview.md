@@ -2,8 +2,8 @@
 title: Misurazione di audio e video in Adobe Analytics
 description: 'Adobe Analytics for Media (altrimenti denominato Media Analytics) fornisce ai clienti una misurazione affidabile dei file multimediali per contenuto, audio e annunci pubblicitari. '
 uuid: b3cbe240-b94d-42b8-a99c-0280334aaa14
-translation-type: ht
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+translation-type: tm+mt
+source-git-commit: 689b7d4ce632d3ddba6704bb8040eec52bfc326f
 
 ---
 
@@ -107,3 +107,4 @@ Per Media SDK, consulta anche [Supporto versione minima della piattaforma](./sdk
 >[!NOTE]
 >
 >TLS è attualmente tra i protocolli di sicurezza distribuiti più ampiamente ed è utilizzato nei browser web e altre applicazioni dove i dati devono essere scambiati in modo sicuro all’interno di una rete.
+
