@@ -1,14 +1,14 @@
 ---
-title: Timeline 3 - Capitoli
+title: 'Timeline 3: capitoli'
 description: null
 uuid: 41b52072-e1cd-4dda-9253-31f3408924f6
 translation-type: tm+mt
-source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
+source-git-commit: 22f7c21feb55f54c0c92db17eadc509966715cf3
 
 ---
 
 
-# Timeline 3 - Capitoli {#timeline-3-chapters}
+# Timeline 3: capitoli {#timeline-3-chapters}
 
 ## VOD, annunci pre-roll, messa in pausa, buffering, visualizzazione del contenuto alla fine
 
@@ -432,7 +432,7 @@ Il primo capitolo termina, subito prima del secondo annuncio.
         playhead: 20,
         ts: <timestamp>
     },
-    eventType:chapterEnd
+    eventType:chapterComplete
 }
 ```
 
@@ -701,7 +701,7 @@ Eseguire il ping del backend ogni 10 secondi.
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| Capitolo 2 | 87 | 44 | `/api/v1/sessions/{sid}/events` |
+| Capitolo 2 estremità | 87 | 44 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
@@ -715,7 +715,7 @@ Traccia la fine del secondo e ultimo capitolo.
         playhead: 0,
         ts: <timestamp>
     },
-    eventType:chapterEnd
+    eventType:chapterComplete
 }
 ```
 
