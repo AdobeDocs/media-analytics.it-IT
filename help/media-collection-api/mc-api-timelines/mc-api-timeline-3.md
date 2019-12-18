@@ -3,7 +3,7 @@ title: 'Timeline 3: capitoli'
 description: null
 uuid: 41b52072-e1cd-4dda-9253-31f3408924f6
 translation-type: tm+mt
-source-git-commit: 22f7c21feb55f54c0c92db17eadc509966715cf3
+source-git-commit: 5107de22c2388e8ac5b15b8d28fa974e97363fdf
 
 ---
 
@@ -287,7 +287,7 @@ La pausa pubblicitaria è finita. Durante la pausa pubblicitaria, lo stato di ri
 
 **Dettagli di implementazione**
 
-Dopo l’ `adBreakComplete` evento, mettere il lettore nello stato di "riproduzione" utilizzando l’ `play` evento.
+Dopo l’ `adBreakComplete` evento, inserite il lettore nello stato di "riproduzione" utilizzando l’ `play` evento.
 
 **Corpo della richiesta di esempio**
 
@@ -701,7 +701,7 @@ Eseguire il ping del backend ogni 10 secondi.
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| Capitolo 2 estremità | 87 | 44 | `/api/v1/sessions/{sid}/events` |
+| Capitolo 2 | 87 | 44 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
