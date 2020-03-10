@@ -1,22 +1,19 @@
 ---
+seo-title: Panoramica
 title: Panoramica
 description: null
 uuid: c14bdbef-5846-4d31-8a14-8e9e0e9c9861
 translation-type: tm+mt
-source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
+source-git-commit: cebf5697e3746721d29bfaa5356d5a2748fea435
 
 ---
 
 
 # Panoramica{#overview}
 
-L’API Media Collection è l’alternativa REST di Adobe all’SDK per file multimediali lato client. Con l’API Media Collection, il lettore può tenere traccia degli eventi audio e video mediante chiamate RESTful HTTP. L’API Media Collection offre lo stesso tracciamento in tempo reale dell’SDK per file multimediali, più una funzione aggiuntiva:
+L’API Media Collection è l’alternativa REST di Adobe all’SDK per file multimediali lato client. Con l’API Media Collection, il lettore può tenere traccia degli eventi audio e video mediante chiamate RESTful HTTP.
 
-* **Tracciamento del contenuto scaricato**
-
-   Questa funzione consente di tenere traccia dei contenuti multimediali mentre un utente è offline, memorizzando i dati dell'evento in locale fino a quando il dispositivo dell'utente non torna online. (Per informazioni dettagliate, consultate [Tenere traccia del contenuto](track-downloaded-content.md) scaricato.)
-
-L'API Media Collection è essenzialmente una scheda che agisce come una versione lato server dell'SDK Media. Ciò significa che alcuni aspetti della documentazione di Media SDK sono pertinenti anche per l'API di Media Collection. Ad esempio, entrambe le soluzioni utilizzano gli stessi parametri [](/help/metrics-and-metadata/audio-video-parameters.md)[audio e video, mentre i dati di tracciamento audio e video raccolti portano allo stesso reporting e analisi.](/help/media-reports/media-reports-enable.md)
+L&#39;API Media Collection è essenzialmente una scheda che agisce come una versione lato server dell&#39;SDK Media. Ciò significa che alcuni aspetti della documentazione di Media SDK sono pertinenti anche per l&#39;API di Media Collection. Ad esempio, entrambe le soluzioni utilizzano gli stessi parametri [](/help/metrics-and-metadata/audio-video-parameters.md)[audio e video, mentre i dati di tracciamento audio e video raccolti portano allo stesso reporting e analisi.](/help/media-reports/media-reports-enable.md)
 
 ## Flussi dati di tracciamento file multimediali {#media-tracking-data-flows}
 
@@ -28,19 +25,19 @@ I dati di tracciamento acquisiti con l’API Media Collection vengono inviati e 
 
 ## Panoramica API {#api-overview}
 
-**** URI: Ottenete questo risultato dal rappresentante Adobe.
+**URI:** Ottenete questo risultato dal vostro rappresentante Adobe.
 
-**** Metodo HTTP: POST, con il corpo della richiesta JSON.
+**Metodo HTTP:** POST, con il corpo della richiesta JSON.
 
 ### Chiamate API {#mc-api-calls}
 
-* **`sessions`-** Stabilisce una sessione con il server e restituisce un ID sessione utilizzato nelle `events` chiamate successive. L’app esegue questa chiamata una volta all’inizio di una sessione di tracciamento.
+* **`sessions`-**Stabilisce una sessione con il server e restituisce un ID sessione utilizzato nelle`events`chiamate successive. L’app esegue questa chiamata una volta all’inizio di una sessione di tracciamento.
 
    ```
    {uri}/api/v1/sessions
    ```
 
-* **`events`-** Invia i dati di tracciamento dei supporti.
+* **`events`-**Invia i dati di tracciamento dei supporti.
 
    ```
    {uri}/api/v1/sessions/{session-id}/events
@@ -49,28 +46,28 @@ I dati di tracciamento acquisiti con l’API Media Collection vengono inviati e 
 ### Corpo della richiesta {#mc-api-request-body}
 
 ```
-{ 
-    "playerTime": { 
-        "playhead": {playhead position in seconds}, 
-        "ts": {timestamp in milliseconds} 
-    }, 
-    "eventType": {event-type}, 
-    "params": { 
-        {parameter-name}: {parameter-value}, 
-        ... 
-        {parameter-name}: {parameter-value} 
-    }, 
-    "qoeData" : { 
-        {parameter-name}: {parameter-value}, 
-        ... 
-        {parameter-name}: {parameter-value} 
-    }, 
-    "customMetadata": { 
-        {parameter-name}: {parameter-value}, 
-        ... 
-        {parameter-name}: {parameter-value} 
-    } 
-} 
+{
+    "playerTime": {
+        "playhead": {playhead position in seconds},
+        "ts": {timestamp in milliseconds}
+    },
+    "eventType": {event-type},
+    "params": {
+        {parameter-name}: {parameter-value},
+        ...
+        {parameter-name}: {parameter-value}
+    },
+    "qoeData" : {
+        {parameter-name}: {parameter-value},
+        ...
+        {parameter-name}: {parameter-value}
+    },
+    "customMetadata": {
+        {parameter-name}: {parameter-value},
+        ...
+        {parameter-name}: {parameter-value}
+    }
+}
 ```
 
 * `playerTime` - Obbligatorio per tutte le richieste.
@@ -99,4 +96,3 @@ Per ciascun `eventType`oggetto è disponibile al pubblico uno schema [di convali
 * `chapterComplete`
 * `sessionEnd`
 * `sessionComplete`
-
