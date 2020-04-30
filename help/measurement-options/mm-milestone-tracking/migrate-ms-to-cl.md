@@ -1,18 +1,18 @@
 ---
-title: Migrazione da attività cardine a collegamento personalizzato
+title: Migrazione da Milestone a Custom Link
 description: null
 uuid: 1c8edde5-0ef1-4bc0-a62d-1747f4907f09
 translation-type: tm+mt
-source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
+source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
 
 ---
 
 
-# Migrazione da attività cardine a collegamento personalizzato{#migrating-from-milestone-to-custom-link}
+# Migrazione da Milestone a Custom Link{#migrating-from-milestone-to-custom-link}
 
 ## Panoramica {#overview}
 
-I concetti di base della misurazione video sono gli stessi per il tracciamento Milestone e Custom Link, che consiste nell’eseguire gli eventi dei lettori video e nel mapparli ai metodi di analisi, nonché acquisire i metadati e i valori dei lettori e mapparli alle variabili di analisi. L'approccio "Custom Link" dovrebbe essere considerato un modo per ridurre e semplificare sia l'attuazione che i dati raccolti. Con la soluzione Custom Link, per la misurazione video non sono predefiniti variabili o metodi, ma è necessaria una configurazione completa e personalizzata. Dovrebbe essere possibile aggiornare il codice evento del lettore in modo che punti alle chiamate di tracciamento dei collegamenti personalizzate per gli eventi del lettore di base, come start e complete. Per ulteriori informazioni, consulta la guida [all’implementazione dei collegamenti](/help/measurement-options/cl-in-aa/cl-impl-guide.md) personalizzati e il tracciamento [manuale dei collegamenti tramite codice](https://marketing.adobe.com/resources/help/en_US/sc/implement/link_manual.html) di collegamento personalizzato.
+I concetti di base della misurazione video sono gli stessi per il tracciamento Milestone e Custom Link, che consiste nell’eseguire gli eventi dei lettori video e nel mapparli ai metodi di analisi, nonché acquisire i metadati e i valori dei lettori e mapparli alle variabili di analisi. L&#39;approccio &quot;Custom Link&quot; dovrebbe essere considerato un modo per ridurre e semplificare sia l&#39;attuazione che i dati raccolti. Con la soluzione Custom Link, per la misurazione video non sono predefiniti variabili o metodi, ma è necessaria una configurazione completa e personalizzata. Dovrebbe essere possibile aggiornare il codice evento del lettore in modo che punti alle chiamate di tracciamento dei collegamenti personalizzate per gli eventi del lettore di base, come start e complete. Per ulteriori informazioni, consulta la guida [all’implementazione dei collegamenti](/help/measurement-options/cl-in-aa/cl-impl-guide.md) personalizzati e il tracciamento [manuale dei collegamenti tramite codice](https://docs.adobe.com/content/help/en/media-analytics/using/measurement-options/cl-in-aa/cl-impl-guide.html) di collegamento personalizzato.
 
 Le tabelle seguenti contengono le traduzioni tra la soluzione Milestone e la soluzione Custom Link.
 
@@ -558,7 +558,7 @@ s.tl(this,'o','Video Start');
 </tr>
 <tr>
 <td>mediaName</td>
-<td><b></b> mediaName: (obbligatorio) Il nome del video come desiderate venga visualizzato nei rapporti video.</td>
+<td><b>mediaName:</b> (obbligatorio) Il nome del video come desiderate venga visualizzato nei rapporti video.</td>
 <td>Imposta eVar o variabile di dati di contesto nella chiamata di collegamento</td>
 <td>
 <pre>
@@ -573,7 +573,7 @@ s.contextData['video.name'] = mediaName;
 mediaLength
 </td>
 <td>
-<b></b> mediaLength: (richiesto) Lunghezza del video in secondi.
+<b>mediaLength:</b> (richiesto) Lunghezza del video in secondi.
 </td>
 <td>
 Imposta eVar o variabile di dati di contesto nella chiamata di collegamento
@@ -589,7 +589,7 @@ s.contextData['video.length'] ="90";
 mediaPlayerName
 </td>
 <td>
-<b></b> mediaPlayerName: (obbligatorio) Il nome del lettore multimediale utilizzato per visualizzare il video, così come lo si desidera, nei rapporti video.
+<b>mediaPlayerName:</b> (obbligatorio) Il nome del lettore multimediale utilizzato per visualizzare il video, così come lo si desidera, nei rapporti video.
 </td>
 <td>
 Imposta eVar o variabile di dati di contesto nella chiamata di collegamento
@@ -614,8 +614,8 @@ s.Media.openAd( nome, lunghezza, nomeLettore, nomePadre, contenitorePadre, posiz
 <td>Non disponibile</td>
 </tr>
 <tr>
-<td>name</td>
-<td><b></b> name: (obbligatorio) Nome o ID dell’annuncio.</td>
+<td>nome</td>
+<td><b>name:</b> (obbligatorio) Nome o ID dell’annuncio.</td>
 <td>N/D</td>
 <td>Non disponibile</td>
 </tr>
@@ -624,7 +624,7 @@ s.Media.openAd( nome, lunghezza, nomeLettore, nomePadre, contenitorePadre, posiz
 length
 </td>
 <td>
-<b></b> lunghezza: (obbligatorio) Lunghezza dell’annuncio.
+<b>lunghezza:</b> (obbligatorio) Lunghezza dell’annuncio.
 </td>
 <td>N/D
 </td>
@@ -636,7 +636,7 @@ length
 playerName
 </td>
 <td>
-<b></b> playerName: (obbligatorio) Nome del lettore multimediale utilizzato per visualizzare l’annuncio.
+<b>playerName:</b> (obbligatorio) Nome del lettore multimediale utilizzato per visualizzare l’annuncio.
 </td>
 <td>N/D
 </td>
@@ -648,7 +648,7 @@ playerName
 parentName
 </td>
 <td>
-<b></b> parentName: Nome o ID del contenuto principale in cui l’annuncio è incorporato.
+<b>parentName:</b> Nome o ID del contenuto principale in cui l’annuncio è incorporato.
 </td>
 <td>N/D
 </td>
@@ -660,7 +660,7 @@ parentName
 parentPod
 </td>
 <td>
-<b></b> parentPod: La posizione nel contenuto principale in cui è stata riprodotta l’annuncio.
+<b>parentPod:</b> La posizione nel contenuto principale in cui è stata riprodotta l’annuncio.
 </td>
 <td>N/D
 </td>
@@ -672,7 +672,7 @@ parentPod
 parentPodPosition
 </td>
 <td>
-<b></b> parentPodPosition: Posizione all’interno del contenitore in cui viene riprodotto il tead.
+<b>parentPodPosition:</b> Posizione all’interno del contenitore in cui viene riprodotto il tead.
 </td>
 <td>N/D
 </td>
@@ -684,7 +684,7 @@ parentPodPosition
 CPM
 </td>
 <td>
-<b></b> CPM: CPM o CPM crittografato (con il prefisso "~") che si applica a questa riproduzione.
+<b>CPM:</b> CPM o CPM crittografato (con il prefisso "~") che si applica a questa riproduzione.
 </td>
 <td>N/D
 </td>
