@@ -1,23 +1,23 @@
 ---
-title: Configurare JavaScript
+title: Configurazione JavaScript
 description: Configurazione dell’applicazione Media SDK per l’implementazione in JavaScript.
 uuid: 0269d8ad-0af8-4bf1-9d15-e06c2952a005
 translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
 
 ---
 
 
-# Configurare JavaScript{#set-up-javascript}
+# Configurazione JavaScript{#set-up-javascript}
 
 ## Prerequisiti
 
-* **Ottenete parametri** di configurazione validi Questi parametri possono essere ottenuti da un rappresentante Adobe dopo aver configurato l'account di analisi.
-* **Implementazione`AppMeasurement`di JavaScript nell’applicazione** multimediale. Per ulteriori informazioni sulla documentazione SDK di Adobe Mobile, consulta [Implementazione di Analytics tramite JavaScript.](https://marketing.adobe.com/resources/help/en_US/sc/implement/js_implementation.html)
+* **Ottenete parametri** di configurazione validi Questi parametri possono essere ottenuti da un rappresentante Adobe dopo aver configurato l&#39;account di analisi.
+* **Implementazione`AppMeasurement`di JavaScript nell’applicazione** multimediale. Per ulteriori informazioni sulla documentazione SDK di Adobe Mobile, consulta [Implementazione di Analytics tramite JavaScript.](https://docs.adobe.com/content/help/it-IT/analytics/implementation/js/overview.html)
 
 * **Fornite le seguenti funzionalità nel lettore multimediale:**
 
-   * *Un'API per iscriversi agli eventi* del lettore - L'SDK di Media richiede che venga chiamato un set di API semplici quando si verificano eventi nel lettore.
+   * *Un&#39;API per iscriversi agli eventi* del lettore - L&#39;SDK di Media richiede che venga chiamato un set di API semplici quando si verificano eventi nel lettore.
    * *API che fornisce informazioni* sul lettore - Queste informazioni includono dettagli quali il nome del supporto e la posizione della testina di riproduzione.
 
 1. Aggiungete la libreria [scaricata](/help/sdk-implement/download-sdks.md#download-2x-sdks) al progetto. Create riferimenti locali alle classi per comodità.
@@ -38,7 +38,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
       src="https://INSERT-DOMAIN-AND-PATH-TO-CODE-HERE/MediaSDK.min.js"></script>
       ```
 
-   1. Per verificare rapidamente che la libreria sia stata importata correttamente, create un'istanza della `ADB.va.MediaHeartbeatConfig` classe.
+   1. Per verificare rapidamente che la libreria sia stata importata correttamente, create un&#39;istanza della `ADB.va.MediaHeartbeatConfig` classe.
 
       >[!NOTE]
       >
@@ -52,11 +52,11 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    var MediaHeartbeatDelegate = ADB.va.MediaHeartbeatDelegate; 
    ```
 
-1. Create un' `MediaHeartbeatConfig` istanza.
+1. Create un&#39; `MediaHeartbeatConfig` istanza.
 
    Questa sezione descrive i parametri di `MediaHeartbeat` configurazione e come impostare i valori di configurazione corretti nell’ `MediaHeartbeat` istanza, per un monitoraggio accurato.
 
-   Esempio `MediaHeartbeatConfig` di inizializzazione:
+   Esempio di inizializzazione `MediaHeartbeatConfig`:
 
    ```js
    //Media Heartbeat initialization 
@@ -88,7 +88,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 1. Create l’ `MediaHeartbeat` istanza.
 
-   Utilizzate l'icona `MediaHeartbeatConfig` e `MediaHeartbeatDelegate` per creare l' `MediaHeartbeat` istanza.
+   Utilizzate l&#39;icona `MediaHeartbeatConfig` e `MediaHeartbeatDelegate` per creare l&#39; `MediaHeartbeat` istanza.
 
    ```js
    this.mediaHeartbeat = new MediaHeartbeat(mediaDelegate, mediaConfig, appMeasurement);
@@ -100,7 +100,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    >[!TIP]
    >
-   >`MediaHeartbeat` richiede un'istanza di `AppMeasurement` invio di chiamate ad Adobe Analytics. Here is an example of an `AppMeasurement` instance:
+   >`MediaHeartbeat` richiede un&#39;istanza di `AppMeasurement` invio di chiamate ad Adobe Analytics. Here is an example of an `AppMeasurement` instance:
 
    ```js
    var appMeasurement = new AppMeasurement(); 
