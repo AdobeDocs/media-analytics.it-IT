@@ -1,21 +1,21 @@
 ---
-title: Configurare Android
+title: Configurazione Android
 description: Configurazione dell’applicazione Media SDK per l’implementazione su Android.
 uuid: 3ffe3276-a104-4182-9220-038729e9f3d5
 translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
 
 ---
 
 
-# Configurare Android{#set-up-android}
+# Configurazione Android{#set-up-android}
 
 ## Prerequisiti
 
-* **Ottenete parametri di configurazione validi per Media SDK** Questi parametri possono essere ottenuti da un rappresentante Adobe dopo la configurazione dell'account di analisi.
-* **Implementa ADBMobile per Android nella tua applicazione** Per ulteriori informazioni sulla documentazione SDK per Adobe Mobile, consulta [Android SDK 4.x per le soluzioni Experience Cloud.](https://marketing.adobe.com/resources/help/en_US/mobile/android/)
+* **Ottenete parametri di configurazione validi per Media SDK** Questi parametri possono essere ottenuti da un rappresentante Adobe dopo la configurazione dell&#39;account di analisi.
+* **Implementa ADBMobile per Android nella tua applicazione** Per ulteriori informazioni sulla documentazione SDK per Adobe Mobile, consulta SDK 4.x per [Android per le soluzioni Experience Cloud.](https://docs.adobe.com/content/help/it-IT/mobile-services/android/overview.html)
 * **Fornite le seguenti funzionalità nel lettore multimediale:**
-   * *Un'API per iscriversi agli eventi* del lettore - L'SDK di Media richiede che venga chiamato un set di API semplici quando si verificano eventi nel lettore.
+   * *Un&#39;API per iscriversi agli eventi* del lettore - L&#39;SDK di Media richiede che venga chiamato un set di API semplici quando si verificano eventi nel lettore.
    * *API che fornisce informazioni* sul lettore - Queste informazioni includono dettagli quali il nome del supporto e la posizione della testina di riproduzione.
 
 ## Implementazione SDK
@@ -30,21 +30,21 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
       **IDEA IntelliJ:**
 
       1. Right click your project in the **[!UICONTROL Project navigation]** panel.
-      1. Seleziona **[!UICONTROL Open Module Settings]**.
+      1. Select **[!UICONTROL Open Module Settings]**.
       1. In **[!UICONTROL Project Settings]**, selezionare **[!UICONTROL Libraries]**.
 
-      1. Click **[!UICONTROL +]** to add a new library.
-      1. Seleziona **[!UICONTROL Java]** e naviga fino al file `MediaSDK.jar`.
+      1. Fate clic **[!UICONTROL +]** per aggiungere una nuova libreria.
+      1. Select **[!UICONTROL Java]** and navigate to the `MediaSDK.jar` file.
 
       1. Selezionate i moduli in cui intendete utilizzare la libreria mobile.
       1. Click **[!UICONTROL Apply]** and then **[!UICONTROL OK]** to close the Module Settings window.
       **Eclipse:**
 
       1. Nell’IDE Eclipse, fai clic con il pulsante destro del mouse sul nome del progetto.
-      1. Fai clic su  **[!UICONTROL Build Path]** &gt; **[!UICONTROL Add External Archives]** .
-      1. Seleziona `MediaSDK.jar`.
+      1. Fai clic su  **[!UICONTROL Build Path]** > **[!UICONTROL Add External Archives]** .
+      1. Select `MediaSDK.jar`.
       1. Fai clic su **[!UICONTROL Open]**.
-      1. Fate nuovamente clic con il pulsante destro del mouse sul progetto e fate clic su **[!UICONTROL Build Path]** &gt; **[!UICONTROL Configure Build Path]** .
+      1. Fate nuovamente clic con il pulsante destro del mouse sul progetto e fate clic su **[!UICONTROL Build Path]** > **[!UICONTROL Configure Build Path]** .
       1. Fare clic sulle schede **[!UICONTROL Order]** e **[!UICONTROL Export]** .
 
       1. Assicurarsi che il `MediaSDK.jar` file sia selezionato.
@@ -61,7 +61,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 1. Create l’ `MediaHeartbeatConfig` istanza.
 
-   Esempio `MediaHeartbeatConfig` di inizializzazione:
+   Esempio di inizializzazione `MediaHeartbeatConfig`:
 
    ```java
    // Media Heartbeat Initialization 
@@ -74,7 +74,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    config.debugLogging = <true/false>; 
    ```
 
-1. Implementare l' `MediaHeartbeatDelegate` interfaccia.
+1. Implementare l&#39; `MediaHeartbeatDelegate` interfaccia.
 
    ```java
    public class VideoAnalyticsProvider implements Observer, MediaHeartbeatDelegate{}
@@ -100,7 +100,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 1. Create l’ `MediaHeartbeat` istanza.
 
-   Utilizzate l' `MediaHeartbeatConfig` istanza e l' `MediaHertbeatDelegate` istanza per creare l' `MediaHeartbeat` istanza.
+   Utilizzate l&#39; `MediaHeartbeatConfig` istanza e l&#39; `MediaHertbeatDelegate` istanza per creare l&#39; `MediaHeartbeat` istanza.
 
    ```java
    // Replace <MediaHertbeatDelegate> with your delegate instance 
@@ -112,7 +112,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    >
    >Accertatevi che l’ `MediaHeartbeat` istanza sia accessibile e che *non venga deallocata fino alla fine della sessione*. Questa istanza verrà utilizzata per tutti i seguenti eventi di tracciamento.
 
-**Aggiunta di autorizzazioni per l'app**
+**Aggiunta di autorizzazioni per l&#39;app**
 
 L’app che utilizza Media SDK richiede le seguenti autorizzazioni per inviare dati nelle chiamate di tracciamento:
 
