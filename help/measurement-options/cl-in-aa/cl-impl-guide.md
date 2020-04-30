@@ -3,25 +3,25 @@ title: Guida all’implementazione dei collegamenti personalizzati
 description: null
 uuid: 83315e73-20ca-4db5-9d43-33daade45a13
 translation-type: tm+mt
-source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
+source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
 
 ---
 
 
-# Guida all’implementazione dei collegamenti personalizzati{#custom-link-implementation-guide}
+# Guida all’implementazione di Custom Link{#custom-link-implementation-guide}
 
-Il tracciamento video personalizzato utilizza il tracciamento [manuale dei collegamenti tramite codice](https://marketing.adobe.com/resources/help/en_US/sc/implement/link_manual.html) di collegamento personalizzato in Analytics `appMeasurement`.
+Il tracciamento video personalizzato utilizza il tracciamento [manuale dei collegamenti tramite codice](https://docs.adobe.com/content/help/en/media-analytics/using/measurement-options/cl-in-aa/cl-impl-guide.html) di collegamento personalizzato in Analytics `appMeasurement`.
 Nella maggior parte dei casi, il tracciamento video del collegamento video personalizzato viene utilizzato su piattaforme e dispositivi in cui è necessaria una misurazione video minima.
 
 * In JavaScript: la `s.tl()` funzione
-* Nelle App Mobile: [trackAction() Android](https://marketing.adobe.com/resources/help/en_US/mobile/android/actions.html), [trackAction() iOS](https://marketing.adobe.com/resources/help/en_US/mobile/ios/actions.html), [trackAction() OTT](/help/sdk-implement/analytics-with-ott/track-app-actions.md)
-* Nell'API di inserimento dati: tag [linktype](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/reference/r_supported_tags.md)
+* Nelle App Mobile: [trackAction() Android](hhttps://docs.adobe.com/content/help/en/mobile-services/android/analytics-android/actions.html), [trackAction() iOS](https://docs.adobe.com/content/help/en/mobile-services/ios/analytics-ios/actions.html), [trackAction() OTT](/help/sdk-implement/analytics-with-ott/track-app-actions.md)
+* Nell&#39;API di inserimento dati: [tag linktype](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/reference/r_supported_tags.md)
 
 ## Requisiti
 
 * Accesso a eventi e dati API del lettore video
-* Aggiunta di script se si utilizza Analytics SDK
-* Possibilità di aggiungere beacon di tracciamento (script personalizzati o hardcode) se si utilizza l'API di inserimento dati
+* Possibilità di aggiungere script se si utilizza Analytics SDK
+* Possibilità di aggiungere beacon di tracciamento (script personalizzati o hardcode) se si utilizza l&#39;API di inserimento dati
 
 ## Metadati
 
@@ -52,7 +52,7 @@ if (e.type == "ended") {
 * Molto semplice senza librerie o script nascosti
 * Controllo totale su ogni aspetto dei dati video
 
-## Esempio di JavaScript per HTML5 Player
+## Esempio di JavaScript per il lettore HTML5
 
 ```javascript
 <script type="text/javascript"> 
