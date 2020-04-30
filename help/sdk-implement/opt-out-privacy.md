@@ -3,19 +3,19 @@ title: Rifiuto e privacy
 description: Modalità di gestione di opt-in, opt-out e privacy.
 uuid: 7e60c7bd-8dba-4c7a-9c3c-0c634b815397
 translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
 
 ---
 
 
-# Rifiuto e privacy{#opt-out-and-privacy}
+# Opt-out and privacy{#opt-out-and-privacy}
 
 ## Consenso/consenso {#opt-out-opt-in}
 
-Potete controllare se l'attività di tracciamento è consentita su un dispositivo specifico:
+Potete controllare se l&#39;attività di tracciamento è consentita su un dispositivo specifico:
 
 * **App mobili -** La libreria VA rispetta le impostazioni relative alla privacy e al rifiuto della `AdobeMobile` libreria. Per rifiutare il tracciamento, è necessario utilizzare la `AdobeMobile` libreria. Per ulteriori informazioni sulle impostazioni di privacy e rinuncia della `AdobeMobile` libreria, consultate [Impostazioni](https://docs.adobe.com/content/help/en/mobile-services/android/gdpr-privacy-android/privacy.html)di privacy e rinuncia.
-* **JavaScript/Browser Apps -** La libreria VA rispetta le impostazioni relative alla `VisitorAPI` privacy e all'esclusione. Per evitare il tracciamento, devi rifiutare il servizio API Visitor. Per ulteriori informazioni su optout e privacy, consulta [Adobe Experience Platform Identity Service.](https://marketing.adobe.com/resources/help/en_US/mcvid/).
+* **JavaScript/Browser Apps -** La libreria VA rispetta le impostazioni relative alla `VisitorAPI` privacy e all&#39;esclusione. Per evitare il tracciamento, devi rifiutare il servizio API Visitor. Per ulteriori informazioni su optout e privacy, consulta [Adobe Experience Platform Identity Service.](https://docs.adobe.com/content/help/it-IT/id-service/using/home.html).
 * **App OTT (Chromecast, Roku) -** Gli SDK OTT forniscono API GDPR (General Data Protection Regulation) pronte che consentono di impostare `opt` i flag di stato per la raccolta e la trasmissione dei dati e di recuperare identità memorizzate localmente.
 
    >[!NOTE]
@@ -43,7 +43,7 @@ Potete controllare se l'attività di tracciamento è consentita su un dispositiv
             ```
          >[!IMPORTANT]
          >
-         >Quando un utente si oppone al tracciamento, tutti i dati e gli ID del dispositivo persistenti vengono eliminati finché l'utente non ritorna.
+         >Quando un utente si oppone al tracciamento, tutti i dati e gli ID del dispositivo persistenti vengono eliminati finché l&#39;utente non ritorna.
 
       * **Opzione di rifiuto:**
 
@@ -71,7 +71,7 @@ Potete controllare se l'attività di tracciamento è consentita su un dispositiv
             ```
             ADBMobile().getPrivacyStatus()
             ```
-   Dopo che l'impostazione della privacy è stata modificata utilizzando `setPrivacyStatus`, la modifica è permanente finché non viene nuovamente modificata con questo metodo, oppure finché l'app non viene disinstallata e reinstallata.
+   Dopo che l&#39;impostazione della privacy è stata modificata utilizzando `setPrivacyStatus`, la modifica è permanente finché non viene nuovamente modificata con questo metodo, oppure finché l&#39;app non viene disinstallata e reinstallata.
 
 ## Recupero Di Identificatori Memorizzati (App OTT) {#retrieving-stored-identifiers-ott-apps}
 
