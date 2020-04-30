@@ -1,6 +1,6 @@
 ---
 audience: end-user
-user-guide-title: Adobe Analytics for Audio and Video
+user-guide-title: Adobe Analytics per audio e video
 product: adobe analytics
 sub-product: media analytics
 translation-type: ht
