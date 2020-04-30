@@ -1,27 +1,27 @@
 ---
-title: Configurare iOS
+title: Configurazione iOS
 description: Configurazione dell’applicazione Media SDK per l’implementazione su iOS.
 uuid: a1c6be79-a6dc-47b6-93b3-ac7b42f1f3eb
 translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
 
 ---
 
 
-# Configurare iOS{#set-up-ios}
+# Configurazione iOS{#set-up-ios}
 
 ## Prerequisiti
 
-* **Ottenete parametri di configurazione validi per Media SDK** Questi parametri possono essere ottenuti da un rappresentante Adobe dopo la configurazione dell'account di analisi.
-* **Implementa ADBMobile per iOS nella tua applicazione** Per ulteriori informazioni sulla documentazione SDK per Adobe Mobile, consulta SDK 4.x per [iOS per le soluzioni Experience Cloud.](https://marketing.adobe.com/resources/help/en_US/mobile/ios/)
+* **Ottenete parametri di configurazione validi per Media SDK** Questi parametri possono essere ottenuti da un rappresentante Adobe dopo la configurazione dell&#39;account di analisi.
+* **Implementa ADBMobile per iOS nella tua applicazione** Per ulteriori informazioni sulla documentazione SDK per Adobe Mobile, consulta SDK 4.x per [iOS per le soluzioni Experience Cloud.](https://docs.adobe.com/content/help/it-IT/mobile-services/ios/overview.html)
 
    >[!IMPORTANT]
    >
-   >A partire da iOS 9, Apple ha introdotto una funzione denominata App Transport Security (ATS). Questa funzione mira a migliorare la sicurezza della rete assicurandosi che le app utilizzino solo protocolli e cifratori standard di settore. Questa funzione è abilitata per impostazione predefinita, ma sono disponibili opzioni di configurazione che consentono di utilizzare ATS. Per informazioni dettagliate su ATS, consultate [App Transport Security.](https://marketing.adobe.com/resources/help/en_US/mobile/ios/app_transport_security.html)
+   >A partire da iOS 9, Apple ha introdotto una funzione denominata App Transport Security (ATS). Questa funzione mira a migliorare la sicurezza della rete assicurandosi che le app utilizzino solo protocolli e cifratori standard di settore. Questa funzione è abilitata per impostazione predefinita, ma sono disponibili opzioni di configurazione che consentono di utilizzare ATS. Per informazioni dettagliate su ATS, consultate [App Transport Security (Protezione trasporto app).](https://docs.adobe.com/content/help/en/mobile-services/ios/config-ios/app-transport-security.html)
 
 * **Fornite le seguenti funzionalità nel lettore multimediale:**
 
-   * _Un'API per iscriversi agli eventi_ del lettore - L'SDK di Media richiede che venga chiamato un set di API semplici quando si verificano eventi nel lettore.
+   * _Un&#39;API per iscriversi agli eventi_ del lettore - L&#39;SDK di Media richiede che venga chiamato un set di API semplici quando si verificano eventi nel lettore.
    * _API che fornisce informazioni_ sul lettore - Queste informazioni includono dettagli quali il nome del supporto e la posizione della testina di riproduzione.
 
 ## Implementazione SDK
@@ -31,17 +31,17 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    1. Verificate che nella `libs` directory siano presenti i seguenti componenti software:
 
       * `ADBMediaHeartbeat.h`: Il file di intestazione Objective-C utilizzato per le API di tracciamento heartbeat iOS.
-      * `ADBMediaHeartbeatConfig.h`: Il file di intestazione Objective-C per la configurazione SDK.
+      * `ADBMediaHeartbeatConfig.h`: Il file di intestazione Objective-C per la configurazione dell&#39;SDK.
       * `MediaSDK.a`: fat binary abilitato per bitcode contenente le build della libreria per dispositivi (armv7, armv7s, arm64) e simulatori (i386 e x86_64) iOS.
 
-         Se la destinazione sarà un'app iOS, il binary deve essere collegato.
+         Se la destinazione sarà un&#39;app iOS, il binary deve essere collegato.
 
-      * `MediaSDK_TV.a`: Un fat binary abilitato per bitcode contenente le build della libreria per dispositivi (arm64) e simulatori (x86_64) Apple TV.
+      * `MediaSDK_TV.a`: Un fat binary abilitato per bitcode contenente le build della libreria per i nuovi dispositivi Apple TV (arm64) e simulatori (x86_64).
 
-         Il binario deve essere collegato quando la destinazione è destinata a un'app Apple TV (tvOS).
+         Il binario deve essere collegato quando la destinazione è destinata a un&#39;app Apple TV (tvOS).
    1. Aggiungi la libreria al progetto:
 
-      1. Avvia l'IDE di Xcode e apri la tua app.
+      1. Avvia l&#39;IDE di Xcode e apri la tua app.
       1. In **[!UICONTROL Project Navigator]**, trascinate la `libs` directory e rilasciatela sotto il progetto.
 
       1. Assicurarsi che la **[!UICONTROL Copy Items if Needed]** casella di controllo sia selezionata, che **[!UICONTROL Create Groups]** sia selezionata e che nessuna delle caselle di controllo in **[!UICONTROL Add to Target]** sia selezionata.
@@ -49,7 +49,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
          ![](assets/choose-options_ios.png)
 
       1. Fai clic su **[!UICONTROL Finish]**.
-      1. In **[!UICONTROL Project Navigator]**, selezionate l'app e le destinazioni.
+      1. In **[!UICONTROL Project Navigator]**, selezionate l&#39;app e le destinazioni.
       1. Link the required frameworks and libraries in the **[!UICONTROL Linked Frameworks]** and **[!UICONTROL Libraries]** section on the **[!UICONTROL General]** tab.
 
          **Destinazioni di app iOS:**
@@ -63,7 +63,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
          * **MediaSDK_TV.a**
          * **libsqlite3.0.tbd**
          * **SystemConfiguration.framework**
-      1. Verificate che l'app venga generata senza errori.
+      1. Verificate che l&#39;app venga generata senza errori.
 
 
 
@@ -75,11 +75,11 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    #import "ADBMediaHeartbeatConfig.h" 
    ```
 
-1. Create un' `ADBMediaHeartbeatConfig` istanza.
+1. Create un&#39; `ADBMediaHeartbeatConfig` istanza.
 
    Questa sezione spiega come comprendere i parametri di `MediaHeartbeat` configurazione e impostare i valori di configurazione corretti nell’istanza per un `MediaHeartbeat` monitoraggio accurato.
 
-   Esempio `ADBMediaHeartbeatConfig` di inizializzazione:
+   Esempio di inizializzazione `ADBMediaHeartbeatConfig`:
 
    ```
    // Media Heartbeat Initialization 
@@ -120,7 +120,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    @end
    ```
 
-1. Utilizzate l'icona `ADBMediaHeartBeatConfig` e `ADBMediaHeartBeatDelegate` per creare l' `ADBMediaHeartbeat` istanza.
+1. Utilizzate l&#39;icona `ADBMediaHeartBeatConfig` e `ADBMediaHeartBeatDelegate` per creare l&#39; `ADBMediaHeartbeat` istanza.
 
    ```
    //Replace <ADBMediaHeartBeatDelegate> with your delegate instance 
@@ -138,11 +138,11 @@ Nella versione 2.x, tutti i metodi pubblici sono consolidati nella `ADBMediaHear
 
 Per ulteriori informazioni sulla migrazione da 1.x a 2.x, consulta Migrazione [VHL 1.x a 2.x.](/help/sdk-implement/va-1x-to-2x/mig-1x-2x-overview.md)
 
-## Configurare un'app nativa per tvOS
+## Configurare un&#39;app nativa per tvOS
 
-Con il rilascio della nuova Apple TV, ora è possibile creare applicazioni da eseguire nell'ambiente tvOS nativo. Potete creare un'app puramente nativa, utilizzando diversi framework disponibili in iOS, oppure potete creare l'app utilizzando modelli XML e JavaScript. A partire da MediaSDK versione 2.0, è disponibile il supporto per tvOS. Per ulteriori informazioni su tvOS, vedi [tvOS Developer site.](https://developer.apple.com/tvos/)
+Con il rilascio della nuova Apple TV, ora è possibile creare applicazioni da eseguire nell&#39;ambiente tvOS nativo. Potete creare un&#39;app puramente nativa, utilizzando diversi framework disponibili in iOS, oppure potete creare l&#39;app utilizzando modelli XML e JavaScript. A partire da MediaSDK versione 2.0, è disponibile il supporto per tvOS. Per ulteriori informazioni su tvOS, vedi [tvOS Developer site.](https://developer.apple.com/tvos/)
 
-Effettuare le seguenti operazioni nel progetto Xcode. Questa guida viene scritta partendo dal presupposto che il progetto abbia una destinazione che sia un'app Apple TV per tvOS:
+Effettuare le seguenti operazioni nel progetto Xcode. Questa guida viene scritta partendo dal presupposto che il progetto abbia una destinazione che sia un&#39;app Apple TV per tvOS:
 
 1. Trascinate il file della `VideoHeartbeat_TV.a` libreria nella `lib` cartella del progetto.
 
