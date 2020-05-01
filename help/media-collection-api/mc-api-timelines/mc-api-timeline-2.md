@@ -1,18 +1,18 @@
 ---
-title: Timeline 2 - Sessione di abbandono utenti
+title: 'Timeline 2: utente abbandona la sessione'
 description: null
 uuid: 74b89e8f-ef56-4e0c-b9a8-40739e15b4cf
 translation-type: tm+mt
-source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
+source-git-commit: c86c7932f932af0a121e0b757921973d6f4084e8
 
 ---
 
 
-# Timeline 2 - Sessione di abbandono utenti {#timeline--2-user-abandons-session}
+# Timeline 2: utente abbandona la sessione {#timeline--2-user-abandons-session}
 
-## VOD, annunci pre-roll, annunci mid-roll, l'utente abbandona il contenuto in anticipo
+## VOD, annunci pre-roll, annunci mid-roll, l&#39;utente abbandona il contenuto in anticipo
 
-I diagrammi seguenti illustrano la timeline dell'indicatore di riproduzione e la cronologia corrispondente delle azioni di un utente. I dettagli di ciascuna azione e le relative richieste sono presentati di seguito.
+I diagrammi seguenti illustrano la timeline dell&#39;indicatore di riproduzione e la cronologia corrispondente delle azioni di un utente. I dettagli di ciascuna azione e le relative richieste sono presentati di seguito.
 
 
 ![](assets/va_api_content_2.png)
@@ -29,9 +29,9 @@ I diagrammi seguenti illustrano la timeline dell'indicatore di riproduzione e la
 | --- | :---: | :---: | --- |
 | Pulsante Riproduzione automatica o Riproduzione premuto | 0 | 0 | `/api/v1/sessions` |
 
-**Dettagli implementazione**
+**Dettagli di implementazione**
 
-Questa chiamata segnala _l'intenzione dell'utente di riprodurre_ un video. Restituisce un ID sessione ( `{sid}` ) al client utilizzato per identificare tutte le chiamate di tracciamento successive all’interno della sessione. Lo stato del lettore non è ancora "play", ma è "start".  [I parametri](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) di sessione obbligatori devono essere inclusi nella `params` mappa nel corpo della richiesta.  Sul back-end, questa chiamata genera una chiamata di avvio di Adobe Analytics.
+Questa chiamata segnala _l&#39;intenzione dell&#39;utente di riprodurre_ un video. Restituisce un ID sessione ( `{sid}` ) al client utilizzato per identificare tutte le chiamate di tracciamento successive all’interno della sessione. Lo stato del lettore non è ancora &quot;play&quot;, ma è invece &quot;start&quot;.  [I parametri](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) di sessione obbligatori devono essere inclusi nella `params` mappa nel corpo della richiesta.  Sul back-end, questa chiamata genera una chiamata di avvio di Adobe Analytics.
 
 **Corpo della richiesta di esempio**
 
@@ -62,11 +62,11 @@ Questa chiamata segnala _l'intenzione dell'utente di riprodurre_ un video. Resti
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| L'app avvia il timer evento | 0 | 0 |  |
+| L&#39;app avvia il timer evento | 0 | 0 |  |
 
-**Dettagli implementazione**
+**Dettagli di implementazione**
 
-Avviate il timer di ping dell'app. Il primo evento di ping dovrebbe quindi attivare 1 secondo in se ci sono annunci pre-roll, 10 secondi in caso contrario.
+Avviate il timer di ping dell&#39;app. Il primo evento di ping dovrebbe quindi attivare 1 secondo in se ci sono annunci pre-roll, 10 secondi in caso contrario.
 
 ### Azione 3 - Avvio interruzione annuncio {#Action-3}
 
@@ -74,9 +74,9 @@ Avviate il timer di ping dell'app. Il primo evento di ping dovrebbe quindi attiv
 | --- | :---: | :---: | --- |
 | Avvio pre-roll e interruzione | 0 | 0 | `/api/v1/sessions/{sid}/events` |
 
-**Dettagli implementazione**
+**Dettagli di implementazione**
 
-Gli annunci pre-roll devono essere tracciati. Gli annunci possono essere tracciati solo all'interno di un'interruzione di annuncio.
+Gli annunci pre-roll devono essere tracciati. Gli annunci possono essere tracciati solo all&#39;interno di un&#39;interruzione di annuncio.
 
 **Corpo della richiesta di esempio**
 
@@ -100,7 +100,7 @@ Gli annunci pre-roll devono essere tracciati. Gli annunci possono essere traccia
 | --- | :---: | :---: | --- |
 | Track pre-roll Ad #1 start | 0 | 0 | `/api/v1/sessions/{sid}/events` |
 
-**Dettagli implementazione**
+**Dettagli di implementazione**
 
 Viene avviato un annuncio di 12 secondi.
 
@@ -133,11 +133,11 @@ Viene avviato un annuncio di 12 secondi.
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| L'app invia un evento | 1 | 0 | `/api/v1/sessions/{sid}/events` |
+| L&#39;app invia l&#39;evento | 1 | 0 | `/api/v1/sessions/{sid}/events` |
 
-**Dettagli implementazione**
+**Dettagli di implementazione**
 
-Ping il backend ogni 1 secondo. (Gli annunci successivi non sono mostrati, nell'interesse della brevità.)
+Ping il backend ogni 1 secondo. (Gli annunci successivi non sono mostrati, nell&#39;interesse della brevità.)
 
 **Corpo della richiesta di esempio**
 
@@ -157,7 +157,7 @@ Ping il backend ogni 1 secondo. (Gli annunci successivi non sono mostrati, nell'
 | --- | :---: | :---: | --- |
 | Track pre-roll Ad #1 completo | 12 | 0 | `/api/v1/sessions/{sid}/events` |
 
-**Dettagli implementazione**
+**Dettagli di implementazione**
 
 Il primo annuncio pre-roll è terminato.
 
@@ -177,11 +177,11 @@ Il primo annuncio pre-roll è terminato.
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| Traccia pre-roll e interruzione | 12 | 0 | `/api/v1/sessions/{sid}/events` |
+| Traccia pre-roll e interruzione completa | 12 | 0 | `/api/v1/sessions/{sid}/events` |
 
-**Dettagli implementazione**
+**Dettagli di implementazione**
 
-La pausa pubblicitaria è finita. Durante la pausa pubblicitaria, il giocatore è rimasto nello stato "play".
+La pausa pubblicitaria è finita. Durante la pausa pubblicitaria, il giocatore è rimasto nello stato &quot;play&quot;.
 
 **Corpo della richiesta di esempio**
 
@@ -201,9 +201,9 @@ La pausa pubblicitaria è finita. Durante la pausa pubblicitaria, il giocatore �
 | --- | :---: | :---: | --- |
 | Tracciare l’evento di riproduzione | 12 | 0 | `/api/v1/sessions/{sid}/events` |
 
-**Dettagli implementazione**
+**Dettagli di implementazione**
 
-Spostare il lettore allo stato "play"; iniziare il tracciamento dell’inizio della riproduzione del contenuto.
+Spostare il lettore allo stato &quot;play&quot;; iniziare il tracciamento dell’inizio della riproduzione del contenuto.
 
 **Corpo della richiesta di esempio**
 
@@ -222,9 +222,9 @@ Spostare il lettore allo stato "play"; iniziare il tracciamento dell’inizio de
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| L'app invia un evento | 20 | 8 | `/api/v1/sessions/{sid}/events` |
+| L&#39;app invia l&#39;evento | 20 | 8 | `/api/v1/sessions/{sid}/events` |
 
-**Dettagli implementazione**
+**Dettagli di implementazione**
 
 Eseguire il ping del backend ogni 10 secondi.
 
@@ -244,9 +244,9 @@ Eseguire il ping del backend ogni 10 secondi.
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| L'app invia un evento | 30 | 18 | `/api/v1/sessions/{sid}/events` |
+| L&#39;app invia l&#39;evento | 30 | 18 | `/api/v1/sessions/{sid}/events` |
 
-**Dettagli implementazione**
+**Dettagli di implementazione**
 
 Eseguire il ping del backend ogni 10 secondi.
 
@@ -266,9 +266,9 @@ Eseguire il ping del backend ogni 10 secondi.
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| Errore. L'app invia informazioni sull'errore. | 32 | 20 | `/api/v1/sessions/{sid}/events` |
+| Errore. L&#39;app invia informazioni sull&#39;errore. | 32 | 20 | `/api/v1/sessions/{sid}/events` |
 
-**Dettagli implementazione**
+**Dettagli di implementazione**
 
 
 **Corpo della richiesta di esempio**
@@ -287,9 +287,9 @@ Eseguire il ping del backend ogni 10 secondi.
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| L'app viene recuperata dall'errore, l'utente preme Play | 37 | 20 | `/api/v1/sessions/{sid}/events` |
+| L&#39;app viene recuperata dall&#39;errore, l&#39;utente preme Play | 37 | 20 | `/api/v1/sessions/{sid}/events` |
 
-**Dettagli implementazione**
+**Dettagli di implementazione**
 
 
 
@@ -309,9 +309,9 @@ Eseguire il ping del backend ogni 10 secondi.
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| L'app invia un evento | 40 | 28 | `/api/v1/sessions/{sid}/events` |
+| L&#39;app invia l&#39;evento | 40 | 28 | `/api/v1/sessions/{sid}/events` |
 
-**Dettagli implementazione**
+**Dettagli di implementazione**
 
 Eseguire il ping del backend ogni 10 secondi.
 
@@ -333,7 +333,7 @@ Eseguire il ping del backend ogni 10 secondi.
 | --- | :---: | :---: | --- |
 | Tracciamento avvio intermedio e interruzione | 45 | 33 | `/api/v1/sessions/{sid}/events` |
 
-**Dettagli implementazione**
+**Dettagli di implementazione**
 
 Media roll con durata di 8 secondi: send `adBreakStart` .
 
@@ -359,7 +359,7 @@ Media roll con durata di 8 secondi: send `adBreakStart` .
 | --- | :---: | :---: | --- |
 | Track mid-roll Ad #1 start | 45 | 33 | `/api/v1/sessions/{sid}/events` |
 
-**Dettagli implementazione**
+**Dettagli di implementazione**
 
 Tieni traccia dell’annuncio mid-roll.
 
@@ -390,9 +390,9 @@ Tieni traccia dell’annuncio mid-roll.
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| L'utente chiude l'app. L'app determina che l'utente ha abbandonato la visualizzazione e non torna a questa sessione. | 48 | 33 | `/api/v1/sessions/{sid}/events` |
+| L&#39;utente chiude l&#39;app. L&#39;app determina che l&#39;utente ha abbandonato la visualizzazione e non torna a questa sessione. | 48 | 33 | `/api/v1/sessions/{sid}/events` |
 
-**Dettagli implementazione**
+**Dettagli di implementazione**
 
 Inviare `sessionEnd` al back-end VA per indicare che la sessione deve essere chiusa immediatamente, senza ulteriore elaborazione.
 
@@ -407,5 +407,3 @@ Inviare `sessionEnd` al back-end VA per indicare che la sessione deve essere chi
     eventType:sessionEnd
 }
 ```
-
-
