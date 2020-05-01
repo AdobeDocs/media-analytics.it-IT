@@ -3,16 +3,22 @@ title: Configurazione iOS
 description: Configurazione dell’applicazione Media SDK per l’implementazione su iOS.
 uuid: a1c6be79-a6dc-47b6-93b3-ac7b42f1f3eb
 translation-type: tm+mt
-source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
+source-git-commit: be82be2eb58f89344f2125288599fef461db441e
 
 ---
 
 
 # Configurazione iOS{#set-up-ios}
 
+>[!IMPORTANT]
+>
+>A partire da ottobre 2020, Adobe cesserà il supporto per gli SDK per dispositivi mobili della versione 4 e per gli SDK di Analytics per supporti multimediali per iOS. Puoi continuare a scaricare e utilizzare gli SDK della versione 4, ma l&#39;Assistenza clienti e l&#39;accesso ai forum cesseranno. Esegui la migrazione agli SDK Adobe Experience Platform (AEP) per iOS. L’SDK di AEP Mobile (in precedenza denominato v5) supporterà esclusivamente le funzionalità e le funzionalità di Adobe Experience Cloud. Per ulteriori informazioni su questa modifica, consulta le domande frequenti relative alla [versione 4 degli SDK per dispositivi mobili End of Support](https://aep-sdks.gitbook.io/docs/version-4-sdk-end-of-support-faq). È consigliabile effettuare la migrazione alla nuova SDK AEP Mobile.
+Dopo aver eseguito la migrazione all’SDK AEP Mobile, devi implementare l’estensione Lancio di Analytics e l’estensione Lancio di Media Analytics per abilitare Adobe Analytics per audio e video. Per ulteriori informazioni sulla migrazione alla nuova SDK AEP Mobile, consulta [Migrazione dall’SDK per file multimediali autonomi ad Adobe Launch. ](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/sdk-to-launch/sdk-to-launch-migration.html)
+
+
 ## Prerequisiti
 
-* **Ottenete parametri di configurazione validi per Media SDK** Questi parametri possono essere ottenuti da un rappresentante Adobe dopo la configurazione dell&#39;account di analisi.
+* **Ottenete parametri di configurazione validi per Media SDK** Questi parametri possono essere ottenuti da un rappresentante Adobe dopo che avete configurato il vostro account di analisi.
 * **Implementa ADBMobile per iOS nella tua applicazione** Per ulteriori informazioni sulla documentazione SDK per Adobe Mobile, consulta SDK 4.x per [iOS per le soluzioni Experience Cloud.](https://docs.adobe.com/content/help/it-IT/mobile-services/ios/overview.html)
 
    >[!IMPORTANT]
@@ -71,8 +77,8 @@ source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
 1. Importa la libreria.
 
    ```
-   #import "ADBMediaHeartbeat.h" 
-   #import "ADBMediaHeartbeatConfig.h" 
+   #import "ADBMediaHeartbeat.h"
+   #import "ADBMediaHeartbeatConfig.h"
    ```
 
 1. Create un&#39; `ADBMediaHeartbeatConfig` istanza.
@@ -82,40 +88,40 @@ source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
    Esempio di inizializzazione `ADBMediaHeartbeatConfig`:
 
    ```
-   // Media Heartbeat Initialization 
-   ADBMediaHeartbeatConfig *config = [[ADBMediaHeartbeatConfig alloc] init]; 
-   config.trackingServer = <SAMPLE_HEARTBEAT_TRACKING_SERVER>; 
-   config.channel        = <SAMPLE_HEARTBEAT_CHANNEL>; 
-   config.appVersion     = <SAMPLE_HEARTBEAT_SDK_VERSION>; 
-   config.ovp            = <SAMPLE_HEARTBEAT_OVP_NAME>; 
-   config.playerName     = <SAMPLE_PLAYER_NAME>; 
-   config.ssl            = <YES/NO>; 
-   config.debugLogging   = <YES/NO>; 
+   // Media Heartbeat Initialization
+   ADBMediaHeartbeatConfig *config = [[ADBMediaHeartbeatConfig alloc] init];
+   config.trackingServer = <SAMPLE_HEARTBEAT_TRACKING_SERVER>;
+   config.channel        = <SAMPLE_HEARTBEAT_CHANNEL>;
+   config.appVersion     = <SAMPLE_HEARTBEAT_SDK_VERSION>;
+   config.ovp            = <SAMPLE_HEARTBEAT_OVP_NAME>;
+   config.playerName     = <SAMPLE_PLAYER_NAME>;
+   config.ssl            = <YES/NO>;
+   config.debugLogging   = <YES/NO>;
    ```
 
 1. Implementa il `ADBMediaHeartbeatDelegate` protocollo.
 
    ```
-   @interface VideoAnalyticsProvider : NSObject <ADBMediaHeartbeatDelegate> 
+   @interface VideoAnalyticsProvider : NSObject <ADBMediaHeartbeatDelegate>
    
-   @end 
+   @end
    
-   @implementation VideoAnalyticsProvider 
+   @implementation VideoAnalyticsProvider
    
    // Replace <bitrate>, <startuptime>, <fps> and <droppeFrames>  
-   // with the current playback QoS values. 
-   - (ADBMediaObject *)getQoSObject { 
+   // with the current playback QoS values.
+   - (ADBMediaObject *)getQoSObject {
        return [ADBMediaHeartbeat createQoSObjectWithBitrate:<bitrate>  
                                  startupTime:<startuptime>   
                                  fps:<fps>  
-                                 droppedFrames:<droppedFrames>]; 
-   } 
+                                 droppedFrames:<droppedFrames>];
+   }
    
-   // Return the current video player playhead position. 
-   // Replace <currentPlaybackTime> with the video player current playback time 
-   - (NSTimeInterval)getCurrentPlaybackTime { 
-       return <currentPlaybackTime>; 
-   } 
+   // Return the current video player playhead position.
+   // Replace <currentPlaybackTime> with the video player current playback time
+   - (NSTimeInterval)getCurrentPlaybackTime {
+       return <currentPlaybackTime>;
+   }
    
    @end
    ```
@@ -123,8 +129,8 @@ source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
 1. Utilizzate l&#39;icona `ADBMediaHeartBeatConfig` e `ADBMediaHeartBeatDelegate` per creare l&#39; `ADBMediaHeartbeat` istanza.
 
    ```
-   //Replace <ADBMediaHeartBeatDelegate> with your delegate instance 
-   _mediaHeartbeat = [[ADBMediaHeartbeat alloc] initWithDelegate: 
+   //Replace <ADBMediaHeartBeatDelegate> with your delegate instance
+   _mediaHeartbeat = [[ADBMediaHeartbeat alloc] initWithDelegate:
      <ADBMediaHeartBeatDelegate> config:config];
    ```
 
@@ -152,4 +158,3 @@ Effettuare le seguenti operazioni nel progetto Xcode. Questa guida viene scritta
    * `AdobeMobileLibrary_TV.a`
    * `libsqlite3.0.tbd`
    * `SystemConfiguration.framework`
-
