@@ -3,16 +3,24 @@ title: Scaricare gli SDK
 description: Collegamenti ai download SDK per le piattaforme disponibili, inclusi Android, iOS, JavaScript, Chromecast e Roku.
 uuid: a619fbb8-693e-4583-8dad-0ff875e715f8
 translation-type: tm+mt
-source-git-commit: 8589a89847f4c3cc38317c1fe65e4e2efb9d8875
+source-git-commit: 06e32cbea61ed56220787e2bcb822f6bf02b44ac
 
 ---
 
 
 # Scaricare gli SDK{#download-sdks}
 
+>[!IMPORTANT]
+>
+>A partire da ottobre 2020, Adobe cesserà il supporto per gli SDK per dispositivi mobili della versione 4 e per gli SDK di Analytics per supporti multimediali per iOS e Android. Puoi continuare a scaricare e utilizzare gli SDK della versione 4, ma l&#39;Assistenza clienti e l&#39;accesso ai forum cesseranno. Devi effettuare la migrazione agli SDK Adobe Experience Platform (AEP) per iOS o Android. L’SDK di AEP Mobile (in precedenza denominato v5) supporterà esclusivamente le funzionalità e le funzionalità di Adobe Experience Cloud. Per ulteriori informazioni su questa modifica, consulta le domande frequenti relative alla [versione 4 degli SDK per dispositivi mobili End of Support](https://aep-sdks.gitbook.io/docs/version-4-sdk-end-of-support-faq). È consigliabile effettuare la migrazione alla nuova SDK AEP Mobile.
+Dopo aver eseguito la migrazione all’SDK AEP Mobile, devi implementare l’estensione Lancio di Analytics e l’estensione Lancio di Media Analytics per abilitare Adobe Analytics per audio e video. Per ulteriori informazioni sulla migrazione alla nuova SDK AEP Mobile, consulta [Migrazione dall’SDK per file multimediali autonomi ad Adobe Launch. ](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/sdk-to-launch/sdk-to-launch-migration.html)
+
+
+
+
 ## Download degli SDK per file multimediali 2.x {#download-2x-sdks}
 
-| 2.x Media SDKs | Ultimi download di Media SDK |  API |  Documentazione  |
+| 2.x Media SDKs  | Ultimi download di Media SDK |  API   |  Documentazione  |
 | --- | --- | --- | --- |
 | Android/FireTV | [Media SDK per Android v2.2.4](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/android-v2.2.4) | [Riferimento API Android](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/) | [Configurazione Android](/help/sdk-implement/setup/set-up-android.md) |
 | iOS/AppleTV | [SDK per file multimediali per iOS v2.2.7](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/ios-v2.2.7) (per ottenere l’SDK versione 2.0 precedente, contatta l’ [assistenza clienti ](https://helpx.adobe.com/it/marketing-cloud/contact-support.html) ) | [Riferimento API iOS](https://adobe-marketing-cloud.github.io/media-sdks/reference/ios/) | [Configurazione iOS](/help/sdk-implement/setup/set-up-ios.md) |
@@ -22,13 +30,13 @@ source-git-commit: 8589a89847f4c3cc38317c1fe65e4e2efb9d8875
 
 ## Estensione lancio di Media Analytics {#media-analytics-launch-extension}
 
-| Componente lancio MA | Download | Documentazione |
+| Componente lancio MA   | Download | Documentazione |
 |---|---|---|
 | **Estensione lancio MA** | [Esempio di estensione HTML5 Player](https://github.com/adobe/reactor-adobe-va-sample-player) | [Estensione Adobe Media Analytics for Audio and Video](https://docs.adobelaunch.com/extension-reference/web/adobe-media-analytics-for-audio-and-video-extension) |
 
 ## Download degli SDK 1.x per file multimediali {#download-the-1.x-media-sDKs}
 
-| SDK 1.x |  Download di Media SDK |  Guide introduttive |
+| SDK 1.x  |  Download di Media SDK  |  Guide introduttive  |
 | --- | --- | --- |
 | Android | [SDK per Android v1.5.8](https://github.com/Adobe-Marketing-Cloud/video-heartbeat/releases/tag/android-v1.5.8) | [Guida introduttiva - Media 1.x per Android](setup/vhl-dev-guide-v15_android.pdf) |
 | iOS | [SDK per iOS v1.5.9](https://github.com/Adobe-Marketing-Cloud/video-heartbeat/releases/tag/ios-v1.5.9) | [Guida introduttiva - Media 1.x per iOS](setup/vhl-dev-guide-v15_ios.pdf) |
