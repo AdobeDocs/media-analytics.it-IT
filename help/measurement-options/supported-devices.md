@@ -3,7 +3,7 @@ title: Dispositivi supportati
 description: null
 uuid: null
 translation-type: tm+mt
-source-git-commit: c86c7932f932af0a121e0b757921973d6f4084e8
+source-git-commit: 3a237ee31412784f708e772cc3a58047630e2184
 
 ---
 
@@ -46,4 +46,4 @@ La tabella seguente elenca i dispositivi attualmente supportati. Per scaricare l
 |  | Nuovi dispositivi collegati |  |  | X |
 
 
-Per Media SDK, consulta anche [Supporto versione minima della piattaforma](./sdk-implement/setup/setup-overview.md#minimum-platform-version)
+Per Media SDK, consulta anche [Supporto versione minima della piattaforma](/help/sdk-implement/setup/setup-overview.md#minimum-platform-version)
