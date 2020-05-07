@@ -3,20 +3,23 @@ title: Confronto dei codici da 1.x a 2.x
 description: In questo argomento viene confrontato il codice nelle versioni 1.x e 2.x dell’SDK per file multimediali.
 uuid: 9f0a1660-2100-446d-ab75-afdf966478b3
 translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+source-git-commit: 72cdf2d03ebae6998514c9092ab462c29345c9f9
+workflow-type: tm+mt
+source-wordcount: '567'
+ht-degree: 2%
 
 ---
 
 
-# Confronto dei codici: Da 1,x a 2,x {#code-comparison-x-to-x}
+# Code comparison: 1.x to 2.x {#code-comparison-x-to-x}
 
 Tutti i parametri di configurazione e le API di tracciamento ora sono consolidati nelle `MediaHeartbeats` classi e `MediaHeartbeatConfig` .
 
-**Modifiche dell'API di configurazione:**
+**Modifiche dell&#39;API di configurazione:**
 
 * `AdobeHeartbeatPluginConfig.sdk` - Rinominato in `MediaConfig.appVersion`
-* `MediaHeartbeatConfig.playerName` - Ora impostato `MediaHeartbeatConfig` invece di `VideoPlayerPluginDelegate`
-* (solo per JavaScript): L' `AppMeasurement` istanza - Ora inviata tramite il `MediaHeartbeat` costruttore.
+* `MediaHeartbeatConfig.playerName` - Ora impostato `MediaHeartbeatConfig` al posto di `VideoPlayerPluginDelegate`
+* (solo per JavaScript): L&#39; `AppMeasurement` istanza - Ora inviata tramite il `MediaHeartbeat` costruttore.
 
 **Modifiche delle proprietà di configurazione:**
 
@@ -27,7 +30,7 @@ Tutti i parametri di configurazione e le API di tracciamento ora sono consolidat
 **Collegamenti ai lettori di esempio 1.x e 2.x:**
 
 * [1.x Lettore di esempio ](https://github.com/Adobe-Marketing-Cloud/video-heartbeat/blob/master/sdks/js/samples/BasicPlayerSample/script/app/analytics/video.analytics.provider.js#L58)
-* [2.x Lettore di esempio ](https://github.com/Adobe-Marketing-Cloud/media-sdks/blob/master/sdks/js/samples/BasicPlayerSample/script/app/analytics/video.analytics.provider.js#L47)
+* [2.x Lettore di esempio ](https://github.com/Adobe-Marketing-Cloud/media-sdks/blob/master/sdks/js/2.x/samples/BasicPlayerSample/script/app/analytics/video.analytics.provider.js#L47)
 
 Le sezioni seguenti forniscono confronti tra i codici da 1.x a 2.x, inclusi Inizializzazione, Riproduzione di base, Riproduzione annunci pubblicitari, Riproduzione di capitolo e alcuni eventi aggiuntivi.
 
@@ -302,7 +305,7 @@ VideoAnalyticsProvider.prototype._onLoad = function() {
 ```
 
 >[!NOTE]
->Invece di impostare i metadati video personalizzati tramite l' `AdobeAnalyticsPlugin.setVideoMetadata()` API, in VHL 2.0 i metadati video standard vengono impostati tramite l' `MediaHeartbeat.trackSessionStart()` API.
+>Invece di impostare i metadati video personalizzati tramite l&#39; `AdobeAnalyticsPlugin.setVideoMetadata()` API, in VHL 2.0 i metadati video standard vengono impostati tramite l&#39; `MediaHeartbeat.trackSessionStart()` API.
 
 
 ### Riproduzione
@@ -548,7 +551,7 @@ VideoAnalyticsProvider.prototype._onAdStart = function() {
 ```
 
 >[!NOTE]
->Invece di impostare i metadati annuncio standard tramite l' `AdobeAnalyticsPlugin.setVideoMetadata()` API, in VHL 2.0, i metadati annuncio standard sono impostati tramite la `AdMetadata` chiave `MediaObject.MediaObjectKey.StandardVideoMetadata`
+>Invece di impostare i metadati annuncio standard tramite l&#39; `AdobeAnalyticsPlugin.setVideoMetadata()` API, in VHL 2.0, i metadati annuncio standard sono impostati tramite la `AdMetadata` chiave `MediaObject.MediaObjectKey.StandardVideoMetadata`
 
 ### Metadati annuncio personalizzati
 
@@ -599,7 +602,7 @@ VideoAnalyticsProvider.prototype._onAdStart = function() {
 ```
 
 >[!NOTE]
->Invece di impostare i metadati personalizzati dell'annuncio tramite l' `AdobeAnalyticsPlugin.setVideoMetadata` API, in VHL 2.0 i metadati dell'annuncio standard vengono impostati tramite l' `MediaHeartbeat.trackAdStart()` API.
+>Invece di impostare i metadati personalizzati dell&#39;annuncio tramite l&#39; `AdobeAnalyticsPlugin.setVideoMetadata` API, in VHL 2.0 i metadati dell&#39;annuncio standard vengono impostati tramite l&#39; `MediaHeartbeat.trackAdStart()` API.
 
 ### Salta annuncio
 
@@ -707,7 +710,7 @@ SampleVideoPlayerPluginDelegate.prototype.getChapterInfo = function() {
 ```
 
 >[!NOTE]
->nelle API VHL 1.5.X; Se il lettore non si trova entro i limiti del Capitolo, `getChapterinfo()` deve restituire null.
+>nelle API VHL 1.5.X; `getChapterinfo()` deve restituire null se il lettore si trova al di fuori dei limiti del Capitolo.
 
 #### Salto capitolo (2.x) {#chap-skip-2.x}
 
