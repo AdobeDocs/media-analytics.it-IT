@@ -3,7 +3,10 @@ title: Guida all’implementazione dei collegamenti personalizzati
 description: null
 uuid: 83315e73-20ca-4db5-9d43-33daade45a13
 translation-type: tm+mt
-source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
+source-git-commit: 72cdf2d03ebae6998514c9092ab462c29345c9f9
+workflow-type: tm+mt
+source-wordcount: '203'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +17,7 @@ Il tracciamento video personalizzato utilizza il tracciamento [manuale dei colle
 Nella maggior parte dei casi, il tracciamento video del collegamento video personalizzato viene utilizzato su piattaforme e dispositivi in cui è necessaria una misurazione video minima.
 
 * In JavaScript: la `s.tl()` funzione
-* Nelle App Mobile: [trackAction() Android](hhttps://docs.adobe.com/content/help/en/mobile-services/android/analytics-android/actions.html), [trackAction() iOS](https://docs.adobe.com/content/help/en/mobile-services/ios/analytics-ios/actions.html), [trackAction() OTT](/help/sdk-implement/analytics-with-ott/track-app-actions.md)
+* Nelle App Mobile: [trackAction() Android](https://docs.adobe.com/content/help/en/mobile-services/android/analytics-android/actions.html), [trackAction() iOS](https://docs.adobe.com/content/help/en/mobile-services/ios/analytics-ios/actions.html), [trackAction() OTT](/help/sdk-implement/analytics-with-ott/track-app-actions.md)
 * Nell&#39;API di inserimento dati: [tag linktype](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/reference/r_supported_tags.md)
 
 ## Requisiti
