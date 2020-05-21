@@ -2,7 +2,10 @@
 title: Migrazione dall’SDK per file multimediali standalone ad Adobe Launch - Web (JS)
 description: Istruzioni ed esempi di codice per facilitare la migrazione da Media SDK a Launch.
 translation-type: tm+mt
-source-git-commit: bc896cc403923e2f31be7313ab2ca22c05893c45
+source-git-commit: 0f9a985d04969eeca837a2655c666259ce30aee4
+workflow-type: tm+mt
+source-wordcount: '401'
+ht-degree: 6%
 
 ---
 
@@ -43,7 +46,7 @@ L’estensione Media utilizzerà i parametri configurati per il tracciamento.
 
    ![](assets/launch_config_js.png)
 
-[Guida utente di Launch - Installare e configurare l'estensione del supporto](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html#install-and-configure-the-ma-extension)
+[Guida utente di Launch - Installare e configurare l&#39;estensione del supporto](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html#install-and-configure-the-ma-extension)
 
 ## Differenze di creazione del tracciatore
 
@@ -73,11 +76,12 @@ mediaDelegate.getQoSObject = function() {
 this.mediaHeartbeat = new MediaHeartbeat(mediaDelegate, mediaConfig, appMeasurement);
 ```
 
-[Media SDK - Creazione Tracker](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/cookbook/sdk-vs-launch-qoe.html)
+<!--  Dead Link - from 2019 - can't locate where this should go
+[Media SDK - Tracker Creation](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/cookbook/sdk-vs-launch-qoe.html) -->
 
 ### Launch
 
-Launch offre due approcci per la creazione dell'infrastruttura di tracciamento. Entrambi gli approcci utilizzano l’estensione di avvio di Media Analytics:
+Launch offre due approcci per la creazione dell&#39;infrastruttura di tracciamento. Entrambi gli approcci utilizzano l’estensione di avvio di Media Analytics:
 
 1. Utilizzate le API di tracciamento dei supporti da una pagina Web.
 
@@ -87,15 +91,15 @@ Launch offre due approcci per la creazione dell'infrastruttura di tracciamento. 
    window["CONFIGURED_VARIABLE_NAME"].MediaHeartbeat.getInstance
    ```
 
-1. Utilizzate le API di tracciamento dei supporti da un'altra estensione Launch.
+1. Utilizzate le API di tracciamento dei supporti da un&#39;altra estensione Launch.
 
    In questo scenario, utilizzate le API di tracciamento dei supporti esposte dai moduli `get-instance` e `media-heartbeat` condivisi.
 
    >[!NOTE]
    >
-   >I moduli condivisi non sono disponibili per l'uso nelle pagine Web. È possibile utilizzare i moduli condivisi solo da un'altra estensione.
+   >I moduli condivisi non sono disponibili per l&#39;uso nelle pagine Web. È possibile utilizzare i moduli condivisi solo da un&#39;altra estensione.
 
-   Create un' `MediaHeartbeat` istanza utilizzando il modulo `get-instance` condiviso.
+   Create un&#39; `MediaHeartbeat` istanza utilizzando il modulo `get-instance` condiviso.
 Passa un oggetto delegato a `get-instance` che espone `getQoSObject()` e `getCurrentPlaybackTime()` funzioni.
 
    ```
@@ -114,5 +118,5 @@ Passa un oggetto delegato a `get-instance` che espone `getQoSObject()` e `getCur
 
 ### Launch
 
-* [Panoramica di Launch](https://docs.adobe.com/content/help/en/launch/using/overview.html)
+* [Panoramica di Launch](https://docs.adobe.com/content/help/it-IT/launch/using/overview.html)
 * [Estensione Media Analytics](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html)
