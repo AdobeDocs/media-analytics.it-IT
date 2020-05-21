@@ -4,10 +4,10 @@ user-guide-title: Adobe Analytics per audio e video
 product: adobe analytics
 sub-product: media analytics
 translation-type: tm+mt
-source-git-commit: 841e02e5f4fdd6eebd6eac0c1d42997db49b071e
+source-git-commit: 48de18b022d004bf301a55ec71b6a889f7b9ebb3
 workflow-type: tm+mt
 source-wordcount: '677'
-ht-degree: 98%
+ht-degree: 96%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 98%
       + [Lato client](intro-to-ava/implementation-paths/client-side-path.md)
       + Altri percorsi di implementazione {#other-paths}
          + Tracciamento modulo multimediale Milestone {#mm-milestone-tracking}
-            + [Panoramica su Milestone](measurement-options/mm-milestone-tracking/milestone-overview.md)
+            + [Panoramica sulle attività cardine](measurement-options/mm-milestone-tracking/milestone-overview.md)
             + [Migrazione da Milestone a Media Analytics](measurement-options/mm-milestone-tracking/migrate-ms-to-va.md)
             + [Migrazione da Milestone a Custom Link](measurement-options/mm-milestone-tracking/migrate-ms-to-cl.md)
          + Custom Link in Analytics {#cl-in-aa}
@@ -61,7 +61,7 @@ ht-degree: 98%
          + [Tracciamento ricerca in JavaScript](sdk-implement/track-av-playback/track-seeking/track-seeking-js.md)
          + [Tracciamento ricerca in Chromecast](sdk-implement/track-av-playback/track-seeking/track-seeking-chromecast.md)
          + [Tracciamento ricerca su Roku](sdk-implement/track-av-playback/track-seeking/track-seeking-roku.md)
-      + Implementazione dei metadati standard {#impl-std-metadata}
+      + Implement Standard Metadata {#impl-std-metadata}
          + [Implementazione dei metadati standard su Android](sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-android.md)
          + [Implementazione dei metadati standard su iOS](sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-ios.md)
          + [Chiavi metadati iOS](sdk-implement/track-av-playback/impl-std-metadata/ios-metadata-keys.md)
@@ -77,7 +77,7 @@ ht-degree: 98%
       + [Tracciamento annunci in JavaScript](sdk-implement/track-ads/track-ads-js.md)
       + [Tracciamento annunci in Chromecast](sdk-implement/track-ads/track-ads-chromecast.md)
       + [Tracciamento annunci su Roku](sdk-implement/track-ads/track-ads-roku.md)
-      + Implementazione dei metadati standard di annunci {#impl-std-ad-metadata}
+      + Implement Standard ad Metadata {#impl-std-ad-metadata}
          + [Implementazione dei metadati standard di annunci su Android](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-android.md)
          + [Implementazione dei metadati standard di annunci su iOS](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-ios.md)
          + [Implementazione dei metadati standard di annunci in JavaScript](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-js.md)
