@@ -3,7 +3,10 @@ title: Configurazione Android
 description: Configurazione dell’applicazione Media SDK per l’implementazione su Android.
 uuid: 3ffe3276-a104-4182-9220-038729e9f3d5
 translation-type: tm+mt
-source-git-commit: be82be2eb58f89344f2125288599fef461db441e
+source-git-commit: 300eb77858296f0246a2cb484386c0dcdf8b87b9
+workflow-type: tm+mt
+source-wordcount: '403'
+ht-degree: 10%
 
 ---
 
@@ -12,14 +15,12 @@ source-git-commit: be82be2eb58f89344f2125288599fef461db441e
 
 >[!IMPORTANT]
 >
->A partire da ottobre 2020, Adobe cesserà il supporto per gli SDK per dispositivi mobili della versione 4 e per gli SDK di Analytics per dispositivi multimediali per Android. Puoi continuare a scaricare e utilizzare gli SDK della versione 4, ma l&#39;Assistenza clienti e l&#39;accesso ai forum cesseranno. Devi effettuare la migrazione agli SDK Adobe Experience Platform (AEP) per Android. L’SDK di AEP Mobile (in precedenza denominato v5) supporterà esclusivamente le funzionalità e le funzionalità di Adobe Experience Cloud. Per ulteriori informazioni su questa modifica, consulta le domande frequenti relative alla [versione 4 degli SDK per dispositivi mobili End of Support](https://aep-sdks.gitbook.io/docs/version-4-sdk-end-of-support-faq). È consigliabile effettuare la migrazione alla nuova SDK AEP Mobile.
-Dopo aver eseguito la migrazione all’SDK AEP Mobile, devi implementare l’estensione Lancio di Analytics e l’estensione Lancio di Media Analytics per abilitare Adobe Analytics per audio e video. Per ulteriori informazioni sulla migrazione alla nuova SDK AEP Mobile, consulta [Migrazione dall’SDK per file multimediali autonomi ad Adobe Launch. ](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/sdk-to-launch/sdk-to-launch-migration.html)
+>Con la fine del supporto per gli SDK della versione 4 per dispositivi mobili il 31 agosto 2021, Adobe interromperà anche il supporto per l’SDK di Media Analytics per iOS e Android.  Per ulteriori informazioni, consultate Domande frequenti relative alla fine del supporto per l’SDK di [Media Analytics](/help/sdk-implement/end-of-support-faqs.md).
 
 
 ## Prerequisiti
 
-
-* **Ottenete parametri di configurazione validi per Media SDK** Questi parametri possono essere ottenuti da un rappresentante Adobe dopo la configurazione dell&#39;account di analisi.
+* **Ottenete parametri di configurazione validi per Media SDK** Questi parametri possono essere ottenuti da un rappresentante Adobe dopo che avete configurato il vostro account di analisi.
 * **Implementa ADBMobile per Android nella tua applicazione** Per ulteriori informazioni sulla documentazione SDK per Adobe Mobile, consulta SDK 4.x per [Android per le soluzioni Experience Cloud.](https://docs.adobe.com/content/help/it-IT/mobile-services/android/overview.html)
 
 * **Fornite le seguenti funzionalità nel lettore multimediale:**
@@ -42,7 +43,7 @@ Dopo aver eseguito la migrazione all’SDK AEP Mobile, devi implementare l’est
       1. In **[!UICONTROL Project Settings]**, selezionare **[!UICONTROL Libraries]**.
 
       1. Fate clic **[!UICONTROL +]** per aggiungere una nuova libreria.
-      1. Select **[!UICONTROL Java]** and navigate to the `MediaSDK.jar` file.
+      1. Seleziona **[!UICONTROL Java]** e naviga fino al file `MediaSDK.jar`.
 
       1. Selezionate i moduli in cui intendete utilizzare la libreria mobile.
       1. Click **[!UICONTROL Apply]** and then **[!UICONTROL OK]** to close the Module Settings window.
