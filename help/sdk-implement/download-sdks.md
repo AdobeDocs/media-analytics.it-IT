@@ -3,7 +3,10 @@ title: Scaricare gli SDK
 description: Collegamenti ai download SDK per le piattaforme disponibili, inclusi Android, iOS, JavaScript, Chromecast e Roku.
 uuid: a619fbb8-693e-4583-8dad-0ff875e715f8
 translation-type: tm+mt
-source-git-commit: 06e32cbea61ed56220787e2bcb822f6bf02b44ac
+source-git-commit: 300eb77858296f0246a2cb484386c0dcdf8b87b9
+workflow-type: tm+mt
+source-wordcount: '359'
+ht-degree: 14%
 
 ---
 
@@ -12,11 +15,7 @@ source-git-commit: 06e32cbea61ed56220787e2bcb822f6bf02b44ac
 
 >[!IMPORTANT]
 >
->A partire da ottobre 2020, Adobe cesserà il supporto per gli SDK per dispositivi mobili della versione 4 e per gli SDK di Analytics per supporti multimediali per iOS e Android. Puoi continuare a scaricare e utilizzare gli SDK della versione 4, ma l&#39;Assistenza clienti e l&#39;accesso ai forum cesseranno. Devi effettuare la migrazione agli SDK Adobe Experience Platform (AEP) per iOS o Android. L’SDK di AEP Mobile (in precedenza denominato v5) supporterà esclusivamente le funzionalità e le funzionalità di Adobe Experience Cloud. Per ulteriori informazioni su questa modifica, consulta le domande frequenti relative alla [versione 4 degli SDK per dispositivi mobili End of Support](https://aep-sdks.gitbook.io/docs/version-4-sdk-end-of-support-faq). È consigliabile effettuare la migrazione alla nuova SDK AEP Mobile.
-Dopo aver eseguito la migrazione all’SDK AEP Mobile, devi implementare l’estensione Lancio di Analytics e l’estensione Lancio di Media Analytics per abilitare Adobe Analytics per audio e video. Per ulteriori informazioni sulla migrazione alla nuova SDK AEP Mobile, consulta [Migrazione dall’SDK per file multimediali autonomi ad Adobe Launch. ](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/sdk-to-launch/sdk-to-launch-migration.html)
-
-
-
+>Con la fine del supporto per gli SDK della versione 4 per dispositivi mobili il 31 agosto 2021, Adobe interromperà anche il supporto per gli SDK di Media Analytics per iOS e Android.  Per ulteriori informazioni, consultate Domande frequenti relative alla fine del supporto per l’SDK di [Media Analytics](/help/sdk-implement/end-of-support-faqs.md).
 
 ## Download degli SDK per file multimediali 2.x {#download-2x-sdks}
 
