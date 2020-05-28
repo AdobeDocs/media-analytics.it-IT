@@ -2,9 +2,9 @@
 title: Implementazione e generazione dei rapporti
 description: Questo argomento descrive come implementare la funzione di tracciamento dello stato del lettore, inclusa .
 translation-type: tm+mt
-source-git-commit: b0bfe74d1f6083e700dbf98f504a17518bd19ecb
+source-git-commit: 614780a121eac6d5f822d439365fa59f85959ce2
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Media SDK include due nuovi metodi per il tracciamento dello stato personalizzat
 `trackStateClose("state_name")`
 
 
-L&#39;API Media Collection include due nuovi eventi con &quot;media.stateName&quot; come parametro richiesto:
+L&#39;API Media Collection include due nuovi eventi che hanno `media.stateName` come parametro richiesto:
 
 `stateStart` (Componenti di progetto non curati) e `stateEnd` (Componenti VRS non curati)
 
@@ -84,14 +84,19 @@ http(s)://<Analytics_Visitor_Namespace>.hb-api.omtrdc.net/api/v1/sessions/<SID>/
 
 Le metriche fornite per ogni singolo stato vengono calcolate e inviate ad Adobe Analytics come parametri di dati contestuali e memorizzate a scopo di reporting. Sono disponibili tre metriche per ogni stato:
 
-* `a.media.states.(media.state.name).set = true` — Impostato su true se lo stato è stato impostato almeno una volta per ogni specifica riproduzione di un flusso.
-* `a.media.states.(media.state.name).count = 4` — Identifica il numero di occorrenze di uno stato durante ogni singola riproduzione di un flusso
-* `a.media.states.(media.state.name).time = 240` — Identifica la durata totale dello stato in secondi per ogni singola riproduzione di un flusso
+* `a.media.states.[state.name].set = true` — Impostato su true se lo stato è stato impostato almeno una volta per ogni specifica riproduzione di un flusso.
+* `a.media.states.[state.name].count = 4` — Identifica il numero di occorrenze di uno stato durante ogni singola riproduzione di un flusso
+* `a.media.states.[state.name].time = 240` — Identifica la durata totale dello stato in secondi per ogni singola riproduzione di un flusso
 
 ## Generazione di rapporti
 
-Tutte le metriche di stato possono essere utilizzate per qualsiasi visualizzazione di reporting o componente (segmento, metriche calcolate).
-TBD - per informazioni aggiornate, controllare la sorgente/il wiki - per le riprese da AW
+Tutte le metriche dello stato del lettore possono essere utilizzate per qualsiasi visualizzazione di reporting disponibile in Analysis Workspace o in un componente (segmenti, metriche calcolate) una volta che una suite di rapporti è abilitata per il tracciamento dello stato del lettore. Le nuove metriche possono essere attivate dall’Admin Console per ogni singolo rapporto utilizzando Configurazione Media Reporting (Modifica impostazioni > Gestione file multimediali > Generazione rapporti multimediali).
+
+![](assets/report-setup.png)
+
+In Analytics Workspace, tutte le nuove proprietà si trovano nel pannello delle metriche. Ad esempio, puoi eseguire una ricerca per `full screen` visualizzare i dati a schermo intero nel pannello delle metriche.
+
+![](assets/full-screen-report.png)
 
 ## Importazione di metriche del lettore dichiarate in Adobe Experience Platform
 
