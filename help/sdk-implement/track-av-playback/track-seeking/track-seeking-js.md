@@ -1,14 +1,17 @@
 ---
-title: Tracciare la ricerca in JavaScript
+title: Ricerca di tracce con JavaScript 2.x
 description: In questo argomento viene descritta l’implementazione del tracciamento della ricerca tramite Media SDK nelle app browser (JS).
 uuid: 089947fb-8bae-4ae8-b215-53793620efd7
 translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+source-git-commit: 5f274452b9ff5770908f7e2e450935be572a22ea
+workflow-type: tm+mt
+source-wordcount: '127'
+ht-degree: 0%
 
 ---
 
 
-# Tracciare la ricerca in JavaScript{#track-seeking-on-javascript}
+# Ricerca di tracce con JavaScript 2.x{#track-seeking-on-javascript}
 
 >[!IMPORTANT]
 >
@@ -18,24 +21,24 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 | Nome costante | Descrizione     |
 |---|---|
-| `SeekStart` | Costante per il tracciamento dell'evento Seek Start. |
-| `SeekComplete` | Costante per il tracciamento dell'evento Seek Complete. |
+| `SeekStart` | Costante per il tracciamento dell&#39;evento Seek Start. |
+| `SeekComplete` | Costante per il tracciamento dell&#39;evento Seek Complete. |
 
 ## Implementa ricerca
 
 1. Ascoltare gli eventi di ricerca della riproduzione dal lettore multimediale e, durante la ricerca, avviare la notifica dell’evento, tenere traccia della ricerca mediante l’ `SeekStart` evento:
 
    ```js
-   _onSeekStart = function() { 
-       this._mediaHeartbeat.trackEvent(MediaHeartbeat.Event.SeekStart); 
+   _onSeekStart = function() {
+       this._mediaHeartbeat.trackEvent(MediaHeartbeat.Event.SeekStart);
    };
    ```
 
 1. Alla ricerca della notifica completa dal lettore multimediale, tenete traccia della fine della ricerca mediante l’ `SeekComplete` evento:
 
    ```js
-   _onSeekComplete = function() { 
-       this._mediaHeartbeat.trackEvent(MediaHeartbeat.Event.SeekComplete); 
+   _onSeekComplete = function() {
+       this._mediaHeartbeat.trackEvent(MediaHeartbeat.Event.SeekComplete);
    };
    ```
 
