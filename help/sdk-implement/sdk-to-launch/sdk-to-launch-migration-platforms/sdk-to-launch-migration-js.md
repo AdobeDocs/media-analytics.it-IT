@@ -2,9 +2,9 @@
 title: Migrazione dall’SDK per file multimediali standalone ad Adobe Launch - Web (JS)
 description: Istruzioni ed esempi di codice per facilitare la migrazione da Media SDK a Launch.
 translation-type: tm+mt
-source-git-commit: 0f9a985d04969eeca837a2655c666259ce30aee4
+source-git-commit: fe109e9d670bf7fb6379f3c3631d10cecd2d48ac
 workflow-type: tm+mt
-source-wordcount: '401'
+source-wordcount: '406'
 ht-degree: 6%
 
 ---
@@ -113,7 +113,8 @@ Passa un oggetto delegato a `get-instance` che espone `getQoSObject()` e `getCur
 
 ### Media SDK
 
-* [Configurare JS](/help/sdk-implement/setup/set-up-js.md)
+* [Configurare JavaScript 2.x](/help/sdk-implement/setup/setup-javascript/set-up-js-2.md)
+* [Configurare JavaScript 3.x](/help/sdk-implement/setup/setup-javascript/set-up-js-3.md)
 * [API JS Media SDK](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html)
 
 ### Launch
