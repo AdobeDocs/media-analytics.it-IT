@@ -1,14 +1,17 @@
 ---
-title: Tracciare il buffering su JavaScript
+title: Tracciare il buffering con JavaScript 2.x
 description: Descrive il tracciamento degli eventi di buffering nelle app browser (JS).
 uuid: c380cf2c-7729-4d4a-a4da-581bd94a5896
 translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+source-git-commit: 8235fee973623c168dbf83f43aa85f13b4e06cff
+workflow-type: tm+mt
+source-wordcount: '116'
+ht-degree: 0%
 
 ---
 
 
-# Tracciare il buffering su JavaScript{#track-buffering-on-javascript}
+# Tracciare il buffering con JavaScript 2.x{#track-buffering-on-javascript}
 
 >[!IMPORTANT]
 >
@@ -19,23 +22,23 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 | Nome costante | Descrizione     |
 |---|---|
 | `BufferStart` | Costante per il tracciamento dell’evento Start del buffer |
-| `BufferComplete` | Costante per il tracciamento dell'evento Buffer Complete |
+| `BufferComplete` | Costante per il tracciamento dell&#39;evento Buffer Complete |
 
 ## Implementare il buffering
 
-1. Ascoltare gli eventi di buffering della riproduzione dal lettore multimediale e, durante la notifica dell'evento di avvio del buffer, tenere traccia del buffering utilizzando l' `BufferStart` evento.
+1. Ascoltare gli eventi di buffering della riproduzione dal lettore multimediale e, durante la notifica dell&#39;evento di avvio del buffer, tenere traccia del buffering utilizzando l&#39; `BufferStart` evento.
 
    ```js
-   _onBufferStart = function() { 
-       this._mediaHeartbeat.trackEvent(MediaHeartbeat.Event.BufferStart); 
+   _onBufferStart = function() {
+       this._mediaHeartbeat.trackEvent(MediaHeartbeat.Event.BufferStart);
    };
    ```
 
-1. Nella notifica completa del buffer dal lettore multimediale, tenere traccia della fine del buffering utilizzando l' `BufferComplete` evento.
+1. Nella notifica completa del buffer dal lettore multimediale, tenere traccia della fine del buffering utilizzando l&#39; `BufferComplete` evento.
 
    ```js
-   _onBufferComplete = function() { 
-       this._mediaHeartbeat.trackEvent(MediaHeartbeat.Event.BufferComplete); 
+   _onBufferComplete = function() {
+       this._mediaHeartbeat.trackEvent(MediaHeartbeat.Event.BufferComplete);
    };
    ```
 
