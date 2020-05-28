@@ -1,21 +1,24 @@
 ---
-title: Tracciare la riproduzione di base su JavaScript
-description: Questo argomento descrive come implementare il tracciamento di base utilizzando Media SDK nelle app browser (JS).
+title: Tenere traccia della riproduzione di base mediante JavaScript 2.x
+description: Questo argomento descrive come implementare il tracciamento di base utilizzando Media SDK in un browser utilizzando le app JavaScript 2.x.
 uuid: 3d6e0ab1-899a-43c3-b632-8276e84345ab
 translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+source-git-commit: 30ed54924c75a9c33e6122b2d7ddbb84c06b8c0c
+workflow-type: tm+mt
+source-wordcount: '688'
+ht-degree: 3%
 
 ---
 
 
-# Tracciare la riproduzione di base su JavaScript{#track-core-playback-on-javascript}
+# Tenere traccia della riproduzione di base mediante JavaScript 2.x{#track-core-playback-on-javascript}
 
 >[!IMPORTANT]
 >Questa documentazione descrive il tracciamento nella versione 2.x dell’SDK. Se stai implementando una versione 1.x dell’SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Download di SDK](/help/sdk-implement/download-sdks.md)
 
 1. **Configurazione iniziale tracciamento**
 
-   Identificare quando l'utente attiva l'intenzione di riproduzione (l'utente fa clic su play e/o la riproduzione automatica è attivata) e creare un' `MediaObject` istanza.
+   Identificare quando l&#39;utente attiva l&#39;intenzione di riproduzione (l&#39;utente fa clic su play e/o la riproduzione automatica è attivata) e creare un&#39; `MediaObject` istanza.
 
    [createMediaObject API](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html#.createMediaObject)
 
@@ -49,7 +52,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    var mediaObject =  
      MediaHeartbeat.createMediaObject(<MEDIA_NAME>,  
                                      <MEDIA_ID,  
-                                     <MEDIA_LENGTH>, 
+                                     <MEDIA_LENGTH>,
                                      MediaHeartbeat.StreamType.VOD,
                                      <MEDIA_TYPE>);
    ```
@@ -60,25 +63,25 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    * **Metadati standard**
 
-      [Implementare i metadati standard in JavaScript](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-js.md)
+      [Implementazione dei metadati standard in JavaScript](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-js.md)
 
       >[!NOTE]
       >
-      >Il collegamento dell'oggetto metadati standard all'oggetto multimediale è facoltativo.
+      >Il collegamento dell&#39;oggetto metadati standard all&#39;oggetto multimediale è facoltativo.
 
       * Riferimento API per le chiavi di metadati multimediali - chiavi di metadati [standard - JavaScript](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript)
 
-         Consultate il set completo dei metadati disponibili qui: Parametri [audio e video](/help/metrics-and-metadata/audio-video-parameters.md)
+         Consultate il set completo dei metadati disponibili qui: [Parametri audio e video](/help/metrics-and-metadata/audio-video-parameters.md)
    * **Metadati personalizzati**
 
       Create un oggetto variabile per le variabili personalizzate e inserite i dati per questo supporto. Ad esempio:
 
       ```js
-      /* Set custom context data */ 
-      var customVideoMetadata = { 
-          isUserLoggedIn: "false", 
-          tvStation: "Sample TV station", 
-          programmer: "Sample programmer" 
+      /* Set custom context data */
+      var customVideoMetadata = {
+          isUserLoggedIn: "false",
+          tvStation: "Sample TV station",
+          programmer: "Sample programmer"
       };
       ```
 
@@ -93,7 +96,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    >[!TIP]
    >
-   >Il secondo valore è il nome dell'oggetto metadati multimediale personalizzato creato al punto 2.
+   >Il secondo valore è il nome dell&#39;oggetto metadati multimediale personalizzato creato al punto 2.
 
    >[!IMPORTANT]
    >
@@ -101,7 +104,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    >[!NOTE]
    >
-   >Se non utilizzate metadati personalizzati, inviate semplicemente un oggetto vuoto per l' `data` argomento in `trackSessionStart`, come mostrato nella riga commento nell'esempio iOS precedente.
+   >Se non utilizzate metadati personalizzati, inviate semplicemente un oggetto vuoto per l&#39; `data` argomento in `trackSessionStart`, come mostrato nella riga commento nell&#39;esempio iOS precedente.
 
 1. **Tracciare l’inizio effettivo della riproduzione**
 
@@ -141,12 +144,12 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    **Pausa scenari**
 
-   Identificare qualsiasi scenario in cui il lettore multimediale si mette in pausa e assicurarsi che venga chiamato `trackPause` correttamente. Tutti gli scenari seguenti richiedono che la chiamata dell'app `trackPause()`:
+   Identificare qualsiasi scenario in cui il lettore multimediale si mette in pausa e assicurarsi che venga chiamato `trackPause` correttamente. Tutti gli scenari seguenti richiedono che la chiamata dell&#39;app `trackPause()`:
 
-   * L'utente interrompe esplicitamente la pausa nell'app.
+   * L&#39;utente interrompe esplicitamente la pausa nell&#39;app.
    * Il lettore si mette nello stato Pausa.
-   * (App *mobili*) - L'utente mette l'applicazione in background, ma si desidera che l'app tenga aperta la sessione.
-   * (App *mobili*) - Si verifica qualsiasi tipo di interruzione del sistema che causa il background di un'applicazione. Ad esempio, l'utente riceve una chiamata, o si verifica un pop-up da un'altra applicazione, ma si desidera che l'applicazione mantenga in vita la sessione per dare all'utente la possibilità di riprendere il supporto dal punto di interruzione.
+   * (App *mobili*) - L&#39;utente mette l&#39;applicazione in background, ma si desidera che l&#39;app tenga aperta la sessione.
+   * (App *mobili*) - Si verifica qualsiasi tipo di interruzione del sistema che causa il background di un&#39;applicazione. Ad esempio, l&#39;utente riceve una chiamata, o si verifica un pop-up da un&#39;altra applicazione, ma si desidera che l&#39;applicazione mantenga in vita la sessione per dare all&#39;utente la possibilità di riprendere il supporto dal punto di interruzione.
 
 1. Identificare l’evento dal lettore per la riproduzione e/o la ripresa dalla pausa e dalla chiamata `trackPlay`:
 
@@ -158,6 +161,5 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    >
    >Può trattarsi della stessa origine evento utilizzata nel passaggio 4. Assicurati che ogni chiamata `trackPause()` API sia associata a una chiamata `trackPlay()` API seguente quando la riproduzione riprende.
 
-* Scenari di tracciamento: Riproduzione [VOD senza annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)
+* Scenari di tracciamento: [Riproduzione VOD senza annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)
 * Lettore di esempio incluso con l’SDK JavaScript per un esempio di tracciamento completo.
-
