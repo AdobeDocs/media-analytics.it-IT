@@ -1,14 +1,17 @@
 ---
-title: Tenere traccia degli errori in JavaScript
+title: Tenere traccia degli errori utilizzando JavaScript 2.x
 description: In questo argomento viene descritta l’implementazione del tracciamento degli errori tramite Media SDK nelle app browser (JS).
 uuid: 5a4fc5df-2677-4189-92af-5cd074847b39
 translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+source-git-commit: 5f274452b9ff5770908f7e2e450935be572a22ea
+workflow-type: tm+mt
+source-wordcount: '96'
+ht-degree: 0%
 
 ---
 
 
-# Tenere traccia degli errori in JavaScript{#track-errors-on-javascript}
+# Tenere traccia degli errori utilizzando JavaScript 2.x{#track-errors-on-javascript}
 
 >[!IMPORTANT]
 >
@@ -19,12 +22,11 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 1. Tracciare gli errori del lettore multimediale:
 
    ```js
-   onPlayerError = function() { 
-       this._mediaHeartbeat.trackError("mediaErrorId"); 
+   onPlayerError = function() {
+       this._mediaHeartbeat.trackError("mediaErrorId");
    };
    ```
 
 >[!NOTE]
 >
 >Il tracciamento degli errori del lettore multimediale non interrompe la sessione di tracciamento del supporto. Se l’errore del lettore multimediale impedisce il proseguimento della riproduzione, accertatevi che la sessione di tracciamento dei contenuti multimediali sia chiusa chiamando `trackSessionEnd` dopo la chiamata `trackError`.
-
