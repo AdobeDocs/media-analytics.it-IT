@@ -3,10 +3,10 @@ title: Scaricare gli SDK
 description: Collegamenti ai download SDK per le piattaforme disponibili, inclusi Android, iOS, JavaScript, Chromecast e Roku.
 uuid: a619fbb8-693e-4583-8dad-0ff875e715f8
 translation-type: tm+mt
-source-git-commit: 300eb77858296f0246a2cb484386c0dcdf8b87b9
+source-git-commit: fe109e9d670bf7fb6379f3c3631d10cecd2d48ac
 workflow-type: tm+mt
-source-wordcount: '359'
-ht-degree: 14%
+source-wordcount: '493'
+ht-degree: 13%
 
 ---
 
@@ -17,21 +17,31 @@ ht-degree: 14%
 >
 >Con la fine del supporto per gli SDK della versione 4 per dispositivi mobili il 31 agosto 2021, Adobe interromperà anche il supporto per gli SDK di Media Analytics per iOS e Android.  Per ulteriori informazioni, consultate Domande frequenti relative alla fine del supporto per l’SDK di [Media Analytics](/help/sdk-implement/end-of-support-faqs.md).
 
+
+## Download degli SDK per file multimediali 3.x {#download-3x-sdks}
+
+| 3.x Media SDKs  | Ultimi download di Media SDK |  API   |  Documentazione  |
+| --- | --- | --- | --- |
+| JavaScript | [Media SDK per JS v3.0](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/js-v3.0.0) | [Riferimento API JS](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/index.html) | [Configurare JavaScript 3.x](/help/sdk-implement/setup/setup-javascript/set-up-js-3.md) |
+
+
 ## Download degli SDK per file multimediali 2.x {#download-2x-sdks}
 
 | 2.x Media SDKs  | Ultimi download di Media SDK |  API   |  Documentazione  |
 | --- | --- | --- | --- |
 | Android/FireTV | [Media SDK per Android v2.2.4](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/android-v2.2.4) | [Riferimento API Android](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/) | [Configurazione Android](/help/sdk-implement/setup/set-up-android.md) |
 | iOS/AppleTV | [SDK per file multimediali per iOS v2.2.7](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/ios-v2.2.7) (per ottenere l’SDK versione 2.0 precedente, contatta l’ [assistenza clienti ](https://helpx.adobe.com/it/marketing-cloud/contact-support.html) ) | [Riferimento API iOS](https://adobe-marketing-cloud.github.io/media-sdks/reference/ios/) | [Configurazione iOS](/help/sdk-implement/setup/set-up-ios.md) |
-| JavaScript | [Media SDK per JS v2.2.1](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/js-v2.2.1) | [Riferimento API JS](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/) | [Configurazione JavaScript](/help/sdk-implement/setup/set-up-js.md) |
+| JavaScript | [Media SDK per JS v2.2.1](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/js-v2.2.1) | [Riferimento API JS](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/) | [Configurare JavaScript 2.x](/help/sdk-implement/setup/setup-javascript/set-up-js-2.md) |
 | Roku | [Media SDK per Roku v2.2.3](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/roku-v2.2.3) |  | [Configurare Roku](/help/sdk-implement/setup/set-up-roku.md) |
 | Chromecast | [Media SDK per Chromecast v2.2.0](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/chromecast-v2.2.0) | [Riferimento API Chromecast](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/) | [Configurazione Chromecast](/help/sdk-implement/setup/set-up-chromecast.md) |
 
 ## Estensione lancio di Media Analytics {#media-analytics-launch-extension}
 
-| Componente lancio MA   | Download | Documentazione |
+| Componente lancio MA   | Documentazione | Esempi |
 |---|---|---|
-| **Estensione lancio MA** | [Esempio di estensione HTML5 Player](https://github.com/adobe/reactor-adobe-va-sample-player) | [Estensione Adobe Media Analytics for Audio and Video](https://docs.adobelaunch.com/extension-reference/web/adobe-media-analytics-for-audio-and-video-extension) |
+| **Estensione Web** | [Estensione Adobe Media Analytics for Audio and Video](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html) | [Estensione Adobe Media Analytics for Audio and Video](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/js/2.x) |
+| **Estensione Web (SDK 3.x)** | [Estensione Adobe Media Analytics for Audio and Video](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/media-analytics-3x-extension/overview.html) | [Adobe Media Analytics (SDK 3.x) per estensione audio e video](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/js/3.x) |
+| **Estensione mobile** | [Adobe Analytics - Media Analytics for Audio and Video](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics) | [Adobe Analytics - Media Analytics for Audio and Video Extension](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/mobile) |
 
 ## Download degli SDK 1.x per file multimediali {#download-the-1.x-media-sDKs}
 
