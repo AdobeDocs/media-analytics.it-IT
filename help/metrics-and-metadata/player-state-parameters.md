@@ -3,9 +3,9 @@ title: Parametri dello stato del lettore
 description: Questo argomento descrive i parametri di tracciamento dello stato del lettore.
 uuid: 2a6b9247-a694-46e9-98e1-424c08c27ec2
 translation-type: tm+mt
-source-git-commit: c23a8787a8f59746665702eb5e2e74dde2c213e8
+source-git-commit: 1b48565bcc5c9a87e5fabbc906049ab791bf89cc
 workflow-type: tm+mt
-source-wordcount: '2167'
+source-wordcount: '2236'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ Descrizione dati tabella:
    * *Valore* di esempio - Fornisce un esempio di utilizzo comune delle variabili.
 * **Parametri di rete:** Visualizza i valori passati ai server Adobe Analytics o Heartbeat. Questa colonna mostra i nomi dei parametri visualizzati nelle chiamate di rete generate dagli SDK di Adobe Media.
 * **Reporting:** Informazioni su come visualizzare e analizzare i dati video.
-   * *Disponibile* - Indica se i dati sono disponibili nel reporting per impostazione predefinita (*Sì*) o richiedono una configurazione personalizzata (*Personalizzato*)
+   * *Disponibile* - Indica se i dati sono disponibili nei rapporti per impostazione predefinita (*Sì*) o richiedono una configurazione personalizzata (*Personalizzato*)
    * *Variabile* riservata - Indica se i dati vengono acquisiti come evento, eVar, prop o classificazione in una variabile riservata.
    * *Nome* report - Nome del report Adobe Analytics per la variabile
    * *Dati* contestuali - Nome dei dati contestuali di Adobe Analytics passati al server di reporting e utilizzati nelle regole di elaborazione.
@@ -155,7 +155,27 @@ Le funzionalità di tracciamento dello stato del lettore possono essere collegat
 | --- | --- | --- |
 | <ul> <li> **Chiave **<br/>SDK impostata automaticamente</li> <li> **Chiave **<br/>API N/D</li> <li> **Numero richiesto **<br/></li> <li> **Numero tipo **<br/></li> <li> **Inviato con **<br/>chiusura file multimediali</li> <li> **Min. SDK Version **<br/>3.0</li> <li> **Valore **<br/>campione TRUE</li><li> ****<br/>Descrizione: il tempo di attivazione visualizzato. Questa metrica è impostata su 1 solo se durante una sessione di riproduzione si è verificato almeno uno stato attivo.<br/> **Importante** <br/> Se questo evento è impostato, l’ora è uguale a quanto tempo il video è stato nello stato Attivo. Se questo evento non è impostato, non viene inviato alcun valore.   </li> </ul> | <ul> <li> **Adobe Analytics **<br/>(media.States.infocus.time)<br/></li> <li> **Heartbeat **<br/>N/D</li> </ul> | <ul> <li> **Disponibile **<br/>Sì</li> <li> **Evento variabile **<br/>riservata</li> <li> **Durata totale del nome **<br/>del report attivo</li> <li> **Dati **<br/>contestuali (media.States.infocus.time)<br/> </li> <li> **Feed **<br/>dati media.States.infocus.time</li> <li> **Audience Manager **<br/>(c_contextdata.media.States.infocus.time)</li> </ul> |
 
+## Elenco delle proprietà per le identità XDM
 
+I dati memorizzati in Analytics possono essere utilizzati per qualsiasi scopo e le metriche relative allo stato del lettore possono essere importate in Adobe Experience Platform utilizzando XDM e utilizzate con Customer Journey Analytics.
+
+| Proprietà stato lettore | Mapping |
+|---------------------------------------|------------------------------------|
+| a.media.states.fullScreen.set | media.mediaTimed.primaryAssetViewDetails.fullScreen.playerStateSet |
+| a.media.states.fullScreen.count | media.mediaTimed.primaryAssetViewDetails.fullScreen.playerStateCount |
+| a.media.states.fullScreen.time | media.mediaTimed.primaryAssetViewDetails.fullScreen.playerStateTime |
+| a.media.states.mute.set | media.mediaTimed.primaryAssetViewDetails.mute.playerStateSet |
+| a.media.states.mute.count | media.mediaTimed.primaryAssetViewDetails.mute.playerStateCount |
+| a.media.states.mute.time | media.mediaTimed.primaryAssetViewDetails.mute.playerStateTime |
+| a.media.states.closeCaption.set | media.mediaTimed.primaryAssetViewDetails.closeCaption.playerStateSet |
+| a.media.states.closeCaption.count | media.mediaTimed.primaryAssetViewDetails.closeCaption.playerStateCount |
+| a.media.states.closeCaption.time | media.mediaTimed.primaryAssetViewDetails.closeCaption.playerStateTime |
+| a.media.states.pictureInPicture.set | media.mediaTimed.primaryAssetViewDetails.pictureInPicture.playerStateSet |
+| a.media.states.pictureInPicture.count | media.mediaTimed.primaryAssetViewDetails.pictureInPicture.playerStateCount |
+| a.media.states.pictureInPicture.time | media.mediaTimed.primaryAssetViewDetails.pictureInPicture.playerStateTime |
+| a.media.states.inFocus.set | media.mediaTimed.primaryAssetViewDetails.inFocus.playerStateSet |
+| a.media.states.inFocus.count | media.mediaTimed.primaryAssetViewDetails.inFocus.playerStateCount |
+| a.media.states.inFocus.time | media.mediaTimed.primaryAssetViewDetails.inFocus.playerStateTime |
 
 ## API correlate {#related_apis_section}
 
