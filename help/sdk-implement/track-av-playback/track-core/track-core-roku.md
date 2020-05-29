@@ -3,19 +3,22 @@ title: Tracciare la riproduzione di base su Roku
 description: In questo argomento viene descritto come implementare il tracciamento di base tramite Media SDK su Roku.
 uuid: a8aa7b3c-2d39-44d7-8ebc-b101d130101f
 translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+source-git-commit: 815965d1cd41e73e50666a89f4a7c450af5022da
+workflow-type: tm+mt
+source-wordcount: '1022'
+ht-degree: 3%
 
 ---
 
 
-# Tracciare la riproduzione di base su Roku{#track-core-playback-on-roku}
+# Track core playback on Roku{#track-core-playback-on-roku}
 
 >[!IMPORTANT]
 >Questa documentazione descrive il tracciamento nella versione 2.x dell’SDK. Se stai implementando una versione 1.x dell’SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Download di SDK](/help/sdk-implement/download-sdks.md)
 
 1. **Configurazione iniziale tracciamento**
 
-   Identificare quando l'utente attiva l'intenzione di riproduzione (l'utente fa clic su play e/o la riproduzione automatica è attivata) e creare un' `MediaObject` istanza.
+   Identificare quando l&#39;utente attiva l&#39;intenzione di riproduzione (l&#39;utente fa clic su play e/o la riproduzione automatica è attivata) e creare un&#39; `MediaObject` istanza.
 
    **`MediaObject`riferimento:**
 
@@ -72,10 +75,10 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    ```
    mediaInfo = adb_media_init_mediainfo(
-    "<MEDIA_NAME>", 
-    "<MEDIA_ID>", 
-    600, 
-    ADBMobile().MEDIA_STREAM_TYPE_AOD, 
+    "<MEDIA_NAME>",
+    "<MEDIA_ID>",
+    600,
+    ADBMobile().MEDIA_STREAM_TYPE_AOD,
     ADBMobile().MEDIA_TYPE_AUDIO
    )
    ```
@@ -97,25 +100,25 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    * **Metadati standard**
 
-      [Implementare i metadati standard in JavaScript](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-js.md)
+      [Implementazione dei metadati standard in JavaScript](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-md-js/impl-std-metadata-js.md)
 
       >[!NOTE]
       >
-      >Il collegamento dell'oggetto metadati standard all'oggetto multimediale è facoltativo.
+      >Il collegamento dell&#39;oggetto metadati standard all&#39;oggetto multimediale è facoltativo.
 
       * Riferimento API per le chiavi di metadati multimediali - chiavi di metadati [standard - JavaScript](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript)
 
-         Consultate il set completo dei metadati disponibili qui: Parametri [audio e video](/help/metrics-and-metadata/audio-video-parameters.md)
+         Consultate il set completo dei metadati disponibili qui: [Parametri audio e video](/help/metrics-and-metadata/audio-video-parameters.md)
    * **Metadati personalizzati**
 
       Create un oggetto variabile per le variabili personalizzate e inserite i dati per questo supporto. Ad esempio:
 
       ```js
-      /* Set custom context data */ 
-      var customVideoMetadata = { 
-          isUserLoggedIn: "false", 
-          tvStation: "Sample TV station", 
-          programmer: "Sample programmer" 
+      /* Set custom context data */
+      var customVideoMetadata = {
+          isUserLoggedIn: "false",
+          tvStation: "Sample TV station",
+          programmer: "Sample programmer"
       };
       ```
 
@@ -130,7 +133,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    >[!TIP]
    >
-   >Il secondo valore è il nome dell'oggetto metadati multimediale personalizzato creato al punto 2.
+   >Il secondo valore è il nome dell&#39;oggetto metadati multimediale personalizzato creato al punto 2.
 
    >[!IMPORTANT]
    >
@@ -138,7 +141,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    >[!NOTE]
    >
-   >Se non utilizzate metadati personalizzati, inviate semplicemente un oggetto vuoto per l' `data` argomento in `trackSessionStart`, come mostrato nella riga commento nell'esempio iOS precedente.
+   >Se non utilizzate metadati personalizzati, inviate semplicemente un oggetto vuoto per l&#39; `data` argomento in `trackSessionStart`, come mostrato nella riga commento nell&#39;esempio iOS precedente.
 
 1. **Tracciare l’inizio effettivo della riproduzione**
 
@@ -182,10 +185,10 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    * **Metadati video standard**
 
-      [Implementare i metadati standard su Roku](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
+      [Implementazione dei metadati standard su Roku](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
 
       >[!NOTE]
-      >Il collegamento dell'oggetto di metadati video standard all'oggetto multimediale è facoltativo.
+      >Il collegamento dell&#39;oggetto di metadati video standard all&#39;oggetto multimediale è facoltativo.
 
    * **Metadati personalizzati**
 
@@ -206,13 +209,13 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    ```
 
    >[!TIP]
-   >Il secondo valore è il nome dell'oggetto di metadati video personalizzato creato al punto 2.
+   >Il secondo valore è il nome dell&#39;oggetto di metadati video personalizzato creato al punto 2.
 
    >[!IMPORTANT]
    >`trackSessionStart` tiene traccia delle intenzioni dell’utente in merito alla riproduzione, non dell’inizio della riproduzione. Questa API viene utilizzata per caricare i dati video/metadati e per stimare la metrica QoS time-to-start (la durata tra `trackSessionStart` e `trackPlay`).
 
    >[!NOTE]
-   >Se non utilizzate metadati video personalizzati, inviate semplicemente un oggetto vuoto per l' `data` argomento in `trackSessionStart`, come illustrato nella riga commento nell'esempio iOS precedente.
+   >Se non utilizzate metadati video personalizzati, inviate semplicemente un oggetto vuoto per l&#39; `data` argomento in `trackSessionStart`, come illustrato nella riga commento nell&#39;esempio iOS precedente.
 
 1. **Tracciare l’inizio effettivo della riproduzione**
 
@@ -224,7 +227,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 1. **Tenere traccia del completamento della riproduzione**
 
-   Individuate l’evento dal lettore video al termine della riproduzione video, in cui l’utente ha guardato il contenuto fino alla fine, e chiamate `trackComplete`:
+   Identificate l’evento dal lettore video per il completamento della riproduzione video, in cui l’utente ha guardato il contenuto fino alla fine, e chiamate `trackComplete`:
 
    ```
    ADBMobile().mediaTrackComplete()
@@ -251,12 +254,12 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    **Pausa scenari**
 
-   Identificate eventuali situazioni in cui il lettore video si interrompe e accertatevi che venga chiamato `trackPause` correttamente. Tutti gli scenari seguenti richiedono che la chiamata dell'app `trackPause()`:
+   Identificate eventuali situazioni in cui il lettore video si interrompe e accertatevi che venga chiamato `trackPause` correttamente. Tutti gli scenari seguenti richiedono che la chiamata dell&#39;app `trackPause()`:
 
-   * L'utente interrompe esplicitamente la pausa nell'app.
+   * L&#39;utente interrompe esplicitamente la pausa nell&#39;app.
    * Il lettore si mette nello stato Pausa.
-   * (App *mobili*) - L'utente mette l'applicazione in background, ma si desidera che l'app tenga aperta la sessione.
-   * (App *mobili*) - Si verifica qualsiasi tipo di interruzione del sistema che causa il background di un'applicazione. Ad esempio, l'utente riceve una chiamata, o si verifica un pop-up da un'altra applicazione, ma si desidera che l'applicazione mantenga in vita la sessione per dare all'utente la possibilità di riprendere il video dal punto di interruzione.
+   * (App *mobili*) - L&#39;utente mette l&#39;applicazione in background, ma si desidera che l&#39;app tenga aperta la sessione.
+   * (App *mobili*) - Si verifica qualsiasi tipo di interruzione del sistema che causa il background di un&#39;applicazione. Ad esempio, l&#39;utente riceve una chiamata, o si verifica un pop-up da un&#39;altra applicazione, ma si desidera che l&#39;applicazione mantenga in vita la sessione per dare all&#39;utente la possibilità di riprendere il video dal punto di interruzione.
 
 1. Identificare l’evento dal lettore per la riproduzione video e/o la ripresa video dalla pausa e dalla chiamata `trackPlay`:
 
@@ -267,6 +270,5 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    >[!TIP]
    >Può trattarsi della stessa origine evento utilizzata nel passaggio 4. Quando la riproduzione del video riprende, accertatevi che ogni chiamata `trackPause()` API sia associata a una chiamata `trackPlay()` API seguente.
 
-* Scenari di tracciamento: Riproduzione [VOD senza annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)
+* Scenari di tracciamento: [Riproduzione VOD senza annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)
 * Lettore di esempio incluso con Roku SDK per un esempio di tracciamento completo.
-
