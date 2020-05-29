@@ -2,9 +2,9 @@
 title: Configurare JavaScript 3.x
 description: Configurazione dell’applicazione Media SDK per l’implementazione in JavaScript 3.x.
 translation-type: tm+mt
-source-git-commit: a73536bd7a818ac23ad322a15f109644e75ee0d5
+source-git-commit: 83b38ac8f7fc88f982d194e776efccf8d5b983e4
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '398'
 ht-degree: 5%
 
 ---
@@ -45,6 +45,16 @@ ht-degree: 5%
       >
       >L’SDK JavaScript è conforme alle specifiche dei moduli AMD e CommonJS e `MediaSDK.js` può essere utilizzato anche con caricatori di moduli compatibili.
 
+1. Create un&#39;istanza di `AppMeasurement` e configurate `visitor`.
+
+   La configurazione di Media SDK richiede un&#39;istanza di `AppMeasurement` con `visitor` configurazione.
+
+```js
+var appMeasurement = new AppMeasurement(“<rsid>”);
+appMeasurement.visitor = visitor;
+appMeasurement.trackingServer = “<visitor_namespace>.sc.omtrdc.net”;
+```
+
 1. Configurare Media SDK
 
    Media SDK deve essere configurato una volta per ogni pagina Web e la configurazione si applica a tutte le istanze di tracciamento create.
@@ -52,6 +62,7 @@ ht-degree: 5%
    >[!IMPORTANT]
    >
    > Media SDK (3.x) utilizza l&#39;API di Media Collection per tenere traccia dei supporti, che è diverso dall&#39;endpoint HB utilizzato negli SDK 2.x. Per ulteriori informazioni, contattate il rappresentante Adobe.
+
 
    Esempio di inizializzazione `MediaConfig`:
 
