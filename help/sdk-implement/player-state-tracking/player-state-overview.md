@@ -2,9 +2,9 @@
 title: Informazioni sul tracciamento dello stato del lettore
 description: Questo argomento descrive la funzione di tracciamento dello stato del lettore, compresi i requisiti e le linee guida per l’implementazione e la generazione di rapporti degli stati del lettore.
 translation-type: tm+mt
-source-git-commit: d317188ef664c836c7125e8bbe195baa924c0d80
+source-git-commit: 1b48565bcc5c9a87e5fabbc906049ab791bf89cc
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '397'
 ht-degree: 1%
 
 ---
@@ -40,8 +40,9 @@ Il tracciamento dello stato del lettore richiede una delle seguenti operazioni p
 
 Prima di implementare il tracciamento dello stato del lettore, attenersi alle seguenti linee guida.
 
-* Lo stato del lettore viene calcolato in tutti gli stati di riproduzione - (nessuna suddivisione)
-* È possibile misurare più stati del lettore contemporaneamente
-* Il numero massimo di stati del lettore che è possibile tenere traccia durante una riproduzione è 10 
-* Le metriche dello stato del lettore vengono inviate ad Analytics per la generazione di rapporti SOLO sulla chiamata Media Close
-* Gli stati del lettore vengono catturati per ogni singola sessione di riproduzione; lo stato del lettore non viene calcolato per tutte le riproduzioni 
+* Lo stato del lettore viene calcolato in tutti gli stati di riproduzione (nessuna suddivisione).
+* È possibile misurare più stati del lettore contemporaneamente.
+* Il numero massimo di stati del lettore che è possibile tenere traccia durante una riproduzione è 10.
+* Le metriche dello stato del lettore vengono inviate ad Analytics per la generazione di rapporti solo sulla chiamata Media Close.
+* La conoscenza dello stato dell’applicazione non viene mantenuta dopo l’arresto di uno stato. Al termine di uno stato, è necessario riavviare il tracciamento dello stato per continuare. Per ogni nuovo stato di riproduzione, è necessario riavviare lo stato del lettore.
+* Gli stati del lettore vengono catturati per ogni singola sessione di riproduzione; lo stato del lettore non viene calcolato per tutte le riproduzioni.
