@@ -2,9 +2,9 @@
 title: Implementazione e generazione dei rapporti
 description: Questo argomento descrive come implementare la funzione di tracciamento dello stato del lettore, inclusa .
 translation-type: tm+mt
-source-git-commit: 614780a121eac6d5f822d439365fa59f85959ce2
+source-git-commit: 318bb60d9835d9a07fb7aa0a0a02162248410d09
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '311'
 ht-degree: 0%
 
 ---
@@ -100,4 +100,4 @@ In Analytics Workspace, tutte le nuove proprietà si trovano nel pannello delle 
 
 ## Importazione di metriche del lettore dichiarate in Adobe Experience Platform
 
-I dati memorizzati in Analytics possono essere utilizzati per qualsiasi scopo e le metriche dello stato del lettore possono essere importate in Adobe Experience Platform utilizzando XDM e utilizzate con Customer Journey Analytics. Le proprietà dello stato standard hanno proprietà specifiche, mentre gli stati personalizzati sono proprietà disponibili tramite gli eventi personalizzati. Per ulteriori informazioni, vedere l&#39;elenco delle proprietà per le identità XDM in ?LINK TO METRIC LIST?.
+I dati memorizzati in Analytics possono essere utilizzati per qualsiasi scopo e le metriche dello stato del lettore possono essere importate in Adobe Experience Platform utilizzando XDM e utilizzate con Customer Journey Analytics. Le proprietà dello stato standard hanno proprietà specifiche, mentre gli stati personalizzati sono proprietà disponibili tramite gli eventi personalizzati.
