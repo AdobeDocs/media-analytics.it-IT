@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: f26816d37f30e9e4ae08dbf7af78f2135e8403f4
 workflow-type: tm+mt
 source-wordcount: '809'
-ht-degree: 79%
+ht-degree: 82%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 79%
    + Percorsi di implementazione {#implementation-paths}
       + [Panoramica](intro-to-ava/implementation-paths/implementation-paths.md)
       + [Lato client](intro-to-ava/implementation-paths/client-side-path.md)
-      + Other Implementation Paths {#other-paths}
+      + Altri percorsi di implementazione {#other-paths}
          + Tracciamento modulo multimediale Milestone {#mm-milestone-tracking}
-            + [Panoramica sulle attività cardine](measurement-options/mm-milestone-tracking/milestone-overview.md)
+            + [Panoramica su Milestone](measurement-options/mm-milestone-tracking/milestone-overview.md)
             + [Migrazione da Milestone a Media Analytics](measurement-options/mm-milestone-tracking/migrate-ms-to-va.md)
             + [Migrazione da Milestone a Custom Link](measurement-options/mm-milestone-tracking/migrate-ms-to-cl.md)
          + Custom Link in Analytics {#cl-in-aa}
@@ -32,7 +32,7 @@ ht-degree: 79%
             + [Primetime](intro-to-ava/implementation-paths/primetime-path.md)
          + [Abilitazione di Audience Manager](intro-to-ava/am-enablement.md)
 + SDK Media Analytics {#sdk-implement}
-   + [Domande frequenti sull’SDK di Media Analytics per la fine del supporto](sdk-implement/end-of-support-faqs.md)
+   + [Domande frequenti sull’SDK di Media Analytics riguardanti la fine del supporto](sdk-implement/end-of-support-faqs.md)
    + [Scaricare gli SDK](sdk-implement/download-sdks.md)
    + Installazione e configurazione {#setup}
       + [Panoramica](sdk-implement/setup/setup-overview.md)
@@ -69,7 +69,7 @@ ht-degree: 79%
             + [Track Search on JavaScript 3.x](sdk-implement/track-av-playback/track-seeking/track-seeking-js/track-seeking-js3.md)
          + [Tracciamento ricerca in Chromecast](sdk-implement/track-av-playback/track-seeking/track-seeking-chromecast.md)
          + [Tracciamento ricerca su Roku](sdk-implement/track-av-playback/track-seeking/track-seeking-roku.md)
-      + Implement Standard Metadata {#impl-std-metadata}
+      + Implementare metadati standard {#impl-std-metadata}
          + [Implementazione dei metadati standard su Android](sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-android.md)
          + [Implementazione dei metadati standard su iOS](sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-ios.md)
          + [Chiavi metadati iOS](sdk-implement/track-av-playback/impl-std-metadata/ios-metadata-keys.md)
@@ -89,7 +89,7 @@ ht-degree: 79%
          + [Track Ads on JavaScript 3.x](sdk-implement/track-ads/track-ads-js/track-ads-js3.md)
       + [Tracciamento annunci in Chromecast](sdk-implement/track-ads/track-ads-chromecast.md)
       + [Tracciamento annunci su Roku](sdk-implement/track-ads/track-ads-roku.md)
-      + Implement Standard ad Metadata {#impl-std-ad-metadata}
+      + Implementare metadati standard di annunci {#impl-std-ad-metadata}
          + [Implementazione dei metadati standard di annunci su Android](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-android.md)
          + [Implementazione dei metadati standard di annunci su iOS](sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-ios.md)
          + Implement Standard ad Metadata on JavaScript {#impl-std-ad-md-js}
