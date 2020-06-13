@@ -3,7 +3,10 @@ title: Parametri audio e video
 description: null
 uuid: fdacfb8b-db3e-46fb-b9ad-c3a749555b2a
 translation-type: tm+mt
-source-git-commit: cebf5697e3746721d29bfaa5356d5a2748fea435
+source-git-commit: ccd4209f6fad0547e9595674602ee978d86e10cd
+workflow-type: tm+mt
+source-wordcount: '6103'
+ht-degree: 2%
 
 ---
 
@@ -12,11 +15,11 @@ source-git-commit: cebf5697e3746721d29bfaa5356d5a2748fea435
 
 >[!IMPORTANT]
 >
->Il 7 febbraio 2019, Adobe Analytics per Video e Audio ha rilasciato una modifica al nome della metrica. <i>Media Initiates</i> verrà ora denominato <i>Media Starts</i>. Questa modifica è stata apportata per riflettere gli standard di settore nelle metriche e nei report e per rendere la metrica facilmente identificabile nei report.
+>Il 7 febbraio 2019, Adobe Analytics per Video e Audio ha rilasciato una modifica al nome della metrica. <i></i>Media Initiates verrà ora denominato <i>Media Starts</i>. Questa modifica è stata apportata per riflettere gli standard di settore nelle metriche e nei report e per rendere la metrica facilmente identificabile nei report.
 
 >[!NOTE]
 >
->A partire dal 13 settembre 2018 è stata apportata una modifica alle etichette per alcune dimensioni, metriche e rapporti, per consentire il tracciamento tra contenuti delle analisi video e audio. Le etichette modificate includono: Il *video viene avviato* alle iniziazioni *del file multimediale*, la lunghezza *del* video alla lunghezza *del* contenuto e il nome *del* ** video al nome del contenuto . I rapporti video in Reporting e analisi sono stati tutti aggiornati in modo da usare il nome &quot;File multimediali&quot; anziché &quot;Video&quot;. Le modifiche alle etichette non hanno modificato la raccolta dati o i dati storici. Prendete nota di queste modifiche nel caso in cui le stiate utilizzando in Generatore di report o in qualsiasi altra raccolta di dati automatizzata esterna che potrebbe essere influenzata da questa modifica.
+>A partire dal 13 settembre 2018 è stata apportata una modifica alle etichette per alcune dimensioni, metriche e rapporti, per consentire il tracciamento tra contenuti delle analisi video e audio. Le etichette modificate includono: *il video viene avviato* alle iniziazioni ** multimediali, alla lunghezza *del* video rispetto alla lunghezza *del* contenuto e al nome *del* video in base al nome del ** contenuto. I rapporti video in Reporting e analisi sono stati tutti aggiornati in modo da usare il nome &quot;File multimediali&quot; anziché &quot;Video&quot;. Le modifiche alle etichette non hanno modificato la raccolta dati o i dati storici. Prendete nota di queste modifiche nel caso in cui le stiate utilizzando in Generatore di report o in qualsiasi altra raccolta di dati automatizzata esterna che potrebbe essere influenzata da questa modifica.
 
 Questo argomento presenta un elenco di dati di contenuto audio e video, inclusi i valori dei dati contestuali, raccolti da Adobe tramite variabili della soluzione.
 
@@ -26,7 +29,7 @@ Descrizione dati tabella:
    * *Chiave* - Variabile, impostata manualmente nell’app o automaticamente dall’SDK di Adobe Media.
    * *Obbligatorio* - Indica se il parametro è richiesto per il tracciamento audio e video di base.
    * *Tipo* - Specifica il tipo di variabile da impostare, stringa o numero.
-   * *Inviato con* - Indica quando i dati vengono inviati: *Media Start* è la chiamata di analisi inviata all’avvio del supporto, *Ad Start* è la chiamata di analisi inviata all’inizio e all’inizio dell’annuncio, e così via; le chiamate *Close* sono le chiamate di analisi compilate inviate direttamente dal server Heartbeat al server di analisi alla fine della sessione multimediale, o la fine dell&#39;annuncio, del capitolo, ecc. Le chiamate di chiusura non sono disponibili nelle chiamate dei pacchetti di rete.
+   * *Inviato con* - Indica quando i dati vengono inviati: *Media Start* è la chiamata di analisi inviata all’avvio del supporto, *Ad Start* è la chiamata di analisi inviata all’avvio dell’annuncio e così via; le chiamate *Close* sono le chiamate di analisi compilate inviate direttamente dal server Heartbeat al server di analisi alla fine della sessione multimediale, o la fine dell&#39;annuncio, del capitolo, ecc. Le chiamate di chiusura non sono disponibili nelle chiamate dei pacchetti di rete.
    * *Min. Versione* SDK - Indica la versione SDK a cui sarà necessario accedere per il parametro.
    * *Valore* di esempio - Fornisce un esempio di utilizzo comune delle variabili.
 * **Parametri di rete:** Visualizza i valori passati ai server Adobe Analytics o Heartbeat. Questa colonna mostra i nomi dei parametri visualizzati nelle chiamate di rete generate dagli SDK di Adobe Media.
@@ -50,7 +53,7 @@ Descrizione dati tabella:
 
 |   Implementazione   | Parametri di rete | Generazione di rapporti |
 | --- | --- | --- |
-| <ul> <li> **Chiave SDK:**<br/> [streamType](./audio-video-parameters.md#create-media-object) </li> <li> **Chiave API:**<br/>media.streamType</li> <li> **Obbligatorio:**<br/>Yes</li> <li> **Tipo:**<br/>string</li> <li> **Inviato con:**<br/>Inizio file multimediali, chiusura file multimediali</li> <li> **Min. Versione SDK:** 2.2 <br/><br/>Disponibile in Panoramica [dell&#39;API di](/help/media-collection-api/mc-api-overview.md) Media Collection o [Download di SDK - Versioni 2.2](/help/sdk-implement/download-sdks.md).  </li>  <li> **Valore di esempio:**<br/>&quot;video&quot;</li> <li> **Descrizione:**<br/>Identifica il tipo di flusso. I valori validi sono &quot;audio&quot;, &quot;video&quot; e &quot;.<br/><br/>[Segmenti](/help/metrics-and-metadata/segments.md)di reporting: Tipo di flusso<br/><br/>multimediale: All -<br/>Segment all media stream data; Regola: Il contenuto (ID) esiste come tipo di flusso<br/><br/>multimediale: Audio -<br/>Segmenta tutti i dati del flusso audio; Regola: Il contenuto (ID) esiste e il tipo di flusso multimediale = tipo di flusso<br/><br/>multimediale audio: &quot;Video&quot; -<br/>Segmenta tutti i dati del flusso video; Regola: Il contenuto (ID) esiste e il tipo di flusso multimediale != audio<br/><br/> **Data di rilascio: 13/09/18** </li></ul> | <ul> <li> **Adobe Analytics:**<br/>(a.media.streamType)</li> <li> **Heartbeat:**<br/>(s:meta:<br/>a.media.streamType)</li> </ul> | <ul> <li> **Disponibile:**<br/>Yes</li> <li> **Variabile riservata:**<br/>eVar</li> <li> **Scadenza:**<br/>In visita</li> <li> **Nome rapporto:**<br/>Contenuto</li> <li> **Dati contestuali:**<br/>(a.media.streamType)</li> <li> **Feed dati:**<br/>videostreamtype</li> <li> **Audience Manager:**<br/>(c_contextdata.<br/>a.media.streamType)</li> </ul> |
+| <ul> <li> **Chiave SDK:**<br/> [streamType](./audio-video-parameters.md#create-media-object) </li> <li> **Chiave API:**<br/>media.streamType</li> <li> **Obbligatorio:**<br/>Yes</li> <li> **Tipo:**<br/>string</li> <li> **Inviato con:**<br/>Inizio file multimediali, chiusura file multimediali</li> <li> **Min. Versione SDK:** 2.2 <br/><br/>Disponibile in Panoramica [dell&#39;API di](/help/media-collection-api/mc-api-overview.md) Media Collection o [Download di SDK - Versioni 2.2](/help/sdk-implement/download-sdks.md).  </li>  <li> **Valore di esempio:**<br/>&quot;video&quot;</li> <li> **Descrizione:**<br/>Identifica il tipo di flusso. I valori validi sono &quot;audio&quot;, &quot;video&quot; e &quot;.<br/><br/>[Segmenti](/help/metrics-and-metadata/segments.md)di reporting:<br/><br/>Tipo di flusso multimediale: All -<br/>Segment all media stream data; Regola: Il contenuto (ID) esiste come tipo di flusso<br/><br/>multimediale: Audio -<br/>Segmenta tutti i dati del flusso audio; Regola: Il contenuto (ID) esiste e il tipo di flusso multimediale = tipo di flusso<br/><br/>multimediale audio: &quot;Video&quot; -<br/>Segmenta tutti i dati del flusso video; Regola: Il contenuto (ID) esiste e il tipo di flusso multimediale != audio<br/><br/> **Data di rilascio: 13/09/18** </li></ul> | <ul> <li> **Adobe Analytics:**<br/>(a.media.streamType)</li> <li> **Heartbeat:**<br/>(s:meta:<br/>a.media.streamType)</li> </ul> | <ul> <li> **Disponibile:**<br/>Yes</li> <li> **Variabile riservata:**<br/>eVar</li> <li> **Scadenza:**<br/>In visita</li> <li> **Nome rapporto:**<br/>Contenuto</li> <li> **Dati contestuali:**<br/>(a.media.streamType)</li> <li> **Feed dati:**<br/>videostreamtype</li> <li> **Audience Manager:**<br/>(c_contextdata.<br/>a.media.streamType)</li> </ul> |
 
 ```
 public static MediaObject createMediaObject(java.lang.String name,
@@ -70,7 +73,7 @@ public static MediaObject createMediaObject(java.lang.String name,
 public static MediaObject createMediaObject(java.lang.String name,
                                             java.lang.String mediaId, // <==
                                             java.lang.Double length,
-                                            java.lang.String streamType, 
+                                            java.lang.String streamType,
                                             MediaHeartbeat.MediaType mediaType)
 ```
 
@@ -78,13 +81,13 @@ public static MediaObject createMediaObject(java.lang.String name,
 
 |   Implementazione   | Parametri di rete | Generazione di rapporti |
 | --- | --- | --- |
-| <ul> <li> **Chiave SDK:**<br/>  [length](./audio-video-parameters.md#create-media-object) </li> <li> **Chiave API:**<br/>media.length</li> <li> **Obbligatorio:**<br/>Yes</li> <li> **Tipo:**<br/>number</li> <li> **Inviato con:**<br/>Inizio file multimediali, chiusura file multimediali</li> <li> **Min. Versione SDK:** Qualsiasi </li> <li> **Valore di esempio:**<br/>VOD: 128; Live: 86400; Lineare: 1800.</li><li> **Descrizione:**<br/>Lunghezza clip/Runtime: lunghezza (o durata) massima del contenuto utilizzato (in secondi). È uguale all&#39;ultimo valore di`l:asset:length`da eventi di tipo Principale.<br/>Se non`l:asset:length`è impostato, viene utilizzato l&#39;ultimo valore di`l:asset:duration`.<br/>Nel reporting, Lunghezza video è la classificazione e Lunghezza contenuto (variabile) è l’eVAR.<br/> **Importante:** Questa proprietà viene utilizzata per calcolare diverse metriche, come le metriche di tracciamento dell&#39;avanzamento e il pubblico medio in minuti. Se non è impostato o non è maggiore di zero, queste metriche non sono disponibili.  Per i contenuti multimediali live di durata sconosciuta, il valore predefinito è 86400. <br/>Prima della versione 1.5.1, si trattava `l:asset:duration`; dopo il 1.5.1, questo è `l:asset:length.`<br/> **Data di rilascio: 13/09/18** </li> </ul> | <ul> <li> **Adobe Analytics:**<br/>(a.media.length)</li> <li> **Heartbeat:**<br/>(l:asset:length)</li> </ul> | <ul> <li> **Disponibile:**<br/>Yes</li> <li> **Variabile riservata:**<br/>eVar</li> <li> **Scadenza:**<br/>Su HIT</li> <li> **Nome rapporto:**<br/>Lunghezza contenuto (variabile)</li> <li> **Dati contestuali:**<br/>(a.media.length)</li> <li> **Feed dati:**<br/>lunghezza video</li> <li> **Audience Manager:**<br/>(c_contextdata.<br/>a.media.length)</li> </ul> |
+| <ul> <li> **Chiave SDK:**<br/>  [length](./audio-video-parameters.md#create-media-object) </li> <li> **Chiave API:**<br/>media.length</li> <li> **Obbligatorio:**<br/>Yes</li> <li> **Tipo:**<br/>number</li> <li> **Inviato con:**<br/>Inizio file multimediali, chiusura file multimediali</li> <li> **Min. Versione SDK:** Qualsiasi </li> <li> **Valore di esempio:**<br/>VOD: 128; Live: 86400; Lineare: 1800.</li><li> **Descrizione:**<br/>Lunghezza clip/Runtime: lunghezza (o durata) massima del contenuto utilizzato (in secondi). È uguale all&#39;ultimo valore di`l:asset:length`da eventi di tipo Principale.<br/>Se non`l:asset:length`è impostato, viene utilizzato l&#39;ultimo valore di`l:asset:duration`.<br/>Nel reporting, Lunghezza video è la classificazione e Lunghezza contenuto (variabile) è l’eVAR.<br/> **Importante:** Questa proprietà viene utilizzata per calcolare diverse metriche, come le metriche di tracciamento dell&#39;avanzamento e il pubblico medio in minuti. Se non è impostato o non è maggiore di zero, queste metriche non sono disponibili.  Per i contenuti multimediali live di durata sconosciuta, il valore predefinito è 86400. <br/>Prima della versione 1.5.1, si trattava `l:asset:duration`; dopo la versione 1.5.1 `l:asset:length.` <br/> **Data di rilascio: 13/09/18** </li> </ul> | <ul> <li> **Adobe Analytics:**<br/>(a.media.length)</li> <li> **Heartbeat:**<br/>(l:asset:length)</li> </ul> | <ul> <li> **Disponibile:**<br/>Yes</li> <li> **Variabile riservata:**<br/>eVar</li> <li> **Scadenza:**<br/>Su HIT</li> <li> **Nome rapporto:**<br/>Lunghezza contenuto (variabile)</li> <li> **Dati contestuali:**<br/>(a.media.length)</li> <li> **Feed dati:**<br/>lunghezza video</li> <li> **Audience Manager:**<br/>(c_contextdata.<br/>a.media.length)</li> </ul> |
 
 ```
 public static MediaObject createMediaObject(java.lang.String name,
                                             java.lang.String mediaId,
                                             java.lang.Double length, // <==
-                                            java.lang.String streamType, 
+                                            java.lang.String streamType,
                                             MediaHeartbeat.MediaType mediaType)
 ```
 
@@ -98,7 +101,7 @@ public static MediaObject createMediaObject(java.lang.String name,
 public static MediaObject createMediaObject(java.lang.String name,
                                             java.lang.String mediaId,
                                             java.lang.Double length, // <==
-                                            java.lang.String streamType, 
+                                            java.lang.String streamType,
                                             MediaHeartbeat.MediaType mediaType)
 ```
 
@@ -126,7 +129,7 @@ public static MediaObject createMediaObject(java.lang.String name,
 
 |   Implementazione   | Parametri di rete | Generazione di rapporti |
 | --- | --- | --- |
-| <ul> <li> **Chiave SDK:**<br/> `config.downloadedcontent` </li> <li> **Chiave API:**<br/>Ottenuto dal back-end</li> <li> **Obbligatorio:**<br/>No</li> <li> **Tipo:**<br/>boolean</li> <li> **Inviato con:**<br/>Inizio file multimediali, chiusura file multimediali</li> <li> **Min. Versione SDK:** <br/>Avvia estensione Android e iOS v1.1.0 </li> <li> **Valore di esempio:**<br/>true</li> <li> **Descrizione:**<br/>Impostato su true quando l’hit viene generato a causa della riproduzione di una sessione multimediale di contenuto scaricata. Non presente quando il contenuto scaricato non viene riprodotto.<br/><br/>[Launch](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#create-a-media-tracker-with-optional-configuration)</li></ul> | <ul> <li> **Adobe Analytics:**<br/>(a.media.download)</li> <li> **Battito cardiaco:**<br/>(s:meta:a.media.download)</li> </ul> | <ul> <li> **Disponibile:**<br/>Usa regola di elaborazione personalizzata</li> <li> **Variabile riservata:**<br/>N/D</li> <li> **Nome rapporto:**<br/>Personalizzato</li> <li> **Dati contestuali:**<br/>(a.media.download)</li> <li> **Feed dati:**<br/>N/D</li> <li> **Audience Manager:**<br/>(c_contextdata.<br/>a.media.download)</li> </ul> |
+| <ul> <li> **Chiave SDK:**<br/> `config.downloadedcontent` </li> <li> **Chiave API:**<br/>Ottenuto dal back-end</li> <li> **Obbligatorio:**<br/>No</li> <li> **Tipo:**<br/>boolean</li> <li> **Inviato con:**<br/>Inizio file multimediali, chiusura file multimediali</li> <li> **Min. Versione SDK:** <br/>Avvia l&#39;estensione Android e iOS v1.1.0 </li> <li> **Valore di esempio:**<br/>true</li> <li> **Descrizione:**<br/>Impostato su true quando l’hit viene generato a causa della riproduzione di una sessione multimediale di contenuto scaricata. Non presente quando il contenuto scaricato non viene riprodotto.<br/><br/>[Launch](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#create-a-media-tracker-with-optional-configuration)</li></ul> | <ul> <li> **Adobe Analytics:**<br/>(a.media.download)</li> <li> **Battito cardiaco:**<br/>(s:meta:a.media.download)</li> </ul> | <ul> <li> **Disponibile:**<br/>Usa regola di elaborazione personalizzata</li> <li> **Variabile riservata:**<br/>N/D</li> <li> **Nome rapporto:**<br/>Personalizzato</li> <li> **Dati contestuali:**<br/>(a.media.download)</li> <li> **Feed dati:**<br/>N/D</li> <li> **Audience Manager:**<br/>(c_contextdata.<br/>a.media.download)</li> </ul> |
 
 ### Nome lettore contenuti
 
@@ -156,7 +159,7 @@ public static MediaObject createMediaObject(java.lang.String name,
 public static MediaObject createMediaObject(java.lang.String name,
                                             java.lang.String mediaId, // <==
                                             java.lang.Double length,
-                                            java.lang.String streamType, 
+                                            java.lang.String streamType,
                                             MediaHeartbeat.MediaType mediaType)
 ```
 
@@ -190,7 +193,7 @@ public static MediaObject createMediaObject(java.lang.String name,
 
 |   Implementazione   | Parametri di rete | Generazione di rapporti |
 | --- | --- | --- |
-| <ul> <li> **Chiave SDK:**<br/>MOSTRA</li> <li> **Chiave API:**<br/>media.show</li> <li> **Obbligatorio:**<br/>No</li> <li> **Tipo:**<br/>string</li> <li> **Inviato con:**<br/>Inizio file multimediali, chiusura file multimediali</li> <li> **Min. SDK Version:** 1.5.7 </li> <li> **Valore di esempio:**<br/>&quot;Famiglia moderna&quot; &quot;Blacklist&quot; &quot;nuova ragazza&quot;</li> <li> **Descrizione:**<br/>Nome<br/>programma/Serie Il nome del programma è richiesto solo se lo spettacolo fa parte di una serie.</li></ul> | <ul> <li> **Adobe Analytics:**<br/>(a.media.show)</li> <li> **Heartbeat:**<br/>(s:meta:<br/>a.media.show)</li> </ul> | <ul> <li> **Disponibile:**<br/>Yes</li> <li> **Variabile riservata:**<br/>eVar</li> <li> **Scadenza:**<br/>Su HIT</li> <li> **Nome rapporto:**<br/>Mostra</li> <li> **Dati contestuali:**<br/>(a.media.show)</li> <li> **Feed dati:**<br/>videoshow</li> <li> **Audience Manager:**<br/>(c_contextdata.<br/>a.media.show)</li> </ul> |
+| <ul> <li> **Chiave SDK:**<br/>MOSTRA</li> <li> **Chiave API:**<br/>media.show</li> <li> **Obbligatorio:**<br/>No</li> <li> **Tipo:**<br/>string</li> <li> **Inviato con:**<br/>Inizio file multimediali, chiusura file multimediali</li> <li> **Min. SDK Version:** 1.5.7 </li> <li> **Valore di esempio:**<br/>&quot;Famiglia Moderna&quot; &quot;L&#39;ultima danza&quot; &quot;nuova ragazza&quot;</li> <li> **Descrizione:**<br/>Nome<br/>programma/Serie Il nome del programma è richiesto solo se lo spettacolo fa parte di una serie.</li></ul> | <ul> <li> **Adobe Analytics:**<br/>(a.media.show)</li> <li> **Heartbeat:**<br/>(s:meta:<br/>a.media.show)</li> </ul> | <ul> <li> **Disponibile:**<br/>Yes</li> <li> **Variabile riservata:**<br/>eVar</li> <li> **Scadenza:**<br/>Su HIT</li> <li> **Nome rapporto:**<br/>Mostra</li> <li> **Dati contestuali:**<br/>(a.media.show)</li> <li> **Feed dati:**<br/>videoshow</li> <li> **Audience Manager:**<br/>(c_contextdata.<br/>a.media.show)</li> </ul> |
 
 ### Formato flusso
 
@@ -246,7 +249,7 @@ public static MediaObject createMediaObject(java.lang.String name,
 | --- | --- | --- |
 | <ul> <li> **Chiave SDK:**<br/>ORIGINATORE</li> <li> **Chiave API:**<br/>media.originator</li> <li> **Obbligatorio:**<br/>No</li> <li> **Tipo:**<br/>string</li> <li> **Inviato con:**<br/>Inizio file multimediali, chiusura file multimediali</li> <li> **Min. SDK Version:** 1.5.7 </li> <li> **Valore di esempio:**<br/>&quot;Warner Brothers&quot;, &quot;Sony&quot;, &quot;Disney&quot;</li> <li> **Descrizione:**<br/>Creatore del contenuto.</li></ul> | <ul> <li> **Adobe Analytics:**<br/>(a.media.originator)</li> <li> **Heartbeat:**<br/>(s:meta:<br/>a.media.originator)</li> </ul> | <ul> <li> **Disponibile:**<br/>Yes</li> <li> **Variabile riservata:**<br/>Classificazione</li> <li> **Nome rapporto:**<br/>Creatore</li> <li> **Dati contestuali:**<br/>(a.media.originator)</li> <li> **Feed dati:**<br/>N/D</li> <li> **Audience Manager:**<br/>(c_contextdata.<br/>a.media.originator)</li> </ul> |
 
-### Rete
+### Rete 
 
 |   Implementazione   | Parametri di rete | Generazione di rapporti |
 | --- | --- | --- |
@@ -336,7 +339,7 @@ public static MediaObject createMediaObject(java.lang.String name,
 
 |   Implementazione   | Parametri di rete | Generazione di rapporti |
 | --- | --- | --- |
-| <ul> <li> **Chiave SDK:**<br/>Imposta automaticamente</li> <li> **Chiave API:**<br/>N/D</li> <li> **Tipo:**<br/>string</li> <li> **Inviato con:**<br/>Chiusura file multimediali</li> <li> **Min. Versione SDK:** Qualsiasi </li> <li> **Valore di esempio:**<br/>TRUE</li> <li> **Descrizione:**<br/>Un flusso controllato per il completamento. Ciò non significa necessariamente che l&#39;utente abbia guardato o ascoltato l&#39;intero flusso; avrebbero potuto saltare avanti. Ciò significa solo che l&#39;utente ha raggiunto la fine del flusso, pari al 100%.<br/>Vedere anche Fine[](quality-parameters.md#session-end)sessione<br/> **Importante:** Questo può essere vero solo se è impostato. Se non è impostato, non viene restituito alcun valore.  </li></ul> | <ul> <li> **Adobe Analytics:**<br/>N/D</li> <li> **Heartbeat:**<br/>(s:event:<br/>type=complete)</li> </ul> | <ul> <li> **Disponibile:**<br/>Yes</li> <li> **Variabile riservata:**<br/>event</li> <li> **Nome rapporto:**<br/>Completamento contenuto</li> <li> **Dati contestuali:**<br/>(a.media.complete)</li> <li> **Feed dati:**<br/>N/D</li> <li> **Audience Manager:**<br/>(c_contextdata.<br/>a.media.complete)</li> </ul> |
+| <ul> <li> **Chiave SDK:**<br/>Imposta automaticamente</li> <li> **Chiave API:**<br/>N/D</li> <li> **Tipo:**<br/>string</li> <li> **Inviato con:**<br/>Chiusura file multimediali</li> <li> **Min. Versione SDK:** Qualsiasi </li> <li> **Valore di esempio:**<br/>TRUE</li> <li> **Descrizione:**<br/>Un flusso controllato per il completamento. Ciò non significa necessariamente che l&#39;utente abbia guardato o ascoltato l&#39;intero flusso; avrebbero potuto saltare avanti. Ciò significa solo che l&#39;utente ha raggiunto la fine del flusso, pari al 100%.<br/>Vedere anche Fine[sessione](quality-parameters.md#session-end)<br/> **Importante:** Questo può essere vero solo se è impostato. Se non è impostato, non viene restituito alcun valore.  </li></ul> | <ul> <li> **Adobe Analytics:**<br/>N/D</li> <li> **Heartbeat:**<br/>(s:event:<br/>type=complete)</li> </ul> | <ul> <li> **Disponibile:**<br/>Yes</li> <li> **Variabile riservata:**<br/>event</li> <li> **Nome rapporto:**<br/>Completamento contenuto</li> <li> **Dati contestuali:**<br/>(a.media.complete)</li> <li> **Feed dati:**<br/>N/D</li> <li> **Audience Manager:**<br/>(c_contextdata.<br/>a.media.complete)</li> </ul> |
 
 ### Tempo contenuto trascorso
 
@@ -441,13 +444,13 @@ public static MediaObject createMediaObject(java.lang.String name,
 | <ul> <li> **Chiave SDK:**<br/>Imposta automaticamente</li> <li> **Chiave API:**<br/>N/D</li> <li> **Tipo:**<br/>string</li> <li> **Inviato con:**<br/>Chiusura file multimediali</li> <li> **Min. Versione SDK:** Qualsiasi </li> <li> **Valore di esempio:**<br/>TRUE</li> <li> **Descrizione:**<br/>Numero di visualizzazioni del contenuto principale. Una vista segmento di contenuto viene conteggiata quando viene visualizzato almeno un fotogramma.<br/> **Importante:** Questo può essere vero solo se è impostato. Se non è impostato, non viene restituito alcun valore. </li></ul> | <ul> <li> **Adobe Analytics:**<br/>N/D</li> <li> **Heartbeat:**<br/>N/D</li> </ul> | <ul> <li> **Disponibile:**<br/>Yes</li> <li> **Variabile riservata:**<br/>event</li> <li> **Nome rapporto:**<br/>Viste segmento di contenuto</li> <li> **Dati contestuali:**<br/>(a.media.segmentView)</li> <li> **Feed dati:**<br/>N/D</li> <li> **Audience Manager:**<br/>(c_contextdata.<br/>a.media.segmentView)</li> </ul> |
 
 <!--
-### Ad Count 
+### Ad Count
 
 | &nbsp;&nbsp;Implementation&nbsp;&nbsp; | Network&nbsp;Parameters | Reporting |
 | --- | --- | --- |
 | <ul> <li> **SDK Key:**<br/> N/A </li> <li> **API Key:**<br/> N/A </li> <li> **Type:**<br/> number </li> <li> **Sent with:**<br/> Media Close </li> <li> **Min. SDK Version:** Any </li> <li> **Sample value:**<br/> 2 </li> <li> **Description:**<br/> The number of ads started during the media session.   <br/> </li></ul> | <ul> <li> **Adobe Analytics:**<br/> N/A </li> <li> **Heartbeats:**<br/> N/A </li> </ul> | <ul> <li> **Available:**<br/> Use custom processing rule </li> <li> **Reserved Variable:**<br/> N/A </li> <li> **Report Name:**<br/> Custom </li> <li> **Context Data:**<br/> (a.media.adCount) </li> <li> **Data Feed:**<br/> N/A </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.adCount) </li> </ul> |
 
-### Chapter Count 
+### Chapter Count
 
 | &nbsp;&nbsp;Implementation&nbsp;&nbsp; | Network&nbsp;Parameters | Reporting |
 | --- | --- | --- |
@@ -482,4 +485,3 @@ public static MediaObject createMediaObject(java.lang.String name,
 * Android - [MediaHeartbeatConfig](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/com/adobe/primetime/va/simple/MediaHeartbeatConfig.html)
 * iOS - [ADBMediaHeartbeatConfig](https://adobe-marketing-cloud.github.io/media-sdks/reference/ios/Classes/ADBMediaHeartbeatConfig.html)
 * JavaScript - [MediaHeartbeatConfig](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeatConfig.html)
-
