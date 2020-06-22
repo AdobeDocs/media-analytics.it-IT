@@ -6,7 +6,7 @@ translation-type: tm+mt
 source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
 workflow-type: tm+mt
 source-wordcount: '877'
-ht-degree: 25%
+ht-degree: 34%
 
 ---
 
@@ -53,7 +53,8 @@ Media.trackUsingContextData
 </td>
 <td>
 <pre>
-s.Media.trackUsingContextData = true;
+s.Media.trackUsingContextData
+  = true;
 </pre>
 </td>
 <td>N/D
@@ -153,7 +154,8 @@ Media.autoTrack
 </td>
 <td>
 <pre>
-s.Media.autoTrack = true;
+s.Media.autoTrack
+  = true;
 </pre>
 </td>
 <td>N/D
@@ -168,7 +170,8 @@ Media.autoTrackNetStreams
 <td>
 <pre>
 s.Media.
-  autoTrackNetStreams = true
+  autoTrackNetStreams
+  = true
 </pre>
 </td>
 <td>N/D
@@ -183,7 +186,8 @@ Media.completeByCloseOffset
 <td>
 <pre>
 s.Media.
-  completeByCloseOffset = true
+  completeByCloseOffset
+  = true
 </pre>
 </td>
 <td>N/D
@@ -198,7 +202,8 @@ Media.completeCloseOffsetThreshold
 <td>
 <pre>
 s.Media.
-  completeCloseOffsetThreshold = 1
+  completeCloseOffsetThreshold
+  = 1
 </pre>
 </td>
 <td>N/D
@@ -212,7 +217,8 @@ Media.playerName
 </td>
 <td>
 <pre>
-s.Media.playerName = "Nome lettore personalizzato"
+s.Media.playerName
+  = "Custom Player Name"
 </pre>
 </td>
 <td>
@@ -234,7 +240,8 @@ Media.trackSeconds
 <td>
 <pre>
 s.Media.
-  trackSeconds = 15
+  trackSeconds
+  = 15
 </pre>
 </td>
 <td>N/D
@@ -249,7 +256,8 @@ Media.trackMilestones
 <td>
 <pre>
 s.Media.
-  trackMilestones = "25,50,75";
+  trackMilestones
+  = "25,50,75";
 </pre>
 </td>
 <td>N/D
@@ -264,7 +272,8 @@ Media.trackOffsetMilestones
 <td>
 <pre>
 s.Media.
-  trackOffsetMilestones = "20,40,60";
+  trackOffsetMilestones
+  = "20,40,60";
 </pre>
 </td>
 <td>N/D
@@ -278,7 +287,8 @@ Media.segmentByMilestones
 </td>
 <td>
 <pre>
-s.Media.segmentByMilestones = true;
+s.Media.segmentByMilestones
+  = true;
 </pre>
 </td>
 <td>N/D
@@ -293,7 +303,8 @@ Media.segmentByOffsetMilestones
 <td>
 <pre>
 s.Media.
-  segmentByOffsetMilestones = true;
+  segmentByOffsetMilestones
+  = true;
 </pre>
 </td>
 <td>N/D
@@ -327,7 +338,8 @@ Media.adTrackSeconds
 <td>
 <pre>
 s.Media.
-  adTrackSeconds = 15
+  adTrackSeconds
+  = 15
 </pre>
 </td>
 <td>N/D
@@ -342,7 +354,8 @@ Media.adTrackMilestones
 <td>
 <pre>
 s.Media.
-  adTrackMilestones = "25,50,75";
+  adTrackMilestones
+  = "25,50,75";
 </pre>
 </td>
 <td>N/D
@@ -357,7 +370,8 @@ Media.adTrackOffsetMilestones
 <td>
 <pre>
 s.Media.
-  adTrackOffsetMilestones = "20,40,60";
+  adTrackOffsetMilestones
+  = "20,40,60";
 </pre>
 </td>
 <td>N/D
@@ -372,7 +386,8 @@ Media.adSegmentByMilestones
 <td>
 <pre>
 s.Media.
-  adSegmentByMilestones = true;
+  adSegmentByMilestones
+  = true;
 </pre>
 </td>
 <td>N/D
@@ -387,7 +402,8 @@ Media.adSegmentByOffsetMilestones
 <td>
 <pre>
 s.Media.
-  adSegmentByOffsetMilestones = true;
+  adSegmentByOffsetMilestones
+  = true;
 </pre>
 </td>
 <td>N/D
@@ -450,7 +466,7 @@ mediaName
 </td>
 <td>
 <pre>
-nome
+name
 </pre>
 </td>
 <td>
@@ -552,12 +568,12 @@ name - (Obbligatorio) Il nome o l'ID dell'annuncio.
 </td>
 <td>
 <pre>
-nome
+name
 </pre>
 </td>
 <td>
 <pre>
-nome
+name
 </pre>
 </td>
 <td>
@@ -572,7 +588,8 @@ createAdObject(
 </tr>
 <tr>
 <td>
-length(Obbligatorio) La lunghezza dell'annuncio.
+length
+(Obbligatorio) La lunghezza dell'annuncio.
 </td>
 <td>
 <pre>
@@ -678,7 +695,8 @@ createAdObject(
 </tr>
 <tr>
 <td>
-CPMTil CPM o CPM crittografato (con il prefisso "~") che si applica a questa riproduzione.
+CPM
+CPM o CPM crittografato (con il prefisso "~") che si applica a questa riproduzione.
 </td>
 <td>
 <pre>
@@ -696,7 +714,9 @@ Media.click
 </td>
 <td>
 <pre>
-s.Media.click( nome, offset)
+s.Media.click(
+  name,
+  offset)
 </pre>
 </td>
 <td>N/D
@@ -710,7 +730,8 @@ Media.close
 </td>
 <td>
 <pre>
-s.Media.close( mediaName)
+s.Media.close(
+  mediaName)
 </pre>
 </td>
 <td>
@@ -781,7 +802,9 @@ Media.stop
 </td>
 <td>
 <pre>
-s.Media.stop( mediaName, mediaOffset)
+s.Media.stop(
+  mediaName,
+  mediaOffset)
 </pre>
 </td>
 <td>
@@ -864,7 +887,8 @@ Media.track
 </td>
 <td>
 <pre>
-s.Media.track( mediaName)
+s.Media.track(
+  mediaName)
 </pre>
 </td>
 <td>N/D
