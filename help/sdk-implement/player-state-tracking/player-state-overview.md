@@ -2,9 +2,9 @@
 title: Informazioni sul tracciamento dello stato del lettore
 description: Questo argomento descrive la funzione di tracciamento dello stato del lettore, compresi i requisiti e le linee guida per l’implementazione e la generazione di rapporti degli stati del lettore.
 translation-type: tm+mt
-source-git-commit: 1b48565bcc5c9a87e5fabbc906049ab791bf89cc
+source-git-commit: 4c11efd0b8bb457246c746621e7fbb9fbda621b2
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '404'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 Per ottimizzare l&#39;esperienza di prodotto e il valore dell&#39;unità aziendale, è importante comprendere il comportamento dei clienti durante la visualizzazione dei video. Ciò include il tempo trascorso all&#39;interno di diversi stati del lettore.  È inoltre importante avere la flessibilità di creare e misurare nuovi stati ed eventi dei giocatori in base alle esigenze.
 
-Il Tracciamento dello stato del lettore consente di catturare l’interazione del visualizzatore durante la riproduzione utilizzando un set standard di variabili della soluzione per la visualizzazione a schermo intero, i sottotitoli codificati, l’audio, l’immagine nell’immagine e la messa a fuoco.  Il tracciamento dello stato del lettore offre inoltre la flessibilità necessaria per creare stati del lettore personalizzati. Puoi utilizzare le variabili di tracciamento stato del lettore per i rapporti in Analysis Workspace.
+Il Tracciamento dello stato del lettore consente di catturare l’interazione del visualizzatore durante la riproduzione utilizzando un set standard di variabili della soluzione per la visualizzazione a schermo intero, i sottotitoli codificati, l’audio, l’immagine nell’immagine e la messa a fuoco.  Il tracciamento dello stato del lettore offre inoltre la flessibilità necessaria per creare stati del lettore personalizzati. Potete utilizzare le variabili di tracciamento stato del lettore per il reporting in  Analysis Workspace.
 
 Per acquisire le modifiche allo stato del lettore, il tracciamento dello stato del lettore aggiorna i metadati delle misurazioni video. Ad esempio, per determinare il &quot;vero&quot; coinvolgimento video, il tracciamento dello stato del lettore misura il tempo trascorso con il suono attivato rispetto alle visualizzazioni video passive o non impegnate quando il suono è spento o il tempo trascorso in modalità Normale o Schermo intero.
 
@@ -31,9 +31,10 @@ Il tracciamento dello stato del lettore offre i seguenti vantaggi:
 
 Il tracciamento dello stato del lettore richiede una delle seguenti operazioni per la raccolta dei dati:
 * Media JS SDK 3.0+
-* Media Analytics Extension (da usare con l’SDK di Adobe Experience Platform (AEP))
-   * Web: Adobe Media Analytics (SDK 3.x) per audio e video v1.0+
-   * Mobile: Adobe Media Analytics for Audio and Video v2.0+
+* Chromecast 3.0 SDK for Adobe Marketing Cloud Solutions
+* Estensione Media Analytics (da usare con l’SDK Adobe Experience Platform (AEP))
+   * Web:  Adobe Media Analytics (SDK 3.x) per Audio e Video v1.0+
+   * Mobile:  Adobe Media Analytics for Audio and Video v2.0+
 * API Media Collection
 
 ## Linee guida
