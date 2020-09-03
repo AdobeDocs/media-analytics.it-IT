@@ -2,7 +2,7 @@
 title: Generazione di rapporti per visualizzatori simultanei
 description: Per i clienti di Media Analytics, il pannello Visualizzatori simultanei di  Analysis Workspace consente di analizzare i visualizzatori simultanei per comprendere dove si è verificato il picco di concorrenza o dove si sono verificati i rilasci.
 translation-type: tm+mt
-source-git-commit: 9c87109477518dd647b263edfa6bcf89be3e067d
+source-git-commit: 5d6f2c35f11b14222b704888a80e08e7217b33e9
 workflow-type: tm+mt
 source-wordcount: '224'
 ht-degree: 10%
@@ -10,7 +10,7 @@ ht-degree: 10%
 ---
 
 
-# Generazione di rapporti tra visualizzatori per contenuti multimediali{#media-concurrent-viewers}
+# Generazione di rapporti per visualizzatori simultanei{#media-concurrent-viewers}
 
 >[!IMPORTANT]
 >
