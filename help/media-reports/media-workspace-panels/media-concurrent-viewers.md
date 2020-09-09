@@ -2,10 +2,10 @@
 title: Generazione di rapporti per visualizzatori simultanei
 description: Per i clienti di Media Analytics, il pannello Visualizzatori simultanei di  Analysis Workspace consente di analizzare i visualizzatori simultanei per comprendere dove si è verificato il picco di concorrenza o dove si sono verificati i rilasci.
 translation-type: tm+mt
-source-git-commit: 687ae6f2037590b58b30ea776635898c93ca144f
+source-git-commit: 1e59c1201a4c0544b1fc571d6e1baf7bdc19e7dc
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 13%
+source-wordcount: '213'
+ht-degree: 8%
 
 ---
 
@@ -20,7 +20,7 @@ L’analisi dei visualizzatori simultanei consente di comprendere dove si è ver
 
 ## Pannello Visualizzatori simultanei  Analysis Workspace
 
-In  Analysis Workspace, per visualizzatori simultanei si intende il numero di visitatori univoci che visualizzano i flussi multimediali in un particolare momento, indipendentemente dal numero di sessioni. Il pannello Visualizzatori simultanei di file multimediali è disponibile per visualizzare i visualizzatori simultanei, suddividerli e confrontarli. [Ulteriori informazioni...](https://docs.adobe.com/content/help/it-IT/analytics/analyze/analysis-workspace/panels/media-concurrent-viewers.html)
+In  Analysis Workspace, per visualizzatori simultanei si intende il numero di visitatori univoci che visualizzano i flussi multimediali in un particolare momento, indipendentemente dal numero di sessioni. Il pannello Visualizzatori simultanei di file multimediali è disponibile per visualizzare i visualizzatori simultanei, suddividerli e confrontarli. [Ulteriori informazioni...](https://docs.adobe.com/content/help/en/media-analytics/using/media-reports/media-default-reports/get-concurrent-json20.html)
 
 ## Ottenere i visualizzatori simultanei tramite Analytics Reporting API
 
