@@ -3,10 +3,10 @@ title: Visualizzatori simultanei di contenuti multimediali
 description: null
 uuid: e61c50e5-8196-4538-b67c-ebc01c6e6ba7
 translation-type: tm+mt
-source-git-commit: 420d17294f8f4b5c38d960e4e4ebd0b2ee80a60b
+source-git-commit: cb54b862a0d4a179c499e3a28ab49301121de1bf
 workflow-type: tm+mt
-source-wordcount: '268'
-ht-degree: 4%
+source-wordcount: '267'
+ht-degree: 8%
 
 ---
 
@@ -16,8 +16,8 @@ ht-degree: 4%
 Il dashboard Visualizzatori simultanei di file multimediali mostra gli utenti simultanei in un giorno. I dati possono essere filtrati in base al contenuto, al tipo di dispositivo o al Paese.
 
 >[!TIP]
-> 
-> Suggerimento: Questo rapporto è basato su sessioni multimediali attive simultanee.  Per visualizzare i visualizzatori simultanei in base a un visitatore univoco, con le funzionalità aggiuntive per applicare un segmento, suddividere e confrontare, utilizzate la variabile [Pannello Visualizzatori simultanei  Analysis Workspace](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/panels/media-concurrent-viewers.html).
+>
+> Questo rapporto è basato su sessioni multimediali attive simultanee.  Per visualizzare i visualizzatori simultanei in base a un visitatore univoco, con le funzionalità aggiuntive per applicare un segmento, suddividere e confrontare, utilizzate la variabile [Pannello Visualizzatori simultanei  Analysis Workspace](https://docs.adobe.com/content/help/it-IT/analytics/analyze/analysis-workspace/panels/media-concurrent-viewers.html).
 
 
 ![](assets/video-concurrent-viewers.png)
@@ -44,4 +44,3 @@ Di seguito sono riportati alcuni limiti per questo rapporto:
 * Non potete inviare un rapporto tramite e-mail.
 * Anche se non monitori gli annunci, devi riabilitare il tracciamento dei supporti e selezionare il modulo Media Ad.
 * Questa funzionalità fornirà dati precisi quando si utilizza una libreria heartbeat con funzionalità di tracciamento Pausa.
-
