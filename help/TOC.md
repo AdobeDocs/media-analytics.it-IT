@@ -5,9 +5,9 @@ user-guide-description: Implement Analytics on audio or video sources. Includes 
 product: adobe analytics
 sub-product: media analytics
 translation-type: tm+mt
-source-git-commit: cb54b862a0d4a179c499e3a28ab49301121de1bf
+source-git-commit: e93a39fb76c3ccca2c05e5d1590a53394e50b29b
 workflow-type: tm+mt
-source-wordcount: '830'
+source-wordcount: '818'
 ht-degree: 97%
 
 ---
@@ -213,11 +213,10 @@ ht-degree: 97%
       + [Dettagli contenuti multimediali](media-reports/media-default-reports/media-reports-detail.md)
       + [Rapporto Daypart Media](media-reports/media-default-reports/media-reports-daypart.md)
       + [Rapporto Media simultanei](media-reports/media-default-reports/media-concurrent-viewers.md)
-      + [Acquisizione dati report JSON per visualizzatori simultanei](media-reports/media-default-reports/get-concurrent-json20.md)
    + Pannelli di Media Workspace {#media-workspace-panels}
       + [Pannello Visualizzatori simultanei](media-reports/media-workspace-panels/media-concurrent-viewers.md)
    + [Modelli di Media Workspace](media-reports/media-workspace-templates.md)
-   + [Ottenere i dati dei visualizzatori simultanei tramite API](https://www.adobe.io/apis/experiencecloud/analytics/docs.html)
+   + [Ottenere i dati dei visualizzatori simultanei tramite API](media-reports/media-default-reports/get-concurrent-json20.md)
 + [Tracciamento contenuto scaricato](media-collection-api/track-downloaded-content.md)
 + [Federated Analytics](federated-analytics.md)
 + Tracciamento dello stato del lettore {#player-state-tracking}
