@@ -5,11 +5,11 @@ breadcrumb-title: Media Analytics Guide
 user-guide-description: Implement Analytics on audio or video sources. Includes the Media SDK and the Media Collection API.
 product: adobe analytics
 sub-product: media analytics
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 32865b998afc7b19ef328a2d43c3acd9970a4d5c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '818'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -212,10 +212,10 @@ ht-degree: 97%
       + [Panoramica dei report predefiniti](media-reports/media-default-reports/default-reports-overview.md)
       + [Panoramica contenuti multimediali](media-reports/media-default-reports/media-reports-overview.md)
       + [Dettagli contenuti multimediali](media-reports/media-default-reports/media-reports-detail.md)
-      + [Rapporto Daypart Media](media-reports/media-default-reports/media-reports-daypart.md)
-      + [Rapporto Media simultanei](media-reports/media-default-reports/media-concurrent-viewers.md)
+      + [Report del dayparting dei contenuti multimediali](media-reports/media-default-reports/media-reports-daypart.md)
+      + [Report dei visualizzatori simultanei di contenuti multimediali](media-reports/media-default-reports/media-concurrent-viewers.md)
    + Pannelli di Media Workspace {#media-workspace-panels}
-      + [Pannello Visualizzatori simultanei](media-reports/media-workspace-panels/media-concurrent-viewers.md)
+      + [Pannello dei visualizzatori simultanei di contenuti multimediali](media-reports/media-workspace-panels/media-concurrent-viewers.md)
    + [Modelli di Media Workspace](media-reports/media-workspace-templates.md)
    + [Ottenere i dati dei visualizzatori simultanei tramite API](media-reports/media-default-reports/get-concurrent-json20.md)
 + [Tracciamento contenuto scaricato](media-collection-api/track-downloaded-content.md)
