@@ -1,28 +1,31 @@
 ---
-title: Misurazione di audio e video in Adobe Analytics
+title: Misurazione del supporto Steaming in  Adobe Analytics
 description: Adobe Analytics for Media (altrimenti denominato Media Analytics) fornisce ai clienti una misurazione affidabile dei file multimediali per contenuto, audio e annunci pubblicitari.
 uuid: b3cbe240-b94d-42b8-a99c-0280334aaa14
-translation-type: ht
-source-git-commit: bddcbcd844145788518c60399bee9e4744e42d3a
+translation-type: tm+mt
+source-git-commit: fdec4da99a43d889690638f1ff3579e145548b69
+workflow-type: tm+mt
+source-wordcount: '903'
+ht-degree: 85%
 
 ---
 
 
-# Misurazione di audio e video in Adobe Analytics {#measuring-audio-and-video-in-adobe-analytics}
+# Misurazione del supporto Steaming in  Adobe Analytics{#measuring-audio-and-video-in-adobe-analytics}
 
 ![Banner](./assets/media_analytics_banner.png)
 
-## Informazioni su Adobe Analytics per audio e video
+## Informazioni su  Adobe Analytics per lo streaming di file multimediali
 
-Adobe Analytics per audio e video è un componente aggiuntivo di Adobe Analytics che fornisce potenti strumenti di misurazione per audio, video e annunci pubblicitari. Adobe Analytics fa parte di Adobe Experience Platform.
+ Adobe Analytics per Streaming Media è un componente aggiuntivo per  Adobe Analytics che offre potenti strumenti di misura per audio, video e annunci pubblicitari. Adobe Analytics fa parte di Adobe Experience Platform.
 
-Adobe Analytics per audio e video consente di monitorare l’intero percorso del cliente all’interno del sito. Le metriche si integrano facilmente nei rapporti di Adobe Analytics e in altri prodotti Adobe Experience Cloud. La misurazione dei file multimediali consente di classificare i dati in più dimensioni e segmenti e di acquisire così tutti i metadati necessari per svolgere un’analisi completa e dettagliata. Puoi quindi analizzare i dati e attribuire criteri di successo ai file multimediali utilizzati interamente, al tempo trascorso in media e agli annunci completati.
+ Adobe Analytics per Streaming Media consente di monitorare l’intero percorso del cliente attraverso il sito. Le metriche si integrano facilmente nei rapporti di Adobe Analytics e in altri prodotti Adobe Experience Cloud. La misurazione dei file multimediali consente di classificare i dati in più dimensioni e segmenti e di acquisire così tutti i metadati necessari per svolgere un’analisi completa e dettagliata. Puoi quindi analizzare i dati e attribuire criteri di successo ai file multimediali utilizzati interamente, al tempo trascorso in media e agli annunci completati.
 
 Puoi misurare le metriche di distribuzione vitali correlate alla QoS, come fotogrammi saltati, tempo impiegato nel buffering e bitrate medio. Inoltre, le metriche possono essere combinate con i dati del tuo sito web o app per visualizzare il percorso e gli interessi del cliente. In questo modo è possibile ottenere raccomandazioni migliori e personalizzare l’esperienza del cliente con Adobe Experience Cloud.
 
 ## Funzioni {#features}
 
-I vantaggi di Adobe Analytics per audio e video comprendono monitoraggio in tempo reale, analisi dettagliate, approfondimenti fruibili e opportunità di monetizzazione.
+ i vantaggi offerti da Adobe Analytics per lo streaming di contenuti multimediali comprendono monitoraggio in tempo reale, analisi dettagliate, approfondimenti fruibili e opportunità di monetizzazione.
 * **Analisi in tempo reale**: prendi decisioni attuabili in tempo reale utilizzando metriche delle prestazioni chiave quali durata, ex2 ed ex3 su più canali. Gli eventi di contenuto principale vengono misurati a intervalli di 10 secondi per acquisire tutte le attività mentre si verificano. Gli eventi di tracciamento degli annunci si verificano a intervalli di 1 secondo.
 * **Aumento dell’engagement**: coinvolgi maggiormente gli utenti con meno eventi di buffering e capendo dove e quando far riprodurre gli annunci all’interno dei contenuti per offrire un’esperienza fluida, meno invasiva e in grado di favorire visite ripetute.
 * **Immagine olistica**: combina più punti dati tra tutti i distributori di contenuti per ottenere una visione completa di tutte le attività multimediali. Misura l’engagement e le visualizzazioni/gli ascolti tra tutti i canali possibili con la funzione Federated Analytics.
@@ -32,9 +35,9 @@ I vantaggi di Adobe Analytics per audio e video comprendono monitoraggio in temp
 
 ## Misurazione con Heartbeat {#heartbeat}
 
-Adobe Analytics utilizza gli “heartbeat” per raccogliere le metriche video. Durante la riproduzione del video gli heartbeat vengono inviati al server che li traccia per misurare il tempo di riproduzione. Le chiamate heartbeat vengono inviate ogni dieci secondi. Gli heartbeat generano metriche granulari di coinvolgimento video e rapporti di fallout video più precisi. Adobe Analytics per audio e video misura gli heartbeat utilizzando Adobe Launch con l’estensione Media Analytics, Media SDK e l’API Media Collection. I componenti `AppMeasurement` e `VisitorID` vengono utilizzati per ricevere i dati video.
+Adobe Analytics utilizza gli “heartbeat” per raccogliere le metriche video. Durante la riproduzione del video gli heartbeat vengono inviati al server che li traccia per misurare il tempo di riproduzione. Le chiamate heartbeat vengono inviate ogni dieci secondi. Gli heartbeat generano metriche granulari di coinvolgimento video e rapporti di fallout video più precisi.  Adobe Analytics per Streaming Media misura i heartbeat mediante  lancio del Adobe con estensione Media Analytics, Media SDK e Media Collection API. I componenti `AppMeasurement` e `VisitorID` vengono utilizzati per ricevere i dati video.
 
-L’utilizzo di heartbeat in Adobe Analytics per audio e video offre i seguenti vantaggi:
+Utilizzando heartbeat  Adobe Analytics per Streaming Media potete ottenere i seguenti vantaggi:
 
 | Funzione | Descrizione |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -44,7 +47,7 @@ L’utilizzo di heartbeat in Adobe Analytics per audio e video offre i seguenti 
 | Prezzi | Tracciamento trasparente per flusso multimediale (singolo) |
 | Implementazione e supporto | Configurazione semplificata con continui aggiornamenti e miglioramenti<br>Un processo di implementazione semplificato ti consente di mappare rapidamente le variabili tramite l’API del lettore e convalidare le implementazioni tramite lo strumento Adobe Debug per garantire che tutte le variabili necessarie siano tracciate con precisione. |
 | Condivisione partner | Federated Analytics e metriche certificate<br>Con i dati condivisi tramite Federated Analytics puoi sfruttare le nostre funzionalità avanzate di condivisione dei contenuti multimediali per valutare i dati in modo olistico tra tutti i partner di distribuzione di contenuti multimediali: operatori, programmatori e distributori. |
-| Tracciamento avanzato | Tracciamento del contenuto scaricato, tracciamento del recupero degli errori e visualizzatori simultanei<br>Puoi tenere traccia del contenuto audio e video che viene scaricato e riprodotto su un dispositivo indipendentemente dalla connettività. |
+| Tracciamento avanzato | Tracciamento dei contenuti scaricati, tracciamento del recupero errori e visualizzatori simultanei<br>Potete tenere traccia dei contenuti multimediali in streaming scaricati e riprodotti su un dispositivo, indipendentemente dalla connettività. |
 
 
 
