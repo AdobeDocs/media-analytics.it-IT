@@ -2,9 +2,9 @@
 title: Domande frequenti relative alla fine del supporto per l’SDK di Media Analytics
 description: Questo argomento include domande frequenti sulla fine del supporto per gli SDK di Media Analytics.
 translation-type: tm+mt
-source-git-commit: cea8c4b31b21f1b13a55268fbcfb9100a7bdbd7c
+source-git-commit: fdec4da99a43d889690638f1ff3579e145548b69
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '676'
 ht-degree: 1%
 
 ---
@@ -12,17 +12,17 @@ ht-degree: 1%
 
 # Domande frequenti relative alla fine del supporto per l’SDK di Media Analytics
 
-Con la fine del supporto per gli SDK della versione 4 per dispositivi mobili il 31 agosto 2021,  Adobe interromperà anche il supporto per gli SDK di Media Analytics per iOS e Android. Dopo il 31 agosto 2021,  Adobe non fornirà correzioni, aggiornamenti relativi al sistema operativo o supporto per l’SDK di Media Analytics.  Durante il processo di migrazione a questi nuovi SDK per Experienci Platform , ricorda che [Estensioni di Media Analytics](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics) deve essere implementato per abilitare  Adobe Analytics per Audio e Video.
+Con la fine del supporto per gli SDK della versione 4 per dispositivi mobili il 31 agosto 2021,  Adobe interromperà anche il supporto per gli SDK di Media Analytics per iOS e Android. Dopo il 31 agosto 2021,  Adobe non fornirà correzioni, aggiornamenti relativi al sistema operativo o supporto per l’SDK di Media Analytics.  Durante il processo di migrazione a questi nuovi SDK per Experienci Platform , ricorda che [Estensioni di Media Analytics](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics) deve essere implementato per abilitare  Adobe Analytics per Streaming Media.
 
 ## Le 5 cose più importanti da sapere
 
 1. Gli SDK di Mobile v4 non saranno più supportati dopo il 31 agosto 2021. Esegui la migrazione agli SDK Adobe Experience Platform (AEP) per iOS e Android. Per ulteriori informazioni, vedete [Versione 4 SDK per dispositivi mobili - Domande frequenti sulla fine del supporto](https://aep-sdks.gitbook.io/docs/version-4-sdk-end-of-support-faq).
 
-1. L’implementazione di Analytics per audio e video richiede l’SDK AEP e l’utilizzo delle estensioni Analytics e Media Analytics. A partire dal 1° settembre 2021, è necessario utilizzare i nuovi SDK AEP e le nuove estensioni.  Le estensioni Media Analytics sono configurate tramite  lancio Adobe.  Per ulteriori informazioni, vedete [Migrazione dall’SDK per file multimediali indipendenti al lancio  Adobe](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/sdk-to-launch/sdk-to-launch-migration.html)
+1. Analytics per l’implementazione di Steaming Media richiede l’SDK AEP e l’utilizzo delle estensioni Analytics e Media Analytics. A partire dal 1° settembre 2021, è necessario utilizzare i nuovi SDK AEP e le nuove estensioni.  Le estensioni Media Analytics sono configurate tramite  lancio Adobe.  Per ulteriori informazioni, vedete [Migrazione dall’SDK per file multimediali indipendenti al lancio  Adobe](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/sdk-to-launch/sdk-to-launch-migration.html)
 
 1. Lo sviluppo di funzioni è terminato per gli SDK di Media Analytics per iOS e Android.  Le nuove funzioni introdotte a partire dall’autunno 2019 sono abilitate utilizzando le estensioni Media Analytics e l’API Media Collection.
 
-1. Gli SDK Roku e Chromecast rimangono disponibili per i clienti di Analytics per audio e video. Gli SDK Roku e Chromecast continueranno a essere migliorati e supportati come SDK standalone.  Se utilizzate l’SDK JS per Media Analytics, potete continuare a utilizzare l’SDK autonomo o attivare l’estensione Media Analytics tramite  lancio del Adobe.
+1. Gli SDK Roku e Chromecast rimangono disponibili per Analytics per i clienti di Steaming Media. Gli SDK Roku e Chromecast continueranno a essere migliorati e supportati come SDK standalone.  Se utilizzate l’SDK JS per Media Analytics, potete continuare a utilizzare l’SDK autonomo o attivare l’estensione Media Analytics tramite  lancio del Adobe.
 
 1. Prima del 1° settembre 2021,  Adobe può, a sua discrezione, elaborare nuove correzioni per problemi di forte impatto tecnico o di esposizione delle imprese. In base all&#39;input del cliente,  Adobe determinerà il grado di impatto e di esposizione e le attività che ne derivano.
 
