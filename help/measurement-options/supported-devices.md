@@ -1,22 +1,22 @@
 ---
-title: Dispositivi e piattaforme supportati
-description: Adobe  Analytics per Audio e Video garantisce che ogni flusso multimediale venga raccolto e trasmesso su tutti i dispositivi.
+title: Piattaforme e dispositivi supportati
+description: ' Adobe Analytics per Streaming Media garantisce che ogni flusso multimediale venga raccolto e segnalato su tutti i dispositivi.'
 translation-type: tm+mt
-source-git-commit: 4db4e4281ba9c7af078c18d03f73b6e1e007a0e8
+source-git-commit: fdec4da99a43d889690638f1ff3579e145548b69
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 15%
+source-wordcount: '336'
+ht-degree: 20%
 
 ---
 
 
-# Supported devices and platforms {#devices-supported}
+# Piattaforme e dispositivi supportati {#devices-supported}
 
 >[!IMPORTANT]
 >
->Con la fine del supporto per gli SDK della versione 4 per dispositivi mobili il 31 agosto 2021, Adobe interromperà anche il supporto per Media  Analytics SDK per iOS e Android.  Per ulteriori informazioni, consultate [Media  Analytics SDK - Domande frequenti](/help/sdk-implement/end-of-support-faqs.md)sulla fine del supporto.
+>Con la fine del supporto per gli SDK della versione 4 per dispositivi mobili il 31 agosto 2021,  Adobe interromperà anche il supporto per l’SDK di Media Analytics per iOS e Android.  Per ulteriori informazioni, vedete [Domande frequenti sull’SDK di Media Analytics per la fine del supporto](/help/sdk-implement/end-of-support-faqs.md).
 
-Adobe  Analytics per Audio e Video supporta tutti i principali dispositivi, tra cui:
+ Adobe Analytics per Streaming Media supporta tutti i principali dispositivi, tra cui:
 
 * Smartphone e tablet iOS e Android
 * Dispositivi OTT per ROKU, AppleTV, FireTV e Android TV
@@ -24,7 +24,7 @@ Adobe  Analytics per Audio e Video supporta tutti i principali dispositivi, tra 
 
 Gli SDK per file multimediali vengono costantemente aggiornati quando vengono rilasciate nuove versioni di dispositivi e puoi utilizzare l’SDK per integrarsi con i lettori multimediali più grandi di oggi, inclusi Brightcove e Ooyala.
 
-Per i dispositivi o le piattaforme che al momento non dispongono del supporto SDK o in situazioni in cui non desideri usare un SDK, puoi implementare l’API di Media Collection. L&#39;API Media Collection consente di effettuare chiamate RESTful API direttamente da un dispositivo o piattaforma al back-end di Media  Analytics.
+Per i dispositivi o le piattaforme che al momento non dispongono del supporto SDK o in situazioni in cui non desideri usare un SDK, puoi implementare l’API di Media Collection. L&#39;API Media Collection consente di effettuare chiamate RESTful API direttamente da un dispositivo o piattaforma al back-end di Media Analytics.
 
 La tabella seguente elenca i dispositivi e le piattaforme attualmente supportati. Per scaricare la versione più recente dell’SDK, consulta [Scaricare gli SDK](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/download-sdks.html). Se un dispositivo non è elencato, contatta l’assistenza clienti o il consulente della soluzione per informazioni sullo stato del dispositivo.
 
@@ -48,6 +48,6 @@ La tabella seguente elenca i dispositivi e le piattaforme attualmente supportati
 | Altro |  |  |  |  |
 |  | Nuovi dispositivi collegati |  |  | ![](/help/assets/icon-blue-check.png) |
 
-1. Il supporto per questi SDK termina il 31 agosto 2021. Per ulteriori informazioni, consultate [Media  Analytics SDK - Domande frequenti](/help/sdk-implement/end-of-support-faqs.md)sulla fine del supporto.
+1. Il supporto per questi SDK termina il 31 agosto 2021. Per ulteriori informazioni, vedete [Domande frequenti sull’SDK di Media Analytics per la fine del supporto](/help/sdk-implement/end-of-support-faqs.md).
 
-Per ulteriori informazioni sulle versioni minime della piattaforma supportate per ogni SDK, consulta [Supporto delle versioni minime di Platform](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/setup/setup-overview.html)
+Per ulteriori informazioni sulle versioni minime della piattaforma supportate per ogni SDK, vedi [Supporto versione minima della piattaforma](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/setup/setup-overview.html)
