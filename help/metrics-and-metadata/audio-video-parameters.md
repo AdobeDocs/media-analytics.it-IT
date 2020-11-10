@@ -3,9 +3,9 @@ title: Parametri audio e video
 description: null
 uuid: fdacfb8b-db3e-46fb-b9ad-c3a749555b2a
 translation-type: tm+mt
-source-git-commit: abb2cd2d056ffbefa72126061b11286cc10ec1ca
+source-git-commit: 4dad6507966e30accfb4f6c2eb5f1d6a5507d29d
 workflow-type: tm+mt
-source-wordcount: '6237'
+source-wordcount: '6234'
 ht-degree: 2%
 
 ---
@@ -47,7 +47,7 @@ Descrizione dati tabella:
 >Non modificare i nomi delle classificazioni per le variabili elencate di seguito che sono descritte in Reporting/Riservato Variabile come &quot;classificazione&quot;.\
 >Le classificazioni dei supporti vengono definite quando una suite di rapporti è abilitata per il tracciamento dei supporti. Di tanto in tanto,  Adobe aggiunge nuove proprietà e, in questo caso, i clienti devono riabilitare le suite di rapporti per accedere alle nuove proprietà del supporto. Durante il processo di aggiornamento  Adobe determina se le classificazioni sono abilitate controllando i nomi delle variabili. Se manca qualcuno di loro,  Adobe aggiunge di nuovo quelli mancanti.
 
-## Dati audio e video di base {#core-audio-and-video-data}
+## Dati dei supporti di streaming di base {#core-audio-and-video-data}
 
 ### Tipo di flusso {#stream-type}
 
@@ -187,7 +187,7 @@ public static MediaObject createMediaObject(java.lang.String name,
 | --- | --- | --- |
 | <ul> <li> **Chiave SDK:**<br/> Imposta automaticamente </li> <li> **Chiave API:**<br/> N/D </li> <li> **Obbligatorio:**<br/> No </li> <li> **Tipo:**<br/> string </li> <li> **Inviato con:**<br/> Chiusura file multimediali </li> <li> **Min. Versione SDK:** 1.5.7 </li> <li> **Valore di esempio:**<br/> &quot;js-2.0.1.88-c8c0b1&quot; </li> <li> **Descrizione:**<br/> La versione Media SDK utilizzata per la sessione di tracciamento. <br/><br/>I clienti dovranno creare le proprie regole di elaborazione per avere il valore disponibile per il reporting.  <br/><br/>[MediaHeartbeat.version();](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html) </li></ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.<br/>vhlVersion) </li> <li> **Heartbeat:**<br/> (s:sp:hb_version) </li> </ul> | <ul> <li> **Disponibile:**<br/> Usa regola di elaborazione personalizzata </li> <li> **Variabile riservata:**<br/> N/D </li> <li> **Nome rapporto:**<br/> Personalizzato </li> <li> **Dati contestuali:**<br/> (a.media.vhlVersion) </li> <li> **Feed dati:**<br/> N/D </li> <li> **Audience Manager :**<br/> (c_contextdata.<br/>a.media.vhlVersion) </li> </ul> |
 
-## Metadati audio e video standard {#standard-audio-and-video-metadata}
+## Standard Steaming dei metadati dei supporti {#standard-audio-and-video-metadata}
 
 ### Mostra le informazioni
 
@@ -321,7 +321,7 @@ public static MediaObject createMediaObject(java.lang.String name,
 | --- | --- | --- |
 | <ul> <li> **Chiave SDK:**<br/> </li> <li> **Chiave API:**<br/> media.publisher </li> <li> **Obbligatorio:**<br/> No </li> <li> **Tipo:**<br/> string </li> <li> **Inviato con:**<br/> Inizio file multimediali, chiusura file multimediali </li> <li> **Min. Versione SDK:** 1.5.7 <br/>Disponibile in [Panoramica della raccolta di file multimediali](/help/media-collection-api/mc-api-overview.md) o [Download degli SDK - Versioni 2.2](/help/sdk-implement/download-sdks.md).  </li> <li> **Valore di esempio:**<br/> &quot;Random Bauhaus&quot; </li> <li> **Descrizione:**<br/> Nome dell’autore del contenuto audio.  <br/> **Data di rilascio: 13/09/18** </li></ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.publisher) </li> <li> **Heartbeat:**<br/> (s:meta:<br/>a.media.publisher) </li> </ul> | <ul> <li> **Disponibile:**<br/> Yes </li> <li> **Variabile riservata:**<br/>  eVar </li> <li> **Scadenza:**<br/> Su HIT </li> <li> **Nome rapporto:**<br/> </li> <li> **Dati contestuali:**<br/> (a.media.publisher) </li> <li> **Feed dati:**<br/> videoaudiopublisher </li> <li> **Audience Manager :**<br/> (c_contextdata.<br/>a.media.publisher) </li> </ul> |
 
-## Metriche audio e video {#audio-and-video-metrics}
+## Metriche per contenuti multimediali in streaming {#audio-and-video-metrics}
 
 ### Inizio file multimediali
 
