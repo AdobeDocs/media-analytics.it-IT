@@ -3,7 +3,7 @@ title: Federated Analytics
 description: Il servizio Federated Analytics fornisce un sistema per la condivisione  Adobe Analytics per lo streaming dei dati multimediali tra due partner.
 uuid: a82ace81-c2f6-4799-9a62-4c6a737a7dab
 translation-type: tm+mt
-source-git-commit: 4dad6507966e30accfb4f6c2eb5f1d6a5507d29d
+source-git-commit: 82b38f7870b6f890aaa812de30fa2d02d4f3ba8a
 workflow-type: tm+mt
 source-wordcount: '552'
 ht-degree: 92%
@@ -40,13 +40,13 @@ La funzione Federated Analytics rende la misurazione audio e video più efficien
 * **Contratto per i flussi multimediali:** per poter accedere ai dati audio e video in Adobe Analytics, il Destinatario e il Mittente devono aver stipulato un contratto con Adobe Analytics per i flussi di dati multimediali. Per ulteriori informazioni, contatta il team dell’account.
 * **Federated Addendum:** prima di inviare o ricevere i dati, ogni Mittente e Destinatario deve disporre di un addendum firmato insieme ad Adobe. È richiesto un addendum per cliente, non un addendum per partnership. Per ulteriori informazioni, contatta il team dell’account.
 
-* **Implementazione di Media Analytics:** il mittente deve avere Media Analytics implementato su tutti i lettori che faranno parte del set di dati federati. Solo i dati di Media Analytics sono disponibili per la federazione. Consulta la documentazione: [Misurazione del supporto Steaming in  Adobe Analytics](/help/media-overview.md)
+* **Implementazione di Media Analytics:** il mittente deve avere Media Analytics implementato su tutti i lettori che faranno parte del set di dati federati. Solo i dati di Media Analytics sono disponibili per la federazione. Consulta la documentazione: [Misurazione dei supporti in streaming in  Adobe Analytics](/help/media-overview.md)
 
 * **Contratto di consulenza Adobe:** per la configurazione iniziale di regole federate tra il destinatario e il mittente è utile ricorrere ai servizi di consulenza per rivedere i dati e creare l’accordo di condivisione dei dati.
 
 ## Download del modulo di Federated Analytics
 
-Per partecipare ad Federated Analytics, scaricate e completate il [Accordo sulle regole di federazione](federated-analytics-form.pdf) form.
+Per partecipare ad Federated Analytics, scaricate e completate il modulo [Federation Rules Agreement](federated-analytics-form.pdf).
 
 
 ## Processo {#process}
