@@ -6,7 +6,7 @@ user-guide-description: Implementa Analytics sulle sorgenti audio o video. Gli a
 product: adobe analytics
 sub-product: media analytics
 translation-type: tm+mt
-source-git-commit: da13db682f859cfd176a5ab379b7a0a947dc0e3a
+source-git-commit: 82b38f7870b6f890aaa812de30fa2d02d4f3ba8a
 workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 96%
@@ -14,7 +14,7 @@ ht-degree: 96%
 ---
 
 
-#  Adobe Analytics per streaming multimediale {#using}
+#  Adobe Analytics per lo streaming di file multimediali {#using}
 
 + [Misurazione dello streaming multimediale in  Adobe Analytics](media-overview.md)
 + [Dispositivi e piattaforme supportati](measurement-options/supported-devices.md)
@@ -45,9 +45,9 @@ ht-degree: 96%
          + [Configurazione JavaScript 3.x](sdk-implement/setup/setup-javascript/set-up-js-3.md)
       + [Configurazione Chromecast](sdk-implement/setup/set-up-chromecast.md)
       + [Configurazione Roku](sdk-implement/setup/set-up-roku.md)
-   + Track Steaming Media Playback {#track-av-playback}
+   + Track Streaming Media Playback {#track-av-playback}
       + [Panoramica](sdk-implement/track-av-playback/track-core-overview.md)
-      + Track Core Steaming Media Playback {#track-core}
+      + Tenere traccia della riproduzione dei contenuti multimediali in streaming {#track-core}
          + [Tracciamento riproduzione core su Android](sdk-implement/track-av-playback/track-core/track-core-android.md)
          + [Tracciamento riproduzione core su iOS](sdk-implement/track-av-playback/track-core/track-core-ios.md)
          + Tracciamento riproduzione core in JavaScript {#track-core-javascript}
@@ -199,7 +199,7 @@ ht-degree: 96%
    + [Guida di riferimento dettagliata](media-analytics-cookbook/media-analytics-cookbook.md)
    + [Attribuzione flusso multimediale](media-analytics-cookbook/media-dimensions.md)
 + Metriche e metadati {#metrics-and-metadata}
-   + [Parametri dei supporti di streaming](metrics-and-metadata/audio-video-parameters.md)
+   + [Parametri per lo streaming dei file multimediali](metrics-and-metadata/audio-video-parameters.md)
    + [Parametri annuncio](metrics-and-metadata/ad-parameters.md)
    + [Parametri capitolo](metrics-and-metadata/chapter-parameters.md)
    + [Parametri stato del lettore](metrics-and-metadata/player-state-parameters.md)
