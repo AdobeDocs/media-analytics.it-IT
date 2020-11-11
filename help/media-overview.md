@@ -1,9 +1,9 @@
 ---
-title: Misurazione del supporto Steaming in  Adobe Analytics
+title: Misurazione dello streaming multimediale in  Adobe Analytics
 description: Adobe Analytics for Media (altrimenti denominato Media Analytics) fornisce ai clienti una misurazione affidabile dei file multimediali per contenuto, audio e annunci pubblicitari.
 uuid: b3cbe240-b94d-42b8-a99c-0280334aaa14
 translation-type: tm+mt
-source-git-commit: fdec4da99a43d889690638f1ff3579e145548b69
+source-git-commit: 82b38f7870b6f890aaa812de30fa2d02d4f3ba8a
 workflow-type: tm+mt
 source-wordcount: '903'
 ht-degree: 85%
@@ -11,7 +11,7 @@ ht-degree: 85%
 ---
 
 
-# Misurazione del supporto Steaming in  Adobe Analytics{#measuring-audio-and-video-in-adobe-analytics}
+# Misurazione dello streaming multimediale in  Adobe Analytics{#measuring-audio-and-video-in-adobe-analytics}
 
 ![Banner](./assets/media_analytics_banner.png)
 
@@ -47,7 +47,7 @@ Utilizzando heartbeat  Adobe Analytics per Streaming Media potete ottenere i seg
 | Prezzi | Tracciamento trasparente per flusso multimediale (singolo) |
 | Implementazione e supporto | Configurazione semplificata con continui aggiornamenti e miglioramenti<br>Un processo di implementazione semplificato ti consente di mappare rapidamente le variabili tramite l’API del lettore e convalidare le implementazioni tramite lo strumento Adobe Debug per garantire che tutte le variabili necessarie siano tracciate con precisione. |
 | Condivisione partner | Federated Analytics e metriche certificate<br>Con i dati condivisi tramite Federated Analytics puoi sfruttare le nostre funzionalità avanzate di condivisione dei contenuti multimediali per valutare i dati in modo olistico tra tutti i partner di distribuzione di contenuti multimediali: operatori, programmatori e distributori. |
-| Tracciamento avanzato | Tracciamento dei contenuti scaricati, tracciamento del recupero errori e visualizzatori simultanei<br>Potete tenere traccia dei contenuti multimediali in streaming scaricati e riprodotti su un dispositivo, indipendentemente dalla connettività. |
+| Tracciamento avanzato | Download del tracciamento dei contenuti, monitoraggio del recupero errori e visualizzatori simultanei<br>È possibile tenere traccia del contenuto multimediale in streaming scaricato e riprodotto su un dispositivo, indipendentemente dalla connettività. |
 
 
 
