@@ -1,21 +1,12 @@
 ---
-source-git-commit: 7dbbd8b77801243a4a557be811dc678156c39d31
+source-git-commit: 4c4f296aced1e0e65a5fef7cf26ee9f6481139dd
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '568'
-ht-degree: 72%
+source-wordcount: '434'
+ht-degree: 91%
 
 ---
 # Contribuire agli articoli
-
-| EXL-PR | EXL | Anteprima | Attiva | Data di pubblicazione | Aiuto |
-|--- |--- |--- |--- |--- |--- |
-| [![Stato build](https://docs.ci.corp.adobe.com/view/exl-pr/job/media-analytics.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/media-analytics.en_pr-exl/lastBuild/) | [![Stato build](https://docs.ci.corp.adobe.com/view/exl-pr/job/media-analytics.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/media-analytics.en_exl/lastBuild/lastBuild) | [URL anteprima](https://experienceleague.corp.adobe.com/docs/media-analytics/using/media-overview.html?lang=en) | [activate-exl](https://docs.ci.corp.adobe.com/job/activate-exl/build/) | [URL dal vivo](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=en) | [Guida all’authoring](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
-
-| Produzione | Stage |
-|---|---|
-| [![Stato build](https://docs.ci.corp.adobe.com/job/media-analytics.en_production/badge/icon)](https://docs.ci.corp.adobe.com/job/media-analytics.en_production/lastBuild) | [![Stato build](https://docs.ci.corp.adobe.com/job/media-analytics.en_stage/badge/icon)](https://docs.ci.corp.adobe.com/job/media-analytics.en_stage/lastBuild) |
-| [Prod di output](https://docs.adobe.com/content/help/it-IT/media-analytics/using/media-overview.html) | [Output Stg](https://docs-stg.corp.adobe.com/content/help/en/media-analytics/using/media-overview.html) |
 
 Apprezziamo i contributi dalla community e da dipendenti Adobe esterni ai team di documentazione.
 
@@ -45,7 +36,7 @@ If you submit a pull request with significant changes to documentation and code 
 
 ### Modifiche principali da dipendenti Adobe
 
-Se sei un autore tecnico, un responsabile di programma o uno sviluppatore del team di prodotti per una soluzione Adobe Experience Cloud e hai il compito di contribuire o creare articoli tecnici, devi usare l’archivio privato [git.corp.adobe.com/AdobeDocs](https://git.corp.adobe.com/AdobeDocs). <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
+Se sei un autore tecnico, un responsabile di programma o uno sviluppatore del team di prodotti per una soluzione Adobe Experience Cloud e hai il compito di contribuire o creare articoli tecnici, devi utilizzare il repository privato [git.corp.adobe.com/AdobeDocs](https://git.corp.adobe.com/AdobeDocs). <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
 ## Strumenti e configurazione
 
