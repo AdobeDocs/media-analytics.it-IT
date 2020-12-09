@@ -2,9 +2,9 @@
 title: Piattaforme e dispositivi supportati
 description: ' Adobe Analytics per Streaming Media garantisce che ogni flusso multimediale venga raccolto e segnalato su tutti i dispositivi.'
 translation-type: tm+mt
-source-git-commit: fdec4da99a43d889690638f1ff3579e145548b69
+source-git-commit: dfffcf1e1d815ca178e0bdba881d973d60fe1631
 workflow-type: tm+mt
-source-wordcount: '336'
+source-wordcount: '337'
 ht-degree: 20%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 20%
 
 >[!IMPORTANT]
 >
->Con la fine del supporto per gli SDK della versione 4 per dispositivi mobili il 31 agosto 2021,  Adobe interromperà anche il supporto per l’SDK di Media Analytics per iOS e Android.  Per ulteriori informazioni, vedete [Domande frequenti sull’SDK di Media Analytics per la fine del supporto](/help/sdk-implement/end-of-support-faqs.md).
+>Con la fine del supporto per gli SDK della versione 4 per dispositivi mobili il 31 agosto 2021,  Adobe interromperà anche il supporto per l’SDK di Media Analytics per iOS e Android.  Per ulteriori informazioni, consultate [Domande frequenti relative alla fine del supporto per l&#39;SDK di Media Analytics](/help/sdk-implement/end-of-support-faqs.md).
 
  Adobe Analytics per Streaming Media supporta tutti i principali dispositivi, tra cui:
 
@@ -28,19 +28,19 @@ Per i dispositivi o le piattaforme che al momento non dispongono del supporto SD
 
 La tabella seguente elenca i dispositivi e le piattaforme attualmente supportati. Per scaricare la versione più recente dell’SDK, consulta [Scaricare gli SDK](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/download-sdks.html). Se un dispositivo non è elencato, contatta l’assistenza clienti o il consulente della soluzione per informazioni sullo stato del dispositivo.
 
-| Piattaforme e dispositivi di streaming |  | Estensione Media Launch con SDK AEP | Media SDK | API Media Collection |
+| Piattaforme e dispositivi di streaming |  | Estensione Media Launch con SDK AEP Mobile | Media SDK | API Media Collection |
 |:---------------------------:|:-----------------------------------------------:|:----------------------------:|:-------------------:|:--------------------:|
 | Web/Mobile |  |  |  |  |
 |  | Browser JavaScript | ![](/help/assets/icon-blue-check.png) | ![](/help/assets/icon-blue-check.png)    | ![](/help/assets/icon-blue-check.png) |
 | App mobile |  |  |  |  |
 |  | Dispositivi iOS | ![](/help/assets/icon-blue-check.png) | ![](/help/assets/icon-blue-check.png) <sup>1</sup> | ![](/help/assets/icon-blue-check.png) |
-|  | Dispositivi Android | ![](/help/assets/icon-blue-check.png) | ![](/help/assets/icon-blue-check.png) <sup>1</sup> | ![](/help/assets/icon-blue-check.png) |
+|  | Dispositivi Android | ![](/help/assets/icon-blue-check.png) | ![](/help/assets/icon-blue-check.png) <sup>3</sup> | ![](/help/assets/icon-blue-check.png) |
 |  | Dispositivi Windows |  |  | ![](/help/assets/icon-blue-check.png) |
 | OTT |  |  |  |  |
-|  | Apple TV (tvOS) | ![](/help/assets/icon-blue-check.png) | ![](/help/assets/icon-blue-check.png) <sup>1</sup> | ![](/help/assets/icon-blue-check.png) |
+|  | Apple TV (tvOS) | ![](/help/assets/icon-blue-check.png) | ![](/help/assets/icon-blue-check.png) <sup>3</sup> | ![](/help/assets/icon-blue-check.png) |
 |  | ROKU |  | ![](/help/assets/icon-blue-check.png)   <br>(BrightScript)    | ![](/help/assets/icon-blue-check.png)<br>(nativo) |
 |  | Fire TV (Fire OS) | ![](/help/assets/icon-blue-check.png) | ![](/help/assets/icon-blue-check.png) <sup>1</sup> | ![](/help/assets/icon-blue-check.png) |
-|  | Android TV | ![](/help/assets/icon-blue-check.png) | ![](/help/assets/icon-blue-check.png) <sup>1</sup> | ![](/help/assets/icon-blue-check.png) |
+|  | Android TV | ![](/help/assets/icon-blue-check.png) | ![](/help/assets/icon-blue-check.png) <sup>3</sup> | ![](/help/assets/icon-blue-check.png) |
 |  | Chromecast |  | ![](/help/assets/icon-blue-check.png)    | ![](/help/assets/icon-blue-check.png) |
 |  | Console di gioco (ad es. Xbox ONE, Sony PS3/PS4) |  |  | ![](/help/assets/icon-blue-check.png) |
 |  | Set Top Boxes (es. xfinity X1) |  |  | ![](/help/assets/icon-blue-check.png) |
@@ -48,6 +48,6 @@ La tabella seguente elenca i dispositivi e le piattaforme attualmente supportati
 | Altro |  |  |  |  |
 |  | Nuovi dispositivi collegati |  |  | ![](/help/assets/icon-blue-check.png) |
 
-1. Il supporto per questi SDK termina il 31 agosto 2021. Per ulteriori informazioni, vedete [Domande frequenti sull’SDK di Media Analytics per la fine del supporto](/help/sdk-implement/end-of-support-faqs.md).
+1. Il supporto per questi SDK termina il 31 agosto 2021. Per ulteriori informazioni, consultate [Domande frequenti relative alla fine del supporto per l&#39;SDK di Media Analytics](/help/sdk-implement/end-of-support-faqs.md).
 
-Per ulteriori informazioni sulle versioni minime della piattaforma supportate per ogni SDK, vedi [Supporto versione minima della piattaforma](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/setup/setup-overview.html)
+Per ulteriori informazioni sulle versioni minime delle piattaforme supportate per ogni SDK, consulta [Supporto delle versioni minime della piattaforma](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/setup/setup-overview.html)
