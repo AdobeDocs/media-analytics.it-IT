@@ -2,9 +2,9 @@
 title: Domande frequenti relative alla fine del supporto per l’SDK di Media Analytics
 description: Questo argomento include domande frequenti sulla fine del supporto per gli SDK di Media Analytics.
 translation-type: tm+mt
-source-git-commit: 82b38f7870b6f890aaa812de30fa2d02d4f3ba8a
+source-git-commit: dfffcf1e1d815ca178e0bdba881d973d60fe1631
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '679'
 ht-degree: 1%
 
 ---
@@ -16,9 +16,9 @@ Con la fine del supporto per gli SDK della versione 4 per dispositivi mobili il 
 
 ## Le 5 cose più importanti da sapere
 
-1. Gli SDK di Mobile v4 non saranno più supportati dopo il 31 agosto 2021. Esegui la migrazione agli SDK Adobe Experience Platform (AEP) per iOS e Android. Per ulteriori informazioni, consultate [Versione 4 SDK per dispositivi mobili - Domande frequenti sulla fine del supporto](https://aep-sdks.gitbook.io/docs/version-4-sdk-end-of-support-faq).
+1. Gli SDK di Mobile v4 non saranno più supportati dopo il 31 agosto 2021. Esegui la migrazione agli SDK per dispositivi mobili Adobe Experience Platform (AEP) per iOS e Android. Per ulteriori informazioni, consultate [Versione 4 SDK per dispositivi mobili - Domande frequenti sulla fine del supporto](https://aep-sdks.gitbook.io/docs/version-4-sdk-end-of-support-faq).
 
-1. L’implementazione di Analytics per Streaming Media richiede l’SDK AEP e l’utilizzo delle estensioni Analytics e Media Analytics. A partire dal 1° settembre 2021, è necessario utilizzare i nuovi SDK AEP e le nuove estensioni.  Le estensioni Media Analytics sono configurate tramite  lancio Adobe.  Per ulteriori informazioni, consultate [Migrazione dall&#39;SDK per file multimediali indipendenti al lancio  Adobe](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/sdk-to-launch/sdk-to-launch-migration.html)
+1. L’implementazione di Analytics per Streaming Media richiede l’SDK di AEP Mobile e l’utilizzo delle estensioni Analytics e Media Analytics. A partire dal 1 settembre 2021, è necessario utilizzare i nuovi SDK AEP Mobile e le nuove estensioni.  Le estensioni Media Analytics sono configurate tramite  lancio Adobe.  Per ulteriori informazioni, consultate [Migrazione dall&#39;SDK per file multimediali indipendenti al lancio  Adobe](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/sdk-to-launch/sdk-to-launch-migration.html)
 
 1. Lo sviluppo di funzioni è terminato per gli SDK di Media Analytics per iOS e Android.  Le nuove funzioni introdotte a partire dall’autunno 2019 sono abilitate utilizzando le estensioni Media Analytics e l’API Media Collection.
 
