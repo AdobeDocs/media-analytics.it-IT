@@ -1,20 +1,20 @@
 ---
 audience: end-user
-user-guide-title: ' Adobe Analytics per streaming multimediale'
+user-guide-title: Adobe Analytics per contenuti in streaming
 breadcrumb-title: Guida all'analisi dei supporti multimediali
 user-guide-description: Implementa Analytics sulle sorgenti audio o video. Gli argomenti trattati comprendono Media SDK e Media Collection API.
 product: adobe analytics
 sub-product: media analytics
 translation-type: tm+mt
-source-git-commit: 82b38f7870b6f890aaa812de30fa2d02d4f3ba8a
+source-git-commit: a6f9c93c8c21f261eb5b592d4a2d8c9d2532efee
 workflow-type: tm+mt
 source-wordcount: '830'
-ht-degree: 96%
+ht-degree: 97%
 
 ---
 
 
-#  Adobe Analytics per lo streaming di file multimediali {#using}
+# Adobe Analytics per contenuti in streaming {#using}
 
 + [Misurazione dello streaming multimediale in  Adobe Analytics](media-overview.md)
 + [Dispositivi e piattaforme supportati](measurement-options/supported-devices.md)
@@ -220,8 +220,6 @@ ht-degree: 96%
    + [Ottenere i dati dei visualizzatori simultanei tramite API](media-reports/media-default-reports/get-concurrent-json20.md)
 + [Tracciamento contenuto scaricato](media-collection-api/track-downloaded-content.md)
 + [Federated Analytics](federated-analytics.md)
-
-<!-- + Basic Streaming Media Measurement for Adobe Analytics Ultimate{#basic-streaming-measurement} -->
 + Tracciamento dello stato del lettore {#player-state-tracking}
    + [Panoramica](sdk-implement/player-state-tracking/player-state-overview.md)
    + [Stati standard e personalizzati](sdk-implement/player-state-tracking/standard-and-custom-states.md)
