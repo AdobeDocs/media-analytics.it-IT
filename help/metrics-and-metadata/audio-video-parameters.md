@@ -3,9 +3,9 @@ title: Parametri audio e video
 description: null
 uuid: fdacfb8b-db3e-46fb-b9ad-c3a749555b2a
 translation-type: tm+mt
-source-git-commit: 82b38f7870b6f890aaa812de30fa2d02d4f3ba8a
+source-git-commit: c4d48d2ba1bec8afc7cfd8d625c6b654056e5489
 workflow-type: tm+mt
-source-wordcount: '6234'
+source-wordcount: '6235'
 ht-degree: 2%
 
 ---
@@ -53,7 +53,7 @@ Descrizione dati tabella:
 
 |   Implementazione   | Parametri di rete | Generazione di rapporti |
 | --- | --- | --- |
-| <ul> <li> **Chiave SDK:**<br/> [streamType](./audio-video-parameters.md#create-media-object) </li> <li> **Chiave API:**<br/> media.streamType </li> <li> **Obbligatorio:**<br/> Sì </li> <li> **Tipo:**<br/> stringa </li> <li> **Inviato con:Avvio**<br/> file multimediali, Chiusura file multimediali </li> <li> **Min. Versione SDK:** 2.2 <br/><br/>Disponibile in [Panoramica API di Media Collection](/help/media-collection-api/mc-api-overview.md) o [Download di SDK - Versioni 2.2](/help/sdk-implement/download-sdks.md).  </li>  <li> **Valore di esempio:**<br/> &quot;video&quot; </li> <li> **Descrizione:**<br/> identifica il tipo di flusso. I valori validi sono &quot;audio&quot;, &quot;video&quot; e &quot;.  <br/><br/>[Segmenti](/help/metrics-and-metadata/segments.md) di reporting:  <br/><br/>Tipo di flusso multimediale: All -  <br/>Segment all media stream data; Regola: Il contenuto (ID) esiste come tipo di flusso  <br/><br/>multimediale: Audio -  <br/>Segmenta tutti i dati del flusso audio; Regola: Il contenuto (ID) esiste e il tipo di flusso multimediale = tipo di flusso  <br/><br/>multimediale audio: &quot;Video&quot; -  <br/>Segmenta tutti i dati del flusso video; Regola: Il contenuto (ID) esiste e il tipo di flusso multimediale != audio <br/><br/> **Data di rilascio: 13/09/18** </li></ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.streamType) </li> <li> **Heartbeat:**<br/> (s:meta:<br/>a.media.streamType) </li> </ul> | <ul> <li> **Disponibile:**<br/> Sì </li> <li> **Variabile Riservata:**<br/>  eVar </li> <li> **Scadenza:**<br/> IN VISITA </li> <li> **Nome Rapporto:**<br/> Contenuto </li> <li> **Dati contestuali:**<br/> (a.media.streamType) </li> <li> **Feed dati:**<br/> videostreamtype </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.streamType) </li> </ul> |
+| <ul> <li> **Chiave SDK:**<br/> [streamType](./audio-video-parameters.md#create-media-object) </li> <li> **Chiave API:**<br/> media.streamType </li> <li> **Obbligatorio:**<br/> Sì </li> <li> **Tipo:**<br/> stringa </li> <li> **Inviato con:Avvio**<br/> file multimediali, Chiusura file multimediali </li> <li> **Min. Versione SDK:** 2.2 <br/><br/>Disponibile in [Panoramica API di Media Collection](/help/media-collection-api/mc-api-overview.md) o [Download di SDK - Versioni 2.2](/help/sdk-implement/download-sdks.md).  </li>  <li> **Valore di esempio:**<br/> &quot;video&quot; </li> <li> **Descrizione:**<br/> identifica il tipo di flusso. I valori validi sono &quot;audio&quot;, &quot;video&quot; e &quot;.  <br/><br/>[Segmenti](/help/metrics-and-metadata/segments.md) di reporting:  <br/><br/>Tipo di flusso multimediale: All -  <br/>Segment all media stream data; Regola: Il contenuto (ID) esiste come tipo di flusso  <br/><br/>multimediale: Audio -  <br/>Segmenta tutti i dati del flusso audio; Regola: Il contenuto (ID) esiste e il tipo di flusso multimediale = tipo di flusso  <br/><br/>multimediale audio: &quot;Video&quot; -  <br/>Segmenta tutti i dati del flusso video; Regola: Il contenuto (ID) esiste e il tipo di flusso multimediale != audio <br/><br/> **Data di rilascio: 13/09/18** </li></ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.streamType) </li> <li> **Heartbeat:**<br/> (s:meta:<br/>a.media.streamType) </li> </ul> | <ul> <li> **Disponibile:**<br/> Sì </li> <li> **Variabile Riservata:**<br/>  eVar </li> <li> **Scadenza:**<br/> sull&#39;HIT </li> <li> **Nome Report:Tipo**<br/> Flusso </li> <li> **Dati contestuali:**<br/> (a.media.streamType) </li> <li> **Feed dati:**<br/> videostreamtype </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.streamType) </li> </ul> |
 
 ```
 public static MediaObject createMediaObject(java.lang.String name,
