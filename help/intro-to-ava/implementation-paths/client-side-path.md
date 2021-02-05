@@ -1,24 +1,27 @@
 ---
-title: Lato client
-description: null
+title: Cosa sono le integrazioni lato client e Media Analytics?
+description: Scopri come Media Analytics funziona con le integrazioni lato client e con Media SDK e/o con Media Collection API.
 uuid: ba0496e2-585a-4176-b583-c705726fecc6
 translation-type: tm+mt
-source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
+source-git-commit: 5f0de1e0f0694987c6bab0bd97ac8c98e843f23a
+workflow-type: tm+mt
+source-wordcount: '152'
+ht-degree: 0%
 
 ---
 
 
 # Lato client{#client-side}
 
-Media Analytics (Heartbeats) è la soluzione standard di Adobe per il monitoraggio dei contenuti multimediali. Ha sostituito il vecchio modello Milestone di Adobe.
+Media Analytics (Heartbeats) è  soluzione standard di monitoraggio dei supporti del Adobe. che ha sostituito  Adobe  modello Milestone.
 
-Le integrazioni lato client sono implementate solo con Media Analytics. Potete scegliere di implementare Media SDK o l'API di Media Collection (o entrambe). Il percorso sul lato client può essere utilizzato da qualsiasi lettore, inclusi clienti e/o lettori OVP come Brightcove, Ooyala, la piattaforma e così via.
+Le integrazioni lato client sono implementate solo con Media Analytics. Potete scegliere di implementare Media SDK o l&#39;API di Media Collection (o entrambe). Il percorso sul lato client può essere utilizzato da qualsiasi lettore, inclusi clienti e/o lettori OVP come Brightcove, Ooyala, la piattaforma e così via.
 
-Se Media Analytics è il percorso previsto, consulta [Media SDK Implementation](/help/sdk-implement/setup/setup-overview.md) and [Media Collection API.](/help/media-collection-api/mc-api-overview.md)
+Se Media Analytics è il percorso previsto, consultate [Media SDK Implementation](/help/sdk-implement/setup/setup-overview.md) e [Media Collection API.](/help/media-collection-api/mc-api-overview.md)
 
 >[!IMPORTANT]
 >
->Per utilizzare Media Analytics, i clienti devono anche utilizzare Adobe Analytics.
+>Per utilizzare Media Analytics, i clienti devono anche utilizzare  Adobe Analytics.
 
 >[!NOTE]
 >
