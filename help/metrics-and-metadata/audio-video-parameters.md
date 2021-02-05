@@ -3,9 +3,9 @@ title: Parametri audio e video
 description: null
 uuid: fdacfb8b-db3e-46fb-b9ad-c3a749555b2a
 translation-type: tm+mt
-source-git-commit: 5802a474588a6df6c66e0d1d7cb2fd30f83e4e3d
+source-git-commit: b1b94b4cde74908ea528fb69d78250dc1da1db80
 workflow-type: tm+mt
-source-wordcount: '6245'
+source-wordcount: '6243'
 ht-degree: 2%
 
 ---
@@ -199,7 +199,7 @@ public static MediaObject createMediaObject(java.lang.String name,
 
 |   Implementazione   | Parametri di rete | Generazione di rapporti |
 | --- | --- | --- |
-| <ul> <li> **Chiave SDK:**<br/> STREAM_FORMAT </li> <li> **Chiave API:**<br/> N/D </li> <li> **Obbligatorio:**<br/> No </li> <li> **Tipo:**<br/> stringa </li> <li> **Inviato con:Avvio**<br/> file multimediali, Chiusura file multimediali </li> <li> **Min. Versione SDK:** 1.5.7 </li> <li> **Valore di esempio:**<br/> &quot;Live&quot; </li> <li> **Descrizione:**<br/> Formato del flusso (Live, VOD, Linear).  </li></ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.format) </li> <li> **Heartbeat:**<br/> (s:meta:<br/>a.media.format) </li> </ul> | <ul> <li> **Disponibile:**<br/> Usa regola di elaborazione personalizzata </li> <li> **Variabile Riservata:**<br/> N/D </li> <li> **Nome Rapporto:**<br/> Personalizzato </li> <li> **Dati contestuali:**<br/> (a.media.format) </li> <li> **Feed di dati:**<br/> N/D </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.format) </li> </ul> |
+| <ul> <li> **Chiave SDK:**<br/> STREAM_FORMAT </li> <li> **Chiave API:**<br/> media.streamFormat </li> <li> **Obbligatorio:**<br/> No </li> <li> **Tipo:**<br/> stringa </li> <li> **Inviato con:Avvio**<br/> file multimediali, Chiusura file multimediali </li> <li> **Min. Versione SDK:** 1.5.7 </li> <li> **Valore di esempio:**<br/> &quot;HD&quot; </li> <li> **Descrizione:**<br/> Formato del flusso (HD, SD)  </li></ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.format) </li> <li> **Heartbeat:**<br/> (s:meta:<br/>a.media.format) </li> </ul> | <ul> <li> **Disponibile:**<br/> Usa regola di elaborazione personalizzata </li> <li> **Variabile Riservata:**<br/> N/D </li> <li> **Nome Rapporto:**<br/> Personalizzato </li> <li> **Dati contestuali:**<br/> (a.media.format) </li> <li> **Feed di dati:**<br/> N/D </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.format) </li> </ul> |
 
 ### Stagione
 
