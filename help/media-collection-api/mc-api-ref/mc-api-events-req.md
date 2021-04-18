@@ -1,14 +1,17 @@
 ---
-title: Eventi, richiesta
-description: null
+title: Richiesta eventi
+description: Richiesta eventi
 uuid: b237f0a0-dc29-418b-89ee-04c596a27f39
+exl-id: ee0dd8a6-1529-4258-af12-0e2f5948ec38
 translation-type: tm+mt
-source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
+source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
+workflow-type: tm+mt
+source-wordcount: '246'
+ht-degree: 6%
 
 ---
 
-
-# Eventi, richiesta{#events-request}
+# Richiesta eventi{#events-request}
 
 ```
 POST 
@@ -17,7 +20,7 @@ https://{uri}/api/v1/sessions/{sid}/events
 
 ## Parametro URI
 
-`sid`: L'ID sessione restituito da una richiesta di [sessioni.](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md)
+`sid`: L&#39;ID sessione restituito da una richiesta  [Sessions.](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md)
 
 ## Corpo della richiesta
 
@@ -37,20 +40,20 @@ Il corpo della richiesta deve essere JSON e deve avere la stessa struttura del c
 ```
 
 * `playerTime` (Obbligatorio)
-   * `playhead` - Deve essere in secondi, ma può essere un float.
-   * `ts` - marca temporale; deve essere in millisecondi.
+   * `playhead` - Deve essere in secondi, ma può essere un galleggiante.
+   * `ts` - Timestamp; deve essere in millisecondi.
 * `eventType` (Obbligatorio)
 * `params` (Facoltativo)
-* `customMetadata` (Facoltativo; invio solo con `adStart` e con i tipi di `chapterStart` evento)
+* `customMetadata` (Facoltativo; invia solo con  `adStart` e i tipi di  `chapterStart` evento)
 * `qoeData` (Facoltativo)
 
-Per un elenco dei tipi di evento validi per questa versione, consultate Tipi di [evento e descrizioni.](/help/media-collection-api/mc-api-ref/mc-api-event-types.md)
+Per un elenco dei tipi di evento validi per questa versione, consulta [Tipi di evento e descrizioni.](/help/media-collection-api/mc-api-ref/mc-api-event-types.md)
 
 >[!IMPORTANT]
 >
->***Ad Tracking -**Puoi tenere traccia solo degli annunci all’interno di un`adBreak`*.
+>***Tracciamento annunci -**Puoi tenere traccia solo degli annunci all’interno di un`adBreak`*.
 >
->In assenza di annunci `adBreakStart` e `adBreakComplete` "reggilibri" intorno agli annunci, `adStart` e `adComplete` gli eventi saranno semplicemente ignorati, e la durata dell'annuncio corrispondente verrà tracciata come durata del contenuto principale. Ciò potrebbe avere un impatto significativo sui dati aggregati che saranno disponibili in Adobe Analytics.
+>In assenza degli eventi `adBreakStart` e `adBreakComplete` &quot;bookend&quot; intorno agli annunci, `adStart` e `adComplete` verranno semplicemente ignorati e la corrispondente durata dell’annuncio verrà tracciata come durata del contenuto principale. Ciò potrebbe avere un impatto significativo sui dati aggregati che saranno disponibili in Adobe Analytics.
 
 ## Risposta
 
@@ -69,9 +72,8 @@ Access-Control-Expose-Headers Location
 
 | Codice di risposta HTTP | Descrizione | Elementi azione client |
 |---|---|---|
-| **204** | **Nessun contenuto.** La chiamata <br/><br/>Heartbeat ha avuto successo. | N/D |
-| **400** | **Richiesta non valida.** Formato <br/><br/>della richiesta non corretto. | Controllate gli schemi [di convalida](/help/media-collection-api/mc-api-ref/mc-api-json-validation.md) JSON per il tipo di richiesta. |
-| **404** | **Non trovato.** <br/><br/>L'ID sessione per la sessione multimediale non è stato trovato nel servizio back-end. | L'applicazione client deve utilizzare l'API di richiesta [](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) Sessions per creare un'altra sessione multimediale e per eseguire il tracciamento dei report su di essa. |
-| **410** | **Andato.** <br/><br/>La sessione multimediale è stata trovata nel servizio back-end, ma il client non può più generare rapporti sull'attività. | L'applicazione client deve utilizzare l'API di richiesta [](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) Sessions per creare un'altra sessione multimediale e per eseguire il tracciamento dei report su di essa. |
+| **204** | **Nessun contenuto.** <br/><br/>Chiamata Heartbeat riuscita. | N/D |
+| **400** | **Richiesta non valida.** <br/><br/>Formato della richiesta non corretto. | Controlla gli [schemi di convalida JSON](/help/media-collection-api/mc-api-ref/mc-api-json-validation.md) per il tipo di richiesta. |
+| **404** | **Non trovato.** <br/><br/>Impossibile trovare l&#39;ID sessione per la sessione multimediale nel servizio back-end. | L&#39;applicazione client deve utilizzare l&#39;API [Richiesta sessioni](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) per creare un&#39;altra sessione multimediale e generare rapporti su di essa. |
+| **410** | **Andato.** <br/><br/>La sessione multimediale è stata trovata nel servizio back-end, ma il client non può più segnalare l&#39;attività su di esso. | L&#39;applicazione client deve utilizzare l&#39;API [Richiesta sessioni](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) per creare un&#39;altra sessione multimediale e generare rapporti su di essa. |
 | **500** | **Errore del server** | N/D |
-
