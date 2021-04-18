@@ -1,20 +1,23 @@
 ---
-title: Invio di eventi di ping
-description: null
+title: Invio di eventi ping
+description: Invio di eventi ping
 uuid: c92c1a92-3af6-4474-9e42-ffb8f6c94b33
+exl-id: 0a645363-26d5-41e7-aa16-c775253e2b1d
 translation-type: tm+mt
-source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
+source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
+workflow-type: tm+mt
+source-wordcount: '88'
+ht-degree: 0%
 
 ---
 
+# Invio di eventi ping{#sending-ping-events}
 
-# Invio di eventi di ping{#sending-ping-events}
+**Per il contenuto principale, è necessario attivare gli eventi di ping ogni 10 secondi, a partire da dopo 10 secondi di riproduzione, indipendentemente dagli altri eventi API inviati. Per il tracciamento degli annunci, è necessario attivare gli eventi di ping ogni 1 secondo.**
 
-**Per il contenuto principale, è necessario attivare gli eventi di ping ogni 10 secondi, a partire da 10 secondi di riproduzione, indipendentemente dagli altri eventi API inviati. Per il tracciamento degli annunci, devi attivare gli eventi di ping ogni 1 secondo.**
+Gli eventi ping sono letteralmente il &quot;battito cardiaco&quot; di Media Analytics. Gli unici parametri richiesti per una chiamata ping sono `eventType: ping` insieme all&#39;oggetto `playerTime` (posizione della testina di riproduzione e marca temporale).
 
-Gli eventi ping sono letteralmente il "battito di cuore" di Media Analytics. Gli unici parametri richiesti per una chiamata ping sono `eventType: ping` insieme all' `playerTime` oggetto (posizione dell'indicatore di riproduzione e marca temporale).
-
-Il frammento di codice seguente mostra un modo per implementare un meccanismo di ping temporizzato per il contenuto principale (10 secondi di intervallo):
+Il seguente frammento di codice mostra un modo per implementare un meccanismo di ping temporizzato per il contenuto principale (10 secondi di intervallo):
 
 ```js
 ... 
@@ -34,4 +37,3 @@ var Pinger = {
     } 
 }
 ```
-
