@@ -1,27 +1,29 @@
 ---
 title: Condizioni di timeout
-description: null
+description: Condizioni di timeout
 uuid: 2a4ea13e-a561-4adf-b567-f980301b32c8
+exl-id: 0b494b27-a4a6-4af7-84c1-c44b33b6da8f
 translation-type: tm+mt
-source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
+source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
+workflow-type: tm+mt
+source-wordcount: '156'
+ht-degree: 0%
 
 ---
 
-
 # Condizioni di timeout{#timeout-conditions}
 
-**Condizioni di timeout dell'API di Media Collection**
+**Condizioni di timeout API di Media Collection**
 
-L'API di Media Collection, senza stato, non dispone dello stesso meccanismo dell'SDK di Media per l'emissione di un nuovo ID sessione quando si verificano le condizioni di timeout. Quando si verifica una condizione di timeout, il back end chiuderà la sessione e tutte le chiamate successive effettuate con tale ID sessione verranno ignorate. La logica che gestisce un timeout sessione deve essere gestita nel client. In altre parole, il lettore dovrà monitorare le condizioni di timeout e ottenere un nuovo ID sessione se si verifica un timeout.
+L’API Media Collection, senza stato, non dispone dello stesso meccanismo dell’SDK Media per l’emissione di un nuovo ID sessione quando si verificano le condizioni di timeout. Quando si verifica una condizione di timeout, il back end chiude la sessione e tutte le chiamate successive effettuate con tale ID sessione vengono ignorate. La logica che gestisce un timeout sessione deve essere gestita nel client. In altre parole, il lettore dovrà monitorare le condizioni di timeout e ottenere un nuovo ID sessione se si verifica un timeout.
 
 * **10 minuti: Nessun evento API**
 
    Se il back-end non riceve eventi API, la sessione verrà chiusa.
-* **30 minuti: Nessuna modifica dell'indicatore di riproduzione**
+* **30 minuti: Nessuna modifica della sequenza di riproduzione**
 
-   Se l'indicatore di riproduzione non si sposta per 30 minuti (ad esempio, se l'utente tocca Pausa e se ne va), il back-end chiuderà la sessione.
+   Se l&#39;indicatore di riproduzione non si sposta per 30 minuti (ad esempio, l&#39;utente colpisce Pause e se ne va), il back-end chiuderà la sessione.
 
 >[!NOTE]
 >
->Potete anche forzare la fine di una sessione inviando una `events` richiesta con il tipo di `sessionEnd` evento.
-
+>Puoi anche forzare la fine di una sessione inviando una richiesta `events` con il tipo di evento `sessionEnd` .
