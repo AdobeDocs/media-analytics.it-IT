@@ -1,16 +1,19 @@
 ---
-title: Panoramica dei supporti
-description: null
+title: Panoramica dei contenuti multimediali
+description: Panoramica dei contenuti multimediali
 uuid: bdbd998f-9b5e-40c9-a8ea-12dfa5acd35c
+exl-id: 4fe91372-da41-44c5-bea9-2bba762512ef
 translation-type: tm+mt
-source-git-commit: 5a4f15616712ee91bc028258991fc4e7359698a5
+source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
+workflow-type: tm+mt
+source-wordcount: '93'
+ht-degree: 1%
 
 ---
 
+# Panoramica dei contenuti multimediali{#media-overview}
 
-# Media overview{#media-overview}
-
-Il dashboard Panoramica file multimediali è progettato per consentire il monitoraggio dei contenuti multimediali nel sito. La visualizzazione Panoramica file multimediali mostra diverse misurazioni aggregate in modo da poter monitorare rapidamente le prestazioni dei supporti come previsto. Un grafico mostra il contenuto che inizia accanto all’annuncio e inizia a consentirvi di visualizzare rapidamente queste metriche per ciascun elemento multimediale.
+Il dashboard Panoramica file multimediali è progettato per consentire il monitoraggio dei contenuti multimediali nel sito. La visualizzazione Panoramica file multimediali mostra diverse misurazioni aggregate in modo da poter monitorare rapidamente le prestazioni del supporto come previsto. Un grafico mostra il contenuto che inizia accanto ad e inizia a consentirti di visualizzare rapidamente queste metriche per ogni elemento multimediale.
 
 ![](assets/media_overview.png)
 
@@ -20,7 +23,7 @@ Il dashboard Panoramica file multimediali è progettato per consentire il monito
 
 ## Filtri rapidi {#quick-filters}
 
-Visualizzare rapidamente le metriche relative agli elementi multimediali in base al dispositivo o al paese geografico:
+Visualizzare rapidamente le metriche dei contenuti multimediali in base al dispositivo o al paese geografico:
 
 ![](assets/video-overview-report-filters.png)
 
@@ -28,11 +31,11 @@ Visualizzare rapidamente le metriche relative agli elementi multimediali in base
 ![](assets/video-overview-report-filters.png){width="400px"}
 -->
 
-## Media Performance {#media-performance}
+## Prestazioni file multimediali {#media-performance}
 
-Fate clic e trascinate per ingrandire, quindi passate il mouse per visualizzare le metriche granulari per specifici supporti. Fai clic su  ![](assets/video-overview-report-revert.png)
+Fai clic e trascina per ingrandire, quindi passa il mouse per visualizzare le metriche granulari per specifici file multimediali. Fai clic su  ![](assets/video-overview-report-revert.png)
 
-per ripristinare la visualizzazione dopo lo zoom.
+per reimpostare la visualizzazione dopo lo zoom.
 
 ![](assets/media_overview_zoom.png)
 
