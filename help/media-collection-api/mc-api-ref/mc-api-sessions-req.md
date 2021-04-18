@@ -1,12 +1,15 @@
 ---
 title: Richiesta sessioni
-description: null
+description: Richiesta sessioni
 uuid: 9609192d-4f7f-4fb5-844f-ea89d47c4e30
+exl-id: f55f5838-610f-4f82-b3c5-72165ea2c86b
 translation-type: tm+mt
-source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
+source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
+workflow-type: tm+mt
+source-wordcount: '80'
+ht-degree: 10%
 
 ---
-
 
 # Richiesta sessioni{#sessions-request}
 
@@ -17,7 +20,7 @@ https://{uri}/api/v1/sessions
 
 ## Parametri URI
 
-Nessuno
+None
 
 ## Corpo della richiesta
 
@@ -58,11 +61,11 @@ Il corpo della richiesta deve essere JSON e deve avere la stessa struttura del c
 ```
 
 * `playerTime` (Obbligatorio)
-   * `playhead` - Deve essere in secondi, ma può essere un float.
-   * `ts` - marca temporale; deve essere in millisecondi.
+   * `playhead` - Deve essere in secondi, ma può essere un galleggiante.
+   * `ts` - Timestamp; deve essere in millisecondi.
 * `eventType` (Obbligatorio)
 
-   **Valore valido:**`sessionStart`
+   **Valore valido:** `sessionStart`
 * `params` (Obbligatorio)
 * `customMetadata` (Facoltativo)
 * `qoeData` (Facoltativo)
@@ -84,7 +87,7 @@ Age: 0
 Via: 1.1 wsg.sanjose08
 ```
 
-`Location:` header - La `/api/v1/` parte fornisce la versione API. La parte dopo `[…]sessions/` è l'ID sessione.
+`Location:` header - La  `/api/v1/` parte fornisce la versione API. La parte dopo `[…]sessions/` è l’ID sessione.
 
 ## Codici di risposta
 
@@ -93,4 +96,3 @@ Via: 1.1 wsg.sanjose08
 | 201 | Sessione creata |
 | 400 | Richiesta non valida |
 | 500 | Errore del server |
-
