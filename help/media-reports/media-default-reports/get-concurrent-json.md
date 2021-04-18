@@ -1,27 +1,30 @@
 ---
-title: Ottenere i dati del rapporto JSON per visualizzatori simultanei
-description: null
+title: Ottieni dati report JSON per visualizzatori simultanei
+description: Ottieni dati report JSON per visualizzatori simultanei
 uuid: 9168f114-2459-4951-a06c-57b735d09dc0
 translation-type: tm+mt
-source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
+source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
+workflow-type: tm+mt
+source-wordcount: '164'
+ht-degree: 4%
 
 ---
 
 
-# Get concurrent viewers JSON report data{#get-concurrent-viewers-json-report-data}
+# Ottieni dati del rapporto JSON per visualizzatori simultanei{#get-concurrent-viewers-json-report-data}
 
-Potete ottenere i dati dei rapporti dei visualizzatori simultanei utilizzando la versione _**_ 1.4 delle API di Analytics:
+Puoi ottenere i dati dei rapporti dei visualizzatori simultanei utilizzando la _*versione 1.4*_ delle API di Analytics:
 * [API di Analytics](https://github.com/AdobeDocs/analytics-1.4-apis)
 * [Swagger](https://adobedocs.github.io/analytics-1.4-apis/swagger-docs.html#/Report/Report.Get)
 
-1. Filtrare i dati utilizzando qualsiasi segmento creato sull&#39;interfaccia utente. Per filtrare in base a un ID contenuto specifico, create un nuovo segmento.
-1. Impostate `elements` -> `id` nel corpo della richiesta su `videoconcurrentviewers`.
-1. Richiedete una quantità sufficiente di dati. Adobe consiglia 3200 punti dati per garantire che non vi siano lacune nei dati.
+1. Filtra i dati utilizzando qualsiasi segmento generato nell’interfaccia utente. Per filtrare in base a un ID contenuto specifico, crea un nuovo segmento.
+1. Imposta `elements` -> `id` nel corpo della richiesta su `videoconcurrentviewers`.
+1. Richiedi una quantità sufficiente di dati. L’Adobe raccomanda 3200 punti di dati per garantire che non vi siano lacune nei dati.
 
-   * L’intervallo di dati specificato nel rapporto raccoglie tutti i dati del visualizzatore simultaneo al _termine della sessione video._
-È quindi necessario tenere conto delle sessioni che iniziano un giorno e terminano dopo mezzanotte (cioè il giorno successivo).
+   * L’intervallo di dati specificato nel rapporto raccoglie tutti i dati del visualizzatore simultaneo _al termine della sessione video._
+È quindi necessario tenere conto delle sessioni che iniziano un giorno e terminano dopo la mezzanotte (cioè il giorno successivo).
 
-   * Richiedete più di un giorno di dati, ma nella vostra analisi _*utilizzate solo il primo giorno dei dati.*_
+   * Richiedi più di un giorno di dati, ma nella tua analisi _*utilizza solo il primo giorno dei dati.*_
 
 Esempio di payload di richiesta per questo scenario:
 
