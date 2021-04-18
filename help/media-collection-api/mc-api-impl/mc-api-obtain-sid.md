@@ -1,16 +1,19 @@
 ---
 title: Ottenimento di un ID sessione
-description: null
+description: Ottenimento di un ID sessione
 uuid: fc8712fa-848f-4564-af5d-5dd9d6b088d8
+exl-id: 4a1c4ade-4a5e-4af0-8117-19d718dd8bda
 translation-type: tm+mt
-source-git-commit: 0d2d75dd411edea2a7a853ed425af5c6da154b06
+source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
+workflow-type: tm+mt
+source-wordcount: '46'
+ht-degree: 0%
 
 ---
 
-
 # Ottenimento di un ID sessione{#obtaining-a-session-id}
 
-Questo frammento di codice del lettore di riferimento mostra un modo per codificare una richiesta di [sessioni,](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) insieme all'estrazione dell'ID sessione (e della versione API di Media Collection) dall'intestazione Posizione nella risposta:
+Questo frammento di codice da Reference Player mostra un modo per codificare una richiesta [Sessions,](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) insieme all&#39;estrazione dell&#39;ID sessione (e della versione API Media Collection) dall&#39;intestazione Location (Posizione) nella risposta:
 
 ```js
 var  
@@ -37,4 +40,3 @@ const SESSION_ID_EXTRACTOR = /^\/api\/(.*)\/sessions\/(.*)/;
         this._sessionStarted = true;    // Session started. 
     ...
 ```
-
