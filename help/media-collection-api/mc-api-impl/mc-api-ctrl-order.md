@@ -4,7 +4,7 @@ description: Controllo dell’ordine degli eventi
 uuid: 007fccc6-be72-4b79-826d-588c957ccf15
 exl-id: c0cac319-2bea-42c8-8674-641dfbb44fa2
 translation-type: tm+mt
-source-git-commit: e0da35f364dc057a241fbb05a718a731ffee1e94
+source-git-commit: 27694ec83de89980404df7a7cc77fa42b3d1a751
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 0%
@@ -16,6 +16,7 @@ ht-degree: 0%
 Il tracciamento video in streaming è un’operazione altamente dipendente dal tempo e occasionalmente le chiamate di tracciamento API di Media Collection arrivano fuori dall’ordine di back-end. In questa situazione, il back-end tenta di mettere in coda e riordinare gli eventi in base alla marca temporale fornita nell&#39;oggetto `playerTime` .  Ciò si verifica con alcuni limiti. Attualmente, il riordino potrebbe non riuscire se i ritardi tra le chiamate fuori servizio sono superiori a un secondo. Negli aggiornamenti futuri, il &quot;tempo di ritardo accettabile&quot; può essere ottimizzato e configurabile.
 
 ## Esempio di evento fuori ordine
+
 Gli eventi fuori ordine si verificano quando gli eventi passano attraverso la rete che a volte causano un ritardo.
 
 Ad esempio, puoi inviare un evento `adBreakStart` seguito da un evento `adStart` . Si tratta di un caso d’uso comune, perché è necessario che un annuncio inizi all’interno di un’interruzione pubblicitaria.
