@@ -1,23 +1,22 @@
 ---
-title: Generazione di rapporti per visualizzatori simultanei
-description: Per i clienti di Media Analytics, il pannello Visualizzatori simultanei di  Analysis Workspace consente di analizzare i visualizzatori simultanei per comprendere dove si è verificato il picco di concorrenza o dove si sono verificati i rilasci.
-translation-type: tm+mt
-source-git-commit: 2eb5318267546408f2aab5da074dd7f30c4fbb1d
+title: Generazione di rapporti per visualizzatori simultanei di contenuti multimediali
+description: Per i clienti Media Analytics, il pannello Visualizzatori simultanei di contenuti multimediali in Analysis Workspace consente di analizzare i visualizzatori simultanei per comprendere dove si è verificato il picco di concorrenza o in che punto i visitatori hanno abbandonato il contenuto.
+exl-id: 2eadd5e7-45de-4275-aac5-d16e2a6a9fed
+source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
 workflow-type: tm+mt
-source-wordcount: '193'
-ht-degree: 6%
+source-wordcount: '191'
+ht-degree: 19%
 
 ---
 
+# Generazione di rapporti per visualizzatori simultanei di contenuti multimediali{#media-concurrent-viewers}
 
-# Generazione di rapporti per visualizzatori simultanei{#media-concurrent-viewers}
+L’analisi dei visualizzatori simultanei consente di comprendere dove si è verificato il picco di concorrenza o dove si è verificato un calo, per fornire informazioni utili sulla qualità dei contenuti e sul coinvolgimento dei visualizzatori e per risolvere eventuali problemi o pianificare il volume e la scala.
 
-L’analisi dei visualizzatori simultanei consente di comprendere dove si è verificato il picco di concorrenza o dove si sono verificati degli abbandoni, per fornire informazioni utili sulla qualità dei contenuti e sul coinvolgimento dei visualizzatori e per risolvere eventuali problemi o pianificare volumi e dimensioni.
+## Pannello Visualizzatori simultanei di elementi multimediali in Analysis Workspace
 
-## Pannello Visualizzatori simultanei  Analysis Workspace
+In Analysis Workspace, per visualizzatori simultanei si intende il numero di visitatori univoci che visualizzano i flussi multimediali in un determinato momento, indipendentemente dal numero di sessioni. Il pannello Visualizzatori simultanei di contenuti multimediali è disponibile per visualizzare i visualizzatori simultanei, suddividerli e confrontarli. [Ulteriori informazioni...](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/media-concurrent-viewers.html)
 
-In  Analysis Workspace, per visualizzatori simultanei si intende il numero di visitatori univoci che visualizzano i flussi multimediali in un particolare momento, indipendentemente dal numero di sessioni. Il pannello Visualizzatori simultanei di file multimediali è disponibile per visualizzare i visualizzatori simultanei, suddividerli e confrontarli. [Ulteriori informazioni...](https://docs.adobe.com/content/help/it-IT/analytics/analyze/analysis-workspace/panels/media-concurrent-viewers.html)
+## Ottenere i visualizzatori simultanei tramite API di reporting di Analytics
 
-## Ottenere i visualizzatori simultanei tramite Analytics Reporting API
-
-Potete inoltre ottenere dati visualizzatore simultanei per un massimo di un mese alla volta con granularità minima utilizzando l&#39;API di reporting di Analytics 2.0.  L&#39;API di reporting utilizza la stessa definizione di visualizzatori simultanei  Analysis Workspace.  Per ulteriori informazioni, consultate [_*Ottenere dati di report JSON per visualizzatori simultanei con le API di Analytics 2.0*_](/help/media-reports/media-default-reports/get-concurrent-json20.md).
+È inoltre possibile ottenere dati di visualizzatori simultanei per un massimo di un mese alla volta con granularità al minuto utilizzando l’API di reporting di Analytics 2.0. L’API di reporting utilizza la stessa definizione di visualizzatori simultanei di Analysis Workspace.  Per ulteriori informazioni, consulta [_*Ottenere i dati dei rapporti JSON per i visualizzatori simultanei con le API di Analytics 2.0*_](/help/media-reports/media-default-reports/get-concurrent-json20.md).
