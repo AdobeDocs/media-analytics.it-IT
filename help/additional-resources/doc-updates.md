@@ -1,24 +1,23 @@
 ---
-title: Novità di  Adobe Analytics per lo streaming multimediale
-description: Scopri le novità di  Adobe Analytics per Streaming Media
+title: Quali sono le novità di Adobe Analytics per i file multimediali in streaming?
+description: Scopri le novità di Adobe Analytics for Streaming Media
 uuid: 1f3e48df-83b6-418c-8cf7-d79466481f79
 index: y
 internal: n
 snippet: y
-translation-type: tm+mt
-source-git-commit: 5f0de1e0f0694987c6bab0bd97ac8c98e843f23a
+exl-id: 881a94f4-d248-4668-a2d1-4e50d3f9135a
+source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
 workflow-type: tm+mt
-source-wordcount: '30'
-ht-degree: 43%
+source-wordcount: '28'
+ht-degree: 39%
 
 ---
-
 
 # Risorse{#resources}
 
 ## Note sulla versione{#release-notes}
 
-* [Note sulla versione](https://docs.adobe.com/content/help/it-IT/release-notes/experience-cloud/current.html)
+* [Note sulla versione](https://experienceleague.adobe.com/docs/release-notes/experience-cloud/current.html?lang=it)
 
 <!--
 ## Documentation Updates{#documentation-updates}
