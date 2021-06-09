@@ -3,10 +3,10 @@ title: Configurazione Chromecast
 description: Configurazione dell’applicazione Media SDK per l’implementazione in Chromecast.
 uuid: d664e394-02a2-4985-bbad-be1bcc44fb2b
 exl-id: 5dfe3407-2858-48c0-a70c-8ea87967ac47
-source-git-commit: 218c4f6a841a988477eb4509bff8d418e18715f5
+source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
 workflow-type: tm+mt
-source-wordcount: '630'
-ht-degree: 8%
+source-wordcount: '628'
+ht-degree: 7%
 
 ---
 
@@ -28,7 +28,7 @@ HeartbeatQuesti parametri possono essere ottenuti da un rappresentante di Adobe 
    * *Un’API per abbonarti agli eventi*  del lettore: l’SDK per contenuti multimediali richiede di chiamare un set di API semplici quando si verificano eventi nel lettore.
    * *API che fornisce informazioni*  sul lettore. Queste informazioni includono dettagli quali il nome del contenuto multimediale e la posizione della testina di riproduzione.
 
-Adobe Mobile Services fornisce una nuova interfaccia utente che riunisce le capacità mobile marketing per applicazioni mobile da Adobe Marketing Cloud. Inizialmente, Mobile Services fornisce un’integrazione perfetta delle funzionalità di analisi e targeting delle app per le soluzioni Adobe Analytics e Adobe Target. Per ulteriori informazioni, consulta la [documentazione Adobe Mobile Services .](https://docs.adobe.com/content/help/it-IT/mobile-services/using/home.html)
+Adobe Mobile Services fornisce una nuova interfaccia utente che riunisce le capacità mobile marketing per applicazioni mobile da Adobe Marketing Cloud. Inizialmente, Mobile Services fornisce un’integrazione perfetta delle funzionalità di analisi e targeting delle app per le soluzioni Adobe Analytics e Adobe Target. Per ulteriori informazioni, consulta la [documentazione Adobe Mobile Services .](https://experienceleague.adobe.com/docs/mobile-services/using/home.html)
 
 L’SDK 2.x per Chromecast per le soluzioni Experience Cloud consente di misurare le applicazioni Chromecast scritte in JavaScript, sfruttare e raccogliere i dati sul pubblico tramite Gestione dell’audience e misurare l’interazione video attraverso gli heartbeat video.
 
@@ -137,4 +137,4 @@ L’SDK 2.x per Chromecast per le soluzioni Experience Cloud consente di misurar
 
 
 
-<!--   **Postbacks -** For more information about configuring postbacks, see [Configure Postbacks.](https://docs.adobe.com/content/help/en/mobile-services/using/manage-app-settings-ug/configuring-app/signals.html) -->
+<!--   **Postbacks -** For more information about configuring postbacks, see [Configure Postbacks.](https://experienceleague.adobe.com/docs/mobile-services/using/manage-app-settings-ug/configuring-app/signals.html) -->
