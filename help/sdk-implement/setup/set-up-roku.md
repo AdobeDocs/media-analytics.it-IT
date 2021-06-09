@@ -3,10 +3,10 @@ title: Configurazione Roku
 description: Configurazione dell’applicazione Media SDK per l’implementazione su Roku.
 uuid: 904dfda0-4782-41da-b4ab-212e81156633
 exl-id: b8de88d0-3a93-4776-b372-736bf979ee26
-source-git-commit: 218c4f6a841a988477eb4509bff8d418e18715f5
+source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
 workflow-type: tm+mt
-source-wordcount: '709'
-ht-degree: 7%
+source-wordcount: '707'
+ht-degree: 6%
 
 ---
 
@@ -22,7 +22,7 @@ HeartbeatQuesti parametri possono essere ottenuti da un rappresentante di Adobe 
 
 Adobe Mobile Services fornisce una nuova interfaccia utente che riunisce le capacità mobile marketing per applicazioni mobile da Adobe Marketing Cloud. Inizialmente, Mobile Services fornisce un’integrazione perfetta delle funzionalità di analisi e targeting delle app per le soluzioni Adobe Analytics e Adobe Target.
 
-Per ulteriori informazioni, consulta la [documentazione Adobe Mobile Services .](https://docs.adobe.com/content/help/it-IT/mobile-services/using/home.html)
+Per ulteriori informazioni, consulta la [documentazione Adobe Mobile Services .](https://experienceleague.adobe.com/docs/mobile-services/using/home.html)
 
 L’SDK 2.x Roku per le soluzioni di Experience Cloud consente di misurare le applicazioni Roku scritte in BrightScript, sfruttare e raccogliere i dati sul pubblico tramite la gestione dell’audience e misurare il coinvolgimento video attraverso gli heartbeat video.
 
@@ -169,4 +169,4 @@ L’SDK 2.x Roku per le soluzioni di Experience Cloud consente di misurare le ap
    | `processMediaMessages` | Responsabile del passaggio degli eventi multimediali all’SDK da gestire. <br/><br/>`ADBMobile().processMediaMessages()` |
 
 
-<!--    **Postbacks -** For more information about configuring postbacks, see [Configure Postbacks.](https://docs.adobe.com/content/help/en/mobile-services/using/manage-app-settings-ug/configuring-app/signals.html) -->
+<!--    **Postbacks -** For more information about configuring postbacks, see [Configure Postbacks.](https://experienceleague.adobe.com/docs/mobile-services/using/manage-app-settings-ug/configuring-app/signals.html) -->
