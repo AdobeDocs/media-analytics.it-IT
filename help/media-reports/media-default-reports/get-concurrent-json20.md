@@ -1,30 +1,29 @@
 ---
-title: Ottenere i dati del rapporto JSON per visualizzatori simultanei con le API di Analytics 2.0
+title: Ottenere i dati del rapporto JSON per i visualizzatori simultanei con le API di Analytics 2.0
 description: null
 uuid: 9168f114-2459-4951-a06c-57b735d09dc0
-translation-type: tm+mt
-source-git-commit: e93a39fb76c3ccca2c05e5d1590a53394e50b29b
+exl-id: f84f63d3-b0d0-45fe-95a7-159f22d60660
+source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 5%
 
 ---
 
-
 # Ottenere i dati del rapporto JSON per visualizzatori simultanei con le API di Analytics 2.0{#get-concurrent-viewers-json-report-data}
 
-È possibile ottenere i dati dei rapporti dei visualizzatori simultanei utilizzando [_*API di Analytics 2.0*_](https://www.adobe.io/apis/experiencecloud/analytics/docs.html).
+Puoi ottenere i dati dei rapporti dei visualizzatori simultanei utilizzando le API [_*Analytics 2.0*_](https://www.adobe.io/apis/experiencecloud/analytics/docs.html).
 
-1. Filtrare i dati utilizzando qualsiasi segmento creato sull&#39;interfaccia utente. Per filtrare in base a un ID contenuto specifico, create un nuovo segmento.
-1. Impostate la variabile `elements` -> `id` nell&#39;organismo della richiesta a `metrics/concurrent_viewers_visitors`.
-1. Richiedete una quantità sufficiente di dati.
+1. Filtra i dati utilizzando qualsiasi segmento generato nell’interfaccia utente. Per filtrare in base a un ID contenuto specifico, crea un nuovo segmento.
+1. Imposta `elements` -> `id` nel corpo della richiesta su `metrics/concurrent_viewers_visitors`.
+1. Richiedi una quantità sufficiente di dati.
 
-   * L&#39;intervallo di dati specificato nel rapporto raccoglie tutti i dati dei visualizzatori simultanei _al termine della sessione video._
-È necessario tenere conto delle sessioni che iniziano in un giorno e terminano dopo la mezzanotte, che è il giorno successivo.
+   * L’intervallo di dati specificato nel rapporto raccoglie tutti i dati del visualizzatore simultaneo _al termine della sessione video._
+Devi tenere conto delle sessioni che iniziano in un giorno e terminano dopo la mezzanotte, che è il giorno successivo.
 
-   * Richiedi un altro giorno di dati per il periodo previsto nella tua richiesta, ma nella tua analisi _*utilizzare solo i dati previsti.*_
+   * Richiedi un altro giorno di dati al periodo previsto nella tua richiesta, ma nella tua analisi _*utilizza solo i dati previsti.*_
 
-Un payload di richiesta di esempio per un giorno di dati sarà simile al seguente esempio. La richiesta viene eseguita per 2 giorni consecutivi, ma nel reporting si utilizza solo il primo giorno.
+Un payload di richiesta di esempio per un giorno di dati sarà simile al seguente esempio. La richiesta viene effettuata per 2 giorni consecutivi ma nel reporting si utilizza solo il primo giorno.
 
 ## Richiesta di esempio
 
@@ -129,7 +128,7 @@ You can extract the concurrent viewers report data using the Experience Cloud AP
     * **Environment -** Select your data center.
     * Request JSON - Specify the following:
 
-        * `reportSuiteID` - For info on reports suites: [Report Suites](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/report-suites-admin.html)
+        * `reportSuiteID` - For info on reports suites: [Report Suites](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/report-suites-admin.html)
 
         * `dateTo` - End date of the report.         
 
