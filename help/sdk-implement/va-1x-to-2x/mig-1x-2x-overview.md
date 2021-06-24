@@ -1,28 +1,32 @@
 ---
 title: Panoramica sulla migrazione
-description: Questo argomento fornisce una panoramica sulla migrazione dalle versioni 1.x a 2.x dell’SDK per file multimediali.
+description: Scopri come effettuare la migrazione dalle versioni 1.x alle versioni 2.x dell’SDK per contenuti multimediali.
 uuid: d84f55bc-fa90-45c1-b97d-cb5fe58e80c0
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: b3b8b9f8-a6e9-4ed1-85c1-80e61460e8a0
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '211'
+ht-degree: 9%
 
 ---
 
-
 # Panoramica sulla migrazione{#migration-overview}
 
-La migrazione da VHL 1.x a VHL 2.x è semplice, con la nuova versione con API semplificate per l'inizializzazione, la configurazione e i delegati di lettore.
+La migrazione da VHL 1.x a VHL 2.x è semplice, con la nuova versione con API semplificate per l’inizializzazione, la configurazione e i delegati del lettore.
 
-Di seguito sono riportate le differenze principali tra 1.x e 2.x:
+Di seguito sono riportate le principali differenze tra 1.x e 2.x:
 
 * **Plug-in, delegati -** Non è più necessario implementare plug-in e delegati per Analytics, VideoPlayer e Heartbeat.
-* **Configurazione: non è più necessario creare un'istanza delle configurazioni per i plug-in 1.x.**
+* **Configurazione:** non è più necessario creare istanze di configurazioni per i plug-in 1.x.
 
 ## Vantaggi di 2.x {#benefits-of-two-x}
 
-* Tutti i metodi pubblici sono consolidati nella `MediaHeartbeat` classe per semplificare l'implementazione per gli sviluppatori.
-* Tutte le configurazioni sono ora consolidate nella `MediaHeartbeatConfig` classe.
-* Non è più necessario creare un'istanza delle configurazioni per i plug-in Analytics, VideoPlayer e Heartbeat. È sufficiente creare un'istanza della `MediaHeartbeat` classe con `MediaHeartbeatDelegate` e `MediaHeartbeatConfig` istanze. Questa è l'unica implementazione necessaria per inizializzare Media Analytics.
+* Tutti i metodi pubblici sono consolidati nella classe `MediaHeartbeat` per facilitare l’implementazione per gli sviluppatori.
+* Tutte le configurazioni sono ora consolidate nella classe `MediaHeartbeatConfig` .
+* Non è più necessario creare un&#39;istanza delle configurazioni per i plug-in Analytics, VideoPlayer e Heartbeat. È sufficiente creare un&#39;istanza della classe `MediaHeartbeat` solo con le istanze `MediaHeartbeatDelegate` e `MediaHeartbeatConfig`. Questa è l’unica implementazione necessaria per inizializzare Media Analytics.
 
-   Con l'inizializzazione di `MediaHeartbeat`, puoi eliminare tutta l'implementazione per i plug-in Analytics, VideoPlayer Plugin e Heartbeat Plugin. Inoltre, rimuovete tutta l'implementazione esistente per l'inizializzazione che richiede un array di plug-in come input. Di seguito sono riportati confronti affiancati delle implementazioni 1.x e 2.x: Confronto [codice: da 1,x a 2,x](./code-comparison-1x-2x.md)
+   Con l&#39;inizializzazione di `MediaHeartbeat`, puoi eliminare in tutta sicurezza l&#39;implementazione per Analytics Plugin, VideoPlayer Plugin e Heartbeat Plugin. Inoltre, rimuovi tutta l&#39;implementazione esistente per l&#39;inizializzazione che richiede un array di plug-in come input. Puoi vedere confronti affiancati delle implementazioni 1.x e 2.x qui: [Confronto dei codici: da 1.x a 2.x.](./code-comparison-1x-2x.md)
 
 Le nuove API in 2.x sono descritte in dettaglio qui: [Conversione da API 1.x a 2.x.](./1x-2x-api-change.md)
