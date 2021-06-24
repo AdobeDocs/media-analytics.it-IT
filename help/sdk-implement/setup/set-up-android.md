@@ -1,12 +1,14 @@
 ---
-title: Configurazione Android
-description: Configurazione dell’applicazione Media SDK per l’implementazione su Android.
+title: Come impostare Media SDK su Android
+description: Segui questi passaggi per configurare l’applicazione Media SDK su Android.
 uuid: 3ffe3276-a104-4182-9220-038729e9f3d5
 exl-id: 261445bf-3c8b-4658-891d-9a878e0b26ea
-source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 8%
+source-wordcount: '412'
+ht-degree: 7%
 
 ---
 
