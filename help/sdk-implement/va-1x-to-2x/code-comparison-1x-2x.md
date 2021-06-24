@@ -1,42 +1,43 @@
 ---
-title: Confronto dei codici da 1.x a 2.x
-description: In questo argomento viene confrontato il codice nelle versioni 1.x e 2.x dell’SDK per file multimediali.
+title: Confronto tra codici v1.x e v2.x
+description: Scopri la differenza tra il codice nelle versioni 1.x e 2.x dell’SDK Media.
 uuid: 9f0a1660-2100-446d-ab75-afdf966478b3
-translation-type: tm+mt
-source-git-commit: 72cdf2d03ebae6998514c9092ab462c29345c9f9
+exl-id: c2324c6a-329f-44e2-bea0-9d43ef9c6ef7
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '572'
 ht-degree: 2%
 
 ---
 
+# Confronto dei codici: da 1.x a 2.x {#code-comparison-x-to-x}
 
-# Code comparison: 1.x to 2.x {#code-comparison-x-to-x}
+Tutti i parametri di configurazione e le API di tracciamento sono ora consolidati nelle classi `MediaHeartbeats` e `MediaHeartbeatConfig` .
 
-Tutti i parametri di configurazione e le API di tracciamento ora sono consolidati nelle `MediaHeartbeats` classi e `MediaHeartbeatConfig` .
+**Modifiche all&#39;API di configurazione:**
 
-**Modifiche dell&#39;API di configurazione:**
+* `AdobeHeartbeatPluginConfig.sdk` - Rinominato in  `MediaConfig.appVersion`
+* `MediaHeartbeatConfig.playerName` - Ora imposta  `MediaHeartbeatConfig` invece di  `VideoPlayerPluginDelegate`
+* (Solo per JavaScript): L’ `AppMeasurement` istanza - Ora inviata tramite il costruttore `MediaHeartbeat` .
 
-* `AdobeHeartbeatPluginConfig.sdk` - Rinominato in `MediaConfig.appVersion`
-* `MediaHeartbeatConfig.playerName` - Ora impostato `MediaHeartbeatConfig` al posto di `VideoPlayerPluginDelegate`
-* (solo per JavaScript): L&#39; `AppMeasurement` istanza - Ora inviata tramite il `MediaHeartbeat` costruttore.
+**Modifiche alle proprietà di configurazione:**
 
-**Modifiche delle proprietà di configurazione:**
-
-* `sdk` - Rinominato in `appVersion`
-* `publisher` - Rimosso; L’ID organizzazione Experience Cloud viene utilizzato come editore
+* `sdk` - Rinominato in  `appVersion`
+* `publisher` - asportato; L&#39;ID organizzazione di Experience Cloud viene utilizzato come editore
 * `quiteMode` - Rimosso
 
 **Collegamenti ai lettori di esempio 1.x e 2.x:**
 
-* [1.x Lettore di esempio ](https://github.com/Adobe-Marketing-Cloud/video-heartbeat/blob/master/sdks/js/samples/BasicPlayerSample/script/app/analytics/video.analytics.provider.js#L58)
-* [2.x Lettore di esempio ](https://github.com/Adobe-Marketing-Cloud/media-sdks/blob/master/sdks/js/2.x/samples/BasicPlayerSample/script/app/analytics/video.analytics.provider.js#L47)
+* [Lettore di esempio 1.x  ](https://github.com/Adobe-Marketing-Cloud/video-heartbeat/blob/master/sdks/js/samples/BasicPlayerSample/script/app/analytics/video.analytics.provider.js#L58)
+* [Lettore di esempio 2.x  ](https://github.com/Adobe-Marketing-Cloud/media-sdks/blob/master/sdks/js/2.x/samples/BasicPlayerSample/script/app/analytics/video.analytics.provider.js#L47)
 
-Le sezioni seguenti forniscono confronti tra i codici da 1.x a 2.x, inclusi Inizializzazione, Riproduzione di base, Riproduzione annunci pubblicitari, Riproduzione di capitolo e alcuni eventi aggiuntivi.
+Le sezioni seguenti forniscono confronti di codice tra 1.x e 2.x, inclusi Inizializzazione, Riproduzione di base, Riproduzione di annunci, Riproduzione di capitoli e alcuni eventi aggiuntivi.
 
-## Confronto codici VHL: INIZIALIZZAZIONE
+## Confronto tra codici VHL: INIZIALIZZAZIONE
 
-### Inizializzazione oggetto
+### Inizializzazione oggetti
 
 | API 1.x | API 2.x |
 | --- | --- |
@@ -45,7 +46,7 @@ Le sezioni seguenti forniscono confronti tra i codici da 1.x a 2.x, inclusi Iniz
 | `AdobeAnalyticsPlugin()` |  |
 | `HeartbeatPlugin()` |  |
 
-#### Inizializzazione plug-in del lettore video (1.x) {#plugin-init-1.x}
+#### Inizializzazione del plug-in del lettore video (1.x) {#plugin-init-1.x}
 
 ```js
 this._playerPlugin = new VideoPlayerPlugin( new SampleVideoPlayerPluginDelegate(this._player));
@@ -74,7 +75,7 @@ configData.debugLogging = true;
 this._heartbeat.configure(configData);
 ```
 
-#### Inizializzazione di Media Heartbeat (2.x) {#mh-init-2.x}
+#### Inizializzazione Media Heartbeat (2.x) {#mh-init-2.x}
 
 ```js
 var mediaConfig = new MediaHeartbeatConfig();
@@ -131,7 +132,7 @@ SampleVideoPlayerPluginDelegate.prototype.getQoSInfo = function() {
 };
 ```
 
-#### AdobeAnalyticsPluginDelegate (1.x) {#analytics-plugin-delegate-1.x}
+#### Adobe AnalyticsPluginDelegate (1.x) {#analytics-plugin-delegate-1.x}
 
 ```js
 $.extend(SampleAdobeAnalyticsPluginDelegate.prototype, AdobeAnalyticsPluginDelegate.prototype);
@@ -175,7 +176,7 @@ SampleMediaHeartbeatDelegate.prototype.getQoSObject = function() {
 this._mediaHeartbeat = new MediaHeartbeat(new SampleMediaHeartbeatDelegate(this._player), mediaConfig, appMeasurement);
 ```
 
-## Confronto codici VHL: RIPRODUZIONE PRINCIPALE
+## Confronto tra codici VHL: RIPRODUZIONE PRINCIPALE
 
 ### Avvio sessione
 
@@ -305,7 +306,7 @@ VideoAnalyticsProvider.prototype._onLoad = function() {
 ```
 
 >[!NOTE]
->Invece di impostare i metadati video personalizzati tramite l&#39; `AdobeAnalyticsPlugin.setVideoMetadata()` API, in VHL 2.0 i metadati video standard vengono impostati tramite l&#39; `MediaHeartbeat.trackSessionStart()` API.
+>Invece di impostare i metadati video personalizzati tramite l’ `AdobeAnalyticsPlugin.setVideoMetadata()` API, in VHL 2.0 i metadati video standard vengono impostati tramite l’ `MediaHeartbeat.trackSessionStart()` API .
 
 
 ### Riproduzione
@@ -454,7 +455,7 @@ VideoAnalyticsProvider.prototype._onComplete = function() {
 };
 ```
 
-## Confronto codici VHL: RIPRODUZIONE AD
+## Confronto tra codici VHL: RIPRODUZIONE ANNUNCI
 
 ### Inizio annuncio
 
@@ -465,7 +466,7 @@ VideoAnalyticsProvider.prototype._onComplete = function() {
 | `VideoPlayerPluginDelegate.getAdInfo()` | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.AdBreakStart)` |
 |  | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.AdStart)` |
 
-#### Inizio annuncio (1.x) {#ad-start-1.x}
+#### Avvio annuncio (1.x) {#ad-start-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onAdStart = function() { 
@@ -480,7 +481,7 @@ SampleVideoPlayerPluginDelegate.prototype.getAdInfo = function() {
 };
 ```
 
-#### Inizio annuncio (2.x) {#ad-start-2.x}
+#### Avvio annuncio (2.x) {#ad-start-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onAdStart = function() { 
@@ -551,7 +552,7 @@ VideoAnalyticsProvider.prototype._onAdStart = function() {
 ```
 
 >[!NOTE]
->Invece di impostare i metadati annuncio standard tramite l&#39; `AdobeAnalyticsPlugin.setVideoMetadata()` API, in VHL 2.0, i metadati annuncio standard sono impostati tramite la `AdMetadata` chiave `MediaObject.MediaObjectKey.StandardVideoMetadata`
+>Invece di impostare i metadati standard dell’annuncio tramite l’API `AdobeAnalyticsPlugin.setVideoMetadata()`, in VHL 2.0 i metadati standard dell’annuncio vengono impostati tramite la chiave `AdMetadata` `MediaObject.MediaObjectKey.StandardVideoMetadata`
 
 ### Metadati annuncio personalizzati
 
@@ -602,7 +603,7 @@ VideoAnalyticsProvider.prototype._onAdStart = function() {
 ```
 
 >[!NOTE]
->Invece di impostare i metadati personalizzati dell&#39;annuncio tramite l&#39; `AdobeAnalyticsPlugin.setVideoMetadata` API, in VHL 2.0 i metadati dell&#39;annuncio standard vengono impostati tramite l&#39; `MediaHeartbeat.trackAdStart()` API.
+>Invece di impostare i metadati dell’annuncio personalizzato tramite l’API `AdobeAnalyticsPlugin.setVideoMetadata`, in VHL 2.0 i metadati dell’annuncio standard vengono impostati tramite l’ `MediaHeartbeat.trackAdStart()` API .
 
 ### Salta annuncio
 
@@ -629,7 +630,7 @@ VideoAnalyticsProvider.prototype._onAdSkip = function() {
 ```
 
 >[!NOTE]
->nelle API VHL 1.5.X; `getAdinfo()` e `getAdBreakInfo()` deve restituire null se il lettore si trova al di fuori dei limiti di interruzione annuncio.
+>Nelle API VHL 1.5.X; `getAdinfo()` e `getAdBreakInfo()` devono restituire null se il lettore si trova al di fuori dei limiti di interruzione annuncio.
 
 ### Annuncio completato
 
@@ -657,7 +658,7 @@ VideoAnalyticsProvider.prototype._onAdComplete = function() {
 };
 ```
 
-## Confronto codici VHL: RIPRODUZIONE CAPITOLO
+## Confronto tra codici VHL: RIPRODUZIONE CAPITOLO
 
 ### Inizio capitolo
 
@@ -695,7 +696,7 @@ VideoAnalyticsProvider.prototype._onChapterStart = function() {
 };
 ```
 
-### Salta capitolo
+### Salto capitolo
 
 | API 1.x | API 2.x |
 | --- | --- |
@@ -710,7 +711,7 @@ SampleVideoPlayerPluginDelegate.prototype.getChapterInfo = function() {
 ```
 
 >[!NOTE]
->nelle API VHL 1.5.X; `getChapterinfo()` deve restituire null se il lettore si trova al di fuori dei limiti del Capitolo.
+>Nelle API VHL 1.5.X; `getChapterinfo()` deve restituire null se il lettore si trova al di fuori dei limiti del capitolo.
 
 #### Salto capitolo (2.x) {#chap-skip-2.x}
 
@@ -720,14 +721,14 @@ VideoAnalyticsProvider.prototype._onChapterSkip = function() {
 };
 ```
 
-### Metadati personalizzati capitolo
+### Capitolo Metadati personalizzati
 
 | API 1.x | API 2.x |
 | --- | --- |
 | `VideoPlayerPlugin.trackChapterStart()` | `MediaHeartbeat.createChapterObject()` |
 | `AdobeAnalyticsPlugin.setChapterMetadata()` | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.ChapterStart)` |
 
-#### Metadati personalizzati capitolo (1.x) {#chap-cust-meta-1.x}
+#### Capitolo Metadati personalizzati (1.x) {#chap-cust-meta-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onChapterStart = function() { 
@@ -739,7 +740,7 @@ VideoAnalyticsProvider.prototype._onChapterStart = function() {
 };
 ```
 
-#### Metadati personalizzati capitolo (2.x) {#chap-cust-meta-2.x}
+#### Capitolo Metadati personalizzati (2.x) {#chap-cust-meta-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onChapterStart = function() { 
@@ -755,7 +756,7 @@ VideoAnalyticsProvider.prototype._onChapterStart = function() {
 };
 ```
 
-### Capitolo Completa
+### Capitolo Completo
 
 | API 1.x | API 2.x |
 | --- | --- |
@@ -779,7 +780,7 @@ VideoAnalyticsProvider.prototype._onChapterComplete = function() {
 };
 ```
 
-## Confronto codici VHL: ALTRI EVENTI
+## Confronto tra codici VHL: ALTRI EVENTI
 
 ### Modifica bitrate
 
