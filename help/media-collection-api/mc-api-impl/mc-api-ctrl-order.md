@@ -1,17 +1,18 @@
 ---
 title: Controllo dell’ordine degli eventi
-description: Controllo dell’ordine degli eventi
+description: Scopri come controllare l’ordine degli eventi e come in alcuni casi gli eventi vengono riordinati in base alla marca temporale fornita nell’oggetto playerTime .
 uuid: 007fccc6-be72-4b79-826d-588c957ccf15
 exl-id: c0cac319-2bea-42c8-8674-641dfbb44fa2
-translation-type: tm+mt
-source-git-commit: 27694ec83de89980404df7a7cc77fa42b3d1a751
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '307'
-ht-degree: 0%
+source-wordcount: '328'
+ht-degree: 2%
 
 ---
 
-# Controllo dell&#39;ordine degli eventi{#controlling-the-order-of-events}
+# Controllo dell’ordine degli eventi{#controlling-the-order-of-events}
 
 Il tracciamento video in streaming è un’operazione altamente dipendente dal tempo e occasionalmente le chiamate di tracciamento API di Media Collection arrivano fuori dall’ordine di back-end. In questa situazione, il back-end tenta di mettere in coda e riordinare gli eventi in base alla marca temporale fornita nell&#39;oggetto `playerTime` .  Ciò si verifica con alcuni limiti. Attualmente, il riordino potrebbe non riuscire se i ritardi tra le chiamate fuori servizio sono superiori a un secondo. Negli aggiornamenti futuri, il &quot;tempo di ritardo accettabile&quot; può essere ottimizzato e configurabile.
 
