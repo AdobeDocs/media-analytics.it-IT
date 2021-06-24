@@ -1,13 +1,14 @@
 ---
-title: Migrazione da Milestone a Custom Link
-description: Migrazione da Milestone a Custom Link
+title: Informazioni sulla migrazione da Milestone a Custom Link
+description: Scopri come modificare le variabili Milestone nei metodi del modulo Custom Link e Milestone nella sintassi Custom Link.
 uuid: 1c8edde5-0ef1-4bc0-a62d-1747f4907f09
 exl-id: 732079f4-3eb8-4b9a-892b-25a1c9332be4
-translation-type: tm+mt
-source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '582'
-ht-degree: 18%
+source-wordcount: '598'
+ht-degree: 16%
 
 ---
 
