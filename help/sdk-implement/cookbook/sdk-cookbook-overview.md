@@ -1,20 +1,21 @@
 ---
-title: Panoramica della libreria di codici SDK
-description: 'Argomenti del libro di cucina specifici per l’SDK '
-translation-type: tm+mt
-source-git-commit: 298d17ced7a62cad8e2a45814fbfb80c3f58ce35
+title: Panoramica della Guida di riferimento SDK
+description: '"Esplora gli argomenti del cookie specifici dell''SDK"'
+exl-id: 68230d3f-d1fd-4be3-ba67-689965d85771
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '66'
-ht-degree: 27%
+source-wordcount: '69'
+ht-degree: 28%
 
 ---
 
+# Panoramica della Guida di riferimento SDK
 
-# Panoramica della libreria di codici SDK
+Puoi trovare gli argomenti generali del cookie di Media Analytics che si applicano sia a Media SDK che all’API di Media Collection qui: [Guida di riferimento rapido per Media Analytics.](/help/media-analytics-cookbook/media-analytics-cookbook.md)
 
-Gli argomenti della Guida di riferimento generali per Media Analytics sono disponibili qui: [Cookie di Media Analytics.](/help/media-analytics-cookbook/media-analytics-cookbook.md)
-
-Gli argomenti del libro di cucina elencati di seguito sono specifici della versione Media SDK di Media Analytics:
+Gli argomenti del cookie elencati di seguito sono specifici della versione Media SDK di Media Analytics:
 
 * [Gestione degli arresti dell’applicazione durante la riproduzione](/help/sdk-implement/cookbook/app-interrupts.md)
 * [Risoluzione main:play tra annunci](/help/sdk-implement/cookbook/fix-ad-play-ad.md)
