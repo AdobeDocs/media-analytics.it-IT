@@ -1,16 +1,20 @@
 ---
-title: Implementare i metadati standard su Roku
-description: Descrive l’impostazione di video e metadati di annunci standard da inviare con le chiamate di tracciamento su Roku.
+title: Scopri come implementare metadati standard su Roku
+description: Scopri come impostare i video standard e i metadati degli annunci da inviare con le chiamate di tracciamento su Roku.
 uuid: ae14d809-343f-452c-832a-f94bd3d83a90
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: 1552b16a-3c2d-4caa-b571-e6628f0b6866
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '65'
+ht-degree: 12%
 
 ---
 
+# Implementazione dei metadati standard su Roku{#implement-standard-metadata-on-roku}
 
-# Implementare i metadati standard su Roku{#implement-standard-metadata-on-roku}
-
-Creare un'istanza di un oggetto metdata standard, compilare le variabili desiderate e impostare l'oggetto metadati sull'oggetto Media Heartbeat.
+Creare un&#39;istanza di un oggetto metdata standard, compilare le variabili desiderate e impostare l&#39;oggetto metadati sull&#39;oggetto Media Heartbeat.
 
 **Video:**
 
@@ -34,5 +38,4 @@ standardMetadata[ADBMobile().MEDIA_AudioMetadataKeyLABEL] = "sample label"
 mediaInfo[ADBMobile().MEDIA_STANDARD_MEDIA_METADATA] = standardMetadata 
 ```
 
-Consultate l'elenco completo dei metadati video, qui: Parametri [audio e video](/help/metrics-and-metadata/audio-video-parameters.md)
-
+Vedi l&#39;elenco completo dei metadati video qui: [Parametri audio e video](/help/metrics-and-metadata/audio-video-parameters.md)
