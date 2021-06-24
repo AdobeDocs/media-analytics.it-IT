@@ -1,50 +1,54 @@
 ---
 title: Riproduzione VOD con un capitolo
-description: Esempio di registrazione della riproduzione VOD contenente un capitolo.
+description: Visualizzare un esempio di tracciamento della riproduzione VOD che contiene un capitolo.
 uuid: 1566a6f5-cf22-42e7-8e1a-6976c6c4e649
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: a8394fd3-16a2-4f5d-b6e1-6e9acb4c7afd
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '432'
+ht-degree: 4%
 
 ---
-
 
 # Riproduzione VOD con un capitolo{#vod-playback-with-one-chapter}
 
 ## Scenario {#scenario}
 
-In questo scenario, una parte del contenuto VOD viene contrassegnata come capitolo.
+In questo scenario, una parte del contenuto VOD viene contrassegnata come un capitolo.
 
-Se non viene specificato, le chiamate di rete in questo scenario sono le stesse delle chiamate nella riproduzione [VOD senza scenari di annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . La chiamata di rete avviene contemporaneamente, ma il payload è diverso.
+Se non viene specificato, le chiamate di rete in questo scenario sono le stesse di quelle nella riproduzione [VOD senza annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario. La chiamata di rete avviene contemporaneamente, ma il payload è diverso.
 
-| Attivatore   | Metodo Heartbeat | Chiamate di rete | Note   |
+| Attivatore   | metodo Heartbeat   | Chiamate di rete   | Note   |
 |---|---|---|---|
-| Clic utente **[!UICONTROL Play]** | `trackSessionStart` | Inizio contenuto Analytics, Inizio contenuto Heartbeat | Non abbiamo ancora detto alla libreria delle misurazioni che c'è un annuncio pre-roll, quindi queste chiamate di rete sono ancora esattamente le stesse di Single VoD. |
-| Il capitolo inizia. | `trackEvent:ChapterStart` | Heartbeat Chapter Start |  |
-| Viene riprodotto il primo fotogramma del capitolo. | `trackPlay` | Heartbeat Content Play | Quando il contenuto dei capitoli viene riprodotto prima del contenuto principale, i heartbeat iniziano quando inizia il capitolo. |
+| Clic utente **[!UICONTROL Play]** | `trackSessionStart` | Inizio contenuto Analytics, inizio contenuto Heartbeat | Non abbiamo ancora comunicato alla libreria di misurazione che esiste un annuncio pre-roll, quindi queste chiamate di rete sono ancora esattamente uguali a VoD singolo. |
+| Inizia il capitolo. | `trackEvent:ChapterStart` | Inizio capitolo Heartbeat |  |
+| Viene riprodotto il primo fotogramma del capitolo. | `trackPlay` | Riproduzione di contenuti Heartbeat | Quando il contenuto del capitolo viene riprodotto prima del contenuto principale, gli heartbeat iniziano quando il capitolo inizia. |
 | Il capitolo suona. |  | Capitolo Heartbeat |  |
-| Il capitolo è completo. | `trackEvent:trackChapterComplete` | Heartbeat Capitolo completo | Questo avviene quando viene raggiunta la fine del capitolo. |
-| Il contenuto viene riprodotto. |  | Heartbeat di contenuto | Questa chiamata di rete è esattamente la stessa della riproduzione [VOD senza scenari di annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . |
-| Il contenuto è completo. | `trackComplete` | Heartbeat Content Complete | Questa chiamata di rete è esattamente la stessa della riproduzione [VOD senza scenari di annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . |
-| La sessione è finita. | `trackSessionEnd` |  | `SessionEnd` indica che è stata raggiunta la fine di una sessione di visualizzazione. Questa API deve essere chiamata anche se l'utente non guarda il supporto al termine. |
+| Il capitolo è completo. | `trackEvent:trackChapterComplete` | Capitolo Heartbeat completo | Questo è il momento in cui viene raggiunta la fine del capitolo. |
+| Il contenuto viene riprodotto. |  | heartbeat di contenuto | Questa chiamata di rete è esattamente la stessa della riproduzione [VOD senza annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario. |
+| Il contenuto è completo. | `trackComplete` | Contenuto Heartbeat completato | Questa chiamata di rete è esattamente la stessa della riproduzione [VOD senza annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario. |
+| La sessione è finita. | `trackSessionEnd` |  | `SessionEnd` significa che è stata raggiunta la fine di una sessione di visualizzazione. Questa API deve essere chiamata anche se l’utente non guarda i file multimediali al termine. |
 
 ## Parametri {#parameters}
 
-Quando inizia la riproduzione di un capitolo, viene `Heartbeat Chapter Start` inviata una chiamata. Se l’inizio del capitolo non coincide con il timer di 10 secondi, la `Heartbeat Chapter Start` chiamata viene ritardata di alcuni secondi e la chiamata va al successivo intervallo di 10 secondi.
+Quando inizia la riproduzione di un capitolo, viene inviata una chiamata `Heartbeat Chapter Start` . Se l&#39;inizio del capitolo non coincide con il timer di 10 secondi, la chiamata `Heartbeat Chapter Start` viene ritardata di alcuni secondi e la chiamata passa al successivo intervallo di 10 secondi.
 
-In questo caso, una `Content Heartbeat` chiamata viene effettuata nello stesso intervallo. Potete distinguere tra i due tipi esaminando il tipo di evento e il tipo di risorsa:
+In questo caso, una chiamata `Content Heartbeat` viene eseguita nello stesso intervallo. È possibile distinguere tra i due esaminando il tipo di evento e il tipo di risorsa:
 
-### Heartbeat Chapter Start
+### Inizio capitolo Heartbeat
 
 | Parametro | Valore | Note |
 |---|---|---|
 | `s:event:type` | `"chapter_start"` |  |
 | `s:asset:type` | `"main"` |  |
-| `s:stream:chapter_*` |  | Informazioni sul flusso specifiche per i dati del capitolo. |
+| `s:stream:chapter_*` |  | Trasmetti informazioni specifiche per i dati del capitolo. |
 | `s:meta:*` |  | Capitolo con dati contestuali specifici. |
 
 ## Codice di esempio, capitolo al centro {#sample-code-chapter-in-the-middle}
 
-In questo scenario, parte del contenuto del VOD è un capitolo.
+In questo scenario, parte del contenuto VOD è un capitolo.
 
 ![](assets/chapter-regular-playback.png)
 
@@ -254,9 +258,9 @@ this._mediaHeartbeat.trackSessionEnd();
 ........ 
 ```
 
-## Codice di esempio, capitolo all'inizio {#sample-code-chapter-at-the-beginning}
+## Codice di esempio, capitolo all&#39;inizio {#sample-code-chapter-at-the-beginning}
 
-In questo scenario, il contenuto VOD viene riprodotto con un capitolo all’inizio della riproduzione.
+In questo scenario, il contenuto VOD viene riprodotto con un capitolo all&#39;inizio della riproduzione.
 
 ![](assets/pre-chapter-regular.png)
 
@@ -465,4 +469,3 @@ this._mediaHeartbeat.trackSessionEnd();
 ........ 
 ........ 
 ```
-
