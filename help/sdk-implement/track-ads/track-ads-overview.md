@@ -1,108 +1,112 @@
 ---
-title: Panoramica
+title: Spiegazione di Track Ads
 description: Panoramica dell’implementazione del tracciamento degli annunci con Media SDK.
 uuid: 1607798b-c6ef-4d60-8e40-e958c345b09c
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: c714d31f-3d08-4ded-a413-2762d53bec75
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '508'
+ht-degree: 4%
 
 ---
-
 
 # Panoramica{#overview}
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l’implementazione mediante gli SDK 2.x. Se stai implementando una versione 1.x dell’SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione tramite gli SDK 2.x. Se implementi una versione 1.x dell&#39;SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
-La riproduzione di annunci include il tracciamento di interruzioni di annunci, avvii annunci, completamenti di annunci e salti di annunci. Utilizzate l'API del lettore multimediale per identificare gli eventi del lettore chiave e per compilare le variabili di annuncio richieste e facoltative. Consultate l'elenco completo dei metadati qui: Parametri [annuncio.](/help/metrics-and-metadata/ad-parameters.md)
+La riproduzione degli annunci include il tracciamento delle interruzioni degli annunci, gli avvii degli annunci, i completamenti degli annunci e gli annunci salti. Utilizza l’API del lettore multimediale per identificare gli eventi del lettore chiave e popolare le variabili di annuncio richieste e facoltative. Vedi l&#39;elenco completo dei metadati qui: [Parametri annuncio.](/help/metrics-and-metadata/ad-parameters.md)
 
 ## Eventi del lettore {#player-events}
 
 
-### Attivazione e interruzione
+### All&#39;avvio dell&#39;interruzione dell&#39;annuncio
 
 >[!NOTE]
->Incluso il pre-roll
+>Incluso pre-roll
 
-* Create un'istanza di `adBreak` oggetto per l'interruzione annuncio. Ad esempio, `adBreakObject`.
+* Crea un&#39;istanza di oggetto `adBreak` per l&#39;interruzione pubblicitaria. Ad esempio, `adBreakObject`.
 
-* Chiama `trackEvent` per iniziare la pausa pubblicitaria con il tuo `adBreakObject`.
+* Chiama `trackEvent` per iniziare l&#39;interruzione dell&#39;annuncio con il tuo `adBreakObject`.
 
-### Per ogni avvio della risorsa annuncio
+### A ogni avvio di risorse pubblicitarie
 
-* Create un'istanza di oggetto annuncio per la risorsa annuncio. Ad esempio, `adObject`.
-* Compilate i metadati dell'annuncio, `adCustomMetadata`.
-* Chiama `trackEvent` l'inizio dell'annuncio.
+* Crea un&#39;istanza di oggetto annuncio per la risorsa annuncio. Ad esempio, `adObject`.
+* Compila i metadati dell’annuncio, `adCustomMetadata`.
+* Chiama `trackEvent` per l&#39;inizio dell&#39;annuncio.
 
-### Per ogni annuncio completato
+### A ogni annuncio completato
 
-* Chiamata `trackEvent` per l'annuncio completo.
+* Chiama `trackEvent` per completare l&#39;annuncio.
 
-### Attivato annuncio
+### On ad salto
 
-* Chiama `trackEvent` il salto dell'annuncio.
+* Chiama `trackEvent` per il salto dell&#39;annuncio.
 
-### Al termine dell'interruzione dell'annuncio
+### Interruzione annuncio completata
 
-* Chiamata `trackEvent` per l'interruzione dell'annuncio completata.
+* Chiama `trackEvent` per completare l&#39;interruzione pubblicitaria.
 
-## Implementazione del tracciamento degli annunci {#implement-ad-tracking}
+## Implementare il tracciamento degli annunci {#implement-ad-tracking}
 
-### Costanti di tracciamento annunci
+### Costanti di tracciamento degli annunci
 
 | Nome costante | Descrizione   |
 |---|---|
-| `AdBreakStart` | Costante per il tracciamento dell'evento AdBreak Start |
-| `AdBreakComplete` | Costante per il tracciamento dell'evento AdBreak Complete |
-| `AdStart` | Costante per il tracciamento dell'evento Ad Start |
-| `AdComplete` | Costante per il tracciamento dell'evento Ad Complete |
-| `AdSkip` | Costante per il tracciamento dell'evento Ad Skip |
+| `AdBreakStart` | Costante per il tracciamento dell&#39;evento di avvio AdBreak |
+| `AdBreakComplete` | Costante per il tracciamento dell’evento AdBreak Complete |
+| `AdStart` | Costante per il tracciamento dell’evento Ad Start |
+| `AdComplete` | Costante per il tracciamento dell’evento Ad Complete |
+| `AdSkip` | Costante per il tracciamento dell’evento Ad Skip |
 
 ### Passaggi di implementazione
 
-1. Identificate quando inizia il limite di interruzione annuncio, incluso il pre-roll, e create un'interruzione `AdBreakObject` utilizzando le informazioni di interruzione annuncio.
+1. Identifica quando inizia il limite di interruzione dell&#39;annuncio, incluso il pre-roll, e crea un `AdBreakObject` utilizzando le informazioni di interruzione dell&#39;annuncio.
 
    `AdBreakObject` riferimento:
 
-   | Nome della variabile | Descrizione | Obbligatorio |
+   | Nome variable | Descrizione | Obbligatorio |
    | --- | --- | :---: |
    | `name` | Nome dell’interruzione dell’annuncio come pre-roll, mid-roll e post-roll. | Sì |
-   | `position` | La posizione numerica dell'interruzione annuncio all'interno del contenuto, a partire da 1. | Sì |
-   | `startTime` | Valore dell'indicatore di riproduzione all'inizio dell'interruzione dell'annuncio. | Sì |
+   | `position` | La posizione numerica dell’interruzione pubblicitaria all’interno del contenuto, a partire da 1. | Sì |
+   | `startTime` | Valore della testina di riproduzione all&#39;inizio dell&#39;interruzione pubblicitaria. | Sì |
 
-1. Chiama `trackEvent()` con `AdBreakStart` nell’ `MediaHeartbeat` istanza per iniziare a monitorare l’interruzione dell’annuncio.
+1. Chiama `trackEvent()` con `AdBreakStart` nell&#39;istanza `MediaHeartbeat` per iniziare a tracciare l&#39;interruzione pubblicitaria.
 
-1. Identificare quando inizia l'annuncio e creare un' `AdObject` istanza utilizzando le informazioni sull'annuncio.
+1. Identifica quando l&#39;annuncio inizia e crea un&#39;istanza `AdObject` utilizzando le informazioni dell&#39;annuncio.
 
    `AdObject` riferimento:
 
-   | Nome della variabile | Descrizione | Obbligatorio |
+   | Nome variable | Descrizione | Obbligatorio |
    | --- | --- | :---: |
-   | `name` | Nome descrittivo dell'annuncio. | Sì |
-   | `adId` | Identificatore univoco per l’annuncio. | Sì |
-   | `position` | La posizione del numero dell'annuncio all'interno dell'interruzione dell'annuncio, a partire da 1. | Sì |
+   | `name` | Nome descrittivo dell&#39;annuncio. | Sì |
+   | `adId` | Identificatore univoco per l&#39;annuncio. | Sì |
+   | `position` | La posizione numerica dell’annuncio all’interno dell’interruzione pubblicitaria, a partire da 1. | Sì |
    | `length` | Lunghezza annuncio | Sì |
 
-1. Se necessario, allegate metadati standard e/o di annunci alla sessione di tracciamento tramite variabili di dati di contesto.
+1. Facoltativamente, allega metadati standard e/o di annunci alla sessione di tracciamento tramite variabili di dati di contesto.
 
-   * **Metadati annuncio standard - Per metadati annuncio standard,** create un dizionario di coppie di valori di metadati di annunci standard utilizzando le chiavi per la vostra piattaforma.
-   * **Custom ad metadata -** Per i metadati personalizzati, create un oggetto variabile per le variabili di dati personalizzate e inserite i dati per l'annuncio corrente.
+   * **Metadati degli annunci standard:** per i metadati standard di annunci, crea un dizionario di coppie di valori chiave degli annunci standard utilizzando le chiavi per la piattaforma.
+   * **Metadati di annunci personalizzati -** Per i metadati personalizzati, crea un oggetto variabile per le variabili di dati personalizzate e compila i dati per l’annuncio corrente.
 
-1. Chiamate `trackEvent()` con l’ `AdStart` evento nell’ `MediaHeartbeat` istanza per iniziare a monitorare la riproduzione dell’annuncio.
+1. Chiama `trackEvent()` con l&#39;evento `AdStart` nell&#39;istanza `MediaHeartbeat` per iniziare a tracciare la riproduzione dell&#39;annuncio.
 
-   Includete un riferimento alla variabile di metadati personalizzata (o a un oggetto vuoto) come terzo parametro nella chiamata dell’evento.
+   Includi un riferimento alla variabile di metadati personalizzata (o a un oggetto vuoto) come terzo parametro nella chiamata dell&#39;evento.
 
-1. Quando la riproduzione dell’annuncio raggiunge la fine dell’annuncio, invoca `trackEvent()` con l’ `AdComplete` evento.
+1. Quando la riproduzione dell’annuncio raggiunge la fine dell’annuncio, invoca `trackEvent()` con l’evento `AdComplete` .
 
-1. Se la riproduzione dell'annuncio non è stata completata perché l'utente ha scelto di saltare l'annuncio, tracciate l' `AdSkip` evento.
-1. Se ci sono altri annunci all'interno dello stesso `AdBreak`, ripeti di nuovo i passaggi da 3 a 7.
-1. Al termine dell'interruzione dell'annuncio, utilizzate l' `AdBreakComplete` evento per tracciarlo.
+1. Se la riproduzione dell&#39;annuncio non è stata completata perché l&#39;utente ha scelto di saltare l&#39;annuncio, tieni traccia dell&#39;evento `AdSkip` .
+1. Se sono presenti annunci aggiuntivi all&#39;interno dello stesso `AdBreak`, ripeti nuovamente i passaggi da 3 a 7.
+1. Al termine dell’interruzione pubblicitaria, utilizza l’evento `AdBreakComplete` per tracciarlo.
 
 >[!IMPORTANT]
 >
->Accertatevi di NON incrementare la testina di riproduzione del lettore di contenuti (`l:event:playhead`) durante la riproduzione dell'annuncio (`s:asset:type=ad`). In questo caso, le metriche Content Time Spent (Tempo contenuto trascorso) avranno un impatto negativo.
+>Assicurati di NON incrementare la testina di riproduzione del lettore di contenuti (`l:event:playhead`) durante la riproduzione dell&#39;annuncio (`s:asset:type=ad`). In questo caso, le metriche Content Time Spent (Tempo contenuto trascorso) saranno influenzate negativamente.
 
-Il codice di esempio seguente utilizza l’SDK JavaScript 2.x per un lettore multimediale HTML5.
+Il codice di esempio seguente utilizza l&#39;SDK JavaScript 2.x per un lettore multimediale HTML5.
 
 ```js
 /* Call on ad break start */ 
@@ -139,4 +143,3 @@ if (e.type == "ad break complete") {
     this.mediaHeartbeat.trackEvent(MediaHeartbeat.Event.AdBreakComplete); 
 }; 
 ```
-
