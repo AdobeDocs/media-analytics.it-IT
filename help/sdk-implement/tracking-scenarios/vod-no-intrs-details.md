@@ -1,65 +1,69 @@
 ---
 title: Riproduzione VOD senza annunci
-description: Un esempio di tracciamento della riproduzione VOD che non contiene annunci.
+description: Visualizza un esempio di tracciamento della riproduzione VOD che non contiene annunci.
 uuid: ee2a1b79-2c2f-42e1-8e81-b62bbdd0d8cb
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: 9e2240f0-da8d-4dcc-9d44-0f121c60d924
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '366'
+ht-degree: 7%
 
 ---
-
 
 # Riproduzione VOD senza annunci{#vod-playback-with-no-ads}
 
 ## Scenario {#scenario}
 
-Questo scenario ha una risorsa VOD, senza annunci, che viene riprodotta una volta dall'inizio alla fine.
+Questo scenario ha una risorsa VOD, senza annunci, che viene riprodotto una volta dall’inizio alla fine.
 
-| Attivatore | Metodo Heartbeat | Chiamate di rete | Note   |
+| Attivatore | metodo Heartbeat | Chiamate di rete | Note   |
 |---|---|---|---|
-| Clic utente **[!UICONTROL Play]** | `trackSessionStart` | Inizio contenuto Analytics, Inizio contenuto Heartbeat | Può trattarsi di un evento di riproduzione automatica o di clic su Riproduci utente. |
-| Primo fotogramma del supporto | `trackPlay` | Heartbeat Content Play | Questo metodo attiva il timer e da questo momento in avanti, i heartbeat verranno inviati ogni 10 secondi per la durata della riproduzione. |
-| Riproduzione di contenuto |  | Heartbeat di contenuto |  |
-| Contenuto completato | `trackComplete` | Heartbeat Content Complete | *Completa* significa che è stata raggiunta la fine del playhead. |
+| Clic utente **[!UICONTROL Play]** | `trackSessionStart` | Inizio contenuto Analytics, inizio contenuto Heartbeat | Questo può essere un utente che fa clic su Play o un evento di riproduzione automatica. |
+| Primo fotogramma del supporto | `trackPlay` | Riproduzione di contenuti Heartbeat | Questo metodo attiva il timer e da questo momento in poi gli heartbeat verranno inviati ogni 10 secondi per la durata della riproduzione. |
+| Riproduzione di contenuti |  | heartbeat di contenuto |  |
+| Contenuto completato | `trackComplete` | Contenuto Heartbeat completato | ** Completano significa che è stata raggiunta la fine del playhead. |
 
 ## Parametri {#parameters}
 
-Molti degli stessi valori visualizzati nelle chiamate di avvio di contenuti Heartbeat sono visibili anche nelle `Content Start` chiamate di Adobe Analytics. Esistono molti parametri utilizzati da Adobe per compilare i vari rapporti multimediali, ma solo i parametri più importanti sono elencati nella tabella seguente:
+Molti degli stessi valori visualizzati nelle chiamate di avvio del contenuto Heartbeat sono visibili anche nelle chiamate Adobe Analytics `Content Start` . Esistono molti parametri utilizzati da Adobe per compilare i vari rapporti multimediali, ma solo i parametri più importanti sono elencati nella tabella seguente:
 
-### Avvio contenuto Heartbeat
+### Inizio contenuto Heartbeat
 
 | Parametro | Valore | Note   |
 |---|---|---|
-| `s:sc:rsid` | &lt;ID suite di rapporti Adobe&gt; |  |
-| `s:sc:tracking_server` | &lt;URL del server di tracciamento Analytics&gt; |  |
-| `s:user:mid` | deve essere impostato | Deve corrispondere al valore mid nella `Adobe Analytics Content Start` chiamata. |
+| `s:sc:rsid` | &lt;your Adobe=&quot;&quot; Report=&quot;&quot; Suite=&quot;&quot; ID=&quot;&quot;> |  |
+| `s:sc:tracking_server` | &lt;your Analytics=&quot;&quot; Tracking=&quot;&quot; Server=&quot;&quot; URL=&quot;&quot;> |  |
+| `s:user:mid` | deve essere impostato | Deve corrispondere al valore mid nella chiamata `Adobe Analytics Content Start` . |
 | `s:event:type` | `"start"` |  |
 | `s:asset:type` | `"main"` |  |
-| `s:asset:media_id` | &lt;Nome file multimediale&gt; |  |
-| `s:meta:*` | optional | Metadati personalizzati impostati per il supporto. |
+| `s:asset:media_id` | &lt;your Media=&quot;&quot; Name=&quot;&quot;> |  |
+| `s:meta:*` | facoltativo | Metadati personalizzati impostati sul supporto. |
 
-## Heartbeat Content Play {#heartbeat-content-play}
+## Riproduzione di contenuti Heartbeat {#heartbeat-content-play}
 
-Questi parametri dovrebbero essere quasi identici alla `Heartbeat Content Start` chiamata, ma la differenza chiave è il `s:event:type` parametro. Tutti gli altri parametri dovrebbero ancora esistere.
+Questi parametri dovrebbero essere quasi identici alla chiamata `Heartbeat Content Start` , ma la differenza chiave è il parametro `s:event:type` . Tutti gli altri parametri devono ancora esistere.
 
 | Parametro | Valore | Note   |
 |---|---|---|
 | `s:event:type` | `"play"` |  |
 | `s:asset:type` | `"main"` |  |
 
-## heartbeat di contenuto {#content-heartbeats}
+## heartbeat dei contenuti {#content-heartbeats}
 
-Durante la riproduzione dei contenuti multimediali, un timer invia almeno un heartbeat ogni 10 secondi. Questi heartbeat contengono informazioni su riproduzione, annunci pubblicitari, buffering e così via. Il contenuto esatto di ciascun heartbeat supera l'ambito di questo documento, ma il problema fondamentale è che i heartbeat vengono attivati in modo coerente durante la riproduzione continua.
+Durante la riproduzione dei contenuti multimediali, un timer invia almeno un heartbeat ogni 10 secondi. Questi heartbeat contengono informazioni su riproduzione, annunci pubblicitari, buffering e così via. Il contenuto esatto di ogni heartbeat va oltre l&#39;ambito di questo documento, ma il problema fondamentale è che gli heartbeat vengono attivati in modo coerente mentre la riproduzione continua.
 
-Nei heartbeat di contenuto, cercate i seguenti parametri:
+Negli heartbeat di contenuto, cerca i seguenti parametri:
 
 | Parametri | Valore | Note   |
 |---|---|---|
 | `s:event:type` | `"play"` |  |
-| `l:event:playhead` | &lt;posizione dell'indicatore di riproduzione&gt; ad esempio, 50,60,70 | Questo parametro riflette la posizione corrente dell'indicatore di riproduzione. |
+| `l:event:playhead` | &lt;playhead position=&quot;&quot;> ad esempio 50,60,70 | Questo parametro riflette la posizione corrente del playhead. |
 
-## Heartbeat Content Complete {#heartbeat-content-complete}
+## Contenuto Heartbeat completato {#heartbeat-content-complete}
 
-Al termine della riproduzione, ovvero alla fine dell'indicatore di riproduzione, viene inviata una `Heartbeat Content Complete` chiamata. Questa chiamata ha l'aspetto di altre chiamate Heartbeat, ma contiene alcuni parametri specifici:
+Al termine della riproduzione, ovvero al raggiungimento della fine della testina di riproduzione, viene inviata una chiamata `Heartbeat Content Complete` . Questa chiamata assomiglia ad altre chiamate Heartbeat, ma contiene alcuni parametri specifici:
 
 | Parametri | Valore | Note   |
 |---|---|---|
@@ -68,7 +72,7 @@ Al termine della riproduzione, ovvero alla fine dell'indicatore di riproduzione,
 
 ## Codice di esempio {#sample-code}
 
-In questo scenario, il contenuto dura 40 secondi. Viene riprodotto fino alla fine senza interruzioni.
+In questo caso, il contenuto è lungo 40 secondi. Viene riprodotto fino alla fine senza interruzioni.
 
 ![](assets/main-content-regular-playback.png)
 
@@ -198,4 +202,3 @@ this._mediaHeartbeat.trackSessionEnd();
 ........ 
 ........
 ```
-
