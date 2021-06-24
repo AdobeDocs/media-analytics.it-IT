@@ -1,38 +1,42 @@
 ---
-title: Ricerca di tracce su Chromecast
-description: In questo argomento viene descritta l’implementazione del tracciamento della ricerca tramite Media SDK su Chromecast.
-uuid: 8018e6c4-feed9-4de7-9eae-c720da55ad8c
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+title: Scopri come tenere traccia della ricerca in Chromecast
+description: Scopri come tenere traccia degli eventi Seek Start e Seek Complete utilizzando Media SDK in Chromecast.
+uuid: 8018e6c4-fed9-4de7-9eae-c720da55ad8c
+exl-id: 03be8ed3-ae3a-4e9a-b667-0d9280a844a1
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '148'
+ht-degree: 2%
 
 ---
 
-
-# Ricerca di tracce su Chromecast{#track-seeking-on-chromecast}
+# Tracciamento ricerca in Chromecast{#track-seeking-on-chromecast}
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l’implementazione in tutti gli SDK 2.x. Se stai implementando una versione 1.x dell’SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione in tutti gli SDK 2.x. Se implementi una versione 1.x dell&#39;SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
-## Costanti di tracciamento delle ricerche
+## Costanti di tracciamento ricerca
 
 | Nome costante | Descrizione     |
 |---|---|
-| `SeekStart` | Costante per il tracciamento dell'evento Seek Start. |
-| `SeekComplete` | Costante per il tracciamento dell'evento Seek Complete. |
+| `SeekStart` | Costante per il tracciamento dell’evento Seek Start . |
+| `SeekComplete` | Costante per il tracciamento dell’evento Seek Complete . |
 
-## Implementa ricerca
+## Implementare la ricerca
 
-1. Ascoltare gli eventi di ricerca della riproduzione dal lettore multimediale e, durante la ricerca, avviare la notifica dell’evento, tenere traccia della ricerca mediante l’ `SeekStart` evento: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
+1. Ascoltare gli eventi di ricerca della riproduzione dal lettore multimediale e, alla ricerca della notifica dell&#39;evento di avvio, tenere traccia della ricerca utilizzando l&#39;evento `SeekStart`: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
 
    ```
    ADBMobile.media.trackEvent(ADBMobile.media.Event.SeekStart); 
    ```
 
-1. Alla ricerca della notifica completa dal lettore multimediale, tenete traccia della fine della ricerca mediante l’ `SeekComplete` evento: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
+1. Al momento della ricerca della notifica completa dal lettore multimediale, tieni traccia della fine della ricerca utilizzando l&#39;evento `SeekComplete` : [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
 
    ```
    ADBMobile.media.trackEvent(ADBMobile.media.Event.SeekComplete); 
    ```
 
-Per ulteriori informazioni, vedi la riproduzione [VOD dello scenario di tracciamento con la ricerca nel contenuto](/help/sdk-implement/tracking-scenarios/vod-seeking.md) principale.
+Per ulteriori informazioni, consulta lo scenario di tracciamento [Riproduzione VOD con ricerca nel contenuto principale](/help/sdk-implement/tracking-scenarios/vod-seeking.md) .
