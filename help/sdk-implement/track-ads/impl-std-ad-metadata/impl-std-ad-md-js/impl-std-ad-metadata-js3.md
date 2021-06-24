@@ -1,20 +1,21 @@
 ---
-title: Implementazione di metadati di annunci standard tramite JavaScript 3.x
-description: Come utilizzare i metadati di annunci standard nel tracciamento degli annunci in un browser utilizzando le app JavaScript 3.x.
-translation-type: tm+mt
-source-git-commit: 83b38ac8f7fc88f982d194e776efccf8d5b983e4
+title: Scopri come implementare i metadati standard di annunci utilizzando JavaScript 3.x
+description: Come utilizzare i metadati standard di annunci nel tracciamento degli annunci in un browser utilizzando le app JavaScript 3.x.
+exl-id: ba9abf1d-3778-49ef-a2fc-6c0eafa3b227
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '54'
-ht-degree: 0%
+source-wordcount: '58'
+ht-degree: 3%
 
 ---
 
+# Implementazione dei metadati standard di annunci tramite JavaScript 3.x{#implement-standard-ad-metadata-on-javascript}
 
-# Implementazione di metadati di annunci standard tramite JavaScript 3.x{#implement-standard-ad-metadata-on-javascript}
+## Implementazione dei metadati standard di annunci
 
-## Implementazione di metadati di annunci standard
-
-Per i metadati di annunci standard, create un dizionario di coppie di valori chiave standard e metadati utilizzando le chiavi per la vostra piattaforma:
+Per i metadati standard di annunci, crea un dizionario di coppie di valori chiave di annunci standard utilizzando le chiavi per la piattaforma:
 
 ```js
 var adObject =
