@@ -1,22 +1,26 @@
 ---
-title: Tracciare le azioni eseguite nell'app
-description: Le azioni dell'app sono gli eventi che si verificano nell'app e che desideri misurare.
+title: Tracciamento azioni eseguite nell’app
+description: Le azioni eseguite nell’app sono gli eventi che si verificano nell’app e che desideri misurare.
 uuid: 9cdc048a-419a-4725-bd61-6ca6d909cf10
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: 88b7d540-67b7-4ec1-8273-02e34853bf60
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '134'
+ht-degree: 29%
 
 ---
 
+# Tracciare le azioni eseguite nell’app{#track-app-actions}
 
-# Tracciare le azioni eseguite nell'app{#track-app-actions}
+Le azioni sono gli eventi che si verificano nell’app che desideri misurare.
 
-Per "azioni" si intendono gli eventi che si verificano nell’app oggetto delle misurazioni.
+Ogni azione ha una o più metriche corrispondenti che vengono incrementate ogni volta che si verifica l’evento. Ad esempio, puoi inviare una chiamata `trackAction` per ogni nuovo abbonamento, ogni volta che il contenuto viene valutato o ogni volta che viene completato un livello.
 
-A ogni azione corrispondono una o più metriche che vengono incrementate ogni volta che si verifica l’evento. For example, you might send a `trackAction` call for each new subscription, or each time content is rated, or each time a level is completed.
+Le azioni non vengono tracciate automaticamente, quindi chiama `trackAction` quando si verifica un evento che desideri tracciare e mappa l&#39;azione a un evento personalizzato.
 
-Actions are not tracked automatically, so call `trackAction` when an event that you want to track occurs, and map the action to a custom event.
-
-1. Quando si verifica un evento che si desidera monitorare, chiama `trackAction`.
+1. Quando si verifica un evento di cui desideri tenere traccia, invoca `trackAction`.
 
    * **Roku:**
 
@@ -30,7 +34,7 @@ Actions are not tracked automatically, so call `trackAction` when an event that 
       ADBMobile.analytics.trackAction("myapp.ActionName", {});
       ```
 
-1. Mappare l'azione su un evento personalizzato.
+1. Mappa l’azione a un evento personalizzato.
 
    * **Roku:**
 
@@ -49,4 +53,3 @@ Actions are not tracked automatically, so call `trackAction` when an event that 
       ```
 
 Puoi anche inviare dati di contesto aggiuntivi con ogni chiamata di tracciamento delle azioni.
-
