@@ -1,11 +1,13 @@
 ---
-title: Guida all’implementazione di Custom Link
-description: null
+title: Spiegazione dell’implementazione di Custom Link
+description: Scopri come implementare il tracciamento dei collegamenti personalizzati in Streaming Media Analytics.
 uuid: 83315e73-20ca-4db5-9d43-33daade45a13
 exl-id: ee6f931a-ef80-4ebe-8ccb-cdbf970516e6
-source-git-commit: e56ce73316d9cf00193220df8959a489fc3f2124
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '202'
 ht-degree: 3%
 
 ---
