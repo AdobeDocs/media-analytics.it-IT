@@ -1,18 +1,19 @@
 ---
-title: Implementazione e generazione dei rapporti
-description: Questo argomento descrive come implementare la funzione di tracciamento dello stato del lettore, inclusa .
-translation-type: tm+mt
-source-git-commit: 1b48565bcc5c9a87e5fabbc906049ab791bf89cc
+title: Implementazione e reporting
+description: Scopri come implementare la funzione di tracciamento dello stato del lettore, tra cui .
+exl-id: 19a97c9b-14d1-4f11-bb0a-3a1ad6f949da
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '333'
-ht-degree: 0%
+source-wordcount: '334'
+ht-degree: 2%
 
 ---
 
-
 # Implementazione e reporting
 
-Durante una sessione di riproduzione, ogni occorrenza di stato (dall’inizio alla fine) deve essere tracciata singolarmente. L’SDK per file multimediali e l’API per la raccolta di file multimediali forniscono nuovi metodi di tracciamento per questa funzionalità.
+Durante una sessione di riproduzione, ogni occorrenza dello stato (dall’inizio alla fine) deve essere tracciata singolarmente. Media SDK e API di raccolta multimediale forniscono nuovi metodi di tracciamento per questa funzionalità.
 
 Media SDK include due nuovi metodi per il tracciamento dello stato personalizzato:
 
@@ -21,13 +22,13 @@ Media SDK include due nuovi metodi per il tracciamento dello stato personalizzat
 `trackStateClose("state_name")`
 
 
-L&#39;API Media Collection include due nuovi eventi che hanno `media.stateName` come parametro richiesto:
+L’API di raccolta multimediale include due nuovi eventi con `media.stateName` come parametro richiesto:
 
-`stateStart` (Componenti di progetto non curati) e `stateEnd` (Componenti VRS non curati)
+`stateStart` e `stateEnd`
 
-## Implementazione di Media SDK
+## Implementazione Media SDK
 
-Stato del lettore
+Avvio stato lettore
 
 ```
 // StateStart (ex: Mute is switched on)
@@ -35,7 +36,7 @@ var stateObject = ADB.Media.createStateObject(ADB.Media.PlayerState.Mute);
 tracker.trackEvent(ADB.Media.Event.StateStart, stateObject);
 ```
 
-Fine stato lettore
+Lo Stato Del Lettore Termina
 
 ```
 // StateEnd (ex: Mute is switched off)
@@ -45,7 +46,7 @@ tracker.trackEvent(ADB.Media.Event.StateEnd, stateObject);
 
 ## Implementazione API di Media Collection
 
-Stato del lettore
+Avvio stato lettore
 
 ```
 // StateStart (ex: Mute is switched on)
@@ -62,7 +63,7 @@ http(s)://<Analytics_Visitor_Namespace>.hb-api.omtrdc.net/api/v1/sessions/<SID>/
 }
 ```
 
-Fine stato lettore
+Lo Stato Del Lettore Termina
 
 ```
 // StateEnd (ex: Mute is switched off)
@@ -80,24 +81,24 @@ http(s)://<Analytics_Visitor_Namespace>.hb-api.omtrdc.net/api/v1/sessions/<SID>/
 }
 ```
 
-## Metriche stato
+## Metriche di stato
 
 Le metriche fornite per ogni singolo stato vengono calcolate e inviate ad Adobe Analytics come parametri di dati contestuali e memorizzate a scopo di reporting. Sono disponibili tre metriche per ogni stato:
 
-* `a.media.states.[state.name].set = true` — Impostato su true se lo stato è stato impostato almeno una volta per ogni specifica riproduzione di un flusso.
+* `a.media.states.[state.name].set = true` — Impostare su true se lo stato è stato impostato almeno una volta per ogni specifica riproduzione di un flusso.
 * `a.media.states.[state.name].count = 4` — Identifica il numero di occorrenze di uno stato durante ogni singola riproduzione di un flusso
 * `a.media.states.[state.name].time = 240` — Identifica la durata totale dello stato in secondi per ogni singola riproduzione di un flusso
 
 ## Generazione di rapporti
 
-Tutte le metriche dello stato del lettore possono essere utilizzate per qualsiasi visualizzazione di reporting disponibile in Analysis Workspace o in un componente (segmenti, metriche calcolate) una volta che una suite di rapporti è abilitata per il tracciamento dello stato del lettore. Le nuove metriche possono essere attivate dall’Admin Console per ogni singolo rapporto utilizzando Configurazione Media Reporting (Modifica impostazioni > Gestione file multimediali > Generazione rapporti multimediali).
+Tutte le metriche dello stato del lettore possono essere utilizzate per qualsiasi visualizzazione di reporting disponibile in Analysis Workspace o in un componente (segmento, metriche calcolate) una volta che una suite di rapporti è abilitata per il tracciamento dello stato del lettore. Le nuove metriche possono essere abilitate nell’Admin Console per ogni singolo rapporto utilizzando Media Reporting Setup (Modifica impostazioni > Media Management > Media Reporting).
 
 ![](assets/report-setup.png)
 
-In Analytics Workspace, tutte le nuove proprietà si trovano nel pannello delle metriche. Ad esempio, puoi eseguire una ricerca per `full screen` visualizzare i dati a schermo intero nel pannello delle metriche.
+In Analysis Workspace, tutte le nuove proprietà si trovano nel pannello metriche . Ad esempio, puoi eseguire una ricerca per `full screen` per visualizzare i dati a schermo intero nel pannello metriche.
 
 ![](assets/full-screen-report.png)
 
-## Importazione di metriche del lettore dichiarate in Adobe Experience Platform
+## Importazione delle metriche dichiarate del lettore in Adobe Experience Platform
 
-I dati memorizzati in Analytics possono essere utilizzati per qualsiasi scopo e le metriche dello stato del lettore possono essere importate in Adobe Experience Platform utilizzando XDM e utilizzate con Customer Journey Analytics. Le proprietà dello stato standard hanno proprietà specifiche, mentre gli stati personalizzati sono proprietà disponibili tramite gli eventi personalizzati. Per ulteriori informazioni sulle proprietà standard dello stato, consultate la sezione *Proprietà elenco per identità* XDM nella pagina Parametri [dello stato del](/help/metrics-and-metadata/player-state-parameters.md) lettore.
+I dati memorizzati in Analytics possono essere utilizzati per qualsiasi scopo e le metriche dello stato del lettore possono essere importate in Adobe Experience Platform utilizzando XDM e utilizzate con il Customer Journey Analytics. Le proprietà dello stato standard hanno proprietà specifiche, mentre gli stati personalizzati sono proprietà disponibili utilizzando gli eventi personalizzati. Per ulteriori informazioni sulle proprietà dello stato standard, consulta la sezione *Elenco proprietà per le identità XDM* nella pagina [Parametri dello stato del lettore](/help/metrics-and-metadata/player-state-parameters.md) .
