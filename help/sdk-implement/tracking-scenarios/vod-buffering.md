@@ -1,32 +1,36 @@
 ---
 title: Riproduzione VOD con buffering
-description: Un esempio di come tenere traccia del contenuto VOD mediante l’SDK per file multimediali.
+description: Visualizza un esempio di come tenere traccia del contenuto VOD utilizzando Media SDK.
 uuid: 958f7692-7193-40fb-a8e7-2ff4fa805330
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: 3a8f913f-cb51-45ae-ac1d-862ea1e7c994
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '229'
+ht-degree: 7%
 
 ---
-
 
 # Riproduzione VOD con buffering{#vod-playback-with-buffering}
 
 ## Scenario {#scenario}
 
-In questo scenario, si verifica un buffering durante la riproduzione del contenuto VOD.
+In questo scenario, alcuni buffering si verificano quando il contenuto VOD viene riprodotto.
 
-Se non viene specificato, le chiamate di rete in questo scenario sono le stesse delle chiamate nella riproduzione [VOD senza scenari di annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) .
+Se non viene specificato, le chiamate di rete in questo scenario sono le stesse di quelle nella riproduzione [VOD senza annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario.
 
-| Attivatore   | Metodo Heartbeat | Chiamate di rete | Note   |
+| Attivatore   | metodo Heartbeat   | Chiamate di rete   | Note   |
 |---|---|---|---|
-| Clic utente **[!UICONTROL Play]** | `trackSessionStart` | Inizio contenuto Analytics, Inizio contenuto Heartbeat | Può trattarsi di un clic dell'utente **[!UICONTROL Play]** o di un evento di riproduzione automatica. |
-| Viene riprodotto il primo fotogramma del video. | `trackPlay` | Heartbeat Content Play | Questo metodo attiva il timer. Gli heartbeat vengono inviati ogni 10 secondi fintanto che la riproduzione continua. |
-| Il contenuto viene riprodotto. |  | Heartbeat di contenuto |  |
+| Clic utente **[!UICONTROL Play]** | `trackSessionStart` | Inizio contenuto Analytics, inizio contenuto Heartbeat | Può trattarsi di un clic dell&#39;utente **[!UICONTROL Play]** o di un evento di riproduzione automatica. |
+| Viene riprodotto il primo fotogramma del video. | `trackPlay` | Riproduzione di contenuti Heartbeat | Questo metodo attiva il timer. Gli heartbeat vengono inviati ogni 10 secondi, a condizione che la riproduzione continui. |
+| Il contenuto viene riprodotto. |  | heartbeat di contenuto |  |
 | Il buffering inizia. | `trackEvent:BufferStart` | Buffer Heartbeat |  |
-| Il contenuto viene memorizzato nel buffer. |  | Heartbeat di contenuto |  |
+| Il contenuto è bufferizzato. |  | heartbeat di contenuto |  |
 | Il buffering è completo. | `trackEvent:BufferComplete` | Buffer Heartbeat, Heartbeat Play |  |
-| Il contenuto viene riprodotto. |  | Heartbeat di contenuto |  |
-| La riproduzione del contenuto viene completata. | `trackComplete` | Heartbeat Content Complete | È stata raggiunta la fine del playhead. |
-| La sessione è finita. | `trackSessionEnd` |  | `SessionEnd` indica la fine di una sessione di visualizzazione. Questa API deve essere chiamata anche se l'utente non guarda il video al termine. |
+| Il contenuto viene riprodotto. |  | heartbeat di contenuto |  |
+| La riproduzione del contenuto è completa. | `trackComplete` | Contenuto Heartbeat completato | La fine del playhead è stata raggiunta. |
+| La sessione è finita. | `trackSessionEnd` |  | `SessionEnd` indica la fine di una sessione di visualizzazione. Questa API deve essere chiamata anche se l’utente non guarda il video al termine. |
 
 ## Parametri {#parameters}
 
@@ -222,4 +226,3 @@ this._mediaHeartbeat.trackSessionEnd();
 ........ 
 ........ 
 ```
-
