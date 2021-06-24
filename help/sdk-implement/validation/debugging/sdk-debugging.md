@@ -1,16 +1,20 @@
 ---
-title: Debug dell'SDK
-description: Questo argomento descrive il tracciamento e la registrazione disponibili in Media SDK.
+title: Debug di SDK
+description: Scopri le funzioni di tracciamento/registrazione disponibili in Media SDK.
 uuid: a5972d87-c593-4b4f-a56f-dca6e25268e1
-translation-type: tm+mt
-source-git-commit: ccdc3e170d125a76d798be7ce1fa5c12eef1f76a
+exl-id: c2de6454-8538-4d07-a099-e278b153d894
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '272'
+ht-degree: 12%
 
 ---
 
+# Debug dell’SDK{#sdk-debugging}
 
-# SDK debugging{#sdk-debugging}
-
-Potete attivare e disattivare la registrazione. L’SDK per file multimediali offre un ampio meccanismo di tracciamento/registrazione in tutto lo stack di tracciamento dei contenuti multimediali. È possibile abilitare o disabilitare la registrazione impostando il `debugLogging` flag sull&#39;oggetto Config.
+Puoi abilitare e disabilitare la registrazione. Media SDK fornisce un ampio meccanismo di tracciamento/registrazione in tutto lo stack di tracciamento dei contenuti multimediali. È possibile abilitare o disabilitare la registrazione impostando il flag `debugLogging` sull&#39;oggetto Config.
 
 ## Codice di esempio per la registrazione di debug
 
@@ -48,7 +52,7 @@ this._mediaHeartbeat = new MediaHeartbeat(mediaDelegate, mediaConfig, appMeasure
 
 ### OTT (Chromecast, Roku)
 
-La libreria ADBMobile fornisce la registrazione di debug attraverso il `setDebugLogging` metodo. La registrazione di debug deve essere impostata su `false` per tutte le app di produzione.
+La libreria ADBMobile fornisce la registrazione di debug attraverso il metodo `setDebugLogging` . La registrazione di debug deve essere impostata su `false` per tutte le app di produzione.
 
 #### Roku
 
@@ -64,7 +68,7 @@ ADBMobile.config.setDebugLogging(true)
 
 ## Utilizzo di Adobe Bloodhound per testare le applicazioni Chromecast
 
-Durante lo sviluppo dell’applicazione, Bloodhound consente di visualizzare le chiamate al server localmente e, facoltativamente, di inoltrare i dati ai server di raccolta Adobe.
+Durante lo sviluppo dell’applicazione, Bloodhound consente di visualizzare le chiamate server localmente e, facoltativamente, di inoltrare i dati ai server di raccolta Adobe.
 
 <!--
 For more information about Bloodhound, see the following guides:
@@ -75,30 +79,29 @@ For more information about Bloodhound, see the following guides:
 
 >[!IMPORTANT]
 >
->Dal 30 aprile 2017, Adobe Bloodhound è stato
-ritirato. A partire dal 1° maggio 2017, non verranno più forniti ulteriori miglioramenti né supporto aggiuntivo Engineering o Adobe Expert Care.
+>Dal 30 aprile 2017, Adobe Bloodhound è stato ritirato. A partire dal 1° maggio 2017, non verranno più forniti ulteriori miglioramenti né supporto aggiuntivo Engineering o Adobe Expert Care.
 
 ## Messaggi di registro
 
-I messaggi di registro seguono questo formato:
+I messaggi di log seguono questo formato:
 
 ```js
 Format: [<timestamp>] [<level>] [<tag>] [<message>] 
 Example: [16:10:29 GMT­0700 (PDT).245] [DEBUG] [plugin::player] Resolving qos.startupTime: 0
 ```
 
-* **timestamp:** Ora CPU corrente (fuso orario per GMT)
-* **livello:** Sono stati definiti 4 livelli di messaggio:
-   * INFO - Solitamente i dati di input dell&#39;applicazione (convalidate il nome del lettore, l&#39;ID video, ecc.)
-   * DEBUG - Registri di debug, utilizzati dagli sviluppatori per eseguire il debug di problemi più complessi
-   * AVVERTENZA: indica potenziali errori di integrazione/configurazione o errori Heartbeat SDK
-   * ERRORE - Indica importanti errori di integrazione o errori Heartbeat SDK
-* **tag:** Nome del sottocomponente che ha emesso il messaggio di registro (in genere il nome della classe)
-* **message:** Il messaggio di traccia effettivo
+* **timestamp:** è l’ora corrente della CPU (fuso orario per GMT)
+* **livello:** sono definiti 4 livelli di messaggio:
+   * INFO - Di solito i dati di input dall&#39;applicazione (convalidare il nome del lettore, l&#39;ID video, ecc.)
+   * DEBUG - Log di debug, utilizzati dagli sviluppatori per eseguire il debug di problemi più complessi
+   * AVVERTENZA: indica potenziali errori di integrazione/configurazione o bug dell&#39;SDK Heartbeat
+   * ERRORE - Indica errori importanti di integrazione o bug dell&#39;SDK per Heartbeat
+* **tag:** il nome del sottocomponente che ha emesso il messaggio di log (in genere il nome della classe)
+* **messaggio:** messaggio di traccia effettivo
 
-Puoi usare l’output dei file di registro dalla libreria Media SDK per verificare l’implementazione. Una buona strategia consiste nel cercare tra i file di registro la stringa `#track`. In questo modo verranno evidenziate tutte le `track*()` chiamate effettuate dall&#39;applicazione.
+Puoi utilizzare l’output dei registri dalla libreria Media SDK per verificare l’implementazione. Una buona strategia è quella di cercare tra i log la stringa `#track`. In questo modo verranno evidenziate tutte le chiamate `track*()` effettuate dall&#39;applicazione.
 
-Ad esempio, questo è l&#39;aspetto dei file di registro filtrati per `#track` cui:
+Ad esempio, questo è l’aspetto dei log filtrati per `#track`:
 
 ```js
 [16:10:29 GMT­0700 (PDT).222] [INFO] [plugin::player] #trackVideoLoad() 
@@ -112,4 +115,3 @@ Ad esempio, questo è l&#39;aspetto dei file di registro filtrati per `#track` c
 [16:11:29 GMT­0700 (PDT).764] [INFO] [plugin::player] #trackComplete() 
 [16:11:29 GMT­0700 (PDT).766] [INFO] [plugin::player] #trackVideoUnload()
 ```
-
