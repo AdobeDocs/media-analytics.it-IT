@@ -1,13 +1,14 @@
 ---
 title: Panoramica dei contenuti multimediali
-description: Panoramica dei contenuti multimediali
+description: Utilizza il dashboard Panoramica file multimediali per visualizzare le misurazioni degli aggregati. Scopri come monitorare rapidamente le prestazioni dei contenuti multimediali.
 uuid: bdbd998f-9b5e-40c9-a8ea-12dfa5acd35c
 exl-id: 4fe91372-da41-44c5-bea9-2bba762512ef
-translation-type: tm+mt
-source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
+feature: '"Informazioni di base su Media Analytics, Reports & Analytics"'
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '93'
-ht-degree: 1%
+source-wordcount: '112'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +32,7 @@ Visualizzare rapidamente le metriche dei contenuti multimediali in base al dispo
 ![](assets/video-overview-report-filters.png){width="400px"}
 -->
 
-## Prestazioni file multimediali {#media-performance}
+## Prestazioni multimediali {#media-performance}
 
 Fai clic e trascina per ingrandire, quindi passa il mouse per visualizzare le metriche granulari per specifici file multimediali. Fai clic su  ![](assets/video-overview-report-revert.png)
 
