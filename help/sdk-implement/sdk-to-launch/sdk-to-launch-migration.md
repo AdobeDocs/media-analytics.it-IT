@@ -1,13 +1,15 @@
 ---
 seo-title: Migrazione dall’SDK di Media autonomo ad Adobe Launch
-title: Migrazione dall’SDK di Media autonomo ad Adobe Launch
+title: Migrazione dall’SDK per contenuti multimediali indipendenti a Launch Adobe
 seo-description: Istruzioni ed esempi di codice per facilitare la migrazione da Media SDK a Launch.
-description: Istruzioni ed esempi di codice per facilitare la migrazione da Media SDK a Launch.
+description: Scopri come migrare da Media SDK a Launch.
 exl-id: 5350bbe9-c34f-46d9-a4c4-dbccdbed0bb0
-source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '182'
-ht-degree: 2%
+source-wordcount: '180'
+ht-degree: 3%
 
 ---
 
