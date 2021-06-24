@@ -1,12 +1,13 @@
 ---
-title: Migrazione da Milestone a Media Analytics
-description: Migrazione da Milestone a Media Analytics
+title: Scopri come migrare da Milestone a Media Analytics
+description: Scopri come modificare le variabili Milestone in Metriche di Media Analytics e i metodi del modulo Milestone in sintassi Media Analytics.
 uuid: fdc96146-af63-48ce-b938-c0ca70729277
 exl-id: 655841ed-3a02-4e33-bbc9-46fb14302194
-translation-type: tm+mt
-source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '692'
 ht-degree: 14%
 
 ---
