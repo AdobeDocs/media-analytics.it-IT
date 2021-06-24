@@ -1,32 +1,33 @@
 ---
-title: Tracciare il buffering con JavaScript 2.x
-description: Descrive il tracciamento degli eventi di buffering nelle app browser (JS).
+title: Scopri come tenere traccia del buffering con JavaScript 2.x
+description: Scopri come tenere traccia degli eventi di buffering nelle app del browser (JS).
 uuid: c380cf2c-7729-4d4a-a4da-581bd94a5896
-translation-type: tm+mt
-source-git-commit: 318bb60d9835d9a07fb7aa0a0a02162248410d09
+exl-id: 62c1d5b4-2717-42b3-8343-d41e895a9da3
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 0%
+source-wordcount: '123'
+ht-degree: 2%
 
 ---
 
-
-# Tracciare il buffering con JavaScript 2.x{#track-buffering-on-javascript}
+# Tracciamento buffering con JavaScript 2.x{#track-buffering-on-javascript}
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l’implementazione in tutti gli SDK 2.x. Se stai implementando una versione 1.x dell’SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione in tutti gli SDK 2.x. Se implementi una versione 1.x dell&#39;SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
 ## Costanti di tracciamento del buffer
 
 | Nome costante | Descrizione     |
 |---|---|
-| `BufferStart` | Costante per il tracciamento dell’evento Start del buffer |
-| `BufferComplete` | Costante per il tracciamento dell&#39;evento Buffer Complete |
+| `BufferStart` | Costante per il tracciamento dell’evento Buffer Start |
+| `BufferComplete` | Costante per il tracciamento dell’evento Buffer Complete |
 
 ## Implementare il buffering
 
-1. Ascoltare gli eventi di buffering della riproduzione dal lettore multimediale e, durante la notifica dell&#39;evento di avvio del buffer, tenere traccia del buffering utilizzando l&#39; `BufferStart` evento.
+1. Ascolta gli eventi di buffering di riproduzione dal lettore multimediale e, in caso di notifica dell&#39;evento di avvio del buffer, tieni traccia del buffering utilizzando l&#39;evento `BufferStart` .
 
    ```js
    _onBufferStart = function() {
@@ -34,7 +35,7 @@ ht-degree: 0%
    };
    ```
 
-1. Nella notifica completa del buffer dal lettore multimediale, tenere traccia della fine del buffering utilizzando l&#39; `BufferComplete` evento.
+1. Al momento della notifica completa del buffer da parte del lettore multimediale, tieni traccia della fine del buffering utilizzando l&#39;evento `BufferComplete` .
 
    ```js
    _onBufferComplete = function() {
@@ -42,4 +43,4 @@ ht-degree: 0%
    };
    ```
 
-Per ulteriori informazioni, consulta lo scenario di tracciamento della riproduzione [VOD con buffering](/help/sdk-implement/tracking-scenarios/vod-buffering.md) .
+Per ulteriori informazioni, consulta lo scenario di tracciamento [Riproduzione VOD con buffering](/help/sdk-implement/tracking-scenarios/vod-buffering.md) .
