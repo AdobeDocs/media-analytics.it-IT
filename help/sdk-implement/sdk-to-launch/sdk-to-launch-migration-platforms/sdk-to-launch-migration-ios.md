@@ -1,19 +1,24 @@
 ---
-title: Migrazione dall’SDK per file multimediali standalone ad Adobe Launch - iOS
-description: Istruzioni ed esempi di codice per facilitare la migrazione da Media SDK a Launch per iOS.
-translation-type: tm+mt
-source-git-commit: bc896cc403923e2f31be7313ab2ca22c05893c45
+title: '"Migrazione dall’SDK per contenuti multimediali indipendenti ad Adobe Launch - iOS"'
+description: Scopri come migrare da Media SDK a Launch per iOS.
+exl-id: f70b8e1b-cb9f-4230-86b2-171bdaed4615
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '359'
+ht-degree: 0%
 
 ---
 
-
-# Migrazione dall’SDK per file multimediali standalone ad Adobe Launch - iOS
+# Migrazione dall’SDK di Media autonomo ad Adobe Launch - iOS
 
 ## Configurazione
 
-### SDK per file multimediali indipendenti
+### SDK per contenuti multimediali indipendenti
 
-Nell’SDK per file multimediali standalone, configuri la configurazione di tracciamento nell’app e passala all’SDK quando crei il tracciatore.
+Nell’SDK di Media autonomo, configuri la configurazione di tracciamento nell’app,
+e passalo all&#39;SDK quando crei il tracker.
 
 ```objective-c
 ADBMediaHeartbeatConfig *config = 
@@ -31,24 +36,26 @@ ADBMediaHeartbeat* tracker =
   [[ADBMediaHeartbeat alloc] initWithDelegate:self config:config]; 
 ```
 
-### Avvia estensione
+### Estensione Launch
 
-1. In Experience Platform Launch, fai clic sulla [!UICONTROL Extensions] scheda della proprietà mobile
-1. Nella [!UICONTROL Catalog] scheda, individua l’estensione Adobe Media Analytics for Audio and Video e fai clic su [!UICONTROL Install].
-1. Nella pagina delle impostazioni di estensione, configurate i parametri di tracciamento.
-L’estensione Media utilizzerà i parametri configurati per il tracciamento.
+1. In Experience Platform Launch, fai clic sulla scheda [!UICONTROL Extensions] per la proprietà mobile
+1. Nella scheda [!UICONTROL Catalog] , individua l’estensione Adobe Medium Analytics for Audio and Video e fai clic su [!UICONTROL Install].
+1. Nella pagina delle impostazioni dell&#39;estensione, configura i parametri di tracciamento.
+L’estensione Media utilizza i parametri configurati per il tracciamento.
 
    ![](assets/launch_config_mobile.png)
 
 [Configurare l’estensione Media Analytics](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics)
 
-## Creazione Tracker
+## Creazione del tracciamento
 
-### SDK per file multimediali indipendenti
+### SDK per contenuti multimediali indipendenti
 
-Nell’SDK per file multimediali indipendenti potete creare manualmente l’ `ADBMediaHeartbeatConfig` oggetto e configurare i parametri di tracciamento. Implementare l'interfaccia delegate che espone il pannello`getQoSObject()` e `getCurrentPlaybackTime()functions.`
+Nell’SDK di Media autonomo puoi creare manualmente l’oggetto `ADBMediaHeartbeatConfig`
+e configura i parametri di tracciamento. Implementa l’interfaccia di delegato che espone il
+`getQoSObject()` e `getCurrentPlaybackTime()functions.`
 
-Create un’istanza di MediaHeartbeat per il tracciamento:
+Crea un&#39;istanza MediaHeartbeat per il tracciamento:
 
 ```objective-c
 @interface PlayerDelegate : NSObject<ADBMediaHeartbeatDelegate>
@@ -83,11 +90,11 @@ ADBMediaHeartbeat* tracker =
   [[ADBMediaHeartbeat alloc] initWithDelegate:delegate config:config];
 ```
 
-### Avvia estensione
+### Estensione Launch
 
-[Riferimento API Media - Creazione del Tracker multimediale](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#create-a-media-tracker)
+[Riferimento API Media - Creare il tracciamento Media](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#create-a-media-tracker)
 
-Prima di creare il tracciatore, registrate l’estensione del supporto e le estensioni dipendenti con il core mobile.
+Prima di creare il tracker, registra l&#39;estensione multimediale e le estensioni dipendenti con il core mobile.
 
 ```objective-c
 // Register the extension once during app launch
@@ -107,8 +114,8 @@ Prima di creare il tracciatore, registrate l’estensione del supporto e le este
 }
 ```
 
-Una volta registrata l'estensione del supporto, il tracciatore può essere creato utilizzando la seguente API.
-Il tracciatore seleziona automaticamente la configurazione dalla proprietà di avvio configurata.
+Una volta registrata l&#39;estensione media, il tracker può essere creato utilizzando la seguente API.
+Il tracker seleziona automaticamente la configurazione dalla proprietà di avvio configurata.
 
 ```objective-c
 [ACPMedia createTracker:^(ACPMediaTracker * _Nullable mediaTracker) {
@@ -116,28 +123,35 @@ Il tracciatore seleziona automaticamente la configurazione dalla proprietà di a
 }];
 ```
 
-## Aggiornamento dei valori Playhead e Quality of Experience.
+## Aggiornamento della testina di riproduzione e dei valori di qualità dell’esperienza.
 
-### SDK per file multimediali indipendenti
+### SDK per contenuti multimediali indipendenti
 
-Nell’SDK per file multimediali standalone, durante la creazione del tracciatore viene passato un oggetto delegato che implementa il`ADBMediaHeartbeartDelegate` protocollo.
-L'implementazione deve restituire l'ultimo QoE e playhead ogni volta che il racker chiama i metodi `getQoSObject()` e `getCurrentPlaybackTime()` le interfacce.
+Nell’SDK di Media standalone, un oggetto delegato che implementa il
+Il protocollo `ADBMediaHeartbeartDelegate` viene passato durante la creazione del tracker.
+L&#39;implementazione deve restituire l&#39;ultimo QoE e playhead ogni volta che il
+il tracker chiama l&#39;interfaccia `getQoSObject()` e `getCurrentPlaybackTime()`
+metodi.
 
-### Avvia estensione
+### Estensione Launch
 
-L'implementazione deve aggiornare l'indicatore di riproduzione del lettore corrente chiamando il metodo esposto dal`updateCurrentPlayhead` tracciatore. Per un tracciamento accurato, devi chiamare questo metodo almeno una volta al secondo.
+L&#39;implementazione deve aggiornare l&#39;attuale playhead del lettore denominato
+Metodo `updateCurrentPlayhead` esposto dal tracker. Tracciamento accurato
+dovresti chiamare questo metodo almeno una volta al secondo.
 
-[Riferimento API Media - Aggiorna testina di riproduzione corrente](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#updatecurrentplayhead)
+[Riferimento API Media - Aggiorna la sequenza di riproduzione corrente](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#updatecurrentplayhead)
 
-L’implementazione deve aggiornare le informazioni QoE chiamando il metodo esposto dal`updateQoEObject` tracciatore. È consigliabile chiamare questo metodo ogni volta che si verifica una modifica nelle metriche di qualità.
+L&#39;implementazione deve aggiornare le informazioni QoE chiamando il
+Metodo `updateQoEObject` esposto dal tracker. Dovresti chiamare questo metodo
+ogni volta che si verifica una modifica nelle metriche di qualità.
 
-[Riferimento API Media - Aggiornamento oggetto QoE](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#updateqoeobject)
+[Riferimento API Media - Aggiorna oggetto QoE](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#updateqoeobject)
 
-## Trasmissione di contenuti multimediali/metadati di annunci standard
+## Trasmissione dei contenuti multimediali e dei metadati standard di annunci
 
-### SDK per file multimediali indipendenti
+### SDK per contenuti multimediali indipendenti
 
-* Metadati file multimediali standard:
+* Metadati contenuti multimediali standard:
 
    ```objective-c
    ADBMediaObject *mediaObject = 
@@ -189,9 +203,9 @@ L’implementazione deve aggiornare le informazioni QoE chiamando il metodo espo
             data:adDictionary];
    ```
 
-### Avvia estensione
+### Estensione Launch
 
-* Metadati file multimediali standard:
+* Metadati contenuti multimediali standard:
 
    ```objective-c
    NSDictionary *mediaObject = 
