@@ -1,46 +1,47 @@
 ---
-title: Tenere traccia della riproduzione di base mediante JavaScript v3.x
-description: Questo argomento descrive come implementare il tracciamento di base utilizzando Media SDK in un browser utilizzando le app JavaScript 3.x.
-translation-type: tm+mt
-source-git-commit: 40d75ef32596e915ac07c173b4595bb78db3688d
+title: Scopri come tenere traccia della riproduzione core utilizzando JavaScript v3.x
+description: Scopri come implementare il tracciamento di base utilizzando Media SDK in un browser utilizzando le app JavaScript 3.x.
+exl-id: f3145450-82ba-4790-91a4-9d2cc97bbaa5
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '647'
 ht-degree: 2%
 
 ---
 
-
-# Tenere traccia della riproduzione di base mediante JavaScript 3.x{#track-core-playback-on-javascript}
+# Tracciamento riproduzione core con JavaScript 3.x{#track-core-playback-on-javascript}
 
 >[!IMPORTANT]
->Questa documentazione descrive il tracciamento nella versione 3.x dell’SDK. Se stai implementando versioni precedenti dell’SDK, puoi scaricare le Guide per gli sviluppatori qui: [Download di SDK](/help/sdk-implement/download-sdks.md)
+>Questa documentazione tratta il tracciamento nella versione 3.x dell&#39;SDK. Se implementi una versione precedente dell’SDK, puoi scaricare le Guide per sviluppatori qui: [Scaricare gli SDK](/help/sdk-implement/download-sdks.md)
 
-1. **Configurazione iniziale tracciamento**
+1. **Configurazione del tracciamento iniziale**
 
-   Identificare quando l&#39;utente attiva l&#39;intenzione di riproduzione (l&#39;utente fa clic su play e/o la riproduzione automatica è attivata) e creare un&#39; `MediaObject` istanza.
+   Identifica quando l&#39;utente attiva l&#39;intenzione di riproduzione (l&#39;utente fa clic su play e/o autoplay è attivato) e crea un&#39;istanza `MediaObject`.
 
-   [createMediaObject API](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html#.createMediaObject)
+   [API createMediaObject](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html#.createMediaObject)
 
-   | Nome della variabile | Tipo | Descrizione |
+   | Nome variable | Tipo | Descrizione |
    | --- | --- | --- |
-   | `name` | string | Stringa non vuota che denota il nome del supporto. |
-   | `id` | string | Stringa non vuota che denota un unico identificatore multimediale. |
-   | `length` | number | Numero positivo che indica la lunghezza del supporto in secondi. Utilizzate 0 se la lunghezza è sconosciuta. |
+   | `name` | string | Stringa non vuota che indica il nome del supporto. |
+   | `id` | string | Stringa non vuota che indica un identificatore di supporto univoco. |
+   | `length` | numero | Numero positivo che indica la lunghezza del supporto in secondi. Utilizzare 0 se la lunghezza è sconosciuta. |
    | `streamType` | string |  |
-   | `mediaType` |  | Tipo di supporto (Audio o Video). |
+   | `mediaType` |  | Tipo di supporto (audio o video). |
 
    **`StreamType`costanti:**
 
    | Nome costante | Descrizione   |
    |---|---|
    | `VOD` | Tipo di flusso per Video on Demand. |
-   | `AOD` | Tipo di flusso per Audio su richiesta. |
+   | `AOD` | Tipo di flusso per Audio on Demand. |
 
    **`MediaType`costanti:**
 
    | Nome costante | Descrizione |
    |---|---|
-   | `Audio` | Tipo di supporto per i flussi audio. |
+   | `Audio` | Tipo di supporto per flussi audio. |
    | `Video` | Tipo di supporto per i flussi video. |
 
    ```
@@ -53,20 +54,20 @@ ht-degree: 2%
 
 1. **Allega metadati**
 
-   Se necessario, allegate metadati standard e/o personalizzati alla sessione di tracciamento tramite variabili di dati di contesto.
+   Facoltativamente, allega metadati standard e/o personalizzati alla sessione di tracciamento tramite variabili di dati di contesto.
 
    * **Metadati standard**
 
       >[!NOTE]
       >
-      >È possibile allegare i metadati standard.
+      >L&#39;aggiunta dei metadati standard è facoltativa.
 
-      * Riferimento API per le chiavi di metadati multimediali - chiavi di metadati [standard - JavaScript](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript)
+      * Riferimento API per le chiavi dei metadati multimediali - [chiavi dei metadati standard - JavaScript](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript)
 
-         Consultate il set completo dei metadati disponibili qui: [Parametri audio e video](/help/metrics-and-metadata/audio-video-parameters.md)
+         Vedi il set completo dei metadati disponibili qui: [Parametri audio e video](/help/metrics-and-metadata/audio-video-parameters.md)
    * **Metadati personalizzati**
 
-      Create un oggetto variabile per le variabili personalizzate e inserite i dati per questo supporto. Ad esempio:
+      Crea un oggetto variabile per le variabili personalizzate e compila i dati per questo supporto. Ad esempio:
 
       ```js
       /* Set context data */
@@ -82,9 +83,9 @@ ht-degree: 2%
       ```
 
 
-1. **Tenere traccia dell’intenzione di avviare la riproduzione**
+1. **Tracciare l&#39;intenzione di avviare la riproduzione**
 
-   Per avviare il tracciamento di una sessione multimediale, invocate `trackSessionStart` l’istanza Media Heartbeat:
+   Per iniziare a monitorare una sessione multimediale, chiama `trackSessionStart` sull&#39;istanza Media Heartbeat:
 
    ```js
    var mediaObject = ADB.Media.createMediaObject("video-name",
@@ -108,31 +109,31 @@ ht-degree: 2%
 
    >[!IMPORTANT]
    >
-   >`trackSessionStart` tiene traccia delle intenzioni dell’utente in merito alla riproduzione, non dell’inizio della riproduzione. Questa API viene utilizzata per caricare i dati/metadati e per stimare la metrica QoS time-to-start (la durata tra `trackSessionStart` e `trackPlay`).
+   >`trackSessionStart` tiene traccia delle intenzioni dell&#39;utente in merito alla riproduzione, non dell&#39;inizio della riproduzione. Questa API viene utilizzata per caricare i dati/metadati e per stimare la metrica QoS time-to-start (la durata tra `trackSessionStart` e `trackPlay`).
 
    >[!NOTE]
    >
-   >Se non si utilizza contextData, è sufficiente inviare un oggetto vuoto per l&#39; `data` argomento in `trackSessionStart`.
+   >Se non utilizzi contextData, invia semplicemente un oggetto vuoto per l&#39;argomento `data` in `trackSessionStart`.
 
-1. **Tracciare l’inizio effettivo della riproduzione**
+1. **Tracciare l&#39;inizio effettivo della riproduzione**
 
-   Identificate l’evento dal lettore multimediale per l’inizio della riproduzione, dove viene riprodotto il primo fotogramma del file multimediale sullo schermo, e chiamate `trackPlay`:
+   Identificare l&#39;evento dal lettore multimediale per l&#39;inizio della riproduzione, dove viene eseguito il rendering del primo fotogramma del file multimediale sullo schermo, e chiamare `trackPlay`:
 
    ```js
    tracker.trackPlay();
    ```
 
-1. **Tenere traccia del completamento della riproduzione**
+1. **Tracciare il completamento della riproduzione**
 
-   Identificate l’evento dal lettore multimediale per il completamento della riproduzione, in cui l’utente ha guardato il contenuto fino alla fine, e chiamate `trackComplete`:
+   Identificare l&#39;evento dal lettore multimediale per il completamento della riproduzione, dove l&#39;utente ha guardato il contenuto fino alla fine, e chiamare `trackComplete`:
 
    ```js
    tracker.trackComplete();
    ```
 
-1. **Tenere traccia della fine della sessione**
+1. **Monitora la fine della sessione**
 
-   Identificare l’evento dal lettore multimediale per lo scaricamento/la chiusura della riproduzione, in cui l’utente chiude il supporto e/o il supporto è stato completato e scaricato, e chiamare `trackSessionEnd`:
+   Identificare l&#39;evento dal lettore multimediale per lo scaricamento/la chiusura della riproduzione, in cui l&#39;utente chiude il supporto e/o il supporto è stato completato e scaricato, e chiamare `trackSessionEnd`:
 
    ```js
    tracker.trackSessionEnd();
@@ -140,11 +141,11 @@ ht-degree: 2%
 
    >[!IMPORTANT]
    >
-   >`trackSessionEnd` segna la fine di una sessione di tracciamento. Se la sessione è stata guardata con successo e l’utente ha guardato il contenuto fino alla fine, accertatevi che `trackComplete` venga chiamato prima `trackSessionEnd`. Qualsiasi altra chiamata `track*` API viene ignorata dopo `trackSessionEnd`, fatta eccezione per `trackSessionStart` una nuova sessione di tracciamento.
+   >`trackSessionEnd` segna la fine di una sessione di tracciamento. Se la sessione è stata controllata correttamente al completamento, dove l’utente ha guardato il contenuto fino alla fine, assicurati che `trackComplete` venga chiamato prima di `trackSessionEnd`. Qualsiasi altra chiamata API `track*` viene ignorata dopo `trackSessionEnd`, tranne `trackSessionStart` per una nuova sessione di tracciamento.
 
-1. **Tenere traccia di tutti gli scenari di pausa possibili**
+1. **Tracciare tutti gli scenari di pausa possibili**
 
-   Identificare l’evento dal lettore multimediale per la pausa e la chiamata `trackPause`:
+   Identifica l&#39;evento dal lettore multimediale per la pausa e la chiamata `trackPause`:
 
    ```js
    tracker.trackPause();
@@ -152,14 +153,14 @@ ht-degree: 2%
 
    **Pausa scenari**
 
-   Identificare qualsiasi scenario in cui il lettore multimediale si mette in pausa e assicurarsi che venga chiamato `trackPause` correttamente. Tutti gli scenari seguenti richiedono che la chiamata dell&#39;app `trackPause()`:
+   Identifica qualsiasi scenario in cui il lettore multimediale si mette in pausa e assicurati che `trackPause` sia chiamato correttamente. I seguenti scenari richiedono tutti che la chiamata all&#39;app `trackPause()`:
 
-   * L&#39;utente interrompe esplicitamente la pausa nell&#39;app.
-   * Il lettore si mette nello stato Pausa.
-   * (App *mobili*) - L&#39;utente mette l&#39;applicazione in background, ma si desidera che l&#39;app tenga aperta la sessione.
-   * (App *mobili*) - Si verifica qualsiasi tipo di interruzione del sistema che causa il background di un&#39;applicazione. Ad esempio, l&#39;utente riceve una chiamata, o si verifica un pop-up da un&#39;altra applicazione, ma si desidera che l&#39;applicazione mantenga in vita la sessione per dare all&#39;utente la possibilità di riprendere il supporto dal punto di interruzione.
+   * L’utente inserisce esplicitamente una pausa nell’app.
+   * Il lettore si mette in stato di Pausa.
+   * (*App mobili*) - L&#39;utente mette l&#39;applicazione in background, ma desideri che l&#39;app mantenga aperta la sessione.
+   * (*App mobili*) - Si verifica un qualsiasi tipo di interruzione del sistema che causa lo sfondo di un&#39;applicazione. Ad esempio, l&#39;utente riceve una chiamata, o si verifica un pop-up da un&#39;altra applicazione, ma si desidera che l&#39;applicazione mantenga in vita la sessione per dare all&#39;utente la possibilità di riprendere il supporto dal punto di interruzione.
 
-1. Identificare l’evento dal lettore per la riproduzione e/o la ripresa dalla pausa e dalla chiamata `trackPlay`:
+1. Identifica l&#39;evento dal lettore per la riproduzione e/o la ripresa dalla pausa e chiama `trackPlay`:
 
    ```js
    tracker.trackPlay();
@@ -167,7 +168,7 @@ ht-degree: 2%
 
    >[!TIP]
    >
-   >Può trattarsi della stessa origine evento utilizzata nel passaggio 4. Assicurati che ogni chiamata `trackPause()` API sia associata a una chiamata `trackPlay()` API seguente quando la riproduzione riprende.
+   >Può trattarsi della stessa origine evento utilizzata nel passaggio 4. Assicurati che ogni chiamata API `trackPause()` sia associata a una seguente chiamata API `trackPlay()` quando la riproduzione riprende.
 
 * Scenari di tracciamento: [Riproduzione VOD senza annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)
-* Lettore di esempio incluso con l’SDK JavaScript per un esempio di tracciamento completo.
+* Lettore di esempio incluso nell&#39;SDK JavaScript per un esempio di tracciamento completo.
