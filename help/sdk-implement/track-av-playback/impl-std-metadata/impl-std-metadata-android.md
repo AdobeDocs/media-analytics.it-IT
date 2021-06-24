@@ -1,28 +1,32 @@
 ---
-title: Implementare i metadati standard su Android
-description: Descrive l’impostazione di video e metadati di annunci standard da inviare con le chiamate di tracciamento su Android.
+title: Scopri come implementare i metadati standard su Android
+description: Scopri come impostare i video standard e i metadati degli annunci da inviare con le chiamate di tracciamento su Android.
 uuid: c48b4190-b062-4c4e-9c40-8dde4598a50e
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: 31afd8b5-0f23-4025-afcb-6df906cf6be5
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '108'
+ht-degree: 8%
 
 ---
 
-
-# Implementare i metadati standard su Android{#implement-standard-metadata-on-android}
+# Implementazione dei metadati standard su Android{#implement-standard-metadata-on-android}
 
 ## Costanti metadati standard
 
 | Nome costante | Descrizione   |
 |---|---|
-| `MediaHeartbeat.MediaObjectKey.StandardMediaMetadata` | Costante per l’associazione di metadati standard a `MediaObject`. |
+| `MediaHeartbeat.MediaObjectKey.StandardMediaMetadata` | Costante per l&#39;associazione di metadati standard su `MediaObject`. |
 
 ## Riferimento API per le chiavi di metadati
 
-* Create una serie `HashMap` di coppie standard di valori di metadati.
-   * [Tasti di metadati video](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/com/adobe/primetime/va/simple/MediaHeartbeat.VideoMetadataKeys.html)
+* Crea una `HashMap` di coppie chiave-valore standard di metadati.
+   * [Chiavi metadati video](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/com/adobe/primetime/va/simple/MediaHeartbeat.VideoMetadataKeys.html)
    * [Chiavi metadati audio](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/com/adobe/primetime/va/simple/MediaHeartbeat.AudioMetadataKeys.html)
-* Impostate i metadati standard `HashMap` su `MediaInfo` usando la costante Metadati standard per i metadati.
-* Fornire questo `MediaInfo` oggetto durante la chiamata dell' `trackSessionStart()` API.
+* Imposta i metadati standard `HashMap` su `MediaInfo` utilizzando la costante Metadati standard per i metadati.
+* Fornisci questo oggetto `MediaInfo` durante la chiamata dell&#39;API `trackSessionStart()`.
 
 ## Implementazioni di esempio
 
