@@ -1,62 +1,67 @@
 ---
-title: Riproduzione standard Test 1
-description: Questo argomento descrive il test di riproduzione standard utilizzato per la convalida.
+title: Prova 1 riproduzione standard
+description: Scopri il test di riproduzione standard utilizzato nella convalida.
 uuid: c4b3fead-1b27-484b-ab6a-39f1ae0f03f2
-translation-type: tm+mt
-source-git-commit: cebf5697e3746721d29bfaa5356d5a2748fea435
+exl-id: 3781f0f7-be75-43e5-a40b-a34956dce36e
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '840'
+ht-degree: 2%
 
 ---
 
+# Prova 1: Riproduzione standard{#test-standard-playback}
 
-# Test 1: Standard playback{#test-standard-playback}
-
-Questo test case convalida la riproduzione generale e la sequenza.
+Questo caso di test convalida la riproduzione e la sequenza generali.
 
 Le implementazioni di Media Analytics includono due tipi di chiamate di tracciamento:
-* Chiamate effettuate direttamente al server Adobe Analytics (AppMeasurement) - Queste chiamate si verificano negli eventi &quot;Media Start&quot; e &quot;Ad Start&quot;.
-* Chiamate al server Media Analytics (heartbeat), che includono chiamate in banda e fuori banda:
+* Chiamate effettuate direttamente al server Adobe Analytics (AppMeasurement) : queste chiamate si verificano sugli eventi &quot;Media Start&quot; e &quot;Ad Start&quot;.
+* Chiamate effettuate al server Media Analytics (heartbeat), che includono chiamate in banda e fuori banda:
    * In-band - L’SDK invia chiamate di riproduzione temporizzate o &quot;ping&quot; a intervalli di 10 secondi durante la riproduzione del contenuto e a intervalli di un secondo durante gli annunci.
-   * Out-of-band - Queste chiamate possono essere eseguite in qualsiasi momento, e includono Pausa, Buffering, errori, contenuto completo, annuncio completo, ecc.
+   * Out-of-band : queste chiamate possono essere eseguite in qualsiasi momento, e includono Pausa, buffering, errori, contenuto completato, annuncio completo, ecc.
 
 >[!NOTE]
 >Il tracciamento dei file multimediali si comporta allo stesso modo su tutte le piattaforme.
 
 ## Procedura di prova
 
-Completa e registra le azioni seguenti (in ordine):
+Completa e registra le seguenti azioni (in ordine):
 
-1. **Carica la pagina o l’app**
+1. **Caricare la pagina o l’app**
 
-   **Server** di tracciamento (per tutti i siti Web e le app mobili):
+   **Server di tracciamento**  (per tutti i siti web e le app mobili):
 
-   * **Server Adobe Analytics (AppMeasurement) - Per il servizio ID visitatore Experience Cloud è necessario un server o un CNAME di tracciamento RDC che si risolve in un server di tracciamento RDC.** Il server di tracciamento di Adobe Analytics deve terminare con &quot;`.sc.omtrdc.net`&quot; o essere un CNAME.
+   * **Server Adobe Analytics (AppMeasurement):** per il servizio ID visitatore di Experience Cloud è necessario un server di monitoraggio RDC o un CNAME che si risolve in un server di monitoraggio RDC . Il server di tracciamento Adobe Analytics deve terminare con &quot;`.sc.omtrdc.net`&quot; o essere un CNAME.
 
-   * **Server di Media Analytics (Heartbeats) -** Questo server ha sempre il formato &quot;`[namespace].hb.omtrdc.net`&quot;, dove `[namespace]` specifica il nome della tua società. Questo nome è fornito da Adobe.
-   È necessario convalidare determinate variabili chiave universali per tutte le chiamate di tracciamento:
+   * **Server Media Analytics (Heartbeat) -** Questo server ha sempre il formato &quot;`[namespace].hb.omtrdc.net`&quot;, dove  `[namespace]` specifica il nome dell&#39;azienda. Questo nome è fornito dall’Adobe.
 
-   **ID visitatore Adobe (`mid`):** La `mid` variabile viene utilizzata per acquisire il valore impostato nel cookie AMCV. La `mid` variabile è il valore di identificazione principale sia per i siti Web che per le app mobili e indica inoltre che il servizio ID visitatori di Experience Cloud è configurato correttamente. È disponibile sia nelle chiamate Adobe Analytics (AppMeasurement) che Media Analytics (heartbeat).
+   Devi convalidare alcune variabili chiave universali per tutte le chiamate di tracciamento:
 
-   * **Chiamata di avvio di Adobe Analytics**
+   **Adobe ID visitatore (`mid`):** la  `mid` variabile viene utilizzata per acquisire il valore impostato nel cookie AMCV. La variabile `mid` è il valore di identificazione principale sia per i siti web che per le app mobili e indica inoltre che il servizio ID visitatore di Experience Cloud è configurato correttamente. È disponibile sia nelle chiamate Adobe Analytics (AppMeasurement) che Media Analytics (heartbeat).
+
+   * **Adobe Analytics Start call**
 
       | Parametro | Valore (campione) |
       |---|---|
       | `pev2` | ms_s |
       | `mid` | 30250035503789876473484580554595324209 |
 
-   * **Chiamata alla pagina del sito Web**
+   * **Website Page call**
 
       | Parametro | Valore (campione) |
       |---|---|
       | `mid` | 30250035503789876473484580554595324209 |
 
-   * **Ciclo di vita**
+   * **Chiamata del ciclo di vita**
 
       | Parametro | Valore (campione) |
       |---|---|
-      | `pev2` | ADBINTERNO:Ciclo Di Vita |
+      | `pev2` | ADBINTERNO:Ciclo di vita |
       | `mid` | 30250035503789876473484580554595324209 |
 
-   * **Chiamata di avvio di Media Analytics**
+   * **Chiamata iniziale di Media Analytics**
 
       | Parametro | Valore (campione) |
       |---|---|
@@ -64,9 +69,9 @@ Completa e registra le azioni seguenti (in ordine):
 
       >[!NOTE]
       >
-      >Nelle chiamate di avvio di Media Analytics (`s:event:type=start`) i `mid` valori potrebbero non essere presenti. Questo va bene. Potrebbero essere visualizzati solo dopo le chiamate alla riproduzione di Media Analytics ( `s:event:type=play`).
+      >Nelle chiamate di avvio di Media Analytics (`s:event:type=start`) i valori `mid` potrebbero non essere presenti. Questo va bene. Possono essere visualizzati solo dopo le chiamate di Media Analytics Play ( `s:event:type=play`).
 
-   * **Chiamata Play di Media Analytics**
+   * **Chiamata a Play di Media Analytics**
 
       | Parametro | Valore (campione) |
       |---|---|
@@ -74,68 +79,71 @@ Completa e registra le azioni seguenti (in ordine):
       | `s:user:mid` | 30250035503789876473484580554595324209 |
 
 
-1. **Avviare il lettore multimediale**
+1. **Avvia il lettore multimediale**
 
-   All’avvio del lettore multimediale, Media SDK invia le chiamate chiave ai due server nel seguente ordine:
+   All’avvio del lettore multimediale, Media SDK invia le chiamate chiave ai due server nell’ordine seguente:
 
    1. Server Adobe Analytics - Avvia chiamata
-   1. Server di Media Analytics - Avvia chiamata
-   1. Server di Media Analytics - &quot;Richiesta chiamata di avvio di Adobe Analytics&quot;
-   Le prime due chiamate di cui sopra contengono metadati e variabili aggiuntive. Per i parametri delle chiamate e i metadati, consultate [Test dei dettagli delle chiamate.](/help/sdk-implement/validation/test-call-details.md#start-the-media-player)
+   1. Server Media Analytics - Avvia chiamata
+   1. Server Media Analytics - &quot;Richiesta chiamata di avvio Adobe Analytics&quot;
 
-   La terza chiamata precedente indica al server Media Analytics che Media SDK ha richiesto l&#39;invio della chiamata di avvio di Adobe Analytics (`pev2=ms_s`) al server Adobe Analytics.
+   Le prime due chiamate di cui sopra contengono metadati e variabili aggiuntive. Per i parametri e i metadati della chiamata, consulta [Testare i dettagli della chiamata.](/help/sdk-implement/validation/test-call-details.md#start-the-media-player)
 
-1. **Visualizza annuncio se disponibile**
+   La terza chiamata di cui sopra comunica al server Media Analytics che Media SDK ha richiesto l’invio al server Adobe Analytics della chiamata di avvio di Adobe Analytics (`pev2=ms_s`).
+
+1. **Visualizza l’interruzione degli annunci se disponibile**
 
    * **Inizio annuncio**
+
    All’avvio dell’annuncio, le seguenti chiamate chiave vengono inviate nell’ordine seguente:
 
-   1. Server Adobe Analytics - Chiamata Ad Start
-   1. Server di Media Analytics - Chiamata Ad Start
-   1. Server di Media Analytics - &quot;Richiesta chiamata Adobe Analytics Ad Start&quot;
-   Le prime due chiamate contengono metadati e variabili aggiuntivi. Per i parametri delle chiamate e i metadati, consultate [Test dei dettagli delle chiamate.](/help/sdk-implement/validation/test-call-details.md#view-ad-playback)
+   1. Server Adobe Analytics - Chiamata ad Start
+   1. Server Media Analytics - Chiamata ad Start
+   1. Server Media Analytics - &quot;Richiesta chiamata Adobe Analytics Ad Start&quot;
 
-   La terza chiamata indica al server Media Analytics che Media SDK ha richiesto l&#39;invio della chiamata Adobe Analytics Ad Start (`pev2=msa_s`) al server Adobe Analytics.
+   Le prime due chiamate contengono metadati e variabili aggiuntive. Per i parametri e i metadati della chiamata, consulta [Testare i dettagli della chiamata.](/help/sdk-implement/validation/test-call-details.md#view-ad-playback)
 
-   * **Aggiungi riproduzione**
+   La terza chiamata comunica al server Media Analytics che Media SDK ha richiesto l’invio al server Adobe Analytics della chiamata Adobe Analytics Ad Start (`pev2=msa_s`).
+
+   * **Ad Play**
 
       Durante la riproduzione di un annuncio, Media Analytics SDK invia al server Media Analytics eventi di riproduzione di tipo &quot;ad&quot; ogni secondo.
 
    * **Annuncio completato**
 
-      Nel punto 100% di un annuncio, deve essere inviata una chiamata Completa di Media Analytics.
+      Al 100% di un annuncio, deve essere inviata una chiamata Media Analytics Complete .
 
 
 
-1. **Metti in pausa la riproduzione per 30 secondi, se disponibile.**  **Pausa annuncio**
+1. **Sospendi e riproduci per 30 secondi, se disponibile.**   **Pausa annunci**
 
-   In Ad Pause, le chiamate heartbeat o &quot;ping&quot; di Media Analytics vengono inviate dall’SDK al server di Media Analytics ogni secondo.
+   Durante l’Ad Pause, Media Analytics Heartbeat o le chiamate &quot;ping&quot; vengono inviate dall’SDK al server Media Analytics ogni secondo.
 
    >[!NOTE]
    >
-   >Il valore dell&#39;indicatore di riproduzione deve rimanere costante durante la pausa.
+   >Il valore della testina di riproduzione deve rimanere costante durante la pausa.
 
-   Per i parametri delle chiamate e i metadati, consultate [Test dei dettagli delle chiamate.](/help/sdk-implement/validation/test-call-details.md#ma-ad-pause-call)
+   Per i parametri e i metadati della chiamata, consulta [Testare i dettagli della chiamata.](/help/sdk-implement/validation/test-call-details.md#ma-ad-pause-call)
 
-1. **Riproduci il contenuto principale per 10 minuti senza interruzioni.**  Riproduzione **contenuto**
+1. **Riprodurre il contenuto principale per 10 minuti senza interruzioni.**   **Riproduzione dei contenuti**
 
-   Durante la riproduzione del contenuto principale, Media SDK invia heartbeat (chiamate di riproduzione) al server di Media Analytics ogni 10 secondi.
+   Durante la riproduzione del contenuto principale, Media SDK invia heartbeat (chiamate di riproduzione) al server Media Analytics ogni 10 secondi.
 
    Note:
 
-   * La posizione dell&#39;indicatore di riproduzione dovrebbe aumentare di 10 con ogni chiamata Play.
-   * Il `l:event:duration` valore rappresenta il numero di millisecondi trascorsi dall’ultima chiamata di tracciamento e deve corrispondere all’incirca allo stesso valore per ogni chiamata di 10 secondi.
+   * La posizione del playhead dovrebbe aumentare di 10 con ogni chiamata Play.
+   * Il valore `l:event:duration` rappresenta il numero di millisecondi trascorsi dall&#39;ultima chiamata di tracciamento e deve corrispondere approssimativamente allo stesso valore per ogni chiamata di 10 secondi.
 
-      Per i parametri delle chiamate e i metadati, consultate [Test dei dettagli delle chiamate.](/help/sdk-implement/validation/test-call-details.md#play-main-content)
+      Per i parametri e i metadati della chiamata, consulta [Testare i dettagli della chiamata.](/help/sdk-implement/validation/test-call-details.md#play-main-content)
 
-1. **Sospendi durante la riproduzione per almeno 30 secondi.** Quando il lettore multimediale viene messo in pausa, le chiamate dell’evento pause vengono inviate dall’SDK al server di Media Analytics ogni 10 secondi. Al termine della pausa, gli eventi di riproduzione dovrebbero riprendere.
+1. **Pausa durante la riproduzione per almeno 30 secondi.** Quando il lettore multimediale viene messo in pausa, l’SDK invia le chiamate evento in pausa al server Media Analytics ogni 10 secondi. Al termine della pausa, gli eventi di riproduzione dovrebbero riprendere.
 
-   Per i parametri delle chiamate e i metadati, consultate [Test dei dettagli delle chiamate.](/help/sdk-implement/validation/test-call-details.md#pause-main-content)
+   Per i parametri e i metadati della chiamata, consulta [Testare i dettagli della chiamata.](/help/sdk-implement/validation/test-call-details.md#pause-main-content)
 
-1. **Cercare/scorrere contenuti multimediali.** Durante il trascinamento dell&#39;indicatore di riproduzione multimediale, non vengono inviate chiamate di tracciamento speciali, tuttavia, quando la riproduzione viene ripresa dopo il trascinamento, il valore dell&#39;indicatore di riproduzione deve riflettere la nuova posizione all&#39;interno del contenuto principale.
+1. **Cercare/eliminare file multimediali.** Tuttavia, quando la riproduzione riprende dopo il lavaggio, il valore della testina di riproduzione deve riflettere la nuova posizione all’interno del contenuto principale, non viene inviata alcuna chiamata di tracciamento speciale.
 
-1. **Riproduci file multimediali (solo VOD).** Quando si riproduce un file multimediale, è necessario inviare una nuova serie di chiamate Media Start (come se si trattasse di un nuovo inizio).
+1. **Riproduci file multimediali (solo VOD).** Quando viene riprodotto un file multimediale, è necessario inviare un nuovo set di chiamate Media Start (come se si trattasse di un nuovo inizio).
 
-1. **Visualizzare il file multimediale successivo nella playlist.** All’inizio del file multimediale successivo in una playlist, deve essere inviato un nuovo set di chiamate Media Start.
+1. **Visualizza i file multimediali successivi nella playlist.** All’inizio del file multimediale successivo in una playlist, deve essere inviato un nuovo set di chiamate Media Start.
 
-1. **Consente di commutare il contenuto multimediale o lo streaming.** Quando si passa da un flusso live a un altro, non deve essere inviata una chiamata completa di Media Analytics per il primo flusso. Le chiamate a Media Start e Riproduci devono iniziare con il nuovo nome di spettacolo e flusso e con i valori corretti per l&#39;indicatore di riproduzione e la durata della nuova presentazione.
+1. **Consente di commutare il contenuto multimediale o lo streaming.** Quando si passa a flussi in tempo reale, non deve essere inviata una chiamata completa di Media Analytics per il primo flusso. Le chiamate Media Start e Play devono iniziare con il nuovo nome dello show e dello streaming e con i valori corretti della testina di riproduzione e della durata del nuovo show.
