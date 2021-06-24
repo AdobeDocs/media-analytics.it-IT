@@ -1,18 +1,22 @@
 ---
-title: Implementazione di metadati di annunci standard su Roku
-description: Come utilizzare i metadati di annunci standard nel tracciamento di annunci su Roku.
+title: Scopri come implementare i metadati standard di annunci su Roku
+description: Come utilizzare i metadati standard degli annunci nel tracciamento degli annunci su Roku.
 uuid: 20a437d7-18b8-4099-ac81-9f3628384236
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: d2c0a1e0-8d40-4f60-a82d-5860550ac152
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '52'
+ht-degree: 15%
 
 ---
 
+# Implementazione dei metadati standard di annunci su Roku{#implement-standard-ad-metadata-on-roku}
 
-# Implementazione di metadati di annunci standard su Roku{#implement-standard-ad-metadata-on-roku}
+## Implementazione dei metadati standard di annunci
 
-## Implementazione di metadati annuncio standard
-
-Per i metadati di annunci standard, create un dizionario di coppie di valori chiave standard e metadati utilizzando le chiavi per la vostra piattaforma:
+Per i metadati standard di annunci, crea un dizionario di coppie di valori chiave di annunci standard utilizzando le chiavi per la piattaforma:
 
 ```
 standardAdMetadata = {} 
@@ -21,4 +25,3 @@ standardAdMetadata[ADBMobile().MEDIA_AdMetadataKeyADVERTISER] = "sample advertis
 
 adInfo[ADBMobile().MEDIA_STANDARD_AD_METADATA] = standardAdMetadata 
 ```
-
