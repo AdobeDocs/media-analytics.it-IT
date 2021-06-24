@@ -1,12 +1,13 @@
 ---
 title: Panoramica dei report predefiniti
-description: Panoramica dei report predefiniti
+description: '"Scopri i tipi di report e le metriche utilizzati per tenere traccia dei contenuti multimediali sul tuo sito web. Esplora i report in stile dashboard disponibili con il modulo Media Core."'
 uuid: a078aa59-3b2d-45b2-9e66-3d9c29c82f0c
 exl-id: 0040006e-cd59-48a1-b019-1feafc275fa3
-translation-type: tm+mt
-source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
+feature: '"Informazioni di base su Media Analytics, Reports & Analytics"'
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '351'
 ht-degree: 3%
 
 ---
