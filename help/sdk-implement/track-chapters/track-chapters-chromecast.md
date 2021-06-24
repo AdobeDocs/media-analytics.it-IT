@@ -1,41 +1,45 @@
 ---
-title: Tracciare capitoli e segmenti su Chromecast
-description: In questo argomento viene descritta l’implementazione del tracciamento di capitoli e segmenti mediante l’SDK per file multimediali su Chromecast.
+title: Come tenere traccia dei capitoli e dei segmenti in Chromecast
+description: Scopri come implementare il tracciamento di capitoli e segmenti utilizzando Media SDK in Chromecast.
 uuid: 5ea562b9-0e07-4fbb-9a3b-213d746304f5
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: 26b71e4d-ced7-49cb-a838-2b1c8d4ee4de
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '222'
+ht-degree: 4%
 
 ---
 
-
-# Tracciare capitoli e segmenti su Chromecast{#track-chapters-and-segments-on-chromecast}
+# Tracciamento capitoli e segmenti in Chromecast{#track-chapters-and-segments-on-chromecast}
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l’implementazione mediante gli SDK 2.x. Se stai implementando una versione 1.x dell’SDK, puoi scaricare la Guida per gli sviluppatori qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione tramite SDK 2.x. Se implementi una versione 1.x dell&#39;SDK, puoi scaricare la Guida per gli sviluppatori qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
-1. Identificare il momento in cui si verifica l’evento di inizio del capitolo e creare l’ `ChapterObject` istanza utilizzando le informazioni sul capitolo.
+1. Identificare quando si verifica l&#39;evento di inizio del capitolo e creare l&#39;istanza `ChapterObject` utilizzando le informazioni del capitolo.
 
-   `ChapterObject` riferimento tracciamento capitoli:
+   `ChapterObject` riferimento di tracciamento dei capitoli:
 
    >[!NOTE]
    >
-   >Queste variabili sono necessarie solo se si prevede di tenere traccia dei capitoli.
+   >Queste variabili sono necessarie solo se intendi tenere traccia dei capitoli.
 
-   | Nome della variabile | Descrizione | Obbligatorio |
+   | Nome variable | Descrizione | Obbligatorio |
    | --- | --- | :---: |
    | `name` | Nome del capitolo | Sì |
    | `position` | Posizione del capitolo | Sì |
-   | `length` | Lunghezza capitolo | Sì |
-   | `startTime` | Ora inizio capitolo | Sì |
+   | `length` | Lunghezza del capitolo | Sì |
+   | `startTime` | Ora di inizio capitolo | Sì |
 
-   Oggetto Chapter: [createChapterObject](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.createChapterObject)
+   Oggetto capitolo: [createChapterObject](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.createChapterObject)
 
    ```js
    chapterInfo = ADBMobile.media.createChapterObject("First Chapter", 1, CHAPTER1_LENGTH, CHAPTER1_START_POS);
    ```
 
-1. Se includete metadati personalizzati per il capitolo, create le variabili di dati di contesto per i metadati:
+1. Se includi metadati personalizzati per il capitolo , crea le variabili di dati di contesto per i metadati:
 
    ```js
    var chapterContextData = { 
@@ -43,23 +47,22 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    };
    ```
 
-1. Per iniziare a monitorare la riproduzione dei capitoli, tracciate l’ `ChapterStart` evento: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
+1. Per iniziare a tenere traccia della riproduzione del capitolo, tieni traccia dell&#39;evento `ChapterStart` : [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
 
    ```js
    ADBMobile.media.trackEvent(ADBMobile.media.Event.ChapterStart, ChapterInfo, chapterContextData); 
    ```
 
-1. Quando la riproduzione raggiunge il limite finale del capitolo, come definito dal codice personalizzato, chiamate l’ `ChapterComplete` evento nell’ `MediaHeartbeat` istanza: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
+1. Quando la riproduzione raggiunge il limite finale del capitolo, come definito dal codice personalizzato, invoca l&#39;evento `ChapterComplete` nell&#39;istanza `MediaHeartbeat`: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
 
    ```js
    ADBMobile.media.trackEvent(ADBMobile.media.Event.ChapterComplete);
    ```
 
-1. Se la riproduzione dei capitoli non è stata completata perché l’utente ha scelto di saltare il capitolo (ad esempio, se l’utente cerca di uscire dal limite del capitolo), tracciate l’ `ChapterSkip` evento: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
+1. Se la riproduzione del capitolo non è stata completata perché l&#39;utente ha scelto di saltare il capitolo (ad esempio, se l&#39;utente cerca fuori dal limite del capitolo), tenere traccia dell&#39;evento `ChapterSkip`: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
 
    ```js
    ADBMobile.media.trackEvent(ADBMobile.media.Event.ChapterSkip); 
    ```
 
-1. Se sono presenti altri capitoli, ripetete i punti da 1 a 5.
-
+1. In caso di capitoli aggiuntivi, ripetere i punti da 1 a 5.
