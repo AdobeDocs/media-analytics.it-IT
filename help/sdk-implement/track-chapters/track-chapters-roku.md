@@ -1,37 +1,41 @@
 ---
-title: Tracciare capitoli e segmenti su Roku
-description: In questo argomento viene descritta l’implementazione del tracciamento di capitoli e segmenti mediante l’SDK per file multimediali su Roku.
+title: Come tenere traccia dei capitoli e dei segmenti su Roku
+description: Scopri come implementare il tracciamento di capitoli e segmenti utilizzando Media SDK su Roku.
 uuid: 15c07131-77d7-4a97-92c6-0a190c6b08d3
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: b5eb8be7-4b85-4ba7-9216-dd691be7ba46
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '201'
+ht-degree: 4%
 
 ---
 
-
-# Tracciare capitoli e segmenti su Roku{#track-chapters-and-segments-on-roku}
+# Tracciamento capitoli e segmenti su Roku{#track-chapters-and-segments-on-roku}
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l’implementazione mediante gli SDK 2.x. Se stai implementando una versione 1.x dell’SDK, puoi scaricare la Guida per gli sviluppatori qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione tramite SDK 2.x. Se implementi una versione 1.x dell&#39;SDK, puoi scaricare la Guida per gli sviluppatori qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
-## Implementazione di metadati annuncio standard
+## Implementazione dei metadati standard di annunci
 
-1. Identificare il momento in cui si verifica l’evento di inizio del capitolo e creare l’ `ChapterObject` istanza utilizzando le informazioni sul capitolo.
+1. Identificare quando si verifica l&#39;evento di inizio del capitolo e creare l&#39;istanza `ChapterObject` utilizzando le informazioni del capitolo.
 
-   `ChapterObject` riferimento tracciamento capitoli:
+   `ChapterObject` riferimento di tracciamento dei capitoli:
 
    >[!NOTE]
    >
-   >Queste variabili sono necessarie solo se si prevede di tenere traccia dei capitoli.
+   >Queste variabili sono necessarie solo se intendi tenere traccia dei capitoli.
 
-   | Nome della variabile | Descrizione | Obbligatorio |
+   | Nome variable | Descrizione | Obbligatorio |
    | --- | --- | :---: |
    | `name` | Nome del capitolo | Sì |
    | `position` | Posizione del capitolo | Sì |
-   | `length` | Lunghezza capitolo | Sì |
-   | `startTime` | Ora inizio capitolo | Sì |
+   | `length` | Lunghezza del capitolo | Sì |
+   | `startTime` | Ora di inizio capitolo | Sì |
 
-   Oggetto Chapter:
+   Oggetto capitolo:
 
    ```
    chapterInfo =  
@@ -41,7 +45,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
                                 <START_TIME>);)
    ```
 
-1. Se includete metadati personalizzati per il capitolo, create le variabili di dati di contesto per i metadati:
+1. Se includi metadati personalizzati per il capitolo , crea le variabili di dati di contesto per i metadati:
 
    ```
    chapterContextData = {} 
@@ -50,25 +54,24 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    chapterContextData["seg_info"] = "seg_info"
    ```
 
-1. Per iniziare a monitorare la riproduzione dei capitoli, chiamate l’ `ChapterStart` evento nell’ `MediaHeartbeat` istanza:
+1. Per iniziare a tenere traccia della riproduzione del capitolo, chiama l&#39;evento `ChapterStart` nell&#39;istanza `MediaHeartbeat`:
 
    ```
    ADBMobile().mediaTrackEvent(MEDIA_CHAPTER_START, chapterInfo, chapterContextData)
    ```
 
-1. Quando la riproduzione raggiunge il limite finale del capitolo, come definito dal codice personalizzato, chiamate l’ `ChapterComplete` evento nell’ `MediaHeartbeat` istanza.
+1. Quando la riproduzione raggiunge il limite finale del capitolo, come definito dal codice personalizzato, invoca l&#39;evento `ChapterComplete` nell&#39;istanza `MediaHeartbeat`.
 
    ```
    chapterContextData = {} 
    ADBMobile().mediaTrackEvent(MEDIA_CHAPTER_COMPLETE, chapterInfo, chapterContextData)
    ```
 
-1. Se la riproduzione del capitolo non è stata completata perché l’utente ha scelto di saltare il capitolo (ad esempio, se l’utente cerca di uscire dal limite del capitolo), chiamate l’ `ChapterSkip` evento nell’istanza MediaHeartbeat.
+1. Se la riproduzione dei capitoli non è stata completata perché l&#39;utente ha scelto di saltare il capitolo (ad esempio, se l&#39;utente cerca fuori dal limite del capitolo), chiamare l&#39;evento `ChapterSkip` nell&#39;istanza MediaHeartbeat.
 
    ```
    chapterContextData = {} 
    ADBMobile().mediaTrackEvent(MEDIA_CHAPTER_SKIP, chapterInfo, chapterContextData)
    ```
 
-1. Se sono presenti altri capitoli, ripetete i punti da 1 a 5.
-
+1. In caso di capitoli aggiuntivi, ripetere i punti da 1 a 5.
