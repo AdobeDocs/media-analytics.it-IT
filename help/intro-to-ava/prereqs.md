@@ -1,12 +1,14 @@
 ---
-title: Prerequisiti
-description: Prerequisiti
+title: Informazioni sui prerequisiti per lo streaming multimediale
+description: Guida introduttiva ad Adobe Analytics Streaming Media. Scopri cosa devi implementare Adobe Analytics per Streaming Media.
 uuid: 4c0b37f3-8615-4cc0-b9c9-eeb029067064
 exl-id: 85ab1dbd-f4a7-4f11-afc9-8d5000e2de70
-source-git-commit: e56ce73316d9cf00193220df8959a489fc3f2124
+feature: '"Media Analytics, Requisiti di sistema"'
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '388'
-ht-degree: 20%
+source-wordcount: '414'
+ht-degree: 18%
 
 ---
 
