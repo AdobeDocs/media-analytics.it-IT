@@ -1,12 +1,13 @@
 ---
 title: Metriche calcolate
-description: Metriche calcolate
+description: Scopri le metriche calcolate di Adobe Streaming Media e le formule metriche.
 uuid: 9dd35155-58aa-4f05-896e-c5cbc4b13d59
 exl-id: 253f6c61-70b5-4bdf-8e79-840545aeca0e
-translation-type: tm+mt
-source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '198'
 ht-degree: 7%
 
 ---
@@ -22,8 +23,8 @@ ht-degree: 7%
 | Media della Annunci per flusso multimediale | Avvii annunci per Media Starts | `Ad Starts / Media Starts` |
 | Media della Capitoli per flusso multimediale | Inizio capitolo per Media Starts | `Chapter Start / Media Starts` |
 | Media della Tempo trascorso per contenuti multimediali | Tempo totale trascorso per inizio supporto (HH:MM:SS) | `Media Time Spent / Media Starts` |
-| Media della Tempo contenuto trascorso | Durata del contenuto per inizio contenuto (HH:MM:SS) | `Content Time Spent / Content Start` |
-| Media della Tempo annuncio trascorso | Tempo dell’annuncio trascorso per Ad Starts (HH:MM:SS) | `Ad Time Spent / Ad Start` |
+| Media della Tempo contenuto trascorso | Tempo contenuto trascorso per inizio contenuto (HH:MM:SS) | `Content Time Spent / Content Start` |
+| Media della Tempo annuncio trascorso | Tempo dell&#39;annuncio trascorso per Ad Starts (HH:MM:SS) | `Ad Time Spent / Ad Start` |
 | Media della Tempo capitolo trascorso | Tempo del capitolo trascorso per inizio capitolo (HH:MM:SS) | `Chapter Time Spent / Chapter Start` |
 | Frequenza di completamento contenuti multimediali | Tasso di contenuti completati rispetto ai file multimediali avviati (%) | `Content Completes/ Media Starts` |
 | Tasso di completamento del contenuto | Tasso di contenuto completato rispetto a inizio contenuto (%) | `Content Completes / Content Starts` |
