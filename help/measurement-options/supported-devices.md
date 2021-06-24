@@ -1,11 +1,13 @@
 ---
-title: Piattaforme e dispositivi supportati
-description: Adobe Analytics for Streaming Media garantisce la raccolta e la generazione di rapporti di ogni flusso multimediale su tutti i dispositivi.
+title: Informazioni su dispositivi e piattaforme supportati
+description: '"Scopri i principali dispositivi come iOS, Android, dispositivi OTT e browser JavaScript supportati da Adobe Analytics for Streaming Media."'
 exl-id: 169ff7b9-e577-45b7-8927-74bdcccc0a77
-source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '333'
-ht-degree: 20%
+source-wordcount: '341'
+ht-degree: 19%
 
 ---
 
@@ -32,14 +34,14 @@ La tabella seguente elenca i dispositivi e le piattaforme attualmente supportati
 | Web/Web mobile |  |  |  |  |
 |  | Browser JavaScript | ![](/help/assets/icon-blue-check.png) | ![](/help/assets/icon-blue-check.png)    | ![](/help/assets/icon-blue-check.png) |
 | App mobile |  |  |  |  |
-|  | Dispositivi iOS | ![](/help/assets/icon-blue-check.png) | ![](/help/assets/icon-blue-check.png) <sup>1</sup> | ![](/help/assets/icon-blue-check.png) |
-|  | Dispositivi Android | ![](/help/assets/icon-blue-check.png) | ![](/help/assets/icon-blue-check.png) <sup>1</sup> | ![](/help/assets/icon-blue-check.png) |
+|  | Dispositivi iOS | ![](/help/assets/icon-blue-check.png) | ![](/help/assets/icon-blue-check.png) <sup>3</sup> | ![](/help/assets/icon-blue-check.png) |
+|  | Dispositivi Android | ![](/help/assets/icon-blue-check.png) | ![](/help/assets/icon-blue-check.png) <sup>3</sup> | ![](/help/assets/icon-blue-check.png) |
 |  | Dispositivi Windows |  |  | ![](/help/assets/icon-blue-check.png) |
 | OTT |  |  |  |  |
-|  | Apple TV (tvOS) | ![](/help/assets/icon-blue-check.png) | ![](/help/assets/icon-blue-check.png) <sup>1</sup> | ![](/help/assets/icon-blue-check.png) |
+|  | Apple TV (tvOS) | ![](/help/assets/icon-blue-check.png) | ![](/help/assets/icon-blue-check.png) <sup>3</sup> | ![](/help/assets/icon-blue-check.png) |
 |  | ROKU |  | ![](/help/assets/icon-blue-check.png)   <br>(BrightScript)    | ![](/help/assets/icon-blue-check.png)<br>(nativo) |
 |  | Fire TV (Fire OS) | ![](/help/assets/icon-blue-check.png) | ![](/help/assets/icon-blue-check.png) <sup>1</sup> | ![](/help/assets/icon-blue-check.png) |
-|  | Android TV | ![](/help/assets/icon-blue-check.png) | ![](/help/assets/icon-blue-check.png) <sup>1</sup> | ![](/help/assets/icon-blue-check.png) |
+|  | Android TV | ![](/help/assets/icon-blue-check.png) | ![](/help/assets/icon-blue-check.png) <sup>3</sup> | ![](/help/assets/icon-blue-check.png) |
 |  | Chromecast |  | ![](/help/assets/icon-blue-check.png)    | ![](/help/assets/icon-blue-check.png) |
 |  | Console di gioco (ad esempio Xbox ONE, Sony PS3/PS4) |  |  | ![](/help/assets/icon-blue-check.png) |
 |  | Set Top Boxes (ad es. xfinity X1) |  |  | ![](/help/assets/icon-blue-check.png) |
