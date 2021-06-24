@@ -2,14 +2,16 @@
 title: Cos’è l’abilitazione di Adobe Audience Manager?
 description: Scopri come collegare le azioni dell’applicazione ai dati di tracciamento dei contenuti multimediali senza la necessità di ulteriori regole di elaborazione e variabili personalizzate.
 exl-id: c0d73bc2-4713-498a-8882-ff66c7f3dd50
-source-git-commit: e56ce73316d9cf00193220df8959a489fc3f2124
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '409'
 ht-degree: 21%
 
 ---
 
-# Abilitazione dell&#39;Audience Manager{#audience-manager-enablement}
+# Abilitazione dell’Audience Manager{#audience-manager-enablement}
 
 Adobe Audience Manager (AAM), una piattaforma di gestione dati (DMP, Data Management Platform), ti aiuta a unire le risorse dei dati sul pubblico, semplificando la raccolta di informazioni rilevanti dal punto di vista commerciale sui visitatori del sito, la creazione di segmenti commerciabili e la distribuzione di contenuti e pubblicità mirati al pubblico giusto.
 
