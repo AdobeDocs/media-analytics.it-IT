@@ -1,49 +1,50 @@
 ---
 title: Informazioni sul tracciamento dello stato del lettore
-description: Questo argomento descrive la funzione di tracciamento dello stato del lettore, compresi i requisiti e le linee guida per l’implementazione e la generazione di rapporti degli stati del lettore.
-translation-type: tm+mt
-source-git-commit: 4c11efd0b8bb457246c746621e7fbb9fbda621b2
+description: Scopri la funzione di tracciamento dello stato del lettore, compresi i requisiti e le linee guida per l’implementazione e il reporting degli stati del lettore.
+exl-id: c678e182-74e4-4f46-8596-7be57e645c66
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '404'
+source-wordcount: '405'
 ht-degree: 1%
 
 ---
 
-
 # Informazioni sul tracciamento dello stato del lettore
 
-Per ottimizzare l&#39;esperienza di prodotto e il valore dell&#39;unità aziendale, è importante comprendere il comportamento dei clienti durante la visualizzazione dei video. Ciò include il tempo trascorso all&#39;interno di diversi stati del lettore.  È inoltre importante avere la flessibilità di creare e misurare nuovi stati ed eventi dei giocatori in base alle esigenze.
+Per ottimizzare l’esperienza dei prodotti e il valore delle unità aziendali, è importante comprendere il comportamento dei clienti durante la visualizzazione dei video. Ciò include il tempo trascorso all&#39;interno di diversi stati di riproduzione.  È anche importante avere la flessibilità di creare e misurare nuovi stati e eventi di giocatore in base alle esigenze.
 
-Il Tracciamento dello stato del lettore consente di catturare l’interazione del visualizzatore durante la riproduzione utilizzando un set standard di variabili della soluzione per la visualizzazione a schermo intero, i sottotitoli codificati, l’audio, l’immagine nell’immagine e la messa a fuoco.  Il tracciamento dello stato del lettore offre inoltre la flessibilità necessaria per creare stati del lettore personalizzati. Potete utilizzare le variabili di tracciamento stato del lettore per il reporting in  Analysis Workspace.
+Il tracciamento dello stato del lettore consente di acquisire l’interazione del visualizzatore durante la riproduzione utilizzando un set standard di variabili della soluzione per schermo intero, sottotitoli, muto, immagine nell’immagine e messa a fuoco.  Il tracciamento dello stato del lettore offre anche la flessibilità necessaria per creare stati di lettore personalizzati. Puoi utilizzare le variabili di tracciamento dello stato del lettore per il reporting in Analysis Workspace.
 
-Per acquisire le modifiche allo stato del lettore, il tracciamento dello stato del lettore aggiorna i metadati delle misurazioni video. Ad esempio, per determinare il &quot;vero&quot; coinvolgimento video, il tracciamento dello stato del lettore misura il tempo trascorso con il suono attivato rispetto alle visualizzazioni video passive o non impegnate quando il suono è spento o il tempo trascorso in modalità Normale o Schermo intero.
+Per acquisire le modifiche allo stato del lettore, il tracciamento dello stato del lettore aggiorna i metadati della misurazione video. Ad esempio, per determinare il coinvolgimento &quot;vero&quot; del video, il tracciamento dello stato del lettore misura il tempo trascorso con il suono acceso rispetto alle visualizzazioni video passive o non impegnate quando il suono è spento o il tempo trascorso in modalità Normale rispetto a Schermo intero.
 
 Il tracciamento dello stato del lettore offre i seguenti vantaggi:
 
-* Fornisce variabili standard che misurano gli stati comuni, come schermo intero o sottotitoli codificati
+* Fornisce variabili standard che misurano gli stati comuni come schermo intero o sottotitoli codificati
 * Fornisce variabili personalizzabili per misurare gli stati personalizzati durante una sessione di riproduzione
-* Misura il tempo trascorso nello stato di un lettore personalizzato
+* Misura il tempo trascorso all&#39;interno di uno stato del lettore personalizzato
 * Misura più stati che possono essere simultanei
 
 ![Tracciamento dello stato del lettore](assets/player_state_tracking.png)
 
 ## Requisiti
 
-Il tracciamento dello stato del lettore richiede una delle seguenti operazioni per la raccolta dei dati:
+Il tracciamento dello stato del lettore richiede uno dei seguenti elementi per la raccolta dati:
 * Media JS SDK 3.0+
-* Chromecast 3.0 SDK for Adobe Marketing Cloud Solutions
-* Estensione Media Analytics (da usare con l’SDK Adobe Experience Platform (AEP))
-   * Web:  Adobe Media Analytics (SDK 3.x) per Audio e Video v1.0+
-   * Mobile:  Adobe Media Analytics for Audio and Video v2.0+
+* Chromecast 3.0 SDK per soluzioni Adobe Marketing Cloud
+* Estensione Media Analytics (per l&#39;utilizzo con l&#39;SDK Adobe Experience Platform (AEP))
+   * Web: Adobe Medium Analytics (3.x SDK) for Audio and Video v1.0+
+   * Mobile: Adobe Medium Analytics for Audio and Video v2.0+
 * API Media Collection
 
 ## Linee guida
 
-Prima di implementare il tracciamento dello stato del lettore, attenersi alle seguenti linee guida.
+Prima di implementare il tracciamento dello stato del lettore, considera le seguenti linee guida.
 
 * Lo stato del lettore viene calcolato in tutti gli stati di riproduzione (nessuna suddivisione).
 * È possibile misurare più stati del lettore contemporaneamente.
-* Il numero massimo di stati del lettore che è possibile tenere traccia durante una riproduzione è 10.
+* Il numero massimo di stati del lettore che è possibile tracciare durante una riproduzione è 10.
 * Le metriche dello stato del lettore vengono inviate ad Analytics per la generazione di rapporti solo sulla chiamata Media Close.
-* La conoscenza dello stato dell’applicazione non viene mantenuta dopo l’arresto di uno stato. Al termine di uno stato, è necessario riavviare il tracciamento dello stato per continuare. Per ogni nuovo stato di riproduzione, è necessario riavviare lo stato del lettore.
-* Gli stati del lettore vengono catturati per ogni singola sessione di riproduzione; lo stato del lettore non viene calcolato per tutte le riproduzioni.
+* La conoscenza dello stato dell’applicazione non viene mantenuta dopo l’arresto di uno stato. Al termine di uno stato, è necessario riavviare lo stato per continuare il tracciamento. Per ogni nuovo stato di riproduzione, è necessario riavviare lo stato del lettore.
+* Gli stati del lettore vengono acquisiti per ogni singola sessione di riproduzione; lo stato del lettore non viene calcolato tra i riproduzioni.
