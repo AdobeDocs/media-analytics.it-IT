@@ -1,22 +1,23 @@
 ---
-title: 'Timeline 3: capitoli'
-description: null
+title: Informazioni sulle timeline di tracciamento dei file multimediali � capitoli
+description: Scopri la timeline della testina di riproduzione e quando inizia e termina un capitolo.
 uuid: 41b52072-e1cd-4dda-9253-31f3408924f6
-translation-type: tm+mt
-source-git-commit: 197041df4c985cdc572564652a976bd733448787
+exl-id: e3f5bbdb-7007-435b-920c-566d163e57ad
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1237'
 ht-degree: 7%
 
 ---
-
 
 # Timeline 3: capitoli {#timeline-3-chapters}
 
 ## VOD, annunci pre-roll, messa in pausa, buffering, visualizzazione del contenuto alla fine
 
 
-I diagrammi seguenti illustrano la timeline dell&#39;indicatore di riproduzione e la cronologia corrispondente delle azioni di un utente. I dettagli di ciascuna azione e le relative richieste sono presentati di seguito.
+I seguenti diagrammi illustrano la timeline della testina di riproduzione e la corrispondente timeline delle azioni di un utente. Di seguito sono riportati i dettagli di ciascuna azione e le relative richieste.
 
 
 ![](assets/va_api_content_3.png)
@@ -32,11 +33,11 @@ I diagrammi seguenti illustrano la timeline dell&#39;indicatore di riproduzione 
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| Riproduzione automatica o Pulsante Riproduci premuto, il video inizia a caricarsi. | 0 | 0 | `/api/v1/sessions` |
+| Pulsante Riproduzione automatica o Riproduzione premuto, il video inizia a caricarsi. | 0 | 0 | `/api/v1/sessions` |
 
 **Dettagli di implementazione**
 
-Questa chiamata segnala _l’intenzione dell’utente di riprodurre_ un video. Restituisce un ID sessione ( `{sid}` ) al client utilizzato per identificare tutte le chiamate di tracciamento successive all’interno della sessione. Lo stato del lettore non è ancora &quot;play&quot;, ma è invece &quot;start&quot;.  [I parametri](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) di sessione obbligatori devono essere inclusi nella `params` mappa nel corpo della richiesta.  Sul back-end, questa chiamata genera una chiamata di avvio di Adobe Analytics.
+Questa chiamata segnala _l&#39;intenzione dell&#39;utente di riprodurre_ un video. Restituisce un ID sessione ( `{sid}` ) al client utilizzato per identificare tutte le chiamate di tracciamento successive all’interno della sessione. Lo stato del giocatore non è ancora &quot;in riproduzione&quot;, ma è invece &quot;in partenza&quot;.  [I ](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) parametri di sessione obbligatori devono essere inclusi nella  `params` mappa nel corpo della richiesta.  Nel backend, questa chiamata genera una chiamata di avvio Adobe Analytics.
 
 **Corpo della richiesta di esempio**
 
@@ -67,21 +68,21 @@ Questa chiamata segnala _l’intenzione dell’utente di riprodurre_ un video. R
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| L&#39;app avvia il timer evento | 0 | 0 |  |
+| L&#39;app avvia il timer dell&#39;evento | 0 | 0 |  |
 
 **Dettagli di implementazione**
 
-Avviate il timer di ping. Il primo evento di ping dovrebbe quindi attivare 1 secondo in se ci sono annunci pre-roll, 10 secondi in caso contrario.
+Avvia il timer ping. Il primo evento ping dovrebbe quindi attivarsi di 1 secondo in se ci sono annunci pre-roll, 10 secondi in caso contrario.
 
-### Azione 3 - Avvio interruzione annuncio {#Action-3}
+### Azione 3 - Avvio dell&#39;interruzione dell&#39;annuncio {#Action-3}
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| Avvio pre-roll e interruzione | 0 | 0 | `/api/v1/sessions/{sid}/events` |
+| Traccia inizio pre-roll annuncio | 0 | 0 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
-Gli annunci possono essere tracciati solo all&#39;interno di un&#39;interruzione di annuncio.
+Gli annunci possono essere tracciati solo all’interno di un’interruzione pubblicitaria.
 
 **Corpo della richiesta di esempio**
 
@@ -98,15 +99,15 @@ Gli annunci possono essere tracciati solo all&#39;interno di un&#39;interruzione
 }
 ```
 
-### Azione 4 - Inizio annuncio {#Action-4}
+### Azione 4 - Avvio dell&#39;annuncio {#Action-4}
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| Track pre-roll Ad #1 start | 0 | 0 | `/api/v1/sessions/{sid}/events` |
+| Traccia l&#39;inizio dell&#39;annuncio pre-roll n. 1 | 0 | 0 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
-Inizia il tracciamento del primo annuncio pre-roll, che dura 15 secondi. Inclusione di metadati personalizzati con questo `adStart` .
+Inizia a tenere traccia del primo annuncio pre-roll, che è lungo 15 secondi. Inclusione di metadati personalizzati con questo `adStart` .
 
 **Corpo della richiesta di esempio**
 
@@ -137,15 +138,15 @@ Inizia il tracciamento del primo annuncio pre-roll, che dura 15 secondi. Inclusi
 }
 ```
 
-### Azione 5 - Punti annuncio {#Action-5}
+### Azione 5: ping di annunci {#Action-5}
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| L&#39;app invia l&#39;evento | 10 | 0 | `/api/v1/sessions/{sid}/events` |
+| L&#39;app invia un evento ping | 10 | 0 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
-Ping il backend ogni 1 secondo. (gli annunci successivi non sono mostrati nell&#39;interesse della brevità.)
+Eseguire il ping del backend ogni 1 secondo. (Gli annunci successivi non vengono visualizzati nell’interesse della brevità.)
 
 **Corpo della richiesta di esempio**
 
@@ -159,15 +160,15 @@ Ping il backend ogni 1 secondo. (gli annunci successivi non sono mostrati nell&#
 }
 ```
 
-### Azione 6 - Annuncio completato {#Action-6}
+### Azione 6 - Annuncio completo {#Action-6}
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| Track pre-roll Ad #1 completo | 15 | 0 | `/api/v1/sessions/{sid}/events` |
+| Tracciamento annuncio pre-roll n. 1 completato | 15 | 0 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
-Tieni traccia della fine del primo annuncio pre-roll.
+Monitora la fine del primo annuncio pre-roll.
 
 **Corpo della richiesta di esempio**
 
@@ -181,15 +182,15 @@ Tieni traccia della fine del primo annuncio pre-roll.
 }
 ```
 
-### Azione 7 - Inizio annuncio {#Action-7}
+### Azione 7 - Avvio dell&#39;annuncio {#Action-7}
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| Track pre-roll Ad #2 start | 15 | 0 | `/api/v1/sessions/{sid}/events` |
+| Traccia l&#39;inizio dell&#39;annuncio pre-roll n. 2 | 15 | 0 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
-Tieni traccia dell’inizio del secondo annuncio pre-roll, che dura 7 secondi.
+Tieni traccia dell’inizio del secondo annuncio pre-roll, che è lungo 7 secondi.
 
 **Corpo della richiesta di esempio**
 
@@ -216,15 +217,15 @@ Tieni traccia dell’inizio del secondo annuncio pre-roll, che dura 7 secondi.
 }
 ```
 
-### Azione 8 - Punti annuncio {#Action-8}
+### Azione 8 - Elementi ad ping {#Action-8}
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| L&#39;app invia l&#39;evento | 16 | 0 | `/api/v1/sessions/{sid}/events` |
+| L&#39;app invia un evento ping | 16 | 0 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
-Ping il backend ogni 1 secondo. (gli annunci successivi non sono mostrati nell&#39;interesse della brevità.)
+Eseguire il ping del backend ogni 1 secondo. (Gli annunci successivi non vengono visualizzati nell’interesse della brevità.)
 
 **Corpo della richiesta di esempio**
 
@@ -238,15 +239,15 @@ Ping il backend ogni 1 secondo. (gli annunci successivi non sono mostrati nell&#
 }
 ```
 
-### Azione 9 - Annuncio completato {#Action-9}
+### Azione 9 - Annuncio completo {#Action-9}
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| Track pre-roll Ad #2 completo | 22 | 0 | `/api/v1/sessions/{sid}/events` |
+| Tracciamento annuncio pre-roll n. 2 completo | 22 | 0 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
-Tieni traccia della fine del secondo annuncio pre-roll.
+Monitora la fine del secondo annuncio pre-roll.
 
 **Corpo della richiesta di esempio**
 
@@ -260,15 +261,15 @@ Tieni traccia della fine del secondo annuncio pre-roll.
 }
 ```
 
-### Azione 10 - Fine annuncio {#Action-10}
+### Azione 10 - Completamento dell’interruzione dell’annuncio {#Action-10}
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| Traccia pre-roll e interruzione completa | 22 | 0 | `/api/v1/sessions/{sid}/events` |
+| Tracciamento pre-roll annuncio completato | 22 | 0 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
-La pausa pubblicitaria è finita. Durante la pausa pubblicitaria, lo stato di riproduzione è rimasto &quot;play&quot;.
+La pausa pubblicitaria è finita. Durante la pausa pubblicitaria, lo stato di gioco è rimasto &quot;play&quot;.
 
 **Corpo della richiesta di esempio**
 
@@ -282,15 +283,15 @@ La pausa pubblicitaria è finita. Durante la pausa pubblicitaria, lo stato di ri
 }
 ```
 
-### Azione 11 - Riproduci contenuto {#Action-11}
+### Azione 11 - Riprodurre il contenuto {#Action-11}
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| Tracciare l’evento di riproduzione | 22 | 0 | `/api/v1/sessions/{sid}/events` |
+| Tracciare un evento di riproduzione | 22 | 0 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
-Dopo l’ `adBreakComplete` evento, inserite il lettore nello stato di &quot;riproduzione&quot; utilizzando l’ `play` evento.
+Dopo l&#39;evento `adBreakComplete` , inserisci il lettore nello stato di &quot;riproduzione&quot; utilizzando l&#39;evento `play` .
 
 **Corpo della richiesta di esempio**
 
@@ -308,11 +309,11 @@ Dopo l’ `adBreakComplete` evento, inserite il lettore nello stato di &quot;rip
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| Evento inizio capitolo del brano | 23 | 1 | `/api/v1/sessions/{sid}/events` |
+| Evento di inizio capitolo del brano | 23 | 1 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
-Dopo l&#39;evento play, tieni traccia dell&#39;inizio del primo capitolo.
+Dopo l&#39;evento di riproduzione, tenere traccia dell&#39;inizio del primo capitolo.
 
 **Corpo della richiesta di esempio**
 
@@ -333,11 +334,11 @@ Dopo l&#39;evento play, tieni traccia dell&#39;inizio del primo capitolo.
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| L&#39;app invia l&#39;evento | 30 | 8 | `/api/v1/sessions/{sid}/events` |
+| L&#39;app invia un evento ping | 30 | 8 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
-Eseguire il ping del backend ogni 10 secondi.
+Esegui il ping del backend ogni 10 secondi.
 
 **Corpo della richiesta di esempio**
 
@@ -351,15 +352,15 @@ Eseguire il ping del backend ogni 10 secondi.
 }
 ```
 
-### Azione 14 - Inizio buffer {#Action-14}
+### Azione 14 - Avvio del buffer {#Action-14}
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| Si è verificato un evento di inizio buffer | 33 | 11 | `/api/v1/sessions/{sid}/events` |
+| Si è verificato un evento di avvio del buffer | 33 | 11 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
-Tenere traccia dello spostamento nello stato &quot;buffering&quot;.
+Monitora lo spostamento allo stato di &quot;buffering&quot;.
 
 **Corpo della richiesta di esempio**
 
@@ -377,11 +378,11 @@ Tenere traccia dello spostamento nello stato &quot;buffering&quot;.
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| Buffering terminato, l&#39;app tiene traccia della ripresa del contenuto | 36 | 11 | `/api/v1/sessions/{sid}/events` |
+| Buffering terminato, l’app tiene traccia della ripresa del contenuto | 36 | 11 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
-Il buffering termina dopo 3 secondi, quindi il lettore torna allo stato di &quot;riproduzione&quot;. È necessario inviare un altro evento di tracciamento che esce dal buffering.  **La`play`chiamata dopo una chiamata`bufferStart`deduce una chiamata &quot;bufferEnd&quot; al back end,** quindi non è necessario un `bufferEnd` evento.
+Il buffering termina dopo 3 secondi, quindi riportare il lettore allo stato di &quot;riproduzione&quot;. Devi inviare un altro evento di riproduzione del brano che esce dal buffering.  **La  `play` chiamata dopo una chiamata  `bufferStart` deduce una chiamata &quot;bufferEnd&quot; al back-end,** quindi non è necessario un  `bufferEnd` evento.
 
 **Corpo della richiesta di esempio**
 
@@ -399,11 +400,11 @@ Il buffering termina dopo 3 secondi, quindi il lettore torna allo stato di &quot
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| L&#39;app invia l&#39;evento | 40 | 15 | `/api/v1/sessions/{sid}/events` |
+| L&#39;app invia un evento ping | 40 | 15 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
-Eseguire il ping del backend ogni 10 secondi.
+Esegui il ping del backend ogni 10 secondi.
 
 **Corpo della richiesta di esempio**
 
@@ -425,7 +426,7 @@ Eseguire il ping del backend ogni 10 secondi.
 
 **Dettagli di implementazione**
 
-Il primo capitolo termina, subito prima del secondo annuncio.
+Il primo capitolo termina, subito prima della seconda interruzione pubblicitaria.
 
 **Corpo della richiesta di esempio**
 
@@ -439,15 +440,15 @@ Il primo capitolo termina, subito prima del secondo annuncio.
 }
 ```
 
-### Azione 18 - Inizio interruzione annuncio {#Action-18}
+### Azione 18 - Avvio ad break {#Action-18}
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| Tracciamento avvio intermedio e interruzione | 46 | 21 | `/api/v1/sessions/{sid}/events` |
+| Tracciamento inizio interruzione annuncio mid-roll | 46 | 21 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
-Media roll con durata di 8 secondi: send `adBreakStart` .
+Media roll con una durata di 8 secondi: invia `adBreakStart` .
 
 **Corpo della richiesta di esempio**
 
@@ -468,7 +469,7 @@ Media roll con durata di 8 secondi: send `adBreakStart` .
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| Track mid-roll Ad #3 start | 46 | 21 | `/api/v1/sessions/{sid}/events` |
+| Traccia avvio annuncio mid-roll n. 3 | 46 | 21 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
@@ -499,15 +500,15 @@ Tieni traccia dell’annuncio mid-roll.
 }
 ```
 
-### Azione 20 - Annunci {#Action-20}
+### Azione 20 - Ad Pings {#Action-20}
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| L&#39;app invia l&#39;evento | 47 | 21 | `/api/v1/sessions/{sid}/events` |
+| L&#39;app invia un evento ping | 47 | 21 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
-Ping il backend ogni 1 secondo. (gli annunci successivi non sono mostrati nell&#39;interesse della brevità.)
+Eseguire il ping del backend ogni 1 secondo. (Gli annunci successivi non vengono visualizzati nell’interesse della brevità.)
 
 **Corpo della richiesta di esempio**
 
@@ -521,11 +522,11 @@ Ping il backend ogni 1 secondo. (gli annunci successivi non sono mostrati nell&#
 }
 ```
 
-### Azione 21 - Annuncio completato {#Action-21}
+### Azione 21 - Annuncio completo {#Action-21}
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| Track mid-roll Ad #1 completo | 54 | 21 | `/api/v1/sessions/{sid}/events` |
+| Tracciamento annuncio mid-roll n. 1 completato | 54 | 21 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
@@ -543,15 +544,15 @@ L&#39;annuncio mid-roll è completo.
 }
 ```
 
-### Azione 22 - Fine annuncio {#Action-22}
+### Azione 22 - Annuncio interrotto completato {#Action-22}
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| Tracciamento del mid-roll e interruzione | 54 | 21 | `/api/v1/sessions/{sid}/events` |
+| Tracciamento interruzione annuncio mid-roll completato | 54 | 21 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
-L&#39;interruzione dell&#39;annuncio è completa.
+L&#39;interruzione pubblicitaria è completa.
 
 **Corpo della richiesta di esempio**
 
@@ -569,7 +570,7 @@ L&#39;interruzione dell&#39;annuncio è completa.
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| Tracciare l&#39;inizio del capitolo 2 | 55 | 22 | `/api/v1/sessions/{sid}/events` |
+| Traccia l&#39;inizio del capitolo 2 | 55 | 22 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
@@ -594,11 +595,11 @@ L&#39;interruzione dell&#39;annuncio è completa.
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| L&#39;app invia l&#39;evento | 60 | 27 | `/api/v1/sessions/{sid}/events` |
+| L&#39;app invia un evento ping | 60 | 27 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
-Eseguire il ping del backend ogni 10 secondi.
+Esegui il ping del backend ogni 10 secondi.
 
 **Corpo della richiesta di esempio**
 
@@ -616,11 +617,11 @@ Eseguire il ping del backend ogni 10 secondi.
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| Pausa utente | 64 | 31 | `/api/v1/sessions/{sid}/events` |
+| Pausa utente premuto | 64 | 31 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
-L’azione dell’utente sposta lo stato di riproduzione su &quot;Pausa&quot;.
+L&#39;azione dell&#39;utente sposta lo stato di riproduzione su &quot;messo in pausa&quot;.
 
 **Corpo della richiesta di esempio**
 
@@ -638,11 +639,11 @@ L’azione dell’utente sposta lo stato di riproduzione su &quot;Pausa&quot;.
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| L&#39;app invia l&#39;evento | 70 | 31 | `/api/v1/sessions/{sid}/events` |
+| L&#39;app invia un evento ping | 70 | 31 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
-Eseguire il ping del backend ogni 10 secondi. Player è ancora nello stato &quot;buffering&quot;; l&#39;utente rimane bloccato a 20 secondi di contenuto. Fuming...
+Esegui il ping del backend ogni 10 secondi. Il lettore è ancora nello stato &quot;buffering&quot;; l’utente rimane bloccato a 20 secondi di contenuto. Fumare...
 
 **Corpo della richiesta di esempio**
 
@@ -656,15 +657,15 @@ Eseguire il ping del backend ogni 10 secondi. Player è ancora nello stato &quot
 }
 ```
 
-### Azione 27 - Riproduci contenuto {#Action-27}
+### Azione 27 - Riprodurre il contenuto {#Action-27}
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| L&#39;utente ha premuto Riproduci per riprendere il contenuto principale | 74 | 31 | `/api/v1/sessions/{sid}/events` |
+| L&#39;utente ha premuto Play per riprendere il contenuto principale | 74 | 31 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
-Sposta lo stato di riproduzione su &quot;play&quot;.  **La`play`chiamata dopo una chiamata`pauseStart`deduce una chiamata di &quot;ripresa&quot; al back-end**, per cui non è necessario un `resume` evento.
+Sposta lo stato di riproduzione su &quot;riproduzione&quot;.  **La  `play` chiamata dopo una chiamata  `pauseStart` deduce una chiamata di &quot;ripresa&quot; al back-end**, quindi non è necessario un  `resume` evento.
 
 **Corpo della richiesta di esempio**
 
@@ -682,11 +683,11 @@ Sposta lo stato di riproduzione su &quot;play&quot;.  **La`play`chiamata dopo un
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| L&#39;app invia l&#39;evento | 80 | 37 | `/api/v1/sessions/{sid}/events` |
+| L&#39;app invia un evento ping | 80 | 37 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
-Eseguire il ping del backend ogni 10 secondi.
+Esegui il ping del backend ogni 10 secondi.
 
 **Corpo della richiesta di esempio**
 
@@ -722,15 +723,15 @@ Traccia la fine del secondo e ultimo capitolo.
 }
 ```
 
-### Azione 30 - Sessione completata {#Action-30}
+### Azione 30 - Sessione completa {#Action-30}
 
 | Azione | Timeline azione (secondi) | Posizione testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
-| L&#39;utente ha finito di guardare il contenuto alla fine. | 88 | 45 | `/api/v1/sessions/{sid}/events` |
+| L’utente termina di guardare il contenuto alla fine. | 88 | 45 | `/api/v1/sessions/{sid}/events` |
 
 **Dettagli di implementazione**
 
-Inviate `sessionComplete` al backend per indicare che l&#39;utente ha terminato di guardare l&#39;intero contenuto.
+Invia `sessionComplete` al backend per indicare che l&#39;utente ha terminato di guardare l&#39;intero contenuto.
 
 **Corpo della richiesta di esempio**
 
@@ -747,4 +748,4 @@ Inviate `sessionComplete` al backend per indicare che l&#39;utente ha terminato 
 
 >[!NOTE]
 >
->**Nessun evento di ricerca? -** Non esiste alcun supporto esplicito nell&#39;API di Media Collection per `seekStart` eventi o `seekComplete` eventi. Questo perché alcuni lettori generano un numero molto elevato di eventi di questo tipo quando l&#39;utente finale sta scorrendo, e diverse centinaia di utenti potrebbero facilmente strozzare la larghezza di banda di rete di un servizio back-end. Adobe supporta esplicitamente gli eventi di ricerca elaborando la durata del heartbeat in base alla marca temporale del dispositivo, anziché alla posizione dell&#39;indicatore di riproduzione.
+>**Niente Eventi di ricerca? -** Non è disponibile alcun supporto esplicito nell’API Media Collection per gli eventi `seekStart` o `seekComplete`. Questo perché alcuni giocatori generano un numero molto elevato di tali eventi quando l&#39;utente finale sta pulendo, e diverse centinaia di utenti potrebbero facilmente strozzare la larghezza di banda di rete di un servizio back-end. L&#39;Adobe si basa su un supporto esplicito per gli eventi di ricerca, calcolando la durata dell&#39;heartbeat in base alla marca temporale del dispositivo, anziché alla posizione dell&#39;indicatore di riproduzione.
