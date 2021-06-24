@@ -1,11 +1,13 @@
 ---
-title: Panoramica su Milestone
-description: Panoramica su Milestone
+title: Informazioni sul reporting di Milestone (obsoleto)
+description: � obsoleti Scopri come impostare il reporting video per un’implementazione Milestone
 uuid: 2f9ec6bb-8860-4863-98bc-5cffb356ccc5
 exl-id: 960785e3-f507-4f09-8f85-6eeca57dd2f3
-source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '3324'
+source-wordcount: '3339'
 ht-degree: 6%
 
 ---
@@ -58,7 +60,7 @@ Nella schermata finale, seleziona le due eVar e i tre eventi da utilizzare per l
 
 ![](assets/rs3.png)
 
-## Riferimento della variabile video {#video-variable-reference}
+## Riferimento a una variabile video {#video-variable-reference}
 
 La tabella seguente contiene ulteriori dettagli sulle variabili commerce e sugli eventi personalizzati per il video:
 
