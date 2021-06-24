@@ -1,13 +1,14 @@
 ---
-title: Tracciamento riproduzione core su Roku
-description: Questo argomento descrive come implementare il tracciamento di base utilizzando Media SDK su Roku.
+title: Scopri come tenere traccia della riproduzione core su Roku
+description: Scopri come implementare il tracciamento di base utilizzando Media SDK su Roku.
 uuid: a8aa7b3c-2d39-44d7-8ebc-b101d130101f
 exl-id: 5272c0ce-4e3d-48c6-bfa6-94066ccbf9ac
-translation-type: tm+mt
-source-git-commit: d11f68d0967dc27a6866a9b5a39c6b84ac9532e4
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '681'
-ht-degree: 2%
+source-wordcount: '684'
+ht-degree: 3%
 
 ---
 
@@ -100,7 +101,7 @@ ht-degree: 2%
 
    * **Metadati standard**
 
-      [Implementazione dei metadati standard su Roku](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
+[Implementazione dei metadati standard su Roku](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
 
       >[!NOTE]
       >Il collegamento dell&#39;oggetto metadati video standard all&#39;oggetto multimediale è facoltativo.
