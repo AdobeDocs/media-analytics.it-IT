@@ -1,27 +1,28 @@
 ---
-title: Implementazione di metadati di annunci standard tramite JavaScript 2.x
-description: Come utilizzare i metadati di annunci standard nel tracciamento degli annunci in un browser utilizzando le app JavaScript 2.x.
+title: Scopri come implementare i metadati standard di annunci utilizzando JavaScript 2.x
+description: Come utilizzare i metadati standard di annunci nel tracciamento degli annunci in un browser utilizzando le app JavaScript 2.x.
 uuid: 4ea10c5a-ae2b-45d0-aad3-9f10028ee7c3
-translation-type: tm+mt
-source-git-commit: 318bb60d9835d9a07fb7aa0a0a02162248410d09
+exl-id: b331db87-ab4e-44fa-a97c-9691974cacd4
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '68'
-ht-degree: 1%
+source-wordcount: '72'
+ht-degree: 4%
 
 ---
 
+# Implementazione dei metadati standard di annunci tramite JavaScript 2.x{#implement-standard-ad-metadata-on-javascript}
 
-# Implementazione di metadati di annunci standard tramite JavaScript 2.x{#implement-standard-ad-metadata-on-javascript}
-
-## Costanti annuncio
+## Costanti di annunci
 
 | Nome costante | Descrizione   |
 |---|---|
-| `StandardAdMetadata` | Costante per l&#39;associazione di metadati di annunci standard su oggetto annuncio |
+| `StandardAdMetadata` | Costante per allegare metadati standard di annunci su oggetto annuncio |
 
-## Implementazione di metadati di annunci standard
+## Implementazione dei metadati standard di annunci
 
-Per i metadati di annunci standard, create un dizionario di coppie di valori chiave standard e metadati utilizzando le chiavi per la vostra piattaforma:
+Per i metadati standard di annunci, crea un dizionario di coppie di valori chiave di annunci standard utilizzando le chiavi per la piattaforma:
 
 ```js
 var adObject =  
