@@ -1,12 +1,14 @@
 ---
-title: Configurazione iOS
-description: Configurazione dell’applicazione Media SDK per l’implementazione su iOS.
+title: Come configurare il Media SDK su iOS
+description: Segui questi passaggi per configurare l’applicazione Media SDK su iOS.
 uuid: a1c6be79-a6dc-47b6-93b3-ac7b42f1f3eb
 exl-id: fe7662b5-1700-4bd6-b542-66aa8493459d
-source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '720'
-ht-degree: 15%
+source-wordcount: '731'
+ht-degree: 14%
 
 ---
 
