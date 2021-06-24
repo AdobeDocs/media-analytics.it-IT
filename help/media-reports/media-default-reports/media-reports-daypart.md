@@ -1,16 +1,17 @@
 ---
 title: dayparting dei supporti
-description: dayparting dei supporti
+description: Utilizza il dashboard Media Daypart per visualizzare il contenuto inizia per ora del giorno e analizzare quando il pubblico è coinvolto.
 uuid: aa545f72-6816-448f-af5d-3c5e18f7b3b7
 exl-id: 5e4a390e-8cc5-4934-8d60-c82ca0daaee1
-translation-type: tm+mt
-source-git-commit: d4491dfec33d8729f40bcef1d57622467443bdbb
+feature: '"Informazioni di base su Media Analytics, Reports & Analytics"'
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '27'
+source-wordcount: '50'
 ht-degree: 0%
 
 ---
 
-# daypart contenuti multimediali{#media-daypart}
+# dayparting dei supporti{#media-daypart}
 
 Il dashboard Daypart contenuti multimediali visualizza i contenuti a partire dall’ora del giorno, per consentirti di visualizzare rapidamente i momenti in cui il pubblico è coinvolto.  ![](assets/video-daypart-report.png)
