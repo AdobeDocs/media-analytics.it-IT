@@ -1,11 +1,13 @@
 ---
 title: Visualizzatori simultanei di contenuti multimediali
-description: null
+description: '"Scopri il dashboard Visualizzatori simultanei di contenuti multimediali utilizzato per visualizzare i visualizzatori simultanei in un giorno. I dati possono essere filtrati in base al contenuto, al tipo di dispositivo o al paese."'
 uuid: e61c50e5-8196-4538-b67c-ebc01c6e6ba7
 exl-id: 2c679c1a-a4bd-44fc-8e11-173c8544ab06
-source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
+feature: '"Informazioni di base su Media Analytics, Reports & Analytics"'
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '295'
 ht-degree: 4%
 
 ---
@@ -21,7 +23,7 @@ Il dashboard Visualizzatori simultanei di contenuti multimediali mostra i visual
 
 ![](assets/video-concurrent-viewers.png)
 
-## Funzioni del rapporto {#report-features}
+## Funzioni dei rapporti {#report-features}
 
 Di seguito sono riportate alcune caratteristiche di questo rapporto:
 
@@ -33,7 +35,7 @@ Di seguito sono riportate alcune caratteristiche di questo rapporto:
 * Il rapporto funziona solo in un giorno.
 * Il cliente può esaminare i rapporti storici dei visualizzatori simultanei (limitati a un solo giorno).
 
-## Limitazioni {#limitations}
+## Limitazioni  {#limitations}
 
 Di seguito sono riportate alcune limitazioni per questo rapporto:
 
