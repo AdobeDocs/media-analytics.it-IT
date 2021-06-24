@@ -1,20 +1,24 @@
 ---
-title: Tracciare gli errori su Roku
-description: In questo argomento viene descritta l’implementazione del tracciamento degli errori tramite Media SDK su Roku.
+title: Scopri come tenere traccia degli errori su Roku
+description: Scopri come implementare il tracciamento degli errori utilizzando Media SDK su Roku.
 uuid: 4e0165f9-9169-47ed-9f11-ea8a8778f663
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: 6a6aae4c-60c3-43ea-9954-0bb31f6456f8
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '96'
+ht-degree: 2%
 
 ---
 
-
-# Tracciare gli errori su Roku{#track-errors-on-roku}
+# Tracciamento errori su Roku{#track-errors-on-roku}
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l’implementazione in tutti gli SDK 2.x. Se stai implementando una versione 1.x dell’SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione in tutti gli SDK 2.x. Se implementi una versione 1.x dell&#39;SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
-## Implementazione del tracciamento degli errori
+## Implementare il tracciamento degli errori
 
 1. Tracciare gli errori del lettore multimediale:
 
@@ -25,5 +29,4 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
 >[!NOTE]
 >
->Il tracciamento degli errori del lettore multimediale non interrompe la sessione di tracciamento del supporto. Se l’errore del lettore multimediale impedisce il proseguimento della riproduzione, accertatevi che la sessione di tracciamento dei contenuti multimediali sia chiusa chiamando `trackSessionEnd` dopo la chiamata `trackError`.
-
+>Il tracciamento degli errori del lettore multimediale non interrompe la sessione di tracciamento dei contenuti multimediali. Se l&#39;errore del lettore multimediale impedisce il proseguimento della riproduzione, assicurati che la sessione di tracciamento dei contenuti multimediali sia chiusa chiamando `trackSessionEnd` dopo aver chiamato `trackError`.
