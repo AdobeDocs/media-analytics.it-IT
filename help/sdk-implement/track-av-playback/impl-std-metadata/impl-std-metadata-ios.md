@@ -1,33 +1,37 @@
 ---
-title: Implementazione di metadati standard su iOS
-description: Descrive l’impostazione di video e metadati di annunci standard da inviare con le chiamate di tracciamento su iOS.
+title: Scopri come implementare metadati standard su iOS
+description: Scopri come impostare i video standard e i metadati degli annunci da inviare con le chiamate di tracciamento su iOS.
 uuid: 75a80f08-4a95-49d4-a27a-8ce531d64d31
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: e0981346-3d3c-4a0c-82a4-19942634fd03
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '102'
+ht-degree: 10%
 
 ---
 
+# Implementazione dei metadati standard su iOS{#implement-standard-metadata-on-ios}
 
-# Implementazione di metadati standard su iOS{#implement-standard-metadata-on-ios}
-
-## Costanti di metadati
+## Costanti metadati
 
 | Nome costante | Descrizione   |
 |---|---|
-| `ADBMediaObjectKeyStandardMediaMetadata` | Costante per l'associazione di metadati standard a `MediaInfo ADBMediaObject` |
+| `ADBMediaObjectKeyStandardMediaMetadata` | Costante per l&#39;associazione di metadati standard su `MediaInfo ADBMediaObject` |
 
 ## Implementazione
 
-1. Creare un dizionario di coppie di valori chiave di metadati standard utilizzando la variabile `ADBStandardMetadataKeys`
-   [Chiavi di metadati IOS](/help/sdk-implement/track-av-playback/impl-std-metadata/ios-metadata-keys.md)
+1. Crea un dizionario di coppie di valori chiave di metadati standard utilizzando `ADBStandardMetadataKeys`
+   [Tasti di metadati IOS](/help/sdk-implement/track-av-playback/impl-std-metadata/ios-metadata-keys.md)
 
-1. Impostate il dizionario di metadati standard sull’ `MediaInfo` `ADBMediaObject` istanza utilizzando la costante Metadati standard per i metadati.
+1. Imposta il dizionario metadati standard sull&#39;istanza `MediaInfo` `ADBMediaObject` utilizzando la costante metadati standard per i metadati.
 
-1. Fornire questo `MediaInfo` oggetto durante la chiamata dell' `trackSessionStart` API.
+1. Fornisci questo oggetto `MediaInfo` durante la chiamata dell&#39;API `trackSessionStart`.
 
-### Esempio di implementazione
+### Implementazione di esempio
 
-Creare un'istanza di un oggetto metdata standard, compilare le variabili desiderate e impostare l'oggetto metadati sull'oggetto Media Heartbeat. Ad esempio:
+Creare un&#39;istanza di un oggetto metdata standard, compilare le variabili desiderate e impostare l&#39;oggetto metadati sull&#39;oggetto Media Heartbeat. Ad esempio:
 
 ```
 // Sample implementation for using standard video metadata keys 
@@ -54,4 +58,3 @@ NSMutableDictionary *standardAudioMetadata = [[NSMutableDictionary alloc] init];
  
 [mediaObject setValue:standardAudioMetadata   forKey:ADBMediaObjectKeyStandardMediaMetadata];
 ```
-
