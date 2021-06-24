@@ -1,28 +1,32 @@
 ---
-title: Monitoraggio della qualità dell'esperienza su Android
-description: In questo argomento viene descritta l’implementazione del tracciamento della qualità dell’esperienza (QoE, QoS) tramite Media SDK su Android.
-uuid: 81ff3939-48a6-45c1-8837-dfa33490559
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+title: Scopri come tenere traccia della qualità dell’esperienza su Android
+description: '"Scopri come implementare il tracciamento della qualità dell’esperienza (QoE, QoS) utilizzando Media SDK su Android."'
+uuid: 81ff3939-48a6-45c1-8837-ddfa33490559
+exl-id: cee8b119-bca2-4a5c-8111-2b49f7eede66
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '158'
+ht-degree: 5%
 
 ---
 
-
-# Monitoraggio della qualità dell'esperienza su Android{#track-quality-of-experience-on-android}
+# Tracciamento qualità dell’esperienza su Android{#track-quality-of-experience-on-android}
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l’implementazione in tutti gli SDK 2.x. Se stai implementando una versione 1.x dell’SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione in tutti gli SDK 2.x. Se implementi una versione 1.x dell&#39;SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
-## Implementazione di QoS
+## Implementare QoS
 
-1. Identificare quando il bitrate cambia durante la riproduzione del contenuto multimediale e creare l’ `MediaObject` istanza utilizzando le informazioni QoS.
+1. Identificare quando il bitrate cambia durante la riproduzione di contenuti multimediali e creare l&#39;istanza `MediaObject` utilizzando le informazioni QoS.
 
    Variabili QoSObject:
 
    >[!TIP]
    >
-   >Queste variabili sono necessarie solo se si prevede di tenere traccia dei QoS.
+   >Queste variabili sono necessarie solo se intendi tenere traccia di QoS.
 
    | Variabile | Descrizione | Obbligatorio |
    | --- | --- | :---: |
@@ -41,8 +45,8 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
                                     <DROPPED_FRAMES>);
    ```
 
-1. Accertatevi che `getQoSObject()` il metodo restituisca le informazioni QoS più aggiornate.
-1. Quando la riproduzione cambia bitrate, chiamate l’ `BitrateChange` evento nell’istanza di Media Heartbeat:
+1. Assicurati che il metodo `getQoSObject()` restituisca le informazioni QoS più aggiornate.
+1. Quando la riproduzione commuta i bit rate, chiama l&#39;evento `BitrateChange` nell&#39;istanza Media Heartbeat:
 
    ```java
    public void onBitrateChange(Observable observable, Object data) {  
@@ -52,5 +56,4 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    >[!IMPORTANT]
    >
-   >Aggiornare l'oggetto QoS e richiamare l'evento di modifica del bitrate su ogni modifica del bitrate. Questo fornisce i dati QoS più precisi.
-
+   >Aggiorna l&#39;oggetto QoS e chiama l&#39;evento di modifica del bitrate su ogni modifica del bitrate. Questo fornisce i dati QoS più precisi.
