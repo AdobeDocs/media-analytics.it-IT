@@ -1,42 +1,46 @@
 ---
-title: Tracciare gli annunci su Android
-description: Implementate il tracciamento degli annunci nelle applicazioni Android tramite Media SDK.
+title: Scopri come tenere traccia degli annunci su Android
+description: Implementa il tracciamento degli annunci nelle applicazioni Android tramite Media SDK.
 uuid: 4a4249fb-dc39-4947-a14d-a51d972f32d4
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: 1f96dde9-c924-4fce-8b14-7dec7137f265
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '357'
+ht-degree: 6%
 
 ---
 
-
-# Tracciare gli annunci su Android{#track-ads-on-android}
+# Tracciamento annunci su Android{#track-ads-on-android}
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l’implementazione mediante gli SDK 2.x. Se stai implementando una versione 1.x dell’SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione tramite gli SDK 2.x. Se implementi una versione 1.x dell&#39;SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
-## Costanti di tracciamento annunci
+## Costanti di tracciamento degli annunci
 
 | Nome costante | Descrizione |
 | --- | --- |
-| `MediaHeartbeat.Event.AdBreakStart` | Costante per il tracciamento dell'evento AdBreak Start |
-| `MediaHeartbeat.Event.AdBreakComplete` | Costante per il tracciamento dell'evento AdBreak Complete |
-| `MediaHeartbeat.Event.AdStart` | Costante per il tracciamento dell'evento Ad Start |
-| `MediaHeartbeat.Event.AdComplete` | Costante per il tracciamento dell'evento Ad Complete |
-| `MediaHeartbeat.Event.AdSkip` | Costante per il tracciamento dell'evento Ad Skip |
+| `MediaHeartbeat.Event.AdBreakStart` | Costante per il tracciamento dell&#39;evento di avvio AdBreak |
+| `MediaHeartbeat.Event.AdBreakComplete` | Costante per il tracciamento dell’evento AdBreak Complete |
+| `MediaHeartbeat.Event.AdStart` | Costante per il tracciamento dell’evento Ad Start |
+| `MediaHeartbeat.Event.AdComplete` | Costante per il tracciamento dell’evento Ad Complete |
+| `MediaHeartbeat.Event.AdSkip` | Costante per il tracciamento dell’evento Ad Skip |
 
 ## Passaggi di implementazione
 
-1. Identificate quando inizia il limite di interruzione annuncio, incluso il pre-roll, e create un'interruzione `AdBreakObject` utilizzando le informazioni di interruzione annuncio.
+1. Identifica quando inizia il limite di interruzione dell&#39;annuncio, incluso il pre-roll, e crea un `AdBreakObject` utilizzando le informazioni di interruzione dell&#39;annuncio.
 
    `AdBreakObject` riferimento:
 
-   | Nome della variabile | Descrizione | Obbligatorio |
+   | Nome variable | Descrizione | Obbligatorio |
    | --- | --- | :---: |
    | `name` | Nome dell’interruzione dell’annuncio come pre-roll, mid-roll e post-roll. | Sì |
-   | `position` | La posizione numerica dell'interruzione annuncio all'interno del contenuto, a partire da 1. | Sì |
-   | `startTime` | Valore dell'indicatore di riproduzione all'inizio dell'interruzione dell'annuncio. | Sì |
+   | `position` | La posizione numerica dell’interruzione pubblicitaria all’interno del contenuto, a partire da 1. | Sì |
+   | `startTime` | Valore della testina di riproduzione all&#39;inizio dell&#39;interruzione pubblicitaria. | Sì |
 
-   Creazione oggetto di interruzione annuncio:
+   Creazione dell’oggetto di interruzione annuncio:
 
    ```java
    MediaObject adBreakInfo =  
@@ -45,7 +49,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
                                         <START_TIME>);
    ```
 
-1. Chiama `trackEvent()` con `AdBreakStart` nell’ `MediaHeartbeat` istanza per iniziare a monitorare l’interruzione dell’annuncio:
+1. Invoca `trackEvent()` con `AdBreakStart` nell&#39;istanza `MediaHeartbeat` per iniziare a tracciare l&#39;interruzione pubblicitaria:
 
    ```java
    public void onAdBreakStart(Observable observable, Object data) {  
@@ -55,15 +59,15 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    }
    ```
 
-1. Identificare quando inizia l'annuncio e creare un' `AdObject` istanza utilizzando le informazioni sull'annuncio.
+1. Identifica quando l&#39;annuncio inizia e crea un&#39;istanza `AdObject` utilizzando le informazioni dell&#39;annuncio.
 
    `AdObject` riferimento:
 
-   | Nome della variabile | Descrizione | Obbligatorio |
+   | Nome variable | Descrizione | Obbligatorio |
    | --- | --- | :---: |
-   | `name` | Nome descrittivo dell'annuncio. | Sì |
-   | `adId` | Identificatore univoco per l’annuncio. | Sì |
-   | `position` | La posizione del numero dell'annuncio all'interno dell'interruzione dell'annuncio, a partire da 1. | Sì |
+   | `name` | Nome descrittivo dell&#39;annuncio. | Sì |
+   | `adId` | Identificatore univoco per l&#39;annuncio. | Sì |
+   | `position` | La posizione numerica dell’annuncio all’interno dell’interruzione pubblicitaria, a partire da 1. | Sì |
    | `length` | Lunghezza annuncio | Sì |
 
    Creazione di oggetti annuncio:
@@ -76,10 +80,10 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
                                    <LENGTH>);
    ```
 
-1. Se necessario, allegate metadati standard e/o di annunci alla sessione di tracciamento dei supporti tramite le variabili dei dati contestuali.
+1. Facoltativamente, allega metadati standard e/o di annunci alla sessione di tracciamento dei contenuti multimediali tramite variabili di dati di contesto.
 
-   * [Implementazione di metadati di annunci standard su Android](/help/sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-android.md)
-   * **Metadati annunci personalizzati -** Per i metadati personalizzati, create un oggetto variabile per le variabili dati personalizzate e compilate con i dati per l'annuncio corrente:
+   * [Implementazione dei metadati standard di annunci su Android](/help/sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-android.md)
+   * **Metadati di annunci personalizzati -** Per i metadati personalizzati, crea un oggetto variabile per le variabili di dati personalizzate e compila i dati per l&#39;annuncio corrente:
 
       ```java
       // Setting Ad Metadata 
@@ -88,9 +92,9 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
       adMetadata.put("campaign", "Sample ad campaign");
       ```
 
-1. Chiamate `trackEvent()` con l’ `AdStart` evento nell’ `MediaHeartbeat` istanza per iniziare a monitorare la riproduzione dell’annuncio.
+1. Chiama `trackEvent()` con l&#39;evento `AdStart` nell&#39;istanza `MediaHeartbeat` per iniziare a tracciare la riproduzione dell&#39;annuncio.
 
-   Includete un riferimento alla variabile di metadati personalizzata (o a un oggetto vuoto) come terzo parametro nella chiamata dell’evento:
+   Includi un riferimento alla variabile di metadati personalizzata (o a un oggetto vuoto) come terzo parametro nella chiamata dell&#39;evento:
 
    ```java
    public void onAdStart(Observable observable, Object data) {  
@@ -100,7 +104,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    }
    ```
 
-1. Quando la riproduzione dell’annuncio raggiunge la fine dell’annuncio, invoca `trackEvent()` con l’ `AdComplete` evento:
+1. Quando la riproduzione dell’annuncio raggiunge la fine dell’annuncio, invoca `trackEvent()` con l’evento `AdComplete` :
 
    ```java
    public void onAdComplete(Observable observable, Object data) {  
@@ -108,7 +112,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    }
    ```
 
-1. Se la riproduzione dell'annuncio non è stata completata perché l'utente ha scelto di saltare l'annuncio, tieni traccia dell' `AdSkip` evento:
+1. Se la riproduzione dell&#39;annuncio non è stata completata perché l&#39;utente ha scelto di saltare l&#39;annuncio, tieni traccia dell&#39;evento `AdSkip`:
 
    ```java
    public void onAdSkip(Observable observable, Object data) {  
@@ -116,8 +120,8 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    }
    ```
 
-1. Se ci sono altri annunci all'interno dello stesso `AdBreak`, ripeti di nuovo i passaggi da 3 a 7.
-1. Al termine dell'interruzione dell'annuncio, utilizzate l' `AdBreakComplete` evento per tenere traccia:
+1. Se sono presenti annunci aggiuntivi all&#39;interno dello stesso `AdBreak`, ripeti nuovamente i passaggi da 3 a 7.
+1. Al termine dell’interruzione pubblicitaria, utilizza l’evento `AdBreakComplete` per tenere traccia di:
 
    ```java
    public void onAdBreakComplete(Observable observable, Object data) {  
@@ -125,4 +129,4 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    }
    ```
 
-Per ulteriori informazioni, consulta lo scenario di tracciamento della riproduzione [VOD con annunci](/help/sdk-implement/tracking-scenarios/vod-preroll-ads.md) pre-roll.
+Per ulteriori informazioni, consulta lo scenario di tracciamento [Riproduzione VOD con annunci pre-scorrimento](/help/sdk-implement/tracking-scenarios/vod-preroll-ads.md) .
