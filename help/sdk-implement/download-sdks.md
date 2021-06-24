@@ -1,11 +1,13 @@
 ---
-title: Scaricare gli SDK
+title: Accesso ai collegamenti per scaricare gli SDK di Media Analytics
 description: Collegamenti ai download dell'SDK per le piattaforme disponibili, inclusi Android, iOS, JavaScript, Chromecast e Roku.
 uuid: a619fbb8-693e-4583-8dad-0ff875e715f8
 exl-id: d211fa2e-d5b0-4e9f-bdb7-eda838194f3d
-source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '520'
 ht-degree: 22%
 
 ---
@@ -17,7 +19,7 @@ ht-degree: 22%
 >Con la fine del supporto per gli SDK per dispositivi mobili versione 4, il 31 agosto 2021, Adobe terminerà anche il supporto per gli SDK Media Analytics per iOS e Android.  Per ulteriori informazioni, consulta [Domande frequenti sulla fine del supporto dell’SDK di Media Analytics](/help/sdk-implement/end-of-support-faqs.md).
 
 
-## Scarica gli SDK di Media 3.x {#download-3x-sdks}
+## Scaricare gli SDK di Media 3.x {#download-3x-sdks}
 
 | SDK di Media 3.x  | Download più recenti dell’SDK per contenuti multimediali |  API   |  Documentazione  |
 | --- | --- | --- | --- |
@@ -25,7 +27,7 @@ ht-degree: 22%
 | Chromecast | [Media SDK per Chromecast v3.0.2](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/chromecast-v3.0.2) | [Riferimento API per Chromecast](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/) | [Configurazione Chromecast](/help/sdk-implement/setup/set-up-chromecast.md) |
 
 
-## Scarica gli SDK di Media 2.x {#download-2x-sdks}
+## Scaricare gli SDK di Media 2.x {#download-2x-sdks}
 
 | SDK di Media 2.x  | Download più recenti dell’SDK per contenuti multimediali |  API   |  Documentazione  |
 | --- | --- | --- | --- |
