@@ -1,12 +1,14 @@
 ---
-title: Misurazione dei file multimediali in streaming in Adobe Analytics
-description: Adobe Analytics for Media (altrimenti denominato Media Analytics) fornisce ai clienti una misurazione affidabile dei file multimediali per contenuto, audio e annunci pubblicitari.
+title: 'Adobe Streaming Media in Adobe Analytics '
+description: '"Approfondisci la misurazione di contenuti multimediali in streaming allo stato dell’arte per contenuti, audio e annunci pubblicitari. Scopri Adobe Analytics for Streaming Media."'
 uuid: b3cbe240-b94d-42b8-a99c-0280334aaa14
 exl-id: 826530f7-2c39-41ef-b3b4-d3f44b46858f
-source-git-commit: eaae56abd3e549ad57c45852fe0bedb618f80e9e
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '879'
-ht-degree: 83%
+source-wordcount: '880'
+ht-degree: 80%
 
 ---
 
