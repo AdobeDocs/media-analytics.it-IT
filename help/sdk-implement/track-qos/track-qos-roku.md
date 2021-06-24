@@ -1,28 +1,32 @@
 ---
-title: Monitoraggio della qualità dell'esperienza su Roku
-description: In questo argomento viene descritta l’implementazione del tracciamento della qualità dell’esperienza (QoE, QoS) tramite Media SDK su Roku.
+title: Scopri come tracciare la qualità dell’esperienza su Roku
+description: '"Scopri come implementare il tracciamento della qualità dell’esperienza (QoE, QoS) utilizzando Media SDK su Roku."'
 uuid: a8b242ab-da3c-4297-9eef-f0b9684ef56a
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: cd84c26d-ad91-4179-9532-83408030ff3e
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '199'
+ht-degree: 6%
 
 ---
 
-
-# Monitoraggio della qualità dell'esperienza su Roku{#track-quality-of-experience-on-roku}
+# Tracciamento qualità dell’esperienza su Roku{#track-quality-of-experience-on-roku}
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l’implementazione in tutti gli SDK 2.x. Se stai implementando una versione 1.x dell’SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione in tutti gli SDK 2.x. Se implementi una versione 1.x dell&#39;SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
-## Implementazione di QOS
+## Implementare QOS
 
-1. Identificare quando il bitrate cambia durante la riproduzione di contenuti multimediali e utilizzare l’ `mediaUpdateQoS` API per aggiornare le informazioni QoS sull’SDK di Media.
+1. Identifica quando cambia il bitrate durante la riproduzione di contenuti multimediali e utilizza l’ `mediaUpdateQoS` API per aggiornare le informazioni QoS sull’SDK di contenuti multimediali.
 
    Variabili QoSObject:
 
    >[!TIP]
    >
-   >Queste variabili sono necessarie solo se si esegue il tracciamento dei QoS.
+   >Queste variabili sono necessarie solo se tieni traccia dei QoS.
 
    | Variabile | Descrizione | Obbligatorio |
    | --- | --- | :---: |
@@ -55,7 +59,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
     ```
     -->
 
-1. Quando la riproduzione cambia bitrate, richiedete `trackEvent(BitrateChange)` di notificare all’SDK multimediale la modifica del bitrate.
+1. Quando la riproduzione passa al bitrate, chiama `trackEvent(BitrateChange)` per notificare all&#39;SDK di Media la modifica del bitrate.
 
    ```
    ADBMobile().mediaTrackEvent(ADBMobile().MEDIA_BITRATE_CHANGE)
@@ -63,7 +67,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
 
    >[!NOTE]
    >
-   >È necessario chiamare `updateQoSObject` con il valore bitrate aggiornato.
+   >È necessario chiamare `updateQoSObject` con il valore del bitrate aggiornato.
 
    <!--
     ```
@@ -76,9 +80,8 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
     >Update the QoS object and call the bitrate change event on every bitrate change. This provides the most accurate QoS data.
     -->
 
-1. Quando il lettore multimediale rileva un errore e l'evento di errore è disponibile per l'API del lettore, utilizzare `trackError()` per acquisire le informazioni sull'errore. (Consulta [Panoramica](/help/sdk-implement/track-errors/track-errors-overview.md).)
+1. Quando il lettore multimediale rileva un errore e l&#39;evento di errore è disponibile per l&#39;API del lettore, utilizza `trackError()` per acquisire le informazioni sull&#39;errore. (Consulta [Panoramica](/help/sdk-implement/track-errors/track-errors-overview.md).)
 
    >[!TIP]
    >
-   >Il tracciamento degli errori del lettore multimediale non interrompe la sessione di tracciamento del supporto. Se l’errore del lettore multimediale impedisce il proseguimento della riproduzione, accertatevi che la sessione di tracciamento dei contenuti multimediali sia chiusa chiamando `trackSessionEnd()` dopo la chiamata `trackError()`.
-
+   >Il tracciamento degli errori del lettore multimediale non interrompe la sessione di tracciamento dei contenuti multimediali. Se l&#39;errore del lettore multimediale impedisce il proseguimento della riproduzione, assicurati che la sessione di tracciamento dei contenuti multimediali sia chiusa chiamando `trackSessionEnd()` dopo aver chiamato `trackError()`.
