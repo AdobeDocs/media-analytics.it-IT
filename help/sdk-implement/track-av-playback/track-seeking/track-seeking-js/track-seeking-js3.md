@@ -1,31 +1,32 @@
 ---
-title: Ricerca di tracce con JavaScript 3.x
-description: In questo argomento viene descritta l’implementazione del tracciamento della ricerca tramite Media SDK nelle app browser (JS).
-translation-type: tm+mt
-source-git-commit: 318bb60d9835d9a07fb7aa0a0a02162248410d09
+title: Scopri come tenere traccia della ricerca con JavaScript 3.x
+description: Scopri come tenere traccia degli eventi Seek Start e Seek Complete utilizzando Media SDK nelle app del browser (JS 3.x).
+exl-id: b7152436-520e-4f38-a8ad-1027ca3f1f6c
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 0%
+source-wordcount: '136'
+ht-degree: 2%
 
 ---
 
-
-# Ricerca di tracce con JavaScript 3.x{#track-seeking-on-javascript}
+# Tracciamento ricerca con JavaScript 3.x{#track-seeking-on-javascript}
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l’implementazione in tutti gli SDK 3.x. Se stai implementando versioni precedenti dell’SDK, puoi scaricare le Guide per gli sviluppatori qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione in tutti gli SDK 3.x. Se implementi una versione precedente dell’SDK, puoi scaricare le Guide per sviluppatori qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
-## Costanti di tracciamento delle ricerche
+## Costanti di tracciamento ricerca
 
 | Nome costante | Descrizione     |
 |---|---|
-| `SeekStart` | Costante per il tracciamento dell&#39;evento Seek Start. |
-| `SeekComplete` | Costante per il tracciamento dell&#39;evento Seek Complete. |
+| `SeekStart` | Costante per il tracciamento dell’evento Seek Start . |
+| `SeekComplete` | Costante per il tracciamento dell’evento Seek Complete . |
 
-## Implementa ricerca
+## Implementare la ricerca
 
-1. Ascoltare gli eventi di ricerca della riproduzione dal lettore multimediale e, durante la ricerca, avviare la notifica dell’evento, tenere traccia della ricerca mediante l’ `SeekStart` evento:
+1. Ascoltare gli eventi di ricerca della riproduzione dal lettore multimediale e, alla ricerca della notifica dell&#39;evento di avvio, tenere traccia della ricerca utilizzando l&#39;evento `SeekStart`:
 
    ```js
    _onSeekStart = function() {
@@ -33,7 +34,7 @@ ht-degree: 0%
    };
    ```
 
-1. Alla ricerca della notifica completa dal lettore multimediale, tenete traccia della fine della ricerca mediante l’ `SeekComplete` evento:
+1. Al momento della ricerca della notifica completa dal lettore multimediale, tieni traccia della fine della ricerca utilizzando l&#39;evento `SeekComplete` :
 
    ```js
    _onSeekComplete = function() {
@@ -41,4 +42,4 @@ ht-degree: 0%
    };
    ```
 
-Per ulteriori informazioni, vedi la riproduzione [VOD dello scenario di tracciamento con la ricerca nel contenuto](/help/sdk-implement/tracking-scenarios/vod-seeking.md) principale.
+Per ulteriori informazioni, consulta lo scenario di tracciamento [Riproduzione VOD con ricerca nel contenuto principale](/help/sdk-implement/tracking-scenarios/vod-seeking.md) .
