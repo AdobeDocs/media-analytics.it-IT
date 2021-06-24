@@ -1,37 +1,41 @@
 ---
 title: Riproduzione VOD con annunci ignorati
-description: Un esempio di come tenere traccia del contenuto VOD in cui l’utente ha saltato gli annunci tramite Media SDK.
+description: Visualizza un esempio di come tenere traccia del contenuto VOD in cui l’utente ha saltato gli annunci utilizzando Media SDK.
 uuid: f3ab3524-abcb-4051-b64e-a1aad6e3dd3f
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: 034b5c1f-7dd9-431f-a51b-925e407a7b36
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '281'
+ht-degree: 5%
 
 ---
 
-
-# Riproduzione VOD con annunci ignorati{#vod-playback-with-skipped-ads}
+# Riproduzione VOD con annunci saltati{#vod-playback-with-skipped-ads}
 
 ## Scenario {#scenario}
 
-Questo scenario include la riproduzione di contenuto VOD con un annuncio ignorato.
+Questo scenario include la riproduzione di contenuti VOD con un annuncio saltato.
 
 ### Un VOD con un annuncio pre-roll saltato
 
-Questo è lo stesso scenario della riproduzione [VOD con annunci](/help/sdk-implement/tracking-scenarios/vod-preroll-ads.md)pre-roll, eccetto che l'applicazione ha un provisioning per consentire all'utente di saltare l'annuncio, forse facendo clic su un pulsante di salto.
+Questo è lo stesso scenario della riproduzione [VOD con annunci pre-roll](/help/sdk-implement/tracking-scenarios/vod-preroll-ads.md), tranne per il fatto che l&#39;applicazione ha un provisioning per consentire all&#39;utente di saltare l&#39;annuncio, forse facendo clic su un pulsante di salto.
 
-| Attivatore   | Metodo Heartbeat | Chiamate di rete | Note   |
+| Attivatore   | metodo Heartbeat  | Chiamate di rete   | Note   |
 | --- | --- | --- | --- |
-| Clic utente [!UICONTROL Play] | `trackSessionStart()` | Inizio contenuto Analytics, Inizio contenuto Heartbeat | La libreria delle misurazioni non è a conoscenza della presenza di un annuncio pre-roll. Queste chiamate di rete sono ancora esattamente le stesse della riproduzione [VOD senza scenari di annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . |
-| L'annuncio inizia. | <ul> <li> `trackEvent:AdBreakStart` </li> <li> `trackEvent:AdStart` </li> </ul> | Analytics Ad Start, Heartbeat Ad Start |  |
-| Viene riprodotto il primo fotogramma dell'annuncio. | `trackPlay()` | Heartbeat Ad Play | Quando il contenuto dell'annuncio viene riprodotto prima del contenuto principale, i heartbeat iniziano quando l'annuncio inizia a essere riprodotto. |
-| La pubblicità suona. |  | Ad Heartbeat |  |
-| L'annuncio è saltato. | `trackEvent:trackAdSkip` |  | Nessuna chiamata di rete ad complete. |
-| Il contenuto viene riprodotto. |  | Heartbeat di contenuto | Queste chiamate di rete sono esattamente le stesse della riproduzione [VOD senza scenari di annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . |
-| La riproduzione del contenuto viene completata. | `trackComplete()` | Heartbeat Content Complete | Questa chiamata di rete è esattamente la stessa della riproduzione [VOD senza scenari di annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) . |
+| Clic utente [!UICONTROL Play] | `trackSessionStart()` | Inizio contenuto Analytics, inizio contenuto Heartbeat | La libreria di misurazione non è a conoscenza dell’esistenza di un annuncio pre-roll. Queste chiamate di rete sono ancora esattamente uguali alla riproduzione [VOD senza scenari di annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md). |
+| L&#39;annuncio inizia. | <ul> <li> `trackEvent:AdBreakStart` </li> <li> `trackEvent:AdStart` </li> </ul> | Ad Start di Analytics, Heartbeat Ad Start |  |
+| Viene riprodotto il primo fotogramma dell’annuncio. | `trackPlay()` | Heartbeat Ad Play | Quando il contenuto dell’annuncio viene riprodotto prima del contenuto principale, gli heartbeat iniziano quando l’annuncio inizia a essere riprodotto. |
+| L&#39;annuncio suona. |  | Battiti cardiaci |  |
+| L&#39;annuncio viene saltato. | `trackEvent:trackAdSkip` |  | Nessuna chiamata di rete ad complete. |
+| Il contenuto viene riprodotto. |  | heartbeat di contenuto | Queste chiamate di rete sono esattamente uguali alla riproduzione [VOD senza annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario. |
+| La riproduzione del contenuto è completa. | `trackComplete()` | Contenuto Heartbeat completato | Questa chiamata di rete è esattamente la stessa della riproduzione [VOD senza annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario. |
 | La sessione è finita. | `trackSessionEnd()` |  | `SessionEnd` |
 
 ## Parametri {#parameters}
 
-I parametri sono identici ai parametri nella riproduzione [VOD con scenario di annunci](/help/sdk-implement/tracking-scenarios/vod-preroll-ads.md) pre-roll, tranne che non c'è nessun annuncio completo e nessuna chiamata ad-break completo.
+I parametri sono identici ai parametri nello scenario [VOD playback with pre-roll ads](/help/sdk-implement/tracking-scenarios/vod-preroll-ads.md) , tranne che non vi è nessun annuncio completo e nessuna chiamata ad-break complete.
 
 ## Codice di esempio {#sample-code}
 
@@ -292,4 +296,3 @@ this._mediaHeartbeat.trackSessionEnd();
 ........ 
 ........ 
 ```
-
