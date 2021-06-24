@@ -1,23 +1,24 @@
 ---
-title: Tenere traccia degli errori utilizzando JavaScript 2.x
-description: In questo argomento viene descritta l’implementazione del tracciamento degli errori tramite Media SDK nelle app browser (JS).
+title: Scopri come tenere traccia degli errori con JavaScript 2.x
+description: Scopri come implementare il tracciamento degli errori utilizzando Media SDK nelle app del browser (JS).
 uuid: 5a4fc5df-2677-4189-92af-5cd074847b39
-translation-type: tm+mt
-source-git-commit: fa161e2d41629fdfe77100d87d6a44728e23d77f
+exl-id: b3012bce-4b92-408e-8b7a-57ae9d52e93d
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '96'
-ht-degree: 0%
+source-wordcount: '100'
+ht-degree: 2%
 
 ---
 
-
-# Tenere traccia degli errori utilizzando JavaScript 2.x{#track-errors-on-javascript}
+# Tracciare gli errori con JavaScript 2.x{#track-errors-on-javascript}
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l’implementazione in tutti gli SDK 2.x. Se stai implementando una versione 1.x dell’SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione in tutti gli SDK 2.x. Se implementi una versione 1.x dell&#39;SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
-## Implementazione del tracciamento degli errori
+## Implementare il tracciamento degli errori
 
 1. Tracciare gli errori del lettore multimediale:
 
@@ -29,4 +30,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Il tracciamento degli errori del lettore multimediale non interrompe la sessione di tracciamento del supporto. Se l’errore del lettore multimediale impedisce il proseguimento della riproduzione, accertatevi che la sessione di tracciamento dei contenuti multimediali sia chiusa chiamando `trackSessionEnd` dopo la chiamata `trackError`.
+>Il tracciamento degli errori del lettore multimediale non interrompe la sessione di tracciamento dei contenuti multimediali. Se l&#39;errore del lettore multimediale impedisce il proseguimento della riproduzione, assicurati che la sessione di tracciamento dei contenuti multimediali sia chiusa chiamando `trackSessionEnd` dopo aver chiamato `trackError`.
