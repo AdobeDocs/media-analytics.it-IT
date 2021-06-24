@@ -1,28 +1,29 @@
 ---
-title: Modelli per aree di lavoro multimediali
-description: null
+title: Modelli di area di lavoro multimediale
+description: Utilizza i modelli dell’area di lavoro multimediale per analizzare i dati di tracciamento. Scegli modelli standard per Acquisizione o Streaming Media o crea modelli personalizzati.
 uuid: 0024b06a-eaf5-4d2e-be45-aeda9d0554c1
-translation-type: tm+mt
-source-git-commit: 82b38f7870b6f890aaa812de30fa2d02d4f3ba8a
+exl-id: a835f86a-a93a-4a56-91f4-14628cf48214
+feature: '"Media Analytics, nozioni di base su Workspace"'
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '209'
 ht-degree: 0%
 
 ---
 
+# Modelli di area di lavoro multimediale{#media-workspace-templates}
 
-# Modelli dell&#39;area di lavoro Media{#media-workspace-templates}
+Adobe Analytics Workspace consente di configurare rapidamente le dashboard per l’analisi dei dati di tracciamento. Quando crei un nuovo progetto o accedi a Workspace per gestire un progetto esistente, puoi scegliere tra modelli standard che coprono scenari di tracciamento generali comuni, ad esempio Acquisizione, Consumo di file multimediali in streaming e altro ancora. Puoi anche creare, modificare e salvare modelli personalizzati.
 
- Adobe Analytics Workspace consente di configurare rapidamente le dashboard per l’analisi dei dati di tracciamento. Quando create un nuovo progetto o accedete a Workspace per gestire un progetto esistente, potete scegliere tra modelli standard che coprono scenari di tracciamento generali comuni, come Acquisizione, Consumo di file multimediali in streaming e altro ancora. Potete anche creare, modificare e salvare i vostri modelli personalizzati.
+Quando crei o gestisci un progetto, puoi utilizzare i modelli della scheda Area di lavoro di Adobe Analytics. All’inizio dell’accesso a Workspace, puoi scegliere se creare un nuovo progetto o aprirne uno esistente:
 
-Quando create o gestite un progetto, potete utilizzare i modelli della scheda Area di lavoro  Adobe Analytics. Quando si accede inizialmente a Workspace, vengono visualizzate le opzioni per creare un nuovo progetto o aprire un progetto esistente:
-
-* **Crea un nuovo progetto:** quando fai clic sul  **[!UICONTROL Create New Project]** pulsante in Workspace, viene visualizzata una finestra di dialogo dalla quale puoi selezionare tra i vari modelli (inclusi Standard e Personalizzato):
+* **Crea un nuovo progetto:** quando fai clic sul  **[!UICONTROL Create New Project]** pulsante in Workspace, viene visualizzata una finestra di dialogo dalla quale puoi selezionare uno dei modelli della raccolta (inclusi Standard e Personalizzato):
 
    ![](assets/all-templates-audio.png)
 
-   Ad esempio, se scegliete il modello **[!UICONTROL Audio Consumption]**, viene presentato un progetto con il seguente dashboard orientato all&#39;audio:
+   Ad esempio, se scegli il modello **[!UICONTROL Audio Consumption]** , viene presentato un progetto con il seguente dashboard orientato all’audio:
 
    ![](assets/aa-workspace.png)
 
-* **Gestisci progetti -** In un progetto esistente, puoi modificare la presentazione dati e salvare con nome per creare una raccolta personalizzata di modelli personalizzati.
+* **Gestione progetti:** in un progetto esistente puoi modificare la presentazione dati e salvare con nome per creare una tua raccolta di modelli personalizzati.
