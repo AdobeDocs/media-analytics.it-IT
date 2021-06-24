@@ -1,10 +1,12 @@
 ---
 title: Generazione di rapporti per visualizzatori simultanei di contenuti multimediali
-description: Per i clienti Media Analytics, il pannello Visualizzatori simultanei di contenuti multimediali in Analysis Workspace consente di analizzare i visualizzatori simultanei per comprendere dove si è verificato il picco di concorrenza o in che punto i visitatori hanno abbandonato il contenuto.
+description: '"Scopri come utilizzare il pannello Visualizzatori simultanei di contenuti multimediali per analizzare i visualizzatori simultanei e comprendere la concorrenza dei picchi e i rilasci."'
 exl-id: 2eadd5e7-45de-4275-aac5-d16e2a6a9fed
-source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
+feature: '"Media Analytics, nozioni di base su Workspace"'
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '187'
 ht-degree: 19%
 
 ---
