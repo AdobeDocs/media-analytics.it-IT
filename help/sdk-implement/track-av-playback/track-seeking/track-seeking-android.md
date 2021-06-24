@@ -1,29 +1,33 @@
 ---
-title: Tracciare la ricerca su Android
-description: In questo argomento viene descritta l’implementazione del tracciamento della ricerca tramite Media SDK su Android.
-uuid: 65add99-eebf-4a80-8b4a-d5fbdff8ab06
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+title: Scopri come tenere traccia della ricerca su Android
+description: Scopri come tenere traccia degli eventi Seek Start e Seek Complete utilizzando Media SDK su Android.
+uuid: 65addd99-eebf-4a80-8b4a-d5fbdff8ab06
+exl-id: 8a8fcbcf-3232-4565-8c27-4167b6741613
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '132'
+ht-degree: 2%
 
 ---
 
-
-# Tracciare la ricerca su Android{#track-seeking-on-android}
+# Tracciamento ricerca su Android{#track-seeking-on-android}
 
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l’implementazione in tutti gli SDK 2.x. Se stai implementando una versione 1.x dell’SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
+>Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione in tutti gli SDK 2.x. Se implementi una versione 1.x dell&#39;SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
-## Costanti di tracciamento delle ricerche
+## Costanti di tracciamento ricerca
 
 | Nome costante | Descrizione     |
 |---|---|
-| `MediaHeartbeat.Event.SeekStart` | Costante per il tracciamento dell'evento Seek Start. |
-| `MediaHeartbeat.Event.SeekComplete` | Costante per il tracciamento dell'evento Seek Complete. |
+| `MediaHeartbeat.Event.SeekStart` | Costante per il tracciamento dell’evento Seek Start . |
+| `MediaHeartbeat.Event.SeekComplete` | Costante per il tracciamento dell’evento Seek Complete . |
 
-## Implementa ricerca
+## Implementare la ricerca
 
-1. Ascoltare gli eventi di ricerca della riproduzione dal lettore multimediale e, durante la ricerca, avviare la notifica dell’evento, tenere traccia della ricerca mediante l’ `SeekStart` evento:
+1. Ascoltare gli eventi di ricerca della riproduzione dal lettore multimediale e, alla ricerca della notifica dell&#39;evento di avvio, tenere traccia della ricerca utilizzando l&#39;evento `SeekStart`:
 
    ```java
    public void onSeekStart(Observable observable, Object data) {  
@@ -31,7 +35,7 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    }
    ```
 
-1. Alla ricerca della notifica completa dal lettore multimediale, tenete traccia della fine della ricerca mediante l’ `SeekComplete` evento:
+1. Al momento della ricerca della notifica completa dal lettore multimediale, tieni traccia della fine della ricerca utilizzando l&#39;evento `SeekComplete` :
 
    ```java
    public void onSeekComplete(Observable observable, Object data) {  
@@ -39,4 +43,4 @@ source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
    }
    ```
 
-Per ulteriori informazioni, vedi la riproduzione [VOD dello scenario di tracciamento con la ricerca nel contenuto](/help/sdk-implement/tracking-scenarios/vod-seeking.md) principale.
+Per ulteriori informazioni, consulta lo scenario di tracciamento [Riproduzione VOD con ricerca nel contenuto principale](/help/sdk-implement/tracking-scenarios/vod-seeking.md) .
