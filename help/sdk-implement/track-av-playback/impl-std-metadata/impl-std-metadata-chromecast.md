@@ -1,16 +1,20 @@
 ---
-title: Implementazione di metadati standard su Chromecast
-description: Descrive l’impostazione di video e metadati di annunci standard su Chromecast.
+title: Scopri come implementare i metadati standard in Chromecast
+description: Scopri come impostare i metadati standard di video e annunci in Chromecast.
 uuid: 1560d3e0-29f5-4678-9f01-c672e0ae547b
-translation-type: tm+mt
-source-git-commit: 7da115fae0a05548173e8ca3ec68fae250128775
+exl-id: 052ede4b-ea8a-4ca6-bf02-0aab22a8bcda
+feature: Media Analytics
+role: Business Practitioner, Administrator, Data Engineer
+source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+workflow-type: tm+mt
+source-wordcount: '61'
+ht-degree: 14%
 
 ---
 
+# Implementazione dei metadati standard in Chromecast{#implement-standard-metadata-on-chromecast}
 
-# Implementazione di metadati standard su Chromecast{#implement-standard-metadata-on-chromecast}
-
-Creare un'istanza di un oggetto metdata standard, compilare le variabili desiderate e impostare l'oggetto metadati sull'oggetto Media Heartbeat. Ad esempio:
+Creare un&#39;istanza di un oggetto metdata standard, compilare le variabili desiderate e impostare l&#39;oggetto metadati sull&#39;oggetto Media Heartbeat. Ad esempio:
 
 ```js
 var standardVideoMetadata = {}; 
@@ -28,4 +32,4 @@ standardAudioMetadata[AudioMetadataKeys.ALBUM] = "Sample album";
 mediaObject[ADBMobile.media.MediaObjectKey.StandardAudioMetadata] = standardAudioMetadata;
 ```
 
-L'elenco completo dei metadati audio e video è disponibile qui: Parametri [audio e video.](/help/metrics-and-metadata/audio-video-parameters.md)
+Vedi l&#39;elenco completo dei metadati audio e video qui: [Parametri audio e video.](/help/metrics-and-metadata/audio-video-parameters.md)
