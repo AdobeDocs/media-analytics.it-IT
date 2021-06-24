@@ -1,12 +1,11 @@
 ---
+product: adobe analytics
 audience: end-user
 user-guide-title: Adobe Analytics per contenuti in streaming
 breadcrumb-title: Guida all'analisi dei supporti multimediali
 user-guide-description: Implementare Adobe Analytics per contenuti multimediali in streaming. Gli argomenti trattati comprendono Media SDK e Media Collection API.
-product: adobe analytics
 sub-product: media analytics
-translation-type: tm+mt
-source-git-commit: 82923f4ad4d6fd2394fe83850edca3ffd6a913ea
+source-git-commit: 230488398dc145798e4b12ddb94cd73f4f790f28
 workflow-type: tm+mt
 source-wordcount: '829'
 ht-degree: 97%
@@ -16,7 +15,7 @@ ht-degree: 97%
 
 # Adobe Analytics per contenuti in streaming {#using}
 
-+ [Misurazione dello streaming multimediale in  Adobe Analytics](media-overview.md)
++ [Misurazione dei file multimediali in streaming in Adobe Analytics](media-overview.md)
 + [Dispositivi e piattaforme supportati](measurement-options/supported-devices.md)
 + Introduzione a Streaming Media Analytics {#intro-to-ava}
    + [Prerequisiti](intro-to-ava/prereqs.md)
@@ -45,9 +44,9 @@ ht-degree: 97%
          + [Configurazione JavaScript 3.x](sdk-implement/setup/setup-javascript/set-up-js-3.md)
       + [Configurazione Chromecast](sdk-implement/setup/set-up-chromecast.md)
       + [Configurazione Roku](sdk-implement/setup/set-up-roku.md)
-   + Track Streaming Media Playback {#track-av-playback}
+   + Tracciamento riproduzione contenuti multimediali in streaming {#track-av-playback}
       + [Panoramica](sdk-implement/track-av-playback/track-core-overview.md)
-      + Tenere traccia della riproduzione dei contenuti multimediali in streaming {#track-core}
+      + Tracciamento riproduzione core streaming multimediale {#track-core}
          + [Tracciamento riproduzione core su Android](sdk-implement/track-av-playback/track-core/track-core-android.md)
          + [Tracciamento riproduzione core su iOS](sdk-implement/track-av-playback/track-core/track-core-ios.md)
          + Tracciamento riproduzione core in JavaScript {#track-core-javascript}
@@ -199,7 +198,7 @@ ht-degree: 97%
    + [Guida di riferimento dettagliata](media-analytics-cookbook/media-analytics-cookbook.md)
    + [Attribuzione flusso multimediale](media-analytics-cookbook/media-dimensions.md)
 + Metriche e metadati {#metrics-and-metadata}
-   + [Parametri per lo streaming dei file multimediali](metrics-and-metadata/audio-video-parameters.md)
+   + [Parametri contenuti in streaming](metrics-and-metadata/audio-video-parameters.md)
    + [Parametri annuncio](metrics-and-metadata/ad-parameters.md)
    + [Parametri capitolo](metrics-and-metadata/chapter-parameters.md)
    + [Parametri stato del lettore](metrics-and-metadata/player-state-parameters.md)
@@ -215,7 +214,7 @@ ht-degree: 97%
       + [Report del dayparting dei contenuti multimediali](media-reports/media-default-reports/media-reports-daypart.md)
       + [Report dei visualizzatori simultanei di contenuti multimediali](media-reports/media-default-reports/media-concurrent-viewers.md)
    + Pannelli di Media Workspace {#media-workspace-panels}
-      + [Pannello dei visualizzatori simultanei di contenuti multimediali](media-reports/media-workspace-panels/media-concurrent-viewers.md)
+      + [Pannello Visualizzatori simultanei di contenuti multimediali](media-reports/media-workspace-panels/media-concurrent-viewers.md)
    + [Modelli di Media Workspace](media-reports/media-workspace-templates.md)
    + [Ottenere i dati dei visualizzatori simultanei tramite API](media-reports/media-default-reports/get-concurrent-json20.md)
 + [Tracciamento contenuto scaricato](media-collection-api/track-downloaded-content.md)
