@@ -5,9 +5,9 @@ uuid: e92e99f4-c395-48aa-8a30-cbdd2f5fc07c
 exl-id: f6a00ffd-da6a-4d62-92df-15d119cfc426
 feature: Media Analytics
 role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+source-git-commit: a6872703529159ded6f747b6429a9b94b4202abe
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '547'
 ht-degree: 3%
 
 ---
@@ -59,17 +59,17 @@ Non ci sarà una chiamata completa in questo scenario, perché il flusso live no
 
 ## Impostazioni dei valori della testina di riproduzione
 
-Per i flussi LIVE, è necessario impostare l&#39;indicatore di riproduzione su un offset dal momento in cui è iniziata la programmazione, in modo che nel reporting, gli analisti possano determinare a quale punto gli utenti si uniscono e lasciano il flusso LIVE entro una visualizzazione di 24 ore.
+Per i flussi LIVE, è necessario impostare il valore del playhead come numero di secondi dalla mezzanotte UTC di quel giorno, in modo che nel reporting, gli analisti possano determinare a quale punto gli utenti si uniscono e lasciano il flusso LIVE entro una visualizzazione di 24 ore.
 
 ### All&#39;inizio
 
-Per i supporti LIVE, quando un utente inizia a riprodurre il flusso, è necessario impostare `l:event:playhead` sull&#39;offset corrente, in secondi. Questo è diverso da VOD, dove si imposta il playhead su &quot;0&quot;.
+Per i file multimediali LIVE, quando un utente inizia a riprodurre il flusso, è necessario impostare `l:event:playhead` sul numero di secondi trascorsi dalla mezzanotte UTC di quel giorno. Questo è diverso da VOD, dove si imposta il playhead su &quot;0&quot;.
 
-Ad esempio, supponiamo che un evento di streaming LIVE inizi a mezzanotte e venga eseguito per 24 ore (`a.media.length=86400`; `l:asset:length=86400`). Quindi, supponiamo che un utente inizi a riprodurre lo streaming LIVE alle 12:00. In questo scenario, è necessario impostare `l:event:playhead` su 43200 (12 ore nel flusso).
+Ad esempio, supponiamo che un evento di streaming LIVE inizi a mezzanotte e venga eseguito per 24 ore (`a.media.length=86400`; `l:asset:length=86400`). Quindi, supponiamo che un utente inizi a riprodurre lo streaming LIVE alle 12:00. In questo scenario, imposta `l:event:playhead` su 43200 (12 ore dalla mezzanotte UTC di quel giorno in secondi).
 
 ### In pausa
 
-Quando un utente mette in pausa la riproduzione, deve essere applicata la stessa logica di &quot;playhead&quot; applicata all&#39;inizio della riproduzione. Quando l&#39;utente torna a riprodurre il flusso LIVE, è necessario impostare il valore `l:event:playhead` sulla nuova posizione della testina di riproduzione offset, _not_ al punto in cui l&#39;utente ha messo in pausa il flusso LIVE.
+Quando un utente mette in pausa la riproduzione, deve essere applicata la stessa logica di &quot;playhead&quot; applicata all&#39;inizio della riproduzione. Quando l&#39;utente torna a riprodurre il flusso LIVE, è necessario impostare il valore `l:event:playhead` in base al nuovo numero di secondi dalla mezzanotte UTC, _not_ al punto in cui l&#39;utente ha messo in pausa il flusso LIVE.
 
 ## Codice di esempio {#sample-code}
 
