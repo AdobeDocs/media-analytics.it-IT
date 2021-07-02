@@ -5,9 +5,9 @@ uuid: 06fefedb-b0c8-4f7d-90c8-e374cdde1695
 exl-id: a175332e-0bdc-44aa-82cb-b3f879e7abfc
 feature: Media Analytics
 role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+source-git-commit: a6872703529159ded6f747b6429a9b94b4202abe
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '742'
 ht-degree: 14%
 
 ---
@@ -59,7 +59,7 @@ Completa i seguenti passaggi di implementazione:
    |  Nome metodo  |  Descrizione  | Obbligatorio |
    | --- | --- | :---: |
    | `getQoSObject()` | Restituisce l&#39;istanza `MediaObject` che contiene le informazioni QoS correnti. Questo metodo verrà chiamato più volte durante una sessione di riproduzione. L&#39;implementazione del lettore deve restituire sempre i dati QoS disponibili più di recente. | Sì |
-   | `getCurrentPlaybackTime()` | Restituisce la posizione corrente dell&#39;indicatore di riproduzione. Per il tracciamento VOD, il valore è specificato in secondi dall&#39;inizio dell&#39;elemento multimediale. Per il tracciamento LINEAR/LIVE, il valore è specificato in secondi dall&#39;inizio del programma. | Sì |
+   | `getCurrentPlaybackTime()` | Restituisce la posizione corrente dell&#39;indicatore di riproduzione. Per il tracciamento VOD, il valore è specificato in secondi dall&#39;inizio dell&#39;elemento multimediale. Per il tracciamento LINEAR/LIVE, il valore è specificato come il numero di secondi trascorsi dalla mezzanotte UTC di quel giorno. | Sì |
 
    >[!TIP]
    >
