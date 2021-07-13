@@ -4,8 +4,8 @@ description: Scopri come implementare il tracciamento di base utilizzando Media 
 uuid: bdc0e05c-4fe5-430e-aee2-f331bc59ac6b
 exl-id: 5c6b36b3-a421-45a4-a65e-4eb57513ca4a
 feature: Media Analytics
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '713'
 ht-degree: 2%
