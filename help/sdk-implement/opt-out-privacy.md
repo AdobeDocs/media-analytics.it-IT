@@ -4,11 +4,11 @@ description: '"Scopri come gestire l’opt-in, la rinuncia e la privacy."'
 uuid: 7e60c7bd-8dba-4c7a-9c3c-0c634b815397
 exl-id: 64f5ef2b-7850-43d8-8f32-3d008ea4f156
 feature: Media Analytics
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '360'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 10%
 Puoi controllare se l’attività di tracciamento è consentita su un dispositivo specifico:
 
 * **App mobili:** la libreria VA rispetta le impostazioni di privacy e rinuncia della  `AdobeMobile` libreria. Per rinunciare al tracciamento, devi utilizzare la libreria `AdobeMobile` . Per ulteriori informazioni sulle impostazioni di privacy e rinuncia della libreria `AdobeMobile`, consulta [Impostazioni di rinuncia e privacy](https://experienceleague.adobe.com/docs/mobile-services/android/gdpr-privacy-android/privacy.html).
-* **App JavaScript/browser:** la libreria VA rispetta le impostazioni di  `VisitorAPI` privacy e rinuncia. Per evitare il tracciamento, devi rinunciare al servizio API visitatore. Per ulteriori informazioni su privacy e rinuncia, consulta [Servizio Adobe Experience Platform Identity.](https://experienceleague.adobe.com/docs/id-service/using/home.html).
+* **App JavaScript/browser:** la libreria VA rispetta le impostazioni di  `VisitorAPI` privacy e rinuncia. Per evitare il tracciamento, devi rinunciare al servizio API visitatore. Per ulteriori informazioni su privacy e rinuncia, consulta [Servizio Adobe Experience Platform Identity.](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=it).
 * **App OTT (Chromecast, Roku):** gli SDK OTT forniscono API che supportano i requisiti del Regolamento generale sulla protezione dei dati (RGPD) e che consentono di impostare i flag di  `opt` stato per la raccolta e la trasmissione dei dati e di recuperare le identità memorizzate localmente.
 
    >[!NOTE]
