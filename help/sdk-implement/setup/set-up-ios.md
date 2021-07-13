@@ -4,11 +4,11 @@ description: Segui questi passaggi per configurare l’applicazione Media SDK su
 uuid: a1c6be79-a6dc-47b6-93b3-ac7b42f1f3eb
 exl-id: fe7662b5-1700-4bd6-b542-66aa8493459d
 feature: Media Analytics
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '731'
-ht-degree: 14%
+ht-degree: 15%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 14%
 * **Ottenere parametri di configurazione validi per Media**
 SDKTquesti parametri possono essere ottenuti da un rappresentante di Adobe dopo aver configurato il tuo account di analisi.
 * **Implementa ADBMobile per iOS nell’**
-applicazione. Per ulteriori informazioni sull’SDK di Adobe Mobile, consulta SDK 4.x per  [iOS per le soluzioni Experience Cloud.](https://experienceleague.adobe.com/docs/mobile-services/ios/overview.html)
+applicazione. Per ulteriori informazioni sull’SDK di Adobe Mobile, consulta SDK 4.x per  [iOS per le soluzioni Experience Cloud.](https://experienceleague.adobe.com/docs/mobile-services/ios/overview.html?lang=it)
 
    >[!IMPORTANT]
    >
