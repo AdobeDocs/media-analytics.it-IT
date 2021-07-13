@@ -3,8 +3,8 @@ title: Quali percorsi di implementazione di Streaming Media sono disponibili?
 description: Scopri Adobe dei percorsi di implementazione di Streaming Media, incluso Adobe Launch.
 exl-id: eee70e62-ba45-440a-8ce1-e151b66d2c1f
 feature: Media Analytics
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 10%
