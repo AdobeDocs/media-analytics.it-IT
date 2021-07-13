@@ -4,11 +4,11 @@ description: Segui questi passaggi per configurare l’applicazione Media SDK su
 uuid: 3ffe3276-a104-4182-9220-038729e9f3d5
 exl-id: 261445bf-3c8b-4658-891d-9a878e0b26ea
 feature: Media Analytics
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '412'
-ht-degree: 7%
+ht-degree: 9%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 7%
 * **Ottenere parametri di configurazione validi per Media**
 SDKTquesti parametri possono essere ottenuti da un rappresentante di Adobe dopo aver configurato il tuo account di analisi.
 * **Implementa ADBMobile per Android nell’**
-applicazione. Per ulteriori informazioni sull’SDK di Adobe Mobile, consulta SDK 4.x per  [Android per le soluzioni Experience Cloud.](https://experienceleague.adobe.com/docs/mobile-services/android/overview.html)
+applicazione. Per ulteriori informazioni sull’SDK di Adobe Mobile, consulta SDK 4.x per  [Android per le soluzioni Experience Cloud.](https://experienceleague.adobe.com/docs/mobile-services/android/overview.html?lang=it)
 
 * **Fornisci le seguenti funzionalità nel lettore multimediale:**
    * *Un’API per abbonarti agli eventi*  del lettore: l’SDK per contenuti multimediali richiede di chiamare un set di API semplici quando si verificano eventi nel lettore.
