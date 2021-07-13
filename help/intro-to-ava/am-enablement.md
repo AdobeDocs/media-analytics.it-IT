@@ -3,8 +3,8 @@ title: Cos’è l’abilitazione di Adobe Audience Manager?
 description: Scopri come collegare le azioni dell’applicazione ai dati di tracciamento dei contenuti multimediali senza la necessità di ulteriori regole di elaborazione e variabili personalizzate.
 exl-id: c0d73bc2-4713-498a-8882-ff66c7f3dd50
 feature: Media Analytics
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 21%
