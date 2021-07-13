@@ -3,8 +3,8 @@ title: Generazione di rapporti per visualizzatori simultanei di contenuti multim
 description: '"Scopri come utilizzare il pannello Visualizzatori simultanei di contenuti multimediali per analizzare i visualizzatori simultanei e comprendere la concorrenza dei picchi e i rilasci."'
 exl-id: 2eadd5e7-45de-4275-aac5-d16e2a6a9fed
 feature: '"Media Analytics, nozioni di base su Workspace"'
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 19%
