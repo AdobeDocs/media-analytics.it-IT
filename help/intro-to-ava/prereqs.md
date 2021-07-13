@@ -4,11 +4,11 @@ description: Guida introduttiva ad Adobe Analytics Streaming Media. Scopri cosa 
 uuid: 4c0b37f3-8615-4cc0-b9c9-eeb029067064
 exl-id: 85ab1dbd-f4a7-4f11-afc9-8d5000e2de70
 feature: '"Media Analytics, Requisiti di sistema"'
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '414'
-ht-degree: 18%
+ht-degree: 19%
 
 ---
 
@@ -44,7 +44,7 @@ Per un&#39;implementazione di *Media Analytics* , esegui le seguenti attività p
 
    Se non hai implementato il servizio ID, ti consigliamo di considerare fin d&#39;ora una strategia di migrazione. Per ulteriori informazioni sull’importanza e il ruolo del servizio ID, consulta [Perché il servizio Identity dovrebbe trovarsi nel tuo radar.](https://theblog.adobe.com/why-new-adobe-marketing-cloud-id-service-should-be-on-your-radar/)
 
-   Per ulteriori informazioni sull’ID Experience Cloud, consulta [Panoramica ID Experience Cloud,](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) e [Servizio Adobe Experience Platform Identity](https://experienceleague.adobe.com/docs/id-service/using/home.html).
+   Per ulteriori informazioni sull’ID Experience Cloud, consulta [Panoramica ID Experience Cloud,](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) e [Servizio Adobe Experience Platform Identity](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=it).
 
 1. **Abilitare i rapporti di Adobe Analytics.**
 
