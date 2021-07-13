@@ -4,8 +4,8 @@ description: Scopri come ottenere i dati dei rapporti dei visualizzatori simulta
 uuid: 9168f114-2459-4951-a06c-57b735d09dc0
 exl-id: f84f63d3-b0d0-45fe-95a7-159f22d60660
 feature: '"Informazioni di base su Media Analytics, Reports & Analytics"'
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 5%
