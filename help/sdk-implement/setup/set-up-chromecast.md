@@ -4,11 +4,11 @@ description: Segui questi passaggi per configurare l’applicazione Media SDK su
 uuid: d664e394-02a2-4985-bbad-be1bcc44fb2b
 exl-id: 5dfe3407-2858-48c0-a70c-8ea87967ac47
 feature: Media Analytics
-role: Business Practitioner, Administrator, Data Engineer
-source-git-commit: c96532bb032a4c9aaf9eed28d97fbd33ceb1516f
+role: User, Admin, Data Engineer
+source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
 workflow-type: tm+mt
 source-wordcount: '639'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -30,7 +30,7 @@ HeartbeatQuesti parametri possono essere ottenuti da un rappresentante di Adobe 
    * *Un’API per abbonarti agli eventi*  del lettore: l’SDK per contenuti multimediali richiede di chiamare un set di API semplici quando si verificano eventi nel lettore.
    * *API che fornisce informazioni*  sul lettore. Queste informazioni includono dettagli quali il nome del contenuto multimediale e la posizione della testina di riproduzione.
 
-Adobe Mobile Services fornisce una nuova interfaccia utente che riunisce le capacità mobile marketing per applicazioni mobile da Adobe Marketing Cloud. Inizialmente, Mobile Services fornisce un’integrazione perfetta delle funzionalità di analisi e targeting delle app per le soluzioni Adobe Analytics e Adobe Target. Per ulteriori informazioni, consulta la [documentazione Adobe Mobile Services .](https://experienceleague.adobe.com/docs/mobile-services/using/home.html)
+Adobe Mobile Services fornisce una nuova interfaccia utente che riunisce le capacità mobile marketing per applicazioni mobile da Adobe Marketing Cloud. Inizialmente, Mobile Services fornisce un’integrazione perfetta delle funzionalità di analisi e targeting delle app per le soluzioni Adobe Analytics e Adobe Target. Per ulteriori informazioni, consulta la [documentazione Adobe Mobile Services .](https://experienceleague.adobe.com/docs/mobile-services/using/home.html?lang=it)
 
 L’SDK 2.x per Chromecast per le soluzioni Experience Cloud consente di misurare le applicazioni Chromecast scritte in JavaScript, sfruttare e raccogliere i dati sul pubblico tramite Gestione dell’audience e misurare l’interazione video attraverso gli heartbeat video.
 
