@@ -5,24 +5,26 @@ uuid: 7d0c77e5-924c-4619-8e29-3484748ab736
 exl-id: 6c4f693d-45c0-4a9c-bda1-c8721afe31f5
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
-source-wordcount: '93'
+source-wordcount: '92'
 ht-degree: 2%
 
 ---
 
 # Tracciamento errori su Android{#track-errors-on-android}
 
+Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione tramite SDK 2.x.
+
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione in tutti gli SDK 2.x. Se implementi una versione 1.x dell&#39;SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
+>Se implementi una versione 1.x dell&#39;SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
 1. Tracciare gli errori del lettore multimediale:
 
    ```java
    public void onPlayerError(Observable observable, Object data) {  
-       _heartbeat.trackError("mediaErrorID"); 
+       _heartbeat.trackError("mediaErrorID");
    }
    ```
 
