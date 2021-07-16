@@ -5,9 +5,9 @@ uuid: 0d9fa764-edef-4178-8650-90c9a0852a57
 exl-id: aac178dc-5a46-4ce3-80e9-ec82cbfbfff5
 feature: '"Media Analytics, variabili"'
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
-source-wordcount: '2976'
+source-wordcount: '2997'
 ht-degree: 2%
 
 ---
@@ -50,11 +50,11 @@ Descrizione dei dati della tabella:
 | <ul> <li> **Chiave SDK:**<br/> </li> <li> **Chiave API:**<br/> media.qoe.timeToStart </li> <li> **Obbligatorio:**<br/> No </li> <li> **Tipo:**<br/> numero </li> <li> **Inviato con:**<br/> Media Start, Media Close </li> <li> **Min Versione SDK:** Qualsiasi </li> <li> **Valore di esempio:**<br/> 30.000 </li><li> **Descrizione:**<br/> questo valore viene impostato per impostazione predefinita su zero se non lo si imposta tramite l’oggetto QoSO. Questo valore viene impostato in millisecondi. Il valore verrà visualizzato nel formato ora (HH:MM:SS) in Analysis Workspace e Reports &amp; Analytics. In Feed dati, Data Warehouse e API di reporting i valori verranno visualizzati in secondi.  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/>  (a.media.qoe)<br/>timeToStart) </li> <li> **Heartbeat:**<br/>  (:stream:lstartup_time) </li> </ul> | <ul> <li> **Disponibile:**<br/> Sì </li> <li> **Variabile riservata:**<br/> eVar </li> <li> **Scadenza:**<br/> su HIT </li> <li> **Nome rapporto:**<br/> ora di inizio </li> <li> **Dati contestuali:**<br/>  (a.media.qoe)<br/>timeToStart) </li> <li> **Feed di dati:**<br/> videoqoetimetostartevar </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.qoe.<br/>timeToStart) </li> </ul> |
 
 
-### FPS
+### Frame al secondo
 
 |   Implementazione   | Parametri di rete | Generazione di rapporti |
 | --- | --- | --- |
-| <ul> <li> **Chiave SDK:**<br/> </li> <li> **Chiave API:**<br/> media.qoe.framePerSecond </li> <li> **Obbligatorio:**<br/> No </li> <li> **Tipo:**<br/> numero </li> <li> **Inviato con:**<br/> Media Start, Media Close </li> <li> **Min Versione SDK:** Qualsiasi </li> <li> **Valore di esempio:**<br/> 24 </li><li> **Descrizione:**<br/> il valore corrente del frame rate del flusso (in fotogrammi al secondo).  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> </li> <li> **Heartbeat:**<br/>  (:stream:lfps) </li> </ul> | <ul> <li> **Disponibile:**<br/> No </li> <li> **Variabile riservata:**<br/> N/D </li> <li> **Nome rapporto:**<br/> N/D </li> <li> **Dati contestuali:**<br/> </li> <li> **Feed di dati:**<br/> N/D </li> <li> **Audience Manager:**<br/> </li> </ul> |
+| <ul> <li> **Chiave SDK:**<br/> </li> <li> **Chiave API:**<br/> media.qoe.framePerSecond </li> <li> **Obbligatorio:**<br/> No </li> <li> **Tipo:**<br/> numero </li> <li> **Inviato con:**<br/> Media Start, Media Close </li> <li> **Min Versione SDK:** Qualsiasi </li> <li> **Valore di esempio:**<br/> 24 </li><li> **Descrizione:**<br/> il valore corrente del frame rate del flusso (in fotogrammi al secondo). Il campo è mappato al campo fps nella chiamata di chiusura e accessibile tramite regole di elaborazione.  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> </li> <li> **Heartbeat:**<br/>  (:stream:lfps) </li> </ul> | <ul> <li> **Disponibile:**<br/> No </li> <li> **Variabile riservata:**<br/> N/D </li> <li> **Nome rapporto:**<br/> N/D </li> <li> **Dati contestuali:**<br/> </li> <li> **Feed di dati:**<br/> N/D </li> <li> **Audience Manager:**<br/> </li> </ul> |
 
 
 
