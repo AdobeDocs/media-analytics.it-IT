@@ -5,7 +5,7 @@ uuid: 4a4249fb-dc39-4947-a14d-a51d972f32d4
 exl-id: 1f96dde9-c924-4fce-8b14-7dec7137f265
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 6%
@@ -14,9 +14,11 @@ ht-degree: 6%
 
 # Tracciamento annunci su Android{#track-ads-on-android}
 
+Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione tramite gli SDK 2.x.
+
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione tramite gli SDK 2.x. Se implementi una versione 1.x dell&#39;SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
+>Se implementi una versione 1.x dell&#39;SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
 ## Costanti di tracciamento degli annunci
 
@@ -55,7 +57,7 @@ ht-degree: 6%
    public void onAdBreakStart(Observable observable, Object data) {  
        _heartbeat.trackEvent(MediaHeartbeat.Event.AdBreakStart,  
                              adBreakInfo,  
-                             null); 
+                             null);
    }
    ```
 
@@ -74,7 +76,7 @@ ht-degree: 6%
 
    ```java
    MediaObject adInfo =  
-     MediaHeartbeat.createAdObject(<AD_NAME> 
+     MediaHeartbeat.createAdObject(<AD_NAME>
                                    <AD_ID>,  
                                    <POSITION>,  
                                    <LENGTH>);
@@ -86,9 +88,9 @@ ht-degree: 6%
    * **Metadati di annunci personalizzati -** Per i metadati personalizzati, crea un oggetto variabile per le variabili di dati personalizzate e compila i dati per l&#39;annuncio corrente:
 
       ```java
-      // Setting Ad Metadata 
-      HashMap<String, String> adMetadata = new HashMap<String, String>(); 
-      adMetadata.put("affiliate", "Sample affiliate"); 
+      // Setting Ad Metadata
+      HashMap<String, String> adMetadata = new HashMap<String, String>();
+      adMetadata.put("affiliate", "Sample affiliate");
       adMetadata.put("campaign", "Sample ad campaign");
       ```
 
@@ -100,7 +102,7 @@ ht-degree: 6%
    public void onAdStart(Observable observable, Object data) {  
        _heartbeat.trackEvent(MediaHeartbeat.Event.AdStart,  
                              adInfo,  
-                             adMetadata); 
+                             adMetadata);
    }
    ```
 
@@ -108,7 +110,7 @@ ht-degree: 6%
 
    ```java
    public void onAdComplete(Observable observable, Object data) {  
-       _heartbeat.trackEvent(MediaHeartbeat.Event.AdComplete, null, null); 
+       _heartbeat.trackEvent(MediaHeartbeat.Event.AdComplete, null, null);
    }
    ```
 
@@ -116,7 +118,7 @@ ht-degree: 6%
 
    ```java
    public void onAdSkip(Observable observable, Object data) {  
-       _heartbeat.trackEvent(MediaHeartbeat.Event.AdSkip, null, null); 
+       _heartbeat.trackEvent(MediaHeartbeat.Event.AdSkip, null, null);
    }
    ```
 
@@ -125,7 +127,7 @@ ht-degree: 6%
 
    ```java
    public void onAdBreakComplete(Observable observable, Object data) {  
-       _heartbeat.trackEvent(MediaHeartbeat.Event.AdBreakComplete, null, null); 
+       _heartbeat.trackEvent(MediaHeartbeat.Event.AdBreakComplete, null, null);
    }
    ```
 
