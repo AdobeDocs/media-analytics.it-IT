@@ -5,7 +5,7 @@ uuid: b1567265-7043-4efa-a313-aaaa91c4bb01
 exl-id: aaed828d-1aba-486e-83e3-2ffd092305e2
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
 source-wordcount: '297'
 ht-degree: 5%
@@ -14,9 +14,11 @@ ht-degree: 5%
 
 # Tracciamento annunci su Roku{#track-ads-on-roku}
 
+Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione tramite gli SDK 2.x.
+
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione tramite gli SDK 2.x. Se implementi una versione 1.x dell&#39;SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
+>Se implementi una versione 1.x dell&#39;SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
 ## Costanti di tracciamento degli annunci
 
@@ -41,17 +43,17 @@ ht-degree: 5%
    | `startTime` | Valore della testina di riproduzione all&#39;inizio dell&#39;interruzione pubblicitaria. | Sì |
 
    ```
-   ‘ Create an adbreak info object 
-   adBreakInfo = adb_media_init_adbreakinfo() 
-   adBreakInfo.name = <ADBREAK_NAME> 
-   adBreakInfo.startTime = <START_TIME> 
+   ‘ Create an adbreak info object
+   adBreakInfo = adb_media_init_adbreakinfo()
+   adBreakInfo.name = <ADBREAK_NAME>
+   adBreakInfo.startTime = <START_TIME>
    adBreakInfo.position = <POSITION>
    ```
 
 1. Invoca `trackEvent()` con `AdBreakStart` nell&#39;istanza `MediaHeartbeat` per iniziare a tracciare l&#39;interruzione pubblicitaria:
 
    ```
-   contextData = {} 
+   contextData = {}
    ADBMobile().mediaTrackEvent(MEDIA_AD_BREAK_START, adBreakInfo, contextData)
    ```
 
@@ -62,7 +64,7 @@ ht-degree: 5%
      adb_media_init_adinfo(ad.title,  
                            ad.id,  
                            ad.position,  
-                           ad.duration) 
+                           ad.duration)
    ```
 
 1. Facoltativamente, allega metadati standard e/o di annunci alla sessione di tracciamento dei contenuti multimediali tramite variabili di dati di contesto.
@@ -71,8 +73,8 @@ ht-degree: 5%
    * **Metadati annuncio personalizzati:** per i metadati personalizzati, crea un oggetto variabile per le variabili di dati personalizzate e compila i dati per la risorsa annuncio corrente:
 
       ```
-      contextData = {} 
-      contextData["adinfo1"] = "adinfo2" 
+      contextData = {}
+      contextData["adinfo1"] = "adinfo2"
       contextData["adinfo2"] = "adinfo2"
       ```
 
@@ -85,15 +87,15 @@ ht-degree: 5%
 1. Quando la riproduzione della risorsa dell’annuncio raggiunge la fine dell’annuncio, invoca `trackEvent()` con l’evento `AdComplete` .
 
    ```
-   standardAdMetadata = {} 
-   contextData = {} 
+   standardAdMetadata = {}
+   contextData = {}
    ADBMobile().mediaTrackEvent(ADBMobile().MEDIA_AD_COMPLETE, adInfo, contextData)
    ```
 
 1. Se la riproduzione dell&#39;annuncio non è stata completata perché l&#39;utente ha scelto di saltare l&#39;annuncio, tieni traccia dell&#39;evento `AdSkip`:
 
    ```
-   contextData = {} 
+   contextData = {}
    ADBMobile().mediaTrackEvent(ADBMobile().MEDIA_AD_SKIP, adInfo, contextData
    ```
 
@@ -101,7 +103,7 @@ ht-degree: 5%
 1. Al termine dell’interruzione pubblicitaria, utilizza l’evento `AdBreakComplete` per tenere traccia di:
 
    ```
-   contextData = {} 
+   contextData = {}
    ADBMobile().mediaTrackEvent(MEDIA_AD_BREAK_COMPLETE, adBreakInfo, contextData)
    ```
 
