@@ -5,7 +5,7 @@ uuid: e979e679-cde5-4c30-8f34-867feceac13a
 exl-id: a352bca9-bcfc-4418-b2a2-c9b1ad226359
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 6%
@@ -14,9 +14,11 @@ ht-degree: 6%
 
 # Tracciare gli annunci su iOS{#track-ads-on-ios}
 
+Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione tramite gli SDK 2.x.
+
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione tramite gli SDK 2.x. Se implementi una versione 1.x dell&#39;SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
+>Se implementi una versione 1.x dell&#39;SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
 ## Costanti di tracciamento degli annunci
 
@@ -43,7 +45,7 @@ ht-degree: 6%
    Creazione dell’oggetto di interruzione annuncio:
 
    ```
-   id adBreakObject = [ADBMediaHeartbeat createAdBreakObjectWithName:[ADBREAK_NAME] 
+   id adBreakObject = [ADBMediaHeartbeat createAdBreakObjectWithName:[ADBREAK_NAME]
                                position:[POSITION]  
                                startTime:[START_TIME]];
    ```
@@ -51,10 +53,10 @@ ht-degree: 6%
 1. Invoca `trackEvent()` con `AdBreakStart` nell&#39;istanza `MediaHeartbeat` per iniziare a tracciare l&#39;interruzione pubblicitaria:
 
    ```
-   - (void)onAdBreakStart:(NSNotification *)notification { 
+   - (void)onAdBreakStart:(NSNotification *)notification {
        [_mediaHeartbeat trackEvent:ADBMediaHeartbeatEventAdBreakStart  
                         mediaObject:adBreakObject  
-                        data:nil]; 
+                        data:nil];
    }
    ```
 
@@ -72,9 +74,9 @@ ht-degree: 6%
    Creazione di oggetti annuncio:
 
    ```
-   id adObject = [ADBMediaHeartbeat createAdObjectWithName:[AD_NAME] 
-                                    adId:[AD_ID] 
-                                    position:[POSITION] 
+   id adObject = [ADBMediaHeartbeat createAdObjectWithName:[AD_NAME]
+                                    adId:[AD_ID]
+                                    position:[POSITION]
                                     length:[LENGTH]];
    ```
 
@@ -84,9 +86,9 @@ ht-degree: 6%
    * **Metadati di annunci personalizzati -** Per i metadati personalizzati, crea un oggetto variabile per le variabili di dati personalizzate e compila i dati per l&#39;annuncio corrente:
 
       ```
-      NSMutableDictionary *adDictionary = [[NSMutableDictionary alloc] init]; 
-      [adDictionary setObject:@"Sample affiliate" forKey:@"affiliate"]; 
-      [adDictionary setObject:@"Sample campaign" forKey:@"campaign"]; 
+      NSMutableDictionary *adDictionary = [[NSMutableDictionary alloc] init];
+      [adDictionary setObject:@"Sample affiliate" forKey:@"affiliate"];
+      [adDictionary setObject:@"Sample campaign" forKey:@"campaign"];
       [adDictionary setObject:@"Sample creative" forKey:@"creative"];
       ```
 
@@ -95,30 +97,30 @@ ht-degree: 6%
    Includi un riferimento alla variabile di metadati personalizzata (o a un oggetto vuoto) come terzo parametro nella chiamata dell&#39;evento:
 
    ```
-   - (void)onAdStart:(NSNotification *)notification { 
+   - (void)onAdStart:(NSNotification *)notification {
        [_mediaHeartbeat trackEvent:ADBMediaHeartbeatEventAdStart  
                         mediaObject:adObject  
-                        data:adDictionary]; 
+                        data:adDictionary];
    }
    ```
 
 1. Quando la riproduzione dell’annuncio raggiunge la fine dell’annuncio, invoca `trackEvent()` con l’evento `AdComplete` .
 
    ```
-   - (void)onAdComplete:(NSNotification *)notification { 
+   - (void)onAdComplete:(NSNotification *)notification {
        [_mediaHeartbeat trackEvent:ADBMediaHeartbeatEventAdComplete  
                         mediaObject:nil  
-                        data:nil]; 
+                        data:nil];
    }
    ```
 
 1. Se la riproduzione dell&#39;annuncio non è stata completata perché l&#39;utente ha scelto di saltare l&#39;annuncio, tieni traccia dell&#39;evento `AdSkip` .
 
    ```
-   - (void)onAdSkip:(NSNotification *)notification { 
+   - (void)onAdSkip:(NSNotification *)notification {
        [_mediaHeartbeat trackEvent:ADBMediaHeartbeatEventAdSkip  
                         mediaObject:nil  
-                        data:nil]; 
+                        data:nil];
    }
    ```
 
@@ -126,10 +128,10 @@ ht-degree: 6%
 1. Al termine dell’interruzione pubblicitaria, utilizza l’evento `AdBreakComplete` per tenere traccia di:
 
    ```
-   - (void)onAdBreakComplete:(NSNotification *)notification { 
+   - (void)onAdBreakComplete:(NSNotification *)notification {
        [_mediaHeartbeat trackEvent:ADBMediaHeartbeatEventAdBreakComplete  
                         mediaObject:nil  
-                        data:nil]; 
+                        data:nil];
    }
    ```
 
