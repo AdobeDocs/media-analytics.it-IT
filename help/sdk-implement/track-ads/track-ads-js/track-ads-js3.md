@@ -4,7 +4,7 @@ description: Implementa il tracciamento degli annunci nelle applicazioni browser
 exl-id: 6b34b2c0-5e50-471a-b52c-b9c760fa3169
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 5%
@@ -13,9 +13,11 @@ ht-degree: 5%
 
 # Tracciare gli annunci utilizzando JavaScript 3.x{#track-ads-on-javascript}
 
+Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione tramite gli SDK 3.x.
+
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione tramite gli SDK 3.x. Se implementi una versione precedente dell’SDK, puoi scaricare le Guide per sviluppatori qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
+>Se implementi una versione precedente dell’SDK, puoi scaricare le Guide per sviluppatori qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
 ## Costanti di tracciamento degli annunci
 
