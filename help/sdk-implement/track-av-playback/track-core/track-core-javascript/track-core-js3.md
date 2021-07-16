@@ -4,7 +4,7 @@ description: Scopri come implementare il tracciamento di base utilizzando Media 
 exl-id: f3145450-82ba-4790-91a4-9d2cc97bbaa5
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 2%
@@ -13,8 +13,10 @@ ht-degree: 2%
 
 # Tracciamento riproduzione core con JavaScript 3.x{#track-core-playback-on-javascript}
 
+Questa documentazione tratta il tracciamento nella versione 3.x dell&#39;SDK.
+
 >[!IMPORTANT]
->Questa documentazione tratta il tracciamento nella versione 3.x dell&#39;SDK. Se implementi una versione precedente dell’SDK, puoi scaricare le Guide per sviluppatori qui: [Scaricare gli SDK](/help/sdk-implement/download-sdks.md)
+> Se implementi una versione precedente dell’SDK, puoi scaricare le Guide per sviluppatori qui: [Scaricare gli SDK](/help/sdk-implement/download-sdks.md)
 
 1. **Configurazione del tracciamento iniziale**
 
