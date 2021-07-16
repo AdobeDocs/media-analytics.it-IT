@@ -5,7 +5,7 @@ uuid: a8aa7b3c-2d39-44d7-8ebc-b101d130101f
 exl-id: 5272c0ce-4e3d-48c6-bfa6-94066ccbf9ac
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
 source-wordcount: '684'
 ht-degree: 3%
@@ -14,8 +14,10 @@ ht-degree: 3%
 
 # Tracciamento riproduzione core su Roku{#track-core-playback-on-roku}
 
+Questa documentazione tratta il tracciamento nella versione 2.x dell&#39;SDK.
+
 >[!IMPORTANT]
->Questa documentazione tratta il tracciamento nella versione 2.x dell&#39;SDK. Se implementi una versione 1.x dell&#39;SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK](/help/sdk-implement/download-sdks.md)
+>Se implementi una versione 1.x dell&#39;SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK](/help/sdk-implement/download-sdks.md)
 
 1. **Configurazione del tracciamento iniziale**
 
@@ -101,7 +103,7 @@ ht-degree: 3%
 
    * **Metadati standard**
 
-      [Implementazione dei metadati standard su Roku](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
+[Implementazione dei metadati standard su Roku](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
 
       >[!NOTE]
       >Il collegamento dell&#39;oggetto metadati video standard all&#39;oggetto multimediale è facoltativo.
