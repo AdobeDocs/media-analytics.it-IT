@@ -5,7 +5,7 @@ uuid: d0cdc8cd-4db0-45ef-9470-1cba3996305b
 exl-id: 04b9b888-2727-4aa6-a934-94a02c85a490
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 5%
@@ -14,9 +14,11 @@ ht-degree: 5%
 
 # Tracciamento qualità dell’esperienza in Chromecast{#track-quality-of-experience-on-chromecast}
 
+Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione in tutti gli SDK 2.x.
+
 >[!IMPORTANT]
 >
->Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione in tutti gli SDK 2.x. Se implementi una versione 1.x dell&#39;SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
+>Se implementi una versione 1.x dell&#39;SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
 ## Panoramica {#overview}
 
@@ -53,13 +55,13 @@ Chiamata `trackError(“media error id”);`
    **Creazione oggetto QoS:** [createQoSObject](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.createQoSObject)
 
    ```
-   qosInfo = ADBMobile.media.createQoSObject(50000, 0, 24, 10); 
+   qosInfo = ADBMobile.media.createQoSObject(50000, 0, 24, 10);
    ```
 
 1. Quando la riproduzione commuta i bit rate, chiama l&#39;evento `BitrateChange` nell&#39;istanza Media Heartbeat: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
 
    ```
-   ADBMobile.media.trackEvent(ADBMobile.media.Event.BitrateChange); 
+   ADBMobile.media.trackEvent(ADBMobile.media.Event.BitrateChange);
    ```
 
    >[!IMPORTANT]
