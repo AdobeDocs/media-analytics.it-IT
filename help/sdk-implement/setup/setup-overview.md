@@ -5,7 +5,7 @@ uuid: 06fefedb-b0c8-4f7d-90c8-e374cdde1695
 exl-id: a175332e-0bdc-44aa-82cb-b3f879e7abfc
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 14%
@@ -14,11 +14,12 @@ ht-degree: 14%
 
 # Panoramica dell’installazione{#setup-overview}
 
+Le seguenti istruzioni sono valide per gli SDK di Media 2.x. Se stai implementando una versione 1.x dell’SDK Media, consulta la [1.x Media SDK Documentation.](/help/sdk-implement/download-sdks.md) Per gli integratori Primetime, consulta  _la_ documentazione Media SDK di Primetime di seguito.
+
 >[!IMPORTANT]
 >
 >Con la fine del supporto per gli SDK per dispositivi mobili versione 4, il 31 agosto 2021, Adobe terminerà anche il supporto per gli SDK Media Analytics per iOS e Android.  Per ulteriori informazioni, consulta [Domande frequenti sulla fine del supporto dell’SDK di Media Analytics](/help/sdk-implement/end-of-support-faqs.md).
 
-Le seguenti istruzioni sono valide per gli SDK di Media 2.x. Se stai implementando una versione 1.x dell’SDK Media, consulta la [1.x Media SDK Documentation.](/help/sdk-implement/download-sdks.md) Per gli integratori Primetime, consulta  _la_ documentazione Media SDK di Primetime di seguito.
 
 ## Supporto versione minima della piattaforma {#minimum-platform-version}
 
