@@ -103,7 +103,7 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell&#39;SDK.
 
    * **Metadati standard**
 
-[Implementazione dei metadati standard su Roku](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
+      [Implementazione dei metadati standard su Roku](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
 
       >[!NOTE]
       >Il collegamento dell&#39;oggetto metadati video standard all&#39;oggetto multimediale è facoltativo.
