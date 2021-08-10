@@ -5,7 +5,7 @@ uuid: 0718689d-9602-4e3f-833c-8297aae1d909
 exl-id: 82d3e5d7-4f88-425c-8bdb-e9101fc1db92
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 41023be25308092a1b3e7c40bad2d8085429a0bc
+source-git-commit: 8da6889ecb50edd12b7ea4139500c35b923830f2
 workflow-type: tm+mt
 source-wordcount: '698'
 ht-degree: 1%
@@ -105,9 +105,13 @@ POST /api/v1/downloaded HTTP/1.1
 }]
 ```
 
-#### Avviso elementi obsoleti
+### Avviso elementi obsoleti
 
-In precedenza era possibile inviare contenuti scaricati anche all’ `/api/v1/sessions` API . Questo modo di tenere traccia dei contenuti scaricati è **obsoleto** e verrà **rimosso** in futuro.
+>[!IMPORTANT]
+>
+>In precedenza era possibile inviare contenuti scaricati anche all’ `/api/v1/sessions` API . Questo modo di tenere traccia dei contenuti scaricati è **obsoleto** e verrà **rimosso** in futuro.
+
+
 L’ API `/api/v1/sessions` accetterà solo gli eventi di inizializzazione della sessione.
 Quando si utilizza la nuova API, il flag precedentemente obbligatorio `media.downloaded` non è più necessario.
 Consigliamo vivamente di utilizzare l’ API `/api/v1/downloaded` per le nuove implementazioni di contenuti scaricati, nonché di aggiornare le implementazioni esistenti che si basano sulla vecchia API.
