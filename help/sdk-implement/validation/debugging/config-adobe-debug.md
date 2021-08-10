@@ -5,7 +5,7 @@ uuid: e416458d-f23c-41ce-8d99-fa5076c455f0
 exl-id: 48ad3f23-f36d-44f3-b8d9-b0b3a2ee06bc
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 41023be25308092a1b3e7c40bad2d8085429a0bc
 workflow-type: tm+mt
 source-wordcount: '649'
 ht-degree: 2%
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 Per accedere ad Adobe Debug:
 
-1. Vai a [Experience Cloud](https://www.marketing.adobe.com) e crea un nuovo utente Adobe Experience Cloud.
+1. Vai a [Experience Cloud](https://www.marketing.adobe.com/) e crea un nuovo utente Adobe Experience Cloud.
 
    >[!TIP]
    >
