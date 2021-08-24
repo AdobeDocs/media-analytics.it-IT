@@ -4,10 +4,10 @@ description: Scopri come migrare da Media SDK a Launch per JS.
 exl-id: 19b506b2-3070-4a5e-9732-a5cd0867afde
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: ceef739641ae07ea05314fb2bc23028de6ee5efb
 workflow-type: tm+mt
 source-wordcount: '400'
-ht-degree: 8%
+ht-degree: 6%
 
 ---
 
@@ -52,7 +52,7 @@ L’estensione Media utilizza i parametri configurati per il tracciamento.
 
    ![](assets/launch_config_js.png)
 
-[Guida utente di Launch - Installare e configurare l’estensione multimediale](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html#install-and-configure-the-ma-extension)
+[Guida utente di Launch - Installare e configurare l’estensione multimediale](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics/overview.html#install-and-configure-the-ma-extension)
 
 ## Differenze di creazione del tracciamento
 
@@ -125,5 +125,5 @@ Passa un oggetto delegato a `get-instance` che espone le funzioni `getQoSObject(
 
 ### Launch
 
-* [Panoramica di Launch](https://experienceleague.adobe.com/docs/launch/using/overview.html?lang=it)
-* [Estensione Media Analytics](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html)
+* [Panoramica di Launch](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
+* [Estensione Media Analytics](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics/overview.html)
