@@ -5,9 +5,9 @@ uuid: f83e9ef1-803d-4152-a6c7-acaa325036b9
 exl-id: a70025ec-1418-46f1-b41f-433d09f024e1
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: d8b10249c542d2875cba4916e4a2c7942c5589c4
 workflow-type: tm+mt
-source-wordcount: '1307'
+source-wordcount: '1329'
 ht-degree: 6%
 
 ---
@@ -104,7 +104,7 @@ ht-degree: 6%
 
 | Chiave richiesta  | Obbligatorio | Chiave tipo di richiesta | Attiva... |  Descrizione  |
 | --- | :---: | :---: | :---: | --- |
-| `media.qoe.bitrate` | N | integer | Any | Il bitrate del flusso |
+| `media.qoe.bitrate` | N | integer | Any | Il bitrate medio (in bps). Il bitrate medio è calcolato come media ponderata di tutti i valori del bitrate relativi alla durata di riproduzione che si è verificata durante una sessione di riproduzione. |
 | `media.qoe.droppedFrames` | N | integer | Qualsiasi | Numero di fotogrammi saltati nel flusso |
 | `media.qoe.framesPerSecond` | N | integer | Qualsiasi | Numero di fotogrammi al secondo |
 | `media.qoe.timeToStart` | N | integer | Qualsiasi | Tempo (in millisecondi) trascorso tra il momento in cui l’utente preme il tasto Play e il contenuto carica e inizia la riproduzione |
