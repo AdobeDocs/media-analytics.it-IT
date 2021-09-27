@@ -1,14 +1,14 @@
 ---
-title: Come impostare Media SDK con JavaScript 2.x
+title: Configurare Media SDK con JavaScript 2.x
 description: Segui questi passaggi per configurare l’applicazione Media SDK su JavaScript 2.x.
 uuid: 0269d8ad-0af8-4bf1-9d15-e06c2952a005
 exl-id: 33976096-8b86-4353-906b-e25bf4693471
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: e10f705e135cc6b9c630059596994d12fc787866
 workflow-type: tm+mt
-source-wordcount: '403'
-ht-degree: 6%
+source-wordcount: '401'
+ht-degree: 5%
 
 ---
 
