@@ -4,16 +4,16 @@ description: '"Scopri come utilizzare il pannello Tempo di riproduzione multimed
 exl-id: null
 feature: Media Analytics, Workspace Basics
 role: User, Admin, Data Engineer
-source-git-commit: 55d77d1576236fbc1165a41d7a0775b9ee246d8a
+source-git-commit: 60e222e85c593e331d13e804f520a35a682e66a3
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '218'
 ht-degree: 8%
 
 ---
 
 # Tempo di riproduzione dei contenuti multimediali trascorso {#media-playback-time-spent}
 
-L&#39;analisi del tempo di riproduzione impiegato consente di comprendere dove si è verificato il picco di concorrenza o dove si è verificato il calo. Il tempo trascorso per la riproduzione dei contenuti multimediali fornisce informazioni utili sulla qualità dei contenuti, sul coinvolgimento degli spettatori e sul modo in cui i contenuti influiscono sul tempo trascorso per gli spettatori. Il tempo di riproduzione dei contenuti multimediali impiegato consente di risolvere i problemi o pianificare il volume o la scala.
+L&#39;analisi del tempo di riproduzione impiegato consente di comprendere dove si è verificato il picco di concorrenza o dove si è verificato il calo. Il tempo trascorso per la riproduzione dei contenuti multimediali fornisce informazioni utili sulla qualità dei contenuti, sul coinvolgimento degli utenti e sul modo in cui i contenuti influiscono sul pubblico nel tempo. Il tempo di riproduzione dei contenuti multimediali impiegato consente di risolvere i problemi o pianificare il volume o la scala.
 
 ## Pannello Tempo di riproduzione multimediale trascorso in Analysis Workspace
 
