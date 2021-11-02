@@ -1,24 +1,24 @@
 ---
-title: Ottenere i dati del rapporto JSON per i visualizzatori simultanei con le API di Analytics 2.0
-description: Scopri come ottenere i dati dei rapporti dei visualizzatori simultanei utilizzando le API di Analytics 2.0. Visualizza una richiesta e una risposta di esempio.
-uuid: 9168f114-2459-4951-a06c-57b735d09dc0
-exl-id: f84f63d3-b0d0-45fe-95a7-159f22d60660
+title: Ottenere i dati del rapporto JSON sul tempo di riproduzione multimediale con le API di Analytics 2.0
+description: Scopri come ottenere il tempo di riproduzione dei contenuti multimediali impiegato per i dati dei rapporti utilizzando le API di Analytics 2.0. Visualizza una richiesta e una risposta di esempio.
+uuid: null
+exl-id: null
 feature: Media Analytics, Reports & Analytics Basics
 role: User, Admin, Data Engineer
-source-git-commit: 03b274fa0c5580ee2759560efbea45eb308d4278
+source-git-commit: 3118a5eeef56c7768d88df7c658468c356921aac
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 5%
+source-wordcount: '205'
+ht-degree: 4%
 
 ---
 
 
-# Ottenere i dati del rapporto JSON per i visualizzatori simultanei con le API di Analytics 2.0{#get-concurrent-viewers-json-report-data}
+# Ottenere i dati del rapporto JSON sul tempo di riproduzione multimediale con le API di Analytics 2.0{#get-media-playback-time-spent-json-report-data}
 
-Puoi ottenere i dati dei rapporti dei visualizzatori simultanei utilizzando [_*API di Analytics 2.0*_](https://www.adobe.io/apis/experiencecloud/analytics/docs.html).
+È possibile ottenere il tempo di riproduzione dei file multimediali impiegato per i dati del rapporto utilizzando [_*API di Analytics 2.0*_](https://www.adobe.io/apis/experiencecloud/analytics/docs.html).
 
 1. Filtra i dati utilizzando qualsiasi segmento generato nell’interfaccia utente. Per filtrare in base a un ID contenuto specifico, crea un nuovo segmento.
-1. Imposta la `elements` -> `id` nel corpo della richiesta a `metrics/concurrent_viewers_visitors`.
+1. Imposta la `elements` -> `id` nel corpo della richiesta a `metrics/playback_time_spent_seconds` o `metrics/playback_time_spent_minutes` a seconda che si desideri ottenere l&#39;output in secondi o minuti.
 1. Richiedi una quantità sufficiente di dati.
 
    * L’intervallo di dati specificato nel rapporto raccoglie tutti i dati del visualizzatore simultaneo _al termine della sessione video._
@@ -37,7 +37,7 @@ Un payload di richiesta di esempio per un giorno di dati sarà simile al seguent
     "dimension": "variables/daterangeminute",
     "globalFilters": [
         {
-            "dateRange": "2020-09-02T00:00/2020-09-03T00:00",
+            "dateRange": "2021-09-02T00:00/2021-09-03T00:00",
             "type": "dateRange"
         }
     ],
@@ -45,7 +45,7 @@ Un payload di richiesta di esempio per un giorno di dati sarà simile al seguent
         "metrics": [
             {
                 "columnId": "column1",
-                "id": "metrics/concurrent_viewers_visitors"
+                "id": "metrics/playback_time_spent_minutes"
             }
         ]
     },
@@ -79,21 +79,21 @@ Un payload di richiesta di esempio per un giorno di dati sarà simile al seguent
    "rows":[
       {
          "itemId":"12008020000",
-         "value":"00:00 2020-09-02",
+         "value":"00:00 2021-09-02",
          "data":[
             123.0
          ]
       },
       {
          "itemId":"12008020001",
-         "value":"00:01 2020-09-02",
+         "value":"00:01 2021-09-02",
          "data":[
             143.0
          ]
       },
       {
          "itemId":"12008020002",
-         "value":"00:02 2020-09-02",
+         "value":"00:02 2021-09-02",
          "data":[
             167.0
          ]
@@ -102,7 +102,7 @@ Un payload di richiesta di esempio per un giorno di dati sarà simile al seguent
       ...
       {
          "itemId":"12008022359",
-         "value":"23:59 2020-09-02",
+         "value":"23:59 2021-09-02",
          "data":[
             768.0
          ]
@@ -121,7 +121,7 @@ Un payload di richiesta di esempio per un giorno di dati sarà simile al seguent
 
 
 <!--
-You can extract the concurrent viewers report data using the Experience Cloud API Explorer as follows.
+You can extract the Media Playback Time Spent report data using the Experience Cloud API Explorer as follows.
 
 1. Navigate to: [https://www.adobe.io.](https://www.adobe.io)
 1. Select and enter the following information in the API Explorer form:
@@ -179,7 +179,7 @@ You can extract the concurrent viewers report data using the Experience Cloud AP
 1. In the form, change **Method** to "Get".
 1. Enter the value of the `reportID` you received in Step 3, and click **Get Response**.
 
-   The concurrent viewers report data, in JSON format, is presented in the Response field.
+   The Media Playback Time Spent report data, in JSON format, is presented in the Response field.
 
    For example:
 
