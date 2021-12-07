@@ -1,11 +1,9 @@
 ---
 title: Ottenere i dati del rapporto JSON sul tempo di riproduzione multimediale con le API di Analytics 2.0
 description: Scopri come ottenere il tempo di riproduzione dei contenuti multimediali impiegato per i dati dei rapporti utilizzando le API di Analytics 2.0. Visualizza una richiesta e una risposta di esempio.
-uuid: null
-exl-id: null
 feature: Media Analytics, Reports & Analytics Basics
 role: User, Admin, Data Engineer
-source-git-commit: 3118a5eeef56c7768d88df7c658468c356921aac
+source-git-commit: 30f71465feac8bbca917630597ece4876b955ca0
 workflow-type: tm+mt
 source-wordcount: '205'
 ht-degree: 4%
