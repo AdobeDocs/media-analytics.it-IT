@@ -4,26 +4,30 @@ description: Questo argomento include le domande frequenti sulla fine del suppor
 exl-id: 9601ec17-8421-49d0-9d81-1cfa5e8f37cf
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: f0abffb48a6c0babb37f16aff2e3302bf5dd0cb4
 workflow-type: tm+mt
-source-wordcount: '673'
-ht-degree: 1%
+source-wordcount: '723'
+ht-degree: 4%
 
 ---
 
 # Domande frequenti sull’SDK di Media Analytics relative alla fine del supporto
 
-Con la fine del supporto per gli SDK per dispositivi mobili versione 4, il 31 agosto 2021, Adobe terminerà anche il supporto per gli SDK Media Analytics per iOS e Android. Dopo il 31 agosto 2021, Adobe non fornirà correzioni, aggiornamenti relativi al sistema operativo o supporto per l’SDK di Media Analytics.  Durante il processo di migrazione a questi nuovi SDK di Experience Platform, ricorda che le [estensioni Media Analytics](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics) devono essere implementate per abilitare Adobe Analytics for Streaming Media.
+Con la fine del supporto per gli SDK per dispositivi mobili versione 4, il 31 agosto 2021, Adobe terminerà anche il supporto per gli SDK Media Analytics per iOS e Android. Dopo il 31 agosto 2021, Adobe non fornirà correzioni, aggiornamenti relativi al sistema operativo o supporto per l’SDK di Media Analytics.  Durante il processo di migrazione a questi nuovi SDK di Experience Platform, tieni presente che la [Estensioni di Media Analytics](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics) deve essere implementato per abilitare Adobe Analytics per Streaming Media.
+
+>[!NOTE]
+>Adobe Experience Platform Launch è stato riclassificato come una suite di tecnologie di raccolta dati nell’Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=en) come riferimento consolidato delle modifiche terminologiche.
+
 
 ## Le 5 cose più importanti da sapere
 
-1. Gli SDK per dispositivi mobili v4 non saranno più supportati dopo il 31 agosto 2021. Esegui la migrazione agli SDK per dispositivi mobili Adobe Experience Platform (AEP) per iOS e Android. Per ulteriori informazioni, consulta le [domande frequenti relative alla fine del supporto degli SDK per dispositivi mobili versione 4](https://aep-sdks.gitbook.io/docs/version-4-sdk-end-of-support-faq).
+1. Gli SDK per dispositivi mobili v4 non saranno più supportati dopo il 31 agosto 2021. Esegui la migrazione agli SDK per dispositivi mobili Adobe Experience Platform (AEP) per iOS e Android. Per ulteriori informazioni, consulta [Domande frequenti sugli SDK per dispositivi mobili versione 4: fine del supporto](https://aep-sdks.gitbook.io/docs/version-4-sdk-end-of-support-faq).
 
-1. L’implementazione di Analytics for Streaming Media richiede l’SDK di AEP Mobile e l’utilizzo delle estensioni Analytics e Media Analytics. A partire dal 1° settembre 2021, è necessario utilizzare i nuovi SDK e le estensioni AEP Mobile.  Le estensioni Media Analytics sono configurate tramite Adobe Launch.  Per ulteriori informazioni, consulta [Migrazione dall’SDK per contenuti multimediali indipendenti all’Adobe Launch](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/sdk-to-launch/sdk-to-launch-migration.html)
+1. L’implementazione di Analytics for Streaming Media richiede l’SDK di AEP Mobile e l’utilizzo delle estensioni Analytics e Media Analytics. A partire dal 1° settembre 2021, è necessario utilizzare i nuovi SDK e le estensioni AEP Mobile.  Le estensioni Media Analytics sono configurate tramite Adobe Launch.  Per ulteriori informazioni, consulta [Migrazione dall’SDK per contenuti multimediali autonomi a Launch Adobe](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/sdk-to-launch/sdk-to-launch-migration.html)
 
 1. Lo sviluppo delle funzioni è terminato per gli SDK Media Analytics per iOS e Android.  Le nuove funzioni introdotte a partire da Autunno 2019 vengono abilitate utilizzando le estensioni Media Analytics e l’API Media Collection.
 
-1. Gli SDK Roku e Chromecast rimangono disponibili per i clienti di Analytics per Streaming Media. Gli SDK Roku e Chromecast continueranno a essere migliorati e supportati come SDK autonomi.  Se utilizzi l’SDK JS per Media Analytics, puoi continuare a utilizzare l’SDK autonomo o abilitare l’estensione Media Analytics tramite Adobe Launch.
+1. Gli SDK Roku e Chromecast rimangono disponibili per i clienti Analytics per i clienti Streaming Media. Gli SDK Roku e Chromecast continueranno a essere migliorati e supportati come SDK autonomi.  Se utilizzi l’SDK JS per Media Analytics, puoi continuare a utilizzare l’SDK autonomo o abilitare l’estensione Media Analytics tramite Adobe Launch.
 
 1. Prima del 1° settembre 2021, l&#39;Adobe può, a sua esclusiva discrezione, elaborare nuove correzioni per problemi di forte impatto tecnico o di esposizione delle imprese. In base all&#39;input del cliente, l&#39;Adobe determinerà il grado di impatto e di esposizione e le attività che ne derivano.
 
@@ -33,12 +37,10 @@ Per qualsiasi domanda, contatta il tuo Adobe Customer Success Manager.
 
 1. **Il supporto per gli SDK Roku e Chromecast sarà interessato? &#x200B;**
 
-   No.  Gli SDK Roku e Chromecast continueranno a essere supportati come SDK autonomi per il momento. &#x200B;
-&#x200B;
+   No.  Gli SDK Roku e Chromecast continueranno a essere supportati come SDK autonomi per il momento. &#x200B; &#x200B;
 1. **Questa modifica influisce sulle implementazioni dell’SDK JS di Media Analytics? &#x200B;**
 
-   No.  I clienti che utilizzano l’SDK JS per Media Analytics possono continuare a utilizzare l’SDK o abilitarlo tramite Adobe Launch.
-&#x200B;
+   No.  I clienti che utilizzano l’SDK JS per Media Analytics possono continuare a utilizzare l’SDK o abilitarlo tramite Adobe Launch. &#x200B;
 1. **Qual è il livello di impegno per la migrazione alle estensioni Media Analytics? &#x200B;**
 
    LOE dipende dall’implementazione di ciascun cliente, quindi varia.  Dopo aver esaminato la documentazione sulla migrazione riportata di seguito, rivolgiti alla consulenza e/o all’assistenza clienti per richiedere supporto aggiuntivo.

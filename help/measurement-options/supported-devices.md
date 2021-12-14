@@ -4,10 +4,10 @@ description: '"Scopri i principali dispositivi come iOS, Android, dispositivi OT
 exl-id: 169ff7b9-e577-45b7-8927-74bdcccc0a77
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: f0abffb48a6c0babb37f16aff2e3302bf5dd0cb4
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 19%
+source-wordcount: '338'
+ht-degree: 18%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 19%
 
 >[!IMPORTANT]
 >
->Con la fine del supporto per gli SDK della versione 4 per dispositivi mobili il 31 agosto 2021, Adobe terminerà anche il supporto per l’SDK di Media Analytics per iOS e Android.  Per ulteriori informazioni, consulta [Domande frequenti sulla fine del supporto dell’SDK di Media Analytics](/help/sdk-implement/end-of-support-faqs.md).
+>Con la fine del supporto per gli SDK della versione 4 per dispositivi mobili il 31 agosto 2021, Adobe terminerà anche il supporto per l’SDK di Media Analytics per iOS e Android.  Per ulteriori informazioni, consulta [Domande frequenti sull’SDK di Media Analytics relative alla fine del supporto](/help/sdk-implement/end-of-support-faqs.md).
 
 Adobe Analytics for Streaming Media supporta tutti i principali dispositivi, tra cui:
 
@@ -29,7 +29,7 @@ Per i dispositivi o le piattaforme che al momento non dispongono del supporto SD
 
 La tabella seguente elenca i dispositivi e le piattaforme attualmente supportati. Per scaricare la versione più recente dell’SDK, consulta [Scaricare gli SDK](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/download-sdks.html). Se un dispositivo non è presente nell’elenco, contatta l’assistenza clienti o il consulente della soluzione per informazioni sullo stato del dispositivo.
 
-| Piattaforme e dispositivi in streaming |  | Estensione Media Launch con SDK AEP Mobile | Media SDK | API Media Collection |
+| Piattaforme e dispositivi in streaming |  | Raccolta dati con SDK per dispositivi mobili AEP | Media SDK | API Media Collection |
 |:---------------------------:|:-----------------------------------------------:|:----------------------------:|:-------------------:|:--------------------:|
 | Web/Web mobile |  |  |  |  |
 |  | Browser JavaScript | ![](/help/assets/icon-blue-check.png) | ![](/help/assets/icon-blue-check.png)    | ![](/help/assets/icon-blue-check.png) |
@@ -49,6 +49,6 @@ La tabella seguente elenca i dispositivi e le piattaforme attualmente supportati
 | Altro |  |  |  |  |
 |  | Nuovi dispositivi collegati |  |  | ![](/help/assets/icon-blue-check.png) |
 
-1. Il supporto per questi SDK termina il 31 agosto 2021. Per ulteriori informazioni, consulta [Domande frequenti sulla fine del supporto dell’SDK di Media Analytics](/help/sdk-implement/end-of-support-faqs.md).
+1. Il supporto per questi SDK termina il 31 agosto 2021. Per ulteriori informazioni, consulta [Domande frequenti sull’SDK di Media Analytics relative alla fine del supporto](/help/sdk-implement/end-of-support-faqs.md).
 
-Per ulteriori informazioni sulle versioni minime della piattaforma supportate per ogni SDK, consulta [Supporto versione minima della piattaforma](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/setup/setup-overview.html)
+Per ulteriori informazioni sulle versioni minime della piattaforma supportate per ogni SDK, vedi [Supporto versione minima della piattaforma](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/setup/setup-overview.html)
