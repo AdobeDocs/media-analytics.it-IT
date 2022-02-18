@@ -5,10 +5,10 @@ user-guide-title: Adobe Analytics per contenuti in streaming
 breadcrumb-title: Guida di Media Analytics
 user-guide-description: Implementare Adobe Analytics per contenuti multimediali in streaming. Gli argomenti trattati comprendono Media SDK e Media Collection API.
 sub-product: media analytics
-source-git-commit: 819f4a7035e5d9704d17abce6a7cd4c607b7ce39
+source-git-commit: 5465631bf29e746d7d5dc07603f57fd7033935c4
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 99%
+source-wordcount: '833'
+ht-degree: 98%
 
 ---
 
@@ -211,8 +211,9 @@ ht-degree: 99%
       + [Rapporto sul dayparting dei contenuti multimediali](media-reports/media-default-reports/media-reports-daypart.md)
       + [Rapporto sui visualizzatori simultanei di contenuti multimediali](media-reports/media-default-reports/media-concurrent-viewers.md)
    + Pannelli di Media Workspace {#media-workspace-panels}
-      + [Pannello Visualizzatori simultanei di contenuti multimediali](media-reports/media-workspace-panels/media-concurrent-viewers.md)
-      + [Pannello Tempo di riproduzione dei contenuti multimediali](media-reports/media-workspace-panels/media-playback-time-spent.md)
+   + [Pannello Pubblico medio per minuto](media-reports/media-workspace-panels/average-minute-audience.md)
+   + [Pannello Visualizzatori simultanei di contenuti multimediali](media-reports/media-workspace-panels/media-concurrent-viewers.md)
+   + [Pannello Tempo di riproduzione dei contenuti multimediali](media-reports/media-workspace-panels/media-playback-time-spent.md)
    + [Modelli di Media Workspace](media-reports/media-workspace-templates.md)
    + [Ottenere i dati dei visualizzatori simultanei tramite API](media-reports/media-default-reports/get-concurrent-json20.md)
    + [Ottenere i dati sul tempo trascorso di riproduzione multimediale tramite API](media-reports/media-default-reports/get-mediaplaybacktimespent-json20.md)
