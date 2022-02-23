@@ -3,10 +3,11 @@ title: Pubblico medio per minuto del contenuto multimediale
 description: Scopri come utilizzare il pannello Pubblico medio per minuto multimediale a ________.
 feature: Media Analytics, Workspace Basics
 role: User, Admin, Data Engineer
-source-git-commit: 741491f996910a7e441fcc6792fab4a7534cd123
+exl-id: af4d430c-1349-4606-b587-da5d40e0fe4b
+source-git-commit: 45a566dd66b7ace05e3b63fb63df9266a9912b91
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 7%
+source-wordcount: '248'
+ht-degree: 6%
 
 ---
 
@@ -21,7 +22,7 @@ In Analysis Workspace, il pubblico medio dei minuti è il tempo impiegato per vi
 
 Il pannello Pubblico medio in minuti fornisce analisi medie del pubblico in base al contenuto specifico selezionato se la durata è resa disponibile utilizzando le classificazioni.
 
-Il pannello Pubblico medio in minuti fornisce anche analisi per un periodo di tempo selezionato che possono essere filtrate in base a contenuto specifico, a prescindere dalla durata disponibile tramite Classificazioni. Per accedere al pannello Pubblico medio per minuto, passa a una suite di rapporti con i componenti Media Analytics abilitati. Fai clic sull’icona del pannello all’estrema sinistra, quindi trascina il pannello nel progetto Analysis Workspace. [Ulteriori informazioni...](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/c-panels/average-minute-audience-panel.html)
+Il pannello Pubblico medio in minuti fornisce anche analisi per un periodo di tempo selezionato che possono essere filtrate in base a contenuto specifico, a prescindere dalla durata disponibile tramite Classificazioni. Per accedere al pannello Pubblico medio per minuto, passa a una suite di rapporti con i componenti Media Analytics abilitati. Fai clic sull’icona del pannello all’estrema sinistra, quindi trascina il pannello nel progetto Analysis Workspace. [Ulteriori informazioni...](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/average-minute-audience-panel.html?lang=en)
 
 <!-- ## DOES THIS APPLY Get Concurrent Viewers via Analytics Reporting API
 
