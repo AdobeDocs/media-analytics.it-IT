@@ -1,13 +1,13 @@
 ---
 title: Pubblico medio per minuto del contenuto multimediale
-description: Scopri come utilizzare il pannello Pubblico medio per minuto multimediale a ________.
+description: Scopri come utilizzare il pannello Pubblico medio per minuto per analizzare il pubblico medio per un contenuto specifico o per un periodo di tempo personalizzato.
 feature: Media Analytics, Workspace Basics
 role: User, Admin, Data Engineer
 exl-id: af4d430c-1349-4606-b587-da5d40e0fe4b
-source-git-commit: 45a566dd66b7ace05e3b63fb63df9266a9912b91
+source-git-commit: 806d3e68eb32adef2af8629474fa5c69a280e433
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 6%
+source-wordcount: '264'
+ht-degree: 7%
 
 ---
 
