@@ -5,9 +5,9 @@ uuid: 0ff591d3-fa99-4123-9e09-c4e71ea1060b
 exl-id: 16b15e03-5581-471f-ab0c-077189dd32d6
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 88bf699cb5b0872cefa4d6a6609c74f8fa35189a
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1203'
 ht-degree: 7%
 
 ---
@@ -35,7 +35,7 @@ I seguenti diagrammi illustrano la timeline della testina di riproduzione e la s
 
 **Dettagli implementazione**
 
-Questa chiamata segnala _l&#39;intenzione dell&#39;utente di riprodurre_ un video. <br/><br/>Restituisce un ID sessione (  `{sid}`) al client utilizzato per identificare tutte le chiamate di tracciamento successive all’interno della sessione. Lo stato del giocatore non è ancora &quot;in riproduzione&quot;, ma è invece &quot;in partenza&quot;. <br/><br/>[I parametri di sessione obbligatori  ](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) devono essere inclusi nella  `params` mappa nel corpo della richiesta. <br/><br/>Nel backend, questa chiamata genera una chiamata di avvio Adobe Analytics.
+Segnali di chiamata _l&#39;intenzione dell&#39;utente di giocare_ un video. <br/><br/>Restituisce un ID sessione ( `{sid}`) al client utilizzato per identificare tutte le chiamate di tracciamento successive all’interno della sessione. Lo stato del giocatore non è ancora &quot;in riproduzione&quot;, ma è invece &quot;in partenza&quot;. <br/><br/>[Parametri di sessione obbligatori ](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) deve essere incluso nel `params` mappa nel corpo della richiesta. <br/><br/>Nel backend, questa chiamata genera una chiamata di avvio Adobe Analytics.
 
 **Corpo della richiesta di esempio**
 
@@ -136,6 +136,8 @@ Inizia a tenere traccia del primo annuncio pre-roll, che è lungo 15 secondi. In
     }
 }
 ```
+
+**NOTA: Tra gli eventi AdBreakStart e AdStart non dovrebbero esserci altri eventi di riproduzione.**
 
 ### Azione 5: ping di annunci {#Action-5}
 
@@ -342,7 +344,7 @@ La pausa pubblicitaria è finita. Durante la pausa pubblicitaria, lo stato di gi
 
 **Dettagli implementazione**
 
-Dopo l&#39;evento `adBreakComplete` , inserisci il lettore nello stato di &quot;riproduzione&quot; utilizzando l&#39;evento `play` .
+Dopo la `adBreakComplete` , mettere il lettore nello stato di &quot;riproduzione&quot; utilizzando `play` evento.
 
 **Corpo della richiesta di esempio**
 
@@ -407,7 +409,7 @@ Monitora lo spostamento del lettore allo stato di &quot;buffering&quot;.
 
 **Dettagli implementazione**
 
-Il buffering termina dopo 3 secondi, quindi riportare il lettore allo stato di &quot;riproduzione&quot;. Devi inviare un altro evento di riproduzione del brano che esce dal buffering.  **La  `play` chiamata dopo una chiamata  `bufferStart` deduce una chiamata &quot;bufferEnd&quot; al back-end,** quindi non è necessario un  `bufferEnd` evento.
+Il buffering termina dopo 3 secondi, quindi riportare il lettore allo stato di &quot;riproduzione&quot;. Devi inviare un altro evento di riproduzione del brano che esce dal buffering.  **La `play` chiamare dopo `bufferStart` deduce una chiamata &quot;bufferEnd&quot; al back-end,** quindi non è necessario un `bufferEnd` evento.
 
 **Corpo della richiesta di esempio**
 
@@ -450,7 +452,7 @@ Esegui il ping del backend ogni 10 secondi.
 
 **Dettagli implementazione**
 
-Media roll con una durata di 8 secondi: invia `adBreakStart` .
+Media roll con una durata di 8 secondi: inviare `adBreakStart` .
 
 **Corpo della richiesta di esempio**
 
@@ -469,7 +471,7 @@ Media roll con una durata di 8 secondi: invia `adBreakStart` .
 }
 ```
 
-### Azione 17 - Inizio dell’annuncio {#Action-17}
+### Azione 17 - Inizio annuncio {#Action-17}
 
 | Azione | Timeline azione (secondi) | Posizione della testina di riproduzione (secondi) | Richiesta client |
 | --- | :---: | :---: | --- |
@@ -642,7 +644,7 @@ Esegui il ping del backend ogni 10 secondi. Il lettore è ancora nello stato &qu
 
 **Dettagli implementazione**
 
-Sposta lo stato di riproduzione su &quot;riproduzione&quot;.  **La  `play` chiamata dopo una chiamata  `pauseStart` deduce una chiamata di &quot;ripresa&quot; al back-end,** quindi non è necessario un  `resume` evento.
+Sposta lo stato di riproduzione su &quot;riproduzione&quot;.  **La `play` chiamare dopo `pauseStart` deduce una chiamata di &quot;ripresa&quot; al back end,** quindi non è necessario un `resume` evento.
 
 **Corpo della richiesta di esempio**
 
@@ -684,7 +686,7 @@ Esegui il ping del backend ogni 10 secondi.
 
 **Dettagli implementazione**
 
-Invia `sessionComplete` al backend per indicare che l&#39;utente ha terminato di guardare l&#39;intero contenuto.
+Invia `sessionComplete` al backend per indicare che l’utente ha terminato di guardare l’intero contenuto.
 
 **Corpo della richiesta di esempio**
 
@@ -699,4 +701,4 @@ Invia `sessionComplete` al backend per indicare che l&#39;utente ha terminato di
 
 >[!NOTE]
 >
->**Niente Eventi di ricerca? -** Non è disponibile alcun supporto esplicito nell’API Media Collection per gli eventi `seekStart` o `seekComplete`. Questo perché alcuni giocatori generano un numero molto elevato di tali eventi quando l&#39;utente finale sta pulendo, e diverse centinaia di utenti potrebbero facilmente strozzare la larghezza di banda di rete di un servizio back-end. L&#39;Adobe si basa su un supporto esplicito per gli eventi di ricerca, calcolando la durata dell&#39;heartbeat in base alla marca temporale del dispositivo, anziché alla posizione dell&#39;indicatore di riproduzione.
+>**Niente Eventi di ricerca? -** Non è disponibile alcun supporto esplicito nell’API Media Collection per `seekStart` o `seekComplete` eventi. Questo perché alcuni giocatori generano un numero molto elevato di tali eventi quando l&#39;utente finale sta pulendo, e diverse centinaia di utenti potrebbero facilmente strozzare la larghezza di banda di rete di un servizio back-end. L&#39;Adobe si basa su un supporto esplicito per gli eventi di ricerca, calcolando la durata dell&#39;heartbeat in base alla marca temporale del dispositivo, anziché alla posizione dell&#39;indicatore di riproduzione.
