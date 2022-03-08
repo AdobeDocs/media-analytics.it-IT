@@ -5,9 +5,9 @@ uuid: e92e99f4-c395-48aa-8a30-cbdd2f5fc07c
 exl-id: f6a00ffd-da6a-4d62-92df-15d119cfc426
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 165c7f01a2d2c32df518c89a5c49637107d41086
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '575'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ In questo scenario, esiste una risorsa live senza annunci riprodotti per 40 seco
 
 | Attivatore | metodo Heartbeat | Chiamate di rete | Note   |
 |---|---|---|---|
-| Clic utente **[!UICONTROL Play]** | `trackSessionStart` | Inizio contenuto Analytics, inizio contenuto Heartbeat | Può trattarsi di un clic dell&#39;utente **[!UICONTROL Play]** o di un evento di riproduzione automatica. |
+| Clic utente **[!UICONTROL Play]** | `trackSessionStart` | Inizio contenuto Analytics, inizio contenuto Heartbeat | Questo può essere un clic dell&#39;utente **[!UICONTROL Play]** o un evento di riproduzione automatica. |
 | Viene riprodotto il primo fotogramma dei media. | `trackPlay` | Riproduzione di contenuti Heartbeat | Questo metodo attiva il timer. Gli heartbeat vengono inviati ogni 10 secondi, a condizione che la riproduzione continui. |
 | Il contenuto viene riprodotto. |  | heartbeat di contenuto |  |
 | La sessione è finita. | `trackSessionEnd` |  | `SessionEnd` indica la fine di una sessione di visualizzazione. Questa API deve essere chiamata anche se l’utente non utilizza i file multimediali per il completamento. |
@@ -33,12 +33,12 @@ Molti degli stessi valori visualizzati nelle chiamate di avvio dei contenuti di 
 
 | Parametro | Valore | Note |
 |---|---|---|
-| `s:sc:rsid` | &lt;your Adobe=&quot;&quot; Report=&quot;&quot; Suite=&quot;&quot; ID=&quot;&quot;> |  |
-| `s:sc:tracking_serve` | &lt;your Analytics=&quot;&quot; Tracking=&quot;&quot; Server=&quot;&quot; URL=&quot;&quot;> |  |
+| `s:sc:rsid` | &lt;Your Adobe Report Suite ID> |  |
+| `s:sc:tracking_serve` | &lt;Your Analytics Tracking Server URL> |  |
 | `s:user:mid` | `s:user:mid` | Deve corrispondere al valore mid nella chiamata di avvio del contenuto di Adobe Analytics |
 | `s:event:type` | &quot;start&quot; |  |
 | `s:asset:type` | &quot;main&quot; |  |
-| `s:asset:mediao_id` | &lt;your Media=&quot;&quot; Name=&quot;&quot;> |  |
+| `s:asset:mediao_id` | &lt;Your Media Name> |  |
 | `s:stream:type` | live |  |
 | `s:meta:*` | facoltativo | Metadati personalizzati impostati sul supporto |
 
@@ -63,13 +63,13 @@ Per i flussi LIVE, è necessario impostare il valore del playhead come numero di
 
 ### All&#39;inizio
 
-Per i file multimediali LIVE, quando un utente inizia a riprodurre il flusso, è necessario impostare `l:event:playhead` sul numero di secondi trascorsi dalla mezzanotte UTC di quel giorno. Questo è diverso da VOD, dove si imposta il playhead su &quot;0&quot;.
+Per i supporti LIVE, quando un utente inizia a riprodurre il flusso, è necessario impostare `l:event:playhead` al numero di secondi dalla mezzanotte UTC di quel giorno. Questo è diverso da VOD, dove si imposta il playhead su &quot;0&quot;. Nota: Quando si utilizzano i marcatori di avanzamento, è necessaria la durata del contenuto e l’indicatore di riproduzione deve essere aggiornato come numero di secondi dall’inizio dell’elemento multimediale, a partire da 0.
 
-Ad esempio, supponiamo che un evento di streaming LIVE inizi a mezzanotte e venga eseguito per 24 ore (`a.media.length=86400`; `l:asset:length=86400`). Quindi, supponiamo che un utente inizi a riprodurre lo streaming LIVE alle 12:00. In questo scenario, imposta `l:event:playhead` su 43200 (12 ore dalla mezzanotte UTC di quel giorno in secondi).
+Ad esempio, supponiamo che un evento di streaming LIVE inizi a mezzanotte e venga eseguito per 24 ore (`a.media.length=86400`; `l:asset:length=86400`). Quindi, supponiamo che un utente inizi a riprodurre lo streaming LIVE alle 12:00. In questo scenario, devi impostare `l:event:playhead` a 43200 (12 ore dalla mezzanotte UTC di quel giorno in secondi).
 
 ### In pausa
 
-Quando un utente mette in pausa la riproduzione, deve essere applicata la stessa logica di &quot;playhead&quot; applicata all&#39;inizio della riproduzione. Quando l&#39;utente torna a riprodurre il flusso LIVE, è necessario impostare il valore `l:event:playhead` in base al nuovo numero di secondi dalla mezzanotte UTC, _not_ al punto in cui l&#39;utente ha messo in pausa il flusso LIVE.
+Quando un utente mette in pausa la riproduzione, deve essere applicata la stessa logica di &quot;playhead&quot; applicata all&#39;inizio della riproduzione. Quando l&#39;utente ritorna a riprodurre il flusso LIVE, è necessario impostare il `l:event:playhead` valore in base al nuovo numero di secondi dalla mezzanotte UTC, _not_ al punto in cui l&#39;utente ha messo in pausa il flusso LIVE.
 
 ## Codice di esempio {#sample-code}
 
