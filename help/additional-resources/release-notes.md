@@ -2,17 +2,17 @@
 title: Note sulla versione di Adobe Analytics for Streaming Media
 description: Visualizza le note sulla versione di Adobe Analytics.
 feature: Release Notes
-source-git-commit: c9a1007e0d2ae37014faeffebe89a14175c8506f
+exl-id: ef068aa6-fdf4-4a5c-b5d0-b93ad31894e8
+source-git-commit: 232d7ce89e3867527363235f08b492a92193d50e
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '545'
 ht-degree: 65%
 
 ---
 
-
 # Note sulla versione di Adobe Analytics for Streaming Media (marzo 2022)
 
-**Ultimo aggiornamento**: 3 marzo 2022
+**Ultimo aggiornamento**: 23 marzo 2022
 
 ## *Note sulla versione corrente*
 
@@ -20,7 +20,7 @@ ht-degree: 65%
 
 | Funzione | Descrizione | Data definita |
 | ----------- | ---------- | ------- |
-| **Pubblico medio per minuto** | I clienti Media Analytics possono utilizzare il pannello Pubblico medio per comprendere meglio il consumo medio di contenuti. <br>Il pubblico di minuti medi consente confronti di programmazione di qualsiasi lunghezza o genere. Inoltre, puoi confrontare o aggiungere il pubblico di minuti medi digitali alle metriche di minuti medi della TV lineare. Questo pannello offre maggiore flessibilità per misurare il pubblico medio per i periodi di tempo personalizzati, nonché quando la classificazione della durata è stata aggiornata.  [Ulteriori informazioni](https://experienceleague.adobe.com/docs/media-analytics/using/media-reports/average-minute-audience.html?lang=en) | **Versione limitata** <br>16 febbraio 2022 |
+| **Pubblico medio per minuto** | I clienti Media Analytics possono utilizzare il pannello Pubblico medio per comprendere meglio il consumo medio di contenuti. <br>Il pubblico di minuti medi consente confronti di programmazione di qualsiasi lunghezza o genere. Inoltre, puoi confrontare o aggiungere il pubblico di minuti medi digitali alle metriche di minuti medi della TV lineare. Questo pannello offre maggiore flessibilità per misurare il pubblico medio per i periodi di tempo personalizzati, nonché quando la classificazione della durata è stata aggiornata.  [Ulteriori informazioni](https://experienceleague.adobe.com/docs/media-analytics/using/media-reports/average-minute-audience.html?lang=en) | 16 marzo 2022 |
 
 ## Risorse dell&#39;Aiuto di Analytics for Streaming Media
 
