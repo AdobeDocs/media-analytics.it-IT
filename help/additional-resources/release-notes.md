@@ -3,10 +3,10 @@ title: Note sulla versione di Adobe Analytics for Streaming Media
 description: Visualizza le note sulla versione di Adobe Analytics.
 feature: Release Notes
 exl-id: ef068aa6-fdf4-4a5c-b5d0-b93ad31894e8
-source-git-commit: 232d7ce89e3867527363235f08b492a92193d50e
+source-git-commit: 8ca8416ba3dd8f5d3ef4ba9399e7c84335f3abf1
 workflow-type: tm+mt
-source-wordcount: '545'
-ht-degree: 65%
+source-wordcount: '525'
+ht-degree: 66%
 
 ---
 
@@ -48,7 +48,7 @@ Nuovi corsi e tutorial di Analytics
 
 | Funzione | Disponibilità generale | Descrizione |
 | ----------- | ---------- | -------------- |
-| **Tempo di riproduzione dei contenuti multimediali trascorso** | 28 settembre 2021 | Il Tempo di riproduzione dei contenuti multimediali trascorso per lo streaming di Adobe fornisce insight utili sul coinvolgimento dei visualizzatori e consente alle organizzazioni di media di ottenere informazioni più approfondite e dettagliate con un coinvolgimento degli utenti minuto per minuto attraverso un’analisi avanzata del tempo trascorso con funzionalità di ripartizione giornaliera. È possibile osservare il tempo impiegato per visualizzare i flussi multimediali in un determinato momento. Puoi suddividere la durata della riproduzione in base a diverse granularità, tra cui nuove granularità di 5, 15 e 30 minuti. [Ulteriori informazioni...](https://experienceleague.adobe.com/docs/media-analytics/using/media-reports/media-workspace-panels/media-playback-time-spent.html?lang=en) |
+| **Tempo di riproduzione dei contenuti multimediali trascorso** | 28 settembre 2021 | Il Tempo di riproduzione dei contenuti multimediali trascorso per lo streaming di Adobe fornisce insight utili sul coinvolgimento dei visualizzatori e consente alle organizzazioni di media di ottenere informazioni più approfondite e dettagliate con un coinvolgimento degli utenti minuto per minuto attraverso un’analisi avanzata del tempo trascorso con funzionalità di ripartizione giornaliera. È possibile osservare il tempo impiegato per visualizzare i flussi multimediali in un determinato momento. Puoi suddividere la durata della riproduzione in base a diverse granularità, tra cui nuove granularità di 5, 15 e 30 minuti. [Ulteriori informazioni...](/help/media-reports/media-workspace-panels/media-playback-time-spent.md) |
 
 ## Gennaio 2021
 
@@ -65,7 +65,7 @@ Nuove funzioni in Media Analytics
 
 | Funzione | Disponibilità generale | Descrizione |
 | -------- | -------------------- | ----------- |
-| Pannello **Visualizzatori simultanei di contenuti multimediali in Workspace** | 17 settembre 2020 | Il pannello Visualizzatori simultanei di contenuti multimediali consente di comprendere dove si è verificato il picco di concorrenza o in che punto i visitatori hanno abbandonato il contenuto. Fornisce informazioni utili sulla qualità dei contenuti e sul livello di coinvolgimento dei visualizzatori e aiuta nella risoluzione dei problemi o nella pianificazione di volumi/scala. [Ulteriori informazioni…](https://experienceleague.adobe.com/docs/media-analytics/using/media-reports/media-workspace-panels/media-concurrent-viewers.html?lang=en) |
+| Pannello **Visualizzatori simultanei di contenuti multimediali in Workspace** | 17 settembre 2020 | Il pannello Visualizzatori simultanei di contenuti multimediali consente di comprendere dove si è verificato il picco di concorrenza o in che punto i visitatori hanno abbandonato il contenuto. Fornisce informazioni utili sulla qualità dei contenuti e sul livello di coinvolgimento dei visualizzatori e aiuta nella risoluzione dei problemi o nella pianificazione di volumi/scala. [Ulteriori informazioni…](/help/media-reports/media-workspace-panels/media-concurrent-viewers.md) |
 
 
 ## Luglio 2020
