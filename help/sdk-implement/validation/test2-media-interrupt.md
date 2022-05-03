@@ -1,59 +1,59 @@
 ---
-title: Test 2 Interruzione del supporto
-description: Scopri il test di interruzione dei file multimediali utilizzato nella convalida.
+title: 'Prova 2: interruzione contenuto multimediale'
+description: Scopri la prova di interruzione dei contenuti multimediali utilizzata nella convalida.
 uuid: eeccd534-63fd-4dd3-b096-0431bc9a11ff
 exl-id: 3f22ce2d-4385-4a3b-8d1f-52e25a9b1101
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
-workflow-type: tm+mt
-source-wordcount: '245'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '243'
+ht-degree: 100%
 
 ---
 
-# Prova 2: Interruzione del supporto{#test-media-interruption}
+# Prova 2: interruzione del contenuto multimediale{#test-media-interruption}
 
 Questo caso di test convalida il comportamento di interruzione mobile.
 
-## Procedura di prova
+## Procedura del test
 
 È necessario completare e registrare queste attività nel seguente ordine:
 
-1. **Avvia il lettore multimediale**
+1. **Avvio del lettore multimediale**
 
-   All&#39;avvio del lettore multimediale, le seguenti chiamate vengono inviate nell&#39;ordine seguente:
+   All’avvio del lettore multimediale, le seguenti chiamate vengono inviate nell’ordine che segue:
 
    1. Avvio di Adobe Analytics (AppMeasurement)
    1. Avvio di Media Analytics (heartbeat)
-   1. Media Analytics (heartbeat) Richiesta di avvio Adobe Analytics
+   1. Richiesta chiamata Avvio di Adobe Analytics di Media Analytics (heartbeat)
 
-   Le prime due chiamate di cui sopra contengono metadati e variabili aggiuntive. Per i parametri e i metadati della chiamata, consulta [Testare i dettagli della chiamata.](/help/sdk-implement/validation/test-call-details.md#start-the-media-player)
+   Le prime due chiamate contengono metadati e variabili aggiuntive. Per i parametri e i metadati della chiamata, consulta [Dettagli della chiamata di prova.](/help/sdk-implement/validation/test-call-details.md#start-the-media-player)
 
-   La terza chiamata di cui sopra comunica al server Media Analytics che Media SDK ha richiesto l’invio al server Adobe Analytics della chiamata di avvio di Adobe Analytics (`pev2=ms_s`).
+   La terza chiamata sopra comunica al server Media Analytics che Media SDK ha richiesto che la chiamata di Avvio di Adobe Analytics (`pev2=ms_s`) sia inviata al server Adobe Analytics.
 
-1. **Riprodurre il contenuto principale per almeno 5 minuti ininterrotti**
+1. **Riproduzione del contenuto principale senza interruzioni per almeno 5 minuti**
 
    **Riproduzione dei contenuti**
 
-   Durante la riproduzione del contenuto, Media SDK invia chiamate di riproduzione (heartbeat) al server Media Analytics ogni dieci secondi.
+   Durante la riproduzione del contenuto, Media SDK invia chiamate di riproduzione (heartbeat) al server di Media Analytics ogni dieci secondi.
 
-   Per i parametri e i metadati della chiamata, consulta [Testare i dettagli della chiamata.](/help/sdk-implement/validation/test-call-details.md#play-main-content)
+   Per i parametri e i metadati della chiamata, consulta [Dettagli della chiamata di prova.](/help/sdk-implement/validation/test-call-details.md#play-main-content)
 
-   Consulta anche le istruzioni [Track Ads](/help/sdk-implement/track-ads/track-ads-overview.md) della tua piattaforma per ulteriori informazioni su queste chiamate Ad.
+   Per maggiori informazioni sulle chiamate dell’annuncio, consulta anche le istruzioni per il [Tracciamento annunci](/help/sdk-implement/track-ads/track-ads-overview.md) della tua piattaforma.
 
-1. **Sposta in background l’app o il browser**
+1. **Spostamento in background dell’app o del browser**
 
-   Mentre l’app viene eseguita in background, solo le chiamate `main:pause` devono essere inviate al server Media Analytics, a partire dalla versione 1.6.6 di VHL e successive.
+   Quando l’app viene eseguita in background, solo le chiamate `main:pause` devono essere inviate al server di Media Analytics, partendo dalla versione 1.6.6 di VHL e successive.
 
-1. **Porta in primo piano app o browser**
+1. **Porta in primo piano l’app o il browser**
 
-   Al ritorno dallo sfondo, la riproduzione del contenuto dovrebbe riprendere.
+   Tornando dall’esecuzione in background, la riproduzione del contenuto dovrebbe riprendere.
 
-1. **Riprodurre contenuti multimediali principali per almeno 5 minuti senza interruzioni**
+1. **Riproduzione dei contenuti multimediali principali senza interruzioni per almeno 5 minuti**
 
-   Per i parametri e i metadati della chiamata, vedi [Dettagli della chiamata di prova.](/help/sdk-implement/validation/test-call-details.md#play-main-content)
+   Per i parametri e i metadati della chiamata, consulta [Dettagli della chiamata di prova.](/help/sdk-implement/validation/test-call-details.md#play-main-content)
 
-1. **Chiudi lettore multimediale**
+1. **Chiudere il lettore multimediale**
 
    Dopo la chiusura del lettore multimediale, non deve essere attivata alcuna chiamata di tracciamento aggiuntiva.
