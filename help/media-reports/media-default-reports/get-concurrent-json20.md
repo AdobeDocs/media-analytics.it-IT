@@ -1,32 +1,32 @@
 ---
-title: Ottenere i dati del rapporto JSON per i visualizzatori simultanei con le API di Analytics 2.0
-description: Scopri come ottenere i dati dei rapporti dei visualizzatori simultanei utilizzando le API di Analytics 2.0. Visualizza una richiesta e una risposta di esempio.
+title: 'Acquisire i dati del rapporto JSON sui visualizzatori simultanei con le API di Analytics 2.0 '
+description: Scopri come acquisire i dati dei rapporti sui visualizzatori simultanei utilizzando le API di Analytics 2.0. Visualizza una richiesta e una risposta di esempio.
 uuid: 9168f114-2459-4951-a06c-57b735d09dc0
 exl-id: f84f63d3-b0d0-45fe-95a7-159f22d60660
 feature: Media Analytics, Reports & Analytics Basics
 role: User, Admin, Data Engineer
 source-git-commit: 03b274fa0c5580ee2759560efbea45eb308d4278
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '185'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
 
-# Ottenere i dati del rapporto JSON per i visualizzatori simultanei con le API di Analytics 2.0{#get-concurrent-viewers-json-report-data}
+# Acquisire i dati del rapporto JSON sui visualizzatori simultanei con le API di Analytics 2.0 {#get-concurrent-viewers-json-report-data}
 
-Puoi ottenere i dati dei rapporti dei visualizzatori simultanei utilizzando [_*API di Analytics 2.0*_](https://www.adobe.io/apis/experiencecloud/analytics/docs.html).
+Puoi acquisire i dati dei rapporti sui visualizzatori simultanei utilizzando le [_*API di Analytics 2.0*_](https://www.adobe.io/apis/experiencecloud/analytics/docs.html).
 
-1. Filtra i dati utilizzando qualsiasi segmento generato nell’interfaccia utente. Per filtrare in base a un ID contenuto specifico, crea un nuovo segmento.
-1. Imposta la `elements` -> `id` nel corpo della richiesta a `metrics/concurrent_viewers_visitors`.
+1. Filtra i dati utilizzando qualsiasi segmento generato nell’interfaccia utente. Per filtrare secondo un ID di contenuto specifico, crea un nuovo segmento.
+1. Imposta `elements` -> `id` nel corpo della richiesta su `metrics/concurrent_viewers_visitors`.
 1. Richiedi una quantità sufficiente di dati.
 
-   * L’intervallo di dati specificato nel rapporto raccoglie tutti i dati del visualizzatore simultaneo _al termine della sessione video._
-Devi tenere conto delle sessioni che iniziano in un giorno e terminano dopo la mezzanotte, che è il giorno successivo.
+   * L’intervallo di dati specificato nel rapporto raccoglie tutti i dati sui visualizzatori simultanei _nel momento in cui termina la sessione video._
+Devi tenere conto delle sessioni che iniziano in un giorno e terminano dopo la mezzanotte, cioè il giorno successivo.
 
-   * Richiedi un altro giorno di dati al periodo previsto nella tua richiesta, ma nella tua analisi _*utilizzare solo i dati previsti.*_
+   * Richiedi dati per una giornata in più rispetto al periodo previsto per la tua richiesta, ma nella tua analisi _*utilizza solo i dati previsti.*_
 
-Un payload di richiesta di esempio per un giorno di dati sarà simile al seguente esempio. La richiesta viene effettuata per 2 giorni consecutivi ma nel reporting si utilizza solo il primo giorno.
+Un payload di richiesta per i dati di una giornata sarà simile al seguente esempio. La richiesta viene effettuata per 2 giorni consecutivi, ma nel reporting utilizzerai solo il primo giorno.
 
 ## Richiesta di esempio
 
