@@ -6,29 +6,29 @@ exl-id: fcea2ef8-53c5-41fb-8b70-06599c2d9cbf
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
-workflow-type: tm+mt
-source-wordcount: '119'
-ht-degree: 2%
+workflow-type: ht
+source-wordcount: '117'
+ht-degree: 100%
 
 ---
 
-# Tracciamento buffering su Android{#track-buffering-on-android}
+# Tracciare il buffering su Android {#track-buffering-on-android}
 
-Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione in tutti gli SDK 2.x.
+Le istruzioni seguenti forniscono indicazioni per l’implementazione con tutti gli SDK 2.x.
 
 >[!IMPORTANT]
->Se implementi una versione 1.x dell&#39;SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scarica SDks.](/help/sdk-implement/download-sdks.md)
+>Se implementi una versione 1.x dell’SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scarica SDK.](/help/sdk-implement/download-sdks.md)
 
 ## Costanti di tracciamento del buffer
 
 | Nome costante | Descrizione     |
 |---|---|
-| `MediaHeartbeat.Event.BufferStart` | Costante per il tracciamento dell’evento Buffer Start |
-| `MediaHeartbeat.Event.BufferComplete` | Costante per il tracciamento dell’evento Buffer Complete |
+| `MediaHeartbeat.Event.BufferStart` | Costante per il tracciamento dell’evento di avvio del buffer |
+| `MediaHeartbeat.Event.BufferComplete` | Costante per il tracciamento dell’evento di completamento del buffer |
 
 ## Implementare il buffering
 
-1. Ascoltare gli eventi di buffering di riproduzione dal lettore multimediale e nella notifica dell&#39;evento di avvio del buffer, tenere traccia del buffering utilizzando l&#39;evento `BufferStart`:
+1. Ascolta gli eventi di buffering di riproduzione dal lettore multimediale, e sulla notifica evento di avvio del buffer, tieni traccia del buffering utilizzando l’evento `BufferStart`:
 
    ```java
    public void onBufferStart(Observable observable, Object data) {  
@@ -36,7 +36,7 @@ Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione in tutti
    }
    ```
 
-1. Al momento della notifica completa del buffer da parte del lettore multimediale, tieni traccia della fine del buffering utilizzando l&#39;evento `BufferComplete` :
+1. Al momento della notifica di completamento del buffer da parte del lettore multimediale, tieni traccia della fine del buffering utilizzando l’evento `BufferComplete`:
 
    ```java
    public void onBufferComplete(Observable observable, Object data) {  
@@ -44,4 +44,4 @@ Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione in tutti
    }
    ```
 
-Per ulteriori informazioni, consulta lo scenario di tracciamento [Riproduzione VOD con buffering](/help/sdk-implement/tracking-scenarios/vod-buffering.md) .
+Esamina lo scenario di tracciamento [Riproduzione VOD con buffering](/help/sdk-implement/tracking-scenarios/vod-buffering.md) per ulteriori informazioni.
