@@ -1,24 +1,24 @@
 ---
-title: Invio di eventi ping
-description: Gli eventi ping sono l'heartbeat di Streaming Media Analytics. Scopri come inviare un ping temporizzato per il contenuto principale o il tracciamento degli annunci.
+title: 'Invio di eventi ping '
+description: Gli eventi ping sono l’heartbeat di Streaming Media Analytics. Scopri come inviare un ping temporizzato per il contenuto principale o il tracciamento degli annunci.
 uuid: c92c1a92-3af6-4474-9e42-ffb8f6c94b33
 exl-id: 0a645363-26d5-41e7-aa16-c775253e2b1d
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
-workflow-type: tm+mt
-source-wordcount: '110'
-ht-degree: 4%
+workflow-type: ht
+source-wordcount: '108'
+ht-degree: 100%
 
 ---
 
-# Invio di eventi ping{#sending-ping-events}
+# Invio di eventi ping {#sending-ping-events}
 
-**Per il contenuto principale, è necessario attivare gli eventi di ping ogni 10 secondi, a partire da dopo 10 secondi di riproduzione, indipendentemente dagli altri eventi API inviati. Per il tracciamento degli annunci, è necessario attivare gli eventi di ping ogni 1 secondo.**
+**Per il contenuto principale, è necessario attivare gli eventi ping ogni 10 secondi, dopo i primi 10 secondi di riproduzione, indipendentemente dagli altri eventi API inviati. Per il tracciamento degli annunci, devi attivare gli eventi ping ogni 1 secondo.**
 
-Gli eventi ping sono letteralmente il &quot;battito cardiaco&quot; di Media Analytics. Gli unici parametri richiesti per una chiamata ping sono `eventType: ping` insieme all&#39;oggetto `playerTime` (posizione della testina di riproduzione e marca temporale).
+Gli eventi ping sono letteralmente gli “heartbeat” di Media Analytics. Gli unici parametri richiesti per una chiamata ping sono `eventType: ping` insieme all’oggetto `playerTime` (posizione della testina di riproduzione e marca temporale).
 
-Il seguente frammento di codice mostra un modo per implementare un meccanismo di ping temporizzato per il contenuto principale (10 secondi di intervallo):
+Il seguente frammento di codice mostra un modo per implementare un meccanismo di ping temporizzato per il contenuto principale (ogni 10 secondi):
 
 ```js
 ... 
