@@ -1,20 +1,20 @@
 ---
-title: Panoramica dei contenuti multimediali
-description: Utilizza il dashboard Panoramica file multimediali per visualizzare le misurazioni degli aggregati. Scopri come monitorare rapidamente le prestazioni dei contenuti multimediali.
+title: 'Panoramica contenuti multimediali '
+description: Utilizza la dashboard Panoramica file multimediali per visualizzare le misurazioni degli aggregati. Scopri come monitorare rapidamente le prestazioni dei contenuti multimediali.
 uuid: bdbd998f-9b5e-40c9-a8ea-12dfa5acd35c
 exl-id: 4fe91372-da41-44c5-bea9-2bba762512ef
-feature: '"Informazioni di base su Media Analytics, Reports & Analytics"'
+feature: Media Analytics, Reports & Analytics Basics
 role: User, Admin, Data Engineer
 source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
-workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '107'
+ht-degree: 100%
 
 ---
 
-# Panoramica dei contenuti multimediali{#media-overview}
+# Panoramica contenuti multimediali {#media-overview}
 
-Il dashboard Panoramica file multimediali è progettato per consentire il monitoraggio dei contenuti multimediali nel sito. La visualizzazione Panoramica file multimediali mostra diverse misurazioni aggregate in modo da poter monitorare rapidamente le prestazioni del supporto come previsto. Un grafico mostra il contenuto che inizia accanto ad e inizia a consentirti di visualizzare rapidamente queste metriche per ogni elemento multimediale.
+La dashboard Panoramica file multimediali è progettata per consentire il monitoraggio dei contenuti multimediali nel sito. La visualizzazione Panoramica file multimediali mostra diverse misurazioni aggregate in modo da poter monitorare rapidamente le prestazioni del supporto come previsto. Un grafico mostra il contenuto che inizia accanto all’inizio dell’annuncio e ti consente di visualizzare rapidamente queste metriche per ogni elemento multimediale.
 
 ![](assets/media_overview.png)
 
@@ -24,7 +24,7 @@ Il dashboard Panoramica file multimediali è progettato per consentire il monito
 
 ## Filtri rapidi {#quick-filters}
 
-Visualizzare rapidamente le metriche dei contenuti multimediali in base al dispositivo o al paese geografico:
+Visualizza rapidamente le metriche dei contenuti multimediali in base al dispositivo o al paese geografico:
 
 ![](assets/video-overview-report-filters.png)
 
