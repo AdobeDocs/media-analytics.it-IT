@@ -1,25 +1,25 @@
 ---
-title: Dashboard e report di debug
-description: Scopri l’Adobe dei dashboard di debug.
+title: 'Dashboard e rapporti di debug '
+description: Scopri le dashboard di debug di Adobe.
 uuid: 8e6f6245-d8bd-4329-89e1-4c5595e04ec5
 exl-id: fc5590a5-4d0e-4a2d-8f40-54c53eabc6f0
-feature: '"Dashboard di Media Analytics e Analytics"'
+feature: Media Analytics, Analytics Dashboards
 role: User, Admin, Data Engineer
 source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
-workflow-type: tm+mt
-source-wordcount: '86'
-ht-degree: 4%
+workflow-type: ht
+source-wordcount: '82'
+ht-degree: 100%
 
 ---
 
-# Dashboard e report di debug{#debug-dashboards-and-reports}
+# Dashboard e rapporti di debug {#debug-dashboards-and-reports}
 
-Adobe Debug fornisce il reporting in tempo reale, in modo da visualizzare gli hit e i metadati che vengono inviati durante la riproduzione del video. Ognuno di questi report può essere salvato in Debug.
+Adobe Debug fornisce dati di reporting in tempo reale e consente di visualizzare gli hit e i metadati che vengono inviati durante la riproduzione del video. Ciascuno di questi rapporti può essere salvato in Debug.
 
-Per la certificazione, questi rapporti possono essere condivisi semplicemente copiando l’URL e inviando il collegamento, ad esempio, all’interno di un ticket ZenDesk.
+Per la certificazione, questi rapporti possono essere condivisi semplicemente copiando l’URL e inviando il collegamento, ad esempio, in un ticket Zendesk.
 
 >[!NOTE]
 >
->È possibile attivare una sola sessione alla volta. La sessione attiva può essere aperta dal dashboard.
+>Può essere attiva una sola sessione alla volta. La sessione attiva può essere aperta dalla dashboard.
 
 ![](assets/debug-dashboard.png)
