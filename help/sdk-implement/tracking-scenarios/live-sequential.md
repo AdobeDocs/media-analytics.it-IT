@@ -1,35 +1,35 @@
 ---
-title: Contenuto principale live con tracciamento sequenziale
+title: 'Contenuto principale live con tracciamento sequenziale '
 description: Visualizza un esempio di come tracciare il contenuto live con il tracciamento sequenziale utilizzando Media SDK.
 uuid: b03477b6-9be8-4b67-a5a0-4cef3cf262ab
 exl-id: 277a72b8-453b-41e5-b640-65c43587baf8
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
-workflow-type: tm+mt
-source-wordcount: '521'
-ht-degree: 6%
+workflow-type: ht
+source-wordcount: '519'
+ht-degree: 100%
 
 ---
 
-# Contenuto principale live con tracciamento sequenziale{#live-main-content-with-sequential-tracking}
+# Contenuto principale live con tracciamento sequenziale {#live-main-content-with-sequential-tracking}
 
 ## Scenario {#scenario}
 
-In questo scenario, esiste una risorsa live senza annunci riprodotti per 40 secondi dopo l’unione del flusso live.
+In questo scenario, esiste una risorsa live senza annunci riprodotta per 40 secondi dopo l’unione del flusso live.
 
-Questo è lo stesso scenario della riproduzione [VOD senza scenari di annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md), ma una parte del contenuto viene scorrevole e una ricerca viene completata da un punto del contenuto principale a un altro punto.
+Questo è lo stesso scenario della [riproduzione VOD senza annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md), ma una parte del contenuto viene eliminata e una ricerca viene completata da un punto del contenuto principale a un altro punto.
 
-| Attivatore | metodo Heartbeat |  Chiamate di rete  |  Note   |
+| Trigger | metodo Heartbeat |  Chiamate di rete  |  Note   |
 | --- | --- | --- | --- |
-| Clic utente [!UICONTROL Play] | trackSessionStart | Inizio contenuto Analytics, inizio contenuto Heartbeat | La libreria di misurazione non è a conoscenza dell&#39;esistenza di un annuncio pre-roll, pertanto queste chiamate di rete sono identiche alla riproduzione [VOD senza scenari di annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md). |
-| Viene riprodotto il primo fotogramma del contenuto. | trackPlay | Riproduzione di contenuti Heartbeat | Quando il contenuto del capitolo viene riprodotto prima del contenuto principale, gli heartbeat iniziano quando il capitolo inizia. |
-| Riproduzione di contenuti |  | heartbeat di contenuto | Questa chiamata di rete è esattamente la stessa della riproduzione [VOD senza annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario. |
-| Interruzione sessione1 (Episodio1 terminato) | trackComplete / trackSessionEnd | Contenuto Heartbeat completato | Completa significa sessione1 per il primo episodio è stato raggiunto e guardato completamente. Prima di iniziare la sessione per l&#39;episodio successivo, questa sessione deve essere terminata. |
-| Episodio2 avviato (Avvio sessione2) | trackSessionStart | Inizio contenuto Heartbeat di Analytics | Questo perché l&#39;utente ha visto il primo episodio e ha continuato a guardare in un altro episodio |
-| 1° frame dei supporti | trackPlay | Riproduzione di contenuti Heartbeat | Questo metodo attiva il timer e da questo momento in poi, gli heartbeat verranno inviati ogni 10 secondi, a condizione che la riproduzione continui. |
-| Riproduzione dei contenuti |  | heartbeat di contenuto |  |
-| Interruzione sessione (Episodio 2 terminato) | trackComplete / trackSessionEnd | Contenuto Heartbeat completato | Completa significa sessione2 per il secondo episodio è stato raggiunto e guardato completamente. Prima di iniziare la sessione per l&#39;episodio successivo, questa sessione deve essere terminata. |
+| L’utente fa clic su [!UICONTROL Play] | trackSessionStart | Inizio contenuto Analytics, inizio contenuto Heartbeat | La libreria di misurazione non è a conoscenza dell’esistenza di un annuncio pre-roll, pertanto queste chiamate di rete sono identiche allo scenario [riproduzione VOD senza annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md). |
+| Viene riprodotto il primo fotogramma del contenuto. | trackPlay | Riproduzione di contenuti Heartbeat | Quando il contenuto del capitolo viene riprodotto prima del contenuto principale, gli heartbeat partono all’inizio del capitolo. |
+| Riproduzione dei contenuti |  | Heartbeat dei contenuti | Questa chiamata di rete è esattamente la stessa dello scenario [riproduzione VOD senza annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md). |
+| Sessione1 terminata (Episodio1 finito) | trackComplete / trackSessionEnd | Contenuto Heartbeat completato | Completata significa che la sessione1 del primo episodio è stata raggiunta e guardata completamente. Prima di iniziare la sessione dell’episodio successivo, questa sessione deve essere terminata. |
+| Episodio2 avviato (inizio Sessione2) | trackSessionStart | Avvio contenuto Analytics avvio contenuto Heartbeat | Questo perché l’utente ha visto il primo episodio e ha continuato a guardare un altro episodio |
+| 1° fotogramma dell’elemento multimediale | trackPlay | Riproduzione di contenuti Heartbeat | Questo metodo attiva il timer e da questo momento in poi, gli heartbeat verranno inviati ogni 10 secondi, a condizione che la riproduzione continui. |
+| Riproduzione dei contenuti |  | Heartbeat dei contenuti |  |
+| Sessione terminata (Episodio2 finito) | trackComplete / trackSessionEnd | Contenuto Heartbeat completato | Completa significa che la Sessione2 del secondo episodio è stata raggiunta e guardata completamente. Prima di iniziare la sessione dell’episodio successivo, questa sessione deve essere terminata. |
 
 ## Parametri {#parameters}
 
@@ -37,38 +37,38 @@ Questo è lo stesso scenario della riproduzione [VOD senza scenari di annunci](/
 
 | Parametro | Valore | Note |
 |---|---|---|
-| `s:sc:rsid` | &lt;your Adobe=&quot;&quot; Report=&quot;&quot; Suite=&quot;&quot; ID=&quot;&quot;> |  |
-| `s:sc:tracking_serve` | &lt;your Analytics=&quot;&quot; Tracking=&quot;&quot; Server=&quot;&quot; URL=&quot;&quot;> |  |
+| `s:sc:rsid` | &lt;ID suite di rapporti Adobe> |  |
+| `s:sc:tracking_serve` | &lt;URL del server di tracciamento di Analytics> |  |
 | `s:user:mid` | `s:user:mid` | Deve corrispondere al valore mid nella chiamata di avvio del contenuto di Adobe Analytics |
 | `s:event:type` | `"start"` |  |
 | `s:asset:type` | `"main"` |  |
-| `s:asset:media_id` | &lt;your Media=&quot;&quot; Name=&quot;&quot;> |  |
+| `s:asset:media_id` | &lt;Nome contenuto multimediale> |  |
 | `s:stream:type` | `live` |  |
-| `s:meta:*` | *facoltativo* | Metadati personalizzati impostati sul supporto |
+| `s:meta:*` | *facoltativo* | Metadati personalizzati impostati sull’elemento multimediale |
 
 ## Riproduzione di contenuti Heartbeat {#heartbeat-content-play}
 
-Questo dovrebbe assomigliare quasi esattamente alla chiamata di avvio del contenuto Heartbeat, ma con la differenza chiave nel parametro &quot;s:event:type&quot;. Tutti i parametri devono essere ancora presenti qui.
+Questo dovrebbe assomigliare quasi esattamente alla chiamata di avvio del contenuto Heartbeat, ma con la differenza chiave nel parametro “s:event:type”. Qui devono essere ancora presenti tutti i parametri.
 
 | Parametro | Valore | Note |
 |---|---|---|
 | `s:event:type` | `"play"` |  |
 | `s:asset:type` | `"main"` |  |
 
-## heartbeat di contenuto {#content-heartbeats}
+## Heartbeat dei contenuti {#content-heartbeats}
 
-Durante la riproduzione dei contenuti multimediali, è presente un timer che invia uno o più heartbeat ogni 10 secondi per i contenuti principali e ogni secondo per gli annunci. Questi heartbeat conterranno informazioni su riproduzione, annunci pubblicitari, buffering e molti altri elementi. Il contenuto esatto di ogni heartbeat va oltre l&#39;ambito di questo documento, la cosa fondamentale da convalidare è che gli heartbeat vengono attivati in modo coerente mentre la riproduzione continua.
+Durante la riproduzione dei contenuti multimediali, è presente un timer che invia uno o più heartbeat ogni 10 secondi per i contenuti principali e ogni secondo per gli annunci. Questi heartbeat contengono informazioni su riproduzione, annunci, buffering e molti altri elementi. Il contenuto esatto di ogni heartbeat va oltre l’ambito di questo documento, la cosa fondamentale da convalidare è che gli heartbeat vengano attivati in modo coerente mentre la riproduzione continua.
 
 Negli heartbeat dei contenuti, cerca alcuni aspetti specifici:
 
 | Parametro | Valore | Note |
 |---|---|---|
 | `s:event:type` | `"play"` |  |
-| `l:event:playhead` | &lt;playhead position=&quot;&quot;> ad esempio 50, 60, 70 | Ciò dovrebbe riflettere la posizione attuale del playhead. |
+| `l:event:playhead` | &lt;posizione testina di riproduzione> ad esempio 50, 60, 70 | Ciò dovrebbe riflettere la posizione attuale della testina di riproduzione. |
 
 ## Contenuto Heartbeat completato {#heartbeat-content-complete}
 
-Al termine della riproduzione di un dato episodio (la testina di riproduzione attraversa il limite degli episodi), viene inviata una chiamata a completamento del contenuto di Heartbeat. Questo assomiglia ad altre chiamate Heartbeat, ma contiene un paio di cose specifiche:
+Al termine della riproduzione di un dato episodio (la testina di riproduzione attraversa il limite degli episodi), viene inviata una chiamata a completamento del contenuto di Heartbeat. Questa assomiglia ad altre chiamate Heartbeat, ma contiene un paio di cose specifiche:
 
 | Parametro | Valore | Note |
 |---|---|---|
