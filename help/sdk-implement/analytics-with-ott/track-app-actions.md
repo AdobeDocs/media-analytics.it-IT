@@ -1,26 +1,26 @@
 ---
-title: Tracciamento azioni eseguite nell’app
-description: Le azioni eseguite nell’app sono gli eventi che si verificano nell’app e che desideri misurare.
+title: 'Tracciare le azioni eseguite nell’app '
+description: Per azioni eseguite nell’app si intendono gli eventi che si verificano nell’app oggetto delle misurazioni.
 uuid: 9cdc048a-419a-4725-bd61-6ca6d909cf10
 exl-id: 88b7d540-67b7-4ec1-8273-02e34853bf60
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
-workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 29%
+workflow-type: ht
+source-wordcount: '132'
+ht-degree: 100%
 
 ---
 
-# Tracciare le azioni eseguite nell’app{#track-app-actions}
+# Tracciare le azioni eseguite nell’app {#track-app-actions}
 
 Le azioni sono gli eventi che si verificano nell’app che desideri misurare.
 
-Ogni azione ha una o più metriche corrispondenti che vengono incrementate ogni volta che si verifica l’evento. Ad esempio, puoi inviare una chiamata `trackAction` per ogni nuovo abbonamento, ogni volta che il contenuto viene valutato o ogni volta che viene completato un livello.
+Ogni azione ha una o più metriche corrispondenti che vengono incrementate ogni volta che si verifica l’evento. Ad esempio, puoi inviare una chiamata `trackAction` per ciascun nuovo abbonamento, ogni volta che viene visualizzato un articolo oppure ogni volta che viene completato un livello.
 
-Le azioni non vengono tracciate automaticamente, quindi chiama `trackAction` quando si verifica un evento che desideri tracciare e mappa l&#39;azione a un evento personalizzato.
+Le azioni non vengono tracciate automaticamente, pertanto devi chiamare `trackAction` quando si verifica un evento che desideri tracciare e mappare l’azione a un evento personalizzato.
 
-1. Quando si verifica un evento di cui desideri tenere traccia, invoca `trackAction`.
+1. Quando si verifica un evento di cui desideri tenere traccia, chiama `trackAction`.
 
    * **Roku:**
 
