@@ -1,39 +1,39 @@
 ---
 title: Confronto tra codici v1.x e v2.x
-description: Scopri la differenza tra il codice nelle versioni 1.x e 2.x dell’SDK Media.
+description: Scopri la differenza tra il codice nelle versioni 1.x e 2.x di Media SDK.
 uuid: 9f0a1660-2100-446d-ab75-afdf966478b3
 exl-id: c2324c6a-329f-44e2-bea0-9d43ef9c6ef7
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
-workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 2%
+workflow-type: ht
+source-wordcount: '570'
+ht-degree: 100%
 
 ---
 
-# Confronto dei codici: da 1.x a 2.x {#code-comparison-x-to-x}
+# Confronto tra codici: da 1.x a 2.x {#code-comparison-x-to-x}
 
-Tutti i parametri di configurazione e le API di tracciamento sono ora consolidati nelle classi `MediaHeartbeats` e `MediaHeartbeatConfig` .
+Tutti i parametri di configurazione e le API di tracciamento sono ora consolidati nelle classi `MediaHeartbeats` e `MediaHeartbeatConfig`.
 
-**Modifiche all&#39;API di configurazione:**
+**Modifiche all’API di configurazione:**
 
-* `AdobeHeartbeatPluginConfig.sdk` - Rinominato in  `MediaConfig.appVersion`
-* `MediaHeartbeatConfig.playerName` - Ora imposta  `MediaHeartbeatConfig` invece di  `VideoPlayerPluginDelegate`
-* (Solo per JavaScript): L’ `AppMeasurement` istanza - Ora inviata tramite il costruttore `MediaHeartbeat` .
+* `AdobeHeartbeatPluginConfig.sdk` è stato rinominato `MediaConfig.appVersion`
+* `MediaHeartbeatConfig.playerName` adesso è impostato tramite `MediaHeartbeatConfig` anziché `VideoPlayerPluginDelegate`
+* (Solo per JavaScript): l’istanza `AppMeasurement` adesso è inviata tramite il generatore `MediaHeartbeat`.
 
 **Modifiche alle proprietà di configurazione:**
 
-* `sdk` - Rinominato in  `appVersion`
-* `publisher` - asportato; L&#39;ID organizzazione di Experience Cloud viene utilizzato come editore
-* `quiteMode` - Rimosso
+* `sdk` è stato rinominato `appVersion`
+* `publisher` è stato rimosso. L’ID organizzazione di Experience Cloud viene utilizzato come editore
+* `quiteMode` è stato rimosso
 
 **Collegamenti ai lettori di esempio 1.x e 2.x:**
 
-* [Lettore di esempio 1.x  ](https://github.com/Adobe-Marketing-Cloud/video-heartbeat/blob/master/sdks/js/samples/BasicPlayerSample/script/app/analytics/video.analytics.provider.js#L58)
-* [Lettore di esempio 2.x  ](https://github.com/Adobe-Marketing-Cloud/media-sdks/blob/master/sdks/js/2.x/samples/BasicPlayerSample/script/app/analytics/video.analytics.provider.js#L47)
+* [Lettore di esempio 1.x ](https://github.com/Adobe-Marketing-Cloud/video-heartbeat/blob/master/sdks/js/samples/BasicPlayerSample/script/app/analytics/video.analytics.provider.js#L58)
+* [Lettore di esempio 2.x ](https://github.com/Adobe-Marketing-Cloud/media-sdks/blob/master/sdks/js/2.x/samples/BasicPlayerSample/script/app/analytics/video.analytics.provider.js#L47)
 
-Le sezioni seguenti forniscono confronti di codice tra 1.x e 2.x, inclusi Inizializzazione, Riproduzione di base, Riproduzione di annunci, Riproduzione di capitoli e alcuni eventi aggiuntivi.
+Le sezioni seguenti forniscono confronti di codice tra 1.x e 2.x, inclusi l’Inizializzazione, la Riproduzione core, la Riproduzione di annunci, la Riproduzione di capitoli e alcuni eventi aggiuntivi.
 
 ## Confronto tra codici VHL: INIZIALIZZAZIONE
 
@@ -132,7 +132,7 @@ SampleVideoPlayerPluginDelegate.prototype.getQoSInfo = function() {
 };
 ```
 
-#### Adobe AnalyticsPluginDelegate (1.x) {#analytics-plugin-delegate-1.x}
+#### AdobeAnalyticsPluginDelegate (1.x) {#analytics-plugin-delegate-1.x}
 
 ```js
 $.extend(SampleAdobeAnalyticsPluginDelegate.prototype, AdobeAnalyticsPluginDelegate.prototype);
@@ -176,7 +176,7 @@ SampleMediaHeartbeatDelegate.prototype.getQoSObject = function() {
 this._mediaHeartbeat = new MediaHeartbeat(new SampleMediaHeartbeatDelegate(this._player), mediaConfig, appMeasurement);
 ```
 
-## Confronto tra codici VHL: RIPRODUZIONE PRINCIPALE
+## Confronto tra codici VHL: RIPRODUZIONE CORE
 
 ### Avvio sessione
 
@@ -266,7 +266,7 @@ VideoAnalyticsProvider.prototype._onLoad = function() {
 ```
 
 >[!NOTE]
->Invece di impostare i metadati video standard tramite l’ `AdobeAnalyticsPlugin.setVideoMetadata()` API, in VHL 2.0 i metadati video standard vengono impostati tramite la chiave MediaObject `MediaObject.MediaObjectKey.StandardVideoMetadata()`.
+>Invece di impostare i metadati video standard tramite l’API `AdobeAnalyticsPlugin.setVideoMetadata()` in VHL 2.0, i metadati video standard sono impostati tramite la chiave MediaObject `MediaObject.MediaObjectKey.StandardVideoMetadata()`.
 
 ### Metadati video personalizzati
 
@@ -306,7 +306,7 @@ VideoAnalyticsProvider.prototype._onLoad = function() {
 ```
 
 >[!NOTE]
->Invece di impostare i metadati video personalizzati tramite l’ `AdobeAnalyticsPlugin.setVideoMetadata()` API, in VHL 2.0 i metadati video standard vengono impostati tramite l’ `MediaHeartbeat.trackSessionStart()` API .
+>Invece di impostare i metadati video personalizzati tramite l’API `AdobeAnalyticsPlugin.setVideoMetadata()` in VHL 2.0, i metadati video standard sono impostati tramite l’API `MediaHeartbeat.trackSessionStart()`.
 
 
 ### Riproduzione
@@ -455,9 +455,9 @@ VideoAnalyticsProvider.prototype._onComplete = function() {
 };
 ```
 
-## Confronto tra codici VHL: RIPRODUZIONE ANNUNCI
+## Confronto tra codici VHL: RIPRODUZIONE ANNUNCIO
 
-### Inizio annuncio
+### Avvio annuncio
 
 | VHL 1.x | VHL 2.x |
 | --- | --- |
@@ -552,7 +552,7 @@ VideoAnalyticsProvider.prototype._onAdStart = function() {
 ```
 
 >[!NOTE]
->Invece di impostare i metadati standard dell’annuncio tramite l’API `AdobeAnalyticsPlugin.setVideoMetadata()`, in VHL 2.0 i metadati standard dell’annuncio vengono impostati tramite la chiave `AdMetadata` `MediaObject.MediaObjectKey.StandardVideoMetadata`
+>Invece di impostare i metadati standard dell’annuncio tramite l’API `AdobeAnalyticsPlugin.setVideoMetadata()` in VHL 2.0, i metadati dell’annuncio standard sono impostati tramite `AdMetadata` chiave `MediaObject.MediaObjectKey.StandardVideoMetadata`
 
 ### Metadati annuncio personalizzati
 
@@ -603,7 +603,7 @@ VideoAnalyticsProvider.prototype._onAdStart = function() {
 ```
 
 >[!NOTE]
->Invece di impostare i metadati dell’annuncio personalizzato tramite l’API `AdobeAnalyticsPlugin.setVideoMetadata`, in VHL 2.0 i metadati dell’annuncio standard vengono impostati tramite l’ `MediaHeartbeat.trackAdStart()` API .
+>Invece di impostare i metadati dell’annuncio personalizzato tramite l’API `AdobeAnalyticsPlugin.setVideoMetadata` in VHL 2.0, i metadati dell’annuncio standard sono impostati tramite l’API `MediaHeartbeat.trackAdStart()`.
 
 ### Salta annuncio
 
@@ -612,7 +612,7 @@ VideoAnalyticsProvider.prototype._onAdStart = function() {
 | `AdobeAnalyticsPlugin.setAdMetadata()` | `MediaHeartbeat.createAdObject()` |
 |  | `MediaHeartbeat.trackAdStart()` |
 
-#### Salto annuncio (1.x) {#ad-skip-1.x}
+#### Salta annuncio (1.x) {#ad-skip-1.x}
 
 ```js
 SampleVideoPlayerPluginDelegate.prototype.getAdInfo = function() { 
@@ -620,7 +620,7 @@ SampleVideoPlayerPluginDelegate.prototype.getAdInfo = function() {
 };
 ```
 
-#### Salto annuncio (2.x) {#ad-skip-2.x}
+#### Salta annuncio (2.x) {#ad-skip-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onAdSkip = function() { 
@@ -630,7 +630,7 @@ VideoAnalyticsProvider.prototype._onAdSkip = function() {
 ```
 
 >[!NOTE]
->Nelle API VHL 1.5.X; `getAdinfo()` e `getAdBreakInfo()` devono restituire null se il lettore si trova al di fuori dei limiti di interruzione annuncio.
+>Nelle API VHL 1.5.X, `getAdinfo()` e `getAdBreakInfo()` devono restituire null se il lettore si trova al di fuori dei limiti di interruzione dell’annuncio.
 
 ### Annuncio completato
 
@@ -639,7 +639,7 @@ VideoAnalyticsProvider.prototype._onAdSkip = function() {
 | `VideoPlayerPlugin.trackAdComplete()` | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.AdComplete)` |
 |  | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.AdBreakComplete)` |
 
-#### Annuncio completo (1.x) {#ad-complete-1.x}
+#### Annuncio completato (1.x) {#ad-complete-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onAdComplete = function() { 
@@ -648,7 +648,7 @@ VideoAnalyticsProvider.prototype._onAdComplete = function() {
 };
 ```
 
-#### Annuncio completo (2.x) {#ad-complete-2.x}
+#### Annuncio completato (2.x) {#ad-complete-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onAdComplete = function() { 
@@ -696,13 +696,13 @@ VideoAnalyticsProvider.prototype._onChapterStart = function() {
 };
 ```
 
-### Salto capitolo
+### Salta capitolo
 
 | API 1.x | API 2.x |
 | --- | --- |
 | `VideoPlayerPluginDelegate.getChapterInfo()` | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.ChapterSkip)` |
 
-#### Salto capitolo (1.x) {#chap-skip-1.x}
+#### Salta capitolo (1.x) {#chap-skip-1.x}
 
 ```js
 SampleVideoPlayerPluginDelegate.prototype.getChapterInfo = function() { 
@@ -711,9 +711,9 @@ SampleVideoPlayerPluginDelegate.prototype.getChapterInfo = function() {
 ```
 
 >[!NOTE]
->Nelle API VHL 1.5.X; `getChapterinfo()` deve restituire null se il lettore si trova al di fuori dei limiti del capitolo.
+>Nelle API VHL 1.5.X, `getChapterinfo()` deve restituire null se il lettore si trova al di fuori dei limiti del capitolo.
 
-#### Salto capitolo (2.x) {#chap-skip-2.x}
+#### Salta capitolo (2.x) {#chap-skip-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onChapterSkip = function() { 
@@ -721,14 +721,14 @@ VideoAnalyticsProvider.prototype._onChapterSkip = function() {
 };
 ```
 
-### Capitolo Metadati personalizzati
+### Metadati personalizzati del capitolo
 
 | API 1.x | API 2.x |
 | --- | --- |
 | `VideoPlayerPlugin.trackChapterStart()` | `MediaHeartbeat.createChapterObject()` |
 | `AdobeAnalyticsPlugin.setChapterMetadata()` | `MediaHeartbeat.trackEvent(`<br/><br/>  `MediaHeartbeat.Event.ChapterStart)` |
 
-#### Capitolo Metadati personalizzati (1.x) {#chap-cust-meta-1.x}
+#### Metadati personalizzati del capitolo (1.x) {#chap-cust-meta-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onChapterStart = function() { 
@@ -740,7 +740,7 @@ VideoAnalyticsProvider.prototype._onChapterStart = function() {
 };
 ```
 
-#### Capitolo Metadati personalizzati (2.x) {#chap-cust-meta-2.x}
+#### Metadati personalizzati del capitolo (2.x) {#chap-cust-meta-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onChapterStart = function() { 
@@ -756,13 +756,13 @@ VideoAnalyticsProvider.prototype._onChapterStart = function() {
 };
 ```
 
-### Capitolo Completo
+### Capitolo completato
 
 | API 1.x | API 2.x |
 | --- | --- |
 | `trackChapterComplete()` | `trackEvent(MediaHeartbeat.Event.ChapterComplete)` |
 
-#### Capitolo completo (1.x) {#chap-complete-1.x}
+#### Capitolo completato (1.x) {#chap-complete-1.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onChapterComplete = function() { 
@@ -771,7 +771,7 @@ VideoAnalyticsProvider.prototype._onChapterComplete = function() {
 };
 ```
 
-#### Capitolo completo (2.x) {#chap-complete-2.x}
+#### Capitolo completato (2.x) {#chap-complete-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onChapterComplete = function() { 
@@ -810,7 +810,7 @@ VideoAnalyticsProvider.prototype._onBitrateChange = function() {
 };
 ```
 
-### Ripresa video
+### Riprendi video
 
 | API 1.x | API 2.x |
 | --- | --- |
@@ -818,7 +818,7 @@ VideoAnalyticsProvider.prototype._onBitrateChange = function() {
 | `VideoPlayerPluginDelegate.getVideoInfo()` | `MediaHeartbeat.trackSessionStart()` |
 | `VideoPlayerPlugin.trackVideoLoad()` |  |
 
-#### Ripresa video (1.x) {#video-resume-1.x}
+#### Riprendi video (1.x) {#video-resume-1.x}
 
 ```js
 this._videoInfo.resumed=true;
@@ -831,7 +831,7 @@ VideoPlayer.prototype.getVideoInfo = function() {
 };
 ```
 
-#### Ripresa video (2.x) {#video-resume-2.x}
+#### Riprendi video (2.x) {#video-resume-2.x}
 
 ```js
 VideoAnalyticsProvider.prototype._onLoad = function() { 
@@ -844,4 +844,4 @@ VideoAnalyticsProvider.prototype._onLoad = function() {
 };
 ```
 
-Per ulteriori informazioni sul tracciamento dei video con 2.x, consulta la sezione su come [tracciare la riproduzione di video core.](/help/sdk-implement/track-av-playback/track-core-overview.md)
+Per ulteriori informazioni sul tracciamento dei video con 2.x, consulta la sezione [Tracciare la riproduzione di video di base.](/help/sdk-implement/track-av-playback/track-core-overview.md)
