@@ -1,18 +1,18 @@
 ---
-title: API Streaming Media Collection — Endpoint di richiesta delle sessioni
-description: '"Quali sono i parametri e le risposte dell’endpoint della richiesta delle sessioni API di Media Collection?"'
+title: API di Streaming Media Collection - Endpoint di richiesta sessioni
+description: “Quali sono i parametri e le risposte dell’endpoint della richiesta sessioni dell'API di Media Collection?”
 uuid: 9609192d-4f7f-4fb5-844f-ea89d47c4e30
 exl-id: f55f5838-610f-4f82-b3c5-72165ea2c86b
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: ef881900766be773256e2732953f7b63c5d488fa
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '130'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
-# Richiesta sessioni{#sessions-request}
+# Richiesta sessioni {#sessions-request}
 
 ```
 POST 
@@ -21,11 +21,11 @@ https://{uri}/api/v1/sessions
 
 ## Parametri URI
 
-None
+Nessuno
 
 ## Corpo della richiesta
 
-Il corpo della richiesta deve essere JSON e deve avere la stessa struttura del corpo della richiesta di esempio:
+Il corpo della richiesta deve essere in formato JSON e avere la stessa struttura del corpo della richiesta di esempio:
 
 ```
 { 
@@ -61,15 +61,15 @@ Il corpo della richiesta deve essere JSON e deve avere la stessa struttura del c
 }
 ```
 
-* `playerTime` (Obbligatorio)
-   * `playhead` - Se il contenuto è attivo, l&#39;indicatore di riproduzione deve essere il secondo del giorno corrente, 0  &lt;> Se il contenuto viene registrato, l&#39;indicatore di riproduzione deve essere il secondo di contenuto corrente, 0 &lt;= playhead &lt; lunghezza contenuto. Il valore può essere un numero a virgola mobile.
-   * `ts` - Timestamp; deve essere espresso in millisecondi; Ora universale coordinata (UTC).
-* `eventType` (Obbligatorio)
+* `playerTime` (obbligatorio)
+   * `playhead` - Se il contenuto è in diretta, l&#39;indicatore di riproduzione deve essere il secondo corrente del giorno, 0 &lt;= indicatore di riproduzione &lt; 86400. Se il contenuto è registrato, l&#39;indicatore di riproduzione deve essere il secondo corrente del contenuto, 0 &lt;= indicatore di riproduzione &lt; lunghezza contenuto. Il valore può essere un numero a virgola mobile.
+   * `ts` - Marca temporale; deve essere espresso in millisecondi; Coordinated Universal Time (UTC).
+* `eventType` (obbligatorio)
 
    **Valore valido:** `sessionStart`
-* `params` (Obbligatorio)
-* `customMetadata` (Facoltativo)
-* `qoeData` (Facoltativo)
+* `params` (obbligatorio)
+* `customMetadata` (facoltativo)
+* `qoeData` (facoltativo)
 
 ## Risposta
 
@@ -88,12 +88,12 @@ Age: 0
 Via: 1.1 wsg.sanjose08
 ```
 
-`Location:` header - La  `/api/v1/` parte fornisce la versione API. La parte dopo `[…]sessions/` è l’ID sessione.
+`Location:` intestazione - La parte `/api/v1/` fornisce la versione dell&#39;API. La parte dopo `[…]sessions/` è l&#39;ID sessione.
 
 ## Codici di risposta
 
 | Codice di risposta HTTP | Descrizione |
 |---|---|
 | 201 | Sessione creata |
-| 400 | Richiesta non valida |
+| 400 | Richiesta errata |
 | 500 | Errore del server |
