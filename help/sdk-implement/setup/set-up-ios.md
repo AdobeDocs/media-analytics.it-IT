@@ -6,35 +6,35 @@ exl-id: fe7662b5-1700-4bd6-b542-66aa8493459d
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: e10f705e135cc6b9c630059596994d12fc787866
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '739'
-ht-degree: 15%
+ht-degree: 100%
 
 ---
 
-# Configurazione iOS{#set-up-ios}
+# Configurazione iOS {#set-up-ios}
 
 Scopri come configurare Streaming Media Analytics per dispositivi iOS.
 
 >[!IMPORTANT]
 >
->Con la fine del supporto per gli SDK della versione 4 per dispositivi mobili il 31 agosto 2021, Adobe terminerà anche il supporto per l’SDK di Media Analytics per iOS e Android.  Per ulteriori informazioni, consulta [Domande frequenti sulla fine del supporto dell’SDK di Media Analytics](/help/sdk-implement/end-of-support-faqs.md).
+>Con la fine del supporto per gli SDK della versione 4 per dispositivi mobili il 31 agosto 2021, Adobe terminerà anche il supporto per l’SDK di Media Analytics per iOS e Android.  Per ulteriori informazioni, consulta [Domande frequenti relative alla fine del supporto dell’SDK di Media Analytics](/help/sdk-implement/end-of-support-faqs.md).
 
-## Prerequisiti
+## Prerequisiti 
 
-* **Ottenere parametri di configurazione validi per Media**
-SDKTquesti parametri possono essere ottenuti da un rappresentante di Adobe dopo aver configurato il tuo account di analisi.
-* **Implementa ADBMobile per iOS nell’**
-applicazione. Per ulteriori informazioni sull’SDK di Adobe Mobile, consulta SDK 4.x per  [iOS per le soluzioni Experience Cloud.](https://experienceleague.adobe.com/docs/mobile-services/ios/overview.html?lang=it)
+* **Ottenere parametri di configurazione validi per Media SDK**
+Questi parametri possono essere ottenuti da un rappresentante di Adobe dopo la configurazione dell’account di analisi.
+* **Implementare ADBMobile per iOS nella tua applicazione**
+Per ulteriori informazioni sulla documentazione dell’SDK di Adobe Mobile, consulta [SDK 4.x per iOS per le soluzioni Experience Cloud.](https://experienceleague.adobe.com/docs/mobile-services/ios/overview.html?lang=it)
 
    >[!IMPORTANT]
    >
-   >A partire da iOS 9, Apple ha introdotto una funzione chiamata App Transport Security (ATS). Questa funzione mira a migliorare la sicurezza della rete assicurando che le app utilizzino solo protocolli e crittografie standard del settore. Questa funzione è abilitata per impostazione predefinita, ma disponi di opzioni di configurazione che ti forniscono la possibilità di lavorare con ATS. Per informazioni dettagliate su ATS, consulta [App Transport Security.](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/app-transport-security.html)
+   >A partire da iOS 9, Apple ha introdotto una funzione denominata App Transport Security (ATS). Questa funzione mira a migliorare la sicurezza della rete assicurando che le app utilizzino solo protocolli e cifrature standard del settore. Questa funzione è abilitata per impostazione predefinita, ma disponi di opzioni di configurazione per scegliere come lavorare con ATS. Per maggiori dettagli su ATS, consulta [App Transport Security.](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/app-transport-security.html?lang=it)
 
 * **Fornisci le seguenti funzionalità nel lettore multimediale:**
 
-   * _Un’API per abbonarti agli eventi_  del lettore: l’SDK per contenuti multimediali richiede di chiamare un set di API semplici quando si verificano eventi nel lettore.
-   * _API che fornisce informazioni_  sul lettore. Queste informazioni includono dettagli quali il nome del contenuto multimediale e la posizione della testina di riproduzione.
+   * _API per abbonarsi agli eventi del lettore_: Media SDK richiede di chiamare un set di API semplici quando si verificano eventi nel lettore.
+   * _API che fornisce informazioni sul lettore_: queste informazioni includono dettagli quali il nome dell’elemento multimediale e la posizione della testina di riproduzione.
 
 ## Implementazione SDK
 
@@ -49,31 +49,31 @@ applicazione. Per ulteriori informazioni sull’SDK di Adobe Mobile, consulta SD
    * MediaSDK_TV.a > MediaSDKTV.xcframework
 * Se nel progetto devi aggiungere manualmente codice in formato Adobe XCFrameworks, questo non deve essere incorporato.
 
-1. Aggiungi il tuo [scaricato](/help/sdk-implement/download-sdks.md#download-2x-sdks) Media SDK al tuo progetto.
+1. Aggiungi il Media SDK [scaricato](/help/sdk-implement/download-sdks.md#download-2x-sdks) al progetto.
 
-   1. Verifica che nella directory `libs` siano presenti i seguenti componenti software:
+   1. Verifica che siano presenti i seguenti componenti software nella directory `libs`:
 
-      * `ADBMediaHeartbeat.h`: Il file di intestazione Objective-C utilizzato per le API di tracciamento heartbeat iOS.
-      * `ADBMediaHeartbeatConfig.h`: Il file di intestazione Objective-C per la configurazione dell&#39;SDK.
+      * `ADBMediaHeartbeat.h`: file di intestazione Objective-C usato per le API di tracciamento heartbeat in iOS.
+      * `ADBMediaHeartbeatConfig.h`: file di intestazione Objective-C per la configurazione dell’SDK.
       * `MediaSDK.a`: fat binary abilitato per bitcode contenente le build della libreria per dispositivi (armv7, armv7s, arm64) e simulatori (i386 e x86_64) iOS.
 
-         Se la destinazione sarà un&#39;app iOS, il binary deve essere collegato.
+         Se la destinazione è un’app iOS, il binary deve essere collegato.
 
-      * `MediaSDK_TV.a`: fat binary abilitato per bitcode contenente le build della libreria per dispositivi (arm64) e simulatori (x86_64) Apple TV.
+      * `MediaSDK_TV.a`: un fat binary abilitato per bitcode contenente le build della libreria per i nuovi dispositivi (arm64) e simulatori (x86_64) Apple TV.
 
-         Se la destinazione sarà un&#39;app Apple TV (tvOS), il binario deve essere collegato.
+         Se la destinazione è un’app per Apple TV (tvOS), il binary deve essere collegato.
    1. Aggiungi la libreria al progetto:
 
-      1. Avvia l&#39;IDE di Xcode e apri la tua app.
-      1. In **[!UICONTROL Project Navigator]**, trascina la directory `libs` e rilasciala sotto al tuo progetto.
+      1. Avvia l’IDE di Xcode e apri la tua app.
+      1. In **[!UICONTROL Project Navigator]**, trascina la directory `libs` e rilasciala sotto al progetto.
 
-      1. Assicurati che la casella di controllo **[!UICONTROL Copy Items if Needed]** sia selezionata, che sia selezionato **[!UICONTROL Create Groups]** e che nessuna delle caselle di controllo in **[!UICONTROL Add to Target]** sia selezionata.
+      1. Assicurati che la casella di controllo **[!UICONTROL Copy Items if Needed]** sia selezionata, **[!UICONTROL Create Groups]** sia selezionato e nessuna delle caselle di controllo in **[!UICONTROL Add to Target]** sia selezionata.
 
          ![](assets/choose-options_ios.png)
 
       1. Fai clic su **[!UICONTROL Finish]**.
-      1. In **[!UICONTROL Project Navigator]**, seleziona l’app e seleziona le destinazioni.
-      1. Collega i framework e le librerie richiesti nella sezione **[!UICONTROL Linked Frameworks]** e **[!UICONTROL Libraries]** della scheda **[!UICONTROL General]** .
+      1. In **[!UICONTROL Project Navigator]**, seleziona l’app e le destinazioni.
+      1. Collega i framework e le librerie richiesti nelle sezioni **[!UICONTROL Linked Frameworks]** e **[!UICONTROL Libraries]** nella scheda **[!UICONTROL General]**.
 
          **Destinazioni di app iOS:**
 
@@ -99,11 +99,11 @@ applicazione. Per ulteriori informazioni sull’SDK di Adobe Mobile, consulta SD
    #import "ADBMediaHeartbeatConfig.h"
    ```
 
-1. Crea un&#39;istanza `ADBMediaHeartbeatConfig`.
+1. Crea un’istanza di `ADBMediaHeartbeatConfig`.
 
-   Questa sezione ti aiuta a comprendere i parametri di configurazione `MediaHeartbeat` e a impostare i valori di configurazione corretti sull&#39;istanza `MediaHeartbeat` per un monitoraggio accurato.
+   Questa sezione descrive i parametri di configurazione di `MediaHeartbeat` e spiega come impostare i valori di configurazione corretti sull’istanza di `MediaHeartbeat` per un tracciamento accurato.
 
-   Esempio di inizializzazione `ADBMediaHeartbeatConfig`:
+   Esempio di inizializzazione di `ADBMediaHeartbeatConfig`:
 
    ```
    // Media Heartbeat Initialization
@@ -117,7 +117,7 @@ applicazione. Per ulteriori informazioni sull’SDK di Adobe Mobile, consulta SD
    config.debugLogging   = <YES/NO>;
    ```
 
-1. Implementa il protocollo `ADBMediaHeartbeatDelegate` .
+1. Implementa il protocollo `ADBMediaHeartbeatDelegate`.
 
    ```
    @interface VideoAnalyticsProvider : NSObject <ADBMediaHeartbeatDelegate>
@@ -144,7 +144,7 @@ applicazione. Per ulteriori informazioni sull’SDK di Adobe Mobile, consulta SD
    @end
    ```
 
-1. Utilizza i valori `ADBMediaHeartBeatConfig` e `ADBMediaHeartBeatDelegate` per creare l&#39;istanza `ADBMediaHeartbeat`.
+1. Utilizza `ADBMediaHeartBeatConfig` e `ADBMediaHeartBeatDelegate` per creare l’istanza di `ADBMediaHeartbeat`.
 
    ```
    //Replace <ADBMediaHeartBeatDelegate> with your delegate instance
@@ -154,23 +154,23 @@ applicazione. Per ulteriori informazioni sull’SDK di Adobe Mobile, consulta SD
 
    >[!IMPORTANT]
    >
-   >Assicurati che l&#39;istanza `ADBMediaHeartbeat` sia accessibile e che *non venga deassegnata fino alla fine della sessione*. Questa istanza verrà utilizzata per tutti i seguenti eventi di tracciamento.
+   >Assicurati che l’istanza di `ADBMediaHeartbeat` sia accessibile e che *non venga deallocata fino alla fine della sessione*. Questa istanza verrà utilizzata per tutti gli eventi di tracciamento seguenti.
 
 ## Migrazione dalla versione 1.x alla versione 2.x in iOS {#migrate-to-two-x}
 
-Nella versione 2.x, tutti i metodi pubblici sono consolidati nella classe `ADBMediaHeartbeat` per facilitare gli sviluppatori. Tutte le configurazioni sono state consolidate nella classe `ADBMediaHeartbeatConfig` .
+Nella versione 2.x, tutti i metodi pubblici sono consolidati nella classe `ADBMediaHeartbeat` per semplificare il lavoro degli sviluppatori. Tutte le configurazioni sono state consolidate nella classe `ADBMediaHeartbeatConfig`.
 
 Per ulteriori informazioni sulla migrazione da 1.x a 2.x, consulta [Migrazione da VHL 1.x a 2.x.](/help/sdk-implement/va-1x-to-2x/mig-1x-2x-overview.md)
 
-## Configurare un&#39;app nativa per tvOS
+## Configurare un’app nativa per tvOS
 
-Con il rilascio della nuova Apple TV, è ora possibile creare applicazioni da eseguire nell&#39;ambiente nativo tvOS. Puoi creare un’app puramente nativa, utilizzando uno qualsiasi dei diversi framework disponibili in iOS, oppure puoi creare l’app utilizzando modelli XML e JavaScript. A partire da MediaSDK versione 2.0, è disponibile il supporto per tvOS. Per ulteriori informazioni su tvOS, consulta [sito per sviluppatori tvOS.](https://developer.apple.com/tvos/)
+Con il rilascio della nuova Apple TV, potrai creare applicazioni da eseguire nell’ambiente nativo tvOS. Puoi creare un’app esclusivamente nativa utilizzando uno dei numerosi framework disponibili in iOS, oppure puoi creare l’app utilizzando modelli XML e JavaScript. Il supporto per tvOS è disponibile a partire da MediaSDK versione 2.0. Per ulteriori informazioni su tvOS, consulta il [sito per sviluppatori tvOS.](https://developer.apple.com/tvos/)
 
-Esegui i seguenti passaggi nel progetto Xcode. Questa guida viene scritta presupponendo che il progetto abbia una destinazione che sia un&#39;app Apple TV per tvOS:
+Completa i seguenti passaggi nel progetto Xcode. Questa guida è stata scritta per un progetto il cui target è un’app Apple TV destinata a tvOS:
 
-1. Trascina il file della libreria `VideoHeartbeat_TV.a` nella cartella `lib` del progetto.
+1. Trascina il file di libreria `VideoHeartbeat_TV.a` nella cartella `lib` del progetto.
 
-1. Nella scheda **[!UICONTROL Build Phases]** della destinazione dell&#39;app tvOS, espandi la sezione **[!UICONTROL Link Binary with Libraries]** e aggiungi le seguenti librerie:
+1. Nella scheda **[!UICONTROL Build Phases]** di destinazione dell’app tvOS, espandi la sezione **[!UICONTROL Link Binary with Libraries]** e aggiungi le seguenti librerie:
 
    * `MediaSDK_TV.a`
    * `AdobeMobileLibrary_TV.a`
