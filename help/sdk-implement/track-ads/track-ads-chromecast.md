@@ -6,25 +6,25 @@ exl-id: 57465c42-b349-439d-b8d7-083b299a8c83
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
-workflow-type: tm+mt
-source-wordcount: '334'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '332'
+ht-degree: 100%
 
 ---
 
-# Tracciamento annunci in Chromecast{#track-ads-on-chromecast}
+# Tracciare gli annunci in Chromecast{#track-ads-on-chromecast}
 
-Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione tramite gli SDK 2.x.
+Le istruzioni seguenti forniscono indicazioni per l’implementazione tramite gli SDK 2.x.
 
 >[!IMPORTANT]
 >
->Se implementi una versione 1.x dell&#39;SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
+>Se implementi una versione 1.x dell’SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
 ## Costanti di tracciamento degli annunci
 
 | Nome costante | Descrizione   |
 |---|---|
-| `AdBreakStart` | Costante per il tracciamento dell&#39;evento di avvio AdBreak |
+| `AdBreakStart` | Costante per il tracciamento dell’evento di avvio AdBreak |
 | `AdBreakComplete` | Costante per il tracciamento dell’evento AdBreak Complete |
 | `AdStart` | Costante per il tracciamento dell’evento Ad Start |
 | `AdComplete` | Costante per il tracciamento dell’evento Ad Complete |
@@ -32,23 +32,23 @@ Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione tramite 
 
 ## Passaggi di implementazione
 
-1. Identifica quando inizia il limite di interruzione dell&#39;annuncio, incluso il pre-roll, e crea un `AdBreakObject` utilizzando le informazioni di interruzione dell&#39;annuncio.
+1. Identifica quando inizia il limite dell’interruzione dell’annuncio, incluso il pre-roll, e crea un `AdBreakObject` utilizzando le informazioni sull’interruzione pubblicitaria.
 
-   Creazione dell’oggetto di interruzione annuncio: [createAdBreakObject](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.createAdBreakObject)
+   Creazione dell’oggetto di interruzione pubblicitaria: [createAdBreakObject](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.createAdBreakObject)
 
    ```
    adBreakInfo = ADBMobile.media.createAdBreakObject("First Ad-Break", 1, AD_BREAK_START_TIME, playerName);
    ```
 
-1. Invoca `trackEvent()` con `AdBreakStart` nell&#39;istanza `MediaHeartbeat` per iniziare a tracciare l&#39;interruzione pubblicitaria: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
+1. Chiamata `trackEvent()` con `AdBreakStart` nell’istanza `MediaHeartbeat` per iniziare a tracciare l’interruzione pubblicitaria: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
 
    ```
    ADBMobile.media.trackEvent(ADBMobile.media.Event.AdBreakStart, getAdBreakInfo());
    ```
 
-1. Identifica quando inizia la risorsa dell’annuncio e crea un’istanza `AdObject` utilizzando le informazioni dell’annuncio.
+1. Identifica quando inizia la risorsa dell’annuncio e crea un’istanza `AdObject` utilizzando le informazioni sull’annuncio.
 
-   Creazione di oggetti annuncio: [createAdObject](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.createAdObject)
+   Creazione dell’oggetto annuncio: [createAdObject](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.createAdObject)
 
    ```
    adInfo = ADBMobile.media.createAdObject("Sample ad", "001", 1, AD_LENGTH);
@@ -56,28 +56,28 @@ Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione tramite 
 
 1. Facoltativamente, allega metadati standard e/o di annunci alla sessione di tracciamento dei contenuti multimediali tramite variabili di dati di contesto.
 
-   * **Metadati degli annunci standard -** Per i metadati standard degli annunci, crea un dizionario di coppie di valori chiave degli annunci standard utilizzando le chiavi per la piattaforma:
-   * **Metadati annuncio personalizzati:** per i metadati personalizzati, crea un oggetto variabile per le variabili di dati personalizzate e compila i dati per la risorsa annuncio corrente:
+   * **Metadati standard per annunci**: per i metadati standard per annunci, crea un dizionario di coppie di valori chiave standard utilizzando le chiavi appropriate per la tua piattaforma:
+   * **Metadati personalizzati per annunci**: per i metadati personalizzati, crea un oggetto variabile per le variabili di dati personalizzati e compila i dati per la risorsa annuncio corrente:
 
-1. Chiama `trackEvent()` con l&#39;evento `AdStart` per iniziare a tracciare la riproduzione dell&#39;annuncio.
+1. Chiamata `trackEvent()` con l’evento `AdStart` per iniziare a tenere traccia della riproduzione dell’annuncio.
 
-   Includi un riferimento alla variabile di metadati personalizzata (o a un oggetto vuoto) come terzo parametro nella chiamata dell&#39;evento: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
+   Includi un riferimento alla variabile di metadati personalizzata (o a un oggetto vuoto) come terzo parametro nella chiamata dell’evento: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
 
    ```
    ADBMobile.media.trackEvent(ADBMobile.media.Event.AdStart, getAdInfo(), adContextData);
    ```
 
-1. Quando la riproduzione della risorsa dell’annuncio raggiunge la fine dell’annuncio, invoca `trackEvent()` con l’evento `AdComplete` : [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
+1. Quando la riproduzione della risorsa dell’annuncio raggiunge la fine dell’annuncio, chiama `trackEvent()` con l’evento `AdComplete`: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
 
    ```
    ADBMobile.media.trackEvent(ADBMobile.media.Event.AdComplete);
    ```
 
-1. Se sono presenti annunci aggiuntivi all&#39;interno dello stesso `AdBreak`, ripeti nuovamente i passaggi da 3 a 6.
-1. Al termine dell’interruzione pubblicitaria, utilizza l’evento `AdBreakComplete` per tenere traccia di: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
+1. Se ci sono altri annunci nello stesso `AdBreak`, ripeti di nuovo i passaggi da 3 a 6.
+1. Al termine dell’interruzione pubblicitaria, utilizza l’evento `AdBreakComplete` da tracciare: [trackEvent](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackEvent)
 
    ```
    ADBMobile.media.trackEvent(ADBMobile.media.Event.AdBreakComplete, getAdBreakInfo());
    ```
 
-Per ulteriori informazioni, consulta lo scenario di tracciamento [Riproduzione VOD con annunci pre-scorrimento](/help/sdk-implement/tracking-scenarios/vod-preroll-ads.md) .
+Per ulteriori informazioni, vedi lo scenario di tracciamento [Riproduzione VOD con annunci pre-roll](/help/sdk-implement/tracking-scenarios/vod-preroll-ads.md).
