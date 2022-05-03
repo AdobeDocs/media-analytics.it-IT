@@ -5,9 +5,9 @@ exl-id: 75cc9088-776d-4b10-b358-9fff956a7eb7
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
-workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 3%
+workflow-type: ht
+source-wordcount: '231'
+ht-degree: 100%
 
 ---
 
@@ -15,29 +15,29 @@ ht-degree: 3%
 
 Questa funzione ti consente di collegare le azioni dell’applicazione ai dati di tracciamento dei contenuti multimediali senza la necessità di ulteriori regole di elaborazione e variabili personalizzate.
 
-## Dimension multimediali esterni al tracciamento dei file multimediali
+## Dimensioni multimediali esterne al tracciamento dei file multimediali
 
-Con Media Stream Attribution, i clienti sono ora in grado di aggiungere qualsiasi dimensione per i contenuti multimediali.
-a tutte le altre chiamate di analytics, come visualizzazioni di pagina e collegamenti personalizzati. Durante l&#39;attuazione,
-devi aggiungere i parametri dei dati contestuali multimediali alle chiamate di tracciamento di Analytics. Elenco completo
-i parametri dei dati contestuali utilizzati per i file multimediali sono disponibili qui: [Parametri audio e video.](/help/metrics-and-metadata/audio-video-parameters.md)
+Con Media Stream Attribution, i clienti possono ora aggiungere qualsiasi dimensione multimediale
+a tutte le altre chiamate di analisi, come le visualizzazioni di pagina e i collegamenti personalizzati. Durante l’implementazione,
+devi aggiungere i parametri dei dati contestuali multimediali alle chiamate di tracciamento di Analytics. L’elenco completo
+dei parametri dei dati contestuali utilizzati per gli elementi multimediali è disponibile qui: [Parametri audio e video.](/help/metrics-and-metadata/audio-video-parameters.md)
 
-Sarà inoltre necessario riabilitare la configurazione del tracciamento dei contenuti multimediali da Admin Console per ogni rapporto per il quale desideri abilitare questa funzione.
+Sarà inoltre necessario riabilitare la configurazione del tracciamento dei contenuti multimediali da Admin Console per ogni rapporto per il quale desideri avere disponibile questa funzione.
 
 >[!NOTE]
 >
->Le metriche dei file multimediali sono _non_ disponibili per l’uso al di fuori del tracciamento dei contenuti multimediali, perché la maggior parte di queste sono calcolate da Media Analytics in base a eventi heartbeat. Inoltre, è importante che le metriche dei contenuti multimediali non siano gonfiate da implementazioni diverse.
+>Le metriche relative ai file multimediali sono _non_ disponibili per l’utilizzo al di fuori del tracciamento dei contenuti multimediali, poiché la maggior parte di esse è calcolata da Media Analytics in base a eventi heartbeat. Inoltre, è importante che le metriche dei contenuti multimediali non siano gonfiate da implementazioni diverse.
 
-## Come
+## Come fare
 
-L’esempio JavaScript seguente genera una chiamata di tracciamento Custom Link con il nome impostato su &quot;Hero Banner&quot;.
+L’esempio JavaScript seguente genera una chiamata di tracciamento dei collegamenti personalizzati con il nome impostato su “Hero Banner”.
 
 ```javascript
 s.contextData["a.media.show"]="Mi Amore"
 s.tl(this,'o','Hero Banner');
 ```
 
-Nel reporting di Analytics, puoi utilizzare l’ `Show` eVar per suddividere i dati e contare le istanze del collegamento di tracciamento. Il rapporto sarà simile al seguente:
+Nella generazione rapporti di Analytics puoi utilizzare la eVar `Show` per suddividere i dati in modo da poter contare le istanze di tracciamento dei collegamenti. Il reporting sarà simile al seguente:
 
 ![](/assets/myShow-rpt-1.png)
 
