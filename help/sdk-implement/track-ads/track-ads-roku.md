@@ -1,30 +1,30 @@
 ---
-title: Scopri come tenere traccia degli annunci su Roku
-description: Implementa il tracciamento degli annunci nelle applicazioni Roku utilizzando Media SDK.
+title: Scopri come tracciare gli annunci su Roku
+description: Implementare il tracciamento degli annunci nelle applicazioni Roku utilizzando Media SDK.
 uuid: b1567265-7043-4efa-a313-aaaa91c4bb01
 exl-id: aaed828d-1aba-486e-83e3-2ffd092305e2
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
-workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 5%
+workflow-type: ht
+source-wordcount: '295'
+ht-degree: 100%
 
 ---
 
-# Tracciamento annunci su Roku{#track-ads-on-roku}
+# Tracciare gli annunci in Roku{#track-ads-on-roku}
 
-Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione tramite gli SDK 2.x.
+Le istruzioni seguenti forniscono indicazioni per l’implementazione tramite gli SDK 2.x.
 
 >[!IMPORTANT]
 >
->Se implementi una versione 1.x dell&#39;SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
+>Se implementi una versione 1.x dell’SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
 ## Costanti di tracciamento degli annunci
 
 | Nome costante | Descrizione   |
 |---|---|
-| `AdBreakStart` | Costante per il tracciamento dell&#39;evento di avvio AdBreak |
+| `AdBreakStart` | Costante per il tracciamento dell’evento di avvio AdBreak |
 | `AdBreakComplete` | Costante per il tracciamento dell’evento AdBreak Complete |
 | `AdStart` | Costante per il tracciamento dell’evento Ad Start |
 | `AdComplete` | Costante per il tracciamento dell’evento Ad Complete |
@@ -32,15 +32,15 @@ Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione tramite 
 
 ## Passaggi di implementazione
 
-1. Identifica quando inizia il limite di interruzione dell&#39;annuncio, incluso il pre-roll, e crea un `AdBreakObject` utilizzando le informazioni di interruzione dell&#39;annuncio.
+1. Identifica quando inizia il limite dell’interruzione dell’annuncio, incluso il pre-roll, e crea un `AdBreakObject` utilizzando le informazioni sull’interruzione pubblicitaria.
 
-   `AdBreakObject` riferimento:
+   Specifihe di `AdBreakObject`:
 
-   | Nome variable | Descrizione | Obbligatorio |
+   | Nome variabile | Descrizione | Obbligatorio |
    | --- | --- | :---: |
    | `name` | Nome dell’interruzione dell’annuncio come pre-roll, mid-roll e post-roll. | Sì |
    | `position` | La posizione numerica dell’interruzione pubblicitaria che inizia con 1. | Sì |
-   | `startTime` | Valore della testina di riproduzione all&#39;inizio dell&#39;interruzione pubblicitaria. | Sì |
+   | `startTime` | Valore della testina di riproduzione all’inizio dell’interruzione pubblicitaria. | Sì |
 
    ```
    ‘ Create an adbreak info object
@@ -50,14 +50,14 @@ Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione tramite 
    adBreakInfo.position = <POSITION>
    ```
 
-1. Invoca `trackEvent()` con `AdBreakStart` nell&#39;istanza `MediaHeartbeat` per iniziare a tracciare l&#39;interruzione pubblicitaria:
+1. Chiamata `trackEvent()` con `AdBreakStart` nell’istanza `MediaHeartbeat` per iniziare a tracciare l’interruzione pubblicitaria:
 
    ```
    contextData = {}
    ADBMobile().mediaTrackEvent(MEDIA_AD_BREAK_START, adBreakInfo, contextData)
    ```
 
-1. Identifica quando inizia la risorsa dell’annuncio e crea un’istanza `AdObject` utilizzando le informazioni dell’annuncio.
+1. Identifica quando la risorsa dell’annuncio si avvia e crea un’istanza `AdObject` utilizzando le informazioni sull’annuncio.
 
    ```
    adInfo =  
@@ -69,8 +69,8 @@ Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione tramite 
 
 1. Facoltativamente, allega metadati standard e/o di annunci alla sessione di tracciamento dei contenuti multimediali tramite variabili di dati di contesto.
 
-   * [Implementazione dei metadati standard di annunci su Roku](/help/sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-roku.md)
-   * **Metadati annuncio personalizzati:** per i metadati personalizzati, crea un oggetto variabile per le variabili di dati personalizzate e compila i dati per la risorsa annuncio corrente:
+   * [Implementare metadati standard di annunci in Roku](/help/sdk-implement/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-roku.md)
+   * **Metadati degli annunci personalizzati**: per i metadati personalizzati, crea un oggetto variabile per le variabili dei dati personalizzate e popola i dati per la risorsa dell’annuncio corrente.
 
       ```
       contextData = {}
@@ -78,13 +78,13 @@ Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione tramite 
       contextData["adinfo2"] = "adinfo2"
       ```
 
-1. Invoca `trackEvent()` con l&#39;evento `AdStart` nell&#39;istanza `MediaHeartbeat` per iniziare a tracciare la riproduzione dell&#39;annuncio:
+1. Effettua una chiamata `trackEvent()` con un evento `AdStart` nell’istanza `MediaHeartbeat` per iniziare a tracciare la riproduzione dell’annuncio:
 
    ```
    ADBMobile().mediaTrackEvent(ADBMobile().MEDIA_AD_START, adInfo, contextData)
    ```
 
-1. Quando la riproduzione della risorsa dell’annuncio raggiunge la fine dell’annuncio, invoca `trackEvent()` con l’evento `AdComplete` .
+1. Quando la riproduzione della risorsa dell’annuncio raggiunge il termine dell’annuncio, effettua una chiamata `trackEvent()` con un evento `AdComplete`.
 
    ```
    standardAdMetadata = {}
@@ -92,19 +92,19 @@ Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione tramite 
    ADBMobile().mediaTrackEvent(ADBMobile().MEDIA_AD_COMPLETE, adInfo, contextData)
    ```
 
-1. Se la riproduzione dell&#39;annuncio non è stata completata perché l&#39;utente ha scelto di saltare l&#39;annuncio, tieni traccia dell&#39;evento `AdSkip`:
+1. Se la riproduzione dell’annuncio non è stata completata perché l’utente ha scelto di saltarlo, tieni traccia dell’evento `AdSkip`.
 
    ```
    contextData = {}
    ADBMobile().mediaTrackEvent(ADBMobile().MEDIA_AD_SKIP, adInfo, contextData
    ```
 
-1. Se sono presenti annunci aggiuntivi all&#39;interno dello stesso `AdBreak`, ripeti nuovamente i passaggi da 3 a 7.
-1. Al termine dell’interruzione pubblicitaria, utilizza l’evento `AdBreakComplete` per tenere traccia di:
+1. Se ci sono annunci aggiuntivi all’interno dello stesso `AdBreak`, ripeti di nuovo i passaggi da 3 a 7.
+1. Al termine dell’interruzione dell’annuncio, utilizza l’evento `AdBreakComplete` per tracciare:
 
    ```
    contextData = {}
    ADBMobile().mediaTrackEvent(MEDIA_AD_BREAK_COMPLETE, adBreakInfo, contextData)
    ```
 
-Per ulteriori informazioni, consulta lo scenario di tracciamento [Riproduzione VOD con annunci pre-scorrimento](/help/sdk-implement/tracking-scenarios/vod-preroll-ads.md) .
+Per ulteriori informazioni, consulta lo scenario di tracciamento [Riproduzione VOD con annunci pre-roll](/help/sdk-implement/tracking-scenarios/vod-preroll-ads.md).
