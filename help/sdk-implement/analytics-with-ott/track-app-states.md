@@ -1,24 +1,24 @@
 ---
-title: Tracciamento stati dell’app
-description: 'Gli stati dell’app sono schermate o visualizzazioni diverse all’interno dell’applicazione. Scopri come tracciare lo stato dell’app nell’applicazione utilizzando la chiamata trackState . '
+title: 'Tracciare gli stati dell’app '
+description: 'Per “stati dell''app” si intendono le diverse schermate o visualizzazioni disponibili nell''app. Scopri come tenere traccia degli stati dell’app nell’applicazione utilizzando la chiamata trackState. '
 uuid: 2f98fb43-c362-4a9b-8732-fa7e963da729
 exl-id: bb1e0eee-7c59-40b4-9359-a7441b9686b8
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
-workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 18%
+workflow-type: ht
+source-wordcount: '188'
+ht-degree: 100%
 
 ---
 
-# Tracciare gli stati dell’app{#track-app-states}
+# Tracciare gli stati dell’app {#track-app-states}
 
-Per &quot;stati&quot; si intendono le diverse schermate o visualizzazioni disponibili nell&#39;app. Ogni volta che nell&#39;applicazione viene visualizzato un nuovo stato, devi inviare una chiamata `trackState` . Ad esempio, quando un utente passa dalla home page alla schermata dei dettagli video, invia una chiamata `trackState` . Gli stati vengono generalmente visualizzati utilizzando un rapporto sui percorsi, che consente di vedere in che modo gli utenti navigano nell’app e quali stati vengono visualizzati più comunemente.
+Per &quot;stati&quot; si intendono le diverse schermate o visualizzazioni disponibili nell&#39;app. Ogni volta che nell&#39;applicazione viene visualizzato un nuovo stato, è necessario inviare una chiamata `trackState`. Ad esempio, quando un utente passa dalla pagina Home alla schermata dei dettagli video, invia una chiamata `trackState`. Per visualizzare gli stati si usa solitamente un rapporto sui percorsi che consente di vedere in che modo gli utenti navigano nell’app e quali stati vengono visualizzati maggiormente.
 
 ## Chiamate a trackState
 
-In genere, chiami `trackState` ogni volta che l’app carica una nuova schermata.
+In genere, l&#39;utente invia una chiamata `trackState` ogni volta che l’app carica una nuova schermata.
 
 ### Roku
 
@@ -32,11 +32,11 @@ ADBMobile().trackState("State Name", {})
 ADBMobile.analytics.trackState("State Name",{});
 ```
 
-Il nome dello stato viene riportato nella variabile &quot;Stato di visualizzazione&quot; in Adobe Mobile Services e viene registrata una visualizzazione per ogni chiamata `trackState`. Nelle altre interfacce di Analytics, &quot;Stato di visualizzazione&quot; è indicato come &quot;Nome pagina&quot;; Le &quot;Visualizzazioni di stato&quot; sono indicate come &quot;Visualizzazioni di pagina&quot;.
+In Adobe Mobile Services, il Nome dello stato è riportato nella variabile &quot;View State&quot;, e viene registrata una visualizzazione per ogni chiamata `trackState`. Nelle altre interfacce di Analytics, &quot;Stato di visualizzazione&quot; è indicato come &quot;Nome pagina&quot; e le visualizzazioni degli stati sono indicate come &quot;Visualizzazioni di pagina&quot;.
 
 ## Inviare dati contestuali
 
-Oltre a &quot;Nome stato&quot;, puoi inviare dati contestuali aggiuntivi con ciascuna chiamata di tracciamento dello stato.
+Oltre a &quot;Nome stato&quot;, con ogni chiamata di tracciamento dello stato puoi inviare anche dati di contesto aggiuntivi.
 
 ### Roku
 
