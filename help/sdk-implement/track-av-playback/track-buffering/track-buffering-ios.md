@@ -1,36 +1,36 @@
 ---
-title: Scopri come tenere traccia del buffering su iOS
+title: Scopri come tenere traccia del buffering in iOS
 description: Scopri come tenere traccia degli eventi di buffering su iOS.
 uuid: 4f4db23a-489b-4b41-bb6e-393ec64d52a2
 exl-id: 5f0a3c4b-7c9e-499d-98d0-6fcf316c4d9c
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
-workflow-type: tm+mt
-source-wordcount: '119'
-ht-degree: 2%
+workflow-type: ht
+source-wordcount: '117'
+ht-degree: 100%
 
 ---
 
-# Tracciamento buffering su iOS{#track-buffering-on-ios}
+# Tracciare il buffering su iOS {#track-buffering-on-ios}
 
-Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione in tutti gli SDK 2.x.
+Le istruzioni seguenti forniscono indicazioni per l’implementazione con tutti gli SDK 2.x.
 
 >[!IMPORTANT]
 >
->Se implementi una versione 1.x dell&#39;SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
+>Se implementi una versione 1.x dell’SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scarica SDK.](/help/sdk-implement/download-sdks.md)
 
 ## Costanti di tracciamento del buffer
 
 
 | Nome costante | Descrizione     |
 |---|---|
-| `ADBMediaHeartbeatEventBufferStart` | Costante per il tracciamento dell’evento Buffer Start |
-| `ADBMediaHeartbeatEventBufferComplete` | Costante per il tracciamento dell’evento Buffer Complete |
+| `ADBMediaHeartbeatEventBufferStart` | Costante per il tracciamento dell’evento di avvio del buffer |
+| `ADBMediaHeartbeatEventBufferComplete` | Costante per il tracciamento dell’evento di completamento del buffer |
 
 ## Implementare il buffering
 
-1. Ascoltare gli eventi di buffering di riproduzione dal lettore multimediale e nella notifica dell&#39;evento di avvio del buffer, tenere traccia del buffering utilizzando l&#39;evento `BufferStart`:
+1. Ascolta gli eventi di buffering di riproduzione dal lettore multimediale, e sulla notifica evento di avvio del buffer, tieni traccia del buffering utilizzando l’evento `BufferStart`:
 
    ```
    - (void)onBufferStart:(NSNotification *)notification {
@@ -40,7 +40,7 @@ Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione in tutti
    }
    ```
 
-1. Al momento della notifica completa del buffer da parte del lettore multimediale, tieni traccia della fine del buffering utilizzando l&#39;evento `BufferComplete` :
+1. Al momento della notifica di completamento del buffer da parte del lettore multimediale, tieni traccia della fine del buffering utilizzando l’evento `BufferComplete`:
 
    ```
    - (void)onBufferComplete:(NSNotification *)notification {
@@ -50,4 +50,4 @@ Le istruzioni seguenti forniscono indicazioni per l&#39;implementazione in tutti
    }
    ```
 
-Per ulteriori informazioni, consulta lo scenario di tracciamento [Riproduzione VOD con buffering](/help/sdk-implement/tracking-scenarios/vod-buffering.md) .
+Esamina lo scenario di tracciamento [Riproduzione VOD con buffering](/help/sdk-implement/tracking-scenarios/vod-buffering.md) per ulteriori informazioni.
