@@ -1,24 +1,24 @@
 ---
-title: Configurazione ID utente
-description: API per l’impostazione degli ID utente, che server come identificatore univoco del cliente.
+title: 'Configurare gli ID utente '
+description: API per l’impostazione degli ID utente, da usare come identificatori univoci dei clienti.
 uuid: fdd54fec-79cd-4bf8-b17e-4d61d84f6310
 exl-id: 6b451082-47f3-4e65-9fe0-cecb2d20dc2d
-feature: '"Media Analytics, API"'
+feature: Media Analytics, API
 role: User, Admin, Data Engineer
 source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
-workflow-type: tm+mt
-source-wordcount: '56'
-ht-degree: 8%
+workflow-type: ht
+source-wordcount: '53'
+ht-degree: 100%
 
 ---
 
-# Imposta ID utente{#set-user-ids}
+# Configurare gli ID utente {#set-user-ids}
 
-L&#39;ID utente è un identificatore visitatore personalizzato univoco definito dall&#39;applicazione per un utente.
+L’ID utente è un identificatore visitatore personalizzato univoco, definito dall’applicazione per un utente.
 
-Imposta e ottieni l&#39;ID utente univoco sull&#39;SDK ADBMobile come segue:
+Per impostare e ottenere l’ID utente univoco con ADBMobile SDK:
 
-* **Imposta:**
+* **Impostare:**
 
    * **Roku:**
 
@@ -32,7 +32,7 @@ Imposta e ottieni l&#39;ID utente univoco sull&#39;SDK ADBMobile come segue:
       ADBMobile().config.setUserIdentifer("app-generated-unique-id");
       ```
 
-* **Ottieni:**
+* **Ottenere:**
 
    * **Roku:**
 
