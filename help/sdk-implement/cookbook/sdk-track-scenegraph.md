@@ -1,37 +1,37 @@
 ---
-title: Tracciamento in SceneGraph (Roku)
-description: Scopri come tenere traccia dei contenuti multimediali con il framework di programmazione XML Roku SceneGraph.
+title: 'Tracciamento in SceneGraph (Roku) '
+description: Scopri come tenere traccia dei contenuti multimediali con l’infrastruttura di programmazione XML Roku SceneGraph.
 uuid: fa85e546-c79b-4df4-8c03-d6593fa296d5
 exl-id: e428d3cd-dbc7-48bb-82ff-61b6b892884c
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
-workflow-type: tm+mt
-source-wordcount: '1176'
-ht-degree: 3%
+workflow-type: ht
+source-wordcount: '1174'
+ht-degree: 100%
 
 ---
 
-# Tracciamento in SceneGraph (Roku){#tracking-in-scenegraph-roku}
+# Tracciamento in SceneGraph (Roku) {#tracking-in-scenegraph-roku}
 
 ## Introduzione {#introduction}
 
-Roku ha introdotto un nuovo quadro di programmazione per lo sviluppo di applicazioni: il framework di programmazione XML di SceneGraph. Questo nuovo framework presenta due nuovi concetti chiave:
+Roku ha introdotto una nuova infrastruttura di programmazione per lo sviluppo di applicazioni: l’infrastruttura di programmazione XML SceneGraph. Questa nuova infrastruttura è caratterizzata da due nuovi concetti chiave:
 
-* Rendering di SceneGraph delle schermate dell&#39;applicazione
-* Configurazione XML delle schermate di SceneGraph
+* Rendering SceneGraph delle schermate dell’applicazione
+* Configurazione XML delle schermate SceneGraph
 
-L’SDK di Adobe Mobile per Roku è scritto in BrightScript. L’SDK utilizza molti componenti che non sono disponibili per un’app in esecuzione su SceneGraph (ad esempio, thread). Pertanto, uno sviluppatore di app Roku che intende utilizzare il framework SceneGraph non può chiamare le API SDK di Adobe Mobile (queste ultime sono simili a quelle disponibili nelle applicazioni BrightScript legacy).
+L’SDK di Adobe Mobile per Roku è scritto in BrightScript. L’SDK utilizza molti componenti che non sono disponibili per un’app in esecuzione su SceneGraph (ad esempio, thread). Pertanto, uno sviluppatore di app Roku che intende utilizzare l’infrastruttura SceneGraph non può effettuare chiamate alle API SDK di Adobe Mobile (queste ultime sono simili a quelle disponibili sulle applicazioni legacy BrightScript).
 
 ## Architettura {#architecture}
 
-Per aggiungere il supporto SceneGraph all&#39;SDK di Adobe Mobile, Adobe ha aggiunto una nuova API che crea un ponte di connettore tra l&#39;SDK di AdobeMobile e `adbmobileTask`. Quest&#39;ultimo è un nodo di SceneGraph utilizzato per l&#39;esecuzione dell&#39;API dell&#39;SDK. (L&#39;utilizzo di `adbmobileTask` viene spiegato in dettaglio in tutto il resto del documento.)
+Per aggiungere il supporto SceneGraph all’SDK di AdobeMobile, Adobe ha aggiunto una nuova API che crea un ponte connettore tra l’SDK di AdobeMobile e `adbmobileTask`. Quest’ultimo è un nodo SceneGraph utilizzato per l’esecuzione dell’API dell’SDK. (L’utilizzo di `adbmobileTask` viene descritto in dettaglio all’interno di questo documento).
 
-Il ponte di connessione è progettato per eseguire le seguenti operazioni:
+Il ponte connettore è progettato per eseguire le seguenti operazioni:
 
-* Il bridge restituisce un&#39;istanza compatibile con SceneGraph dell&#39;SDK AdobeMobile. L’SDK compatibile con SceneGraph dispone di tutte le API che l’SDK legacy espone.
-* In SceneGraph utilizzi le API SDK di Adobe Mobile in modo molto simile a come utilizzavi le API legacy.
-* Il bridge espone anche un meccanismo per ascoltare i callback per le API che restituiscono alcuni dati.
+* Il ponte restituisce un’istanza dell’SDK di AdobeMobile compatibile con SceneGraph. L’SDK compatibile con SceneGraph dispone di tutte le API che l’SDK legacy espone.
+* In SceneGraph, l’utilizzo delle API SDK di AdobeMobile e quello delle API legacy è molto simile.
+* Il ponte espone inoltre un meccanismo che consente di ascoltare i callback per le API che restituiscono determinati dati.
 
 ![](assets/SceneGraph_arch.png)
 
@@ -39,19 +39,19 @@ Il ponte di connessione è progettato per eseguire le seguenti operazioni:
 
 **Applicazione SceneGraph:**
 
-* Utilizza le API `AdobeMobileLibrary` tramite le API del connettore SceneGraph bridge.
-* Registri per i callback di risposta su `adbmobileTask` per le variabili di dati di output previste.
+* Utilizza le API `AdobeMobileLibrary` tramite il ponte connettore SceneGraph.
+* Registra i callback di risposta su `adbmobileTask` per le variabili di dati di output previste.
 
 **AdobeMobileLibrary:**
 
-* Espone un set di API pubbliche (legacy), inclusa l’API del bridge di connettore.
-* Restituisce un&#39;istanza del connettore SceneGraph che racchiude tutte le API pubbliche legacy.
-* Comunica con un nodo `adbmobileTask` SceneGraph per l&#39;esecuzione delle API.
+* Espone un set di API pubbliche (legacy), tra cui l’API del ponte connettore.
+* Restituisce un’istanza del connettore SceneGraph che esegue il wrapping di tutte le API pubbliche legacy.
+* Comunica con un nodo `adbmobileTask` di SceneGraph per l’esecuzione di API.
 
 **Nodo adbmobileTask:**
 
-* Un nodo di attività di SceneGraph che esegue `AdobeMobileLibrary` API su un thread in background.
-* Funge da delegato per restituire i dati alle scene dell&#39;applicazione.
+* Un nodo attività SceneGraph che esegue API `AdobeMobileLibrary` su un thread in background.
+* Agisce come delegato per restituire dati alle scene dell’applicazione.
 
 ## API pubbliche di SceneGraph {#public-scenegraph-apis}
 
@@ -60,38 +60,38 @@ Il ponte di connessione è progettato per eseguire le seguenti operazioni:
 | Categoria | Nome metodo | Descrizione |
 |---|---|---|
 | **Costanti** |  |  |
-|  | `sceneGraphConstants` | Restituisce un oggetto contenente `SceneGraphConstants`. Per ulteriori informazioni, fare riferimento alla tabella precedente. |
+|  | `sceneGraphConstants` | Restituisce un oggetto contenente `SceneGraphConstants`. Per ulteriori informazioni, consulta la tabella precedente. |
 |  |  |  |
-| **Debug Logging** |  |  |
-|  | `setDebugLogging` | API di SceneGraph per impostare la registrazione di debug sull&#39;SDK ADBMobile. |
-|  | `getDebugLogging` | API di SceneGraph per ottenere la registrazione di debug dall&#39;SDK ADBMobile. |
-|  | Per ulteriori informazioni consulta la sezione Debug Logging dell’SDK legacy. |  |
+| **Registrazione debug** |  |  |
+|  | `setDebugLogging` | API di SceneGraph che consentono di impostare la registrazione debug sull’SDK ADBMobile. |
+|  | `getDebugLogging` | API di SceneGraph che consentono di ottenere la registrazione debug dall’SDK ADBMobile. |
+|  | Per ulteriori informazioni, consulta la sezione Registrazione debug dell’SDK legacy. |  |
 |  |  |  |
-| **Stato privacy / Rinuncia** |  |  |
-|  | `setPrivacyStatus` | API di SceneGraph per impostare lo stato di privacy sull&#39;SDK di ADBMobile. |
-|  | `getPrivacyStatus` | API di SceneGraph per ottenere lo stato di privacy dall’SDK di ADBMobile. |
-|  | Per ulteriori informazioni, consulta la sezione Stato di rinuncia/privacy dell’SDK legacy. |  |
+| **Stato privacy/Rinuncia** |  |  |
+|  | `setPrivacyStatus` | API di SceneGraph che consentono di impostare lo stato della privacy sull’SDK di ADBMobile. |
+|  | `getPrivacyStatus` | API di SceneGraph che consentono di ottenere lo stato della privacy dall’SDK di ADBMobile. |
+|  | Per ulteriori informazioni, consulta la sezione Stato privacy/Rinuncia dell’SDK legacy. |  |
 |  |  |  |
 | **Analytics** |  |  |
-|  | `trackState` | API di SceneGraph per tenere traccia dello stato nell’SDK ADBMobile. |
-|  | `trackAction` | API di SceneGraph per tenere traccia dell&#39;azione sull&#39;SDK ADBMobile. |
-|  | `trackingIdentifier` | API di SceneGraph per ottenere un identificatore di tracciamento dall&#39;SDK ADBMobile. |
-|  | `userIdentifier` | API di SceneGraph per ottenere un identificatore utente dall&#39;SDK di ADBMobile. |
-|  | `setUserIdentifier` | API di SceneGraph per impostare l&#39;identificatore utente nell&#39;SDK ADBMobile. |
-|  | `getAllIdentifiers` | L&#39;API di SceneGraph recupera tutte le identità utente note e mantenute dall&#39;SDK Roku. |
+|  | `trackState` | API di SceneGraph che consentono di tenere traccia dello stato sull’SDK di ADBMobile. |
+|  | `trackAction` | API di SceneGraph per tenere traccia dell’azione sull’SDK ADBMobile. |
+|  | `trackingIdentifier` | API di SceneGraph per ottenere un identificatore di tracciamento dall’SDK ADBMobile. |
+|  | `userIdentifier` | API di SceneGraph per ottenere un identificatore utente dall’SDK di ADBMobile. |
+|  | `setUserIdentifier` | API di SceneGraph per impostare l’identificatore utente nell’SDK ADBMobile. |
+|  | `getAllIdentifiers` | L’API di SceneGraph recupera tutte le identità utente note e mantenute dall’SDK Roku. |
 |  | Per ulteriori informazioni consulta la sezione Analytics dell’SDK legacy. |  |
 |  |  |  |
 | **Experience Cloud** |  |  |
 |  | `visitorSyncIdentifiers` | API di SceneGraph per sincronizzare gli identificatori di Experience Cloud sull’SDK di ADBMobile. |
-|  | `visitorMarketingCloudID` | API di SceneGraph per ottenere l&#39;ID Experience Cloud del visitatore dall&#39;SDK di ADBMobile. |
+|  | `visitorMarketingCloudID` | API di SceneGraph per ottenere l’Experience Cloud ID del visitatore dall’SDK ADBMobile. |
 |  | Per ulteriori informazioni consulta la sezione Experience Cloud dell’SDK legacy. |  |
 |  |  |  |
 | **Audience Manager** |  |  |
-|  | `audienceSubmitSignal` | API di SceneGraph per inviare un segnale di gestione dell&#39;audience con caratteristiche. |
+|  | `audienceSubmitSignal` | API di SceneGraph per inviare un segnale di gestione dell’audience con caratteristiche. |
 |  | `audienceVisitorProfile` | API di SceneGraph per ottenere un profilo visitatore di audience manager dall’SDK di ADBMobile. |
 |  | `audienceDpid` | API di SceneGraph per ottenere un Dpid di pubblico dall’SDK di ADBMobile. |
-|  | `audienceDpuuid` | API di SceneGraph per ottenere un pubblico Dpuuid dall&#39;SDK di ADBMobile. |
-|  | `audienceSetDpidAndDpuuid` | API di SceneGraph per impostare audience Dpid e Dpuuid sull&#39;SDK di ADBMobile. |
+|  | `audienceDpuuid` | API di SceneGraph per ottenere un pubblico Dpuuid dall’SDK di ADBMobile. |
+|  | `audienceSetDpidAndDpuuid` | API di SceneGraph per impostare audience Dpid e Dpuuid sull’SDK di ADBMobile. |
 |  | Per ulteriori informazioni consulta la sezione Audience Manager dell’SDK legacy. |  |
 |  |  |  |
 | **MediaHeartbeat** |  |  |
@@ -102,8 +102,8 @@ Il ponte di connessione è progettato per eseguire le seguenti operazioni:
 |  | mediaTrackPause | API di SceneGraph per tenere traccia del contenuto video in pausa. |
 |  | `mediaTrackComplete` | API di SceneGraph per tenere traccia della riproduzione completata per il contenuto video. |
 |  | `mediaTrackError` | API di SceneGraph per tenere traccia degli errori di riproduzione. |
-|  | mediaTrackEvent | API di SceneGraph per tenere traccia degli eventi di riproduzione durante il tracciamento. Ad esempio: Annunci, capitoli. |
-|  | `mediaUpdatePlayhead` | API di SceneGraph per inviare aggiornamenti di playhead a MediaHeartbeat durante il tracciamento video. |
+|  | mediaTrackEvent | API di SceneGraph per tenere traccia degli eventi di riproduzione durante il tracciamento. Ad esempio: annunci, capitoli. |
+|  | `mediaUpdatePlayhead` | API di SceneGraph per inviare aggiornamenti dell&#39;indicatore di riproduzione a MediaHeartbeat durante il tracciamento video. |
 |  | `mediaUpdateQoS` | API di SceneGraph per inviare aggiornamenti QoS a MediaHeartbeat durante il tracciamento video. |
 |  | Per ulteriori informazioni consulta la sezione MediaHeartbeat dell’SDK legacy. |  |
 
@@ -111,7 +111,7 @@ Il ponte di connessione è progettato per eseguire le seguenti operazioni:
 
 | Nome costante | Descrizione |
 |---|---|
-| `API_RESPONSE` | Utilizzato per recuperare l&#39;oggetto di risposta dal campo `adbmobileTask` del nodo `adbmobileApiResponse` |
+| `API_RESPONSE` | Utilizzato per recuperare l’oggetto di risposta dal campo `adbmobileTask` del nodo `adbmobileApiResponse` |
 | `DEBUG_LOGGING` | Utilizzato come `apiName` per `getDebugLogging` |
 | `PRIVACY_STATUS` | Utilizzato come `apiName` per `getPrivacyStatus` |
 | `TRACKING_IDENTIFIER` | Utilizzato come `apiName` per `trackingIdentifier` |
@@ -126,7 +126,7 @@ Il ponte di connessione è progettato per eseguire le seguenti operazioni:
 <table>
 <thead>
 <tr>
-<td> Campo </td><td> Tipo </td><td> impostazione predefinita </td><td> Utilizzo </td>
+<td> Campo </td><td> Tipo </td><td> Impostazione predefinita </td><td> Utilizzo </td>
 </tr>
 </thead>
 <tbody>
@@ -134,20 +134,20 @@ Il ponte di connessione è progettato per eseguire le seguenti operazioni:
 <td> adbmobileApiCall </td>
 <td> assocarray </td>
 <td> Non valido </td>
-<td> NON modificare questo campo o lasciare che sia utilizzato dall'applicazione. Questo campo viene utilizzato da ADBMobile SceneGraphConnector per indirizzare le chiamate API tramite i nodi SceneGraph e per recuperare le risposte. Pertanto, questa chiave/campo è riservata ad AdobeMobileSDK per la compatibilità con SceneGraph. <b>Importante:</b> eventuali modifiche a questo campo possono causare il malfunzionamento di AdobeMobileSDK.</td>
+<td> NON modificare questo campo o lasciare che sia utilizzato dall’applicazione. Questo campo viene utilizzato da SceneGraphConnector ADBMobile per indirizzare le chiamate API tramite i nodi SceneGraph e per recuperare le risposte. Pertanto, questa chiave/campo è riservata ad AdobeMobileSDK per la compatibilità con SceneGraph. <b>Importante:</b> eventuali modifiche a questo campo potrebbero causare il malfunzionamento di AdobeMobileSDK.</td>
 </tr>
 <tr>
 <td> adbmobileApiResponse </td>
 <td> assocarray </td>
 <td> Non valido </td>
-<td> Tutte le API eseguite su AdobeMobileSDK restituiranno risposte in questo campo di sola lettura. Registrati per un callback per ascoltare gli aggiornamenti a questo campo per ricevere gli oggetti di risposta. Di seguito è riportato il formato dell'oggetto di risposta:  
+<td> Tutte le API eseguite su AdobeMobileSDK restituiranno risposte in questo campo di sola lettura. Registrati per un callback per ascoltare gli aggiornamenti a questo campo e ricevere gli oggetti di risposta. Di seguito è riportato il formato dell'oggetto di risposta:  
 <pre>
 response = {
   "apiName" : &lt;SceneGraphConstants.
                API_NAME&gt; 
   "returnValue : &lt;API_RESPONSE&gt; 
 }</pre>
-Un'istanza di questo oggetto di risposta verrà inviata per qualsiasi chiamata API su AdobeMobileSDK che dovrebbe restituire un valore come indicato nella guida di riferimento API. Ad esempio, una chiamata API per visitorMarketingCloudID() restituirà il seguente oggetto di risposta: 
+Un’istanza di questo oggetto di risposta verrà inviata per qualsiasi chiamata API su AdobeMobileSDK che dovrebbe restituire un valore come indicato nella guida di riferimento API. Ad esempio, una chiamata API per visitorMarketingCloudID() restituirà il seguente oggetto di risposta: 
 <pre>
 response = {
   "apiName" : m.
@@ -156,13 +156,13 @@ response = {
   "returnValue : "07050x25671x33760x72644x14"  
 } 
 </pre>
-OR, anche i dati di risposta possono non essere validi: 
+OPPURE, anche i dati di risposta possono non essere validi: 
 <pre>
 response = {  
   "apiName" : m.
               adbmobileConstants.
               VISITOR_MARKETING_CLOUD_ID  
-  "returnValue : non valido 
+  "returnValue : invalid 
 } 
 </pre>
 </td>
@@ -175,43 +175,43 @@ response = {
 #### `getADBMobileConnectorInstance`
 
 Firma API: `ADBMobile().getADBMobileConnectorInstance()`\
-Ingresso: `adbmobileTask`
+Input: `adbmobileTask`
 Tipo di ritorno: `ADBMobileConnector`
 
 #### `sgConstants`
 
 Firma API: `ADBMobile().sgConstants()`
-Ingresso: Nessuno\
+Input: nessuno\
 Tipo di ritorno: `SceneGraphConstants`
 
 >[!NOTE]
->Per ulteriori informazioni, consulta il riferimento API `ADBMobileConnector` .
+>Per informazioni, consulta il riferimento API `ADBMobileConnector`.
 
 ### Costanti ADBMobile
 
-|  Funzione  | Nome costante | Descrizione   |
+|  Funzione  | Nome costante | Descrizione   |
 |---|---|---|
 | Controllo delle versioni | `version` | Costante per il recupero delle informazioni sulla versione di AdobeMobileLibrary |
-| Privacy/rinuncia | `PRIVACY_STATUS_OPT_IN` | Costante per lo stato di privacy optata in |
-|  | `PRIVACY_STATUS_OPT_OUT` | Costante per lo stato di privacy rifiutata |
-| Costanti MediaHeartbeat | Fai riferimento alle costanti di questa pagina: <br/><br/>[Metodi Media Heartbeat.](/help/sdk-implement/track-av-playback/track-core/track-core-roku.md) | Utilizza queste costanti con le API MediaHeartbeat |
-| Metadati standard | Fai riferimento alle costanti di questa pagina: <br/><br/>[Parametri metadati standard.](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md) | Utilizza queste costanti per allegare metadati video/annunci standard nelle API MediaHeartbeat |
+| Privacy/rinuncia | `PRIVACY_STATUS_OPT_IN` | Costante per lo stato di privacy acconsentito |
+|  | `PRIVACY_STATUS_OPT_OUT` | Costante per lo stato di privacy rifiutato |
+| Costanti MediaHeartbeat | Consulta le costanti della pagina: <br/><br/>[Metodi per heartbeat multimediali.](/help/sdk-implement/track-av-playback/track-core/track-core-roku.md) | Utilizza queste costanti con le API MediaHeartbeat |
+| Metadati standard | Consulta le costanti della pagina: <br/><br/>[Parametri per i metadati standard.](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md) | Utilizza queste costanti per allegare metadati di video/annunci standard nelle API MediaHeartbeat |
 
-Le API definite a livello globale `MediaHeartbeat` della libreria AdobeMobile legacy sono accessibili *così come* nell&#39;ambiente SceneGraph in quanto non utilizzano componenti BrightScript non disponibili nei nodi SceneGraph. Per ulteriori informazioni su questi metodi, consulta la tabella seguente:
+Utilità definita a livello globale `MediaHeartbeat`. Le API legacy di AdobeMobileLibrary sono accessibili *così come sono* nell’ambiente SceneGraph perché non utilizzano componenti BrightScript non disponibili nei nodi SceneGraph. Per ulteriori informazioni su questi metodi, consulta la tabella seguente:
 
 ### Metodi globali per MediaHeartbeat
 
 | Metodo | Descrizione |
 | --- | --- |
-| `adb_media_init_mediainfo` | Questo metodo restituisce un oggetto Media Information inizializzato `Function adb_media_init_mediainfo(name As String, id As String, length As Double, streamType As String) As Object` |
-| `adb_media_init_adinfo` | Questo metodo restituisce l&#39;oggetto Ad Information inizializzato `Function adb_media_init_adinfo(name As String, id As String, position As Double, length As Double) As Object` |
-| `adb_media_init_chapterinfo` | Questo metodo restituisce l&#39;oggetto informazioni capitolo inizializzato.  `Function adb_media_init_adbreakinfo(name As String, startTime as Double, position as Double) As Object` |
-| `adb_media_init_adbreakinfo` | Questo metodo restituisce l&#39;oggetto AdBreak Information inizializzato.  `Function adb_media_init_chapterinfo(name As String, position As Double, length As Double, startTime As Double) As Object` |
-| `adb_media_init_qosinfo` | Questo metodo restituisce un oggetto QoS Information inizializzato.  `Function adb_media_init_qosinfo(bitrate As Double, startupTime as Double, fps as Double, droppedFrames as Double) As Object` |
+| `adb_media_init_mediainfo` | Questo metodo restituisce un oggetto Informazioni multimediali inizializzato`Function adb_media_init_mediainfo(name As String, id As String, length As Double, streamType As String) As Object` |
+| `adb_media_init_adinfo` | Questo metodo restituisce l&#39;oggetto Informazioni sull’annuncio inizializzato`Function adb_media_init_adinfo(name As String, id As String, position As Double, length As Double) As Object` |
+| `adb_media_init_chapterinfo` | Questo metodo restituisce l&#39;oggetto Informazioni sul capitolo inizializzato.`Function adb_media_init_adbreakinfo(name As String, startTime as Double, position as Double) As Object` |
+| `adb_media_init_adbreakinfo` | Questo metodo restituisce l&#39;oggetto Informazioni sulla pausa annuncio inizializzato.`Function adb_media_init_chapterinfo(name As String, position As Double, length As Double, startTime As Double) As Object` |
+| `adb_media_init_qosinfo` | Questo metodo restituisce un oggetto Informazioni QoS inizializzato.`Function adb_media_init_qosinfo(bitrate As Double, startupTime as Double, fps as Double, droppedFrames as Double) As Object` |
 
 ## Implementazione {#implementation}
 
-1. **Scarica la libreria Roku -** Scarica la libreria Roku  [più recente.](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/roku-v2.2.2)
+1. **Scarica la libreria Roku:** scarica la [libreria Roku più recente.](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/roku-v2.2.2)
 
 1. **Configurare l&#39;ambiente di sviluppo**
 
@@ -221,31 +221,31 @@ Le API definite a livello globale `MediaHeartbeat` della libreria AdobeMobile le
 
 1. **Inizializza**
 
-   1. Importa `adbmobile.brs` nella tua scena.
+   1. Importa `adbmobile.brs` nella Scene.
 
       ```
       <script type="text/brightscript" uri="pkg:/source/adbmobile.brs" />
       ```
 
-   1. Crea un&#39;istanza del nodo `adbmobileTask` nella tua Scene.
+   1. Crea un’istanza di `adbmobileTask` nella Scene.
 
       ```
       m.adbmobileTask = createObject("roSGNode", "adbmobileTask")
       ```
 
-   1. Ottieni un&#39;istanza del connettore `adbmobile` per SceneGraph utilizzando l&#39;istanza `adbmobileTask` .
+   1. Ottieni un’istanza del connettore `adbmobile` per SceneGraph utilizzando l’istanza `adbmobileTask`.
 
       ```
       m.adbmobile = ADBMobile().getADBMobileConnectorInstance(m.adbmobileTask)
       ```
 
-   1. Ottieni `adbmobile` costanti SG.
+   1. Ottieni costanti SG `adbmobile`.
 
       ```
       m.adbmobileConstants = m.adbmobile.sceneGraphConstants()
       ```
 
-   1. Registra un callback per ricevere l&#39;oggetto risposta per tutte le chiamate API `AdbMobile`.
+   1. Registra un callback per ricevere l’oggetto di risposta per tutte le chiamate API `AdbMobile`.
 
       ```
       m.adbmobileTask.ObserveField(m.adbmobileConstants.API_RESPONSE,  
@@ -324,7 +324,7 @@ m.adbmobile.setDebugLogging(true)
 debugLogging = m.adbmobile.getDebugLogging()
 ```
 
-### Chiamate API di esempio per SDK SG
+### Chiamate API di esempio per l’SDK SG
 
 ```
 'create adbmobileTask instance 
