@@ -1,31 +1,32 @@
 ---
-title: '"Migrazione dall’SDK di Media standalone ad Adobe Launch - Web (JS)"'
-description: Scopri come migrare da Media SDK a Launch per JS.
+title: '"Migrazione da Media SDK standalone ad Adobe Launch - Web (JS)"'
+description: Scopri come effettuare la migrazione da Media SDK a Launch per JS.
 exl-id: 19b506b2-3070-4a5e-9732-a5cd0867afde
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: f0abffb48a6c0babb37f16aff2e3302bf5dd0cb4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '450'
-ht-degree: 12%
+ht-degree: 100%
 
 ---
 
-# Migrazione dall’SDK di Media autonomo ad Adobe Launch - Web (JS)
+# Migrazione da Media SDK ad Adobe Launch - Web (JS)
 
 >[!NOTE]
->Adobe Experience Platform Launch è stato riclassificato come una suite di tecnologie di raccolta dati nell’Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=en) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=it) come riferimento consolidato delle modifiche terminologiche.
 
-## Differenze tra le funzioni
+## Differenze nelle funzioni
 
-* *Launch* - Launch offre un’interfaccia utente che descrive come configurare, configurare e distribuire le soluzioni di tracciamento dei contenuti multimediali basate su Web. Launch migliora Dynamic Tag Management (DTM).
-* *Media SDK* - Media SDK fornisce librerie di tracciamento dei contenuti multimediali progettate per piattaforme specifiche (ad esempio: Android, iOS, ecc.). Adobe consiglia Media SDK per il tracciamento dell’utilizzo dei contenuti multimediali nelle app mobili.
+* *Launch* - Launch offre un’interfaccia utente che ti guida attraverso le operazioni di impostazione, configurazione e implementazione delle soluzioni basate su Web di tracciamento di contenuti multimediali. Launch offre funzionalità migliori rispetto a Dynamic Tag Management (DTM).
+* *Media SDK* - Media SDK offre librerie di tracciamento dei contenuti multimediali progettate per piattaforme specifiche (Android, iOS, ecc.). Adobe consiglia di usare Media SDK per il tracciamento dell’utilizzo dei contenuti multimediali nelle app mobili.
 
 ## Configurazione
 
 ### SDK per contenuti multimediali indipendenti
 
-Nell’SDK di Media autonomo, configuri la configurazione di tracciamento nell’app e la trasmetti all’SDK quando crei il tracker.
+In Media SDK standalone, puoi configurare le impostazioni di tracciamento nell’app
+e trasferirle all’SDK al momento della creazione del tracker.
 
 ```javascript
 //Media Heartbeat initialization
@@ -39,27 +40,30 @@ mediaConfig.ssl = true;
 mediaConfig.debugLogging = true;
 ```
 
-Oltre al `MediaHeartbeat` la pagina deve configurare e trasmettere la `AppMeasurement` istanza e `VisitorAPI` istanza per il tracciamento dei contenuti multimediali per funzionare correttamente.
+Oltre alla configurazione `MediaHeartbeat`, per funzionare correttamente la pagina deve configurare e trasmettere
+l’istanza `AppMeasurement` e l’istanza `VisitorAPI` per il tracciamento dei contenuti multimediali.
 
 ### Estensione Launch
 
-1. In Experience Platform Launch, fai clic sul pulsante [!UICONTROL Extensions] scheda per la proprietà Web.
-1. Sulla [!UICONTROL Catalog] Individua l’estensione Adobe Medium Analytics for Audio and Video e fai clic su [!UICONTROL Install].
-1. Nella pagina delle impostazioni dell&#39;estensione, configura i parametri di tracciamento.
+1. In Experience Platform Launch, fai clic sulla scheda [!UICONTROL Extensions] per 
+la tua proprietà web.
+1. Nella scheda [!UICONTROL Catalog], individua l’estensione Adobe Media Analytics for Audio and
+Video e fai clic su [!UICONTROL Install].
+1. Nella pagina delle impostazioni dell’estensione, configura i parametri di tracciamento.
 L’estensione Media utilizza i parametri configurati per il tracciamento.
 
    ![](assets/launch_config_js.png)
 
-[Guida utente di Launch - Installare e configurare l’estensione multimediale](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics/overview.html#install-and-configure-the-ma-extension)
+[Guida utente di Launch - Installare e configurare l’estensione per contenuti multimediali](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics/overview.html?lang=it#install-and-configure-the-ma-extension)
 
-## Differenze di creazione del tracciamento
+## Differenze nella creazione del tracker
 
 ### Media SDK
 
 1. Aggiungi la libreria Media Analytics al tuo progetto di sviluppo.
 1. Crea un oggetto di configurazione (`MediaHeartbeatConfig`).
-1. Implementa il protocollo delegato, esponendo il `getQoSObject()` e `getCurrentPlaybackTime()` funzioni.
-1. Crea un&#39;istanza Media Heartbeat (`MediaHeartbeat`).
+1. Implementa il protocollo delegato, esponendo le funzioni `getQoSObject()` e `getCurrentPlaybackTime()`.
+1. Crea un’istanza Media Heartbeat (`MediaHeartbeat`).
 
 ```
 // Media Heartbeat initialization
@@ -85,7 +89,7 @@ this.mediaHeartbeat = new MediaHeartbeat(mediaDelegate, mediaConfig, appMeasurem
 
 ### Launch
 
-Launch offre due approcci per la creazione dell’infrastruttura di tracciamento. Entrambi gli approcci utilizzano l’estensione Media Analytics Launch:
+Launch offre due tipologie di approccio per la creazione dell’infrastruttura di tracciamento. Entrambi utilizzano l’estensione Media Analytics Launch:
 
 1. Utilizza le API di tracciamento dei contenuti multimediali da una pagina web.
 
@@ -97,31 +101,31 @@ Launch offre due approcci per la creazione dell’infrastruttura di tracciamento
 
 1. Utilizza le API di tracciamento dei contenuti multimediali da un’altra estensione Launch.
 
-   In questo scenario, puoi utilizzare le API di tracciamento dei contenuti multimediali esposte dalla `get-instance` e `media-heartbeat` Moduli condivisi.
+   In questo scenario, puoi utilizzare le API di tracciamento dei contenuti multimediali esposte dai Moduli condivisi `get-instance` e `media-heartbeat`.
 
    >[!NOTE]
    >
-   >I moduli condivisi non sono disponibili per l’utilizzo nelle pagine web. Puoi utilizzare Moduli condivisi solo da un’altra estensione.
+   >I Moduli condivisi non sono disponibili per l’utilizzo nelle pagine web. Puoi utilizzare i Moduli condivisi solo da un’altra estensione.
 
-   Crea un `MediaHeartbeat` l&#39;utilizzo dell&#39;istanza `get-instance` Modulo condiviso.
-Passa un oggetto delegato a `get-instance` che espone `getQoSObject()` e `getCurrentPlaybackTime()` funzioni.
+   Crea un&#39;istanza `MediaHeartbeat` tramite il Modulo condiviso `get-instance`.
+Trasferisci un oggetto delegato a `get-instance` che espone le funzioni `getQoSObject()` e `getCurrentPlaybackTime()`.
 
    ```
    var getMediaHeartbeatInstance =
    turbine.getSharedModule('adobe-video-analytics', 'get-instance');
    ```
 
-   Accesso `MediaHeartbeat` costanti tramite `media-heartbeat` Modulo condiviso.
+   Accedi alle costanti `MediaHeartbeat` tramite il Modulo condiviso `media-heartbeat`.
 
 ## Documentazione correlata
 
 ### Media SDK
 
-* [Configurazione JavaScript 2.x](/help/sdk-implement/setup/setup-javascript/set-up-js-2.md)
-* [Configurazione JavaScript 3.x](/help/sdk-implement/setup/setup-javascript/set-up-js-3.md)
-* [API JS Media SDK](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html)
+* [Configurare JavaScript 2.x](/help/sdk-implement/setup/setup-javascript/set-up-js-2.md)
+* [Configurazione JavaScript 3.x ](/help/sdk-implement/setup/setup-javascript/set-up-js-3.md)
+* [API JS di Media SDK](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html)
 
 ### Launch
 
 * [Panoramica di Launch](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=it)
-* [Estensione Media Analytics](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics/overview.html)
+* [Estensione Media Analytics](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics/overview.html?lang=it)
