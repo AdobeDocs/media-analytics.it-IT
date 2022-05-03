@@ -1,20 +1,20 @@
 ---
-title: Ottenimento di un ID sessione
-description: Scopri come codificare una richiesta di sessioni per ottenere l’ID di sessione dall’intestazione Posizione in una risposta.
+title: 'Ottenimento di un ID sessione '
+description: Scopri come codificare una Richiesta di sessioni per ottenere l’ID di sessione dall’intestazione Posizione in una risposta.
 uuid: fc8712fa-848f-4564-af5d-5dd9d6b088d8
 exl-id: 4a1c4ade-4a5e-4af0-8117-19d718dd8bda
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
-workflow-type: tm+mt
-source-wordcount: '63'
-ht-degree: 9%
+workflow-type: ht
+source-wordcount: '61'
+ht-degree: 100%
 
 ---
 
-# Ottenimento di un ID sessione{#obtaining-a-session-id}
+# Ottenimento di un ID sessione {#obtaining-a-session-id}
 
-Questo frammento di codice da Reference Player mostra un modo per codificare una richiesta [Sessions,](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) insieme all&#39;estrazione dell&#39;ID sessione (e della versione API Media Collection) dall&#39;intestazione Location (Posizione) nella risposta:
+Questo frammento di codice dal Lettore di riferimento mostra un modo per codificare una [Richiesta di sessioni](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) insieme all’estrazione dell’ID sessione (e della versione API di Media Collection) dall’intestazione Posizione nella risposta:
 
 ```js
 var  
