@@ -1,6 +1,6 @@
 ---
-title: Contenuto principale live
-description: Visualizza un esempio di come tenere traccia del contenuto live utilizzando Media SDK.
+title: 'Contenuto principale live '
+description: Visualizza un esempio di come tracciare il contenuto live utilizzando Media SDK.
 uuid: e92e99f4-c395-48aa-8a30-cbdd2f5fc07c
 exl-id: f6a00ffd-da6a-4d62-92df-15d119cfc426
 feature: Media Analytics
@@ -8,50 +8,50 @@ role: User, Admin, Data Engineer
 source-git-commit: 165c7f01a2d2c32df518c89a5c49637107d41086
 workflow-type: tm+mt
 source-wordcount: '575'
-ht-degree: 3%
+ht-degree: 94%
 
 ---
 
-# Contenuto principale live{#live-main-content}
+# Contenuto principale live {#live-main-content}
 
 ## Scenario {#scenario}
 
-In questo scenario, esiste una risorsa live senza annunci riprodotti per 40 secondi dopo l’unione del flusso live.
+In questo scenario, esiste una risorsa live senza annunci riprodotta per 40 secondi dopo l’unione del flusso live.
 
-| Attivatore | metodo Heartbeat | Chiamate di rete | Note   |
+| Trigger | metodo Heartbeat | Chiamate di rete | Note   |
 |---|---|---|---|
-| Clic utente **[!UICONTROL Play]** | `trackSessionStart` | Inizio contenuto Analytics, inizio contenuto Heartbeat | Questo può essere un clic dell&#39;utente **[!UICONTROL Play]** o un evento di riproduzione automatica. |
-| Viene riprodotto il primo fotogramma dei media. | `trackPlay` | Riproduzione di contenuti Heartbeat | Questo metodo attiva il timer. Gli heartbeat vengono inviati ogni 10 secondi, a condizione che la riproduzione continui. |
-| Il contenuto viene riprodotto. |  | heartbeat di contenuto |  |
-| La sessione è finita. | `trackSessionEnd` |  | `SessionEnd` indica la fine di una sessione di visualizzazione. Questa API deve essere chiamata anche se l’utente non utilizza i file multimediali per il completamento. |
+| Clic utente **[!UICONTROL Play]** | `trackSessionStart` | Inizio contenuto Analytics, inizio contenuto Heartbeat | Questo può essere un clic dell’utente su **[!UICONTROL Play]** oppure un evento di riproduzione automatica. |
+| Viene riprodotto il primo fotogramma del file multimediale. | `trackPlay` | Riproduzione di contenuti Heartbeat | Questo metodo attiva il timer. Gli heartbeat vengono inviati ogni 10 secondi, a condizione che la riproduzione continui. |
+| Il contenuto viene riprodotto. |  | Heartbeat dei contenuti |  |
+| La sessione viene terminata. | `trackSessionEnd` |  | `SessionEnd` indica la fine di una sessione di visualizzazione. Questa API deve essere chiamata anche se l’utente non utilizza i file multimediali per il completamento. |
 
 ## Parametri {#parameters}
 
-Molti degli stessi valori visualizzati nelle chiamate di avvio dei contenuti di Adobe Analytics vengono visualizzati anche nelle chiamate di avvio dei contenuti di Heartbeat. Vedrai anche molti altri parametri utilizzati da Adobe per popolare i vari rapporti multimediali in Adobe Analytics. Non li copriremo tutti qui, solo quelli più importanti.
+Molti degli stessi valori visualizzati nelle chiamate di avvio dei contenuti di Adobe Analytics vengono visualizzati anche nelle chiamate di avvio dei contenuti di Heartbeat. Visualizzerai anche molti altri parametri utilizzati da Adobe per popolare i vari rapporti multimediali in Adobe Analytics. Non saranno trattati tutti ma solo quelli più importanti.
 
 ### Inizio contenuto Heartbeat
 
 | Parametro | Valore | Note |
 |---|---|---|
-| `s:sc:rsid` | &lt;Your Adobe Report Suite ID> |  |
-| `s:sc:tracking_serve` | &lt;Your Analytics Tracking Server URL> |  |
+| `s:sc:rsid` | &lt;ID suite di rapporti Adobe> |  |
+| `s:sc:tracking_serve` | &lt;URL del server di tracciamento di Analytics> |  |
 | `s:user:mid` | `s:user:mid` | Deve corrispondere al valore mid nella chiamata di avvio del contenuto di Adobe Analytics |
-| `s:event:type` | &quot;start&quot; |  |
-| `s:asset:type` | &quot;main&quot; |  |
-| `s:asset:mediao_id` | &lt;Your Media Name> |  |
+| `s:event:type` | “start” |  |
+| `s:asset:type` | “main” |  |
+| `s:asset:mediao_id` | &lt;Nome contenuto multimediale> |  |
 | `s:stream:type` | live |  |
-| `s:meta:*` | facoltativo | Metadati personalizzati impostati sul supporto |
+| `s:meta:*` | Opzionale | Metadati personalizzati impostati sull’elemento multimediale |
 
-## heartbeat di contenuto {#content-heartbeats}
+## Heartbeat dei contenuti {#content-heartbeats}
 
-Durante la riproduzione dei contenuti multimediali, è presente un timer che invia uno o più heartbeat (o ping) ogni 10 secondi per i contenuti principali e ogni secondo per gli annunci. Questi heartbeat conterranno informazioni su riproduzione, annunci pubblicitari, buffering e molti altri elementi. Il contenuto esatto di ogni heartbeat va oltre l&#39;ambito di questo documento, la cosa fondamentale da convalidare è che gli heartbeat vengono attivati in modo coerente mentre la riproduzione continua.
+Durante la riproduzione dei contenuti multimediali, è presente un timer che invia uno o più heartbeat (o ping) ogni 10 secondi per i contenuti principali e ogni secondo per gli annunci. Questi heartbeat contengono informazioni su riproduzione, annunci, buffering e molti altri elementi. Il contenuto esatto di ogni heartbeat va oltre l’ambito di questo documento, la cosa fondamentale da convalidare è che gli heartbeat vengano attivati in modo coerente mentre la riproduzione continua.
 
 Negli heartbeat dei contenuti, cerca alcuni aspetti specifici:
 
 | Parametro | Valore | Note |
 |---|---|---|
-| `s:event:type` | &quot;play&quot; |  |
-| `l:event:playhead` | &lt;playhead position=&quot;&quot;> ad esempio 50, 60, 70 | Ciò dovrebbe riflettere la posizione attuale del playhead. |
+| `s:event:type` | “play” |  |
+| `l:event:playhead` | &lt;posizione testina di riproduzione> ad esempio 50, 60, 70 | Ciò dovrebbe riflettere la posizione attuale della testina di riproduzione. |
 
 ## Contenuto Heartbeat completato {#heartbeat-content-complete}
 
@@ -59,17 +59,17 @@ Non ci sarà una chiamata completa in questo scenario, perché il flusso live no
 
 ## Impostazioni dei valori della testina di riproduzione
 
-Per i flussi LIVE, è necessario impostare il valore del playhead come numero di secondi dalla mezzanotte UTC di quel giorno, in modo che nel reporting, gli analisti possano determinare a quale punto gli utenti si uniscono e lasciano il flusso LIVE entro una visualizzazione di 24 ore.
+Per i flussi LIVE, è necessario impostare il valore della testina di riproduzione come numero di secondi dalla mezzanotte UTC di quel giorno, in modo che nel reporting, gli analisti possano determinare a quale punto gli utenti si uniscono e lasciano il flusso LIVE entro una visualizzazione di 24 ore.
 
-### All&#39;inizio
+### All’avvio
 
-Per i supporti LIVE, quando un utente inizia a riprodurre il flusso, è necessario impostare `l:event:playhead` al numero di secondi dalla mezzanotte UTC di quel giorno. Questo è diverso da VOD, dove si imposta il playhead su &quot;0&quot;. Nota: Quando si utilizzano i marcatori di avanzamento, è necessaria la durata del contenuto e l’indicatore di riproduzione deve essere aggiornato come numero di secondi dall’inizio dell’elemento multimediale, a partire da 0.
+Per i file multimediali LIVE, quando un utente inizia a riprodurre il flusso, è necessario impostare `l:event:playhead` al numero di secondi dalla mezzanotte UTC di quel giorno. Questo è diverso da VOD, dove la testina di riproduzione è impostata su “0”. Nota: Quando si utilizzano i marcatori di avanzamento, è necessaria la durata del contenuto e l’indicatore di riproduzione deve essere aggiornato come numero di secondi dall’inizio dell’elemento multimediale, a partire da 0.
 
 Ad esempio, supponiamo che un evento di streaming LIVE inizi a mezzanotte e venga eseguito per 24 ore (`a.media.length=86400`; `l:asset:length=86400`). Quindi, supponiamo che un utente inizi a riprodurre lo streaming LIVE alle 12:00. In questo scenario, devi impostare `l:event:playhead` a 43200 (12 ore dalla mezzanotte UTC di quel giorno in secondi).
 
 ### In pausa
 
-Quando un utente mette in pausa la riproduzione, deve essere applicata la stessa logica di &quot;playhead&quot; applicata all&#39;inizio della riproduzione. Quando l&#39;utente ritorna a riprodurre il flusso LIVE, è necessario impostare il `l:event:playhead` valore in base al nuovo numero di secondi dalla mezzanotte UTC, _not_ al punto in cui l&#39;utente ha messo in pausa il flusso LIVE.
+Quando un utente mette in pausa la riproduzione, deve essere applicata la stessa logica della “testina di riproduzione live” applicata all&#39;inizio della riproduzione. Quando l’utente ricomincia a riprodurre lo streaming LIVE, è necessario impostare il valore `l:event:playhead` in base al nuovo numero di secondi dalla mezzanotte UTC, _non_ dal punto in cui l’utente ha messo in pausa lo streaming LIVE.
 
 ## Codice di esempio {#sample-code}
 

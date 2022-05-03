@@ -1,6 +1,6 @@
 ---
 title: Scopri come tenere traccia della riproduzione core in Chromecast
-description: Scopri come implementare il tracciamento di base utilizzando Media SDK in Chromecast.
+description: Scopri come implementare il tracciamento core utilizzando Media SDK in Chromecast.
 uuid: a9fc59d8-a2f4-4889-bdec-55c42a835d06
 exl-id: 9812d06d-9efd-460c-a626-6a15f61a4c35
 feature: Media Analytics
@@ -8,23 +8,23 @@ role: User, Admin, Data Engineer
 source-git-commit: 165c7f01a2d2c32df518c89a5c49637107d41086
 workflow-type: tm+mt
 source-wordcount: '750'
-ht-degree: 0%
+ht-degree: 90%
 
 ---
 
-# Tracciamento riproduzione core in Chromecast{#track-core-playback-on-chromecast}
+# Tracciare la riproduzione di base in Chromecast{#track-core-playback-on-chromecast}
 
-Questa documentazione tratta il tracciamento nella versione 2.x dell&#39;SDK.
+Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
 >[!IMPORTANT]
 >
->Se implementi una versione 1.x dell&#39;SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK](/help/sdk-implement/download-sdks.md)
+>Se stai implementando una versione 1.x di SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scarica SDK](/help/sdk-implement/download-sdks.md)
 
 1. **Configurazione del tracciamento iniziale**
 
-   Identifica quando l&#39;utente attiva l&#39;intenzione di riproduzione (l&#39;utente fa clic su play e/o l&#39;esecuzione automatica è attiva) e crea un `MediaObject` istanza.
+   Identifica quando l’utente attiva l’intenzione di riproduzione (l’utente fa clic su play e/o l’esecuzione automatica è attiva) e crea un’istanza `MediaObject`.
 
-   **`MediaObject`Riferimento API:**
+   Specifihe di **`MediaObject`API:**
 
    [createMediaObject](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.createMediaObject)
 
@@ -32,29 +32,29 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell&#39;SDK.
    mediaObject = ADBMobile.media.createMediaObject(<name>, <id>, <duration>, <streamType>, <mediaType>);
    ```
 
-   **`StreamType`costanti:**
+   Costanti **`StreamType`:**
 
-   [ADBMobile Media](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.StreamType)
+   [Media di ADBMobile](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.StreamType)
 
-   **`MediaType`costanti:**
+   Costanti **`MediaType`:**
 
-   [ADBMobile Media](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.MediaType)
+   [Media di ADBMobile](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.MediaType)
 
-1. **Allegare metadati video**
+1. **Allega metadati video**
 
-   Facoltativamente, allega oggetti metadati video standard e/o personalizzati alla sessione di tracciamento video attraverso variabili di dati di contesto.
+   Facoltativamente, puoi allegare oggetti metadati video standard e/o personalizzati alla sessione di tracciamento video attraverso variabili dei dati di contesto.
 
    * **Metadati video standard**
 
-      [Implementazione dei metadati standard in Chromecast](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-chromecast.md)
+      [Implementare i metadati standard in Chromecast](/help/sdk-implement/track-av-playback/impl-std-metadata/impl-std-metadata-chromecast.md)
 
       >[!NOTE]
       >
-      >Il collegamento dell&#39;oggetto metadati video standard all&#39;oggetto multimediale è facoltativo.
+      >Il collegamento dell’oggetto metadati video standard all’oggetto multimediale è facoltativo.
 
    * **Metadati personalizzati**
 
-      Crea un oggetto variabile per le variabili personalizzate e inserisci i dati del video. Esempio:
+      Crea un oggetto variabile per le variabili personalizzate e lo popola con i dati del video. Ad esempio:
 
       ```js
       /* Set custom context data */
@@ -65,9 +65,9 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell&#39;SDK.
       };
       ```
 
-1. **Tracciare l&#39;intenzione di avviare la riproduzione**
+1. **Tracciare l’intenzione di inizio riproduzione**
 
-   Per iniziare a monitorare una sessione multimediale, chiama [trackSessionStart](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackSessionStart) sulla `media` oggetto.
+   Per iniziare il tracciamento di una sessione multimediale, chiama [trackSessionStart](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackSessionStart) sull’oggetto `media`.
 
    ```
    ADBMobile.media.trackSessionStart(mediaObject, customVideoMetadata);
@@ -75,23 +75,23 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell&#39;SDK.
 
    >[!IMPORTANT]
    >
-   >`trackSessionStart` tiene traccia delle intenzioni dell&#39;utente in merito alla riproduzione, non dell&#39;inizio della riproduzione. Questa API viene utilizzata per caricare i dati/metadati video e per stimare la metrica di QoS time-to-start (la durata tra `trackSessionStart` e `trackPlay`).
+   >`trackSessionStart` tiene traccia delle intenzioni di riproduzione dell’utente, non dell’inizio della riproduzione. Questa API viene utilizzata per caricare i dati/metadati video e per stimare la metrica QoS del tempo per l’avvio (la durata tra `trackSessionStart` e `trackPlay`).
 
    >[!NOTE]
    >
-   >Il secondo valore è il nome dell&#39;oggetto metadati video personalizzato creato al passaggio 2. Se non utilizzi metadati video personalizzati, invia semplicemente un oggetto vuoto per `data` argomento in `trackSessionStart`, come mostrato nella riga commento nell’esempio di iOS precedente.
+   >Il secondo valore corrisponde al nome dell’oggetto metadati video personalizzato creato nel passaggio 2. Se non utilizzi metadati video personalizzati, è sufficiente inviare un oggetto vuoto per l’argomento `data` in `trackSessionStart`, come mostrato nella riga commento nell’esempio di iOS precedente.
 
-1. **Tracciare l&#39;inizio effettivo della riproduzione**
+1. **Tracciare l’inizio effettivo della riproduzione**
 
-   Identifica l’evento dal lettore video per l’inizio della riproduzione del video, in cui viene eseguito il rendering del primo fotogramma del video sullo schermo, e chiama [trackPlay:](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackPlay)
+   Identifica l’evento dal lettore video relativo all’inizio della riproduzione video, dove viene eseguito il rendering del primo fotogramma del video sullo schermo, e chiama [trackPlay:](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackPlay)
 
    ```
    ADBMobile.media.trackPlay();
    ```
 
-1. **Aggiorna il valore della testina di riproduzione**
+1. **Aggiorna il valore dell&#39;indicatore di riproduzione**
 
-   Aggiorna `mediaUpdatePlayhead`&#39; valore di posizione più volte quando il playhead cambia. <br /> Per il video-on-demand (VOD), il valore è specificato in secondi dall&#39;inizio dell&#39;elemento multimediale. <br /> Per lo streaming live, se il lettore non fornisce informazioni sulla durata del contenuto, il valore può essere specificato come numero di secondi dalla mezzanotte UTC di quel giorno. <br />  Nota: Quando si utilizzano i marcatori di avanzamento, è necessaria la durata del contenuto e l’indicatore di riproduzione deve essere aggiornato come numero di secondi dall’inizio dell’elemento multimediale, a partire da 0.
+   Aggiorna `mediaUpdatePlayhead`&#39; valore di posizione più volte quando il playhead cambia. <br /> Per il tracciamento dei video on-demand (VOD), il valore è specificato in secondi dall’inizio dell’elemento multimediale. <br /> Per lo streaming live, se il lettore non fornisce informazioni sulla durata del contenuto, il valore può essere specificato come numero di secondi dalla mezzanotte UTC di quel giorno. <br />  Nota: Quando si utilizzano i marcatori di avanzamento, è necessaria la durata del contenuto e l’indicatore di riproduzione deve essere aggiornato come numero di secondi dall’inizio dell’elemento multimediale, a partire da 0.
 
    ```
    ADBMobile().mediaUpdatePlayhead(position)
@@ -99,15 +99,15 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell&#39;SDK.
 
 1. **Tracciare il completamento della riproduzione**
 
-   Identifica l’evento dal lettore video per il completamento della riproduzione video, in cui l’utente ha guardato il contenuto fino alla fine, e chiama [trackComplete:](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackComplete)
+   Identifica l’evento dal lettore video relativo al completamento della riproduzione video, in cui l’utente ha guardato il contenuto fino alla fine, e chiama [trackComplete:](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackComplete)
 
    ```
    ADBMobile.media.trackComplete();
    ```
 
-1. **Monitora la fine della sessione**
+1. **Tracciare la fine della sessione**
 
-   Identifica l’evento dal lettore video per lo scaricamento/la chiusura della riproduzione video, in cui l’utente chiude il video e/o il video viene completato e scaricato, e chiama [trackSessionEnd:](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackSessionEnd)
+   Identifica l’evento dal lettore video relativo allo scaricamento/chiusura della riproduzione video, in cui l’utente chiude il video e/o il video viene completato e scaricato, e chiama [trackSessionEnd:](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackSessionEnd)
 
    ```
    ADBMobile.media.trackSessionEnd();
@@ -115,26 +115,26 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell&#39;SDK.
 
    >[!IMPORTANT]
    >
-   >`trackSessionEnd` segna la fine di una sessione di tracciamento video. Se la sessione è stata controllata correttamente al completamento, dove l’utente ha guardato il contenuto fino alla fine, assicurati che `trackComplete` viene chiamato prima di `trackSessionEnd`. Qualsiasi altro `track*` La chiamata API viene ignorata dopo `trackSessionEnd`, tranne `trackSessionStart` per una nuova sessione di tracciamento video.
+   >`trackSessionEnd` indica la fine di una sessione di tracciamento video. Se la sessione è stata vista correttamente fino al completamento, per cui l’utente ha guardato il contenuto fino alla fine, assicurati che `trackComplete` venga chiamato prima di `trackSessionEnd`. Dopo `trackSessionEnd`, qualsiasi chiamata API `track*` viene ignorata, tranne che la chiamata `trackSessionStart` per una nuova sessione di tracciamento video.
 
 1. **Tracciare tutti gli scenari di pausa possibili**
 
-   Identifica l’evento dal lettore video per la pausa video e la chiamata [trackPause:](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackPause)
+   Identifica l’evento dal lettore video relativo alla sospensione video e chiama [trackPause:](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackPause)
 
    ```
    ADBMobile.media.trackPause();
    ```
 
-   **Pausa scenari**
+   **Scenari di sospensione**
 
-   Identifica uno scenario in cui il lettore video si fermerà e assicurati che `trackPause` viene chiamato correttamente. I seguenti scenari richiedono tutti una chiamata all’app `trackPause()`:
+   Identifica uno scenario in cui il lettore video si interrompe e verifica che `trackPause` sia chiamato correttamente. I seguenti scenari richiedono tutti una chiamata `trackPause()` dall’app:
 
-   * L’utente inserisce esplicitamente una pausa nell’app.
-   * Il lettore si mette in stato di Pausa.
-   * (*App mobili*): l’utente mette l’applicazione in background, ma desideri che l’app mantenga aperta la sessione.
-   * (*App mobili*) - Si verifica qualsiasi tipo di interruzione del sistema che causa lo sfondo di un&#39;applicazione. Ad esempio, l’utente riceve una chiamata, o si verifica un pop-up da un’altra applicazione, ma si desidera che l’applicazione mantenga in vita la sessione per dare all’utente la possibilità di riprendere il video dal punto di interruzione.
+   * L’utente mette esplicitamente in pausa l’app.
+   * Il lettore si mette in pausa da solo.
+   * (*App per dispositivi mobili*): l’utente mette l’applicazione in background, ma si desidera invece che l’app mantenga aperta la sessione.
+   * (*App per dispositivi mobili*): si verifica una qualsiasi interruzione del sistema causando l’esecuzione in background dell’applicazione. Ad esempio, l’utente riceve una chiamata oppure la notifica da un’altra applicazione, ma desideri che l’applicazione mantenga aperta la sessione per dare all’utente l’opportunità di riprendere il video dal punto in cui è stato interrotto.
 
-1. Identifica l&#39;evento dal lettore per la riproduzione video e/o la ripresa video dalla pausa e dalla chiamata [trackPlay:](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackComplete)
+1. Identifica l’evento dal lettore relativo alla riproduzione e/o la ripresa del video dalla sospensione e chiama [trackPlay:](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackComplete)
 
    ```
    ADBMobile.media.trackPlay();
@@ -142,7 +142,7 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell&#39;SDK.
 
    >[!TIP]
    >
-   >Può trattarsi della stessa origine evento utilizzata nel passaggio 4. Assicurati che ogni `trackPause()` La chiamata API è associata alla seguente `trackPlay()` Chiamata API quando la riproduzione del video riprende.
+   >Potrebbe trattarsi della stessa origine evento utilizzata nel passaggio 4. Quando la riproduzione del video riprende, assicurati che ogni chiamata API `trackPause()` sia associata alla seguente chiamata API `trackPlay()`.
 
-* Scenari di tracciamento: [Riproduzione VOD senza annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)
-* Sample player incluso con l’SDK di Chromecast per un esempio di tracciamento completo.
+* Scenari di tracciamento: [riproduzione VOD senza annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md)
+* Lettore di esempio incluso nell’SDK di Chromecast per un esempio di tracciamento completo.
