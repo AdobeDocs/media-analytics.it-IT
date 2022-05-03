@@ -1,32 +1,37 @@
 ---
 seo-title: Migrating from the standalone Media SDK to Adobe Launch
-title: Migrazione dall’SDK per contenuti multimediali indipendenti a Launch Adobe
+title: Migrazione da Media SDK standalone ad Adobe Launch
 seo-description: Instructions and code samples to assist in migrating from the Media SDK to Launch.
 description: Scopri come migrare da Media SDK a Launch.
 exl-id: 5350bbe9-c34f-46d9-a4c4-dbccdbed0bb0
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: f0abffb48a6c0babb37f16aff2e3302bf5dd0cb4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '207'
-ht-degree: 14%
+ht-degree: 100%
 
 ---
 
-# Migrazione dall’SDK di Media autonomo ad Adobe Launch
+# Migrazione da Media SDK standalone ad Adobe Launch
 
 >[!NOTE]
->Adobe Experience Platform Launch è stato riclassificato come una suite di tecnologie di raccolta dati nell’Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=en) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=it) come riferimento consolidato delle modifiche terminologiche.
 
-Questa documentazione si concentra principalmente sulle differenze di implementazione di Media Analytics tra l’SDK di Media standalone e l’estensione Media Analytics Launch.
+Questa documentazione si concentra principalmente sulle differenze di implementazione di Media Analytics
+tra Media SDK standalone e l’estensione Media Analytics Launch.
 
-Launch offre ai clienti un modo semplice di implementare e gestire tutte le soluzioni di analisi, marketing e pubblicità necessarie per fornire ai clienti esperienze personalizzate su web e dispositivi mobili. Launch consente a chiunque di generare e mantenere le proprie integrazioni con Launch. Queste integrazioni sono denominate estensioni.
-Le estensioni sono disponibili per i clienti di Launch in un’esperienza di tipo app-store per velocizzarne l’installazione, la configurazione e l’implementazione delle soluzioni.
+Launch offre ai clienti un modo semplice di implementare e gestire tutte le soluzioni di analisi,
+marketing e annunci pubblicitari necessarie per fornire ai clienti
+esperienze significative personalizzate su web e dispositivi mobili. Launch permette a chiunque di generare e mantenere
+le proprie integrazioni Launch. Queste integrazioni sono denominate estensioni.
+Le estensioni sono disponibili per i clienti di Launch in un’esperienza di tipo app-store per
+velocizzare l’installazione, la configurazione e l’implementazione delle proprie soluzioni.
 
-Adobe Medium Analytics per audio e video è disponibile come estensione Launch per web e dispositivi mobili:
+Adobe Media Analytics per audio e video è disponibile come estensione Launch per web e dispositivi mobili:
 
-* [Documentazione di Web Launch](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics/overview.html)
-* [Documentazione di Mobile Launch](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics)
+* [Documentazione di Launch per web](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics/overview.html?lang=it)
+* [Documentazione di Launch per dispositivi mobili](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics)
 
 ## Piattaforme
 
