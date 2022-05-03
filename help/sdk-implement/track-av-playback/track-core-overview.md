@@ -1,163 +1,163 @@
 ---
-title: Spiegazione del tracciamento della riproduzione dei contenuti
-description: '"Scopri come tracciare la riproduzione core, compresi il caricamento dei file multimediali, l’avvio dei file multimediali, la pausa dei file multimediali e il completamento dei file multimediali. "'
+title: Informazioni sul tracciamento della riproduzione dei contenuti
+description: '"Scopri come tracciare la riproduzione core, compresi il caricamento, l’avvio, la messa in pausa e il completamento del contenuto multimediale. "'
 uuid: 7b8e2f76-bc4e-4721-8933-3e4453b01788
 exl-id: 98ad2783-c9e3-48de-88df-8549f26114a0
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: 8e0f5d012e1404623e3a0a460a9391303e2ab4e0
-workflow-type: tm+mt
-source-wordcount: '894'
-ht-degree: 2%
+workflow-type: ht
+source-wordcount: '892'
+ht-degree: 100%
 
 ---
 
-# Panoramica del tracciamento{#tracking-overview}
+# Panoramica del tracciamento {#tracking-overview}
 
-Questa documentazione tratta il tracciamento nella versione 2.x dell&#39;SDK.
+Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
 >[!IMPORTANT]
 >
->Se implementi una versione 1.x dell&#39;SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
+>Se implementi una versione 1.x dell’SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scaricare gli SDK.](/help/sdk-implement/download-sdks.md)
 
 ## Eventi del lettore
 
-Il tracciamento della riproduzione di base include il tracciamento del caricamento dei file multimediali, l&#39;avvio dei file multimediali, la pausa dei file multimediali e il completamento dei file multimediali. Sebbene non sia obbligatorio, il tracciamento del buffering e della ricerca sono anche componenti core utilizzati per il tracciamento della riproduzione dei contenuti. Nell’API del lettore multimediale, identifica gli eventi del lettore corrispondenti alle chiamate di tracciamento Media SDK e codifica i gestori di eventi per chiamare le API di tracciamento e per popolare le variabili richieste e facoltative.
+Il tracciamento della riproduzione core include il tracciamento degli eventi di caricamento, avvio, pausa e completamento dei contenuti multimediali. Sebbene non siano obbligatori, anche il tracciamento di buffering e ricerca sono componenti core utilizzati per il tracciamento della riproduzione dei contenuti. Nell’API del lettore multimediale, identifica gli eventi corrispondenti alle chiamate di tracciamento Media SDK e codifica i gestori di eventi per chiamare le API di tracciamento e per popolare le variabili obbligatorie e facoltative.
 
-### Al caricamento del supporto
+### Al caricamento del contenuto multimediale
 
-* Creare l&#39;oggetto multimediale
-* Compilare metadati
-* Chiama `trackSessionStart`; Ad esempio: `trackSessionStart(mediaObject, contextData)`
+* Crea l’oggetto multimediale
+* Popola i metadati
+* Effettua la chiamata `trackSessionStart`; ad esempio: `trackSessionStart(mediaObject, contextData)`
 
-### All&#39;avvio del supporto
+### All’avvio del contenuto multimediale
 
-* Chiamata `trackPlay`
+* Effettua la chiamata `trackPlay`
 
-### In pausa/ripresa
+### Alla pausa/ripresa
 
-* Chiamata `trackPause`
-* Chiama `trackPlay`   _quando la riproduzione riprende_
+* Effettua la chiamata `trackPause`
+* Effettua la chiamata `trackPlay`  _quando riprende la riproduzione_
 
-### Supporto completo
+### Al completamento del contenuto multimediale
 
-* Chiamata `trackComplete`
+* Effettua la chiamata `trackComplete`
 
-### In caso di interruzione del contenuto multimediale
+### All’interruzione del contenuto multimediale
 
-* Chiamata `trackSessionEnd`
+* Effettua la chiamata `trackSessionEnd`
 
 ### Quando inizia lo scorrimento
 
-* Chiamata `trackEvent(SeekStart)`
+* Effettua la chiamata `trackEvent(SeekStart)`
 
-### Quando la pulizia termina
+### Quando termina lo scorrimento
 
-* Chiamata `trackEvent(SeekComplete)`
+* Effettua la chiamata `trackEvent(SeekComplete)`
 
 ### Quando inizia il buffering
 
-* Chiamata `trackEvent(BufferStart);`
+* Effettua la chiamata `trackEvent(BufferStart);`
 
-### Quando il buffering termina
+### Quando termina il buffering
 
-* Chiamata `trackEvent(BufferComplete);`
+* Effettua la chiamata `trackEvent(BufferComplete);`
 
 >[!TIP]
 >
->La posizione della testina di riproduzione viene impostata come parte del codice di configurazione e configurazione. Per ulteriori informazioni su `getCurrentPlayheadTime`, consulta [Panoramica: Linee guida generali sull&#39;implementazione.](/help/sdk-implement/setup/setup-overview.md#general-implementation-guidelines)
+>La posizione della testina di riproduzione viene impostata nel codice di impostazione e configurazione. Per ulteriori informazioni su `getCurrentPlayheadTime`, consulta [Panoramica: linee guida generali per l’implementazione](/help/sdk-implement/setup/setup-overview.md#general-implementation-guidelines)
 
 ## Implementazione {#implement}
 
-1. **Configurazione del tracciamento iniziale:** identifica quando l’utente attiva l’intenzione di riproduzione (l’utente fa clic su Play e/o autoplay è attivato) e crea un’ `MediaObject` istanza utilizzando le informazioni sul contenuto multimediale per nome, ID contenuto, lunghezza del contenuto e tipo di flusso.
+1. **Configurazione iniziale del tracciamento -** Identifica quando l’utente attiva l’intenzione di riproduzione (l’utente fa clic su play e/o è attiva la riproduzione automatica) e crea un’istanza di `MediaObject` che utilizza le informazioni del contenuto multimediale relative a nome, ID e durata e tipo di flusso.
 
-   **`MediaObject`riferimento:**
+   Specifihe di **`MediaObject`:**
 
-   | Nome variable | Descrizione | Obbligatorio |
+   | Nome variabile | Descrizione | Obbligatorio |
    |---|---|---|
    | `name` | Nome del contenuto | Sì |
    | `mediaid` | Identificatore univoco del contenuto | Sì |
-   | `length` | Lunghezza del contenuto | Sì |
+   | `length` | Durata del contenuto | Sì |
    | `streamType` | Tipo di flusso | Sì |
-   | `mediaType` | Tipo di supporto (contenuto audio o video) | Sì |
+   | `mediaType` | Tipo contenuto (audio o video) | Sì |
 
-   **`StreamType`costanti:**
+   Costanti **`StreamType`:**
 
    | Nome costante | Descrizione |
    |---|---|
    | `VOD` | Tipo di flusso per Video on Demand. |
-   | `LIVE` | Tipo di flusso per il contenuto live. |
-   | `LINEAR` | Tipo di flusso per il contenuto lineare. |
-   | `AOD` | Tipo di flusso per audio su richiesta |
-   | `AUDIOBOOK` | Tipo di flusso per la rubrica audio |
+   | `LIVE` | Tipo di flusso per il contenuto Live. |
+   | `LINEAR` | Tipo di flusso per contenuti Linear. |
+   | `AOD` | Tipo di flusso per audio on-demand |
+   | `AUDIOBOOK` | Tipo di flusso per audiolibro |
    | `PODCAST` | Tipo di flusso per Podcast |
 
-   **`MediaType`costanti:**
+   Costanti **`MediaType`:**
 
    | Nome costante | Descrizione |
    |---|---|
-   | `Audio` | Tipo di supporto per flussi audio. |
-   | `Video` | Tipo di supporto per i flussi video. |
+   | `Audio` | Tipo di file multimediale per flussi Audio. |
+   | `Video` | Tipo di file multimediale per i flussi Video. |
 
    Il formato generale per la creazione di `MediaObject` è `MediaHeartbeat.createMediaObject(<MEDIA_NAME>, <MEDIA_ID>, <MEDIA_LENGTH>, <STREAM_TYPE>, <MEDIA_TYPE>);`
 
-1. **Allega metadati:** è possibile allegare oggetti metadati standard e/o personalizzati alla sessione di tracciamento tramite variabili di dati di contesto.
+1. **Allega metadati -** Facoltativamente allega oggetti metadati standard e/o personalizzati alla sessione di tracciamento tramite variabili di dati contestuali.
 
    * **Metadati standard -**
 
       >[!NOTE]
       >
-      >Il collegamento dell&#39;oggetto metadati standard all&#39;oggetto multimediale è facoltativo.
+      >Il collegamento dell’oggetto metadati standard all’oggetto multimediale è facoltativo.
 
-      Creare un&#39;istanza di un oggetto metdata standard, compilare le variabili desiderate e impostare l&#39;oggetto metadati sull&#39;oggetto Media Heartbeat.
+      Crea un’istanza di un oggetto metadata standard, popola le variabili desiderate e imposta l’oggetto metadati sull’oggetto Media Heartbeat.
 
-      Vedi l&#39;elenco completo dei metadati qui: [Parametri audio e video.](/help/metrics-and-metadata/audio-video-parameters.md)
+      Per un elenco completo dei metadati, consulta [Parametri audio e video.](/help/metrics-and-metadata/audio-video-parameters.md)
 
-   * **Metadati personalizzati -** Crea un oggetto variabile per le variabili personalizzate e compila i dati per questo contenuto.
+   * **Metadati personalizzati -** Crea un oggetto variabile per le variabili personalizzate e lo popola con i dati per questo contenuto.
 
-1. **Tracciare l&#39;intenzione di avviare la riproduzione -** Per iniziare a tracciare una sessione, invoca  `trackSessionStart` l&#39;istanza Media Heartbeat.
+1. **Tracciare l’intenzione di inizio riproduzione -** Per iniziare a tracciare una sessione, effettua la chiamata `trackSessionStart` sull’istanza Media Heartbeat.
 
    >[!IMPORTANT]
    >
-   >`trackSessionStart` tiene traccia delle intenzioni dell&#39;utente in merito alla riproduzione, non dell&#39;inizio della riproduzione. Questa API viene utilizzata per caricare i dati/metadati e per stimare la metrica QoS time-to-start (la durata tra `trackSessionStart` e `trackPlay`).
+   >`trackSessionStart` traccia l’intenzione dell’utente di iniziare la riproduzione, ma non l’inizio della riproduzione stessa. Questa API viene utilizzata per caricare dati/metadati e per stimare la metrica di qualità del servizio relativa al tempo necessario per l’avvio (tempo che trascorre ta `trackSessionStart` e `trackPlay`).
 
    >[!NOTE]
    >
-   >Se non utilizzi metadati personalizzati, invia semplicemente un oggetto vuoto per l’argomento `data` in `trackSessionStart`.
+   >Se non utilizzi metadati personalizzati, è sufficiente inviare un oggetto vuoto per l’argomento `data` in `trackSessionStart`.
 
-1. **Tracciare l’inizio effettivo della riproduzione:** identifica l’evento dal lettore multimediale per l’inizio della riproduzione, in cui viene eseguito il rendering del primo fotogramma del contenuto sullo schermo e chiama  `trackPlay`.
+1. **Tracciare l’inizio effettivo della riproduzione -** Identifica l’evento dal lettore multimediale relativo all’inizio della riproduzione, ossia al rendering del primo fotogramma del contenuto sullo schermo, ed effettua la chiamata `trackPlay`.
 
-1. **Tracciare il completamento della riproduzione:** identifica l’evento dal lettore multimediale per il completamento della riproduzione, dove l’utente ha guardato il contenuto fino alla fine, e chiama  `trackComplete`.
+1. **Tracciare il completamento della riproduzione -** Identifica l’evento dal lettore multimediale relativo al completamento della riproduzione, ossia al momento in cui l’utente ha guardato il contenuto fino alla fine, ed effettua la chiamata `trackComplete`.
 
-1. **Traccia la fine della sessione -** Identifica l’evento dal lettore multimediale per lo scaricamento/la chiusura della riproduzione, in cui l’utente chiude il contenuto e/o il contenuto viene completato e scaricato e chiama  `trackSessionEnd`.
+1. **Tracciare la fine della sessione -** Identifica l’evento dal lettore multimediale relativo a scaricamento/chiusura della riproduzione, ossia qundo cui l’utente chiude il contenuto e/o il contenuto è stato completato e quindi non è più caricato, ed effettua la chiamata `trackSessionEnd`.
 
    >[!IMPORTANT]
    >
-   >`trackSessionEnd` segna la fine di una sessione di tracciamento. Se la sessione è stata controllata correttamente al completamento, dove l’utente ha guardato il contenuto fino alla fine, assicurati che `trackComplete` venga chiamato prima di `trackSessionEnd`. Qualsiasi altra chiamata API `track*` viene ignorata dopo `trackSessionEnd`, tranne `trackSessionStart` per una nuova sessione di tracciamento.
+   >`trackSessionEnd` indica la fine di una sessione di tracciamento. Se la sessione è stata guardata correttamente fino al completamento, dove l’utente ha guardato il contenuto fino alla fine, assicurati che `trackComplete` venga chiamato prima di `trackSessionEnd`. Qualsiasi altra chiamata API `track*` viene ignorata dopo `trackSessionEnd`, tranne `trackSessionStart` per una nuova sessione di tracciamento.
 
-1. **Tracciare tutti i possibili scenari di pausa:** identifica l’evento dal lettore multimediale per la pausa e la chiamata  `trackPause`.
+1. **Tracciare tutti i possibili scenari di pausa -** Identifica l’evento dal lettore multimediale relativo alla sospensione e chiama `trackPause`.
 
-   **Pausa scenari:** identifica qualsiasi scenario in cui il lettore si mette in pausa e assicurati che  `trackPause` venga chiamato correttamente. I seguenti scenari richiedono tutti che la chiamata all&#39;app `trackPause()`:
+   **Scenari di pausa -** Identifica qualsiasi scenario in cui il lettore effettua una pausa e si assicura che `trackPause` venga chiamato correttamente. Tutti gli scenari seguenti richiedono che l’app chiami `trackPause()`:
 
-   * L’utente inserisce esplicitamente una pausa nell’app.
-   * Il lettore si mette in stato di Pausa.
-   * (*App mobili*) - L&#39;utente mette l&#39;applicazione in background, ma desideri che l&#39;app mantenga aperta la sessione.
-   * (*App mobili*) - Si verifica un qualsiasi tipo di interruzione del sistema che causa lo sfondo di un&#39;applicazione. Ad esempio, l’utente riceve una chiamata, o si verifica un pop-up da un’altra applicazione, ma si desidera che l’applicazione mantenga in vita la sessione per dare all’utente la possibilità di riprendere il contenuto dal punto di interruzione.
+   * L’utente mette esplicitamente in pausa l’app.
+   * Il lettore si mette in pausa da solo.
+   * (*App per dispositivi mobili*): l’utente mette l’applicazione in background, ma si desidera invece che l’app mantenga aperta la sessione.
+   * (*App mobili*): si verifica una qualsiasi interruzione del sistema causando l’esecuzione in background dell’applicazione. Ad esempio, l’utente riceve una chiamata o viene visualizzato un pop-up da un’altra applicazione, ma si desidera che l’applicazione mantenga attiva la sessione dando all’utente la possibilità di riprendere il contenuto dal punto di interruzione.
 
-1. Identifica l&#39;evento dal lettore per la riproduzione e/o la ripresa dalla pausa e chiama `trackPlay`.
+1. Identifica l&#39;evento dal lettore relativo alla riproduzione e/o la ripresa dalla sospensione e chiama `trackPlay`.
 
    >[!TIP]
    >
-   >Può trattarsi della stessa origine evento utilizzata nel passaggio 4. Assicurati che ogni chiamata API `trackPause()` sia associata a una seguente chiamata API `trackPlay()` quando la riproduzione riprende.
+   >Potrebbe trattarsi della stessa origine evento utilizzata nel passaggio 4. Assicurati che ogni chiamata API `trackPause()` sia associata a una seguente `trackPlay()` quando riprende la riproduzione.
 
-1. Ascoltare gli eventi di ricerca della riproduzione dal lettore multimediale. Nella notifica dell&#39;evento di ricerca start, tieni traccia della ricerca utilizzando l&#39;evento `SeekStart` .
-1. Al momento della ricerca della notifica completa da parte del lettore multimediale, tieni traccia della fine della ricerca utilizzando l&#39;evento `SeekComplete` .
-1. Ascolta gli eventi di buffering di riproduzione dal lettore multimediale e, in caso di notifica dell&#39;evento di avvio del buffer, tieni traccia del buffering utilizzando l&#39;evento `BufferStart` .
-1. Al momento della notifica completa del buffer da parte del lettore multimediale, tieni traccia della fine del buffering utilizzando l&#39;evento `BufferComplete` .
+1. Ascolta gli eventi di ricerca della riproduzione dal lettore multimediale. Alla notifica dell’evento di inizio ricerca, traccia la ricerca utilizzando l’evento `SeekStart`.
+1. Alla notifica del completamento della ricerca dal lettore multimediale, traccia la fine della ricerca utilizzando l’evento `SeekComplete`.
+1. Ascolta gli eventi di buffering della riproduzione dal lettore multimediale e alla notifica dell’evento di inizio buffer, traccia il buffering utilizzando l’evento `BufferStart`.
+1. Alla notifica del completamento del buffering dal lettore multimediale, traccia la fine del buffering utilizzando l’evento `BufferComplete`.
 
-Vedi esempi di ogni passaggio negli argomenti specifici per la piattaforma seguenti e osserva i lettori di esempio inclusi negli SDK.
+Consulta gli esempi relativi a ciascun passaggio nei seguenti argomenti specifici per piattaforma e vedi i lettori di esempio inclusi negli SDK.
 
-Per un semplice esempio di tracciamento della riproduzione, consulta questo utilizzo dell’SDK JavaScript 2.x in un lettore HTML5:
+Per avere un semplice esempio di tracciamento della riproduzione, consulta questo utilizzo dell’SDK JavaScript 2.x in un lettore HTML5:
 
 ```js
 /* Call on media start */
@@ -240,4 +240,4 @@ if (e.type == “buffered”) {
 
 ## Convalida {#validate}
 
-Per informazioni sulla convalida dell&#39;implementazione, consulta [Convalida.](/help/sdk-implement/validation/validation-overview.md)
+Per informazioni sulla convalida dell’implementazione, vedi [Convalida.](/help/sdk-implement/validation/validation-overview.md)
