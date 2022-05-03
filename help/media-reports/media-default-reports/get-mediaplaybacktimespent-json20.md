@@ -1,30 +1,30 @@
 ---
-title: Ottenere i dati del rapporto JSON sul tempo di riproduzione multimediale con le API di Analytics 2.0
-description: Scopri come ottenere il tempo di riproduzione dei contenuti multimediali impiegato per i dati dei rapporti utilizzando le API di Analytics 2.0. Visualizza una richiesta e una risposta di esempio.
+title: 'Acquisire i dati del rapporto JSON sul tempo di riproduzione multimediale impiegato con le API di Analytics 2.0 '
+description: Scopri come ottenere i dati del rapporto sul tempo di riproduzione dei contenuti multimediali impiegato utilizzando le API di Analytics 2.0. Visualizza una richiesta e una risposta di esempio.
 feature: Media Analytics, Reports & Analytics Basics
 role: User, Admin, Data Engineer
-source-git-commit: 30f71465feac8bbca917630597ece4876b955ca0
-workflow-type: tm+mt
+exl-id: 65e5b67a-26fc-433e-b99b-0ebbc24428ac
+source-git-commit: 65e3615dc4af1eeaf4b58c9db6896d2ff90f56f6
+workflow-type: ht
 source-wordcount: '205'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
+# Acquisire i dati del rapporto JSON sul tempo di riproduzione multimediale impiegato con le API di Analytics 2.0 {#get-media-playback-time-spent-json-report-data}
 
-# Ottenere i dati del rapporto JSON sul tempo di riproduzione multimediale con le API di Analytics 2.0{#get-media-playback-time-spent-json-report-data}
+È possibile ottenere i dati del rapporto sul tempo di riproduzione dei file multimediali utilizzando le [_*API di Analytics 2.0*_](https://www.adobe.io/apis/experiencecloud/analytics/docs.html).
 
-È possibile ottenere il tempo di riproduzione dei file multimediali impiegato per i dati del rapporto utilizzando [_*API di Analytics 2.0*_](https://www.adobe.io/apis/experiencecloud/analytics/docs.html).
-
-1. Filtra i dati utilizzando qualsiasi segmento generato nell’interfaccia utente. Per filtrare in base a un ID contenuto specifico, crea un nuovo segmento.
-1. Imposta la `elements` -> `id` nel corpo della richiesta a `metrics/playback_time_spent_seconds` o `metrics/playback_time_spent_minutes` a seconda che si desideri ottenere l&#39;output in secondi o minuti.
+1. Filtra i dati utilizzando qualsiasi segmento generato nell’interfaccia utente. Per filtrare secondo un ID di contenuto specifico, crea un nuovo segmento.
+1. Imposta `elements` -> `id` nel corpo della richiesta a `metrics/playback_time_spent_seconds` oppure a `metrics/playback_time_spent_minutes` a seconda che si desideri ottenere l&#39;output in secondi o minuti.
 1. Richiedi una quantità sufficiente di dati.
 
    * L’intervallo di dati specificato nel rapporto raccoglie tutti i dati del visualizzatore simultaneo _al termine della sessione video._
-Devi tenere conto delle sessioni che iniziano in un giorno e terminano dopo la mezzanotte, che è il giorno successivo.
+Devi tenere conto delle sessioni che iniziano in un giorno e terminano dopo la mezzanotte, cioè il giorno successivo.
 
-   * Richiedi un altro giorno di dati al periodo previsto nella tua richiesta, ma nella tua analisi _*utilizzare solo i dati previsti.*_
+   * Richiedi dati per un’altra giornata secondo il periodo previsto nella tua richiesta, ma nella tua analisi _*utilizza solo i dati previsti.*_
 
-Un payload di richiesta di esempio per un giorno di dati sarà simile al seguente esempio. La richiesta viene effettuata per 2 giorni consecutivi ma nel reporting si utilizza solo il primo giorno.
+Un payload di richiesta per i dati di una giornata sarà simile al seguente esempio. La richiesta viene effettuata per 2 giorni consecutivi, ma nel reporting utilizzerai solo il primo giorno.
 
 ## Richiesta di esempio
 
