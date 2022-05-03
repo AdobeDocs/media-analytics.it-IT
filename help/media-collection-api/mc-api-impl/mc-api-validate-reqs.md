@@ -1,24 +1,24 @@
 ---
-title: Convalida delle richieste evento
-description: Scopri come utilizzare lo schema di convalida JSON per convalidare le richieste di eventi.
+title: 'Convalida delle richieste evento '
+description: Scopri come utilizzare lo schema di convalida JSON per convalidare le richieste evento.
 uuid: 1fc92f21-b510-4c96-8ea2-47e819f4a96e
 exl-id: a78739da-9fc9-42e3-9181-1887fb3dd357
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
-workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 4%
+workflow-type: ht
+source-wordcount: '121'
+ht-degree: 100%
 
 ---
 
-# Convalida delle richieste evento{#validating-event-requests}
+# Convalida delle richieste evento {#validating-event-requests}
 
-Il corpo della richiesta JSON per ogni tipo di evento viene convalidato sul backend con schemi JSON. Il corpo della risposta HTTP viene popolato con un messaggio di errore quando la convalida non riesce per una chiamata API.
+Il corpo della richiesta JSON viene convalidato nel backend con schemi JSON per ogni tipo di evento. Se una chiamata API non supera la convalida, il corpo della risposta HTTP viene compilato con un messaggio di errore.
 
-Gli schemi di convalida JSON per ciascun tipo di evento sono accessibili al pubblico qui: `{uri}/api/v1/schemas/{eventType}` (ad esempio, `{uri}/api/v1/schemas/sessionEnd`). Questi schemi di convalida JSON sono l’autorità assoluta per determinare i parametri corretti del corpo della richiesta per ciascun tipo di evento.
+Gli schemi di convalida JSON per ogni tipo di evento sono accessibili pubblicamente qui: `{uri}/api/v1/schemas/{eventType}` (ad es., `{uri}/api/v1/schemas/sessionEnd`). Questi schemi di convalida JSON rappresentano l’autorità principale per la determinazione dei parametri corretti del corpo della richiesta per ogni tipo di evento.
 
-Ad esempio, la risposta a una richiesta per lo schema di convalida `sessionStart` ha un aspetto simile a questo esempio (formattato leggermente per la leggibilità qui):
+Ad esempio, la risposta a una richiesta per lo schema di convalida `sessionStart` è simile a questo esempio (formattato leggermente per agevolarne la lettura):
 
 ```
 HTTP/1.1 200 OK
@@ -129,4 +129,4 @@ Connection: keep-alive
 
 >[!NOTE]
 >
->La convalida a livello di sessione non è possibile, in quanto il contesto della sessione non è disponibile nel livello di raccolta.
+>La convalida a livello di sessione non è possibile, in quanto il contesto della sessione non è disponibile a livello di raccolta.
