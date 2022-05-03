@@ -1,32 +1,32 @@
 ---
-title: VOD One Tracker per più sessioni
-description: Visualizza un esempio di come utilizzare un tracciamento per tenere traccia di più sessioni utilizzando Media SDK.
+title: 'VOD con un tracker per più sessioni '
+description: Visualizza un esempio di come utilizzare un tracker per tenere traccia di più sessioni tramite Media SDK.
 uuid: 355c83f4-52bd-4bdd-92dc-ab506e412d0a
 exl-id: 72edb484-0d45-446e-bda3-cda9e2272e7e
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
-workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 9%
+workflow-type: ht
+source-wordcount: '184'
+ht-degree: 100%
 
 ---
 
-# VOD un tracciamento per più sessioni{#vod-one-tracker-for-multiple-sessions}
+# VOD con un tracker per più sessioni {#vod-one-tracker-for-multiple-sessions}
 
 ## Scenario {#scenario}
 
-In questo scenario, l&#39;istanza `MediaHeartbeat` viene utilizzata per creare due sessioni separate in sequenza.
+In questo scenario, l’istanza `MediaHeartbeat` viene utilizzata per creare due sessioni separate in sequenza.
 
-Questo scenario è lo stesso della riproduzione [VOD senza annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md) scenario.
+Lo scenario è lo stesso di [Riproduzione VOD senza annunci](/help/sdk-implement/tracking-scenarios/vod-no-intrs-details.md).
 
 ## Parametri {#parameters}
 
-### Sessione Heartbeat
+### Sessione heartbeat
 
 | Parametro | Valore | Note   |
 | --- | --- | --- |
-| `s:event:sid` | ID sessione univoco | Un ID di sessione univoco presente in tutte le chiamate di rete heartbeat fino a `trackSessionEnd` |
+| `s:event:sid` | ID di sessione univoco | Un ID di sessione univoco presente in tutte le chiamate di rete heartbeat fino al `trackSessionEnd` |
 
 ## Codice di esempio {#sample-code}
 
@@ -99,7 +99,7 @@ protected void onCreate(Bundle savedInstanceState) {
 } 
 ```
 
-Per visualizzare la prima sessione utilizzando l&#39;istanza `MediaAnalyticsProvider` (da cui `MediaHeartbeat`) in Android, imposta il seguente codice:
+Per visualizzare la prima sessione tramite l’istanza `MediaAnalyticsProvider` (quindi `MediaHeartbeat`) in Android, imposta il seguente codice:
 
 ```java
 // Set up mediaObject 
@@ -143,7 +143,7 @@ _mediaHeartbeat.trackSessionEnd();
 ........ 
 ```
 
-Per visualizzare la seconda sessione, è possibile utilizzare la stessa istanza `MediaAnalyticsProvider` ( `MediaHeartbeat`) della prima sessione, ma per una nuova sessione:
+Per visualizzare la seconda sessione, puoi utilizzare la stessa istanza `MediaAnalyticsProvider` (`MediaHeartbeat`) come prima sessione, ma per una nuova sessione:
 
 ```java
 // Set up mediaObject 
@@ -257,7 +257,7 @@ Per creare due istanze di `MediaHeartbeat` per due lettori multimediali, immetti
 } 
 ```
 
-Per visualizzare la prima sessione utilizzando l&#39;istanza `MediaAnalyticsProvider` (da cui `MediaHeartbeat`) in iOS, imposta il seguente codice:
+Per visualizzare la prima sessione utilizzando l’istanza `MediaAnalyticsProvider` (quindi `MediaHeartbeat`) in iOS, imposta il seguente codice:
 
 ```
 // Set up mediaObject 
@@ -295,7 +295,7 @@ NSMutableDictionary *mediaContextData = [[NSMutableDictionary alloc] init];
 ....... 
 ```
 
-Per visualizzare la seconda sessione, è possibile utilizzare la stessa istanza `MediaAnalyticsProvider` ( `MediaHeartbeat`) della prima sessione, ma per una nuova sessione:
+Per visualizzare la seconda sessione, puoi utilizzare la stessa istanza `MediaAnalyticsProvider` (`MediaHeartbeat`) come prima sessione, ma per una nuova sessione:
 
 ```
 // Set up mediaObject 
