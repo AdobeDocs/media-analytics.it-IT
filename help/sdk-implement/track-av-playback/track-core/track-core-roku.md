@@ -6,13 +6,13 @@ exl-id: 5272c0ce-4e3d-48c6-bfa6-94066ccbf9ac
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: 14329fab02e88cbad69ceea4ccd719b90f6555a6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '771'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
-# Tracciare la riproduzione di base in Roku{#track-core-playback-on-roku}
+# Tracciare la riproduzione di base in Roku {#track-core-playback-on-roku}
 
 Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
@@ -145,7 +145,7 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
 1. **Aggiorna il valore dell&#39;indicatore di riproduzione**
 
-   Quando l&#39;indicatore di riproduzione multimediale viene modificato, notifica l’SDK effettuando una chiamata all’API `mediaUpdatePlayhead`. <br /> Per il tracciamento dei video on-demand (VOD), il valore è specificato in secondi dall’inizio dell’elemento multimediale. <br /> Per lo streaming live, se il lettore non fornisce informazioni sulla durata del contenuto, il valore può essere specificato come numero di secondi dalla mezzanotte UTC di quel giorno. <br /> Nota: Quando si utilizzano i marcatori di avanzamento, è necessaria la durata del contenuto e l’indicatore di riproduzione deve essere aggiornato come numero di secondi dall’inizio dell’elemento multimediale, a partire da 0.
+   Quando l&#39;indicatore di riproduzione multimediale viene modificato, notifica l’SDK effettuando una chiamata all’API `mediaUpdatePlayhead`. <br /> Per il tracciamento dei video on-demand (VOD), il valore è specificato in secondi dall’inizio dell’elemento multimediale. <br /> Per lo streaming live, se il lettore non fornisce informazioni sulla durata del contenuto, il valore può essere specificato come numero di secondi dalla mezzanotte UTC di quel giorno. <br /> Nota: quando si utilizzano i marcatori di avanzamento, è necessario specificare la durata del contenuto e la testina di riproduzione deve essere aggiornata come numero di secondi dall’inizio dell’elemento multimediale, a partire da 0.
 
 
    ```
