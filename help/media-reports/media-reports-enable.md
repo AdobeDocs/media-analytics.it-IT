@@ -6,17 +6,17 @@ exl-id: 686d88a5-79b6-4936-ba9e-8f834ef330d1
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: 1682a10a1d24e55854a77a8f44b43f92893adaa2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '916'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
-# Abilitazione di rapporti sui contenuti multimediali{#media-reports-enablement}
+# Abilitazione di rapporti sui contenuti multimediali {#media-reports-enablement}
 
 Ogni suite di rapporti che raccoglie metriche multimediali deve essere configurata prima dell’invio dei dati multimediali.
 
-I clienti avanzati possono utilizzare i pannelli multimediali in Analysis Workspace solo dopo che Media Core è abilitato e il tracciamento è abilitato per [Qualità dell&#39;esperienza](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/track-qos/track-qos-overview.html?lang=en).
+I clienti più esperti possono utilizzare i pannelli per contenuti multimediali in Analysis Workspace solo dopo avere abilitato Media Core e il tracciamento per la [Qualità dell’esperienza](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/track-qos/track-qos-overview.html?lang=it).
 
 >[!TIP]
 >
@@ -25,7 +25,7 @@ I clienti avanzati possono utilizzare i pannelli multimediali in Analysis Worksp
 1. In [Reports &amp; Analytics](https://my.omniture.com/login/) fai clic su **[!UICONTROL Admin > Report Suites].**
 1. Seleziona le suite di rapporti in cui stai raccogliendo dati multimediali e fai clic su **[!UICONTROL Edit Settings > Media Management > Media Reporting].**
 
-   ![](assets/media-reporting.png){width=“400px”}
+   ![](assets/media-reporting.png){width=&quot;400px&quot;}
 
 1. Sulla pagina **[!UICONTROL Media Reporting]**, abilita **[!UICONTROL Media Core],** e, facoltativamente, abilita **[!UICONTROL Media Ads],** **[!UICONTROL Media Chapters],** e **[!UICONTROL Media Quality].**
 
@@ -66,7 +66,7 @@ I clienti avanzati possono utilizzare i pannelli multimediali in Analysis Worksp
 
    | Opzione | Note |
    | --- | --- |
-   | Continua a utilizzare variabili personalizzate | Pro e contro:<ul> <li> **Pro:** la tendenza dei contenuti continua a funzionare dopo la migrazione. </li> <li> **Contro:** richiede di mantenere due eVar personalizzate e tre eventi personalizzati assegnati ai contenuti multimediali. Riutilizzi un eVar personalizzato e un evento personalizzato. </li> </ul> Per continuare a utilizzare variabili personalizzate: <ol> <li>Seleziona **[!UICONTROL Use Custom Variables,]**, quindi fai clic su **[!UICONTROL Save.]** </li> <li>Quando richiesto, mappa le eVar ed eventi personalizzati correnti e fai clic su **[!UICONTROL Save:]** </li> </ol> |
+   | Continua a utilizzare variabili personalizzate | Pro e contro:<ul> <li> **Pro:** la tendenza dei contenuti continua a funzionare dopo la migrazione. </li> <li> **Contro:** richiede di mantenere due eVar personalizzate e tre eventi personalizzati assegnati ai contenuti multimediali. Riutilizzi un eVar personalizzato e un evento personalizzato. </li> </ul> Per continuare a utilizzare variabili personalizzate: <ol> <li>Seleziona **[!UICONTROL Use Custom Variables,]** quindi fai clic su **[!UICONTROL Save.]** </li> <li>Quando richiesto, mappa le eVar ed eventi personalizzati correnti e fai clic su **[!UICONTROL Save:]** </li> </ol> |
    | Migrazione a variabili della soluzione | Pro e contro:<ul> <li> **Pro:** riutilizzi tre eVar personalizzate e quattro eventi personalizzati. </li> <li> **Contro:** perdi **tutte** le tendenze storiche e il confronto per i report multimediali. Ciò significa che non è possibile impostare le visualizzazioni dei contenuti o il tempo di riproduzione dei contenuti per le date precedenti alla migrazione a heartbeat. </li> </ul> **Limitazione:**  non eseguire la migrazione alle variabili della soluzione a meno che non si sia certi di non voler mantenere questa tendenza. Tutti i clienti devono utilizzare le variabili della soluzione e le regole di elaborazione per inserire i dati multimediali nelle proprietà e eVar esistenti, solo se devono preservare la continuità storica. Per migrare alle variabili della soluzione: seleziona **[!UICONTROL Use Solution Variables]** e fai clic su **[!UICONTROL Save].** <br><br> IMPORTANTE: la migrazione alle variabili della soluzione comporta la perdita di **tutte** le tendenze storiche e il confronto per i report multimediali. |
 
 >[!IMPORTANT]
