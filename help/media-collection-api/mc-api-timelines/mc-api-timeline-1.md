@@ -1,14 +1,14 @@
 ---
-title: Informazioni sulle timeline di tracciamento dei file multimediali � Visualizza fino alla fine del contenuto
+title: Informazioni sulle timeline di tracciamento dei file multimediali Visualizza fino alla fine del contenuto
 description: Approfondisci la timeline dell’indicatore di riproduzione e le azioni dell’utente corrispondente. Scopri i dettagli di ciascuna azione e le relative richieste.
 uuid: 0ff591d3-fa99-4123-9e09-c4e71ea1060b
 exl-id: 16b15e03-5581-471f-ab0c-077189dd32d6
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: 88bf699cb5b0872cefa4d6a6609c74f8fa35189a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1203'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -35,7 +35,7 @@ I seguenti diagrammi illustrano la timeline della testina di riproduzione e la t
 
 **Dettagli implementazione**
 
-Questa chiamata segnala _l’intenzione dell’utente di riprodurre_ un video. <br/><br/>Restituisce una sessione ID ( `{sid}`) al client utilizzata per identificare tutte le chiamate di tracciamento successive all’interno della sessione. Lo stato del lettore non è ancora “in riproduzione”, ma è “in avvio”. I <br/><br/>[Parametri di sessione obbligatori ](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) devono essere inclusi nella mappa `params` nel corpo della richiesta. <br/><br/>Nel backend, questa chiamata genera una chiamata di avvio Adobe Analytics.
+Questa chiamata segnala _l’intenzione dell’utente di riprodurre_ un video. <br/><br/>Restituisce una sessione ID (`{sid}`) al client utilizzata per identificare tutte le chiamate di tracciamento successive all’interno della sessione. Lo stato del lettore non è ancora “in riproduzione”, ma è “in avvio”. I <br/><br/>[Parametri di sessione obbligatori ](/help/media-collection-api/mc-api-ref/mc-api-sessions-req.md) devono essere inclusi nella mappa `params` nel corpo della richiesta. <br/><br/>Nel backend, questa chiamata genera una chiamata di avvio Adobe Analytics.
 
 **Esempio di corpo della richiesta**
 
@@ -137,11 +137,11 @@ Inizia il tracciamento del primo annuncio pre-roll, che è lungo 15 secondi. Inc
 }
 ```
 
-**NOTA: Tra gli eventi AdBreakStart e AdStart non dovrebbero esserci altri eventi di riproduzione.**
+**NOTA: tra gli eventi AdBreakStart e AdStart non devono esserci altri eventi di riproduzione.**
 
-### Azione 5: ping annuncio {#Action-5}
+### Azione 5 - Ping annuncio {#Action-5}
 
-#### Azione 5.1 - ping annuncio 1 {#Action-5-1}
+#### Azione 5.1 - Ping annuncio 1 {#Action-5-1}
 
 | Azione | Timeline di azioni (secondi) | Posizione della testina di riproduzione (secondi) | Richiesta del client |
 | --- | :---: | :---: | --- |
@@ -506,7 +506,7 @@ Tracciamento dell’annuncio mid-roll.
 }
 ```
 
-### Azione 18 - ping dell’annuncio {#Action-18}
+### Azione 18 - Ping dell’annuncio {#Action-18}
 
 | Azione | Timeline di azioni (secondi) | Posizione della testina di riproduzione (secondi) | Richiesta del client |
 | --- | :---: | :---: | --- |
