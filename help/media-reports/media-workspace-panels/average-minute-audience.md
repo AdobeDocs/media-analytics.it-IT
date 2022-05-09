@@ -1,13 +1,13 @@
 ---
 title: Pubblico medio per minuto del file multimediale
-description: Scopri come utilizzare il pannello Pubblico medio per minuto per analizzare il pubblico medio per un contenuto specifico o per un periodo di tempo personalizzato.
+description: Scopri come utilizzare il pannello Pubblico medio per minuto del file multimediale per analizzare il pubblico medio per un contenuto specifico o per un periodo di tempo personalizzato.
 feature: Media Analytics, Workspace Basics
 role: User, Admin, Data Engineer
 exl-id: af4d430c-1349-4606-b587-da5d40e0fe4b
 source-git-commit: df950709d5eafd91d9f0958aeb66f09765e9026b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '264'
-ht-degree: 85%
+ht-degree: 100%
 
 ---
 
@@ -22,4 +22,4 @@ In Analysis Workspace, il pubblico medio per minuto corrisponde al tempo impiega
 
 Il pannello Pubblico medio per minuto fornisce analisi medie del pubblico in base al contenuto specifico selezionato se la durata è resa disponibile utilizzando le Classificazioni.
 
-Il pannello Pubblico medio per minuto fornisce anche analisi per un periodo di tempo selezionato che possono essere filtrate in base al contenuto specifico, a prescindere dalla durata disponibile utilizzando le Classificazioni. Per accedere al pannello Pubblico medio per minuto passa a una suite di rapporti i cui sono abilitati i componenti Media Analytics. Fai clic sull’icona del pannello all’estrema sinistra, quindi trascina il pannello nel progetto Analysis Workspace. [Ulteriori informazioni...](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/average-minute-audience-panel.html?lang=en)
+Il pannello Pubblico medio per minuto fornisce anche analisi per un periodo di tempo selezionato che possono essere filtrate in base al contenuto specifico, a prescindere dalla durata disponibile utilizzando le Classificazioni. Per accedere al pannello Pubblico medio per minuto passa a una suite di rapporti i cui sono abilitati i componenti Media Analytics. Fai clic sull’icona del pannello all’estrema sinistra, quindi trascina il pannello nel progetto Analysis Workspace. [Ulteriori informazioni...](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/average-minute-audience-panel.html?lang=it)
