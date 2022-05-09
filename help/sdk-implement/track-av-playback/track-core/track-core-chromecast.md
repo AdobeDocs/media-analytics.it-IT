@@ -6,13 +6,13 @@ exl-id: 9812d06d-9efd-460c-a626-6a15f61a4c35
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: 165c7f01a2d2c32df518c89a5c49637107d41086
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '750'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
-# Tracciare la riproduzione di base in Chromecast{#track-core-playback-on-chromecast}
+# Tracciare la riproduzione di base in Chromecast {#track-core-playback-on-chromecast}
 
 Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
@@ -24,7 +24,7 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
    Identifica quando l’utente attiva l’intenzione di riproduzione (l’utente fa clic su play e/o l’esecuzione automatica è attiva) e crea un’istanza `MediaObject`.
 
-   Specifihe di **`MediaObject`API:**
+   Specifihe di **`MediaObject` API:**
 
    [createMediaObject](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.createMediaObject)
 
@@ -89,9 +89,9 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
    ADBMobile.media.trackPlay();
    ```
 
-1. **Aggiorna il valore dell&#39;indicatore di riproduzione**
+1. **Aggiorna il valore della testina di riproduzione**
 
-   Aggiorna `mediaUpdatePlayhead`&#39; valore di posizione più volte quando il playhead cambia. <br /> Per il tracciamento dei video on-demand (VOD), il valore è specificato in secondi dall’inizio dell’elemento multimediale. <br /> Per lo streaming live, se il lettore non fornisce informazioni sulla durata del contenuto, il valore può essere specificato come numero di secondi dalla mezzanotte UTC di quel giorno. <br />  Nota: Quando si utilizzano i marcatori di avanzamento, è necessaria la durata del contenuto e l’indicatore di riproduzione deve essere aggiornato come numero di secondi dall’inizio dell’elemento multimediale, a partire da 0.
+   Aggiorna il valore della posizione di `mediaUpdatePlayhead` più volte quando la testina di riproduzione si sposta. <br /> Per il tracciamento dei video on-demand (VOD), il valore è specificato in secondi dall’inizio dell’elemento multimediale. <br /> Per lo streaming live, se il lettore non fornisce informazioni sulla durata del contenuto, il valore può essere specificato come il numero di secondi trascorsi dalla mezzanotte UTC di quel giorno. <br /> Nota: quando si utilizzano gli indicatori di avanzamento, è necessario specificare la durata del contenuto e la testina di riproduzione deve essere aggiornata come numero di secondi dall’inizio dell’elemento multimediale, a partire da 0.
 
    ```
    ADBMobile().mediaUpdatePlayhead(position)
