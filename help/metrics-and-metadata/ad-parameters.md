@@ -1,14 +1,14 @@
 ---
-title: 'Parametri per gli annunci '
+title: Parametri per gli annunci
 description: “Scopri i parametri degli annunci, tra cui l’implementazione, la rete e le variabili di reporting per i dati video sugli annunci.”
 uuid: 92cd7f97-bb5a-4de6-8946-453d30271d0f
 exl-id: 949e86cb-d265-4836-8825-a06b87203b15
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 01afcf648f13af4d47b5fb41b7c9e89c2a89f590
+source-git-commit: 7e5ce452a9c96c4e34150ae0e06d73b0cff98741
 workflow-type: tm+mt
 source-wordcount: '2100'
-ht-degree: 91%
+ht-degree: 92%
 
 ---
 
@@ -98,16 +98,16 @@ Descrizione dei dati della tabella:
 ### Posizione interruzione annuncio
 
 |   Implementazione   | Parametri di rete | Reporting |
-| --- | --- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <ul> <li> **Chiave SDK:**<br/>  [startTime](./ad-parameters.md#section_Related_APIs) </li> <li> **Chiave API:**<br/> media.ad.podSecond </li> <li> **Obbligatorio:**<br/> sì </li> <li> **Tipo:**<br/> numero </li> <li> **Inviato con:**<br/> avvio annuncio, chiusura annuncio </li> <li> **Versione SDK min.:** qualsiasi </li> <li> **Valore di esempio:**<br/> 90 </li><li> **Descrizione:**<br/> offset dell’interruzione dell’annuncio all’interno del contenuto, in secondi.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>podSecond) </li> <li> **Heartbeat:**<br/> (l:asset:pod_offset) </li> </ul> | <ul> <li> **Disponibile:**<br/> sì </li> <li> **Variabile riservata:**<br/> classificazione </li> <li> **Nome rapporto:**<br/> posizione pod </li> <li> **Dati contestuali:**<br/> (a.media.ad.<br/>podSecond) </li> <li> **Feed dati:**<br/> N/D </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.podSecond) </li> <li> **Percorso campo XDM:**<br/> advertising.adAssetViewDetails.adBreak.<br/>offset </li> <li> **Percorso campo XDM raccolta:**<br/> mediaCollection.advertisingPodDetails.<br/>secondo </li> <li> **Percorso del campo XDM di reporting:**<br/> mediaReporting.advertisingPodDetails.<br/>secondo </li> </ul> |
+| --- | --- |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <ul> <li> **Chiave SDK:**<br/>  [startTime](./ad-parameters.md#section_Related_APIs) </li> <li> **Chiave API:**<br/> media.ad.podSecond </li> <li> **Obbligatorio:**<br/> sì </li> <li> **Tipo:**<br/> numero </li> <li> **Inviato con:**<br/> avvio annuncio, chiusura annuncio </li> <li> **Versione SDK min.:** qualsiasi </li> <li> **Valore di esempio:**<br/> 90 </li><li> **Descrizione:**<br/> offset dell’interruzione dell’annuncio all’interno del contenuto, in secondi.   </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>podSecond) </li> <li> **Heartbeat:**<br/> (l:asset:pod_offset) </li> </ul> | <ul> <li> **Disponibile:**<br/> sì </li> <li> **Variabile riservata:**<br/> classificazione </li> <li> **Nome rapporto:**<br/> posizione pod </li> <li> **Dati contestuali:**<br/> (a.media.ad.<br/>podSecond) </li> <li> **Feed dati:**<br/> N/D </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.ad.podSecond) </li> <li> **Percorso campo XDM:**<br/> advertising.adAssetViewDetails.adBreak.<br/>offset </li> <li> **Percorso campo XDM raccolta:**<br/> mediaCollection.advertisingPodDetails.<br/>offset </li> <li> **Percorso del campo XDM di reporting:**<br/> mediaReporting.advertisingPodDetails.<br/>offset </li> </ul> |
 
 
 
 ### ID interruzione annuncio
 
 |   Implementazione   | Parametri di rete | Reporting |
-| --- | --- |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <ul> <li> **Chiave SDK:**<br/> impostata automaticamente </li> <li> **Chiave API:**<br/> N/D </li> <li> **Obbligatorio:**<br/> sì </li> <li> **Tipo:**<br/> stringa </li> <li> **Inviato con:**<br/> avvio annuncio, chiusura annuncio </li> <li> **Versione SDK min.:** qualsiasi </li> <li> **Valore di esempio:**<br/> c4a577424c84067899b807c76722d495_1  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>pod) </li> <li> **Heartbeat:**<br/> (s:asset:pod_id) </li> </ul> | <ul> <li> **Disponibile:**<br/> sì </li> <li> **Variabile riservata:**<br/> eVar </li> <li> **Scadenza:**<br/> all’hit </li> <li> **Nome rapporto:**<br/> pod annuncio </li> <li> **Dati contestuali:**<br/> (a.media.ad.<br/>pod) </li> <li> **Feed dati:**<br/> videoadpod </li> <li> **Audience Manager:**<br/> </li> <li> **Percorso campo XDM:**<br/> advertising.adAssetViewDetails.adBreak.@id </li> <li> **Percorso del campo XDM di reporting:**<br/> mediaReporting.advertisingPodDetails.<br/>adBreakID </li> </ul> |
+| --- | --- |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <ul> <li> **Chiave SDK:**<br/> impostata automaticamente </li> <li> **Chiave API:**<br/> N/D </li> <li> **Obbligatorio:**<br/> sì </li> <li> **Tipo:**<br/> stringa </li> <li> **Inviato con:**<br/> avvio annuncio, chiusura annuncio </li> <li> **Versione SDK min.:** qualsiasi </li> <li> **Valore di esempio:**<br/> c4a577424c84067899b807c76722d495_1  </li> </ul> | <ul> <li> **Adobe Analytics:**<br/> (a.media.ad.<br/>pod) </li> <li> **Heartbeat:**<br/> (s:asset:pod_id) </li> </ul> | <ul> <li> **Disponibile:**<br/> sì </li> <li> **Variabile riservata:**<br/> eVar </li> <li> **Scadenza:**<br/> all’hit </li> <li> **Nome rapporto:**<br/> pod annuncio </li> <li> **Dati contestuali:**<br/> (a.media.ad.<br/>pod) </li> <li> **Feed dati:**<br/> videoadpod </li> <li> **Audience Manager:**<br/> </li> <li> **Percorso campo XDM:**<br/> advertising.adAssetViewDetails.adBreak.@id </li> <li> **Percorso del campo XDM di reporting:**<br/> mediaReporting.advertisingPodDetails.<br/>ID </li> </ul> |
 
 
 
