@@ -4,10 +4,10 @@ description: Scopri come collegare le azioni dell’applicazione ai dati di trac
 exl-id: c0d73bc2-4713-498a-8882-ff66c7f3dd50
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b6df391016ab4b9095e3993808a877e3587f0a51
+source-git-commit: 3e996d243d060a6fd07d2ddbabf05e39eca40758
 workflow-type: tm+mt
-source-wordcount: '409'
-ht-degree: 21%
+source-wordcount: '402'
+ht-degree: 26%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 21%
 
 Adobe Audience Manager (AAM), una piattaforma di gestione dati (DMP, Data Management Platform), ti aiuta a unire le risorse dei dati sul pubblico, semplificando la raccolta di informazioni rilevanti dal punto di vista commerciale sui visitatori del sito, la creazione di segmenti commerciabili e la distribuzione di contenuti e pubblicità mirati al pubblico giusto.
 
-Con AAM, non sei legato a una piattaforma lato vendita, scambio o domanda di dati. Inoltre, AAM è completamente agnostico quando si tratta delle risorse di dati dei tuoi partner. Con l&#39;accesso a più sorgenti di dati, AAM offre agli editori digitali la possibilità di utilizzare un&#39;ampia varietà di dati di terze parti e la nostra cooperativa privata di dati. Per ulteriori informazioni su AAM, consulta la documentazione AAM [Documentazione del prodotto di Audience Manager](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html).
+Con AAM, non sei legato a una piattaforma lato vendita, scambio o domanda di dati. Inoltre, AAM è completamente agnostico quando si tratta delle risorse di dati dei tuoi partner. Con l&#39;accesso a più sorgenti di dati, AAM offre agli editori digitali la possibilità di utilizzare un&#39;ampia varietà di dati di terze parti. Per ulteriori informazioni su AAM, consulta la documentazione AAM [Documentazione del prodotto Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=it).
 
-**Da VA a trasferimento di dati AAM:** per contenuti video e annunci video, le metriche e i metadati raccolti utilizzando variabili della soluzione (riservate) possono essere inviati automaticamente a AAM. Il trasferimento di dati è disponibile su tutte le piattaforme, inclusi desktop, dispositivi mobili e OTT. Per abilitare questo trasferimento di dati lato server, contatta l’Assistenza clienti di Adobe e richiedi l’abilitazione di questo feed.
+**Trasferimento dati da VA a AAM -** Per contenuti video e annunci video, le metriche e i metadati raccolti utilizzando variabili della soluzione (riservate) possono essere inviati automaticamente a AAM. Il trasferimento di dati è disponibile su tutte le piattaforme, inclusi desktop, dispositivi mobili e OTT. Per abilitare questo trasferimento di dati lato server, contatta l’Assistenza clienti di Adobe e richiedi l’abilitazione di questo feed.
 
 >[!IMPORTANT]
 >
