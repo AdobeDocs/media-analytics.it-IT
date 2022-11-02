@@ -6,8 +6,8 @@ exl-id: 686d88a5-79b6-4936-ba9e-8f834ef330d1
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: 1682a10a1d24e55854a77a8f44b43f92893adaa2
-workflow-type: ht
-source-wordcount: '916'
+workflow-type: tm+mt
+source-wordcount: '914'
 ht-degree: 100%
 
 ---
@@ -25,7 +25,7 @@ I clienti più esperti possono utilizzare i pannelli per contenuti multimediali 
 1. In [Reports &amp; Analytics](https://my.omniture.com/login/) fai clic su **[!UICONTROL Admin > Report Suites].**
 1. Seleziona le suite di rapporti in cui stai raccogliendo dati multimediali e fai clic su **[!UICONTROL Edit Settings > Media Management > Media Reporting].**
 
-   ![](assets/media-reporting.png){width=&quot;400px&quot;}
+   ![](assets/media-reporting.png){width="400px"}
 
 1. Sulla pagina **[!UICONTROL Media Reporting]**, abilita **[!UICONTROL Media Core],** e, facoltativamente, abilita **[!UICONTROL Media Ads],** **[!UICONTROL Media Chapters],** e **[!UICONTROL Media Quality].**
 
