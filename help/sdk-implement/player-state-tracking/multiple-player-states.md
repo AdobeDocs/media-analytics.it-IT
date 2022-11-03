@@ -1,22 +1,22 @@
 ---
 title: Aggiornamento simultaneo di più stati del lettore
-description: Questo argomento descrive la funzione di tracciamento dello stato di più lettori.
+description: Questo argomento descrive la funzione di tracciamento di più stati del lettore.
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: fdbb777547181422b81ff6f7874bec3d317d02e9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '186'
-ht-degree: 9%
+ht-degree: 100%
 
 ---
 
 # Tracciamento di più stati del lettore
 
-A volte due stati del lettore iniziano e terminano contemporaneamente oppure la fine di uno stato è anche l&#39;inizio di un altro stato, come illustrato nell&#39;immagine seguente:
+A volte due stati del lettore iniziano e terminano contemporaneamente oppure il termine di uno stato è anche l’inizio di un altro, come mostrato nell’immagine seguente:
 
-![Stati lettori multipli](assets/multiple-player-states.svg)
+![Più stati del lettore](assets/multiple-player-states.svg)
 
-L’implementazione corrente consente di eseguire entrambe le operazioni:
+L’implementazione corrente consente di eseguire entrambe gli scenari:
 - `stateStart(pictureInPicture)` - t0
 - `stateStart(mute)` - t0
 - `stateEnd(mute)` - t1
@@ -24,22 +24,25 @@ L’implementazione corrente consente di eseguire entrambe le operazioni:
 - `stateStart(fullScreen)` - t1
 - `stateEnd(fullScreen)` - t2
 
-Tuttavia, questo richiede di emettere più `stateStart` e `stateEnd` eventi per segnalare più modifiche simultanee dello stato. Per ottimizzare questo comportamento comune, è necessario `statesUpdate` è stato implementato il tipo di evento , che termina un elenco di stati e avvia un elenco di nuovi stati.
+Tuttavia, questo richiede di emettere più eventi `stateStart` e `stateEnd` per segnalare più modifiche simultanee dello stato. Per
+ottimizzare questo comportamento comune, è stato implementato un nuovo tipo di evento `statesUpdate`, che termina un elenco di stati
+e ne avvia uno di nuovi stati.
 
-Utilizzo del nuovo `statesUpdate` evento, l&#39;elenco di eventi riportato sopra diventa:
+Utilizzando il nuovo evento `statesUpdate`, l’elenco di eventi precedente diventa:
 - `statesUpdate(statesEnd=[], statesStart=[pictureInPicture, mute])` - t0
 - `statesUpdate(statesEnd=[mute, pictureInPicture], statesStart=[fullScreen])` - t1
 - `statesUpdate(statesEnd=[fullScreen], statesStart=[])` - t2
 
-Il numero di chiamate per gli aggiornamenti di stato è stato ridotto da sei a tre per lo stesso comportamento. L&#39;ultimo evento avrebbe potuto essere anche un semplice `stateEnd(fullScreen)`.
+Il numero di chiamate per gli aggiornamenti di stato è stato ridotto da sei a tre per lo stesso comportamento. L’ultimo evento
+avrebbe potuto essere anche un semplice `stateEnd(fullScreen)`.
 
 ## Implementazione API Media Collection {#mpst-api}
 
-Puoi utilizzare l’API Media Collection per implementare il tracciamento dello stato di più lettori.
+Puoi utilizzare l’API Media Collection per implementare il tracciamento di più stati del lettore.
 
 ### Esempio
 
-Di seguito è riportato un esempio di implementazione API di Media Collection per il tracciamento di più stati del lettore.
+Di seguito è riportato un esempio di implementazione dell’API Media Collection per il tracciamento di più stati del lettore.
 
 ```
 // statesUpdate (ex: mute and pictureInPicture are switched on)
@@ -111,4 +114,4 @@ http(s)://<Analytics_Visitor_Namespace>.hb-api.omtrdc.net/api/v1/sessions/<SID>/
 
 ## Implementazione di Media SDK
 
-Non è disponibile alcuna implementazione Media SDK.
+Non esiste alcuna implementazione di Media SDK.
