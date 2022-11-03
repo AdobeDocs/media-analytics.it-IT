@@ -3,12 +3,12 @@ product: adobe analytics
 audience: end-user
 user-guide-title: Adobe Analytics per contenuti multimediali in streaming
 breadcrumb-title: Guida di Media Analytics
-user-guide-description: Implementare Adobe Analytics per contenuti multimediali in streaming. Informazioni su Media SDK e API Media Collection.
+user-guide-description: Implementare Adobe Analytics per contenuti multimediali in streaming. Scopri l’SDK per contenuti multimediali e l’API per la raccolta di dati sui contenuti multimediali.
 sub-product: media analytics
 source-git-commit: 212fad8592c9f935869e55d034b17519c8b9de36
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '838'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 98%
             + [Guida all’implementazione di Custom Link](measurement-options/cl-in-aa/cl-impl-guide.md)
          + Primetime {#primetime}
             + [Primetime ](intro-to-ava/implementation-paths/primetime-path.md)
-         + [Abilitazione di Audience Manager](intro-to-ava/am-enablement.md)
+         + [Abilitazione di Audience Manager ](intro-to-ava/am-enablement.md)
 + SDK di Media Analytics {#sdk-implement}
    + [Domande frequenti sull’SDK di Media Analytics riguardanti la fine del supporto](sdk-implement/end-of-support-faqs.md)
    + [Scaricare gli SDK](sdk-implement/download-sdks.md)
