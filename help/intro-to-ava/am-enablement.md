@@ -5,29 +5,29 @@ exl-id: c0d73bc2-4713-498a-8882-ff66c7f3dd50
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: 3e996d243d060a6fd07d2ddbabf05e39eca40758
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '402'
-ht-degree: 26%
+ht-degree: 100%
 
 ---
 
-# Abilitazione dell’Audience Manager{#audience-manager-enablement}
+# Abilitazione di Audience Manager {#audience-manager-enablement}
 
-Adobe Audience Manager (AAM), una piattaforma di gestione dati (DMP, Data Management Platform), ti aiuta a unire le risorse dei dati sul pubblico, semplificando la raccolta di informazioni rilevanti dal punto di vista commerciale sui visitatori del sito, la creazione di segmenti commerciabili e la distribuzione di contenuti e pubblicità mirati al pubblico giusto.
+Adobe Audience Manager (AAM) è una piattaforma di gestione dei dati (DMP) che consente di unire le risorse dei dati sul pubblico, semplificando così la raccolta di informazioni rilevanti dal punto di vista commerciale sui visitatori del sito, la creazione di segmenti commerciali e la distribuzione di pubblicità e contenuti mirati al pubblico giusto.
 
-Con AAM, non sei legato a una piattaforma lato vendita, scambio o domanda di dati. Inoltre, AAM è completamente agnostico quando si tratta delle risorse di dati dei tuoi partner. Con l&#39;accesso a più sorgenti di dati, AAM offre agli editori digitali la possibilità di utilizzare un&#39;ampia varietà di dati di terze parti. Per ulteriori informazioni su AAM, consulta la documentazione AAM [Documentazione del prodotto Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=it).
+Con AAM, non sei vincolato a un fornitore di dati, un exchange o una DSP. Inoltre, AAM è completamente agnostico in merito alle risorse di dati dei tuoi partner. Con l’accesso a più origini di dati, AAM offre agli editori digitali la possibilità di utilizzare un’ampia varietà di dati di terze parti. Per ulteriori informazioni su AAM, consulta la documentazione di AAM: [documentazione del prodotto Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=it).
 
-**Trasferimento dati da VA a AAM -** Per contenuti video e annunci video, le metriche e i metadati raccolti utilizzando variabili della soluzione (riservate) possono essere inviati automaticamente a AAM. Il trasferimento di dati è disponibile su tutte le piattaforme, inclusi desktop, dispositivi mobili e OTT. Per abilitare questo trasferimento di dati lato server, contatta l’Assistenza clienti di Adobe e richiedi l’abilitazione di questo feed.
+**Trasferimento dati da VA ad AAM:** per contenuti video e annunci video, le metriche e i metadati raccolti mediante variabili della soluzione (riservate) possono essere inviati automaticamente ad AAM. Il trasferimento di dati è disponibile su tutte le piattaforme, inclusi desktop, dispositivi mobili e OTT. Per abilitare questo trasferimento di dati lato server, contatta l’Assistenza clienti di Adobe e richiedi l’abilitazione di questo feed.
 
 >[!IMPORTANT]
 >
->Per garantire un corretto trasferimento dei dati a AAM, usa le versioni più recenti delle librerie Media SDK.
+>Per garantire il corretto trasferimento dei dati ad AAM, devi usare le versioni più recenti delle librerie Media SDK.
 
 Federated Data supporta completamente la condivisione dei dati per AAM. Collabora con il tuo team di Adobe per confermare le impostazioni di Federated Data.
 
 ## Metodi OTT/AAM {#ott-aam-methods}
 
-Puoi utilizzare questi metodi per inviare segnali e recuperare segmenti di visitatori dall’Audience Manager:
+Puoi utilizzare questi metodi per inviare segnali e recuperare segmenti di visitatori da Audience Manager:
 
 ### Chromecast {#am-chromecast}
 
@@ -65,7 +65,7 @@ Puoi utilizzare questi metodi per inviare segnali e recuperare segmenti di visit
 
 * `submitSignal() -`
 
-   Invia a Gestione dell&#39;audience un segnale con caratteristiche.
+   Invia al modulo Gestione dell’audience un segnale con caratteristiche.
 
    ```js
    ADBMobile.audienceManager.submitSignal({"sampleTrait":"sampleValue"});
@@ -83,7 +83,7 @@ Puoi utilizzare questi metodi per inviare segnali e recuperare segmenti di visit
 
 * `audienceDpid -`
 
-   Restituisce il profilo del visitatore ottenuto più di recente. Restituisce un oggetto vuoto t se non è stato ancora inviato alcun segnale.
+   Restituisce il profilo del visitatore ottenuto più di recente. Restituisce un oggetto vuoto se non è stato ancora inviato alcun segnale.
 
    ```js
    ADBMobile().audienceDpid()
@@ -107,7 +107,7 @@ Puoi utilizzare questi metodi per inviare segnali e recuperare segmenti di visit
 
 * `audienceSubmitSignal -`
 
-   Invia a Gestione dell&#39;audience un segnale con caratteristiche.
+   Invia al modulo Gestione dell’audience un segnale con caratteristiche.
 
    ```js
    traitData = {}
