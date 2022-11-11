@@ -3,8 +3,8 @@ title: Note sulla versione di Adobe Analytics for Streaming Media
 description: Consulta le note sulla versione di Adobe Analytics.
 feature: Release Notes
 exl-id: ef068aa6-fdf4-4a5c-b5d0-b93ad31894e8
-source-git-commit: 5a7d1725333f9f47fb13469a0877402f4fff506f
-workflow-type: ht
+source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+workflow-type: tm+mt
 source-wordcount: '854'
 ht-degree: 100%
 
@@ -54,8 +54,8 @@ Per informazioni sulle nuove funzioni e correzioni, nonché informazioni importa
 
 | Funzione | Descrizione | Data aggiornamento o prevista |
 | ----------- | ---------- | -------------- |
-| Tempo trascorso su contenuti multimediali  | La funzione Tempo trascorso su contenuti multimediali di Adobe Streaming Media fornisce insight utili sul coinvolgimento degli utenti. Consente alle organizzazioni di media di ottenere informazioni più approfondite e dettagliate sul coinvolgimento degli utenti minuto per minuto attraverso un’analisi avanzata del tempo trascorso con funzionalità di ripartizione giornaliera. È possibile osservare il tempo impiegato per visualizzare i flussi multimediali in un determinato momento. Puoi suddividere la durata della riproduzione in base a diverse granularità, tra cui nuove granularità di 5, 15 e 30 minuti. [Ulteriori informazioni...](/help/media-reports/media-workspace-panels/media-playback-time-spent.md) | Settembre 2021 |
-| Pannello Visualizzatori simultanei di contenuti multimediali in Analytics Workspace | Scopri dove si verificano picchi di concorrenza o abbandoni. Ottieni informazioni approfondite sulla qualità dei contenuti e sul livello di coinvolgimento dell’utente, utili anche per risolvere problemi o pianificare volumi e scala. [Ulteriori informazioni](/help/media-reports/media-workspace-panels/media-concurrent-viewers.md) <br><br>[Pannello Visualizzatori simultanei di contenuti multimediali in Analytics Workspace (tutorial)](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/analysis-workspace/using-panels/media-concurrent-viewers-panel-in-analysis-workspace.html?lang=it#analysis-workspace) | Settembre 2020 <br><br><br>Gennaio 2021 |
+| Tempo trascorso su contenuti multimediali  | La funzione Tempo trascorso su contenuti multimediali di Adobe Streaming Media fornisce insight utili sul coinvolgimento degli utenti. Consente alle organizzazioni di media di ottenere informazioni più approfondite e dettagliate sul coinvolgimento degli utenti minuto per minuto attraverso un’analisi avanzata del tempo trascorso con funzionalità di ripartizione giornaliera. È possibile osservare il tempo impiegato per visualizzare i flussi multimediali in un determinato momento. Puoi suddividere la durata della riproduzione in base a diverse granularità, tra cui nuove granularità di 5, 15 e 30 minuti. [Ulteriori informazioni...](/help/reporting/workspace/media-playback-time-spent.md) | Settembre 2021 |
+| Pannello Visualizzatori simultanei di contenuti multimediali in Analytics Workspace | Scopri dove si verificano picchi di concorrenza o abbandoni. Ottieni informazioni approfondite sulla qualità dei contenuti e sul livello di coinvolgimento dell’utente, utili anche per risolvere problemi o pianificare volumi e scala. [Ulteriori informazioni](/help/reporting/workspace/media-concurrent-viewers-overview.md) <br><br>[Pannello Visualizzatori simultanei di contenuti multimediali in Analytics Workspace (tutorial)](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/analysis-workspace/using-panels/media-concurrent-viewers-panel-in-analysis-workspace.html?lang=it#analysis-workspace) | Settembre 2020 <br><br><br>Gennaio 2021 |
 | Piattaforme e dispositivi supportati | L’estensione Media Launch con SDK di AEP ora supporta i seguenti dispositivi OTT: <div><ul><li>Apple TV (tvOS)</li><li>Fire TV (Fire OS)</li><li>Android TV</li></ul></div> | Giugno 2020 |
 
 
