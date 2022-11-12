@@ -4,7 +4,7 @@ description: Scopri i percorsi di implementazione di contenuti multimediali in s
 exl-id: eee70e62-ba45-440a-8ce1-e151b66d2c1f
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: 9ba64b68efec5dd8b52010ac1a13afd7703448d0
 workflow-type: tm+mt
 source-wordcount: '650'
 ht-degree: 98%
@@ -42,7 +42,7 @@ Adobe Data Collection con l’estensione Media Analytics richiede quanto segue:
 
 Si tratta di integrazioni disponibili solo per Media Analytics. Puoi scegliere l’SDK di heartbeat video e/o le integrazioni API di Media Collection. Questo percorso può essere utilizzato su qualsiasi lettore video, tra cui lettori OVP e/o clienti come Brightcove, Ooyala, thePlatform e così via.
 
-Se Media Analytics è il percorso desiderato, consulta la sezione [Implementazione di Media SDK](/help/implementation/media-sdk/setup/setup-overview.md) e l’[API di Media Collection.](/help/media-collection-api/mc-api-overview.md)
+Se Media Analytics è il percorso desiderato, consulta la sezione [Implementazione di Media SDK](/help/legacy/setup/legacy-setup-overview.md) e l’[API di Media Collection.](/help/implementation/media-collection-api/mc-api-overview.md)
 
 >[!IMPORTANT]
 >Per utilizzare Media Analytics, i clienti devono utilizzare anche Adobe Analytics.
@@ -60,6 +60,6 @@ Primetime semplifica il raggiungimento, la monetizzazione e l’attivazione del 
 * Supporto integrato per Nielsen DTVR (lineare) con metadati ID3 e DCR con metadati CMS.
 
 
-TVSDK è già integrato con l’SDK Media Analytics (Heartbeat), il quale rende l’implementazione molto più semplice e veloce su tutte le piattaforme supportate. Per utilizzare Primetime, attieniti alle linee guida e ai prerequisiti indicati in [Lato client](/help/intro-to-ava/implementation-paths/client-side-path.md), nonché ai seguenti documenti per le piattaforme: [Guida utente di Primetime.](https://helpx.adobe.com/it/primetime/user-guide.html)
+TVSDK è già integrato con l’SDK Media Analytics (Heartbeat), il quale rende l’implementazione molto più semplice e veloce su tutte le piattaforme supportate. Per utilizzare Primetime, attieniti alle linee guida e ai prerequisiti indicati in [Lato client](/help/legacy/intro-to-ava/implementation-paths/client-side-path.md), nonché ai seguenti documenti per le piattaforme: [Guida utente di Primetime.](https://helpx.adobe.com/it/primetime/user-guide.html)
 
 Contatta inoltre il tuo rappresentante/Account Manager per informazioni su come acquistare TVSDK.

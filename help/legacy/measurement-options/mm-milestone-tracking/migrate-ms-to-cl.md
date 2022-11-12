@@ -5,7 +5,7 @@ uuid: 1c8edde5-0ef1-4bc0-a62d-1747f4907f09
 exl-id: 732079f4-3eb8-4b9a-892b-25a1c9332be4
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: 9ba64b68efec5dd8b52010ac1a13afd7703448d0
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 25%
@@ -16,7 +16,7 @@ ht-degree: 25%
 
 ## Panoramica {#overview}
 
-I concetti di base della misurazione video sono gli stessi per il tracciamento Milestone e Custom Link, ovvero l’acquisizione degli eventi del lettore video e la loro mappatura ai metodi di analisi, nonché l’acquisizione dei metadati e dei valori del lettore e la loro mappatura alle variabili di analisi. L&#39;approccio del &quot;Custom Link&quot; dovrebbe essere considerato un ostacolo e una semplificazione sia dell&#39;attuazione che dei dati raccolti. Con la soluzione Custom Link non è possibile definire variabili o metodi per la misurazione video, ma è necessaria una configurazione completamente personalizzata. Dovrebbe essere possibile aggiornare il codice evento del lettore in modo che punti alle chiamate di tracciamento dei collegamenti personalizzate per gli eventi di base del lettore, come start e complete. Vedi [Guida all’implementazione di Custom Link](/help/measurement-options/cl-in-aa/cl-impl-guide.md) per ulteriori dettagli.
+I concetti di base della misurazione video sono gli stessi per il tracciamento Milestone e Custom Link, ovvero l’acquisizione degli eventi del lettore video e la loro mappatura ai metodi di analisi, nonché l’acquisizione dei metadati e dei valori del lettore e la loro mappatura alle variabili di analisi. L&#39;approccio del &quot;Custom Link&quot; dovrebbe essere considerato un ostacolo e una semplificazione sia dell&#39;attuazione che dei dati raccolti. Con la soluzione Custom Link non è possibile definire variabili o metodi per la misurazione video, ma è necessaria una configurazione completamente personalizzata. Dovrebbe essere possibile aggiornare il codice evento del lettore in modo che punti alle chiamate di tracciamento dei collegamenti personalizzate per gli eventi di base del lettore, come start e complete. Vedi [Guida all’implementazione di Custom Link](/help/legacy/measurement-options/cl-in-aa/cl-impl-guide.md) per ulteriori dettagli.
 
 Le tabelle seguenti forniscono traduzioni tra la soluzione Milestone e la soluzione Custom Link.
 

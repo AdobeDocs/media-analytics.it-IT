@@ -5,7 +5,7 @@ uuid: fdc96146-af63-48ce-b938-c0ca70729277
 exl-id: 655841ed-3a02-4e33-bbc9-46fb14302194
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: 9ba64b68efec5dd8b52010ac1a13afd7703448d0
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 14%
@@ -16,7 +16,7 @@ ht-degree: 14%
 
 ## Panoramica {#overview}
 
-I concetti di base della misurazione video sono gli stessi per Milestone e Media Analytics, che sta prendendo gli eventi del lettore video e li mappando ai metodi di analisi, acquisendo anche i metadati e i valori del lettore e mappandoli alle variabili di analisi. La soluzione Media Analytics è nata da Milestone, quindi molti dei metodi e delle metriche sono gli stessi, tuttavia l&#39;approccio di configurazione e il codice sono cambiati in modo significativo. Dovrebbe essere possibile aggiornare il codice evento del lettore per puntare ai nuovi metodi di Media Analytics. Vedi [Panoramica SDK](/help/implementation/media-sdk/setup/setup-overview.md) e [Panoramica del tracciamento](/help/use-cases/track-av-playback/track-core-overview.md) per maggiori dettagli sull&#39;implementazione di Media Analytics.
+I concetti di base della misurazione video sono gli stessi per Milestone e Media Analytics, che sta prendendo gli eventi del lettore video e li mappando ai metodi di analisi, acquisendo anche i metadati e i valori del lettore e mappandoli alle variabili di analisi. La soluzione Media Analytics è nata da Milestone, quindi molti dei metodi e delle metriche sono gli stessi, tuttavia l&#39;approccio di configurazione e il codice sono cambiati in modo significativo. Dovrebbe essere possibile aggiornare il codice evento del lettore per puntare ai nuovi metodi di Media Analytics. Vedi [Panoramica SDK](/help/legacy/setup/legacy-setup-overview.md) e [Panoramica del tracciamento](/help/use-cases/track-av-playback/track-core-overview.md) per maggiori dettagli sull&#39;implementazione di Media Analytics.
 
 Le tabelle seguenti forniscono traduzioni tra la soluzione Milestone e la soluzione Media Analytics.
 
