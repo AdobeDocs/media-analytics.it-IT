@@ -1,14 +1,14 @@
 ---
-title: Informazioni sulle timeline di tracciamento contenuto multimediale � L’utente abbandona la sessione
+title: Informazioni sulle timeline per il tracciamento dei file multimediali - Sessione di abbandono degli utenti
 description: Scopri la timeline dell’indicatore di riproduzione e la corrispondente azione dell’utente quando una sessione video viene abbandonata. Scopri i dettagli di ogni azione e richiesta.
 uuid: 74b89e8f-ef56-4e0c-b9a8-40739e15b4cf
 exl-id: 0c6a89f4-7949-4623-8ed9-ce1d1547bdfa
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: 4c68f5997a9d336e8c3545cdfb7b9cb955602b69
 workflow-type: tm+mt
 source-wordcount: '600'
-ht-degree: 97%
+ht-degree: 96%
 
 ---
 
