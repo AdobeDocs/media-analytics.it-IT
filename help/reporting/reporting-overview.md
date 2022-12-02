@@ -6,9 +6,9 @@ exl-id: 686d88a5-79b6-4936-ba9e-8f834ef330d1
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '879'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +20,7 @@ Ogni suite di rapporti che raccoglie metriche multimediali deve essere configura
 >
 >Per sfruttare le nuove funzionalità, i clienti Media Analytics esistenti devono riabilitare il tracciamento dei contenuti multimediali per i loro RSID.
 
-1. In [Adobe Analytics](https://experience.adobe.com) click **[!UICONTROL Admin > Report Suites].**
+1. In [Adobe Analytics](https://experience.adobe.com), fai clic su **[!UICONTROL Admin > Report Suites].**
 1. Seleziona le suite di rapporti in cui stai raccogliendo dati multimediali e fai clic su **[!UICONTROL Edit Settings > Media Management > Media Reporting].**
 
    ![](assets/media-reporting.png){width="400px"}
@@ -35,7 +35,7 @@ Ogni suite di rapporti che raccoglie metriche multimediali deve essere configura
 
    * **Annunci multimediali**
 
-      La misurazione degli annunci multimediali viene utilizzata per la misurazione degli annunci all’interno del contenuto multimediale. Questo utilizzerà le eVar Soluzione per misurare Annuncio, Nome lettore pubblicitario, Aggiungi contenitore e Annuncio in posizione contenitore. Gli eventi della soluzione saranno utilizzati per gli eventi di inizio annuncio, completamento annuncio, tempo trascorso annuncio e tempo trascorso video.
+      La misurazione degli annunci multimediali viene utilizzata per la misurazione degli annunci all’interno del contenuto multimediale. Utilizzerà le eVar della soluzione per misurare Annuncio, Nome del Lettore dell’annuncio, Pod dell’annuncio e Annuncio in posizione pod. Gli eventi della soluzione saranno utilizzati per gli eventi di inizio annuncio, completamento annuncio, tempo trascorso annuncio e tempo trascorso video.
 
    * **Capitoli multimediali**
 
