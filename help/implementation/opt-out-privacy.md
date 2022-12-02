@@ -1,14 +1,14 @@
 ---
-title: Spiegazione di rinuncia e privacy
-description: Scopri come gestire l’opt-in, la rinuncia e la privacy.
+title: Informazioni sulla rinuncia e sulla privacy
+description: Scopri come gestire il consenso, la rinuncia e la privacy.
 uuid: 7e60c7bd-8dba-4c7a-9c3c-0c634b815397
 exl-id: 64f5ef2b-7850-43d8-8f32-3d008ea4f156
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '385'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -36,15 +36,15 @@ Puoi controllare se l’attività di tracciamento è consentita su un dispositiv
 
          * **Chromecast:**
 
-                &quot;
+                ```
                 ADBMobile.config.setPrivacyStatus(ADBMobile.config.PRIVACY_STATUS_OPT_OUT)
-                &quot;
+                ```
             
          * **Roku:**
 
-                &quot;
+                ```
                 ADBMobile().setPrivacyStatus(ADBMobile().PRIVACY_STATUS_OPT_OUT)
-                &quot;
+                ```
             
             >[!IMPORTANT]
             >
@@ -53,28 +53,28 @@ Puoi controllare se l’attività di tracciamento è consentita su un dispositiv
 
          * **Chromecast:**
 
-                &quot;
+                ```
                 ADBMobile.config.setPrivacyStatus(ADBMobile.config.PRIVACY_STATUS_OPT_IN)
-                &quot;
+                ```
             
          * **Roku:**
 
-                &quot;
+                ```
                 ADBMobile().setPrivacyStatus(ADBMobile().PRIVACY_STATUS_OPT_IN)
-                &quot;
+                ```
             * **Restituisce l’impostazione corrente:**
 
          * **Chromecast:**
 
-                &quot;
+                ```
                 ADBMobile.config.getPrivacyStatus()
-                &quot;
+                ```
             
          * **Roku:**
 
-                &quot;
+                ```
                 ADBMobile().getPrivacyStatus()
-                &quot;
+                ```
             Dopo aver modificato l’impostazione della privacy utilizzando `setPrivacyStatus`, la modifica rimane permanente finché non viene nuovamente modificata utilizzando questo metodo, oppure finché l’app non viene disinstallata e reinstallata.
 
 ## Recupero di identificatori memorizzati (app OTT) {#retrieving-stored-identifiers-ott-apps}
