@@ -6,13 +6,13 @@ exl-id: a835f86a-a93a-4a56-91f4-14628cf48214
 feature: "Media Analytics, Workspace Basics"
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '205'
 ht-degree: 100%
 
 ---
 
-# Modelli di Area di lavoro per file multimediali{#media-workspace-templates}
+# Modelli di Area di lavoro per file multimediali {#media-workspace-templates}
 
 Adobe Analytics Workspace consente di configurare rapidamente i dashboard per l’analisi dei dati di tracciamento. Quando crei un nuovo progetto o accedi a Workspace per gestire un progetto esistente, puoi scegliere tra modelli standard che includono scenari di tracciamento generali comuni, ad esempio Acquisizione, Consumo di contenuti multimediali in streaming e molto altro ancora. Puoi anche creare, modificare e salvare modelli personalizzati.
 
