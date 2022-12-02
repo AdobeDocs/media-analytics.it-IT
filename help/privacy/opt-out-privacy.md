@@ -1,14 +1,14 @@
 ---
-title: Spiegazione di rinuncia e privacy
-description: Scopri come gestire l’opt-in, la rinuncia e la privacy.
+title: Informazioni sulla rinuncia e sulla privacy
+description: Scopri come gestire il consenso, la rinuncia e la privacy.
 uuid: 7e60c7bd-8dba-4c7a-9c3c-0c634b815397
 exl-id: 64f5ef2b-7850-43d8-8f32-3d008ea4f156
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '358'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
