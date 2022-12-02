@@ -6,9 +6,9 @@ exl-id: 686d88a5-79b6-4936-ba9e-8f834ef330d1
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '914'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -71,4 +71,4 @@ I clienti più esperti possono utilizzare i pannelli per contenuti multimediali 
 
 >[!IMPORTANT]
 >
->Non modificare i nomi delle classificazioni per le variabili elencate nelle tabelle Metriche e metadati (ad es. [Parametri audio e video](/help/implementation/variables/audio-video-parameters.md) che sono qui descritti in Segnalazione/Variabile riservata come &quot;classificazione&quot;. Le classificazioni per i file multimediali vengono definite quando una suite di rapporti è abilitata per il tracciamento dei contenuti multimediali. Di tanto in tanto, Adobe aggiunge nuove proprietà e, in questo caso, i clienti devono riabilitare le suite di rapporti per accedere alle nuove proprietà multimediali. Durante il processo di aggiornamento, l’Adobe determina se le classificazioni sono abilitate controllando i nomi delle variabili. Se manca qualcuno di questi, Adobe aggiunge di nuovo quelli mancanti.
+>Non modificare i nomi delle classificazioni per le variabili elencate nelle tabelle Metriche e metadati (ad es. [Parametri audio e video](/help/implementation/variables/audio-video-parameters.md)) che sono descritti in Reporting/Variabile riservata come “classificazione”. Le classificazioni per i file multimediali vengono definite quando una suite di rapporti è abilitata per il tracciamento dei contenuti multimediali. Di tanto in tanto, Adobe aggiunge nuove proprietà e, in questo caso, i clienti devono riabilitare le suite di rapporti per accedere alle nuove proprietà multimediali. Durante il processo di aggiornamento, l’Adobe determina se le classificazioni sono abilitate controllando i nomi delle variabili. Se manca qualcuno di questi, Adobe aggiunge di nuovo quelli mancanti.
