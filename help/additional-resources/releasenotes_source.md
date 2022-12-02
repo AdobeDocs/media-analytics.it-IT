@@ -10,7 +10,7 @@ ht-degree: 100%
 Il contenuto seguente è stato copiato dalle note sulla versione di Experience Cloud. Verrà spostato nelle nuove note sulla versione di Streaming Media.
 
 
-Scopri gli ultimi aggiornamenti sulle versioni dei [prodotti Adobe Experience Cloud](https://business.adobe.com/it/products/adobe-experience-cloud-products.html). Ottieni la documentazione, i tutorial e i corsi di supporto autonomo più recenti su Experience League.
+Scopri gli ultimi aggiornamenti sulle versioni dei [prodotti Adobe Experience Cloud](https://business.adobe.com/it/products/adobe-experience-cloud-products.html). Scopri le risorse di supporto autonomo più recenti con documentazione, tutorial e corsi su Experience League.
 
 Scopri gli ultimi aggiornamenti sulle versioni di [Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/release-notes/latest.html?lang=it). Ottieni la documentazione, i tutorial e i corsi di supporto autonomo più recenti su Experience League.
 
@@ -35,7 +35,7 @@ Nuovi corsi e tutorial su Analytics
 
 | Data di pubblicazione | Nome | Tipo | Descrizione |
 | ----------- | ---------- | ---------- | --------- |
-| Gennaio | <a href="/docs/analytics-learn/tutorials/media-analytics/measuring-media-analytics/media-playback-time-spent-panel.html?lang=en">Pannello Tempo trascorso su contenuti multimediali</a> | Video | Scopri in che modo il pannello Tempo di riproduzione dei contenuti multimediali consente agli utenti dei contenuti multimediali di comprendere i propri spettatori in base al tempo di visualizzazione durante il giorno secondo una granularità scelta. |
+| Gennaio | <a href="/docs/analytics-learn/tutorials/media-analytics/measuring-media-analytics/media-playback-time-spent-panel.html?lang=en">Pannello Tempo trascorso su contenuti multimediali</a> | Video | Scopri in che modo il pannello Tempo trascorso su contenuti multimediali consente agli utenti che usano contenuti multimediali di comprendere i propri spettatori in base al tempo di visualizzazione durante il giorno secondo una determinata granularità. |
 
 
 
@@ -52,7 +52,7 @@ Nuovi corsi e tutorial su Analytics
 
 | Funzione | Descrizione |
 | ----------- | ---------- |
-| Tempo trascorso su contenuti multimediali | La funzione Tempo trascorso su contenuti multimediali di Adobe Streaming Media fornisce insight utili sul coinvolgimento degli utenti. Consente alle organizzazioni di media di ottenere informazioni più approfondite e dettagliate sul coinvolgimento degli utenti minuto per minuto attraverso un’analisi avanzata del tempo trascorso con funzionalità di ripartizione giornaliera. È possibile osservare il tempo impiegato per visualizzare i flussi multimediali in un determinato momento. Puoi suddividere la durata della riproduzione in base a diverse granularità, tra cui nuove granularità di 5, 15 e 30 minuti. [Ulteriori informazioni...](https://experienceleague.adobe.com/docs/media-analytics/using/media-reports/media-workspace-panels/media-playback-time-spent.html?lang=it) |
+| Tempo trascorso su contenuti multimediali  | La funzione Tempo trascorso su contenuti multimediali di Adobe Streaming Media fornisce insight utili sul coinvolgimento degli utenti. Consente alle organizzazioni di media di ottenere informazioni più approfondite e dettagliate sul coinvolgimento degli utenti minuto per minuto attraverso un’analisi avanzata del tempo trascorso con funzionalità di ripartizione giornaliera. È possibile osservare il tempo impiegato per visualizzare i flussi multimediali in un determinato momento. Puoi suddividere la durata della riproduzione in base a diverse granularità, tra cui nuove granularità di 5, 15 e 30 minuti. [Ulteriori informazioni...](https://experienceleague.adobe.com/docs/media-analytics/using/media-reports/media-workspace-panels/media-playback-time-spent.html?lang=it) |
 
 ## Gennaio 2021
 
