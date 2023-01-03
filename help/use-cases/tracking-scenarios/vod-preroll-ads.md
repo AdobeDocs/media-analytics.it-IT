@@ -6,7 +6,7 @@ exl-id: c77f6457-ac3b-4d7a-8eed-e7ebd357a6a5
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '526'
 ht-degree: 100%
 
@@ -23,9 +23,9 @@ In questo scenario, gli annunci pre-roll sono stati inseriti prima del contenuto
 | Viene riprodotto il fotogramma dell’annuncio numero 1. | `trackPlay` | Heartbeat Ad Play | Il contenuto dell’annuncio viene riprodotto prima del contenuto principale e gli heartbeat iniziano all’avvio dell’annuncio. |
 | L&#39;annuncio viene riprodotto. |  | Ad Heartbeats |  |
 | Viene completata la riproduzione dell’annuncio numero 2. | `trackEvent:trackAdComplete` | Heartbeat Ad Complete | Viene raggiunta la fine dell’annuncio. |
-| Viene riprodotto il primo fotogramma dell’annuncio numero 2. | `trackEvent:AdStart` | Ad Start di Analytics, Heartbeat Ad Start |  |
-| L’annuncio viene riprodotto. |  | Battiti cardiaci |  |
-| Viene completata la riproduzione dell’annuncio numero 2. | <ul> <li> `trackEvent:trackAdComplete` </li> <li> `trackEvent:AdBreakComplete` </li> </ul> | Annuncio Heartbeat completato | Viene raggiunta la fine dell’annuncio e del pod. |
+| Viene riprodotto il primo fotogramma dell’annuncio numero 2. | `trackEvent:AdStart` | Analytics Ad Start, Heartbeat Ad Start |  |
+| L’annuncio viene riprodotto. |  | Ad Heartbeats |  |
+| Viene completata la riproduzione dell’annuncio numero 2. | <ul> <li> `trackEvent:trackAdComplete` </li> <li> `trackEvent:AdBreakComplete` </li> </ul> | Heartbeat Ad Complete | Viene raggiunta la fine dell’annuncio e del pod. |
 | Il contenuto viene riprodotto. |  | Heartbeat dei contenuti | Questa chiamata di rete è identica allo scenario [Riproduzione VOD senza annunci](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
 | Il contenuto è stato completato. | `trackComplete` | Contenuto Heartbeat completato | Questa chiamata di rete è identica allo scenario [Riproduzione VOD senza annunci](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
 | La sessione è terminata | `trackSessionEnd` |  | `SessionEnd` |
@@ -52,7 +52,7 @@ Gli annunci seguono lo stesso modello di base di `Content Heartbeats`, pertanto 
 
 Questi parametri sono simili alla chiamata `Content Heartbeats`, tuttavia la chiamata `Ad Heartbeats` contiene alcuni parametri aggiuntivi:
 
-### Battiti cardiaci
+### Ad Heartbeats
 
 | Parametro | Valore | Note |
 |---|---|---|
