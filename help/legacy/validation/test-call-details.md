@@ -6,7 +6,7 @@ exl-id: 5e167714-3f0c-4afa-b171-7d51cff6522e
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '614'
 ht-degree: 100%
 
@@ -71,7 +71,7 @@ ht-degree: 100%
 | `s:asset:name` | Titolo episodio |
 | `s:asset:video_id` | 123456 |
 | `l:asset:length` | 120 |
-| `s:stream:type` | vago |
+| `s:stream:type` | vod |
 | `s:asset:type` | principale |
 | _**`s:meta:custom.[value]`**_ | _**Campi di metadati personalizzati**_ |
 | _**`s:meta:a.media.[value]`**_ | _**Campi metadati standard**_ |
@@ -117,7 +117,7 @@ ht-degree: 100%
 | `s:asset:name` | Titolo episodio |
 | `s:asset:video_id` | 123456 |
 | `l:asset:length` | 120 |
-| `s:stream:type` | vago |
+| `s:stream:type` | vod |
 | `s:asset:type` | principale |
 
 **Note:**
@@ -159,7 +159,7 @@ ht-degree: 100%
 | `a.media.episode` | Titolo episodio |
 | `a.media.asset_id` | 123456 |
 | `a.media.genre` | commedia |
-| `a.media.first_air_date` | 04/07/2016 |
+| `a.media.first_air_date` | 2016-07-04 |
 | `a.media.rating` | TV-14 |
 | `a.media.originator` | casa di produzione |
 | `a.media.network` | rete |
@@ -185,7 +185,7 @@ ht-degree: 100%
 | `l:event:duration` | 4 |
 | `s:asset:ad_id` | 9378 |
 | _**`l:asset:length`**_ | _**120**_ |
-| `s:stream:type` | vago |
+| `s:stream:type` | vod |
 | _**`s:asset:type`**_ | _**annuncio**_ |
 | _**`s:meta:custom.[value]`**_ | _**Campi di metadati personalizzati**_ |
 | _**`s:meta:a.media.[value]`**_ | _**Campi metadati standard**_ |
@@ -204,7 +204,7 @@ ht-degree: 100%
 | `s:meta:a.media.episode` | Titolo episodio |
 | `s:meta:a.media.asset_id` | 123456 |
 | `s:meta:a.media.genre` | commedia |
-| `s:meta:a.media.first_air_date` | 04/07/2018 |
+| `s:meta:a.media.first_air_date` | 2018-07-04 |
 | `s:meta:a.media.rating` | TV-14 |
 | `s:meta:a.media.originator` | casa di produzione |
 | `s:meta:a.media.network` | rete |
@@ -230,7 +230,7 @@ ht-degree: 100%
 | `l:event:duration` | 0 |
 | `s:asset:ad_id` | 9378 |
 | `l:asset:ad_length` | 15 |
-| `s:stream:type` | vago |
+| `s:stream:type` | vod |
 | `s:asset:type` | annuncio |
 
 ### Chiamata riproduzione annuncio di Media Analytics (heartbeat) {#ma-ad-play-call}
@@ -242,7 +242,7 @@ ht-degree: 100%
 | `l:event:duration` | 0 |
 | `s:asset:ad_id` | 9378 |
 | `l:asset:ad_length` | 15 |
-| `s:stream:type` | vago |
+| `s:stream:type` | vod |
 | _**`s:asset:type`**_ | _**annuncio**_ |
 
 ### Media Analytics (heartbeat): chiamata pausa annuncio {#ma-ad-pause-call}
@@ -254,7 +254,7 @@ ht-degree: 100%
 | `l:event:duration` | 0 |
 | `s:asset:ad_id` | 9378 |
 | `l:asset:ad_length` | 15 |
-| `s:stream:type` | vago |
+| `s:stream:type` | vod |
 | _**`s:asset:type`**_ | _**annuncio**_ |
 
 ### Media Analytics (heartbeat) Chiamata annuncio completo di Adobe Analytics {#ma-aa-ad-complete-call}
@@ -266,7 +266,7 @@ ht-degree: 100%
 | `l:event:duration` | 0 |
 | `s:asset:ad_id` | 9378 |
 | `l:asset:ad_length` | 15 |
-| `s:stream:type` | vago |
+| `s:stream:type` | vod |
 | _**`s:asset:type`**_ | _**annuncio**_ |
 
 ## Riproduci contenuto principale {#play-main-content}
@@ -281,7 +281,7 @@ ht-degree: 100%
 | `s:asset:name` | Titolo episodio |
 | `s:asset:video_id` | 123456 |
 | `l:asset:length` | 120 |
-| `s:stream:type` | vago |
+| `s:stream:type` | vod |
 | `s:asset:type` | principale |
 
 **Note:**
@@ -301,5 +301,5 @@ ht-degree: 100%
 | `s:asset:name` | Titolo episodio |
 | `s:asset:video_id` | 123456 |
 | `l:asset:length` | 120 |
-| `s:stream:type` | vago |
+| `s:stream:type` | vod |
 | `s:asset:type` | principale |
