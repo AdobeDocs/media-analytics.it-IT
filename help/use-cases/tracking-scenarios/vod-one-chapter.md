@@ -6,7 +6,7 @@ exl-id: a8394fd3-16a2-4f5d-b6e1-6e9acb4c7afd
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '430'
 ht-degree: 100%
 
@@ -37,7 +37,7 @@ Quando inizia la riproduzione di un capitolo, viene inviata una chiamata `Heartb
 
 In questo caso, viene effettuata una chiamata `Content Heartbeat` nello stesso intervallo. È possibile distinguere tra le due esaminando il tipo di evento e il tipo di risorsa:
 
-### Inizio capitolo Heartbeat
+### Heartbeat Chapter Start
 
 | Parametro | Valore | Note |
 |---|---|---|
