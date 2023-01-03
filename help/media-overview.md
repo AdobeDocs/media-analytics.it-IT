@@ -5,10 +5,10 @@ uuid: b3cbe240-b94d-42b8-a99c-0280334aaa14
 exl-id: 826530f7-2c39-41ef-b3b4-d3f44b46858f
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '529'
-ht-degree: 100%
+source-git-commit: b022bed6b7be0cc97caaaf6b7bbc42474a57b400
+workflow-type: tm+mt
+source-wordcount: '531'
+ht-degree: 95%
 
 ---
 
@@ -24,7 +24,7 @@ Puoi misurare le metriche di consegna vitali correlate alla QoS (Qualità dell�
 
 ## Come funziona
 
-I dati di tracciamento dei contenuti multimediali in streaming vengono raccolti da un lettore utilizzando i Media SDK, le API Media Collection o le estensioni per file multimediali (con tag). Tutti i dati granulari (fino a 10 secondi) vengono inviati al servizio Media Analytics che raccoglie ed elabora i dati per ogni singola sessione di riproduzione. Al termine di una sessione di riproduzione, i dati di tracciamento calcolati vengono inviati ad Adobe Analytics per l’archiviazione e il reporting. Con le implementazioni di Adobe Customer Journey Analytics (CJA), i dati possono essere inviati a CJA utilizzando il Connettore dati di Analytics (ADC), in modo che i clienti possano utilizzare CJA come strumento di reporting.
+I dati di tracciamento dei contenuti multimediali in streaming vengono raccolti da un lettore utilizzando gli SDK per i file multimediali o le estensioni Adobe Experience Platform Media e le API Media Collection. Tutti i dati granulari (fino a 10 secondi) vengono inviati al servizio Media Analytics che raccoglie ed elabora i dati per ogni singola sessione di riproduzione. Al termine di una sessione di riproduzione, i dati di tracciamento calcolati vengono inviati ad Adobe Analytics per l’archiviazione e il reporting. Con le implementazioni di Adobe Customer Journey Analytics (CJA), i dati possono essere inviati a CJA utilizzando il Connettore dati di Analytics (ADC), in modo che i clienti possano utilizzare CJA come strumento di reporting.
 
 <!-- ![streaming media process](./assets/streaming-process1.png) -->
 

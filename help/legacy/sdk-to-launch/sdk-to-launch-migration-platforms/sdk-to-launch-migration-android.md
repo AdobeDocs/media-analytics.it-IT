@@ -4,10 +4,10 @@ description: Scopri come migrare da Media SDK a Launch per Android.
 exl-id: 26764835-4781-417b-a6c0-ea6ae78d76ae
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: fb09280ae6fb9f0ab7e67bd6ae134e6e26f88ec8
 workflow-type: tm+mt
 source-wordcount: '408'
-ht-degree: 100%
+ht-degree: 93%
 
 ---
 
@@ -48,7 +48,7 @@ L’estensione Media utilizza i parametri configurati per il tracciamento.
 
 ![](assets/launch_config_mobile.png)
 
-[Utilizzo di estensioni per dispositivi mobili](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics)
+[Utilizzo di estensioni per dispositivi mobili](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/)
 
 ## Creazione del tracciamento
 
@@ -91,7 +91,7 @@ MediaHeartbeatDelegate delegate = new MediaHeartbeatDelegate() {
 
 ### Estensione Launch
 
-[Guida di riferimento dell’API Media: creare un tracciatore di elementi multimediali](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#create-a-media-tracker)
+[Guida di riferimento dell’API Media: creare un tracciatore di elementi multimediali](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/api-reference/#createtracker)
 
 Prima di creare il tracciatore, è necessario registrare l’estensione Media e
 le estensioni dipendenti nel core mobile.
@@ -145,13 +145,13 @@ L’implementazione deve aggiornare la posizione attuale della testina di riprod
 metodo `updateCurrentPlayhead` esposto dal tracker. Per un tracciamento accurato 
 devi chiamare questo metodo almeno una volta al secondo.
 
-[Guida di riferimento dell’API Media: aggiornare il lettore corrente](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#updatecurrentplayhead)
+[Guida di riferimento dell’API Media: aggiornare il lettore corrente](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/api-reference/#updatecurrentplayhead)
 
 L’implementazione deve aggiornare le informazioni QoE chiamando il metodo `updateQoEObject`
 esposto dal tracciatore. Questo metodo dovrebbe essere chiamato ogni volta che si verifica
 un cambiamento nelle metriche di qualità.
 
-[Guida di riferimento dell’API Media: aggiornare l’oggetto QoE](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#updateqoeobject)
+[Guida di riferimento dell’API Media: aggiornare l’oggetto QoE](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/api-reference/#createqoeobject)
 
 ## Trasmissione dei contenuti multimediali e dei metadati standard di annunci
 

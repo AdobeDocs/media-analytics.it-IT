@@ -1,15 +1,15 @@
 ---
 title: Come implementare gli SDK Adobe Streaming Media
-description: Scopri come implementare Adobe Analytics per Streaming Media utilizzando gli SDK di Media.
+description: Scopri come implementare Adobe Analytics per contenuti in streaming utilizzando gli SDK per contenuti multimediali.
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+exl-id: dc1b9fe0-6c75-4f93-a558-a3f3186bcf22
+source-git-commit: 85e1d5223cec7168bbf592d941e6a5aece249459
 workflow-type: tm+mt
 source-wordcount: '202'
-ht-degree: 3%
+ht-degree: 6%
 
 ---
-
 
 # Panoramica di Media SDK {#implementation-overview}
 

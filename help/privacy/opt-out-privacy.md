@@ -5,10 +5,10 @@ uuid: 7e60c7bd-8dba-4c7a-9c3c-0c634b815397
 exl-id: 64f5ef2b-7850-43d8-8f32-3d008ea4f156
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '358'
-ht-degree: 100%
+source-git-commit: d2d0f34c64ecb2a900412d5959449c8c36328730
+workflow-type: tm+mt
+source-wordcount: '362'
+ht-degree: 86%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 100%
 
 Puoi controllare se l’attività di tracciamento è consentita su un dispositivo specifico:
 
-* **App mobili:** la libreria VA rispetta le impostazioni `AdobeMobile` relative alla privacy e alla rinuncia della libreria. Per rinunciare al tracciamento, devi utilizzare la libreria `AdobeMobile`. Per ulteriori informazioni sulla le impostazioni di rinuncia e privacy della libreria `AdobeMobile`, vedi [Impostazioni di privacy e rinuncia](https://experienceleague.adobe.com/docs/mobile-services/android/gdpr-privacy-android/privacy.html?lang=it).
+* **App mobili -** Le estensioni di file multimediali rispettano le impostazioni sulla privacy in Raccolta dati. Per rinunciare al tracciamento, devi impostare la privacy su [Rinuncia nei tag](https://developer.adobe.com/client-sdks/documentation/getting-started/create-a-mobile-property/#create-a-mobile-property) o [Aggiorna lo stato di privacy in Mobile SDK](https://developer.adobe.com/client-sdks/documentation/privacy-and-gdpr/#getprivacystatus).
 * **App JavaScript/browser:** la libreria VA rispetta le impostazioni di privacy e rinuncia della `VisitorAPI`. Per evitare il tracciamento, devi rinunciare al servizio Visitor API. Per ulteriori informazioni su rinuncia e privacy, vedi [Servizio Adobe Experience Platform Identity](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=it).
 * **App OTT (Chromecast, Roku):** gli SDK OTT forniscono API che supportano i requisiti del Regolamento generale sulla protezione dei dati (RGPD) e che consentono di impostare i flag di stato `opt` per la raccolta e la trasmissione dei dati e per il recupero di identità memorizzate localmente.
 

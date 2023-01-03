@@ -5,10 +5,10 @@ uuid: a619fbb8-693e-4583-8dad-0ff875e715f8
 exl-id: d211fa2e-d5b0-4e9f-bdb7-eda838194f3d
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '645'
-ht-degree: 100%
+source-git-commit: b022bed6b7be0cc97caaaf6b7bbc42474a57b400
+workflow-type: tm+mt
+source-wordcount: '388'
+ht-degree: 99%
 
 ---
 
@@ -39,8 +39,8 @@ I tag in Adobe Experience Platform Launch costiuiscono la nuova generazione di f
 
 | Piattaforma supportata | Versione | Documentazione   | Esempi  |
 |:---:|---|---|---|
-| ![Icona Android](assets/android-icon.png) | Android - Estensione Media | [Documentazione di Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) | [Adobe Analytics - Esempio Estensione Media Analytics for Audio and Video](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/mobile/android) |
-| ![Icona Apple iOS ](assets/ios-icon.png)<br> icona aggiungi tvOS | iOS / tvOS - Estensione Media | [Documentazione di Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) | [Adobe Analytics - Esempio Estensione Media Analytics for Audio and Video](https://github.com/adobe/aepsdk-media-ios/tree/main/TestApp) |
+| ![Icona Android](assets/android-icon.png) | Android - Estensione Media | [Documentazione di Mobile SDK](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/) | [Adobe Analytics - Esempio Estensione Media Analytics for Audio and Video](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/mobile/android) |
+| ![Icona Apple iOS ](assets/ios-icon.png)<br> icona aggiungi tvOS | iOS / tvOS - Estensione Media | [Documentazione di Mobile SDK](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/) | [Adobe Analytics - Esempio Estensione Media Analytics for Audio and Video](https://github.com/adobe/aepsdk-media-ios/tree/main/TestApp) |
 
 ### Implementazione Over-The-Top {#download-ott-libraries}
 
@@ -48,25 +48,3 @@ I tag in Adobe Experience Platform Launch costiuiscono la nuova generazione di f
 |:---:|---|---|---|
 | ![Icona Chromecast](assets/chromecast-icon.png) | [SDK per Chromecast v3.0.3](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/chromecast-v3.0.3) | [Riferimento API per Chromecast](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/) | [Configurare Mobile SDK v3.x per Chromecast](/help/implementation/media-sdk/setup/set-up-chromecast.md) |
 | ![Icona Roku](assets/roku-icon.png) | [SDK per Roku v2.2.6](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/roku-v2.2.6) | [Riferimento API per Roku](/help/implementation/media-sdk/setup/set-up-roku.md) | [Configurare Mobile SDK v2.x per Roku](/help/implementation/media-sdk/setup/set-up-roku.md) |
-
-## Estensioni Adobe {#adobe-extensions}
-
-### Estensione per Streaming Media {#streaming-media-extension}
-
-L’**Estensione Adobe Medium Analytics for Audio and Video** richiede l’SKU del componente aggiuntivo Adobe Analytics for Media.Per ulteriori informazioni, contatta il tuo rappresentante commerciale Adobe, Account Manager o Customer Success Manager.
-
-Per informazioni dettagliate sull’installazione, la configurazione e l’implementazione dell’**estensione Adobe Medium Analytics for Audio and Video**, vedi [Panoramica dell’estensione Adobe Medium Analytics for Audio and Video](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics/overview.html?lang=it) e [Configurare l’estensione Media Analytics](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics#configure-the-media-analytics-extension).
-
-### Estensione Analytics {#analytics-extension}
-
-[Estensione Analytics v1.6 o versione successiva](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html?lang=it): questa estensione consente di caricare la libreria JavaScript del Web SDK di Adobe Experience Platform per inviare dati alle soluzioni Adobe.È richiesta la versione dell’**Estensione Analytics** 1.6 o successiva.
-
-Per informazioni sulla configurazione di questa estensione, consulta [Configurare l’estensione Adobe Analytics](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html?lang=it).
-
-### Estensione Experience Cloud ID {#cloud-id-extension}
-
-[Estensione Experience Cloud ID](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/id-service/overview.html?lang=it): questa estensione implementa il servizio Experience Cloud ID che identifica i visitatori in tutte le soluzioni Experience Cloud. Il servizio Experience Cloud ID è un’estensione di personalizzazione in Adobe Experience Platform.
-
-Usa questa estensione per integrare Experience Cloud Identity Service nella tua proprietà. Con Experience Cloud Identity Service, puoi creare e memorizzare identificatori univoci e costanti per i visitatori del tuo sito.
-
-Per informazioni sulla configurazione di questa estensione, consulta [Configurare l’estensione Experience Cluod ID](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/id-service/overview.html?lang=it)
