@@ -6,7 +6,7 @@ exl-id: ffa67b5e-ee54-4a5b-8064-decd108f944b
 feature: "Media Analytics, Variables"
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '810'
 ht-degree: 100%
 
@@ -72,10 +72,10 @@ Elenco dei parametri di Media Analytics che Adobe raccoglie ed elabora sul serve
 | s:stream:chapter_sid | Media SDK | (Obbligatorio)<br/><br/>Identificatore univoco associato all’istanza di riproduzione del capitolo.<br/> **Nota:** un capitolo può essere riprodotto più volte a causa delle operazioni di ricerca eseguite dall’utente. |
 | s:stream:chapter_name | ChapterInfo | (Facoltativo)<br/><br/>Il nome del capitolo è descrittivo (cioè leggibile da un utente). |
 | s:stream:chapter_id | Media SDK | (Obbligatorio)<br/><br/>ID univoco del capitolo. Questo valore viene calcolato automaticamente in base alla formula seguente: <br/>`MD5(video_id) +`<br/>` "_" +`<br/>`chapter_pos` |
-| l:stream:chapter_pos | CapitoloInfo | (Obbligatorio)<br/><br/>Indice del capitolo che si trova nell’elenco dei capitoli (partendo da 1). |
-| l:stream:chapter_offset | CapitoloInfo | (Obbligatorio)<br/><br/>Offset del capitolo (espresso in secondi) all’interno del contenuto principale, esclusi gli annunci. |
-| l:stream:chapter_length | CapitoloInfo | (Obbligatorio)<br/><br/>La durata del capitolo (espressa in secondi). |
-| s:meta:custom_chapter_metadata.x | CapitoloInfo | (Facoltativo)<br/><br/>Metadati del capitolo personalizzati. |
+| l:stream:chapter_pos | ChapterInfo | (Obbligatorio)<br/><br/>Indice del capitolo che si trova nell’elenco dei capitoli (partendo da 1). |
+| l:stream:chapter_offset | ChapterInfo | (Obbligatorio)<br/><br/>Offset del capitolo (espresso in secondi) all’interno del contenuto principale, esclusi gli annunci. |
+| l:stream:chapter_length | ChapterInfo | (Obbligatorio)<br/><br/>La durata del capitolo (espressa in secondi). |
+| s:meta:custom_chapter_metadata.x | ChapterInfo | (Facoltativo)<br/><br/>Metadati del capitolo personalizzati. |
 
 ## Evento fine sessione
 
