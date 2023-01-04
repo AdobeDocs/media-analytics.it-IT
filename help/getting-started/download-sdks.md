@@ -5,9 +5,9 @@ uuid: a619fbb8-693e-4583-8dad-0ff875e715f8
 exl-id: d211fa2e-d5b0-4e9f-bdb7-eda838194f3d
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b022bed6b7be0cc97caaaf6b7bbc42474a57b400
+source-git-commit: a9366d5bf590f16b193c7e2905cadca0f7afd636
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '385'
 ht-degree: 99%
 
 ---
@@ -32,7 +32,7 @@ I tag in Adobe Experience Platform Launch costiuiscono la nuova generazione di f
 
 | Piattaforma supportata | Versione |  API   |  Documentazione  | Esempio  |
 |:---:|---|---|---|---|
-| ![Icona JavaScript](assets/javascript-icon.png) | Web - [Media SDK per JS v3.0.2](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/js-v3.0.2) | [Riferimento API per JavaScript](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/index.html) | [Configurare l’SDK per contenuti multimediali v3.x per JavaScript](/help/implementation/media-sdk/setup/web-implementation.md) | [Esempio SDK per contenuti multimediali per JS v3.0.2](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/sdks/js/3.x) |
+| ![Icona JavaScript](assets/javascript-icon.png) | Web - [Media SDK per JS v3.0.2](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/js-v3.0.2) | [Riferimento API per JavaScript](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/index.html) | [Implementazione di Analytics tramite JavaScript](/help/implementation/media-sdk/setup/web-implementation.md) | [Esempio SDK per contenuti multimediali per JS v3.0.2](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/sdks/js/3.x) |
 | ![Icona JavaScript](assets/javascript-icon.png) | Web - Estensione Media |  | [Estensione Adobe Media Analytics (3.x SDK) for Audio and Video — utilizzando tag (raccolta dati)](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics-3x/overview.html?lang=it) | [Esempio Estensione Adobe Media Analytics (3.x SDK) for Audio and Video](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/js/3.x) |
 
 ### Implementazione mobile {#get-mobile-extension}
