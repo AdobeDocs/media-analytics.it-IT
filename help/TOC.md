@@ -5,10 +5,10 @@ user-guide-title: Adobe Analytics per contenuti multimediali in streaming
 breadcrumb-title: Guida di Media Analytics
 user-guide-description: Implementare Adobe Analytics per contenuti multimediali in streaming. Gli argomenti trattati comprendono Media SDK e Media Collection API.
 sub-product: media analytics
-source-git-commit: 97d5d1df35bb282cac803500e1ddd72d654aef6e
+source-git-commit: 9ff1cf4f622f9f2d34275297ffbc3ebf92c2f1ba
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '894'
+ht-degree: 97%
 
 ---
 
@@ -20,9 +20,10 @@ ht-degree: 0%
    + [Note sulla versione di Streaming Media](additional-resources/release-notes.md)
 + Introduzione {#getting-started}
    + [Panoramica](getting-started/getting-started.md)
-   + [SDK, librerie ed estensioni](getting-started/download-sdks.md)
-   + [Dispositivi supportati](getting-started/supported-devices.md)
    + [Prerequisiti](getting-started/prereqs.md)
+   + [Dispositivi supportati](getting-started/supported-devices.md)
+   + [Documentazione di Streaming Media](getting-started/implementation-documentation.md)
+   + [SDK, librerie ed estensioni](getting-started/download-sdks.md)
    + Fine del supporto {#end-of-support}
       + [Fine del supporto dell’SDK di Media Analytics Mobile](additional-resources/end-of-support-faqs.md)
       + Migrazione da Media SDK a Launch {#sdk-to-launch}
@@ -30,7 +31,6 @@ ht-degree: 0%
          + [Android - da Media SDK a Launch](legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-android.md)
          + [iOS - da Media SDK a Launch](legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-ios.md)
          + [JavaScript - da Media SDK a Launch](legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-js.md)
-   + [Documentazione di Streaming Media](getting-started/implementation-documentation.md)
 + Implementazione {#implementation}
    + [Panoramica sull’implementazione](implementation/overview.md)
    + Media SDK - Implementazione {#media-sdk}
