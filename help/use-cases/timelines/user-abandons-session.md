@@ -1,14 +1,14 @@
 ---
-title: Informazioni sulle timeline per il tracciamento dei file multimediali - Sessione di abbandono degli utenti
+title: Informazioni sulle timeline di tracciamento del contenuti multimediale - L’utente abbandona la sessione
 description: Scopri la timeline dell’indicatore di riproduzione e la corrispondente azione dell’utente quando una sessione video viene abbandonata. Scopri i dettagli di ogni azione e richiesta.
 uuid: 74b89e8f-ef56-4e0c-b9a8-40739e15b4cf
 exl-id: 0c6a89f4-7949-4623-8ed9-ce1d1547bdfa
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: 4c68f5997a9d336e8c3545cdfb7b9cb955602b69
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '600'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -30,7 +30,7 @@ I seguenti diagrammi illustrano la tempistica della testina di riproduzione e la
 | --- | :---: | :---: | --- |
 | Pulsante di riproduzione o riproduzione automatica premuto | 0 | 0 | `/api/v1/sessions` |
 
-Questa chiamata segnala _l’intenzione dell’utente di riprodurre_ un video. Restituisce un ID sessione (`{sid}`) al client utilizzato per identificare tutte le chiamate di tracciamento successive all’interno della sessione. Lo stato del lettore non è ancora “in riproduzione”, ma è “in avvio”. Parametri di sessione obbligatori devono essere inclusi nella mappa `params` nel corpo della richiesta.  Nel backend, questa chiamata genera una chiamata di avvio Adobe Analytics. Per informazioni sulle sessioni, consulta la documentazione API di Media Collection.
+Questa chiamata segnala _l’intenzione dell’utente di riprodurre_ un video. Restituisce un ID sessione (`{sid}`) al client utilizzato per identificare tutte le chiamate di tracciamento successive all’interno della sessione. Lo stato del lettore non è ancora “in riproduzione”, ma è “in avvio”. I parametri di sessione obbligatori devono essere inclusi nella mappa `params` nel corpo della richiesta.  Nel backend, questa chiamata genera una chiamata di avvio Adobe Analytics. Per informazioni sulle sessioni, consulta la documentazione delle API di Media Collection.
 
 ```json
 {
