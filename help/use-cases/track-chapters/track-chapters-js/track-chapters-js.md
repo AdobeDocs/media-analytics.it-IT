@@ -1,28 +1,28 @@
 ---
-title: Scopri come tenere traccia di capitoli e segmenti utilizzando JavaScript 2.x
+title: Scopri come tracciare capitoli e segmenti utilizzando JavaScript 2.x
 description: Scopri come implementare il tracciamento di capitoli e segmenti utilizzando Media SDK nelle app del browser (JS).
 uuid: ef99edf7-7a77-46c4-8429-bc9a856b98d6
 exl-id: 9964ec0c-cce9-4ccc-bd26-a2b3fcdc3e28
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '198'
-ht-degree: 66%
+ht-degree: 100%
 
 ---
 
-# Tracciamento capitoli e segmenti con JavaScript 2.x{#track-chapters-and-segments-on-javascript}
+# Tracciare capitoli e segmenti utilizzando JavaScript 2.x{#track-chapters-and-segments-on-javascript}
 
-Le istruzioni seguenti forniscono indicazioni per l’implementazione tramite SDK 2.x.
+Le istruzioni seguenti forniscono indicazioni per l’implementazione utilizzando gli SDK 2.x.
 
 >[!IMPORTANT]
 >
 > Se implementi una versione 1.x dell&#39;SDK, puoi scaricare la Guida per gli sviluppatori qui: [Scaricare gli SDK](/help/getting-started/download-sdks.md).
 
-1. Identifica quando si verifica l’evento di inizio del capitolo e crea l’istanza `ChapterObject` utilizzando le informazioni del capitolo.
+1. Identifica quando si verifica l’evento di inizio del capitolo e crea l’istanza `ChapterObject` utilizzando le informazioni sul capitolo.
 
-   `ChapterObject` riferimento di tracciamento dei capitoli:
+   Riferimento di tracciamento dei capitoli `ChapterObject`:
 
    >[!NOTE]
    >
@@ -55,7 +55,7 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione tramite SD
    };
    ```
 
-1. Per iniziare a tenere traccia della riproduzione del capitolo, chiamare il `ChapterStart` evento `MediaHeartbeat` istanza:
+1. Per iniziare a tenere traccia della riproduzione del capitolo, chiama l’evento `ChapterStart` nell’istanza `MediaHeartbeat`.
 
    ```js
    _onChapterStart = function() {
@@ -65,7 +65,7 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione tramite SD
    };
    ```
 
-1. Quando la riproduzione raggiunge il limite finale del capitolo, come definito dal codice personalizzato, chiama il `ChapterComplete` evento `MediaHeartbeat` istanza:
+1. Quando la riproduzione raggiunge il limite finale del capitolo, come definito dal codice personalizzato, chiama l’evento `ChapterComplete` nell’istanza `MediaHeartbeat`.
 
    ```js
    _onChapterComplete = function() {
@@ -73,7 +73,7 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione tramite SD
    };
    ```
 
-1. Se la riproduzione del capitolo non è stata completata perché l’utente ha scelto di saltare il capitolo (ad esempio, se l’utente cerca fuori dal limite del capitolo), chiama l’evento `ChapterSkip` nell’istanza MediaHeartbeat:
+1. Se la riproduzione del capitolo non è stata completata perché l’utente ha scelto di saltare il capitolo (ad esempio, se l’utente effettua una ricerca fuori dal limite del capitolo), chiama l’evento `ChapterSkip` nell’istanza MediaHeartbeat:
 
    ```js
    _onChapterSkip = function() {
@@ -81,4 +81,4 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione tramite SD
    };
    ```
 
-1. In caso di capitoli aggiuntivi, ripetere i punti da 1 a 5.
+1. Se ci sono capitoli aggiuntivi, ripeti i punti da 1 a 5.
