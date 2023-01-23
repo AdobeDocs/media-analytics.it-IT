@@ -1,20 +1,20 @@
 ---
-title: Scopri come tenere traccia degli errori su Android
+title: Scopri come tracciare gli errori su Android
 description: Scopri come implementare il tracciamento degli errori utilizzando Media SDK su Android.
 uuid: 7d0c77e5-924c-4619-8e29-3484748ab736
 exl-id: 6c4f693d-45c0-4a9c-bda1-c8721afe31f5
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '90'
-ht-degree: 75%
+ht-degree: 100%
 
 ---
 
-# Tracciamento errori su Android{#track-errors-on-android}
+# Tracciare gli errori su Android{#track-errors-on-android}
 
-Le istruzioni seguenti forniscono indicazioni per l’implementazione tramite SDK 2.x.
+Le istruzioni seguenti forniscono indicazioni per l’implementazione utilizzando gli SDK 2.x.
 
 >[!IMPORTANT]
 >
