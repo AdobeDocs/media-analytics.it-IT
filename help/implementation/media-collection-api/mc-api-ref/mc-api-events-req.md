@@ -1,12 +1,12 @@
 ---
-title: API di raccolta multimediale in streaming � endpoint di richiesta eventi
+title: API di raccolta multimediale in streaming ‐ endpoint di richiesta eventi
 description: “Quali sono i parametri e le risposte dell’endpoint di richiesta degli eventi API nella raccolta contenuti multimediali?”
 uuid: b237f0a0-dc29-418b-89ee-04c596a27f39
 exl-id: ee0dd8a6-1529-4258-af12-0e2f5948ec38
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '261'
 ht-degree: 100%
 
