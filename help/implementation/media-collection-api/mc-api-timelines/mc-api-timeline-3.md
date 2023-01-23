@@ -1,14 +1,14 @@
 ---
-title: Informazioni sul tracciamento di file multimediali Timelines�Chapters
+title: Informazioni sul tracciamento di file multimediali Timelines‐Chapters
 description: Scopri le tempistiche della testina di riproduzione e quando inizia e termina un capitolo.
 uuid: 41b52072-e1cd-4dda-9253-31f3408924f6
 exl-id: e3f5bbdb-7007-435b-920c-566d163e57ad
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1092'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -250,7 +250,7 @@ L’interruzione pubblicitaria è terminata. Durante l’interruzione pubblicita
 | --- | :---: | :---: | --- |
 | Tracciamento dell’evento di riproduzione | 22 | 0 | `/api/v1/sessions/{sid}/events` |
 
-Dopo l’evento `adBreakComplete`, metti il lettore nello stato di “riproduzione” utilizzando l’evento `play`.
+Dopo l’evento `adBreakComplete`, imposta il lettore nello stato di “riproduzione” utilizzando l’evento `play`.
 
 ```json
 {
