@@ -6,9 +6,9 @@ exl-id: 261445bf-3c8b-4658-891d-9a878e0b26ea
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '421'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -30,7 +30,7 @@ Per ulteriori informazioni sull’SDK per dispositivi mobili di Adobe, consulta 
 
 * **Fornisci le seguenti funzionalità nel lettore multimediale:**
    * *API per abbonarsi agli eventi del lettore*: Media SDK richiede di chiamare un set di API semplici quando si verificano eventi nel lettore.
-   * *API che fornisce informazioni sul lettore*: queste informazioni includono dettagli quali il nome dell’elemento multimediale e la posizione della testina di riproduzione.
+   * *API che fornisce informazioni sul lettore* - Queste informazioni includono dettagli quali il nome del supporto e la posizione della testina di riproduzione.
 
 ## Implementazione SDK
 
@@ -143,4 +143,4 @@ Per aggiungere queste autorizzazioni, aggiungi le seguenti righe al file `Androi
 
 Nelle versioni 2.x, tutti i metodi pubblici sono consolidati in `com.adobe.primetime.va.simple.MediaHeartbeat` per semplificare lo sviluppo. Inoltre, tutte le configurazioni sono ora consolidate nella classe `com.adobe.primetime.va.simple.MediaHeartbeatConfig`.
 
-Per informazioni sulla migrazione da 1.x a 2.x, consulta la documentazione sull’implementazione legacy .
+Per informazioni sulla migrazione dalla versione 1.x alla versione 2.x, consulta la documentazione dell’implementazione legacy.
