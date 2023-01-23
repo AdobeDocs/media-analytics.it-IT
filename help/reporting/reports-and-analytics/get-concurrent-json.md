@@ -1,31 +1,31 @@
 ---
-title: Ottieni dati report JSON per visualizzatori simultanei
-description: Ottieni dati report JSON per visualizzatori simultanei
+title: Acquisiire i dati del rapporto JSON sui visualizzatori simultanei
+description: Acquisiire i dati del rapporto JSON sui visualizzatori simultanei
 uuid: 9168f114-2459-4951-a06c-57b735d09dc0
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '164'
-ht-degree: 31%
+ht-degree: 100%
 
 ---
 
 
-# Ottieni dati report JSON per visualizzatori simultanei{#get-concurrent-viewers-json-report-data}
+# Acquisiire i dati del rapporto JSON sui visualizzatori simultanei{#get-concurrent-viewers-json-report-data}
 
-Puoi ottenere i dati dei rapporti dei visualizzatori simultanei utilizzando _*Versione 1.4*_ delle API di Analytics:
+Puoi acquisire i dati del rapporto sui visualizzatori simultanei utilizzando la _*versione 1.4*_ delle API di Analytics.
 * [API di Analytics](https://github.com/AdobeDocs/analytics-1.4-apis)
 * [Swagger](https://adobedocs.github.io/analytics-1.4-apis/swagger-docs.html#/Report/Report.Get)
 
 1. Filtra i dati utilizzando qualsiasi segmento generato nell’interfaccia utente. Per filtrare secondo un ID di contenuto specifico, crea un nuovo segmento.
 1. Imposta `elements` -> `id` nel corpo della richiesta su `videoconcurrentviewers`.
-1. Richiedi una quantità sufficiente di dati. L’Adobe raccomanda 3200 punti di dati per garantire che non vi siano lacune nei dati.
+1. Richiedi una quantità sufficiente di dati. Per garantire che non vi siano lacune nei dati, Adobe consiglia 3200 punti di dati.
 
-   * L’intervallo di dati specificato nel rapporto raccoglie tutti i dati del visualizzatore simultaneo _al termine della sessione video._
-È quindi necessario tenere conto delle sessioni che iniziano un giorno e terminano dopo la mezzanotte (cioè il giorno successivo).
+   * L’intervallo di dati specificato nel rapporto raccoglie tutti i dati del visualizzatore simultaneo _nel momento in cui termina la sessione video._
+Quindi devi tenere conto delle sessioni che iniziano in un giorno e terminano dopo la mezzanotte (cioè il giorno successivo).
 
-   * Richiedi più di un giorno di dati, ma nella tua analisi _*utilizza solo il primo giorno dei dati.*_
+   * Richiedi più di una giornata di dati, ma nella tua analisi _*utilizza solo il primo giorno dei dati.*_
 
-Esempio di payload di richiesta per questo scenario:
+Un esempio di payload di richiesta per questo scenario sarà simile al seguente:
 
 ```
 {
