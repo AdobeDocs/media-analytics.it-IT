@@ -6,29 +6,29 @@ exl-id: a175332e-0bdc-44aa-82cb-b3f879e7abfc
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '618'
-ht-degree: 84%
+ht-degree: 100%
 
 ---
 
-# Legacy - Panoramica dell’installazione di Media SDK {#setup-overview}
+# Legacy - Panoramica della configurazione di Media SDK {#setup-overview}
 
 Dopo aver scaricato Media SDK per la tua app video o il tuo lettore, segui le informazioni in questa sezione per configurare e implementare Media SDK.
 
 
 ## Linee guida generali sull’implementazione {#general-implementation-guidelines}
 
-Esistono tre componenti SDK principali utilizzati nel tracciamento di Adobe Streaming Media:
-* Configurazione Media Heartbeat - Il `MediaHeartbeatConfig` contiene le impostazioni di base per il reporting.
-* Delegato Media Heartbeat - Il `MediaHeartbeatDelegate` controlla il tempo di riproduzione e l&#39;oggetto QoS.
-* Media Heartbeat - Il `MediaHeartbeat` è la libreria principale contenente i membri e i metodi.
+Sono disponibili tre componenti SDK principali utilizzati nel tracciamento di Adobe Streaming Media:
+* Configurazione Media Heartbeat - `MediaHeartbeatConfig` contiene le impostazioni di base per la generazione di rapporti.
+* Delegato Media Heartbeat - `MediaHeartbeatDelegate` controlla il tempo di riproduzione e l’oggetto QoS.
+* Media Heartbeat - `MediaHeartbeat` è la libreria principale contenente membri e metodi.
 
-## Implementare l’SDK per contenuti multimediali in streaming
+## Implementare Streaming Media SDK
 
-Per configurare e utilizzare l’SDK per contenuti multimediali in streaming, effettua le seguenti operazioni di implementazione:
+Per configurare e utilizzare Streaming Media SDK, effettua i seguenti passaggi di implementazione:
 
-1. Crea un `MediaHeartbeatConfig` e imposta i valori dei parametri di configurazione.
+1. Crea un’istanza `MediaHeartbeatConfig` e imposta i valori dei parametri di configurazione.
 
    |  Nome variabile  | Descrizione  | Obbligatorio |  Valore predefinito  |
    |---|---|:---:|---|
@@ -42,7 +42,7 @@ Per configurare e utilizzare l’SDK per contenuti multimediali in streaming, ef
 
 1. Implementa `MediaHeartbeatDelegate`.
 
-   |  Nome metodo  |  Descrizione  | Obbligatorio |
+   |  Nome metodo  |  Descrizione | Obbligatorio |
    | --- | --- | :---: |
    | `getQoSObject()` | Restituisce l&#39;istanza `MediaObject` che contiene le informazioni QoS correnti. Questo metodo verrà chiamato più volte durante una sessione di riproduzione. L&#39;implementazione del lettore deve restituire sempre i dati QoS disponibili più di recente. | Sì |
    | `getCurrentPlaybackTime()` | Restituisce la posizione corrente dela testina di riproduzione. <br /> Per il tracciamento VOD, il valore è specificato in secondi dall&#39;inizio dell&#39;elemento multimediale. <br /> Per lo streaming live, se il lettore non fornisce informazioni sulla durata del contenuto, il valore può essere specificato come il numero di secondi trascorsi dalla mezzanotte UTC di quel giorno. <br /> Nota: quando si utilizzano gli indicatori di avanzamento, è necessario specificare la durata del contenuto e la testina di riproduzione deve essere aggiornata come numero di secondi dall’inizio dell’elemento multimediale, a partire da 0. | Sì |
