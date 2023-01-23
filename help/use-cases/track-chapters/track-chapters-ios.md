@@ -1,28 +1,28 @@
 ---
-title: Scopri come tenere traccia di capitoli e segmenti in iOS
+title: Scopri come tracciare capitoli e segmenti su iOS
 description: Scopri come implementare il tracciamento di capitoli e segmenti utilizzando Media SDK su iOS.
 uuid: ffc5ce9f-04ba-4059-92d4-4cb4180ac9ed
 exl-id: ea8a1dd6-043f-41a4-9cef-845da92bfa32
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '195'
-ht-degree: 67%
+ht-degree: 100%
 
 ---
 
-# Tracciamento capitoli e segmenti in iOS{#track-chapters-and-segments-on-ios}
+# Tracciare capitoli e segmenti su iOS{#track-chapters-and-segments-on-ios}
 
-Le istruzioni seguenti forniscono indicazioni per l’implementazione tramite SDK 2.x.
+Le istruzioni seguenti forniscono indicazioni per l’implementazione utilizzando gli SDK 2.x.
 
 >[!IMPORTANT]
 >
 > Se implementi una versione 1.x dell&#39;SDK, puoi scaricare la Guida per gli sviluppatori qui: [Scaricare gli SDK](/help/getting-started/download-sdks.md).
 
-1. Identifica quando si verifica l’evento di inizio del capitolo e crea l’istanza `ChapterObject` utilizzando le informazioni del capitolo.
+1. Identifica quando si verifica l’evento di inizio del capitolo e crea l’istanza `ChapterObject` utilizzando le informazioni sul capitolo.
 
-   `ChapterObject` riferimento di tracciamento dei capitoli:
+   Riferimento di tracciamento dei capitoli `ChapterObject`:
 
    >[!NOTE]
    >
@@ -54,7 +54,7 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione tramite SD
    [chapterDictionary setObject:@"Sample segment info" forKey:@"segmentInfo"];
    ```
 
-1. Per iniziare a tenere traccia della riproduzione del capitolo, chiamare il `ChapterStart` evento `MediaHeartbeat` istanza:
+1. Per iniziare a tenere traccia della riproduzione del capitolo, chiama l’evento `ChapterStart` nell’istanza `MediaHeartbeat`.
 
    ```
    - (void)onChapterStart:(NSNotification *)notification {
@@ -64,7 +64,7 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione tramite SD
    }
    ```
 
-1. Quando la riproduzione raggiunge il limite finale del capitolo, come definito dal codice personalizzato, chiama il `ChapterComplete` evento `MediaHeartbeat` istanza:
+1. Quando la riproduzione raggiunge il limite finale del capitolo, come definito dal codice personalizzato, chiama l’evento `ChapterComplete` nell’istanza `MediaHeartbeat`.
 
    ```
    - (void)onChapterComplete:(NSNotification *)notification {
@@ -74,7 +74,7 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione tramite SD
    }
    ```
 
-1. Se la riproduzione del capitolo non è stata completata perché l’utente ha scelto di saltare il capitolo (ad esempio, se l’utente cerca fuori dal limite del capitolo), chiama l’evento `ChapterSkip` nell’istanza MediaHeartbeat:
+1. Se la riproduzione del capitolo non è stata completata perché l’utente ha scelto di saltare il capitolo (ad esempio, se l’utente effettua una ricerca fuori dal limite del capitolo), chiama l’evento `ChapterSkip` nell’istanza MediaHeartbeat:
 
    ```
    - (void)onChapterSkip:(NSNotification *)notification {
@@ -84,4 +84,4 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione tramite SD
    }
    ```
 
-1. In caso di capitoli aggiuntivi, ripetere i punti da 1 a 5.
+1. Se ci sono capitoli aggiuntivi, ripeti i punti da 1 a 5.
