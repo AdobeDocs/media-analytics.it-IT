@@ -1,31 +1,31 @@
 ---
-title: Spiegazione dell’implementazione di Custom Link
-description: Scopri come implementare il tracciamento dei collegamenti personalizzati in Streaming Media Analytics.
+title: Spiegazione dell'implementazione del collegamento personalizzato
+description: Scopri come implementare il tracciamento del collegamento personalizzato in Streaming Media Analytics.
 uuid: 83315e73-20ca-4db5-9d43-33daade45a13
 exl-id: ee6f931a-ef80-4ebe-8ccb-cdbf970516e6
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '200'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
-# Guida all’implementazione di Custom Link{#custom-link-implementation-guide}
+# Guida all’implementazione del collegamento personalizzato{#custom-link-implementation-guide}
 
-Il tracciamento video personalizzato utilizza il tracciamento manuale dei collegamenti tramite codice di collegamento personalizzato in Analytics `appMeasurement`.
-Nella maggior parte dei casi, il tracciamento video con collegamenti video personalizzati viene utilizzato su piattaforme e dispositivi in cui è necessaria una misurazione video minima.
+Il tracciamento video personalizzato utilizza il tracciamento manuale dei collegamenti tramite il codice del collegamento personalizzato all’interno di Analytics `appMeasurement`.
+Nella maggior parte dei casi, il tracciamento video con collegamento personalizzato viene utilizzato su piattaforme e dispositivi in cui è necessaria una misurazione video minima.
 
-* In JavaScript: la `s.tl()` Funzione
-* Nelle App Mobile: [trackAction() Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/actions.html), [trackAction() iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/actions.html), [trackAction() OTT](/help/use-cases/analytics-with-ott/track-app-actions.md)
+* In JavaScript: la funzione `s.tl()`
+* Nelle App Mobili: [trackAction() Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/actions.html?lang=it), [trackAction() iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/actions.html?lang=it), [trackAction() OTT](/help/use-cases/analytics-with-ott/track-app-actions.md)
 * Nell’API di inserimento dati: [tag linktype](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/reference/r_supported_tags.md)
 
 ## Requisiti
 
 * Accesso a eventi e dati API del lettore video
 * Possibilità di aggiungere script se si utilizza Analytics SDK
-* Possibilità di aggiungere beacon di tracciamento (script personalizzati o codice fisso) se si utilizza l’API di inserimento dati
+* Possibilità di aggiungere beacon di tracciamento (scripting personalizzato o hardcode) se si utilizza l’API di inserimento dati
 
 ## Metadati
 
@@ -51,12 +51,12 @@ if (e.type == "ended") {
 ## Perché utilizzare il collegamento personalizzato
 
 * Sono necessari prerequisiti minimi
-* Funziona su qualsiasi piattaforma, incluso senza script
+* Funziona su qualsiasi piattaforma, anche senza script
 * Eventuali calcoli, ad esempio il tempo trascorso o i quartili, devono essere calcolati in uno script personalizzato
 * Molto semplice senza librerie o script nascosti
 * Controllo totale su ogni aspetto dei dati video
 
-## Esempio di JavaScript per HTML5 Player
+## Esempio di JavaScript per lettore HTML5
 
 ```javascript
 <script type="text/javascript">
