@@ -6,9 +6,9 @@ exl-id: fe7662b5-1700-4bd6-b542-66aa8493459d
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '739'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -161,7 +161,7 @@ Per ulteriori informazioni sulla documentazione dell’SDK di Adobe Mobile, cons
 
 Nella versione 2.x, tutti i metodi pubblici sono consolidati nella classe `ADBMediaHeartbeat` per semplificare il lavoro degli sviluppatori. Tutte le configurazioni sono state consolidate nella classe `ADBMediaHeartbeatConfig`.
 
-Per informazioni sulla migrazione da 1.x a 2.x, consulta la documentazione sull’implementazione legacy .)
+Per informazioni sulla migrazione dalla versione 1.x alla versione 2.x, consulta la documentazione sull’implementazione legacy.
 
 ## Configurare un’app nativa per tvOS
 
