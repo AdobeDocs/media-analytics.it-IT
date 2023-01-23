@@ -1,14 +1,14 @@
 ---
-title: Interruzione contenuto multimediale del test 2
+title: 'Prova 2: interruzione contenuto multimediale'
 description: Scopri la prova di interruzione dei contenuti multimediali utilizzata nella convalida.
 uuid: eeccd534-63fd-4dd3-b096-0431bc9a11ff
 exl-id: 3f22ce2d-4385-4a3b-8d1f-52e25a9b1101
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '243'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -40,7 +40,7 @@ Questo caso di test convalida il comportamento di interruzione mobile.
 
    Per i parametri e i metadati della chiamata, consulta [Dettagli della chiamata di prova.](/help/legacy/validation/test-call-details.md#play-main-content)
 
-   Vedi anche i [Tracciamento annunci](/help/use-cases/track-ads/track-ads-overview.md) istruzioni per ulteriori informazioni su queste chiamate ad .
+   Per maggiori informazioni sulle chiamate dell’annuncio, consulta anche le istruzioni per il [Tracciamento annunci](/help/use-cases/track-ads/track-ads-overview.md) della tua piattaforma.
 
 1. **Spostamento in background dell’app o del browser**
 
