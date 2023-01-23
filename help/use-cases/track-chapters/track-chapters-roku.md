@@ -1,30 +1,30 @@
 ---
-title: Come tenere traccia dei capitoli e dei segmenti su Roku
+title: Scopri come Tracciare capitoli e segmenti in Roku
 description: Scopri come implementare il tracciamento di capitoli e segmenti utilizzando Media SDK su Roku.
 uuid: 15c07131-77d7-4a97-92c6-0a190c6b08d3
 exl-id: b5eb8be7-4b85-4ba7-9216-dd691be7ba46
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '199'
-ht-degree: 75%
+ht-degree: 100%
 
 ---
 
-# Tracciamento capitoli e segmenti su Roku{#track-chapters-and-segments-on-roku}
+# Tracciare capitoli e segmenti in Roku{#track-chapters-and-segments-on-roku}
 
-Le istruzioni seguenti forniscono indicazioni per l’implementazione tramite SDK 2.x.
+Le istruzioni seguenti forniscono indicazioni per l’implementazione utilizzando gli SDK 2.x.
 
 >[!IMPORTANT]
 >
 > Se implementi una versione 1.x dell&#39;SDK, puoi scaricare la Guida per gli sviluppatori qui: [Scaricare gli SDK](/help/getting-started/download-sdks.md).
 
-## Implementazione dei metadati standard di annunci
+## Implementare metadati standard di annunci
 
-1. Identifica quando si verifica l’evento di inizio del capitolo e crea l’istanza `ChapterObject` utilizzando le informazioni del capitolo.
+1. Identifica quando si verifica l’evento di inizio del capitolo e crea l’istanza `ChapterObject` utilizzando le informazioni sul capitolo.
 
-   `ChapterObject` riferimento di tracciamento dei capitoli:
+   Riferimento di tracciamento dei capitoli `ChapterObject`:
 
    >[!NOTE]
    >
@@ -56,7 +56,7 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione tramite SD
    chapterContextData["seg_info"] = "seg_info"
    ```
 
-1. Per iniziare a tenere traccia della riproduzione del capitolo, chiamare il `ChapterStart` evento `MediaHeartbeat` istanza:
+1. Per iniziare a tenere traccia della riproduzione del capitolo, chiama l’evento `ChapterStart` nell’istanza `MediaHeartbeat`.
 
    ```
    ADBMobile().mediaTrackEvent(MEDIA_CHAPTER_START, chapterInfo, chapterContextData)
@@ -76,4 +76,4 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione tramite SD
    ADBMobile().mediaTrackEvent(MEDIA_CHAPTER_SKIP, chapterInfo, chapterContextData)
    ```
 
-1. In caso di capitoli aggiuntivi, ripetere i punti da 1 a 5.
+1. Se ci sono capitoli aggiuntivi, ripeti i punti da 1 a 5.
