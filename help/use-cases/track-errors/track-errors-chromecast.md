@@ -1,18 +1,18 @@
 ---
-title: Scopri come tenere traccia degli errori in Chromecast
+title: Scopri come tracciare gli errori in Chromecast
 description: Scopri come implementare il tracciamento degli errori utilizzando Media SDK in Chromecast.
 uuid: efa9de8d-c626-4cb6-b46d-108495dd013a
 exl-id: 513772c2-582d-4b4b-92ed-0c32b99d7fdc
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '102'
-ht-degree: 66%
+ht-degree: 100%
 
 ---
 
-# Tracciamento errori in Chromecast{#track-errors-on-chromecast}
+# Tracciare gli errori in Chromecast{#track-errors-on-chromecast}
 
 Le istruzioni seguenti forniscono indicazioni per l’implementazione con tutti gli SDK 2.x.
 
