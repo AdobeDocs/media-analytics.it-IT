@@ -1,21 +1,21 @@
 ---
 title: Scopri come implementare i metadati standard utilizzando JavaScript 3.x
-description: Scopri come impostare video standard e metadati di annunci da inviare con le chiamate di tracciamento nelle app del browser (JS 3.x).
+description: Scopri come impostare video e metadati standard di annunci da inviare con le chiamate di tracciamento nelle app del browser (JS 3.x).
 exl-id: 228ba000-10e2-4906-8417-265a03367a9b
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '48'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
-# Implementazione dei metadati standard tramite JavaScript 3.x{#implement-standard-metadata-on-javascript}
+# Implementare dei metadati standard utilizzando JavaScript 3.x{#implement-standard-metadata-on-javascript}
 
 ## Implementazione
 
-Crea un&#39;istanza di un oggetto dati contestuale, compila le variabili di metadati Standard desiderate. Esempio:
+Crea un’istanza di un oggetto dati contestuali, popola le variabili di metadati standard desiderate. Ad esempio:
 
 ```js
 _onVideoLoad = function () {
