@@ -6,9 +6,9 @@ exl-id: b8de88d0-3a93-4776-b372-736bf979ee26
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '668'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
@@ -18,13 +18,13 @@ ht-degree: 82%
 
 * **Ottenere parametri di configurazione validi per Media Analytics**
 
-   Questi parametri possono essere ottenuti da un rappresentante di Adobe dopo la configurazione dell&#39;account media analytics.
-* **Includere le seguenti API nel lettore multimediale**
+   Questi parametri possono essere ottenuti da un rappresentante di Adobe dopo la configurazione dell’account di Media Analytics.
+* **Includi le seguenti API nel lettore multimediale**
 
    * _API per abbonarsi agli eventi del lettore_: Media SDK richiede di chiamare un set di API semplici quando si verificano eventi nel lettore.
-   * _API che fornisce informazioni sul lettore_: queste informazioni includono dettagli quali il nome dell’elemento multimediale e la posizione della testina di riproduzione.
+   * _API che fornisce informazioni sul lettore_ - Queste informazioni includono dettagli quali il nome del supporto e la posizione della testina di riproduzione.
 
-L’SDK 2.x Roku per le soluzioni Experience Cloud consente di misurare le applicazioni Roku scritte in BrightScript, sfruttare e raccogliere i dati sul pubblico tramite la gestione dell’audience e misurare il coinvolgimento video attraverso eventi video.
+L’SDK 2.x per Roku per le soluzioni di Experience Cloud consente di misurare le applicazioni Roku scritte in BrightScript, sfruttare e raccogliere i dati sul pubblico tramite la gestione dell’audience e misurare l’interazione video attraverso gli eventi video.
 
 ## Implementazione della libreria mobile/SDK
 
@@ -37,7 +37,7 @@ L’SDK 2.x Roku per le soluzioni Experience Cloud consente di misurare le appli
       * `ADBMobileConfig.json`: file di configurazione dell’SDK personalizzato per la tua app.
    1. Aggiungi il file di libreria e il file di configurazione JSON alla tua origine del progetto.
 
-      Il JSON utilizzato per configurare Adobe Mobile ha una chiave esclusiva per l’analisi dei contenuti multimediali denominata `mediaHeartbeat`. A questo punto appartengono i parametri di configurazione per l&#39;analisi dei contenuti multimediali.
+      Il JSON utilizzato per configurare Adobe Mobile ha una chiave esclusiva per Media Analytics denominata `mediaHeartbeat`. Qui appartengono i parametri di configurazione di Media Analytics.
 
       >[!TIP]
       >
@@ -103,7 +103,7 @@ L’SDK 2.x Roku per le soluzioni Experience Cloud consente di misurare le appli
 
 1. ID visitatore di Experience Cloud.
 
-   Il servizio ID visitatore Experience Cloud fornisce un ID visitatore universale per le soluzioni Experience Cloud. Il servizio ID visitatore è richiesto dagli eventi video e da altre integrazioni di Marketing Cloud.
+   Il servizio ID visitatore Experience Cloud fornisce un ID visitatore universale per le soluzioni Experience Cloud. Il servizio ID visitatore è richiesto da eventi video e altre integrazioni di Marketing Cloud.
 
    Verifica che la configurazione `ADBMobileConfig` contenga il tuo ID organizzazione `marketingCloud`.
 
