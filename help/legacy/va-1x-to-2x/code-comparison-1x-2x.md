@@ -6,13 +6,13 @@ exl-id: c2324c6a-329f-44e2-bea0-9d43ef9c6ef7
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '571'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
-# Confronto tra codici legacy — da 1.x a 2.x {#code-comparison-x-to-x}
+# Confronto tra codici legacy: da 1.x a 2.x {#code-comparison-x-to-x}
 
 Tutti i parametri di configurazione e le API di tracciamento sono ora consolidati nelle classi `MediaHeartbeats` e `MediaHeartbeatConfig`.
 
