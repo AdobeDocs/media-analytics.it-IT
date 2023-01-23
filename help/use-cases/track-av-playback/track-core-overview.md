@@ -6,9 +6,9 @@ exl-id: 98ad2783-c9e3-48de-88df-8549f26114a0
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '896'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -73,7 +73,7 @@ Annulla modifiche
 
 1. **Configurazione iniziale del tracciamento -** Identifica quando l’utente attiva l’intenzione di riproduzione (l’utente fa clic su play e/o è attiva la riproduzione automatica) e crea un’istanza di `MediaObject` che utilizza le informazioni del contenuto multimediale relative a nome, ID e durata e tipo di flusso.
 
-   Specifihe di **`MediaObject`:**
+   **`MediaObject`Specifihe:**
 
    | Nome variabile | Descrizione | Obbligatorio |
    |---|---|---|
@@ -83,7 +83,7 @@ Annulla modifiche
    | `streamType` | Tipo di flusso | Sì |
    | `mediaType` | Tipo contenuto (audio o video) | Sì |
 
-   Costanti **`StreamType`:**
+   **`StreamType`Costanti:**
 
    | Nome costante | Descrizione |
    |---|---|
@@ -94,7 +94,7 @@ Annulla modifiche
    | `AUDIOBOOK` | Tipo di flusso per audiolibro |
    | `PODCAST` | Tipo di flusso per Podcast |
 
-   Costanti **`MediaType`:**
+   **`MediaType`Costanti:**
 
    | Nome costante | Descrizione |
    |---|---|
@@ -242,4 +242,4 @@ if (e.type == "buffered") {
 
 ## Convalida {#validate}
 
-Per informazioni sulla convalida della *legacy* implementazione, vedi [Convalida legacy.](/help/legacy/validation/validation-overview.md)
+Per informazioni sulla convalida dell’implementazione *legacy*, consulta [Convalida legacy.](/help/legacy/validation/validation-overview.md)
