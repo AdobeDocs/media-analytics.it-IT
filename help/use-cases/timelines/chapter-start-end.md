@@ -6,9 +6,9 @@ exl-id: e3f5bbdb-7007-435b-920c-566d163e57ad
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1106'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -30,7 +30,7 @@ I seguenti diagrammi illustrano la tempistica della testina di riproduzione e la
 | --- | :---: | :---: | --- |
 | Premendo il pulsante Riproduzione automatica o Riproduzione, il video inizia a caricarsi. | 0 | 0 | `/api/v1/sessions` |
 
-Questa chiamata segnala _l’intenzione dell’utente di riprodurre_ un video. Restituisce un ID sessione (`{sid}`) al client utilizzato per identificare tutte le chiamate di tracciamento successive all’interno della sessione. Lo stato del lettore non è ancora “in riproduzione”, ma è “in avvio”. Parametri di sessione obbligatori devono essere inclusi nella mappa `params` nel corpo della richiesta.  Nel backend, questa chiamata genera una chiamata di avvio Adobe Analytics. Per informazioni sulle sessioni, consulta la documentazione API di Media Collection.
+Questa chiamata segnala _l’intenzione dell’utente di riprodurre_ un video. Restituisce un ID sessione (`{sid}`) al client utilizzato per identificare tutte le chiamate di tracciamento successive all’interno della sessione. Lo stato del lettore non è ancora “in riproduzione”, ma è “in avvio”. I parametri di sessione obbligatori devono essere inclusi nella mappa `params` nel corpo della richiesta.  Nel backend, questa chiamata genera una chiamata di avvio Adobe Analytics. Per informazioni sulle sessioni, consulta la documentazione delle API di Media Collection.
 
 ```json
 {
@@ -250,7 +250,7 @@ L’interruzione pubblicitaria è terminata. Durante l’interruzione pubblicita
 | --- | :---: | :---: | --- |
 | Tracciamento dell’evento di riproduzione | 22 | 0 | `/api/v1/sessions/{sid}/events` |
 
-Dopo l’evento `adBreakComplete`, metti il lettore nello stato di “riproduzione” utilizzando l’evento `play`.
+Dopo l’evento `adBreakComplete`, imposta il lettore nello stato di “riproduzione” utilizzando l’evento `play`.
 
 ```json
 {
