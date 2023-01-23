@@ -1,24 +1,24 @@
 ---
-title: Spiegazione delle chiavi dei metadati Chromecast
-description: Scopri come impostare i video standard e i metadati degli annunci da inviare con le chiamate di tracciamento su Chromecast.
+title: Spiegazione delle chiavi metadati Chromecast
+description: Scopri come impostare video e metadati standard di annunci da inviare con le chiamate di tracciamento su Chromecast.
 uuid: c446ad41-51b8-46d6-9bc1-abfae866023f
 exl-id: ccc717ae-d846-4349-8282-5e3511ddeb9b
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '139'
-ht-degree: 25%
+ht-degree: 100%
 
 ---
 
-# Chiavi dei metadati Chromecast{#chromecast-metadata-keys}
+# Chiavi metadati Chromecast{#chromecast-metadata-keys}
 
-I metadati standard di video e annunci possono essere impostati rispettivamente su oggetti multimediali e informazioni annunci. Utilizzando le chiavi costanti per i metadati video/ad, imposta il dizionario contenente i metadati standard sull&#39;oggetto info prima di richiamare le API di tracciamento. Fai riferimento alle tabelle seguenti per l’intero elenco delle costanti di metadati standard, seguite da un esempio.
+I metadati standard di video e annunci possono essere impostati rispettivamente sugli oggetti informazioni multimediali e annunci. Utilizzando le chiavi costanti per i metadati video/annunci, imposta il dizionario contenente i metadati standard sull’oggetto informazioni prima di richiamare le API di tracciamento. Fai riferimento alle tabelle seguenti per l’elenco completo delle costanti di metadati standard, seguite da un esempio.
 
-## Costanti metadati {#video-metadata-constants}
+## Costanti di metadati {#video-metadata-constants}
 
-| Nome metadati | Dati contestuali | Nome costante |
+| Nome dei metadati | Chiave dei dati contestuali | Nome costante |
 | --- | --- | --- |
 | Spettacolo | `a.media.show` | `ADBMobile.media.VideoMetadataKeys.SHOW` |
 | Stagione | `a.media.season` | `ADBMobile.media.VideoMetadataKeys.SEASON` |
@@ -26,9 +26,9 @@ I metadati standard di video e annunci possono essere impostati rispettivamente 
 | Risorsa | `a.media.asset` | `ADBMobile.media.VideoMetadataKeys.TMS_ID` |
 | Genere | `a.media.genre` | `ADBMobile.media.VideoMetadataKeys.GENRE` |
 | Data della prima messa in onda | `a.media.airDate` | `ADBMobile.media.VideoMetadataKeys.FIRST_AIR_DATE` |
-| Prima data dell&#39;aria digitale | `a.media.digitalDate` | `ADBMobile.media.VideoMetadataKeys.FIRST_DIGITAL_DATE` |
-| Valutazione | `a.media.rating` | `ADBMobile.media.VideoMetadataKeys.RATING` |
-| Iniziatore | `a.media.originator` | `ADBMobile.media.VideoMetadataKeys.ORIGINATOR` |
+| Data della prima messa in onda digitale | `a.media.digitalDate` | `ADBMobile.media.VideoMetadataKeys.FIRST_DIGITAL_DATE` |
+| Classificazione | `a.media.rating` | `ADBMobile.media.VideoMetadataKeys.RATING` |
+| Creatore | `a.media.originator` | `ADBMobile.media.VideoMetadataKeys.ORIGINATOR` |
 | Rete | `a.media.network` | `ADBMobile.media.VideoMetadataKeys.NETWORK` |
 | Tipo di spettacolo | `a.media.type` | `ADBMobile.media.VideoMetadataKeys.SHOW_TYPE` |
 | Caricamento annuncio | `a.media.adLoad` | `ADBMobile.media.VideoMetadataKeys.AD_LOAD` |
@@ -38,9 +38,9 @@ I metadati standard di video e annunci possono essere impostati rispettivamente 
 | Feed | `a.media.feed` | `ADBMobile.media.VideoMetadataKeys.FEED` |
 | Formato flusso | `a.media.format` | `ADBMobile.media.VideoMetadataKeys.STREAM_FORMAT` |
 
-## Costanti di metadati degli annunci {#ad-metadata-constants}
+## Costanti di metadati dell’annuncio {#ad-metadata-constants}
 
-| Nome metadati | Dati contestuali | Nome costante |
+| Nome dei metadati | Chiave dei dati contestuali | Nome costante |
 | --- | --- | --- |
 | Inserzionista | `a.media.ad.advertiser` | `ADBMobile.media.AdMetadataKeys.ADVERTISER` |
 | ID campagna | `a.media.ad.campaign` | `ADBMobile.media.AdMetadataKeys.CAMPAIGN_ID` |
