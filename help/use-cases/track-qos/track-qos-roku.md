@@ -1,18 +1,18 @@
 ---
-title: Scopri come tracciare la qualità dell’esperienza su Roku
-description: "Scopri come implementare il tracciamento della qualità dell’esperienza (QoE, QoS) utilizzando Media SDK su Roku."
+title: Scopri come Tracciare la qualità dell’esperienza in Roku
+description: “Scopri come implementare il tracciamento della qualità dell’esperienza (QoE, QoS) utilizzando Media SDK su Roku.”
 uuid: a8b242ab-da3c-4297-9eef-f0b9684ef56a
 exl-id: cd84c26d-ad91-4179-9532-83408030ff3e
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '197'
-ht-degree: 45%
+ht-degree: 100%
 
 ---
 
-# Tracciamento qualità dell’esperienza su Roku{#track-quality-of-experience-on-roku}
+# Tracciare la qualità dell’esperienza in Roku{#track-quality-of-experience-on-roku}
 
 Le istruzioni seguenti forniscono indicazioni per l’implementazione con tutti gli SDK 2.x.
 
@@ -22,13 +22,13 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione con tutti 
 
 ## Implementare QOS
 
-1. Identificare quando il bitrate cambia durante la riproduzione del contenuto multimediale e utilizzare il `mediaUpdateQoS` API per aggiornare le informazioni QoS sull’SDK di Media.
+1. Identificare quando il bitrate cambia durante la riproduzione del contenuto multimediale e utilizzare l’API `mediaUpdateQoS` per aggiornare le informazioni QoS su Media SDK.
 
    Variabili QoSObject:
 
    >[!TIP]
    >
-   >Queste variabili sono necessarie solo se tieni traccia dei QoS.
+   >Queste variabili sono necessarie solo se prevedi di tracciare QoS.
 
    | Variabile | Descrizione | Obbligatorio |
    | --- | --- | :---: |
@@ -37,7 +37,7 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione con tutti 
    | `fps` | Valore FPS | Sì |
    | `droppedFrames` | Numero di fotogrammi saltati | Sì |
 
-   Esempio:
+   Ad esempio:
 
    ```
    bitrate = 200000
@@ -61,7 +61,7 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione con tutti 
     ```
     -->
 
-1. Quando la riproduzione commuta i bit rate, chiama `trackEvent(BitrateChange)` per notificare all’SDK di Media la modifica del Bitrate.
+1. Quando la riproduzione commuta i bit rate, esegui la chiamata `trackEvent(BitrateChange)` per notificare a Media SDK la modifica del bitrate.
 
    ```
    ADBMobile().mediaTrackEvent(ADBMobile().MEDIA_BITRATE_CHANGE)
@@ -69,7 +69,7 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione con tutti 
 
    >[!NOTE]
    >
-   >Devi chiamare `updateQoSObject` con il valore del bitrate aggiornato.
+   >È necessario chiamare `updateQoSObject` con il valore del bitrate aggiornato.
 
    <!--
     ```
@@ -82,7 +82,7 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione con tutti 
     >Update the QoS object and call the bitrate change event on every bitrate change. This provides the most accurate QoS data.
     -->
 
-1. Quando il lettore multimediale rileva un errore e l&#39;evento di errore è disponibile per l&#39;API del lettore, utilizza `trackError()` per acquisire le informazioni sull’errore. (Consulta [Panoramica](/help/use-cases/track-errors/track-errors-overview.md).)
+1. Quando il lettore multimediale rileva un errore e l’evento di errore è disponibile per l’API del lettore, utilizza `trackError()` per acquisire informazioni sull’errore. (Consulta [Panoramica](/help/use-cases/track-errors/track-errors-overview.md).)
 
    >[!TIP]
    >
