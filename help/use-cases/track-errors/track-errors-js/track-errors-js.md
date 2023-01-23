@@ -1,18 +1,18 @@
 ---
-title: Scopri come tenere traccia degli errori con JavaScript 2.x
+title: Scopri come tracciare gli errori utilizzando JavaScript 2.x
 description: Scopri come implementare il tracciamento degli errori utilizzando Media SDK nelle app del browser (JS).
 uuid: 5a4fc5df-2677-4189-92af-5cd074847b39
 exl-id: b3012bce-4b92-408e-8b7a-57ae9d52e93d
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '98'
-ht-degree: 73%
+ht-degree: 100%
 
 ---
 
-# Tracciare gli errori con JavaScript 2.x{#track-errors-on-javascript}
+# Tracciare gli errori utilizzando JavaScript 2.x{#track-errors-on-javascript}
 
 Le istruzioni seguenti forniscono indicazioni per l’implementazione con tutti gli SDK 2.x.
 
