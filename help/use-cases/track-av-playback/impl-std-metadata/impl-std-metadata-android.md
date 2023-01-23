@@ -1,32 +1,32 @@
 ---
 title: Scopri come implementare i metadati standard su Android
-description: Scopri come impostare i video standard e i metadati degli annunci da inviare con le chiamate di tracciamento su Android.
+description: Scopri come impostare video e metadati standard di annunci da inviare con le chiamate di tracciamento su Android.
 uuid: c48b4190-b062-4c4e-9c40-8dde4598a50e
 exl-id: 31afd8b5-0f23-4025-afcb-6df906cf6be5
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '106'
-ht-degree: 18%
+ht-degree: 100%
 
 ---
 
 # Implementare metadati standard su Android{#implement-standard-metadata-on-android}
 
-## Costanti metadati standard
+## Costanti dei metadati standard
 
 | Nome costante | Descrizione   |
 |---|---|
-| `MediaHeartbeat.MediaObjectKey.StandardMediaMetadata` | Costante per l&#39;associazione di metadati standard su `MediaObject`. |
+| `MediaHeartbeat.MediaObjectKey.StandardMediaMetadata` | Costante per il collegamento di metadati standard su `MediaObject`. |
 
 ## Riferimento API per le chiavi di metadati
 
-* Crea un `HashMap` di coppie di valori chiave di metadati standard.
+* Crea un `HashMap` di coppie di valori standard per le chiave di metadati.
    * [Chiavi metadati video](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/com/adobe/primetime/va/simple/MediaHeartbeat.VideoMetadataKeys.html)
    * [Chiavi metadati audio](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/com/adobe/primetime/va/simple/MediaHeartbeat.AudioMetadataKeys.html)
-* Impostare i metadati standard `HashMap` su `MediaInfo` utilizzo della costante Metadati standard per i metadati.
-* Fornisci `MediaInfo` durante la chiamata dell&#39;oggetto `trackSessionStart()` API.
+* Imposta i metadati standard `HashMap` su `MediaInfo` utilizzando la costante Metadati standard per i metadati.
+* Fornisci l’oggetto `MediaInfo` richiamando l’API `trackSessionStart()`.
 
 ## Implementazioni di esempio
 
