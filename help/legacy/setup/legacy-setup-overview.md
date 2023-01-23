@@ -1,22 +1,23 @@
 ---
-title: Spiegazione degli SDK per contenuti multimediali precedenti
-description: "Scopri come configurare l’SDK per contenuti multimediali **legacy** 2.x per il tracciamento dei contenuti multimediali nelle applicazioni mobili, OTT e browser (JS)."
+title: Spiegazione implementazione Media SDK legacy
+description: Scopri come configurare Media SDK **legacy** 2.x per il tracciamento dei contenuti multimediali nelle applicazioni mobili, OTT e browser (JS).
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+exl-id: d94ede3e-95f8-4591-9833-ef39aff12ba9
+source-git-commit: a7d897c6f6fbc6ed0d5b71f5801ab18ee21f0411
+workflow-type: ht
 source-wordcount: '789'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
-# Panoramica dell’installazione dell’SDK per streaming multimediale 2.x precedente{#setup-overview}
+# Panoramica della configurazione di Streaming Media SDK Legacy 2.x{#setup-overview}
 
-Le istruzioni contenute in questa sezione si applicano al **legacy** SDK di Media 2.x.
+Le istruzioni contenute in questa sezione si applicano a Media SKD **legacy** 2.x.
 
-* Per informazioni sull’implementazione di una versione 1.x dell’SDK per contenuti multimediali, consulta la sezione [Documentazione 1.x Media SDK.](/help/getting-started/download-sdks.md)
+* Se implementi una versione 1.x di Media SDK, consulta la [Documentazione di Media SDK 1.x.](/help/getting-started/download-sdks.md)
 
-* Per gli integratori Primetime, consulta la sezione _Documentazione di Primetime Media SDK_.
+* Per gli integratori Primetime, consulta la _Documentazione di Media SDK Primetime_.
 
 >[!IMPORTANT]
 >
@@ -59,7 +60,7 @@ Completa i seguenti passaggi per l’implementazione:
 
 1. Implementa `MediaHeartbeatDelegate`.
 
-   |  Nome metodo  |  Descrizione  | Obbligatorio |
+   |  Nome metodo  |  Descrizione | Obbligatorio |
    | --- | --- | :---: |
    | `getQoSObject()` | Restituisce l&#39;istanza `MediaObject` che contiene le informazioni QoS correnti. Questo metodo verrà chiamato più volte durante una sessione di riproduzione. L&#39;implementazione del lettore deve restituire sempre i dati QoS disponibili più di recente. | Sì |
    | `getCurrentPlaybackTime()` | Restituisce la posizione corrente dela testina di riproduzione. <br /> Per il tracciamento VOD, il valore è specificato in secondi dall&#39;inizio dell&#39;elemento multimediale. <br /> Per lo streaming live, se il lettore non fornisce informazioni sulla durata del contenuto, il valore può essere specificato come il numero di secondi trascorsi dalla mezzanotte UTC di quel giorno. <br /> Nota: quando si utilizzano gli indicatori di avanzamento, è necessario specificare la durata del contenuto e la testina di riproduzione deve essere aggiornata come numero di secondi dall’inizio dell’elemento multimediale, a partire da 0. | Sì |
@@ -157,7 +158,7 @@ Il tracciamento dei contenuti multimediali funziona allo stesso modo su tutte le
 | Chromecast | [Configurazione per Chromecast ](chromecast_1.x_sdk.pdf) |
 | iOS | [Configurazione per iOS ](vhl-dev-guide-v15_ios.pdf) |
 | JavaScript | [Configurazione per JavaScript ](vhl-dev-guide-v15_js.pdf) |
-| Primetime  | <ul> <li> Android:   [Configurare Media Analytics](https://help.adobe.com/en_US/primetime/psdk/android/1.4/index.html) </li> <li> DHLS:   [Configurare Media Analytics](https://help.adobe.com/en_US/primetime/psdk/dhls/index.html#PSDKs-task-Initialize_and_configure_video_analytics_) </li> <li> iOS:   [Configurare Media Analytics](https://help.adobe.com/en_US/primetime/psdk/ios/1.4/index.html#PSDKs-task-Initialize_and_configure_video_analytics_) </li> </ul> |
+| Primetime  | <ul> <li> Android:   [Configurare Media Analytics](https://helpx.adobe.com/it/support/primetime.html) </li> <li> DHLS:   [Configurare Media Analytics](https://help.adobe.com/en_US/primetime/psdk/dhls/index.html#PSDKs-task-Initialize_and_configure_video_analytics_) </li> <li> iOS:   [Configurare Media Analytics](https://help.adobe.com/en_US/primetime/psdk/ios/1.4/index.html#PSDKs-task-Initialize_and_configure_video_analytics_) </li> </ul> |
 | TVML | [Configurazione per TVML ](vhl_tvml.pdf) |
 
 ## Documentazione di Primetime Media SDK {#primetime-docs}
