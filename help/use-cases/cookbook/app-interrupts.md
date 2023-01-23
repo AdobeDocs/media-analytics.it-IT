@@ -6,15 +6,15 @@ exl-id: a84af6ad-dd4f-4f0d-93dd-66f2f84ddc0e
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '364'
-ht-degree: 83%
+ht-degree: 100%
 
 ---
 
 # Gestione degli arresti dell’applicazione durante la riproduzione {#handling-application-interrupts-during-playback}
 
-La riproduzione in un&#39;applicazione multimediale può essere interrotta in diversi modi. Ad esempio, un utente può premere esplicitamente la pausa oppure può mettere l&#39;applicazione in background. Indipendentemente dalle cause di un’interruzione nella riproduzione dei contenuti multimediali, le istruzioni di tracciamento sono le stesse.
+La riproduzione in un’applicazione multimediale può essere interrotta in diversi modi. Ad esempio, un utente può mettere l’applicazione esplicitamente in pausa oppure in esecuzione in background. Indipendentemente dalle cause di un’interruzione nella riproduzione dei contenuti multimediali, le istruzioni di tracciamento sono le stesse.
 
 1. Eseguire la chiamata **`trackPause`** quando l’applicazione viene interrotta (passa in background, l’elemento multimediale è messo in pausa, ecc.).
 1. Eseguire la chiamata **`trackPlay`** quando l’applicazione torna in primo piano e/o l’elemento multimediale riprende la riproduzione.
@@ -35,4 +35,4 @@ La riproduzione in un&#39;applicazione multimediale può essere interrotta in di
 
 * _E il riavvio della stessa sessione?_
 
-   Per informazioni sulla ripresa di una sessione di tracciamento, vedi [Ripresa delle sessioni inattive](resuming-inactive.md).L&#39;SDK invia un ping di ripresa per notificare al back-end che l&#39;utente sta riprendendo manualmente la sessione.
+   Per informazioni sulla ripresa di una sessione di tracciamento, consulta [Ripresa di sessioni inattive](resuming-inactive.md). L’SDK invia un ping di ripresa per notificare al back-end che l’utente sta riprendendo la sessione manualmente.
