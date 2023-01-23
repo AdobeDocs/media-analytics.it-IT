@@ -1,18 +1,18 @@
 ---
-title: Scopri come tenere traccia degli errori su Roku
+title: Scopri come tracciare gli annunci su Roku
 description: Scopri come implementare il tracciamento degli errori utilizzando Media SDK su Roku.
 uuid: 4e0165f9-9169-47ed-9f11-ea8a8778f663
 exl-id: 6a6aae4c-60c3-43ea-9954-0bb31f6456f8
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '94'
-ht-degree: 76%
+ht-degree: 100%
 
 ---
 
-# Tracciamento errori su Roku{#track-errors-on-roku}
+# Tracciare gli errori in Roku{#track-errors-on-roku}
 
 Le istruzioni seguenti forniscono indicazioni per l’implementazione con tutti gli SDK 2.x.
 
