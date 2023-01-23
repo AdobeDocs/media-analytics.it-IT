@@ -1,17 +1,17 @@
 ---
-title: Scopri come tenere traccia del buffering con JavaScript 3.x
-description: Scopri come tenere traccia degli eventi di buffering nelle app del browser (JS).
+title: Scopri come tracciare il buffering utilizzando JavaScript 3.x
+description: Scopri come tracciare gli eventi di buffering nelle app del browser (JS).
 exl-id: c6941942-02f9-4f9c-99ad-0c52ed2f793b
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '120'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
-# Tracciamento buffering con JavaScript 3.x{#track-buffering-on-javascript}
+# Tracciare il buffering utilizzando JavaScript 3.x{#track-buffering-on-javascript}
 
 Le istruzioni seguenti forniscono indicazioni per l’implementazione con tutti gli SDK 3.x.
 
