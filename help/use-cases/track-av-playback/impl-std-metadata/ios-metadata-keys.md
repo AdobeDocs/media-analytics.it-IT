@@ -1,20 +1,20 @@
 ---
 title: Spiegazione delle chiavi metadati iOS
-description: Scopri le chiavi dei metadati iOS disponibili.
+description: Scopri le chiavi metadati iOS disponibili.
 uuid: 8eb90111-c9dd-4ca7-9766-91530a8ae6cf
 exl-id: a4bbbcba-9644-486a-95f4-65e5dc57623e
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '115'
-ht-degree: 50%
+ht-degree: 100%
 
 ---
 
 # Chiavi metadati iOS{#ios-metadata-keys}
 
-[Riferimento API di iOS](https://adobe-marketing-cloud.github.io/media-sdks/reference/ios/)
+[Riferimento API per iOS](https://adobe-marketing-cloud.github.io/media-sdks/reference/ios/)
 
 Da `ADBStandardMetadataKeys.h`:
 
@@ -27,16 +27,16 @@ Da `ADBStandardMetadataKeys.h`:
 | `ADBVideoMetadataKeyEPISODE` | Episodio | Video |
 | `ADBVideoMetadataKeyASSET_ID` | Risorsa | Video |
 | `ADBVideoMetadataKeyGENRE` | Genere | Video |
-| `ADBVideoMetadataKeyFIRST_AIR_DATE` | Prima data aria | Video |
-| `ADBVideoMetadataKeyFIRST_DIGITAL_DAT` | Prima data digitale | Video |
-| `ADBVideoMetadataKeyRATING` | Valutazione | Video |
-| `ADBVideoMetadataKeyORIGINATOR` | Iniziatore | Video |
+| `ADBVideoMetadataKeyFIRST_AIR_DATE` | Data della prima messa in onda | Video |
+| `ADBVideoMetadataKeyFIRST_DIGITAL_DAT` | Data prima versione digitale | Video |
+| `ADBVideoMetadataKeyRATING` | Classificazione | Video |
+| `ADBVideoMetadataKeyORIGINATOR` | Creatore | Video |
 | `ADBVideoMetadataKeyNETWORK` | Rete | Video |
-| `ADBVideoMetadataKeySHOW_TYPE` | Mostra tipo | Video |
+| `ADBVideoMetadataKeySHOW_TYPE` | Tipo di spettacolo | Video |
 | `ADBVideoMetadataKeyAD_LOAD` | Caricamento annuncio | Video |
 | `ADBVideoMetadataKeyMVPD` | mvpd | Video |
-| `ADBVideoMetadataKeyAUTHORIZED` | Authorization | Video |
-| `ADBVideoMetadataKeyDAY_PART` | Parte giorno | Video |
+| `ADBVideoMetadataKeyAUTHORIZED` | Autorizzazione | Video |
+| `ADBVideoMetadataKeyDAY_PART` | Fascia oraria | Video |
 | `ADBVideoMetadataKeyFEED` | Feed | Video |
 | `ADBVideoMetadataKeySTREAM_FORMAT` | Formato flusso | Video |
 
@@ -51,13 +51,13 @@ Da `ADBStandardMetadataKeys.h`:
 | `ADBAudioMetadataKeyPUBLISHER` | Risorsa | Audio |
 | `ADBAudioMetadataKeySTATION` | Genere | Audio |
 
-## Chiavi metadati annunci
+## Chiavi metadati annuncio
 
 | Nome costante | Descrizione | Tipo |
 |---|---|---|
 | `ADBAdMetadataKeyADVERTISER` | Inserzionista | Annuncio |
 | `ADBAdMetadataKeyCAMPAIGN_ID` | ID campagna | Annuncio |
-| `ADBAdMetadataKeyCREATIVE_ID` | ID creativo | Annuncio |
+| `ADBAdMetadataKeyCREATIVE_ID` | ID creatività | Annuncio |
 | `ADBAdMetadataKeyPLACEMENT_ID` | ID posizionamento | Annuncio |
 | `ADBAdMetadataKeySITE_ID` | ID sito | Annuncio |
-| `ADBAdMetadataKeyCREATIVE_URL` | Url Creativo | Annuncio |
+| `ADBAdMetadataKeyCREATIVE_URL` | URL creatività | Annuncio |
