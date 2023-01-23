@@ -1,14 +1,14 @@
 ---
 title: Scopri come implementare metadati standard su Roku
-description: Scopri come impostare i video standard e i metadati degli annunci da inviare con le chiamate di tracciamento su Roku.
+description: Scopri come impostare video e metadati standard di annunci da inviare con le chiamate di tracciamento su Roku.
 uuid: ae14d809-343f-452c-832a-f94bd3d83a90
 exl-id: 1552b16a-3c2d-4caa-b571-e6628f0b6866
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '63'
-ht-degree: 58%
+ht-degree: 100%
 
 ---
 
