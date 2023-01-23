@@ -5,9 +5,9 @@ exl-id: 9601ec17-8421-49d0-9d81-1cfa5e8f37cf
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: b022bed6b7be0cc97caaaf6b7bbc42474a57b400
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '691'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ Con la fine del supporto per gli SDK per dispositivi mobili versione 4, il 31 ag
 
 1. Gli SDK per dispositivi mobili v4 non saranno più supportati dopo il 31 agosto 2021. Esegui la migrazione agli SDK per dispositivi mobili Adobe Experience Platform (AEP) per iOS e Android. Per ulteriori informazioni, consulta [Domande frequenti sugli SDK per dispositivi mobili versione 4: fine del supporto](https://developer.adobe.com/client-sdks/documentation/v4-end-of-life-faq/).
 
-1. L’implementazione di Analytics for Streaming Media richiede l’SDK di AEP Mobile e l’utilizzo delle estensioni Analytics e Media Analytics. A partire dal 1° settembre 2021, è necessario utilizzare i nuovi SDK e le estensioni AEP Mobile.  Le estensioni di Media Analytics sono configurate tramite i Tag di Adobe (raccolta dati). Per ulteriori informazioni, consulta [Migrazione dall’SDK per contenuti multimediali autonomi a Adobe Launch](/help/legacy/sdk-to-launch/sdk-to-launch-migration.md)
+1. L’implementazione di Analytics for Streaming Media richiede l’SDK di AEP Mobile e l’utilizzo delle estensioni Analytics e Media Analytics. A partire dal 1° settembre 2021, è necessario utilizzare i nuovi SDK e le estensioni AEP Mobile.  Le estensioni di Media Analytics sono configurate tramite i Tag di Adobe (raccolta dati). Per ulteriori informazioni, consulta [Migrazione da Media SDK autonomo ad Adobe Launch](/help/legacy/sdk-to-launch/sdk-to-launch-migration.md)
 
 1. Lo sviluppo delle funzioni è terminato per gli SDK Media Analytics per iOS e Android. Le nuove funzioni introdotte a partire dall’autunno 2019 vengono abilitate utilizzando le estensioni Media Analytics e l’API Media Collection.
 
@@ -45,7 +45,7 @@ Per ulteriori domande, contatta il tuo Adobe Customer Success Manager.
 
 1. **Qual è il livello di impegno per la migrazione alle estensioni Media Analytics?**
 
-   LOE dipende dall’implementazione di ciascun cliente, quindi varia.  Dopo aver esaminato la documentazione sulla migrazione riportata di seguito, rivolgiti alla consulenza e/o all’assistenza clienti per richiedere supporto aggiuntivo.
+   LOE dipende dall’implementazione di ciascun cliente, quindi varia.  Dopo aver esaminato la documentazione sulla migrazione riportata di seguito, rivolgiti alla consulenza e/o all’assistenza clienti per richiedere un supporto aggiuntivo.
 
 [Estensioni di Media Analytics: migrazione Android](/help/legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-android.md)
 
@@ -59,8 +59,8 @@ Per ulteriori domande, contatta il tuo Adobe Customer Success Manager.
 
 1. **Questa fine del supporto influisce sull’SDK per tvOS?**
 
-   Sì, per tvOS (versione 10+) l’implementazione consigliata consiste nella migrazione alle estensioni Media Analytics. Per ulteriori informazioni, consulta [Migrazione dall’SDK per contenuti multimediali autonomi ad Adobe Launch - iOS](/help/legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-ios.md).
+   Sì, per tvOS (versione 10+) l’implementazione consigliata consiste nella migrazione alle estensioni Media Analytics. Per ulteriori informazioni, consulta [Migrazione da Media SDK autonomo ad Adobe Launch - iOS](/help/legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-ios.md).
 
 1. **Questa fine del supporto influisce sull’SDK per Fire TV e Android TV?**
 
-   Sì, per Fire TV e Android TV, l’implementazione consigliata consiste nella migrazione alle estensioni Media Analytics. Per ulteriori informazioni, consulta [Migrazione da Media SDK standalone ad Adobe Launch - Android](/help/legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-android.md).
+   Sì, per Fire TV e Android TV, l’implementazione consigliata consiste nella migrazione alle estensioni Media Analytics. Per ulteriori informazioni, consulta [Migrazione da Media SDK autonomo ad Adobe Launch - Android](/help/legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-android.md).
