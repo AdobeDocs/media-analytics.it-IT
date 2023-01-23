@@ -1,18 +1,18 @@
 ---
-title: Scopri come tenere traccia della qualità dell’esperienza su iOS
-description: "Scopri come implementare il tracciamento della qualità dell’esperienza (QoE, QoS) utilizzando Media SDK su iOS."
+title: Scopri come tracciare la qualità dell’esperienza su iOS
+description: “Scopri come implementare il tracciamento della qualità dell’esperienza (QoE, QoS) utilizzando Media SDK su iOS.”
 uuid: cae2c142-ed39-4234-a711-765dcabc5415
 exl-id: 7f01e6eb-95bd-4e3d-93d0-8a2e68323313
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '156'
-ht-degree: 68%
+ht-degree: 100%
 
 ---
 
-# Tracciamento qualità dell’esperienza su iOS{#track-quality-of-experience-on-ios}
+# Tracciare la qualità dell’esperienza su iOS{#track-quality-of-experience-on-ios}
 
 Le istruzioni seguenti forniscono indicazioni per l’implementazione con tutti gli SDK 2.x.
 
@@ -20,9 +20,9 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione con tutti 
 >
 >Se implementi una versione 1.x dell’SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scarica SDK.](/help/getting-started/download-sdks.md)
 
-## Implementare QOS
+## Implementare QoS
 
-1. Identificare quando il bitrate cambia durante la riproduzione del contenuto multimediale e creare il `MediaObject` utilizzando le informazioni QoS.
+1. Identificare quando il bitrate cambia durante la riproduzione del contenuto multimediale e creare l’istanza `MediaObject` utilizzando le informazioni QoS.
 
    Variabili QoSObject:
 
@@ -47,7 +47,7 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione con tutti 
    ```
 
 1. Assicurati che il metodo `getQoSObject` restituisca le informazioni QoS più aggiornate.
-1. Quando la riproduzione commuta i bitrate, esegui la chiamata `BitrateChange` nell’istanza Media Heartbeat:
+1. Quando la riproduzione commuta i bitrate, esegui la chiamata di evento `BitrateChange` nell’istanza Media Heartbeat:
 
    ```
    - (void)onBitrateChange:(NSNotification *)notification {
