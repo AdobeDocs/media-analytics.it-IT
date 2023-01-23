@@ -1,20 +1,20 @@
 ---
-title: Scopri come tenere traccia di capitoli e segmenti su Android
+title: Scopri come tracciare capitoli e segmenti su Android
 description: Scopri come implementare il tracciamento di capitoli e segmenti utilizzando Media SDK su Android.
 uuid: 013815d7-4d9e-48f4-a2b9-3b70cb1149d3
 exl-id: ada2e2a7-1383-471c-9ce6-c82ea93fa79d
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '198'
-ht-degree: 67%
+ht-degree: 100%
 
 ---
 
-# Tracciamento capitoli e segmenti su Android{#track-chapters-and-segments-on-android}
+# Tracciare capitoli e segmenti su Android{#track-chapters-and-segments-on-android}
 
-Le istruzioni seguenti forniscono indicazioni per l’implementazione tramite SDK 2.x.
+Le istruzioni seguenti forniscono indicazioni per l’implementazione utilizzando gli SDK 2.x.
 
 >[!IMPORTANT]
 >
@@ -22,9 +22,9 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione tramite SD
 
 ## Implementare il tracciamento dei capitoli
 
-1. Identifica quando si verifica l’evento di inizio del capitolo e crea l’istanza `ChapterObject` utilizzando le informazioni del capitolo.
+1. Identifica quando si verifica l’evento di inizio del capitolo e crea l’istanza `ChapterObject` utilizzando le informazioni sul capitolo.
 
-   `ChapterObject` riferimento di tracciamento dei capitoli:
+   Riferimento di tracciamento dei capitoli `ChapterObject`:
 
    >[!NOTE]
    >
@@ -57,7 +57,7 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione tramite SD
    chapterMetadata.put("segmentInfo", "Sample Segment Info");
    ```
 
-1. Per iniziare a tenere traccia della riproduzione del capitolo, chiamare il `ChapterStart` evento `MediaHeartbeat` istanza:
+1. Per iniziare a tenere traccia della riproduzione del capitolo, chiama l’evento `ChapterStart` nell’istanza `MediaHeartbeat`.
 
    ```java
    public void onChapterStart(Observable observable, Object data) {  
@@ -67,7 +67,7 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione tramite SD
    }
    ```
 
-1. Quando la riproduzione raggiunge il limite finale del capitolo, come definito dal codice personalizzato, chiama il `ChapterComplete` evento `MediaHeartbeat` istanza:
+1. Quando la riproduzione raggiunge il limite finale del capitolo, come definito dal codice personalizzato, chiama l’evento `ChapterComplete` nell’istanza `MediaHeartbeat`.
 
    ```java
    public void onChapterComplete(Observable observable, Object data) {  
@@ -75,7 +75,7 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione tramite SD
    }
    ```
 
-1. Se la riproduzione del capitolo non è stata completata perché l’utente ha scelto di saltare il capitolo (ad esempio, se l’utente cerca fuori dal limite del capitolo), chiama l’evento `ChapterSkip` nell’istanza MediaHeartbeat:
+1. Se la riproduzione del capitolo non è stata completata perché l’utente ha scelto di saltare il capitolo (ad esempio, se l’utente effettua una ricerca fuori dal limite del capitolo), chiama l’evento `ChapterSkip` nell’istanza MediaHeartbeat:
 
    ```java
    public void onChapterSkip(Observable observable, Object data) {  
@@ -83,4 +83,4 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione tramite SD
    }
    ```
 
-1. In caso di capitoli aggiuntivi, ripetere i punti da 1 a 5.
+1. Se ci sono capitoli aggiuntivi, ripeti i punti da 1 a 5.
