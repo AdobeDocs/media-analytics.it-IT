@@ -6,9 +6,9 @@ exl-id: e428d3cd-dbc7-48bb-82ff-61b6b892884c
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1169'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 98%
 
 ## Introduzione {#introduction}
 
-È possibile utilizzare il framework di programmazione XML Roku SceneGraph per sviluppare applicazioni. Questo framework presenta due concetti chiave:
+Per sviluppare le applicazioni, è possibile utilizzare l’infrastruttura di programmazione XML Roku SceneGraph. Questa infrastruttura è caratterizzata da due concetti chiave:
 
 * Rendering SceneGraph delle schermate dell’applicazione
 * Configurazione XML delle schermate SceneGraph
@@ -205,11 +205,11 @@ Utilità definita a livello globale `MediaHeartbeat`. Le API legacy di AdobeMobi
 
 | Metodo | Descrizione |
 | --- | --- |
-| `adb_media_init_mediainfo` | Questo metodo restituisce un oggetto Informazioni multimediali inizializzato`Function adb_media_init_mediainfo(name As String, id As String, length As Double, streamType As String) As Object` |
-| `adb_media_init_adinfo` | Questo metodo restituisce l&#39;oggetto Informazioni sull’annuncio inizializzato`Function adb_media_init_adinfo(name As String, id As String, position As Double, length As Double) As Object` |
-| `adb_media_init_chapterinfo` | Questo metodo restituisce l&#39;oggetto Informazioni sul capitolo inizializzato.`Function adb_media_init_adbreakinfo(name As String, startTime as Double, position as Double) As Object` |
-| `adb_media_init_adbreakinfo` | Questo metodo restituisce l&#39;oggetto Informazioni sulla pausa annuncio inizializzato.`Function adb_media_init_chapterinfo(name As String, position As Double, length As Double, startTime As Double) As Object` |
-| `adb_media_init_qosinfo` | Questo metodo restituisce un oggetto Informazioni QoS inizializzato.`Function adb_media_init_qosinfo(bitrate As Double, startupTime as Double, fps as Double, droppedFrames as Double) As Object` |
+| `adb_media_init_mediainfo` | Questo metodo restituisce un oggetto Informazioni multimediali inizializzato. `Function adb_media_init_mediainfo(name As String, id As String, length As Double, streamType As String) As Object` |
+| `adb_media_init_adinfo` | Questo metodo restituisce l&#39;oggetto Informazioni sull’annuncio inizializzato. `Function adb_media_init_adinfo(name As String, id As String, position As Double, length As Double) As Object` |
+| `adb_media_init_chapterinfo` | Questo metodo restituisce l&#39;oggetto Informazioni sul capitolo inizializzato. `Function adb_media_init_adbreakinfo(name As String, startTime as Double, position as Double) As Object` |
+| `adb_media_init_adbreakinfo` | Questo metodo restituisce l&#39;oggetto Informazioni sulla pausa annuncio inizializzato. `Function adb_media_init_chapterinfo(name As String, position As Double, length As Double, startTime As Double) As Object` |
+| `adb_media_init_qosinfo` | Questo metodo restituisce un oggetto Informazioni QoS inizializzato. `Function adb_media_init_qosinfo(bitrate As Double, startupTime as Double, fps as Double, droppedFrames as Double) As Object` |
 
 ## Implementazione {#implementation}
 
@@ -219,7 +219,7 @@ Utilità definita a livello globale `MediaHeartbeat`. Le API legacy di AdobeMobi
 
    1. Copia `adbmobile.brs` (AdobeMobileLibrary) nella directory `pkg:/source/`.
 
-   1. Per il supporto di Scene Graph, copia `adbmobileTask.brs` e `adbMobileTask.xml` nella directory `pkg:/components/`.
+   1. Per il supporto di SceneGraph, copia `adbmobileTask.brs` e `adbMobileTask.xml` nella directory `pkg:/components/`.
 
 1. **Inizializza**
 
