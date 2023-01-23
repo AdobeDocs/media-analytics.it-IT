@@ -1,18 +1,18 @@
 ---
-title: Scopri come tenere traccia del buffering con JavaScript 2.x
-description: Scopri come tenere traccia degli eventi di buffering nelle app del browser (JS).
+title: Scopri come tracciare gli annunci utilizzando JavaScript 2.x
+description: Scopri come tracciare gli eventi di buffering nelle app del browser (JS).
 uuid: c380cf2c-7729-4d4a-a4da-581bd94a5896
 exl-id: 62c1d5b4-2717-42b3-8343-d41e895a9da3
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '121'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
-# Tracciamento buffering con JavaScript 2.x{#track-buffering-on-javascript}
+# Tracciare il buffering utilizzando JavaScript 2.x{#track-buffering-on-javascript}
 
 Le istruzioni seguenti forniscono indicazioni per l’implementazione con tutti gli SDK 2.x.
 
