@@ -1,5 +1,5 @@
 ---
-title: Come impostare un’implementazione web per Analytics per contenuti in streaming
+title: Come impostare un’implementazione web per Analytics for Streaming Media
 description: Scopri come implementare Adobe Streaming Media per le app web.
 feature: Media Analytics
 role: User, Admin, Data Engineer
@@ -7,7 +7,7 @@ exl-id: aed561d0-defc-4be5-87d3-0f331cdfab34
 source-git-commit: d1e7a74a03c68e08987f03a295edc69989d9a4c6
 workflow-type: tm+mt
 source-wordcount: '453'
-ht-degree: 69%
+ht-degree: 90%
 
 ---
 
@@ -23,14 +23,14 @@ In alternativa, puoi utilizzare l’estensione Adobe Medium Analytics per implem
 
    Questi parametri possono essere ottenuti da un rappresentante di Adobe dopo la configurazione dell’account di analisi.
 
-* **Implementare `AppMeasurement` e `Experience Cloud Identity Service` per JavaScript nell&#39;applicazione multimediale**
+* **Implementare `AppMeasurement` e `Experience Cloud Identity Service` per JavaScript nell’applicazione multimediale**
 
    Per ulteriori informazioni, consulta [Implementazione di Analytics con JavaScript](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=it) e [Implementazione del servizio Experience Cloud Identity](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html?lang=it).
 
-* **Includere le seguenti API nel lettore multimediale**
+* **Includi le seguenti API nel lettore multimediale**
 
    * *API per abbonarsi agli eventi del lettore*: Media SDK richiede di chiamare un set di API semplici quando si verificano eventi nel lettore.
-   * *API che fornisce informazioni sul lettore* - Comprende informazioni su supporti, annunci e capitoli attualmente in fase di riproduzione.
+   * *Un’API che fornisce informazioni sul lettore*: questo include informazioni sui file multimediali, gli annunci e il capitolo attualmente in riproduzione.
 
 ## Configurazione JavaScript 3.x  {#set-up-javascript}
 

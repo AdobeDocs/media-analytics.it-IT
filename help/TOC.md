@@ -8,7 +8,7 @@ sub-product: media analytics
 source-git-commit: 5c0195ab6945b65cd37f2e8fd9ddc8c8e91507f0
 workflow-type: tm+mt
 source-wordcount: '895'
-ht-degree: 96%
+ht-degree: 97%
 
 ---
 
@@ -81,7 +81,7 @@ ht-degree: 96%
    + Pannelli di Media Workspace {#media-workspace-panels}
       + [Pannello Pubblico medio per minuto](reporting/workspace/average-minute-audience.md)
       + [Pannello Visualizzatori simultanei di contenuti multimediali](reporting/workspace/media-concurrent-viewers-overview.md)
-      + [Pannello Tempo di riproduzione dei contenuti multimediali](reporting/workspace/media-playback-time-spent.md)
+      + [Pannello Tempo trascorso su contenuti multimediali](reporting/workspace/media-playback-time-spent.md)
    + [Modelli di Area di lavoro per file multimediali ](reporting/workspace/media-workspace-templates.md)
    + [Ottenere i dati dei visualizzatori simultanei tramite API](reporting/reports-and-analytics/get-concurrent-json20.md)
    + [Ottenere i dati sul tempo trascorso di riproduzione multimediale tramite API](reporting/reports-and-analytics/get-mediaplaybacktimespent-json20.md)
@@ -168,7 +168,7 @@ ht-degree: 96%
          + [Configurazione JavaScript 3.x ](legacy/media-sdk/setup/setup-javascript/set-up-js-3.md)
    + [Informazioni sulla misurazione con Heartbeat](legacy/heartbeat-measurement.md)
    + [Adobe Primetime e Streaming Media Analytics](legacy/intro-to-ava/implementation-paths/primetime-path.md)
-   + [Abilitazione di Gestione dell’audience di Adobe](legacy/intro-to-ava/am-enablement.md)
+   + [Abilitazione di Adobe Audience Management](legacy/intro-to-ava/am-enablement.md)
    + [Implementazione del collegamento personalizzato](legacy/measurement-options/cl-in-aa/cl-impl-guide.md)
    + Tracciamento Milestone legacy {#legacy-milestone-tracking}
       + [Tracciamento Milestone legacy](legacy/measurement-options/mm-milestone-tracking/milestone-overview.md)
@@ -212,7 +212,7 @@ ht-degree: 96%
          + Tracciare gli annunci in JavaScript {#track-ads-js}
             + [Tracciare gli annunci in JavaScript 2.x ](use-cases/track-ads/track-ads-js/track-ads-js.md)
             + [Implementare metadati standard di annunci su Android](use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-android.md)
-            + [Implementare metadati standard di annunci su iOS](use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-ios.md)
+            + [Implementare i metadati standard di annunci su iOS](use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-ios.md)
             + Implementare metadati standard di annunci in JavaScript {#impl-std-ad-md-js}
                + [Implementare metadati standard di annunci in JavaScript 2.x](use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-md-js/impl-std-ad-metadata-js.md)
       + Tracciare capitoli e segmenti {#track-chapters}
@@ -226,7 +226,7 @@ ht-degree: 96%
             + [Tracciare la qualità dell’esperienza in JavaScript 2.x](use-cases/track-qos/track-qos-js/track-qos-js.md)
       + Tracciare gli errori {#track-errors}
          + [Tracciare gli errori su Android](use-cases/track-errors/track-errors-android.md)
-         + [Tracciare gli errori su iOS](use-cases/track-errors/track-errors-ios.md)
+         + [Tracciare gli errori in iOS](use-cases/track-errors/track-errors-ios.md)
          + Tracciare gli errori in JavaScript {#track-errors-js}
             + [Tracciare gli errori in JavaScript 2.x](use-cases/track-errors/track-errors-js/track-errors-js.md)
       + Scenari di tracciamento {#tracking-scenarios}
