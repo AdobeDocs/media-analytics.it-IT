@@ -6,9 +6,9 @@ exl-id: 64f5ef2b-7850-43d8-8f32-3d008ea4f156
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: d2d0f34c64ecb2a900412d5959449c8c36328730
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '362'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 86%
 
 Puoi controllare se l’attività di tracciamento è consentita su un dispositivo specifico:
 
-* **App mobili -** Le estensioni di file multimediali rispettano le impostazioni sulla privacy in Raccolta dati. Per rinunciare al tracciamento, devi impostare la privacy su [Rinuncia nei tag](https://developer.adobe.com/client-sdks/documentation/getting-started/create-a-mobile-property/#create-a-mobile-property) o [Aggiorna lo stato di privacy in Mobile SDK](https://developer.adobe.com/client-sdks/documentation/privacy-and-gdpr/#getprivacystatus).
+* **App mobili:** le estensioni di file multimediali rispettano le impostazioni privacy nella Raccolta dati. Per rinunciare al tracciamento, è necessario impostare la privacy su [Rifiutata nei tag](https://developer.adobe.com/client-sdks/documentation/getting-started/create-a-mobile-property/#create-a-mobile-property) o [Aggiorna lo stato della privacy in Mobile SDK](https://developer.adobe.com/client-sdks/documentation/privacy-and-gdpr/#getprivacystatus).
 * **App JavaScript/browser:** la libreria VA rispetta le impostazioni di privacy e rinuncia della `VisitorAPI`. Per evitare il tracciamento, devi rinunciare al servizio Visitor API. Per ulteriori informazioni su rinuncia e privacy, vedi [Servizio Adobe Experience Platform Identity](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=it).
 * **App OTT (Chromecast, Roku):** gli SDK OTT forniscono API che supportano i requisiti del Regolamento generale sulla protezione dei dati (RGPD) e che consentono di impostare i flag di stato `opt` per la raccolta e la trasmissione dei dati e per il recupero di identità memorizzate localmente.
 
