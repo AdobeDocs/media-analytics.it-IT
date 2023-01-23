@@ -6,7 +6,7 @@ exl-id: 3781f0f7-be75-43e5-a40b-a34956dce36e
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '838'
 ht-degree: 100%
 
@@ -43,27 +43,27 @@ Completa e registra le seguenti azioni (in ordine):
 
    * **Chiamata Start di Adobe Analytics**
 
-      | Parametro | Valore (campione) |
+      | Parametro | Valore (di esempio) |
       |---|---|
       | `pev2` | ms_s |
       | `mid` | 30250035503789876473484580554595324209 |
 
    * **Chiamata per pagina del sito web**
 
-      | Parametro | Valore (campione) |
+      | Parametro | Valore (di esempio) |
       |---|---|
       | `mid` | 30250035503789876473484580554595324209 |
 
    * **Chiamata Lifecycle**
 
-      | Parametro | Valore (campione) |
+      | Parametro | Valore (di esempio) |
       |---|---|
       | `pev2` | ADBINTERNAL:Lifecycle |
       | `mid` | 30250035503789876473484580554595324209 |
 
    * **Chiamata Start di Media Analytics**
 
-      | Parametro | Valore (campione) |
+      | Parametro | Valore (di esempio) |
       |---|---|
       | `s:event:type` | inizio |
 
@@ -73,7 +73,7 @@ Completa e registra le seguenti azioni (in ordine):
 
    * **Chiamata Play di Media Analytics**
 
-      | Parametro | Valore (campione) |
+      | Parametro | Valore (di esempio) |
       |---|---|
       | `s:event:type` | play |
       | `s:user:mid` | 30250035503789876473484580554595324209 |
