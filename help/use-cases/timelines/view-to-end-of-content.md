@@ -1,14 +1,14 @@
 ---
-title: Informazioni sulle timeline di tracciamento dei file multimediali
+title: Informazioni sulle timeline di tracciamento dei contenuti multimediali
 description: Approfondisci la timeline dell’indicatore di riproduzione e le azioni dell’utente corrispondente. Scopri i dettagli di ciascuna azione e le relative richieste.
 uuid: 0ff591d3-fa99-4123-9e09-c4e71ea1060b
 exl-id: 16b15e03-5581-471f-ab0c-077189dd32d6
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1074'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -34,7 +34,7 @@ Questa chiamata segnala _l’intenzione dell’utente di riprodurre_ un video.
 
 Restituisce un ID sessione (`{sid}`) al client utilizzato per identificare tutte le chiamate di tracciamento successive all’interno della sessione. Lo stato del lettore non è ancora “in riproduzione”, ma è “in avvio”. 
 
-Parametri di sessione obbligatori devono essere inclusi nella mappa `params` nel corpo della richiesta. Per informazioni sulle sessioni, consulta la documentazione API di Media Collection.
+I parametri di sessione obbligatori devono essere inclusi nella mappa `params` nel corpo della richiesta. Per informazioni sulle sessioni, consulta la documentazione delle API di Media Collection.
 
 Nel backend, questa chiamata genera una chiamata di avvio Adobe Analytics.
 
@@ -130,7 +130,7 @@ Inizia il tracciamento del primo annuncio pre-roll, che è lungo 15 secondi. Inc
 
 **NOTA: tra gli eventi AdBreakStart e AdStart non devono esserci altri eventi di riproduzione.**
 
-### Azione 5 - Ping annuncio {#Action-5}
+### Azione 5: ping annuncio {#Action-5}
 
 #### Azione 5.1 - Ping annuncio 1 {#Action-5-1}
 
@@ -301,7 +301,7 @@ L’interruzione pubblicitaria è terminata. Durante l’interruzione pubblicita
 | --- | :---: | :---: | --- |
 | Tracciamento dell’evento di riproduzione | 22 | 0 | `/api/v1/sessions/{sid}/events` |
 
-Dopo l’evento `adBreakComplete`, metti il lettore nello stato di “riproduzione” utilizzando l’evento `play`.
+Dopo l’evento `adBreakComplete`, imposta il lettore nello stato di “riproduzione” utilizzando l’evento `play`.
 
 ```json
 {
