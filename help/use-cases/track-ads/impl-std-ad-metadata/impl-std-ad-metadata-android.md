@@ -1,14 +1,14 @@
 ---
-title: Scopri come implementare metadati standard di annunci su Android
-description: Come utilizzare i metadati standard degli annunci nel tracciamento degli annunci su Android.
+title: Scopri come implementare i metadati standard di annunci su Android
+description: Come utilizzare i metadati standard di annunci nel tracciamento degli annunci su Android.
 uuid: 19b98bc1-c659-4182-a4ff-b3340fe2453c
 exl-id: f1aa017f-b2ae-40ca-b4d9-b508cf45cb0c
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '63'
-ht-degree: 14%
+ht-degree: 100%
 
 ---
 
@@ -18,11 +18,11 @@ ht-degree: 14%
 
 | Nome costante | Descrizione   |
 |---|---|
-| `MediaHeartbeat.MediaObjectKey.StandardAdMetadata` | Costante per allegare i metadati standard di annunci sull&#39;annuncio `MediaObject`. |
+| `MediaHeartbeat.MediaObjectKey.StandardAdMetadata` | Costante per il collegamento di metadati standard di annunci sull’annuncio `MediaObject`. |
 
-## Implementazione dei metadati standard di annunci
+## Implementare metadati standard di annunci
 
-Per i metadati standard di annunci, crea un dizionario di coppie di valori chiave di annunci standard utilizzando le chiavi per la piattaforma:
+Per i metadati standard di annunci, crea un dizionario di coppie di valori chiave standard utilizzando le chiavi appropriate per la tua piattaforma:
 
 ```java
 // Setting standard Ad Metadata 
