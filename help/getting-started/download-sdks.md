@@ -6,15 +6,15 @@ exl-id: d211fa2e-d5b0-4e9f-bdb7-eda838194f3d
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: 5c0195ab6945b65cd37f2e8fd9ddc8c8e91507f0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '366'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
 # Ottieni Media SDK e le estensioni tramite tag e SDK OTT {#download-sdks}
 
-Le informazioni in questa pagina includono collegamenti per scaricare gli SDK per contenuti multimediali correnti e ottenere le estensioni per contenuti multimediali che utilizzano i tag.
+Le informazioni in questa pagina includono collegamenti per scaricare i Media SDK correnti e ottenere le estensioni per file multimediali che utilizzano i tag.
 
 I tag in Adobe Experience Platform Launch costiuiscono la nuova generazione di funzionalità di gestione di tag per siti web e SDK per dispositivi mobili di Adobe. I tag offrono ai clienti un modo semplice di implementare e gestire le soluzioni di analisi, marketing e annunci pubblicitari necessarie per fornire ai clienti esperienze personalizzate significative. Per ulteriori informazioni sui tag, consulta [Panoramica sui tag](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html?lang=it).
 
@@ -28,14 +28,14 @@ I tag in Adobe Experience Platform Launch costiuiscono la nuova generazione di f
 
 ### Implementazione web {#download-web-sdk}
 
-| Piattaforma supportata | Versione |  API   |  Documentazione  | Esempio  |
+| Piattaforma supportata | Versione |  API   |  Documentazione  |  Esempio  |
 |:---:|---|---|---|---|
 | ![Icona JavaScript](assets/javascript-icon.png) | Web - [Media SDK per JS v3.0.2](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/js-v3.0.2) | [Riferimento API per JavaScript](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/index.html) | [Installare Analytics utilizzando JavaScript](/help/implementation/media-sdk/setup/web-implementation.md) | [Esempio SDK per contenuti multimediali per JS v3.0.2](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/sdks/js/3.x) |
 | ![Icona JavaScript](assets/javascript-icon.png) | Web - Estensione Media |  | [Estensione Adobe Media Analytics (3.x SDK) for Audio and Video — utilizzando tag (raccolta dati)](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics-3x/overview.html?lang=it) | [Esempio Estensione Adobe Media Analytics (3.x SDK) for Audio and Video](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/js/3.x) |
 
 ### Implementazione mobile {#get-mobile-extension}
 
-| Piattaforma supportata | Versione | Documentazione   | Esempi  |
+| Piattaforma supportata | Versione |  Documentazione   |  Esempi  |
 |:---:|---|---|---|
 | ![Icona Android](assets/android-icon.png) | Android - Estensione Media | [Documentazione di Mobile SDK](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/) | [Adobe Analytics - Esempio Estensione Media Analytics for Audio and Video](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/mobile/android) |
 | ![Icona Apple iOS ](assets/ios-icon.png)<br> icona aggiungi tvOS | iOS / tvOS - Estensione Media | [Documentazione di Mobile SDK](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/) | [Adobe Analytics - Esempio Estensione Media Analytics for Audio and Video](https://github.com/adobe/aepsdk-media-ios/tree/main/TestApp) |
