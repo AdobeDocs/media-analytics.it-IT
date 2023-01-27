@@ -6,7 +6,7 @@ exl-id: aac178dc-5a46-4ce3-80e9-ec82cbfbfff5
 feature: "Media Analytics, Variables"
 role: User, Admin, Data Engineer
 source-git-commit: 938fe4943b41b99fc0433b7dd60a7df5c44bff17
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3320'
 ht-degree: 100%
 
@@ -19,20 +19,20 @@ Questo argomento presenta un elenco dei dati sulla qualità dell’esperienza (Q
 Descrizione dei dati della tabella:
 
 * **Implementazione**: informazioni sui valori e i requisiti di implementazione
-   * *Chiave* - Variabile, impostata manualmente nell’app o automaticamente dall’SDK di Adobe Media.
-   * *Obbligatorio* - Indica se il parametro è necessario per il tracciamento video di base.
-   * *Tipo* - Specifica il tipo di variabile da impostare, stringa o numero.
+   * *Chiave*: variabile, impostata manualmente nell’app o automaticamente dall’SDK di Adobe Media.
+   * *Obbligatorio*: indica se il parametro è necessario per il tracciamento video di base.
+   * *Tipo*: specifica il tipo di variabile da impostare, stringa o numero.
    * *Inviato con*: indica quando i dati vengono inviati. *Avvia file multimediale* è la chiamata di Analytics inviata all’avvio del file multimediale. *Avvia annuncio* è la chiamata di Analytics inviata all’avvio dell’annuncio e così via. Le chiamate di *Chiusura* sono le chiamate compilate di Analytics inviate direttamente dal server heartbeat a quello di Analytics al termine della sessione multimediale, oppure dell’annuncio, del capitolo, ecc. Le chiamate di chiusura non sono disponibili nelle chiamate dei pacchetti di rete.
    * *Versione SDK min.*: indica la versione SDK necessaria per accedere al parametro.
    * *Valore di esempio*: fornisce un esempio di utilizzo comune delle variabili.
 * **Parametri di rete**: mostra i valori trasferiti ai server di Adobe Analytics o Heartbeat. Questa colonna mostra i nomi dei parametri visualizzati nelle chiamate di rete generate dagli SDK di Adobe Media.
 * **Reporting**: informazioni su come visualizzare e analizzare i dati video.
-   * *Disponibile*:  Indica se i dati sono disponibili nel reporting per impostazione predefinita (*Sì*) o richiede la configurazione personalizzata (*Personalizzato*)
-   * *Variabile riservata*:  Indica se i dati vengono acquisiti come evento, eVar, prop o classificazione in una variabile riservata.
-   * *Nome del rapporto*:  Nome del report Adobe Analytics per la variabile
+   * *Disponibile*: indica se i dati sono disponibili nel reporting per impostazione predefinita (*Sì*) o richiede la configurazione personalizzata (*Personalizzato*)
+   * *Variabile riservata*: indica se i dati vengono acquisiti come evento, eVar, prop o classificazione in una variabile riservata.
+   * *Nome del rapporto*: nome del report Adobe Analytics per la variabile
    * *Dati contestuali*: nome dei dati contestuali di Adobe Analytics trasferiti al server di reporting e utilizzati nelle regole di elaborazione.
    * *Feed di dati*: nome della colonna per la variabile trovata nei feed di dati Clickstream o Live Stream
-   * *Audience Manager*: Nome delle caratteristiche trovato in Adobe Audience Manager
+   * *Audience Manager*: nome delle caratteristiche trovato in Adobe Audience Manager
 
 ## Metadati qualità {#quality-metadata}
 
