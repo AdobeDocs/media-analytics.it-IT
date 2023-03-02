@@ -4,24 +4,23 @@ description: Questo argomento include le domande frequenti sulla fine del suppor
 exl-id: 9601ec17-8421-49d0-9d81-1cfa5e8f37cf
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b022bed6b7be0cc97caaaf6b7bbc42474a57b400
-workflow-type: ht
-source-wordcount: '691'
-ht-degree: 100%
+source-git-commit: b955b20495a504020a214c3a9e32b676701ee4cc
+workflow-type: tm+mt
+source-wordcount: '617'
+ht-degree: 79%
 
 ---
 
 # Domande frequenti su Mobile SDK di Media Analytics relative alla fine del supporto
 
-Con la fine del supporto per gli SDK per dispositivi mobili versione 4, il 31 agosto 2021, Adobe terminerà anche il supporto per Mobile SDK di Media Analytics per iOS e Android. Dopo il 31 agosto 2021, Adobe non fornirà correzioni, aggiornamenti relativi al sistema operativo o supporto per Mobile SDK di Media Analytics.  Durante il processo di migrazione a questi nuovi SDK di Experience Platform, tieni presente che le [Estensioni di Media Analytics](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/) devono essere implementate per abilitare Adobe Analytics per Streaming Media.
+Con la fine del supporto per gli SDK della versione 4 per dispositivi mobili il 31 agosto 2021, Adobe ha anche terminato il supporto per gli SDK mobili di Media Analytics per iOS e Android. (Questo non include Media Analytics SDK per web (JS) e piattaforme OTT come Chromecast e Roku, che sono ancora supportate.)
 
->[!NOTE]
->Con il suo rebranding, Adobe Experience Platform Launch viene riproposto come una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=it) come riferimento consolidato delle modifiche terminologiche.
+Questo significa che Adobe non fornisce più correzioni, aggiornamenti relativi al sistema operativo o supporto per l’SDK mobile di Media Analytics. Durante la migrazione ai nuovi SDK Experience Platform, tieni presente che il [Estensioni di Media Analytics](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/) deve essere implementato per abilitare Adobe Analytics per contenuti in streaming.
 
 
 ## Le 5 cose più importanti da sapere
 
-1. Gli SDK per dispositivi mobili v4 non saranno più supportati dopo il 31 agosto 2021. Esegui la migrazione agli SDK per dispositivi mobili Adobe Experience Platform (AEP) per iOS e Android. Per ulteriori informazioni, consulta [Domande frequenti sugli SDK per dispositivi mobili versione 4: fine del supporto](https://developer.adobe.com/client-sdks/documentation/v4-end-of-life-faq/).
+1. Gli SDK per dispositivi mobili v4 non sono più supportati a partire dal 31 agosto 2021. Esegui la migrazione agli SDK per dispositivi mobili Adobe Experience Platform (AEP) per iOS e Android. Per ulteriori informazioni, consulta [Domande frequenti sugli SDK per dispositivi mobili versione 4: fine del supporto](https://developer.adobe.com/client-sdks/documentation/v4-end-of-life-faq/).
 
 1. L’implementazione di Analytics for Streaming Media richiede l’SDK di AEP Mobile e l’utilizzo delle estensioni Analytics e Media Analytics. A partire dal 1° settembre 2021, è necessario utilizzare i nuovi SDK e le estensioni AEP Mobile.  Le estensioni di Media Analytics sono configurate tramite i Tag di Adobe (raccolta dati). Per ulteriori informazioni, consulta [Migrazione da Media SDK autonomo ad Adobe Launch](/help/legacy/sdk-to-launch/sdk-to-launch-migration.md)
 
@@ -29,9 +28,7 @@ Con la fine del supporto per gli SDK per dispositivi mobili versione 4, il 31 ag
 
 1. Gli SDK Roku e Chromecast rimangono disponibili per i clienti Analytics per Streaming Media. Gli SDK Roku e Chromecast continueranno a essere migliorati e supportati come SDK autonomi. Se utilizzi l’SDK JS per Media Analytics, puoi continuare a utilizzare l’SDK autonomo o abilitare l’estensione Media Analytics tramite Adobe Data Collection (in precedenza Adobe Launch).
 
-1. Prima del 1° settembre 2021, Adobe può, a sua esclusiva discrezione, elaborare nuove correzioni per problemi di forte impatto tecnico o di esposizione delle imprese. In base all’input del cliente, Adobe determinerà il grado di impatto e di esposizione e le attività che ne derivano.
-
-Per ulteriori domande, contatta il tuo Adobe Customer Success Manager.
+Per eventuali domande, contatta il tuo Account Team di Adobi.
 
 ## Domande frequenti
 
