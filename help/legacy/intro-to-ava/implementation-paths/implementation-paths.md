@@ -4,10 +4,10 @@ description: Scopri i percorsi di implementazione di contenuti multimediali in s
 exl-id: eee70e62-ba45-440a-8ce1-e151b66d2c1f
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 9ba64b68efec5dd8b52010ac1a13afd7703448d0
-workflow-type: ht
-source-wordcount: '650'
-ht-degree: 100%
+source-git-commit: 0c1382c9c4f1488fba81575097d154301a9b8e70
+workflow-type: tm+mt
+source-wordcount: '651'
+ht-degree: 93%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 100%
 
 **QUESTO CONTENUTO È STATO SPOSTATO NEL FILE CORRENTE DEI PERCORSI DI IMPLEMENTAZIONE**
 
-Per ogni percorso di implementazione, è necessario che i clienti contattino il proprio rappresentante/Account Manager per firmare un nuovo ordine di vendita in quanto Streaming Media Analytics prevede uno SKU univoco e il passaggio da un modello di prezzo basato su chiamate al server a uno basato su flussi video.
+Per ogni percorso di implementazione, i clienti devono contattare il proprio rappresentante/Adobe commerciale per firmare un nuovo ordine di vendita poiché Streaming Media Analytics dispone di una SKU univoca e cambia da un modello di prezzo basato sulle chiamate al server a un modello basato sui flussi video.
 
 ## Raccolta dati di Adobe Experience Platform con l’estensione Adobe Medium Analytics
 
