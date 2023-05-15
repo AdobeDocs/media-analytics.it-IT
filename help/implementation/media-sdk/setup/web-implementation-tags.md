@@ -4,14 +4,14 @@ description: Scopri come implementare Adobe Streaming Media per le app web.
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: 05c68b0a-f387-4bcc-8792-f6b1caa40706
-source-git-commit: a6dba33839bba976b67a9b1e9669fce266d1cabd
-workflow-type: ht
-source-wordcount: '121'
-ht-degree: 100%
+source-git-commit: 9d7886a67e426089977cbe322d310c36604646d0
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 93%
 
 ---
 
-# Installare Analytics utilizzando l’estensione Media Analytics
+# Installare Media Analytics utilizzando l’estensione Media Analytics
 
 Per implementare Analytics, puoi utilizzare l’estensione Adobe Media Analytics. L’estensione Media Analytics aggiunge Media SDK principale per JavaScript (Media 3.x SDK). Questa estensione offre le funzionalità necessarie per aggiungere l’istanza di tracciamento multimediale a un sito o a un progetto abilitato per i tag.
 
