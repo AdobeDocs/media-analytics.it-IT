@@ -45,6 +45,7 @@ Puoi controllare se l’attività di tracciamento è consentita su un dispositiv
             ```
             ADBMobile().setPrivacyStatus(ADBMobile().PRIVACY_STATUS_OPT_OUT)
             ```
+
          >[!IMPORTANT]
          >
          >Quando un utente rinuncia al tracciamento, tutti i dati e gli ID del dispositivo persistenti verranno eliminati finché l’utente non dà il consenso.
@@ -62,6 +63,7 @@ Puoi controllare se l’attività di tracciamento è consentita su un dispositiv
             ```
             ADBMobile().setPrivacyStatus(ADBMobile().PRIVACY_STATUS_OPT_IN)
             ```
+
       * **Restituisce l’impostazione corrente:**
 
          * **Chromecast:**
@@ -75,6 +77,7 @@ Puoi controllare se l’attività di tracciamento è consentita su un dispositiv
             ```
             ADBMobile().getPrivacyStatus()
             ```
+
    Dopo aver modificato l’impostazione della privacy utilizzando `setPrivacyStatus`, la modifica rimane permanente finché non viene nuovamente modificata utilizzando questo metodo, oppure finché l’app non viene disinstallata e reinstallata.
 
 ## Recupero di identificatori memorizzati (app OTT) {#retrieving-stored-identifiers-ott-apps}
