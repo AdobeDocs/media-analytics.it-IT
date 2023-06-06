@@ -5,9 +5,9 @@ uuid: 2a6b9247-a694-46e9-98e1-424c08c27ec2
 exl-id: cd51ed3a-fe37-41e9-8243-dfd9deb514c1
 feature: "Media Analytics, Variables"
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '2331'
+source-git-commit: cdc5ea361829c749dfbb457288ac5ba51a530961
+workflow-type: tm+mt
+source-wordcount: '2329'
 ht-degree: 100%
 
 ---
@@ -19,17 +19,17 @@ Questo argomento presenta un elenco di dati di stato del lettore raccolti da Ado
 Descrizione dei dati della tabella:
 
 * **Implementazione**: informazioni sui valori e i requisiti di implementazione
-   * *Chiave* - Variabile, impostata manualmente nell’app o automaticamente dall’SDK di Adobe Media.
-   * *Obbligatorio* - Indica se il parametro è necessario per il tracciamento video di base.
-   * *Tipo* - Specifica il tipo di variabile da impostare, stringa o numero.
+   * *Chiave*: variabile, impostata manualmente nell’app o automaticamente dall’SDK di Adobe Media.
+   * *Obbligatorio*: indica se il parametro è necessario per il tracciamento video di base.
+   * *Tipo*: specifica il tipo di variabile da impostare, stringa o numero.
    * *Inviato con*: indica quando i dati vengono inviati. *Avvia file multimediale* è la chiamata di Analytics inviata all’avvio del file multimediale. *Avvia annuncio* è la chiamata di Analytics inviata all’avvio dell’annuncio e così via. Le chiamate di *Chiusura* sono le chiamate compilate di Analytics inviate direttamente dal server heartbeat a quello di Analytics al termine della sessione multimediale, oppure dell’annuncio, del capitolo, ecc. Le chiamate di chiusura non sono disponibili nelle chiamate dei pacchetti di rete.
    * *Versione SDK min.*: indica la versione SDK necessaria per accedere al parametro.
    * *Valore di esempio*: fornisce un esempio di utilizzo comune delle variabili.
 * **Parametri di rete**: mostra i valori trasferiti ai server di Adobe Analytics o Heartbeat. Questa colonna mostra i nomi dei parametri visualizzati nelle chiamate di rete generate dagli SDK di Adobe Media.
 * **Reporting**: informazioni su come visualizzare e analizzare i dati video.
-   * *Disponibile*:  Indica se i dati sono disponibili nel reporting per impostazione predefinita (*Sì*) o richiede la configurazione personalizzata (*Personalizzato*)
-   * *Variabile riservata*:  Indica se i dati vengono acquisiti come evento, eVar, prop o classificazione in una variabile riservata.
-   * *Nome del rapporto*:  Nome del report Adobe Analytics per la variabile
+   * *Disponibile*: indica se i dati sono disponibili nel reporting per impostazione predefinita (*Sì*) o richiede la configurazione personalizzata (*Personalizzato*)
+   * *Variabile riservata*: indica se i dati vengono acquisiti come evento, eVar, prop o classificazione in una variabile riservata.
+   * *Nome del rapporto*: nome del report Adobe Analytics per la variabile
    * *Dati contestuali*: nome dei dati contestuali di Adobe Analytics trasferiti al server di reporting e utilizzati nelle regole di elaborazione.
    * *Feed di dati*: nome della colonna per la variabile trovata nei feed di dati Clickstream o Live Stream
    * *Audience Manager*: nome degli elementi presenti in Adobe Audience Manager
@@ -159,6 +159,6 @@ Le funzionalità di tracciamento dello stato del lettore possono essere collegat
 
 ## API correlate {#related_apis_section}
 
-* Android: [createStateObject](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#createstateobject)
-* iOS: [createStateObjectWithName](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#createstateobject)
+* Android: [createStateObject](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/api-reference/)
+* iOS: [createStateObjectWithName](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/api-reference/)
 * Javascript: [createStateObject](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html)

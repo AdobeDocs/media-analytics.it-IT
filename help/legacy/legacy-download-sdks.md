@@ -4,10 +4,10 @@ description: Collegamenti ai download dell’SDK legacy per le piattaforme dispo
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: d1066f05-f46f-46fa-897f-039657704d05
-source-git-commit: a7d897c6f6fbc6ed0d5b71f5801ab18ee21f0411
-workflow-type: ht
-source-wordcount: '331'
-ht-degree: 100%
+source-git-commit: cdc5ea361829c749dfbb457288ac5ba51a530961
+workflow-type: tm+mt
+source-wordcount: '334'
+ht-degree: 97%
 
 ---
 
@@ -27,7 +27,7 @@ La raccolta dati di Adobe con l’estensione Media Analytics richiede quanto seg
 * È necessario essere un cliente Adobe Experience Cloud.
 * È necessario distribuire la raccolta dati o il codice DTM incorporato sulle pagine Web.
 * È necessario configurare l’[Estensione Analytics](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html?lang=it).
-* È necessario configurare l’[Estensione Adobe Media Analytics for Audio and Video di Launch](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics).
+* È necessario configurare l’[Estensione Adobe Media Analytics for Audio and Video di ](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/media-analytics/overview.html).
 * È necessario configurare l’[Estensione Experience Cloud ID](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/id-service/overview.html?lang=it).
 
 ## Scarica i Media SDK 2.x {#download-2x-sdks}

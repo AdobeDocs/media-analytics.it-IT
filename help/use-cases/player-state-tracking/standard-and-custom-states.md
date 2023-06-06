@@ -4,9 +4,9 @@ description: Scopri la funzione di tracciamento dello stato del lettore, compres
 exl-id: 3c492055-d471-4147-aa78-b058d6b931f4
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '279'
+source-git-commit: cdc5ea361829c749dfbb457288ac5ba51a530961
+workflow-type: tm+mt
+source-wordcount: '278'
 ht-degree: 100%
 
 ---
@@ -42,4 +42,4 @@ I dati vengono calcolati nello stesso modo per gli stati standard e personalizza
 
 Con la possibilità di creare stati personalizzati, è possibile acquisire azioni personalizzate e aggiornare metadati personalizzati durante una sessione di riproduzione.
 
-Per informazioni sulla creazione di stati personalizzati, consulta la sezione [Guida di riferimento dell’API multimediale: `createStateObject`](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/media-api-reference#createstateobject)
+Per informazioni sulla creazione di stati personalizzati, consulta la sezione [Guida di riferimento dell’API multimediale: `createStateObject`](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/api-reference/)
