@@ -4,10 +4,10 @@ description: Scopri come implementare Adobe Streaming Media.
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: 29d58b41-9a49-4b71-bdc5-4e2848cd3236
-source-git-commit: bcab6a94547b79a565dc2303ab640dc1b8994bd4
+source-git-commit: 1280c0851094234b308e69ba2be3da21dfdc1302
 workflow-type: tm+mt
-source-wordcount: '1879'
-ht-degree: 8%
+source-wordcount: '1935'
+ht-degree: 7%
 
 ---
 
@@ -344,7 +344,7 @@ Per creare e impostare uno schema:
 
 ## Inviare dati ad Experience Platform Edge utilizzando l’SDK di AEP Mobile
 
-Puoi utilizzare Adobe Experience Platform Mobile SDK per inviare dati mobili a Experience Platform Edge. In alternativa, puoi utilizzare un’implementazione personalizzata delle API Edge.<!-- Waiting for link from John -->)
+Puoi utilizzare Adobe Experience Platform Mobile SDK per inviare dati mobili a Experience Platform Edge.
 
 Utilizza le seguenti risorse di documentazione per completare l’implementazione sia per iOS che per Android:
 
@@ -354,3 +354,13 @@ Utilizza le seguenti risorse di documentazione per completare l’implementazion
 
 * [Migrazione ad Adobe Streaming Media per l’estensione Edge Network](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/migration-guide/)
 
+
+In alternativa, puoi utilizzare un’implementazione personalizzata delle API Edge utilizzando le seguenti risorse:
+
+* [Panoramica API di Media Edge](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/overview.html)
+
+* [Guida introduttiva all’API Media Edge](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/getting-started.html)
+
+* [Guida alla risoluzione dei problemi API di Media Edge](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/troubleshooting.html)
+
+* [Utilizzo del file delle specifiche API Open per le API Media Edge](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/swagger.html)
