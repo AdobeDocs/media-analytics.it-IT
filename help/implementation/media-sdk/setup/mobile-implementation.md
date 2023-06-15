@@ -4,10 +4,10 @@ description: Scopri come implementare Adobe Streaming Media per le app per dispo
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: b4944b5f-cbae-4efc-9ef7-962d3f342240
-source-git-commit: a7d897c6f6fbc6ed0d5b71f5801ab18ee21f0411
-workflow-type: ht
-source-wordcount: '187'
-ht-degree: 100%
+source-git-commit: 1e4babe0df218342fc4836155139d908ba113510
+workflow-type: tm+mt
+source-wordcount: '195'
+ht-degree: 93%
 
 ---
 
@@ -17,7 +17,9 @@ Per implementare Streaming Media per le app per dispositivi mobili su Android o 
 
 * **Adobe Experience Platform Mobile SDK**
 
-   Per raccogliere i dati, utilizza Tag in Adobe Experience Platform. Tag in Adobe Experience Platform è una soluzione di gestione dei tag che consente di distribuire il codice Analytics insieme ad altri requisiti di assegnazione tag.
+  Per raccogliere i dati, utilizzare una delle seguenti opzioni:
+   * Tag in Adobe Experience Platform. Tag in Adobe Experience Platform è una soluzione di gestione dei tag che consente di distribuire il codice Analytics insieme ad altri requisiti di assegnazione tag.
+   * Adobe Experience Platform Edge
 
 * **Media SDK per Android** o **Media SDK per iOS**
 
@@ -27,7 +29,7 @@ Per scaricare gli SDK e per ulteriori risorse di documentazione, consulta [Otten
 
 * **Ottenere parametri di configurazione validi**
 
-   Questi parametri possono essere ottenuti da un rappresentante di Adobe dopo la configurazione dell’account di analisi.
+  Questi parametri possono essere ottenuti da un rappresentante di Adobe dopo la configurazione dell’account di analisi.
 
 * **Includi le seguenti API nel lettore multimediale**
 
