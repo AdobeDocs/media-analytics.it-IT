@@ -5,10 +5,10 @@ uuid: b3cbe240-b94d-42b8-a99c-0280334aaa14
 exl-id: 826530f7-2c39-41ef-b3b4-d3f44b46858f
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: b022bed6b7be0cc97caaaf6b7bbc42474a57b400
-workflow-type: ht
-source-wordcount: '531'
-ht-degree: 100%
+source-git-commit: 355b3b079d53ae8e83822f61fc79e60e47f6d715
+workflow-type: tm+mt
+source-wordcount: '559'
+ht-degree: 72%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 100%
 
 ![Banner](./assets/media_analytics_banner.png)
 
-Adobe Analytics for Streaming Media è un componente aggiuntivo di Adobe Analytics che fornisce potenti strumenti di misurazione per audio, video e annunci pubblicitari. Con Analytics for Streaming Media, puoi ottenere dettagli granulari sulla durata, arresti e avvii in tempo reale che consentono di valutare e combinare metriche video e audio. Queste informazioni consentono di comprendere le abitudini di visualizzazione e ascolto dei clienti e di aumentare il coinvolgimento con consigli altamente personalizzati.
+Adobe Analytics for Streaming Media è un componente aggiuntivo di Adobe Analytics che fornisce potenti strumenti di misurazione per audio, video e annunci pubblicitari. Con Analytics per contenuti in streaming, puoi ottenere dettagli granulari sulla durata, le interruzioni e gli avvii in tempo reale che ti consentono di valutare e combinare metriche video e audio. Queste informazioni consentono di comprendere le abitudini di visualizzazione e ascolto dei clienti e di aumentare il coinvolgimento con consigli altamente personalizzati.
 
 Adobe Analytics for Streaming Media consente di monitorare l’intero percorso del cliente all’interno del sito e delle app di streaming. È possibile combinare le metriche di Streaming Media con altre funzionalità di Adobe Analytics, come Audience Analytics, Mobile o Cross-Device Analytics. Le metriche si integrano facilmente nei rapporti di Adobe Analytics e in altri prodotti Adobe Experience Platform. La misurazione dei file multimediali consente di classificare i dati in più dimensioni e segmenti e di acquisire così tutti i metadati necessari per svolgere un’analisi completa e dettagliata. Puoi quindi analizzare i dati e attribuire criteri di successo ai file multimediali utilizzati interamente, al tempo trascorso in media e agli annunci completati.
 
@@ -24,13 +24,18 @@ Puoi misurare le metriche di consegna vitali correlate alla QoS (Qualità dell�
 
 ## Come funziona
 
-I dati di tracciamento dei contenuti in streaming vengono raccolti da un lettore utilizzando i Media SDK o le estensioni per file multimediali di Adobe Experience Platform e le API Media Collection. Tutti i dati granulari (fino a 10 secondi) vengono inviati al servizio Media Analytics che raccoglie ed elabora i dati per ogni singola sessione di riproduzione. Al termine di una sessione di riproduzione, i dati di tracciamento calcolati vengono inviati ad Adobe Analytics per l’archiviazione e il reporting. Con le implementazioni di Adobe Customer Journey Analytics (CJA), i dati possono essere inviati a CJA utilizzando il Connettore dati di Analytics (ADC), in modo che i clienti possano utilizzare CJA come strumento di reporting.
+I dati di tracciamento dei contenuti multimediali in streaming vengono raccolti da un lettore utilizzando Media for Edge Network SDK/Extension, Media Extension con tag, Media SDK, Media Edge API o Media Collection API.
 
-<!-- ![streaming media process](./assets/streaming-process1.png) -->
+Tutti i dati granulari (fino a 10 secondi) vengono inviati al servizio Media Analytics o a Experience Edge (a seconda della [metodo di implementazione](/help/implementation/overview.md) scegliere), che raccoglie ed elabora i dati per ogni singola sessione di riproduzione.
 
-<div style="text-align: center;">
-<img src="./assets/streaming-process1.png" alt="Processo di Streaming media" width="75%">
-</div>
+Al termine di una sessione di riproduzione, i dati di tracciamento calcolati vengono inviati ad Adobe Analytics o al Customer Journey Analytics per l’archiviazione e il reporting.
+
+>[!NOTE]
+>
+>Con le implementazioni di Customer Journey Analytics, i dati possono essere inviati al Customer Journey Analytics utilizzando Experience Edge o Analytics Data Connector (ADC).
+
+
+Consulta [Implementazione di contenuti multimediali in streaming per Adobe Analytics o Customer Journey Analytics](/help/implementation/overview.md) per ulteriori informazioni.
 
 ## Funzioni
 
