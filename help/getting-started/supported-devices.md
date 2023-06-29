@@ -4,7 +4,7 @@ description: “Scopri i principali dispositivi supportati da Adobe Analytics fo
 exl-id: 169ff7b9-e577-45b7-8927-74bdcccc0a77
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: deae677d9e8b4dc241765cf5d168fcd71b9c8310
+source-git-commit: a26e4e283646e5ceb352f357789748f376f5c747
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 69%
@@ -25,7 +25,7 @@ Per i dispositivi che al momento non dispongono del supporto SDK o in situazioni
 
 Nella tabella seguente sono elencati i dispositivi attualmente supportati. Se un dispositivo non è presente nell’elenco, contatta l’Assistenza clienti o il consulente della soluzione per ricevere informazioni sullo stato del dispositivo.
 
-Per ulteriori informazioni sull’implementazione di Media su Edge, consulta [Installare Media Analytics con Experience Platform Edge](/help/implementation/implementation-edge.md).
+Per ulteriori informazioni sull’implementazione di Media su Edge, consulta [Installare Media Analytics con Experience Platform Edge](/help/implementation/edge/implementation-edge.md).
 
 | Piattaforme e dispositivi di streaming | | SDK/estensione Media for Edge Network | API Media Edge | Estensione multimediale con tag o AEP mobile SDK | Media SDK | API Media Collection |
 |:---|:---|:---:|:---:|:---:|:---:|:---:|
