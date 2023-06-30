@@ -5,10 +5,10 @@ uuid: b3cbe240-b94d-42b8-a99c-0280334aaa14
 exl-id: 826530f7-2c39-41ef-b3b4-d3f44b46858f
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 355b3b079d53ae8e83822f61fc79e60e47f6d715
+source-git-commit: c546a8cf4cf471d47e1ae43661821f3c3a6b4a44
 workflow-type: tm+mt
-source-wordcount: '559'
-ht-degree: 72%
+source-wordcount: '563'
+ht-degree: 68%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 72%
 
 ![Banner](./assets/media_analytics_banner.png)
 
-Adobe Analytics for Streaming Media è un componente aggiuntivo di Adobe Analytics che fornisce potenti strumenti di misurazione per audio, video e annunci pubblicitari. Con Analytics per contenuti in streaming, puoi ottenere dettagli granulari sulla durata, le interruzioni e gli avvii in tempo reale che ti consentono di valutare e combinare metriche video e audio. Queste informazioni consentono di comprendere le abitudini di visualizzazione e ascolto dei clienti e di aumentare il coinvolgimento con consigli altamente personalizzati.
+Adobe Analytics per contenuti in streaming è un componente aggiuntivo di Adobe Analytics e Customer Journey Analytics che fornisce potenti strumenti di misurazione per audio, video e annunci pubblicitari. Con Analytics per contenuti in streaming, puoi ottenere dettagli granulari sulla durata, le interruzioni e gli avvii in tempo reale che ti consentono di valutare e combinare metriche video e audio. Queste informazioni consentono di comprendere le abitudini di visualizzazione e ascolto dei clienti e di aumentare il coinvolgimento con consigli altamente personalizzati.
 
 Adobe Analytics for Streaming Media consente di monitorare l’intero percorso del cliente all’interno del sito e delle app di streaming. È possibile combinare le metriche di Streaming Media con altre funzionalità di Adobe Analytics, come Audience Analytics, Mobile o Cross-Device Analytics. Le metriche si integrano facilmente nei rapporti di Adobe Analytics e in altri prodotti Adobe Experience Platform. La misurazione dei file multimediali consente di classificare i dati in più dimensioni e segmenti e di acquisire così tutti i metadati necessari per svolgere un’analisi completa e dettagliata. Puoi quindi analizzare i dati e attribuire criteri di successo ai file multimediali utilizzati interamente, al tempo trascorso in media e agli annunci completati.
 
