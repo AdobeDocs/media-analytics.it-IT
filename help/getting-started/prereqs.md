@@ -5,7 +5,7 @@ uuid: 4c0b37f3-8615-4cc0-b9c9-eeb029067064
 exl-id: 85ab1dbd-f4a7-4f11-afc9-8d5000e2de70
 feature: "Media Analytics, System Requirements"
 role: User, Admin, Data Engineer
-source-git-commit: 8a0f2c0b367b48ee5ac94e7fc6bcd0eadafbc5d8
+source-git-commit: 60702b2cf466df7a1b328743c5d5f4c1834d9554
 workflow-type: tm+mt
 source-wordcount: '433'
 ht-degree: 75%
@@ -45,4 +45,4 @@ Per abilitare i rapporti in Analytics e visualizzare il contenuto e i dati degli
 
    * [Prerequisiti per le implementazioni basate solo su Adobe Analytics](/help/implementation/media-sdk/setup/prerequisites-analytics.md)
 
-   * Prerequisiti per le implementazioni Edge
+   * [Prerequisiti per le implementazioni Edge](/help/implementation/edge/prerequisites-edge.md)
