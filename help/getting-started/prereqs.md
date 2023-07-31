@@ -5,10 +5,10 @@ uuid: 4c0b37f3-8615-4cc0-b9c9-eeb029067064
 exl-id: 85ab1dbd-f4a7-4f11-afc9-8d5000e2de70
 feature: "Media Analytics, System Requirements"
 role: User, Admin, Data Engineer
-source-git-commit: 60702b2cf466df7a1b328743c5d5f4c1834d9554
+source-git-commit: b12e6547ef32bfad7e8d6787a26d6467bcfeb23c
 workflow-type: tm+mt
-source-wordcount: '433'
-ht-degree: 75%
+source-wordcount: '442'
+ht-degree: 74%
 
 ---
 
@@ -20,7 +20,7 @@ Prima di iniziare a implementare Streaming Media, completa le seguenti attività
 Prima di iniziare l’implementazione di Streaming Media, controlla [Panoramica di Streaming Media](/help/media-overview.md) per assicurarsi che Streaming Media soddisfi le tue esigenze.
 
 1. **Conferma il modello di prezzo per Streaming Media**<br>
-Il modello di prezzo corrente si basa sui flussi video. Se necessario, contatta il rappresentante commerciale o il team dell’account Adobe per firmare un nuovo ordine di vendita in quanto Streaming Media Analytics viene venduto separatamente da Adobe Analytics.
+Il modello di prezzo corrente si basa sui flussi video. Se necessario, contatta il rappresentante commerciale o il team dell’account Adobe, poiché Streaming Media viene venduto separatamente, come componente aggiuntivo di Adobe Analytics.<!--update when media SKUs are added to other AEP apps -->
 
 1. **Abilita i rapporti di Adobe Analytics**<br>
 Per abilitare i rapporti in Analytics e visualizzare il contenuto e i dati degli annunci che stai raccogliendo, è necessario abilitare i rapporti in Analytics. Consulta [Abilitazione di rapporti multimediali](/help/reporting/media-reports-enable.md).
@@ -46,3 +46,5 @@ Per abilitare i rapporti in Analytics e visualizzare il contenuto e i dati degli
    * [Prerequisiti per le implementazioni basate solo su Adobe Analytics](/help/implementation/media-sdk/setup/prerequisites-analytics.md)
 
    * [Prerequisiti per le implementazioni Edge](/help/implementation/edge/prerequisites-edge.md)
+
+   Utilizza il [Panoramica sull’implementazione](/help/implementation/overview.md) per determinare quale metodo di implementazione è più adatto alle tue esigenze.
