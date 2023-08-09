@@ -5,9 +5,9 @@ uuid: fdacfb8b-db3e-46fb-b9ad-c3a749555b2a
 exl-id: 9dc84377-6eca-482f-89e7-c4008d1c0f07
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: cdc5ea361829c749dfbb457288ac5ba51a530961
+source-git-commit: 28fcf03600585e3d6a067eca99560218bfef0e05
 workflow-type: tm+mt
-source-wordcount: '7002'
+source-wordcount: '7001'
 ht-degree: 100%
 
 ---
@@ -372,7 +372,7 @@ public static MediaObject createMediaObject(java.lang.String name,
 | --- | --- |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <ul> <li> **Chiave SDK:**<br/> impostata automaticamente </li> <li> **Chiave API:**<br/> N/D </li> <li> **Tipo:**<br/> stringa </li> <li> **Inviato con:**<br/> Chiusura file multimediale </li> <li> **Versione SDK min.:** qualsiasi </li> <li> **Valore di esempio:**<br/> TRUE </li> <li> **Descrizione:**<br/> l&#39;indicatore di riproduzione supera il 25% dell’indicatore del contenuto in base alla lunghezza. L’indicatore è conteggiato una sola volta, anche se si torna indietro. Se il contenuto viene mandato avanti, gli indicatori saltati non vengono conteggiati.<br/> **Importante:** questo valore può essere true solo se è impostato. Se non è impostato, non viene restituito alcun valore.  </li></ul> | <ul> <li> **Adobe Analytics:**<br/> N/D </li> <li> **Heartbeats:**<br/> N/D </li> </ul> | <ul> <li> **Disponibile:**<br/> sì </li> <li> **Variabile riservata:**<br/> evento </li> <li> **Nome rapporto:**<br/> indicatore di avanzamento al 25% </li> <li> **Dati contestuali:**<br/> (a.media.progress25) </li> <li> **Feed dati:**<br/> videoprogress25 </li> <li> **Audience Manager:**<br/> (c_contextdata.<br/>a.media.progress25) </li> <li> **Percorso campo XDM:**<br/> media.mediaTimed.progress25.value </li> <li> **Percorso campo XDM per reporting:**<br/> mediaReporting.sessionDetails.hasProgress25 </li> </ul> |
 
-### Indicatore di avanzamento al 50%
+### Marcatore progresso 50%
 
 |   Implementazione   | Parametri di rete | Reporting |
 | --- | --- |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
