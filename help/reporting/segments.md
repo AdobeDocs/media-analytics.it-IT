@@ -5,14 +5,14 @@ uuid: 61906b8c-3362-4463-82be-fe0e741a5eb3
 exl-id: a450801c-0d6b-4e2a-8662-f00aaaa6e4e0
 feature: "Media Analytics, Segmentation"
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '204'
-ht-degree: 100%
+source-git-commit: b15a81dc8f08e94c9b80d66019f3d0fe95ef5a74
+workflow-type: tm+mt
+source-wordcount: '205'
+ht-degree: 99%
 
 ---
 
-# Segmenti {#segments}
+# Segmenti multimediali{#segments}
 
 I segmenti ti consentono di identificare sottoinsiemi di visitatori in base a caratteristiche o interazioni con siti web. I segmenti multimediali in streaming ti consentono di identificare il tipo di flusso del visitatore, ad esempio audio, in diretta o in podcast. Per informazioni sui segmenti di Adobe Analytics, vedi [Informazioni su segmenti e contenitori](https://experienceleague.adobe.com/docs/analytics/components/segmentation/seg-overview.html?lang=it) nella Guida ai componenti di Adobe Analytics.
 
