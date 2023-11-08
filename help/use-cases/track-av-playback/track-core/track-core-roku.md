@@ -5,10 +5,10 @@ uuid: a8aa7b3c-2d39-44d7-8ebc-b101d130101f
 exl-id: 5272c0ce-4e3d-48c6-bfa6-94066ccbf9ac
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '771'
-ht-degree: 100%
+source-git-commit: c308dba2d7cf07b89bf124bd6e5f972c253c9f18
+workflow-type: tm+mt
+source-wordcount: '792'
+ht-degree: 92%
 
 ---
 
@@ -17,6 +17,7 @@ ht-degree: 100%
 Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
 >[!IMPORTANT]
+>
 >Se stai implementando una versione 1.x di SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scarica SDK](/help/getting-started/download-sdks.md)
 
 1. **Configurazione del tracciamento iniziale**
@@ -33,7 +34,7 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
    | `streamType` | Tipo di flusso (vedi _Costanti StreamType_ sotto) | Sì |
    | `mediaType` | Tipo di file multimediale (vedi _Costanti MediaType_ sotto) | Sì |
 
-   Costanti **`StreamType`:**
+   **`StreamType`Costanti:**
 
    | Nome costante | Descrizione   |
    |---|---|
@@ -44,7 +45,7 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
    | `MEDIA_STREAM_TYPE_AUDIOBOOK` | Tipo di flusso per audiolibro |
    | `MEDIA_STREAM_TYPE_PODCAST` | Tipo di flusso per Podcast |
 
-   Costanti **`MediaType`:**
+   **`MediaType`Costanti:**
 
    | Nome costante | Descrizione |
    |---|---|
@@ -105,18 +106,19 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
 [Implementare metadati standard in Roku](/help/use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
 
-      >[!NOTE]
-      >Il collegamento dell’oggetto metadati video standard all’oggetto multimediale è facoltativo.
+     >[!NOTE]
+     >
+     >Il collegamento dell’oggetto metadati video standard all’oggetto multimediale è facoltativo.
 
    * **Metadati personalizzati**
 
-      Crea un oggetto variabile per le variabili personalizzate e lo popola con i dati del video. Ad esempio:
+     Crea un oggetto variabile per le variabili personalizzate e lo popola con i dati del video. Ad esempio:
 
-      ```
-      mediaContextData = {}
-      mediaContextData["cmk1"] = "cmv1"
-      mediaContextData["cmk2"] = "cmv2"
-      ```
+     ```
+     mediaContextData = {}
+     mediaContextData["cmk1"] = "cmv1"
+     mediaContextData["cmk2"] = "cmv2"
+     ```
 
 1. **Tracciare l’intenzione di inizio riproduzione**
 
@@ -127,12 +129,15 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
    ```
 
    >[!TIP]
+   >
    >Il secondo valore corrisponde al nome dell’oggetto metadati video personalizzato creato nel passaggio 2.
 
    >[!IMPORTANT]
+   >
    >`trackSessionStart` tiene traccia delle intenzioni dell’utente in merito alla riproduzione, non dell’inizio della riproduzione. Questa API viene utilizzata per caricare i dati/metadati video e per stimare la metrica QoS relativa al tempo di avvio (durata tra `trackSessionStart` e `trackPlay`).
 
    >[!NOTE]
+   >
    >Se non utilizzi metadati video personalizzati, invia semplicemente un oggetto vuoto per l’argomento `data` in `trackSessionStart`, come mostrato nella riga esterna di commento nell’esempio di iOS precedente.
 
 1. **Tracciare l’inizio effettivo della riproduzione**
@@ -145,12 +150,18 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
 1. **Aggiorna il valore dell&#39;indicatore di riproduzione**
 
-   Quando l&#39;indicatore di riproduzione multimediale viene modificato, notifica l’SDK effettuando una chiamata all’API `mediaUpdatePlayhead`. <br /> Per il tracciamento dei video on-demand (VOD), il valore è specificato in secondi dall’inizio dell’elemento multimediale. <br /> Per lo streaming live, se il lettore non fornisce informazioni sulla durata del contenuto, il valore può essere specificato come numero di secondi dalla mezzanotte UTC di quel giorno. <br /> Nota: quando si utilizzano i marcatori di avanzamento, è necessario specificare la durata del contenuto e la testina di riproduzione deve essere aggiornata come numero di secondi dall’inizio dell’elemento multimediale, a partire da 0.
-
+   Quando l&#39;indicatore di riproduzione multimediale cambia, notifica l&#39;SDK chiamando il `mediaUpdatePlayhead` API. <br /> Per il tracciamento dei video on-demand (VOD), il valore è specificato in secondi dall’inizio dell’elemento multimediale. <br /> Per lo streaming live, se il lettore non fornisce informazioni sulla durata del contenuto, il valore può essere specificato come il numero di secondi trascorsi dalla mezzanotte UTC di quel giorno.
 
    ```
    ADBMobile().mediaUpdatePlayhead(position)
    ```
+
+   >[!NOTE]
+   >
+   >Quando richiami il `mediaUpdatePlayhead` API:
+   >* Quando si utilizzano i marcatori di avanzamento, è necessario specificare la durata del contenuto e la testina di riproduzione deve essere aggiornata come numero di secondi dall’inizio dell’elemento multimediale, a partire da 0.
+   >* Quando utilizzi gli SDK per contenuti multimediali, devi chiamare `mediaUpdatePlayhead` API almeno una volta al secondo.
+
 
 1. **Tracciare il completamento della riproduzione**
 

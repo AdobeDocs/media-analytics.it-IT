@@ -5,10 +5,10 @@ uuid: a9fc59d8-a2f4-4889-bdec-55c42a835d06
 exl-id: 9812d06d-9efd-460c-a626-6a15f61a4c35
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '750'
-ht-degree: 100%
+source-git-commit: c308dba2d7cf07b89bf124bd6e5f972c253c9f18
+workflow-type: tm+mt
+source-wordcount: '770'
+ht-degree: 93%
 
 ---
 
@@ -46,24 +46,24 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
    * **Metadati video standard**
 
-      [Implementare i metadati standard in Chromecast](/help/use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-chromecast.md)
+     [Implementare i metadati standard in Chromecast](/help/use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-chromecast.md)
 
-      >[!NOTE]
-      >
-      >Il collegamento dell’oggetto metadati video standard all’oggetto multimediale è facoltativo.
+     >[!NOTE]
+     >
+     >Il collegamento dell’oggetto metadati video standard all’oggetto multimediale è facoltativo.
 
    * **Metadati personalizzati**
 
-      Crea un oggetto variabile per le variabili personalizzate e lo popola con i dati del video. Ad esempio:
+     Crea un oggetto variabile per le variabili personalizzate e lo popola con i dati del video. Ad esempio:
 
-      ```js
-      /* Set custom context data */
-      var customVideoMetadata = {
-          isUserLoggedIn: "false",
-          tvStation: "Sample TV station",
-          programmer: "Sample programmer"
-      };
-      ```
+     ```js
+     /* Set custom context data */
+     var customVideoMetadata = {
+         isUserLoggedIn: "false",
+         tvStation: "Sample TV station",
+         programmer: "Sample programmer"
+     };
+     ```
 
 1. **Tracciare l’intenzione di inizio riproduzione**
 
@@ -91,11 +91,17 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
 1. **Aggiorna il valore della testina di riproduzione**
 
-   Aggiorna il valore della posizione di `mediaUpdatePlayhead` più volte quando la testina di riproduzione si sposta. <br /> Per il tracciamento dei video on-demand (VOD), il valore è specificato in secondi dall’inizio dell’elemento multimediale. <br /> Per lo streaming live, se il lettore non fornisce informazioni sulla durata del contenuto, il valore può essere specificato come il numero di secondi trascorsi dalla mezzanotte UTC di quel giorno. <br /> Nota: quando si utilizzano gli indicatori di avanzamento, è necessario specificare la durata del contenuto e la testina di riproduzione deve essere aggiornata come numero di secondi dall’inizio dell’elemento multimediale, a partire da 0.
+   Aggiorna il valore della posizione di `mediaUpdatePlayhead` più volte quando la testina di riproduzione si sposta. <br /> Per il tracciamento dei video on-demand (VOD), il valore è specificato in secondi dall’inizio dell’elemento multimediale. <br /> Per lo streaming live, se il lettore non fornisce informazioni sulla durata del contenuto, il valore può essere specificato come il numero di secondi trascorsi dalla mezzanotte UTC di quel giorno.
 
    ```
-   ADBMobile().mediaUpdatePlayhead(position)
+   ADBMobile().media.updatePlayhead(position)
    ```
+
+   >[!NOTE]
+   >
+   >Quando richiami il `media.updatePlayhead` API:
+   >* Quando si utilizzano i marcatori di avanzamento, è necessario specificare la durata del contenuto e la testina di riproduzione deve essere aggiornata come numero di secondi dall’inizio dell’elemento multimediale, a partire da 0.
+   >* Quando utilizzi gli SDK per contenuti multimediali, devi chiamare `media.updatePlayhead` API almeno una volta al secondo.
 
 1. **Tracciare il completamento della riproduzione**
 

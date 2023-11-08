@@ -4,10 +4,10 @@ description: Scopri come implementare il tracciamento di base utilizzando Media 
 exl-id: f3145450-82ba-4790-91a4-9d2cc97bbaa5
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 59e03f550a35edecc949f7ef5e70c1cb2a784725
+source-git-commit: c308dba2d7cf07b89bf124bd6e5f972c253c9f18
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 100%
+source-wordcount: '755'
+ht-degree: 91%
 
 ---
 
@@ -125,6 +125,20 @@ Questa documentazione tratta il tracciamento nella versione 3.x dell’SDK.
    ```js
    tracker.trackPlay();
    ```
+
+1. **Aggiorna il valore della testina di riproduzione**
+
+   Quando l&#39;indicatore di riproduzione multimediale cambia, notifica l&#39;SDK chiamando il `mediaUpdatePlayhead` API. <br /> Per il tracciamento dei video on-demand (VOD), il valore è specificato in secondi dall’inizio dell’elemento multimediale. <br /> Per lo streaming live, se il lettore non fornisce informazioni sulla durata del contenuto, il valore può essere specificato come il numero di secondi trascorsi dalla mezzanotte UTC di quel giorno.
+
+   ```
+   tracker.updatePlayhead(position)
+   ```
+
+   >[!NOTE]
+   >
+   >Quando richiami il `tracker.updatePlayhead` API:
+   >* Quando si utilizzano i marcatori di avanzamento, è necessario specificare la durata del contenuto e la testina di riproduzione deve essere aggiornata come numero di secondi dall’inizio dell’elemento multimediale, a partire da 0.
+   >* Quando utilizzi gli SDK per contenuti multimediali, devi chiamare `tracker.updatePlayhead` API almeno una volta al secondo.
 
 1. **Tracciare il completamento della riproduzione**
 

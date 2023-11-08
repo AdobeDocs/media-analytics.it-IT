@@ -5,8 +5,8 @@ uuid: ab5fab95-76ed-4ae6-aedb-2e66eece7607
 exl-id: d5f5a3f0-f1e0-4d68-af7f-88a30faed0db
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
+source-git-commit: c308dba2d7cf07b89bf124bd6e5f972c253c9f18
+workflow-type: tm+mt
 source-wordcount: '708'
 ht-degree: 100%
 
@@ -16,6 +16,7 @@ ht-degree: 100%
 
 Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 >[!IMPORTANT]
+>
 >Se stai implementando una versione 1.x dell’SDK, puoi scaricare la Guida per gli sviluppatori 1.x per Android qui: [Scaricare gli SDK](/help/getting-started/download-sdks.md)
 
 1. **Configurazione del tracciamento iniziale**
@@ -32,7 +33,7 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
    | `streamType` | Tipo di flusso (vedi _Costanti StreamType_ sotto) | Sì |
    | `mediaType` | Tipo di file multimediale (vedi _Costanti MediaType_ sotto) | Sì |
 
-   Costanti **`StreamType`:**
+   **`StreamType`Costanti:**
 
    | Nome costante | Descrizione |
    |---|---|
@@ -43,7 +44,7 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
    | `AUDIOBOOK` | Tipo di flusso per audiolibro |
    | `PODCAST` | Tipo di flusso per Podcast |
 
-   Costanti **`MediaType`:**
+   **`MediaType`Costanti:**
 
    | Nome costante | Descrizione |
    |---|---|
@@ -61,26 +62,26 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
    * **Metadati standard**
 
-      [Implementazione dei metadati standard su Android](/help/use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-android.md)
+     [Implementazione dei metadati standard su Android](/help/use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-android.md)
 
-      >[!NOTE]
-      >
-      >Il collegamento dell’oggetto metadati standard all’oggetto multimediale è facoltativo.
+     >[!NOTE]
+     >
+     >Il collegamento dell’oggetto metadati standard all’oggetto multimediale è facoltativo.
 
       * Riferimento API per le chiavi di metadati multimediali - [Chiavi metadati standard - Android](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/com/adobe/primetime/va/simple/MediaHeartbeat.VideoMetadataKeys.html)
       * Vedi il set completo di metadati video disponibili qui: [Parametri audio e video](/help/implementation/variables/audio-video-parameters.md)
+
    * **Metadati personalizzati**
 
-      Crea un dizionario per le variabili personalizzate e compilalo con i dati per questo file multimediale. Ad esempio:
+     Crea un dizionario per le variabili personalizzate e compilalo con i dati per questo file multimediale. Ad esempio:
 
-      ```java
-      HashMap<String, String> mediaMetadata =  
-        new HashMap<String, String>();
-      mediaMetadata.put("isUserLoggedIn", "false");
-      mediaMetadata.put("tvStation", "Sample TV Station");
-      mediaMetadata.put("programmer", "Sample programmer");
-      ```
-
+     ```java
+     HashMap<String, String> mediaMetadata =  
+       new HashMap<String, String>();
+     mediaMetadata.put("isUserLoggedIn", "false");
+     mediaMetadata.put("tvStation", "Sample TV Station");
+     mediaMetadata.put("programmer", "Sample programmer");
+     ```
 
 1. **Tracciare l’intenzione di avviare la riproduzione**
 

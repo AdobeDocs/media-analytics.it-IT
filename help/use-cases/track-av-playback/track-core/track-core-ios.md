@@ -5,8 +5,8 @@ uuid: bdc0e05c-4fe5-430e-aee2-f331bc59ac6b
 exl-id: 5c6b36b3-a421-45a4-a65e-4eb57513ca4a
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
+source-git-commit: c308dba2d7cf07b89bf124bd6e5f972c253c9f18
+workflow-type: tm+mt
 source-wordcount: '711'
 ht-degree: 100%
 
@@ -17,6 +17,7 @@ ht-degree: 100%
 Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
 >[!IMPORTANT]
+>
 >Se stai implementando una versione 1.x di SDK, puoi scaricare le guide per sviluppatori 1.x qui: [Scarica SDK](/help/getting-started/download-sdks.md)
 
 1. **Configurazione del tracciamento iniziale**
@@ -33,7 +34,7 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
    | `streamType` | Tipo di flusso (vedi _Costanti StreamType_ sotto) | Sì |
    | `mediaType` | Tipo di file multimediale (vedi _Costanti MediaType_ sotto) | Sì |
 
-   Costanti **`StreamType`:**
+   **`StreamType`Costanti:**
 
    | Nome costante | Descrizione |
    |---|---|
@@ -44,7 +45,7 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
    | `ADBMediaHeartbeatStreamTypeAUDIOBOOK` | Tipo di flusso per audiolibro |
    | `ADBMediaHeartbeatStreamTypePODCAST` | Tipo di flusso per Podcast |
 
-   Costanti **`MediaType`:**
+   **`MediaType`Costanti:**
 
    | Nome costante | Descrizione |
    |---|---|
@@ -70,24 +71,23 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
       * [Implementare metadati standard su iOS](/help/use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-ios.md)
       * **Chiavi metadati video**
-
-         [Chiavi metadati iOS](/help/use-cases/track-av-playback/impl-std-metadata/ios-metadata-keys.md)
+        [Chiavi metadati iOS](/help/use-cases/track-av-playback/impl-std-metadata/ios-metadata-keys.md)
 
       * Consulta l’elenco completo dei metadati video qui: [Parametri audio e video](/help/implementation/variables/audio-video-parameters.md)
-      >[!NOTE]
-      >
-      >Il collegamento dell’oggetto metadati video standard all’oggetto multimediale è facoltativo.
+
+     >[!NOTE]
+     >
+     >Il collegamento dell’oggetto metadati video standard all’oggetto multimediale è facoltativo.
 
    * **Metadati personalizzati**
 
-      Crea un oggetto variabile per le variabili personalizzate e lo popola con i dati del video. Ad esempio:
+     Crea un oggetto variabile per le variabili personalizzate e lo popola con i dati del video. Ad esempio:
 
-      ```
-      NSMutableDictionary *videoMetadata = [[NSMutableDictionary alloc] init];
-      [videoMetadata setObject:@"false" forKey:@"isUserLoggedIn"];
-      [videoMetadata setObject:@"Sample TV station" forKey:@"tvStation"];
-      ```
-
+     ```
+     NSMutableDictionary *videoMetadata = [[NSMutableDictionary alloc] init];
+     [videoMetadata setObject:@"false" forKey:@"isUserLoggedIn"];
+     [videoMetadata setObject:@"Sample TV station" forKey:@"tvStation"];
+     ```
 
 1. **Tracciare l’intenzione di avviare la riproduzione**
 

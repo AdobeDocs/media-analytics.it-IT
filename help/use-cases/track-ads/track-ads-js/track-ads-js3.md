@@ -4,7 +4,7 @@ description: Implementa il tracciamento degli annunci nelle applicazioni browser
 exl-id: 6b34b2c0-5e50-471a-b52c-b9c760fa3169
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: fd9f0a7f4592c01082bcad015351d9128df2f8c9
+source-git-commit: c308dba2d7cf07b89bf124bd6e5f972c253c9f18
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 88%
@@ -133,13 +133,14 @@ Per ulteriori informazioni, consulta lo scenario di tracciamento [Riproduzione V
 
 ## Tracciamento granulare degli annunci
 
+L&#39;intervallo predefinito di ping dell&#39;annuncio è `10 seconds`.
+
 Puoi impostare il tracciamento granulare degli annunci per abilitare `1 second` tracciamento degli annunci.
 
-Queste informazioni devono essere fornite all’avvio di una sessione di tracciamento.
-
->[!NOTE]
+>[!IMPORTANT]
 >
->   L&#39;intervallo predefinito di ping dell&#39;annuncio è `10 seconds`.
+>Queste informazioni devono essere fornite all’avvio di una sessione di tracciamento.
+
 
 
 **Sintassi**
