@@ -4,21 +4,22 @@ description: “Scopri il dashboard dei visualizzatori simultanei di contenuti m
 uuid: e61c50e5-8196-4538-b67c-ebc01c6e6ba7
 exl-id: 2c679c1a-a4bd-44fc-8e11-173c8544ab06
 feature: "Media Analytics, Reports & Analytics Basics"
-role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '291'
-ht-degree: 100%
+role: User, Admin
+source-git-commit: 7eeee7f035e5d9e7e327e60910c78bbdf02abff8
+workflow-type: tm+mt
+source-wordcount: '285'
+ht-degree: 98%
 
 ---
 
-# Visualizzatori simultanei di contenuti multimediali  rapporti {#media-concurrent-viewers}
+# Rapporti sui visualizzatori simultanei di contenuti multimediali {#media-concurrent-viewers}
 
 Il dashboard dei visualizzatori simultanei di contenuti multimediali mostra i visualizzatori simultanei nell’arco di una giornata. I dati possono essere filtrati in base al contenuto, al tipo di dispositivo o al Paese.
 
 >[!TIP]
 >
 > Questo rapporto si basa su sessioni multimediali attive simultanee. Per visualizzare i visualizzatori simultanei per visitatore univoco, con le funzionalità aggiuntive per applicare, suddividere e confrontare un segmento, utilizza la variabile [Pannello visualizzatori simultanei di contenuti multimediali in Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/media-concurrent-viewers.html?lang=it).
+>
 
 ![](assets/video-concurrent-viewers.png)
 
@@ -27,7 +28,7 @@ Il dashboard dei visualizzatori simultanei di contenuti multimediali mostra i vi
 Di seguito sono riportate alcune caratteristiche di questo rapporto:
 
 * Il rapporto non è in tempo reale. Ha una latenza normale di Adobe Analytics.
-* Il rapporto copre un intervallo temporale di 24 ore. L’asse x corrisponde all’ora del giorno basata sul fuso orario della suite di rapporti.
+* Il rapporto copre un arco temporale di 24 ore. L’asse x corrisponde all’ora del giorno basata sul fuso orario della suite di rapporti.
 * Mostra i visualizzatori simultanei con granularità al minuto.
 * È disponibile un *Rapporto dei visualizzatori simultanei di contenuti multimediali* che mostra quanti utenti stanno guardando oppure ascoltando tutti i contenuti.
 * È disponibile un Rapporto sui visualizzatori simultanei all’interno del rapporto sui *Dettagli dei contenuti multimediali* che mostra quanti utenti stanno guardando oppure ascoltando un elemento multimediale specifico.

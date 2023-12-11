@@ -2,11 +2,11 @@
 title: Pubblico medio per minuto del file multimediale
 description: Scopri come utilizzare il pannello Pubblico medio per minuto del file multimediale per analizzare il pubblico medio per un contenuto specifico o per un periodo di tempo personalizzato.
 feature: Media Analytics, Workspace Basics
-role: User, Admin, Data Engineer
+role: User, Admin
 exl-id: af4d430c-1349-4606-b587-da5d40e0fe4b
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '264'
+source-git-commit: 7eeee7f035e5d9e7e327e60910c78bbdf02abff8
+workflow-type: tm+mt
+source-wordcount: '255'
 ht-degree: 100%
 
 ---
