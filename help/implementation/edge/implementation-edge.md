@@ -1,25 +1,25 @@
 ---
-title: Installare Media Analytics con Experience Platform Edge
-description: Scopri come implementare Adobe Streaming Media con Experience Platform Edge.
+title: Installare Media Analytics con Experienci Platform Edge
+description: Scopri come implementare Adobe Streaming Media con Experienci Platform Edge.
 feature: Media Analytics
 role: User, Admin, Data Engineer
-exl-id: 29d58b41-9a49-4b71-bdc5-4e2848cd3236
-source-git-commit: a26e4e283646e5ceb352f357789748f376f5c747
+exl-id: dfdb1415-105e-4c41-bedc-ecb85ed1b1d9
+source-git-commit: 68710e8d68266c62ded94a14892ddc78a0807a49
 workflow-type: tm+mt
-source-wordcount: '1773'
-ht-degree: 8%
+source-wordcount: '1734'
+ht-degree: 7%
 
 ---
 
-# Installare Media Analytics con Experience Platform Edge
+# Installare Media Analytics con Experienci Platform Edge
 
 Adobe Experience Platform Edge consente di inviare dati destinati a più prodotti a una posizione centralizzata. Experience Edge inoltra le informazioni appropriate ai prodotti desiderati. Questo concetto consente di consolidare le attività di implementazione, in particolare per quanto riguarda più soluzioni di dati.
 
-L’immagine seguente illustra come un’implementazione di Media Analytics può utilizzare Experience Platform Edge per rendere i dati disponibili in Analysis Workspace, in Adobe Analytics o Customer Journey Analytics:
+L’immagine seguente illustra come un’implementazione di Media Analytics può utilizzare Experienci Platform Edge per rendere i dati disponibili in Analysis Workspace, in Adobe Analytics o Customer Journey Analytics:
 
 ![Flusso di lavoro in CJA](assets/cja-implementation.png)
 
-Per una panoramica di tutte le opzioni di implementazione, inclusi i metodi di implementazione che non utilizzano Experience Platform Edge, consulta [Implementazione di contenuti multimediali in streaming per Adobe Analytics o Customer Journey Analytics](/help/implementation/overview.md).
+Per una panoramica di tutte le opzioni di implementazione, inclusi i metodi di implementazione che non utilizzano Experienci Platform Edge, consulta [Implementazione di contenuti multimediali in streaming per Adobe Analytics o Customer Journey Analytics](/help/implementation/overview.md).
 
 >[!IMPORTANT]
 >
@@ -52,51 +52,58 @@ Per creare e impostare uno schema:
 
 +++ Espandi qui per visualizzare le istruzioni sui campi che puoi nascondere.
 
-   1. In [!UICONTROL **Struttura**] , selezionare la `Media Collection Details` campo, seleziona [!UICONTROL **Gestire i campi correlati**], quindi aggiorna lo schema come segue:
+   1. In [!UICONTROL **Struttura**] , selezionare la `Media Collection Details` , quindi seleziona [!UICONTROL **Gestire i campi correlati**].
 
       ![manage-related-fields](assets/manage-related-fields.png)
 
-      * In `Media Collection Details` , nascondere il `List Of States` campo.
-
-        ![nascondi stati raccolta file multimediali](assets/schema-hide-media-collection-states.png)
+   1. Abilita l’opzione per [!UICONTROL **Mostra nomi visualizzati per i campi**], quindi aggiorna lo schema come segue:
 
       * In `Media Collection Details` > `Advertising Details` , nascondi i seguenti campi di reporting: `Ad Completed`, `Ad Started`, e `Ad Time Played`.
 
       * In `Media Collection Details` > `Advertising Pod Details` , nascondi il seguente campo di reporting: `Ad Break ID`
 
-      * In `Media Collection Details` > `Chapter Details` , nascondi i seguenti campi di reporting: `Chapter ID`, `Chapter Completed`, `Chapter Started`, e `Chapter Time Played`.
+      * In `Media Collection Details` > `Chapter Details` , nascondi i seguenti campi di reporting: `Chapter Completed`, `Chapter ID`, `Chapter Started`, e `Chapter Time Played`.
 
-      * In `Media Collection Details` > `Qoe Data Details` , nascondi i seguenti campi di reporting: `Average Bitrate`, `Average Bitrate Bucket`, `Bitrate Changes`, `Buffer Events`, `Total Buffer Duration`, `Errors`, `External Error IDs`, `Bitrate Change Impacted Streams`, `Buffer Impacted Streams`, `Dropped Frame Impacted Streams`, `Error Impacted Streams`, `Stalling Impacted Streams`, `Drops Before Starts`, `Media SDK Error IDs`, `Player SDK Error IDs`, `Stalling Events`, e `Total Stalling Duration`.
+      * In `Media Collection Details` , nascondere il `List Of States` campo.
 
-      * In `Media Collection Details` > `Session Details` , nascondi i seguenti campi di reporting: `Media Session ID`, `Ad Count`, `Average Minute Audience`, `Chapter Count`, `Estimated Streams`, `Pause Impacted Streams`, `10% Progress Marker`, `25% Progress Marker`, `50% Progress Marker`, `75% Progress Marker`, `95% Progress Marker`, `Media Segment Views`, `Content Completes`, `Media Downloaded Flag`, `Federated Data`, `Content Starts`, `Media Starts`, `Pause Events`, `Total Pause Duration`, `Media Session Server Timeout`, `Video Segment`, `Content Time Spent`, `Media Time Spent`, `Unique Time Played`, `Pev3`, e `Pccr`.
+        ![nascondi stati raccolta file multimediali](assets/schema-hide-media-collection-states.png)
 
       * In `Media Collection Details` > `List Of States End` e `Media Collection Details` > `List Of States Start` , nascondi i seguenti campi di reporting: `Player State Count`, `Player State Set`, e `Player State Time`.
 
         ![campi da nascondere](assets/schema-hide-listofstates.png)
 
+      * In `Media Collection Details` > `Qoe Data Details` , nascondi i seguenti campi di reporting: `Average Bitrate`, `Average Bitrate Bucket`, `Bitrate Change Impacted Streams`, `Bitrate Changes`, `Buffer Impacted Streams`, `Buffer Events`, `Dropped Frame Impacted Streams`, `Drops Before Starts`, `Errors`, `External Error IDs`, `Error Impacted Streams`, `Media SDK Error IDs`, `Player SDK Error IDs`, `Stalling Impacted Streams`, `Stalling Events`, `Total Buffer Duration`, e `Total Stalling Duration`.
+
+      * In `Media Collection Details` > `Session Details` , nascondi i seguenti campi di reporting: `10% Progress Marker`, `25% Progress Marker`, `50% Progress Marker`, `75% Progress Marker`, `95% Progress Marker`, `Ad Count`, `Average Minute Audience`, `Content Completes`, `Chapter Count`, `Content Starts`, `Content Time Spent`, `Estimated Streams`, `Federated Data`, `Media Segment Views`, `Media Downloaded Flag`, `Media Starts`, `Media Session ID`, `Media Session Server Timeout`, `Media Time Spent`, `Pause Events`, `Pause Impacted Streams`, `Pev3`, `Pccr`, `Total Pause Duration`, `Unique Time Played`, e `Video Segment`.
+
    1. Seleziona [!UICONTROL **Conferma**] per salvare le modifiche.
 
-   1. In [!UICONTROL **Struttura**] , selezionare la `List Of Media Collection Downloaded Content Events` campo, seleziona [!UICONTROL **Gestire i campi correlati**], quindi aggiorna lo schema come segue:
+   1. In [!UICONTROL **Struttura**] , abilita l’opzione per [!UICONTROL **Mostra nomi visualizzati per i campi**], quindi seleziona la `List Of Media Collection Downloaded Content Events` campo.
 
-      * In `List Of Media Collection Downloaded Content Events` > `Media Details` , nascondere il `List Of States` campo.
+   1. Seleziona [!UICONTROL **Gestire i campi correlati**], quindi aggiorna lo schema come segue:
+
 
       * In `List Of Media Collection Downloaded Content Events` > `Media Details` > `Advertising Details` , nascondi i seguenti campi di reporting: `Ad Completed`, `Ad Started`, e `Ad Time Played`.
 
       * In `List Of Media Collection Downloaded Content Events` > `Media Details` > `Advertising Pod Details` , nascondi il seguente campo di reporting: `Ad Break ID`
 
-      * In `List Of Media Collection Downloaded Content Events` > `Media Details` > `Chapter Details` , nascondi i seguenti campi di reporting: `Chapter ID`, `Chapter Completed`, `Chapter Started`, e `Chapter Time Played`.
+      * In `List Of Media Collection Downloaded Content Events` > `Media Details` > `Chapter Details` , nascondi i seguenti campi di reporting: `Chapter Completed`, `Chapter ID`, `Chapter Started`, e `Chapter Time Played`.
 
-      * In `List Of Media Collection Downloaded Content Events` > `Media Details` > `Qoe Data Details` , nascondi i seguenti campi di reporting: `Average Bitrate`, `Average Bitrate Bucket`, `Bitrate Changes`, `Buffer Events`, `Total Buffer Duration`, `Errors`, `External Error IDs`, `Bitrate Change Impacted Streams`, `Buffer Impacted Streams`, `Dropped Frame Impacted Streams`, `Error Impacted Streams`, `Stalling Impacted Streams`, `Drops Before Starts`, `Media SDK Error IDs`, `Player SDK Error IDs`, `Stalling Events`, e `Total Stalling Duration`.
-
-      * In `List Of Media Collection Downloaded Content Events` > `Media Details` > `Session Details` , nascondi i seguenti campi di reporting: `Media Session ID`, `Ad Count`, `Average Minute Audience`, `Chapter Count`, `Estimated Streams`, `Pause Impacted Streams`, `10% Progress Marker`, `25% Progress Marker`, `50% Progress Marker`, `75% Progress Marker`, `95% Progress Marker`, `Media Segment Views`, `Content Completes`, `Media Downloaded Flag`, `Federated Data`, `Content Starts`, `Media Starts`, `Pause Events`, `Total Pause Duration`, `Media Session Server Timeout`, `Video Segment`, `Content Time Spent`, `Media Time Spent`, `Unique Time Played`, `Pev3`, e `Pccr`.
+      * In `List Of Media Collection Downloaded Content Events` > `Media Details` , nascondere il `List Of States` campo.
 
       * In `List Of Media Collection Downloaded Content Events` > `Media Details` > `List Of States End` e `Media Collection Details` > `List Of States Start` , nascondi i seguenti campi di reporting: `Player State Count`, `Player State Set`, e `Player State Time`.
+
+      * In `List Of Media Collection Downloaded Content Events` > `Media Details` > `Qoe Data Details` , nascondi i seguenti campi di reporting: `Average Bitrate`, `Average Bitrate Bucket`, `Bitrate Change Impacted Streams`, `Bitrate Changes`, `Buffer Events`, `Buffer Impacted Streams`, `Drops Before Starts`, `Dropped Frame Impacted Streams`, `Error Impacted Streams`, `Errors`, `External Error IDs`, `Media SDK Error IDs`, `Player SDK Error IDs`, `Stalling Events`, `Stalling Impacted Streams`, `Total Buffer Duration`, e `Total Stalling Duration`.
+
+      * In `List Of Media Collection Downloaded Content Events` > `Media Details` > `Session Details` , nascondi i seguenti campi di reporting: `10% Progress Marker`, `25% Progress Marker`, `50% Progress Marker`, `75% Progress Marker`, `95% Progress Marker`, `Ad Count`, `Average Minute Audience`, `Chapter Count`, `Content Completes`, `Content Starts`, `Content Time Spent`, `Estimated Streams`, `Federated Data`, `Media Downloaded Flag`, `Media Segment Views`, `Media Session ID`, `Media Session Server Timeout`, `Media Starts`, `Media Time Spent`, `Pause Events`, `Pause Impacted Streams`, `Pccr`, `Pev3`, `Total Pause Duration`, `Unique Time Played`, e `Video Segment`.
 
       * In `List Of Media Collection Downloaded Content Events` > `Media Details`  , nascondere il `Media Session ID` campo.
 
    1. Seleziona [!UICONTROL **Conferma**] per salvare le modifiche.
 
-   1. In [!UICONTROL **Struttura**] , selezionare la `Media Reporting Details` campo, seleziona [!UICONTROL **Gestire i campi correlati**], quindi aggiorna lo schema come segue:
+   1. In [!UICONTROL **Struttura**] , selezionare la `Media Reporting Details` campo, seleziona [!UICONTROL **Gestire i campi correlati**].
+
+   1. Abilita l’opzione per [!UICONTROL **Mostra nomi visualizzati per i campi**], quindi aggiorna lo schema come segue:
 
       * In `Media Reporting Details` , nascondere i campi seguenti: `Error Details`, `List Of States End`, `List of States Start`, e `Media Session ID`.
 
@@ -146,7 +153,9 @@ Per creare e impostare uno schema:
 
      ![Opzione Media Analytics](assets/datastream-media-check.png)
 
-1. Continua con [Crea una connessione nel Customer Journey Analytics](#create-a-connection-in-customer-journey-analytics).
+1. Ora puoi implementare [API Media Edge](/help/implementation/edge/implementation-edge-api.md) o [SDK di Media Edge](/help/implementation/edge/edge-mobile-sdk.md) per iniziare a raccogliere i dati di media analytics.
+
+   Dopo aver raccolto alcuni dati, puoi [Crea una connessione nel Customer Journey Analytics](#create-a-connection-in-customer-journey-analytics).
 
 ## Creare una connessione in Customer Journey Analytics
 
@@ -175,7 +184,7 @@ Per creare e impostare uno schema:
 
 1. Assicurarsi di aver creato una connessione nel Customer Journey Analytics come descritto in [Crea una connessione nel Customer Journey Analytics](#create-a-connection-in-customer-journey-analytics).
 
-1. In Analisi del Percorso di clienti, crea una visualizzazione dati come descritto in [Creare o modificare una visualizzazione dati](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=it).
+1. In Analisi del Percorso di clienti, crea una visualizzazione dati come descritto in [Creare o modificare una visualizzazione dati](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=en).
 
    Durante la creazione della visualizzazione dati, per l’implementazione di Streaming Media sono necessarie le seguenti selezioni di configurazione:
 
@@ -290,21 +299,21 @@ Per creare e impostare uno schema:
 
    ![Pannello Tempo di riproduzione dei contenuti multimediali](assets/media-playback-time-spent-panels.png)
 
-1. Condividere il progetto come descritto in [Condividere progetti](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/curate-share/share-projects.html?lang=it).
+1. Condividere il progetto come descritto in [Condividere progetti](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/curate-share/share-projects.html?lang=en).
 
    >[!NOTE]
    >
    >   Se gli utenti con cui desideri condividere il file non sono disponibili, assicurati che gli utenti abbiano accesso come utente e amministratore al Customer Journey Analytics in Adobe Admin Console.
 
-1. Continua con [Invia dati a Experience Platform Edge](#send-data-to-experience-platform-edge).
+1. Continua con [Invia dati a Experienci Platform Edge](#send-data-to-experience-platform-edge).
 
-## Inviare dati ad Experience Platform Edge utilizzando l’SDK di AEP Mobile
+## Inviare dati ad Experienci Platform Edge utilizzando l’SDK di AEP Mobile
 
-Puoi utilizzare Adobe Experience Platform Mobile SDK per inviare dati mobili ad Experience Platform Edge.
+Puoi utilizzare Adobe Experience Platform Mobile SDK per inviare dati mobili ad Experienci Platform Edge.
 
 Utilizza le seguenti risorse di documentazione per completare l’implementazione sia per iOS che per Android:
 
-* [introduzione](https://developer.adobe.com/client-sdks/documentation/media-for-edge-network/)
+* [Introduzione](https://developer.adobe.com/client-sdks/documentation/media-for-edge-network/)
 
 * [Riferimento API](https://developer.adobe.com/client-sdks/documentation/media-for-edge-network/api-reference/)
 
