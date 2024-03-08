@@ -5,10 +5,10 @@ uuid: 9dd35155-58aa-4f05-896e-c5cbc4b13d59
 exl-id: 253f6c61-70b5-4bdf-8e79-840545aeca0e
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '256'
-ht-degree: 100%
+source-git-commit: 917c87d759a43f124dfb3e3ac7f6a441c65fde94
+workflow-type: tm+mt
+source-wordcount: '241'
+ht-degree: 90%
 
 ---
 
@@ -26,10 +26,10 @@ Per informazioni sulle metriche calcolate di Adobe Analytics, consulta [Metriche
 |---|---|---|
 | Media Annunci per flusso multimediale | Avvio annuncio per avvio file multimediali | `Ad Starts / Media Starts` |
 | Media Capitoli per flusso multimediale | Avvio capitolo per avvio file multimediali | `Chapter Start / Media Starts` |
-| Media Tempo trascorso dei contenuti multimediali | Tempo totale trascorso per avvio file multimediali (HH:MM:SS) | `Media Time Spent / Media Starts` |
-| Media Tempo trascorso dei contenuti | Tempo trascorso contenuto per avvio contenuto (HH:MM:SS) | `Content Time Spent / Content Start` |
-| Media Tempo trascorso dell’annuncio | Tempo trascorso annuncio per avvii annunci (HH:MM:SS) | `Ad Time Spent / Ad Start` |
-| Media Tempo trascorso capitolo | Tempo trascorso capitolo per avvio capitolo (HH:MM:SS) | `Chapter Time Spent / Chapter Start` |
+| Media Tempo trascorso dei contenuti multimediali | Tempo totale trascorso per avvio file multimediali (`HH:MM:SS`) | `Media Time Spent / Media Starts` |
+| Media Tempo trascorso dei contenuti | Tempo trascorso contenuto per avvio contenuto (`HH:MM:SS`) | `Content Time Spent / Content Start` |
+| Media Tempo trascorso dell’annuncio | Tempo trascorso annuncio per avvio annuncio (`HH:MM:SS`) | `Ad Time Spent / Ad Start` |
+| Media Tempo trascorso capitolo | Tempo trascorso capitolo per avvio capitolo (`HH:MM:SS`) | `Chapter Time Spent / Chapter Start` |
 | Percentuale di completamento file multimediali | Percentuale di completamento dei contenuti rispetto ai file multimediali avviati (%) | `Content Completes/ Media Starts` |
 | Percentuale di completamento dei contenuti | Percentuale di completato dei contenuti rispetto all&#39;avvio dei contenuti (%) | `Content Completes / Content Starts` |
 | Percentuale di completamento degli annunci | Percentuale di completamento degli annunci rispetto all&#39;avvio degli annunci (%) | `Ad Completes / Ad Starts` |
