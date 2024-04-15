@@ -4,16 +4,16 @@ description: Consulta le note sulla versione di Adobe Analytics.
 feature: Release Notes
 role: User, Admin, Data Engineer
 exl-id: ef068aa6-fdf4-4a5c-b5d0-b93ad31894e8
-source-git-commit: c546a8cf4cf471d47e1ae43661821f3c3a6b4a44
+source-git-commit: 649438cebb6868d3d5799629317596c08c1c086f
 workflow-type: tm+mt
-source-wordcount: '925'
-ht-degree: 91%
+source-wordcount: '871'
+ht-degree: 86%
 
 ---
 
-# Note sulla versione di Adobe Analytics per contenuti in streaming (maggio 2023)
+# Note sulla versione di 适用于流媒体的 Adobe Analytics (maggio 2023)
 
-**Ultimo aggiornamento**: 12 maggio 2023
+**Ultimo aggiornamento**: sabato 12 maggio 2023
 
 ## Risorse correlate
 
@@ -31,7 +31,8 @@ Per informazioni sulle nuove funzioni e correzioni, nonché informazioni importa
 
 | Funzione | Descrizione | Data prevista |
 | ----------- | ---------- | ------- |
-| Media Collection: integrazione con Experience Edge (API e Mobile SDK) | Ora puoi utilizzare l’API Experience Edge e Mobile SDK per implementare Streaming Media, che consente di creare campagne più personalizzate e fornire contenuti più personalizzati, con conseguente aumento dei dati di tracciamento da includere nei rapporti.<p>Questo miglioramento fornisce un metodo di raccolta unificato in tutte le soluzioni, ad esempio reporting di Customer Journey Analytics, RT-CDP, AJO e inoltro di eventi.  [Ulteriori informazioni](/help/implementation/edge/implementation-edge.md) | 12 maggio 2023 |
+| Inviare dati Roku a Adobe Experience Platform Edge | Ora quando [installazione di Media Analytics con Experienci Platform Edge](/help/implementation/edge/implementation-edge.md), puoi utilizzare Adobe Experience Platform Roku SDK per inviare dati multimediali in streaming a Adobe Experience Platform. | sabato 12 aprile 2024 |
+| Media Collection: integrazione con Experience Edge (API e Mobile SDK) | Ora puoi utilizzare l’API Experience Edge e Mobile SDK per implementare Streaming Media, che consente di creare campagne più personalizzate e fornire contenuti più personalizzati, con conseguente aumento dei dati di tracciamento da includere nei rapporti.<p>Questo miglioramento fornisce un metodo di raccolta unificato in tutte le soluzioni, ad esempio reporting di Customer Journey Analytics, RT-CDP, AJO e inoltro di eventi.  [Ulteriori informazioni](/help/implementation/edge/implementation-edge.md) | sabato 12 maggio 2023 |
 | Pannello Visualizzatori simultanei di contenuti multimediali | Scopri dove si verificano picchi di concorrenza o abbandoni. Ottieni informazioni approfondite sulla qualità dei contenuti e sul livello di coinvolgimento dell’utente, utili anche per risolvere problemi o pianificare volumi e scala. [Ulteriori informazioni](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/panels/media-concurrent-viewers.html?lang=it) | 9 agosto 2022 |
 | Pannello Tempo trascorso su contenuti multimediali | La funzione Tempo trascorso su contenuti multimediali fornisce insight utili sul coinvolgimento degli utenti. Consente alle organizzazioni di media di ottenere informazioni più approfondite e dettagliate sul coinvolgimento degli utenti minuto per minuto attraverso un’analisi avanzata del tempo trascorso con funzionalità di ripartizione giornaliera. È possibile osservare il tempo impiegato per visualizzare i flussi multimediali in un determinato momento. È possibile suddividere la durata della riproduzione in base a granularità diverse, tra cui nuove granularità di 5, 15 e 30 minuti. [Ulteriori informazioni](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/panels/media-playback-timespent/media-playback-time-spent.html?lang=it) | 9 agosto 2022 |
 | Condividere le annotazioni nelle scorecard per dispositivi mobili | Puoi visualizzare le annotazioni create in Workspace nelle scorecard per dispositivi mobili. Ciò ti consente di condividere dettagli sui dati contestuali e informazioni approfondite sull’organizzazione e sulle campagne direttamente all’interno dei progetti delle scorecard per dispositivi mobili, visualizzabili nell’app mobile delle dashboard di Analytics. [Ulteriori informazioni](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-components/annotations/mobile-annotations.html?lang=it) | 15 giugno 2022 |
