@@ -5,9 +5,9 @@ user-guide-title: Adobe Analytics per contenuti multimediali in streaming
 breadcrumb-title: Guida di Media Analytics
 user-guide-description: Implementare Adobe Analytics per contenuti multimediali in streaming. Gli argomenti trattati comprendono Media SDK e Media Collection API.
 sub-product: media analytics
-source-git-commit: ee147c2446162257b03f2f0b972e591435d787a9
+source-git-commit: 6c377d7622a65e7bd41be0a4a105a0b1c7da477c
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '900'
 ht-degree: 92%
 
 ---
@@ -36,6 +36,7 @@ ht-degree: 92%
       + [Prerequisiti](/help/implementation/edge/prerequisites-edge.md)
       + SDK/Estensione Media Edge {#media-edge-sdk}
          + [Configurazione di SDK Media Edge/Estensione](/help/implementation/edge/implementation-edge.md)
+         + [Web Media Edge](/help/implementation/edge/edge-web-sdk.md)
          + [SDK per dispositivi mobili Media Edge](/help/implementation/edge/edge-mobile-sdk.md)
       + [API Media Edge](/help/implementation/edge/implementation-edge-api.md)
    + Implementazioni solo per Adobe Analytics {#analytics-only}

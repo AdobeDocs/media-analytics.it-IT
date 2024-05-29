@@ -4,10 +4,10 @@ description: “Scopri i principali dispositivi supportati da Adobe Analytics fo
 exl-id: 169ff7b9-e577-45b7-8927-74bdcccc0a77
 feature: Media Analytics
 role: User, Admin
-source-git-commit: 1cc995959aa9070f895e0d03be62533bd3a0ca0d
+source-git-commit: b538b973509ee2a2c2010da300cbed1ce06ec2af
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 58%
+source-wordcount: '305'
+ht-degree: 59%
 
 ---
 
@@ -30,7 +30,7 @@ Per ulteriori informazioni sull’implementazione di Media su Edge, consulta [In
 | Piattaforme e dispositivi di streaming | | Media per Edge Network SDK / Estensione | API Media Edge | Estensione multimediale con tag o AEP mobile SDK | Media SDK | API Media Collection |
 |:---|:---|:---:|:---:|:---:|:---:|:---:|
 | Web/Web mobile | | | | | |
-| | Browser JavaScript | (Disponibile a breve) | ![Supportati](/help/assets/icon-blue-check.png) | ![Supportati](/help/assets/icon-blue-check.png) | ![Supportati](/help/assets/icon-blue-check.png) | ![Supportati](/help/assets/icon-blue-check.png) |
+| | Browser JavaScript | ![Supportati](/help/assets/icon-blue-check.png) | ![Supportati](/help/assets/icon-blue-check.png) | ![Supportati](/help/assets/icon-blue-check.png) | ![Supportati](/help/assets/icon-blue-check.png) | ![Supportati](/help/assets/icon-blue-check.png) |
 | App mobile | | | | | |
 | | Dispositivi iOS | ![Supportati](/help/assets/icon-blue-check.png) | ![Supportati](/help/assets/icon-blue-check.png) | ![Supportati](/help/assets/icon-blue-check.png) | | ![Supportati](/help/assets/icon-blue-check.png) | |
 | | Dispositivi Android | ![Supportati](/help/assets/icon-blue-check.png) | ![Supportati](/help/assets/icon-blue-check.png) | ![Supportati](/help/assets/icon-blue-check.png) | | ![Supportati](/help/assets/icon-blue-check.png) |
