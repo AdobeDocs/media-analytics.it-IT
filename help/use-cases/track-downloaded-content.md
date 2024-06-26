@@ -1,14 +1,14 @@
 ---
-title: Come tenere traccia dei contenuti scaricati offline in Adobe Streaming Media
+title: Come tenere traccia del contenuto scaricato offline nel componente aggiuntivo Streaming Media Collection
 description: Scopri come utilizzare la funzione Contenuto scaricato per tenere traccia del consumo di contenuti multimediali quando un utente è offline.
 uuid: 0718689d-9602-4e3f-833c-8297aae1d909
 exl-id: 82d3e5d7-4f88-425c-8bdb-e9101fc1db92
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: cdc5ea361829c749dfbb457288ac5ba51a530961
+source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
 workflow-type: tm+mt
-source-wordcount: '702'
-ht-degree: 100%
+source-wordcount: '697'
+ht-degree: 98%
 
 ---
 
@@ -22,11 +22,11 @@ Contrasto tra i due approcci:
 
 * Online
 
-   Con questo approccio in tempo reale, il lettore multimediale invia i dati di tracciamento per ogni evento del lettore e invia ping di rete ogni dieci secondi (ogni secondo per gli annunci), uno per uno al back-end.
+  Con questo approccio in tempo reale, il lettore multimediale invia i dati di tracciamento per ogni evento del lettore e invia ping di rete ogni dieci secondi (ogni secondo per gli annunci), uno per uno al back-end.
 
 * Offline (funzionalità Contenuto scaricato)
 
-   Con questo approccio di elaborazione batch, è necessario generare gli stessi eventi di sessione, ma vengono memorizzati sul dispositivo fino a quando non vengono inviati al back-end come una singola sessione (vedi l’esempio di seguito).
+  Con questo approccio di elaborazione batch, è necessario generare gli stessi eventi di sessione, ma vengono memorizzati sul dispositivo fino a quando non vengono inviati al back-end come una singola sessione (vedi l’esempio di seguito).
 
 Ogni approccio presenta vantaggi e svantaggi:
 * Lo scenario online segue in tempo reale; questo richiede un controllo della connettività prima di ogni chiamata di rete.

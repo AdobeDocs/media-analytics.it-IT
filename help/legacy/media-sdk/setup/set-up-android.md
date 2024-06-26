@@ -5,16 +5,16 @@ uuid: 3ffe3276-a104-4182-9220-038729e9f3d5
 exl-id: 261445bf-3c8b-4658-891d-9a878e0b26ea
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '421'
-ht-degree: 100%
+source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
+workflow-type: tm+mt
+source-wordcount: '419'
+ht-degree: 96%
 
 ---
 
 # Configurazione Android {#set-up-android}
 
-Scopri come configurare Streaming Media Analytics per dispositivi Android.
+Scopri come configurare il componente aggiuntivo Streaming Media Collection per dispositivi Android.
 
 >[!IMPORTANT]
 >
@@ -63,7 +63,6 @@ Per ulteriori informazioni sull’SDK per dispositivi mobili di Adobe, consulta 
       1. Fai clic sulle schede **[!UICONTROL Order]** e **[!UICONTROL Export]**.
 
       1. Assicurati che il file `MediaSDK.jar` sia selezionato.
-
 
 1. Importa la libreria.
 

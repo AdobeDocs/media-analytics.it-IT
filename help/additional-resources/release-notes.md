@@ -1,19 +1,19 @@
 ---
-title: Note sulla versione di Adobe Analytics for Streaming Media
-description: Consulta le note sulla versione di Adobe Analytics.
+title: Note sulla versione del componente aggiuntivo Streaming Media Collection
+description: Consulta le note sulla versione del componente aggiuntivo Streaming Media Collection.
 feature: Release Notes
 role: User, Admin, Data Engineer
 exl-id: ef068aa6-fdf4-4a5c-b5d0-b93ad31894e8
-source-git-commit: 9c138248ed8494aa5edb398370ac0100f8cdaa49
+source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
 workflow-type: tm+mt
-source-wordcount: '971'
-ht-degree: 80%
+source-wordcount: '982'
+ht-degree: 73%
 
 ---
 
-# Note sulla versione di 适用于流媒体的 Adobe Analytics (maggio 2023)
+# Note sulla versione del componente aggiuntivo Streaming Media Collection (maggio 2023)
 
-**Ultimo aggiornamento**: sabato 12 maggio 2023
+**Ultimo aggiornamento**: giovedì 29 maggio 2024
 
 ## Risorse correlate
 
@@ -27,13 +27,13 @@ Per informazioni sulle nuove funzioni e correzioni, nonché informazioni importa
 
 ## *Note sulla versione corrente*
 
-## Funzioni nuove e aggiornate di Adobe Customer Journey Analytics for Streaming Media {#cja-features}
+## Funzioni nuove e aggiornate nel componente aggiuntivo Streaming Media Collection di Adobe {#cja-features}
 
 | Funzione | Descrizione | Data prevista |
 | ----------- | ---------- | ------- |
-| Inviare dati web a un Edge Network di Adobe Experience Platform con Web SDK | Ora puoi [utilizzare Adobe Experience Platform Web SDK per inviare i dati web di Streaming Media all’Edge Network di Adobe Experience Platform](/help/implementation/edge/edge-web-sdk.md), consentendoti di creare campagne più personalizzate e fornire contenuti più personalizzati, con conseguente aumento dei dati di tracciamento da includere nei rapporti.<p>Questo miglioramento fornisce un metodo di raccolta unificato per le implementazioni web in tutte le soluzioni Platform, come Customer Journey Analytics, RT-CDP, AJO e Inoltro eventi. In precedenza, l’unico modo per inviare i dati web di Streaming Media ad Edge Network era utilizzare l’API Media Edge. | giovedì 29 maggio 2024 |
-| Inviare dati Roku a Adobe Experience Platform Edge | Ora quando si installa [Media Analytics con la rete Edge di Experience Platform](/help/implementation/edge/implementation-edge.md), è possibile utilizzare l’SDK per Roku di Adobe Experience Platform per inviare dati di contenuti in streaming ad Adobe Experience Platform. | 12 aprile 2024 |
-| Media Collection: integrazione con Experience Edge (API e Mobile SDK) | Ora puoi utilizzare l’API Experience Edge e Mobile SDK per implementare Streaming Media, che consente di creare campagne più personalizzate e fornire contenuti più personalizzati, con conseguente aumento dei dati di tracciamento da includere nei rapporti.<p>Questo miglioramento fornisce un metodo di raccolta unificato in tutte le soluzioni, ad esempio reporting di Customer Journey Analytics, RT-CDP, AJO e inoltro di eventi.  [Ulteriori informazioni](/help/implementation/edge/implementation-edge.md) | sabato 12 maggio 2023 |
+| Inviare dati web a un Edge Network di Adobe Experience Platform con Web SDK | Ora puoi [utilizzare Adobe Experience Platform Web SDK per inviare dati web di contenuti multimediali in streaming a Adobe Experience Platform Edge Network](/help/implementation/edge/edge-web-sdk.md), consentendoti di creare campagne più personalizzate e fornire contenuti più personalizzati, con conseguente aumento dei dati di tracciamento da includere nei rapporti.<p>Questo miglioramento fornisce un metodo di raccolta unificato per le implementazioni web in tutte le soluzioni Platform, come Customer Journey Analytics, RT-CDP, AJO e Event Forwarding. In precedenza, l’unico modo per inviare dati web multimediali in streaming ad Edge Network era utilizzare l’API Media Edge. | 29 maggio 2024 |
+| Inviare dati Roku a Adobe Experience Platform Edge | Ora quando [installazione del componente aggiuntivo Streaming Media Collection con Experience Platform Edge](/help/implementation/edge/implementation-edge.md), puoi utilizzare l’SDK Adobe Experience Platform Roku per inviare dati multimediali in streaming a Adobe Experience Platform. | 12 aprile 2024 |
+| Media Collection: integrazione con Experience Edge (API e Mobile SDK) | Ora puoi utilizzare l’API di Experience Edge e Mobile SDK per implementare il componente aggiuntivo Adobe Streaming Media Collection, che consente di creare campagne più personalizzate e fornire contenuti più personalizzati, con conseguente aumento dei dati di tracciamento da includere nei rapporti.<p>Questo miglioramento fornisce un metodo di raccolta unificato su tutte le soluzioni, ad esempio reporting di Customer Journey Analytics, RT-CDP, AJO e inoltro di eventi.  [Ulteriori informazioni](/help/implementation/edge/implementation-edge.md) | sabato 12 maggio 2023 |
 | Pannello Visualizzatori simultanei di contenuti multimediali | Scopri dove si verificano picchi di concorrenza o abbandoni. Ottieni informazioni approfondite sulla qualità dei contenuti e sul livello di coinvolgimento dell’utente, utili anche per risolvere problemi o pianificare volumi e scala. [Ulteriori informazioni](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/panels/media-concurrent-viewers.html?lang=it) | 9 agosto 2022 |
 | Pannello Tempo trascorso su contenuti multimediali | La funzione Tempo trascorso su contenuti multimediali fornisce insight utili sul coinvolgimento degli utenti. Consente alle organizzazioni di media di ottenere informazioni più approfondite e dettagliate sul coinvolgimento degli utenti minuto per minuto attraverso un’analisi avanzata del tempo trascorso con funzionalità di ripartizione giornaliera. È possibile osservare il tempo impiegato per visualizzare i flussi multimediali in un determinato momento. È possibile suddividere la durata della riproduzione in base a granularità diverse, tra cui nuove granularità di 5, 15 e 30 minuti. [Ulteriori informazioni](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/panels/media-playback-timespent/media-playback-time-spent.html?lang=it) | 9 agosto 2022 |
 | Condividere le annotazioni nelle scorecard per dispositivi mobili | Puoi visualizzare le annotazioni create in Workspace nelle scorecard per dispositivi mobili. Ciò ti consente di condividere dettagli sui dati contestuali e informazioni approfondite sull’organizzazione e sulle campagne direttamente all’interno dei progetti delle scorecard per dispositivi mobili, visualizzabili nell’app mobile delle dashboard di Analytics. [Ulteriori informazioni](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-components/annotations/mobile-annotations.html?lang=it) | 15 giugno 2022 |
@@ -42,7 +42,7 @@ Per informazioni sulle nuove funzioni e correzioni, nonché informazioni importa
 | Modalità anteprima dei progetti scorecard per dispositivi mobili | Avvia un’anteprima per vedere come si presenterà la scorecard per dispositivi mobili nell’app delle dashboard di Analytics, direttamente dal generatore di scorecard. La modalità di anteprima consente agli utenti di interagire con filtri e grafici nello stesso modo in cui farebbero nell’app, fornendo un’anteprima dell’esperienza prima di salvare e condividere la scorecard. Gli utenti possono inoltre utilizzare il selettore dispositivi in modalità anteprima per vedere come si presenterà la scorecard sui diversi dispositivi. [Ulteriori informazioni](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dashboards/create-scorecard.html?lang=it#preview) | 16 febbraio 2022 |
 
 
-## Funzioni nuove e aggiornate di Adobe Analytics for Streaming Media {#sm-features}
+## Funzioni nuove e aggiornate nel componente aggiuntivo Streaming Media Collection di Adobe {#sm-features}
 
 | Funzione | Descrizione | Data prevista |
 | ----------- | ---------- | ------- |

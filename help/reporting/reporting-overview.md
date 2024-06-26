@@ -5,10 +5,10 @@ uuid: d306068d-a308-4b6e-8a72-742dda0de428
 exl-id: 686d88a5-79b6-4936-ba9e-8f834ef330d1
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '879'
-ht-degree: 100%
+source-git-commit: 2ce09eafeb8def909ae2a8ae7cc09a88b2f663af
+workflow-type: tm+mt
+source-wordcount: '878'
+ht-degree: 98%
 
 ---
 
@@ -18,7 +18,7 @@ Ogni suite di rapporti che raccoglie metriche multimediali deve essere configura
 
 >[!TIP]
 >
->Per sfruttare le nuove funzionalità, i clienti Media Analytics esistenti devono riabilitare il tracciamento dei contenuti multimediali per i loro RSID.
+>Per sfruttare le nuove funzionalità, i clienti di Streaming Media esistenti devono riabilitare il tracciamento dei contenuti multimediali per i propri RSID.
 
 1. In [Adobe Analytics](https://experience.adobe.com), fai clic su **[!UICONTROL Admin > Report Suites].**
 1. Seleziona le suite di rapporti in cui stai raccogliendo dati multimediali e fai clic su **[!UICONTROL Edit Settings > Media Management > Media Reporting].**
@@ -31,27 +31,28 @@ Ogni suite di rapporti che raccoglie metriche multimediali deve essere configura
 
    * **Media Core**
 
-      La misurazione dei contenuti multimediali di base viene utilizzata per i contenuti multimediali. Questo utilizzerà le eVar della soluzione (o personalizzate) per tenere traccia di Contenuto, Tipo di contenuto, Nome del lettore di contenuti e Canale di contenuto. Gli eventi di soluzione (o personalizzati) verranno utilizzati per gli eventi di inizio media, inizio contenuto, completamente contenuto e tempo trascorso contenuto.
+     La misurazione dei contenuti multimediali di base viene utilizzata per i contenuti multimediali. Questo utilizzerà le eVar della soluzione (o personalizzate) per tenere traccia di Contenuto, Tipo di contenuto, Nome del lettore di contenuti e Canale di contenuto. Gli eventi di soluzione (o personalizzati) verranno utilizzati per gli eventi di inizio media, inizio contenuto, completamente contenuto e tempo trascorso contenuto.
 
    * **Annunci multimediali**
 
-      La misurazione degli annunci multimediali viene utilizzata per la misurazione degli annunci all’interno del contenuto multimediale. Utilizzerà le eVar della soluzione per misurare Annuncio, Nome del Lettore dell’annuncio, Pod dell’annuncio e Annuncio in posizione pod. Gli eventi della soluzione saranno utilizzati per gli eventi di inizio annuncio, completamento annuncio, tempo trascorso annuncio e tempo trascorso video.
+     La misurazione degli annunci multimediali viene utilizzata per la misurazione degli annunci all’interno del contenuto multimediale. Utilizzerà le eVar della soluzione per misurare Annuncio, Nome del Lettore dell’annuncio, Pod dell’annuncio e Annuncio in posizione pod. Gli eventi della soluzione saranno utilizzati per gli eventi di inizio annuncio, completamento annuncio, tempo trascorso annuncio e tempo trascorso video.
 
    * **Capitoli multimediali**
 
-      La misurazione dei capitoli video viene utilizzata per la misurazione dei capitoli. Un capitolo è una suddivisione dei contenuti all’interno di un singolo supporto. Questo utilizzerà un eVar della soluzione per memorizzare l’ID del capitolo. Gli eventi della soluzione verranno utilizzati per gli eventi di inizio capitolo, completamento capitolo e tempo capitolo trascorso. I metadati aggiuntivi del capitolo Nome e Posizione capitolo saranno forniti come classificazioni dell’ID capitolo.
+     La misurazione dei capitoli video viene utilizzata per la misurazione dei capitoli. Un capitolo è una suddivisione dei contenuti all’interno di un singolo supporto. Questo utilizzerà un eVar della soluzione per memorizzare l’ID del capitolo. Gli eventi della soluzione verranno utilizzati per gli eventi di inizio capitolo, completamento capitolo e tempo capitolo trascorso. I metadati aggiuntivi del capitolo Nome e Posizione capitolo saranno forniti come classificazioni dell’ID capitolo.
 
    * **Qualità dei supporti**
 
-      La misurazione della qualità video viene utilizzata per misurare la qualità di riproduzione dei contenuti. Questo utilizzerà le eVar della soluzione per memorizzare il tempo di avvio, gli eventi buffer, la durata totale del buffer, gli switch bitrate, il bitrate medio, gli errori e i fotogrammi rilasciati. Eventi per la soluzione saranno utilizzati per tempo di avvio, perdite prima dell’avvio, flussi interessati dal buffer, eventi buffer, durata totale buffer, flussi interessati dalla modifica del bitrate, modifiche del bitrate, bitrate medio, flussi interessati da errori, eventi di errore, flussi interessati da fotogrammi saltati e fotogrammi saltati.
+     La misurazione della qualità video viene utilizzata per misurare la qualità di riproduzione dei contenuti. Questo utilizzerà le eVar della soluzione per memorizzare il tempo di avvio, gli eventi buffer, la durata totale del buffer, gli switch bitrate, il bitrate medio, gli errori e i fotogrammi rilasciati. Eventi per la soluzione saranno utilizzati per tempo di avvio, perdite prima dell’avvio, flussi interessati dal buffer, eventi buffer, durata totale buffer, flussi interessati dalla modifica del bitrate, modifiche del bitrate, bitrate medio, flussi interessati da errori, eventi di errore, flussi interessati da fotogrammi saltati e fotogrammi saltati.
 
    * **Metadati annuncio video &amp; video**
 
-      I metadati possono essere allegati al media e/o all’annuncio per descrivere o classificare ulteriormente questi ultimi. I video standardizzati e i metadati degli annunci vengono raccolti tramite variabili e classificazioni della soluzione. I valori includono: spettacolo, stagione, episodio, ID risorsa, genere, prima messa in onda, prima pubblicazione digitale, valutazione contenuto, creatore, rete, tipo di programma, carico pubblicitario, MVPD, autorizzato, parte del giorno, ID di sessione media, inserzionista, ID campagna e ID creativo.
+     I metadati possono essere allegati al media e/o all’annuncio per descrivere o classificare ulteriormente questi ultimi. I video standardizzati e i metadati degli annunci vengono raccolti tramite variabili e classificazioni della soluzione. I valori includono: spettacolo, stagione, episodio, ID risorsa, genere, prima messa in onda, prima pubblicazione digitale, valutazione contenuto, creatore, rete, tipo di programma, carico pubblicitario, MVPD, autorizzato, parte del giorno, ID di sessione media, inserzionista, ID campagna e ID creativo.
 
    * **Metadati annuncio audio &amp; audio**
 
-      I metadati possono essere allegati all’audio e/o all’annuncio per descrivere o classificare ulteriormente questi ultimi. Gli audio standardizzati e i metadati degli annunci vengono raccolti tramite variabili e classificazioni della soluzione. Valori da includere: artista, album, etichetta, autore, editore, stazione, spettacolo, stagione, episodio, ID risorsa, genere, prima data aria, prima data digitale, valutazione contenuto, referente, tipo di spettacolo, caricamento annuncio, parte giorno, ID sessione media, inserzionista, ID campagna e ID creativo.
+     I metadati possono essere allegati all’audio e/o all’annuncio per descrivere o classificare ulteriormente questi ultimi. Gli audio standardizzati e i metadati degli annunci vengono raccolti tramite variabili e classificazioni della soluzione. Valori da includere: artista, album, etichetta, autore, editore, stazione, spettacolo, stagione, episodio, ID risorsa, genere, prima data aria, prima data digitale, valutazione contenuto, referente, tipo di spettacolo, caricamento annuncio, parte giorno, ID sessione media, inserzionista, ID campagna e ID creativo.
+
    L’abilitazione di ogni modulo riserva un set di variabili e crea un nuovo set di rapporti. Ad eccezione di Qualità, i rapporti non conterranno alcun dato, a meno che l’implementazione corrispondente non sia stata completata. L’implementazione del modulo Core implementa anche il modulo Qualità se lo abiliti.
 
    Se non tieni traccia degli annunci, dei capitoli o della qualità di riproduzione, puoi attivare opzioni aggiuntive in qualsiasi momento.

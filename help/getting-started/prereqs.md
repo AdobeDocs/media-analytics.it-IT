@@ -1,29 +1,29 @@
 ---
-title: Informazioni sui prerequisiti per Streaming Media
-description: Guida introduttiva ad Adobe Analytics Streaming Media. Scopri cosa serve per implementare Adobe Analytics for Streaming Media.
+title: Scopri i prerequisiti per il componente aggiuntivo Streaming Media Collection di Adobe
+description: Introduzione al componente aggiuntivo Streaming Media Collection. Scopri cosa serve per l’implementazione.
 uuid: 4c0b37f3-8615-4cc0-b9c9-eeb029067064
 exl-id: 85ab1dbd-f4a7-4f11-afc9-8d5000e2de70
 feature: "Media Analytics, System Requirements"
 role: User, Admin, Data Engineer
-source-git-commit: b12e6547ef32bfad7e8d6787a26d6467bcfeb23c
+source-git-commit: 240fa48bdc738425e04cd29c27625c7dd612ff18
 workflow-type: tm+mt
-source-wordcount: '442'
-ht-degree: 74%
+source-wordcount: '435'
+ht-degree: 54%
 
 ---
 
-# Prerequisiti  {#prerequisites}
+# Prerequisiti {#prerequisites}
 
-Prima di iniziare a implementare Streaming Media, completa le seguenti attività:
+Prima di iniziare l’implementazione del componente aggiuntivo Streaming Media Collection di Adobe, completa le seguenti attività:
 
-1. **Consulta la panoramica su Streaming Media**<br>
-Prima di iniziare l’implementazione di Streaming Media, controlla [Panoramica di Streaming Media](/help/media-overview.md) per assicurarsi che Streaming Media soddisfi le tue esigenze.
+1. **Panoramica del componente aggiuntivo Streaming Media Collection**<br>
+Prima di iniziare a implementare il componente aggiuntivo Streaming Media Collection, controlla [Panoramica del componente aggiuntivo Streaming Media Collection](/help/media-overview.md) per assicurarsi che soddisfi le tue esigenze.
 
-1. **Conferma il modello di prezzo per Streaming Media**<br>
-Il modello di prezzo corrente si basa sui flussi video. Se necessario, contatta il rappresentante commerciale o il team dell’account Adobe, poiché Streaming Media viene venduto separatamente, come componente aggiuntivo di Adobe Analytics.<!--update when media SKUs are added to other AEP apps -->
+1. **Conferma il modello di prezzo**<br>
+Il modello di prezzo corrente per il componente aggiuntivo Streaming Media Collection di Adobe si basa sui flussi video. Se necessario, contatta il rappresentante commerciale o il team dell’account Adobe, poiché il componente aggiuntivo viene venduto separatamente per Adobe Analytics e Adobe Experience Platform.
 
-1. **Abilita i rapporti di Adobe Analytics**<br>
-Per abilitare i rapporti in Analytics e visualizzare il contenuto e i dati degli annunci che stai raccogliendo, è necessario abilitare i rapporti in Analytics. Consulta [Abilitazione di rapporti multimediali](/help/reporting/media-reports-enable.md).
+1. **Abilitare i rapporti di Adobe Analytics**<br>
+Per abilitare i rapporti in Analytics o Customer Journey Analytics e visualizzare il contenuto e i dati degli annunci che stai raccogliendo, devi abilitare i rapporti. Consulta [Abilitazione di rapporti multimediali](/help/reporting/media-reports-enable.md).
 
 1. **Implementazione del servizio Adobe Experience Platform Identity in Experience Cloud**
 
@@ -41,10 +41,10 @@ Per abilitare i rapporti in Analytics e visualizzare il contenuto e i dati degli
 
 1. **Visualizza prerequisiti aggiuntivi per il metodo di implementazione**
 
-   A seconda di come prevedi di implementare Streaming Media, visualizza i prerequisiti per uno dei seguenti metodi di implementazione:
+   A seconda di come prevedi di implementare il componente aggiuntivo Streaming Media Collection, visualizza i prerequisiti per uno dei seguenti metodi di implementazione:
 
    * [Prerequisiti per le implementazioni basate solo su Adobe Analytics](/help/implementation/media-sdk/setup/prerequisites-analytics.md)
 
-   * [Prerequisiti per le implementazioni Edge](/help/implementation/edge/prerequisites-edge.md)
+   * [Prerequisiti per le implementazioni di Edge](/help/implementation/edge/prerequisites-edge.md)
 
    Utilizza il [Panoramica sull’implementazione](/help/implementation/overview.md) per determinare quale metodo di implementazione è più adatto alle tue esigenze.

@@ -5,16 +5,16 @@ uuid: a1c6be79-a6dc-47b6-93b3-ac7b42f1f3eb
 exl-id: fe7662b5-1700-4bd6-b542-66aa8493459d
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '739'
-ht-degree: 100%
+source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
+workflow-type: tm+mt
+source-wordcount: '732'
+ht-degree: 95%
 
 ---
 
 # Configurazione iOS {#set-up-ios}
 
-Scopri come configurare Streaming Media Analytics per dispositivi iOS.
+Scopri come configurare il componente aggiuntivo Streaming Media Collection per dispositivi iOS.
 
 >[!IMPORTANT]
 >
@@ -27,14 +27,14 @@ Questi parametri possono essere ottenuti da un rappresentante di Adobe dopo la c
 * **Implementare ADBMobile per iOS nella tua applicazione**
 Per ulteriori informazioni sulla documentazione dell’SDK di Adobe Mobile, consulta [SDK 4.x per iOS per le soluzioni Experience Cloud.](https://experienceleague.adobe.com/docs/mobile-services/ios/overview.html?lang=it)
 
-   >[!IMPORTANT]
-   >
-   >A partire da iOS 9, Apple ha introdotto una funzione denominata App Transport Security (ATS). Questa funzione mira a migliorare la sicurezza della rete assicurando che le app utilizzino solo protocolli e cifrature standard del settore. Questa funzione è abilitata per impostazione predefinita, ma disponi di opzioni di configurazione per scegliere come lavorare con ATS. Per maggiori dettagli su ATS, consulta [App Transport Security.](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/app-transport-security.html?lang=it)
+  >[!IMPORTANT]
+  >
+  >A partire da iOS 9, Apple ha introdotto una funzione denominata App Transport Security (ATS). Questa funzione mira a migliorare la sicurezza della rete assicurando che le app utilizzino solo protocolli e cifrature standard del settore. Questa funzione è abilitata per impostazione predefinita, ma disponi di opzioni di configurazione per scegliere come lavorare con ATS. Per maggiori dettagli su ATS, consulta [App Transport Security.](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/app-transport-security.html?lang=it)
 
 * **Fornisci le seguenti funzionalità nel lettore multimediale:**
 
    * _API per abbonarsi agli eventi del lettore_: Media SDK richiede di chiamare un set di API semplici quando si verificano eventi nel lettore.
-   * _API che fornisce informazioni sul lettore_: queste informazioni includono dettagli quali il nome dell’elemento multimediale e la posizione della testina di riproduzione.
+   * _API che fornisce informazioni sul lettore_ - Queste informazioni includono dettagli quali il nome del supporto e la posizione della testina di riproduzione.
 
 ## Implementazione SDK
 
@@ -57,11 +57,12 @@ Per ulteriori informazioni sulla documentazione dell’SDK di Adobe Mobile, cons
       * `ADBMediaHeartbeatConfig.h`: file di intestazione Objective-C per la configurazione dell’SDK.
       * `MediaSDK.a`: fat binary abilitato per bitcode contenente le build della libreria per dispositivi (armv7, armv7s, arm64) e simulatori (i386 e x86_64) iOS.
 
-         Se la destinazione è un’app iOS, il binary deve essere collegato.
+        Se la destinazione è un’app iOS, il binary deve essere collegato.
 
       * `MediaSDK_TV.a`: un fat binary abilitato per bitcode contenente le build della libreria per i nuovi dispositivi (arm64) e simulatori (x86_64) Apple TV.
 
-         Se la destinazione è un’app per Apple TV (tvOS), il binary deve essere collegato.
+        Se la destinazione è un’app per Apple TV (tvOS), il binary deve essere collegato.
+
    1. Aggiungi la libreria al progetto:
 
       1. Avvia l’IDE di Xcode e apri la tua app.
@@ -87,11 +88,8 @@ Per ulteriori informazioni sulla documentazione dell’SDK di Adobe Mobile, cons
          * **MediaSDK_TV.a**
          * **libsqlite3.0.tbd**
          * **SystemConfiguration.framework**
+
       1. Verifica che l’app possa essere generata senza errori.
-
-
-
-
 
 1. Importa la libreria.
 
@@ -169,9 +167,9 @@ Con il rilascio della nuova Apple TV, potrai creare applicazioni da eseguire nel
 
 Completa i seguenti passaggi nel progetto Xcode. Questa guida è stata scritta per un progetto il cui target è un’app Apple TV destinata a tvOS:
 
-1. Trascina il file di libreria `VideoHeartbeat_TV.a` nella cartella `lib` del progetto.
+1. Trascina `VideoHeartbeat_TV.a` nel file di libreria del progetto `lib` cartella.
 
-1. Nella scheda **[!UICONTROL Build Phases]** di destinazione dell’app tvOS, espandi la sezione **[!UICONTROL Link Binary with Libraries]** e aggiungi le seguenti librerie:
+1. In **[!UICONTROL Build Phases]** della destinazione dell&#39;app tvOS, espandi la scheda **[!UICONTROL Link Binary with Libraries]** e aggiungi le seguenti librerie:
 
    * `MediaSDK_TV.a`
    * `AdobeMobileLibrary_TV.a`

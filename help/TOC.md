@@ -1,27 +1,27 @@
 ---
 product: adobe analytics
 audience: end-user
-user-guide-title: Adobe Analytics per contenuti multimediali in streaming
-breadcrumb-title: Guida di Media Analytics
-user-guide-description: Implementare Adobe Analytics per contenuti multimediali in streaming. Gli argomenti trattati comprendono Media SDK e Media Collection API.
+user-guide-title: Componente aggiuntivo Streaming Media Collection
+breadcrumb-title: Guida alla raccolta di contenuti multimediali in streaming
+user-guide-description: Implementare Streaming Media. Gli argomenti trattati comprendono Media SDK e Media Collection API.
 sub-product: media analytics
-source-git-commit: e23369e276d2e851be84a29fd7dde43eafbb2060
+source-git-commit: 240fa48bdc738425e04cd29c27625c7dd612ff18
 workflow-type: tm+mt
-source-wordcount: '900'
-ht-degree: 91%
+source-wordcount: '895'
+ht-degree: 88%
 
 ---
 
 
-# Adobe Analytics per contenuti multimediali in streaming {#using}
+# Componente aggiuntivo Streaming Media Collection {#using}
 
-+ [Guida a Streaming Media Analytics](media-overview.md)
++ [Guida alla raccolta di contenuti multimediali in streaming](media-overview.md)
 + Note sulla versione {#release-notes}
-   + [Note sulla versione di Streaming Media](additional-resources/release-notes.md)
+   + [Note sulla versione di Streaming Media Collection](additional-resources/release-notes.md)
 + Introduzione {#getting-started}
    + [Prerequisiti](getting-started/prereqs.md)
    + [Dispositivi supportati](getting-started/supported-devices.md)
-   + [Documentazione di Streaming Media](getting-started/implementation-documentation.md)
+   + [Documentazione sull’implementazione di Streaming Media Collection](getting-started/implementation-documentation.md)
    + [SDK, librerie ed estensioni](getting-started/download-sdks.md)
    + Fine del supporto {#end-of-support}
       + [Fine del supporto di Mobile SDK di Media Analytics](additional-resources/end-of-support-faqs.md)
@@ -32,17 +32,17 @@ ht-degree: 91%
          + [JavaScript - da Media SDK a Launch](legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-js.md)
 + Implementazione {#implementation}
    + [Panoramica sull’implementazione](implementation/overview.md)
-   + Implementazioni Edge (consigliate) {#edge-recommended}
+   + Implementazioni di Edge (consigliato) {#edge-recommended}
       + [Prerequisiti](/help/implementation/edge/prerequisites-edge.md)
-      + SDK/Estensione Media Edge {#media-edge-sdk}
-         + [Configurazione di SDK Media Edge/Estensione](/help/implementation/edge/implementation-edge.md)
+      + SDK/estensione di Media Edge {#media-edge-sdk}
+         + [Configurazione di SDK/estensioni di Media Edge](/help/implementation/edge/implementation-edge.md)
          + [Media Edge Web SDK](/help/implementation/edge/edge-web-sdk.md)
          + [Media Edge Mobile SDK](/help/implementation/edge/edge-mobile-sdk.md)
-      + [API Media Edge](/help/implementation/edge/implementation-edge-api.md)
+      + [API di Media Edge](/help/implementation/edge/implementation-edge-api.md)
    + Implementazioni solo per Adobe Analytics {#analytics-only}
       + [Prerequisiti](/help/implementation/media-sdk/setup/prerequisites-analytics.md)
       + Media SDK/Estensione {#media-sdk}
-         + [Web SDK JavaScript](implementation/media-sdk/setup/web-implementation.md)
+         + [JavaScript Web SDK](implementation/media-sdk/setup/web-implementation.md)
          + [Estensione Media Analytics](implementation/media-sdk/setup/web-implementation-tags.md)
          + [SDK per dispositivi mobili](implementation/media-sdk/setup/mobile-implementation.md)
          + SDK OTT {#ott-setup}
@@ -172,7 +172,7 @@ ht-degree: 91%
       + Configurazione JavaScript {#setup-javascript}
          + [Configurare JavaScript 2.x](legacy/media-sdk/setup/setup-javascript/set-up-js-2.md)
    + [Informazioni sulla misurazione con Heartbeat](legacy/heartbeat-measurement.md)
-   + [Adobe Primetime e Streaming Media Analytics](legacy/intro-to-ava/implementation-paths/primetime-path.md)
+   + [Adobe Primetime](legacy/intro-to-ava/implementation-paths/primetime-path.md)
    + [Abilitazione di Adobe Audience Management](legacy/intro-to-ava/am-enablement.md)
    + [Implementazione del collegamento personalizzato](legacy/measurement-options/cl-in-aa/cl-impl-guide.md)
    + Tracciamento Milestone legacy {#legacy-milestone-tracking}

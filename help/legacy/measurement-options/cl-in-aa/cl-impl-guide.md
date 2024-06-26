@@ -1,14 +1,14 @@
 ---
 title: Spiegazione dell'implementazione del collegamento personalizzato
-description: Scopri come implementare il tracciamento del collegamento personalizzato in Streaming Media Analytics.
+description: Scopri come implementare il tracciamento dei collegamenti personalizzati nel componente aggiuntivo Streaming Media Collection.
 uuid: 83315e73-20ca-4db5-9d43-33daade45a13
 exl-id: ee6f931a-ef80-4ebe-8ccb-cdbf970516e6
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '200'
-ht-degree: 100%
+source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
+workflow-type: tm+mt
+source-wordcount: '178'
+ht-degree: 92%
 
 ---
 

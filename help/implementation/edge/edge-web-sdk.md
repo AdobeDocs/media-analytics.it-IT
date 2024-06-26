@@ -1,16 +1,17 @@
 ---
-title: Inviare dati web a Edge con Adobe Experience Platform Web SDK
-description: Scopri come inviare dati Adobe Streaming Media ad Experienci Platform Edge con Adobe Experience Platform Web SDK.
+title: Inviare dati web ad Edge con Adobe Experience Platform Web SDK
+description: Scopri come inviare dati Adobe Streaming Media ad Experience Platform Edge con Adobe Experience Platform Web SDK.
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: ad40260d29bd5b739184cb551f084565d05e65a7
+exl-id: de40ebd9-46be-4a52-866f-7bb2589fce28
+source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '527'
 ht-degree: 0%
 
 ---
 
-# Inviare dati web a Edge con Adobe Experience Platform Web SDK
+# Inviare dati web ad Edge con Adobe Experience Platform Web SDK
 
 A partire dalla versione 2.20.0 di, `streamingMedia` componente di Adobe Experience Platform [SDK per web](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home) consente di raccogliere i dati relativi alle sessioni multimediali sul sito web. I dati raccolti possono includere informazioni su riproduzioni multimediali, pause, completamenti e altri eventi correlati.
 
@@ -22,16 +23,16 @@ Per i clienti che utilizzano Media JS SDK, Web SDK fornisce un percorso di migra
 
 Per utilizzare `streamingMedia` componente di Web SDK, è necessario soddisfare i seguenti prerequisiti:
 
-* Prima di poter inviare i dati di Media Analytics a Edge, completa i passaggi descritti in [Installare Media Analytics con Experienci Platform Edge](/help/implementation/edge/implementation-edge.md).
+* Prima di poter inviare dati multimediali in streaming ad Edge, completa i passaggi descritti in [Installare il componente aggiuntivo Streaming Media Collection con Experience Platform Edge](/help/implementation/edge/implementation-edge.md).
 * Assicurati di avere accesso a Adobe Experience Platform e/o Adobe Analytics.
 * È necessario utilizzare Web SDK versione 2.20.0 o successiva. Consulta la [Panoramica sull’installazione di Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/overview) per scoprire come installare la versione più recente.
 * Abilita **[[!UICONTROL Media Analytics]](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/configure)** per lo stream di dati in uso.
 * Assicurati che lo schema utilizzato dallo stream di dati includa i campi dello schema di Media Collection.
 * Configura la funzione Streaming Media nella configurazione dell’SDK Web, come mostrato in questa pagina, tramite [estensione tag](#tag-extension) o tramite [Libreria JavaScript](#library).
 
-Segui i passaggi descritti in questa pagina per migrare l’implementazione di Analytics para mídia de streaming da Media JS a Web SDK.
+Segui i passaggi descritti in questa pagina per migrare l’implementazione del componente aggiuntivo Streaming Media Collection da Media JS a Web SDK.
 
-### Passaggio 1: installare Experienci Platform Web SDK
+### Passaggio 1: installare Experience Platform Web SDK
 
 Consulta la [documentazione dedicata](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/overview) per scoprire come installare Web SDK nelle proprietà web.
 

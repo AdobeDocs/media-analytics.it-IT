@@ -4,10 +4,10 @@ description: Scopri come collegare le azioni dell’applicazione ai dati di trac
 exl-id: 75cc9088-776d-4b10-b358-9fff956a7eb7
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '231'
-ht-degree: 100%
+source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
+workflow-type: tm+mt
+source-wordcount: '233'
+ht-degree: 87%
 
 ---
 
@@ -23,7 +23,7 @@ Per abilitare questa funzione per un rapporto specifico, riattiva la configurazi
 
 >[!NOTE]
 >
->Le metriche relative ai file multimediali _non_ sono disponibili per l’utilizzo al di fuori del tracciamento dei contenuti multimediali, poiché la maggior parte di esse è calcolata da Streaming Media Analytics in base agli eventi heartbeat. Inoltre, è importante che le metriche dei contenuti multimediali non siano gonfiate da implementazioni diverse.
+>Le metriche per i file multimediali sono _non_ è disponibile per l’utilizzo al di fuori del tracciamento dei contenuti multimediali, poiché la maggior parte di questi sono calcolati dal componente aggiuntivo Streaming Media Collection in base a eventi heartbeat. Inoltre, è importante che le metriche dei contenuti multimediali non siano gonfiate da implementazioni diverse.
 
 ## Utilizzo di Attribuzione flusso multimediale
 

@@ -5,10 +5,10 @@ uuid: 904dfda0-4782-41da-b4ab-212e81156633
 exl-id: b8de88d0-3a93-4776-b372-736bf979ee26
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '668'
-ht-degree: 100%
+source-git-commit: 2ce09eafeb8def909ae2a8ae7cc09a88b2f663af
+workflow-type: tm+mt
+source-wordcount: '666'
+ht-degree: 93%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 100%
 
 ## Prerequisiti {#roku-prerequisites}
 
-* **Ottenere parametri di configurazione validi per Media Analytics**
+* **Ottenere parametri di configurazione validi per il componente aggiuntivo Streaming Media Collection**
 
-   Questi parametri possono essere ottenuti da un rappresentante di Adobe dopo la configurazione dell’account di Media Analytics.
+  Questi parametri possono essere ottenuti da un rappresentante di Adobe dopo la configurazione dell’account del componente aggiuntivo Adobe Streaming Media Collection.
 * **Includi le seguenti API nel lettore multimediale**
 
    * _API per abbonarsi agli eventi del lettore_: Media SDK richiede di chiamare un set di API semplici quando si verificano eventi nel lettore.
@@ -35,9 +35,10 @@ L’SDK 2.x per Roku per le soluzioni di Experience Cloud consente di misurare l
       * `adbmobile.brs`: questo file libreria verrà incluso nella cartella di origine dell’app Roku.
 
       * `ADBMobileConfig.json`: file di configurazione dell’SDK personalizzato per la tua app.
+
    1. Aggiungi il file di libreria e il file di configurazione JSON alla tua origine del progetto.
 
-      Il JSON utilizzato per configurare Adobe Mobile ha una chiave esclusiva per Media Analytics denominata `mediaHeartbeat`. Qui appartengono i parametri di configurazione di Media Analytics.
+      Il JSON utilizzato per configurare Adobe Mobile ha una chiave esclusiva per Media Analytics denominata `mediaHeartbeat`. Qui appartengono i parametri di configurazione per Media Analytics.
 
       >[!TIP]
       >
@@ -99,7 +100,6 @@ L’SDK 2.x per Roku per le soluzioni di Experience Cloud consente di misurare l
       >[!IMPORTANT]
       >
       >Se `mediaHeartbeat` non è configurato correttamente, il modulo multimediale (VHL) immette uno stato di errore e interrompe l’invio di chiamate di tracciamento.
-
 
 1. ID visitatore di Experience Cloud.
 

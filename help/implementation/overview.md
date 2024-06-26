@@ -1,38 +1,38 @@
 ---
-title: Implementazione di contenuti multimediali in streaming per Adobe Analytics o Customer Journey Analytics
-description: Informazioni sui percorsi di implementazione di Streaming Media.
+title: Implementare il componente aggiuntivo Streaming Media Collection
+description: Scopri i percorsi di implementazione per il componente aggiuntivo Streaming Media Collection.
 uuid: null
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: ed9297b1-6487-4099-bc62-0c3a40572255
-source-git-commit: 39869d5eeea02e81c204d995ac158b3e7b7541c7
+source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 9%
+source-wordcount: '459'
+ht-degree: 7%
 
 ---
 
-# Implementazione di contenuti multimediali in streaming per Adobe Analytics o Customer Journey Analytics
+# Implementare il componente aggiuntivo Streaming Media Collection
 
-Esistono diversi modi per implementare Streaming Media. Per un confronto dettagliato dei dispositivi e delle piattaforme supportati per i metodi di implementazione descritti in questa pagina, vedi [Piattaforme e dispositivi supportati](/help/getting-started/supported-devices.md).
+Esistono diversi modi per implementare il componente aggiuntivo Streaming Media Collection di Adobe. Per un confronto dettagliato dei dispositivi e delle piattaforme supportati per i metodi di implementazione descritti in questa pagina, vedi [Piattaforme e dispositivi supportati](/help/getting-started/supported-devices.md).
 
-## Metodi di implementazione Edge
+## Metodi di implementazione di Edge
 
-È consigliabile utilizzare Edge durante l’implementazione di Media Analytics per tutti i nuovi clienti Adobe Analytics o Customer Journey Analytics.
+Per tutti i nuovi clienti Adobe Analytics o Customer Journey Analytics, consigliamo di utilizzare Edge durante l’implementazione del componente aggiuntivo Streaming Media Collection.
 
 * **Media per Edge Network SDK / Estensione:** Raccoglie dati dal web, dai dispositivi iOS e Android o dai dispositivi Roku e li invia ad Edge Network. I dati possono quindi essere inviati a Customer Journey Analytics o Adobe Analytics.
 
-  Per ulteriori informazioni su Media, ad Edge Network SDK/Estensione, consulta [Installare Media Analytics con Experienci Platform Edge](/help/implementation/edge/implementation-edge.md).
+  Per ulteriori informazioni su Media, ad Edge Network SDK/Estensione, consulta [Implementare il componente aggiuntivo Streaming Media Collection utilizzando l’Edge Network](/help/implementation/edge/implementation-edge.md).
 
-* **API Media Edge:** Può essere personalizzato per raccogliere dati da qualsiasi dispositivo o formato (inclusi dispositivi mobili, web e over-the-top) e invia dati ad Edge Network. I dati possono quindi essere inviati a Customer Journey Analytics o Adobe Analytics.
+* **API di Media Edge:** Può essere personalizzato per raccogliere dati da qualsiasi dispositivo o formato (inclusi dispositivi mobili, web e over-the-top) e invia dati ad Edge Network. I dati possono quindi essere inviati a Customer Journey Analytics o Adobe Analytics.
 
-  Per ulteriori informazioni sull’API Media Edge, consulta [Panoramica API di Media Edge](https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/).
+  Per ulteriori informazioni sull’API di Media Edge, consulta [Panoramica API di Media Edge](https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/).
 
 ![Flusso di lavoro in CJA](assets/streaming-media-edge.png)
 
 ## Metodi di implementazione solo per Adobe Analytics
 
-I metodi di implementazione Edge descritti in precedenza sono consigliati sia per il Customer Journey Analytics che per Adobe Analytics, in particolare per le nuove implementazioni.
+I metodi di implementazione di Edge descritti in precedenza sono consigliati sia per il Customer Journey Analytics che per Adobe Analytics, in particolare per le nuove implementazioni.
 
 Oltre ai metodi di implementazione di Edge, sono disponibili altri metodi di implementazione. Questi metodi di implementazione sono stati progettati per l’utilizzo con Adobe Analytics. Tuttavia, i clienti esistenti con uno dei seguenti metodi di implementazione possono ancora rendere disponibili i dati nel Customer Journey Analytics creando un [Connessione sorgente Analytics](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/analytics.html?lang=it).
 

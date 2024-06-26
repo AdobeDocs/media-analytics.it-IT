@@ -6,18 +6,18 @@ uuid: c14bdbef-5846-4d31-8a14-8e9e0e9c9861
 exl-id: 58430636-7fab-433a-8ead-52ccaa45d920
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
+source-git-commit: 240fa48bdc738425e04cd29c27625c7dd612ff18
+workflow-type: tm+mt
 source-wordcount: '357'
-ht-degree: 100%
+ht-degree: 93%
 
 ---
 
-# Panoramica sulle API di Media Collection{#overview}
+# Panoramica sulle API di Media Collection {#overview}
 
 L’API di Media Collection è un’alternativa RESTful di Adobe a Media SDK lato client. Con l’API di Media Collection, il lettore può tenere traccia degli eventi audio e video tramite chiamate HTTP RESTful.
 
-L&#39;API di Media Collection è essenzialmente un adattatore che agisce come versione lato server di Media SDK. Ciò significa che alcuni aspetti della documentazione di Media SDK sono pertinenti anche per l’API di Media Collection. Ad esempio, entrambe le soluzioni utilizzano gli stessi [parametri dei contenuti multimediali in streaming](../variables/audio-video-parameters.md). Inoltre, i dati di tracciamento dei contenuti multimediali in streaming raccolti determinano la stessa [generazione di report e analisi.](/help/reporting/media-reports-enable.md)
+L&#39;API di Media Collection è essenzialmente un adattatore che agisce come versione lato server di Media SDK. Ciò significa che alcuni aspetti della documentazione di Media SDK sono pertinenti anche per l’API di Media Collection. Ad esempio, entrambe le soluzioni utilizzano lo stesso [Parametri per contenuti multimediali in streaming](../variables/audio-video-parameters.md), e i dati di tracciamento dei contenuti multimediali in streaming raccolti portano allo stesso [Reporting e analisi.](/help/reporting/media-reports-enable.md)
 
 ## Flussi di dati di tracciamento dei contenuti multimediali {#media-tracking-data-flows}
 
@@ -37,11 +37,11 @@ I dati di tracciamento acquisiti con l’API di Media Collection sono inviati e 
 
 * **`sessions`-** Stabilisce una sessione con il server e restituisce un ID sessione utilizzato in chiamate `events` successive. L’app effettua la chiamata una sola volta all’inizio di una sessione di tracciamento.
 
-   `{uri}/api/v1/sessions`
+  `{uri}/api/v1/sessions`
 
 * **`events`-** Invia i dati di tracciamento dei contenuti multimediali.
 
-   `{uri}/api/v1/sessions/{session-id}/events`
+  `{uri}/api/v1/sessions/{session-id}/events`
 
 ### Corpo della richiesta {#mc-api-request-body}
 

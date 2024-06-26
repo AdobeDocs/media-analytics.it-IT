@@ -4,10 +4,10 @@ description: “Scopri come implementare il tracciamento della qualità dell’e
 exl-id: b5570e9c-8fb1-4458-bd1a-86ff6fce7813
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
+source-git-commit: 2ce09eafeb8def909ae2a8ae7cc09a88b2f663af
+workflow-type: tm+mt
 source-wordcount: '224'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -19,7 +19,7 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione con tutti 
 >
 >Se implementi una versione precedente dell’SDK, puoi scaricare le Guide per sviluppatori qui: [Scaricare gli SDK.](/help/getting-started/download-sdks.md)
 
-## Implementare QoE
+## Implementare QOE
 
 1. Identifica quando il bitrate cambia durante la riproduzione del contenuto multimediale e crea l’istanza `qoeObject` tramite le informazioni QoE.
 

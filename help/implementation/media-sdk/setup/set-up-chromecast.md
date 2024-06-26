@@ -5,22 +5,22 @@ uuid: d664e394-02a2-4985-bbad-be1bcc44fb2b
 exl-id: 5dfe3407-2858-48c0-a70c-8ea87967ac47
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '575'
-ht-degree: 100%
+source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
+workflow-type: tm+mt
+source-wordcount: '571'
+ht-degree: 97%
 
 ---
 
 # Configurare Mobile SDK v3.x per Chromecast {#set-up-chromecast}
 
-Questa sezione descrive i prerequisiti per la configurazione di un’installazione Chromecast per i contenuti multimediali in streaming.
+In questa sezione vengono descritti i prerequisiti per la configurazione di un&#39;installazione Chromecast per il componente aggiuntivo Streaming Media Collection.
 
 ## Prerequisiti
 
 * **Ottenere parametri di configurazione validi**
 
-   Questi parametri possono essere ottenuti da un rappresentante di Adobe dopo la configurazione dell’account di Media Analytics.
+  Questi parametri possono essere ottenuti da un rappresentante di Adobe dopo la configurazione dell’account di Media Analytics.
 * **Includi le seguenti API nel lettore multimediale**
 
    * *API per abbonarsi agli eventi del lettore*: Media SDK richiede di chiamare un set di API semplici quando si verificano eventi nel lettore.
@@ -38,11 +38,12 @@ La libreria mobile di Adobe per Chromecast v3.x per soluzioni Experience Cloud c
 
       * `adbmobile-chromecast.min.js`:
 
-         Questo file della libreria verrà incluso nella cartella di origine dell’app Chromecast.
+        Questo file della libreria verrà incluso nella cartella di origine dell’app Chromecast.
 
       * File di configurazione `ADBMobileConfig`
 
-         Questo file di configurazione dell’SDK è personalizzato per la tua app. Un esempio dell’implementazione `ADBMobileConfig` viene fornita con l’SDK (in `samples/`). Ottieni le impostazioni corrette da un rappresentante di Adobe.
+        Questo file di configurazione dell’SDK è personalizzato per la tua app. Un esempio dell’implementazione `ADBMobileConfig` viene fornita con l’SDK (in `samples/`). Ottieni le impostazioni corrette da un rappresentante di Adobe.
+
    1. Aggiungi il file della libreria al tuo file `index.html` e crea la variabile globale `ADBMobileConfig` come segue (la variabile globale utilizzata per configurare Adobe Mobile per Media Analytics ha una chiave esclusiva denominata `mediaHeartbeat`):
 
       ```js
@@ -91,6 +92,7 @@ La libreria mobile di Adobe per Chromecast v3.x per soluzioni Experience Cloud c
       >se `mediaHeartbeat` non è configurato correttamente, il modulo multimediale entra in uno stato di errore e interrompe l’invio delle chiamate di tracciamento.
 
       Parametri di configurazione ADBMobile per la chiave mediaHeartbeat:
+
    | Parametro di configurazione | Descrizione     |
    | --- | --- |
    | `server` | Stringa che rappresenta l’URL dell’endpoint di tracciamento sul backend. |

@@ -4,16 +4,16 @@ description: Scopri come implementare Adobe Streaming Media per le app per dispo
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: b4944b5f-cbae-4efc-9ef7-962d3f342240
-source-git-commit: 1e4babe0df218342fc4836155139d908ba113510
+source-git-commit: 240fa48bdc738425e04cd29c27625c7dd612ff18
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 93%
+source-wordcount: '198'
+ht-degree: 81%
 
 ---
 
 # Installare Mobile SDK {#install-mobile-sdks}
 
-Per implementare Streaming Media per le app per dispositivi mobili su Android o iOS, installa e configura quanto segue:
+Per implementare il componente aggiuntivo Streaming Media Collection per le app mobili su Android o iOS, installa e configura quanto segue:
 
 * **Adobe Experience Platform Mobile SDK**
 

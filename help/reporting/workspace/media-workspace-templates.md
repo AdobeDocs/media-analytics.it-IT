@@ -5,7 +5,7 @@ uuid: 0024b06a-eaf5-4d2e-be45-aeda9d0554c1
 exl-id: a835f86a-a93a-4a56-91f4-14628cf48214
 feature: "Media Analytics, Workspace Basics"
 role: User, Admin
-source-git-commit: 7eeee7f035e5d9e7e327e60910c78bbdf02abff8
+source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 9%
@@ -20,11 +20,11 @@ ht-degree: 9%
 
 Analysis Workspace offre una serie di rapporti predefiniti disponibili per impostazione predefinita e che puoi utilizzare per analizzare i dati. Per ulteriori informazioni su tutti i rapporti predefiniti disponibili, vedi [Visualizzare i rapporti](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html?lang=en#menus) in [Pagina di destinazione di Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html?lang=it).
 
-Alcuni di questi rapporti sono particolarmente utili per l’analisi dei dati di Streaming Media, come descritto nelle sezioni seguenti.
+Alcuni di questi rapporti sono particolarmente utili per l’analisi dei dati multimediali in streaming, come descritto nelle sezioni seguenti.
 
 ## Comprendere i rapporti multimediali predefiniti
 
-Di seguito è riportato un elenco di rapporti predefiniti utili per l’analisi dei dati di Streaming Media:
+Di seguito è riportato un elenco di rapporti predefiniti utili per l’analisi dei dati multimediali in streaming:
 
 * [!UICONTROL **Consumo di contenuti multimediali**]: crea un rapporto che mostra quale contenuto viene maggiormente consumato e coinvolge maggiormente gli utenti.
 
