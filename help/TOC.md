@@ -42,7 +42,7 @@ ht-degree: 88%
    + Implementazioni solo per Adobe Analytics {#analytics-only}
       + [Prerequisiti](/help/implementation/media-sdk/setup/prerequisites-analytics.md)
       + Media SDK/Estensione {#media-sdk}
-         + [JavaScript Web SDK](implementation/media-sdk/setup/web-implementation.md)
+         + [Web SDK JavaScript](implementation/media-sdk/setup/web-implementation.md)
          + [Estensione Media Analytics](implementation/media-sdk/setup/web-implementation-tags.md)
          + [SDK per dispositivi mobili](implementation/media-sdk/setup/mobile-implementation.md)
          + SDK OTT {#ott-setup}
