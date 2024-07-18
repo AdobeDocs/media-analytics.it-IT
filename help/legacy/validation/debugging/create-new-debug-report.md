@@ -6,7 +6,7 @@ exl-id: 047acf35-8c1c-4493-9ee7-e2bad47c351e
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 100%
 
@@ -27,12 +27,14 @@ Per creare un nuovo rapporto di debug:
 
       * [!UICONTROL User Name] e [!UICONTROL Shared Secret]: questi campi sono facoltativi, ma puoi aggiungere le credenziali API dei servizi Web ad Adobe Debug per visualizzare i nomi delle variabili e le relative impostazioni per la suite di rapporti.
 
-         Puoi accedere in uno dei seguenti modi:
+        Puoi accedere in uno dei seguenti modi:
 
          * [!UICONTROL Analytics > Admin > Company Settings > Web Services]
          * [!UICONTROL Analytics > Admin > User Management > Users > Individual User Settings] Per creare una credenziale API di servizi Web per un nuovo utente, in [!UICONTROL User Management], aggiungi l’utente al gruppo di utenti dell’**Accesso al servizio Web**.
+
       * [!UICONTROL Default Endpoint]: i dati in questo campo sono forniti da Adobe e non possono essere modificati.
       * [!UICONTROL Extra Endpoint]: aggiungi `CNAMES`, se li utilizzi, per il server di tracciamento come `metrics.companyname.com`
+
    * **Video Heartbeat (Media Analytics)**
 
       * [!UICONTROL Default Endpoint]: i dati in questo campo sono forniti da Adobe e non possono essere modificati.

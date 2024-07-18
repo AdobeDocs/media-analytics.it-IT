@@ -18,4 +18,4 @@ Media Analytics (Heartbeat) è la soluzione di tracciamento dei contenuti multim
 
 Le integrazioni lato client sono implementate solo con Media Analytics. Puoi scegliere di implementare Media SDK o Media Collection API (o entrambi). Il percorso lato client può essere utilizzato su qualsiasi lettore, compresi i lettori dei clienti e/o OVP come Brightcove, Ooyala, thePlatform e così via.
 
-Se Media Analytics è il percorso desiderato, consulta [Ottieni Media SDK e le estensioni tramite tag e SDK OTT](/help/getting-started/download-sdks.md) e [API Media Collection.](/help/implementation/media-collection-api/mc-api-overview.md)
+Se Media Analytics è il percorso desiderato, consulta [Ottenere Media SDK e le estensioni tramite tag e SDK OTT](/help/getting-started/download-sdks.md) e [API Media Collection.](/help/implementation/media-collection-api/mc-api-overview.md)

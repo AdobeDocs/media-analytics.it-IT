@@ -6,8 +6,8 @@ exl-id: 04b9b888-2727-4aa6-a934-94a02c85a490
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '294'
+workflow-type: tm+mt
+source-wordcount: '282'
 ht-degree: 100%
 
 ---
@@ -69,7 +69,7 @@ Effettua la chiamata `trackError("media error id");`
    >Aggiorna l’oggetto QoS e chiama l’evento di modifica del bitrate su ogni modifica del bitrate. Questo fornisce i dati QoS più precisi.
 
 1. Assicurati che il metodo `getQoSObject()` restituisca le informazioni QoS più aggiornate.
-1. Quando il lettore multimediale rileva un errore e l‘evento di errore è disponibile per l’API del lettore, utilizza `trackError()` per acquisire le informazioni sull’errore. (Consulta [Panoramica](/help/use-cases/track-errors/track-errors-overview.md).)
+1. Quando il lettore multimediale rileva un errore e l’evento di errore è disponibile per l’API del lettore, utilizza `trackError()` per acquisire informazioni sull’errore. (Consulta [Panoramica](/help/use-cases/track-errors/track-errors-overview.md).)
 
    >[!TIP]
    >

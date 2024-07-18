@@ -6,8 +6,8 @@ exl-id: d8af37a0-9048-4e6b-8cba-809386cbed5f
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '689'
+workflow-type: tm+mt
+source-wordcount: '681'
 ht-degree: 100%
 
 ---
@@ -33,7 +33,7 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione negli SDK 
    | `streamType` | Tipo di flusso (vedi _Costanti StreamType_ sotto) | Sì |
    | `mediaType` | Tipo di file multimediale (vedi _Costanti MediaType_ sotto) | Sì |
 
-   Costanti **`StreamType`:**
+   **`StreamType`Costanti:**
 
    | Nome costante | Descrizione   |
    |---|---|
@@ -66,28 +66,28 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione negli SDK 
 
    * **Metadati standard**
 
-      [Implementazione dei metadati standard in JavaScript](/help/use-cases/track-av-playback/impl-std-metadata/impl-std-md-js/impl-std-metadata-js.md)
+     [Implementazione dei metadati standard in JavaScript](/help/use-cases/track-av-playback/impl-std-metadata/impl-std-md-js/impl-std-metadata-js.md)
 
-      >[!NOTE]
-      >
-      >Il collegamento dell’oggetto metadati standard all’oggetto multimediale è facoltativo.
+     >[!NOTE]
+     >
+     >Il collegamento dell’oggetto metadati standard all’oggetto multimediale è facoltativo.
 
       * Riferimento API per le chiavi di metadati multimediali: [Chiavi di metadati standard - JavaScript](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript)
 
-         Consulta il set completo dei metadati disponibili qui: [Parametri audio e video](/help/implementation/variables/audio-video-parameters.md)
+        Consulta il set completo dei metadati disponibili qui: [Parametri audio e video](/help/implementation/variables/audio-video-parameters.md)
+
    * **Metadati personalizzati**
 
-      Crea un oggetto variabile per le variabili personalizzate e compila i dati per questo elemento multimediale. Ad esempio:
+     Crea un oggetto variabile per le variabili personalizzate e compila i dati per questo elemento multimediale. Ad esempio:
 
-      ```js
-      /* Set custom context data */
-      var customVideoMetadata = {
-          isUserLoggedIn: "false",
-          tvStation: "Sample TV station",
-          programmer: "Sample programmer"
-      };
-      ```
-
+     ```js
+     /* Set custom context data */
+     var customVideoMetadata = {
+         isUserLoggedIn: "false",
+         tvStation: "Sample TV station",
+         programmer: "Sample programmer"
+     };
+     ```
 
 1. **Tracciare l’intenzione di inizio riproduzione**
 

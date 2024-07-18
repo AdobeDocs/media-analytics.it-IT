@@ -6,8 +6,8 @@ exl-id: 277a72b8-453b-41e5-b640-65c43587baf8
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '519'
+workflow-type: tm+mt
+source-wordcount: '525'
 ht-degree: 100%
 
 ---
@@ -24,11 +24,11 @@ Questo è lo stesso scenario della [riproduzione VOD senza annunci](/help/use-ca
 | --- | --- | --- | --- |
 | L’utente fa clic su [!UICONTROL Play] | trackSessionStart | Inizio contenuto Analytics, inizio contenuto Heartbeat | La libreria di misurazione non è a conoscenza dell’esistenza di un annuncio pre-roll, pertanto queste chiamate di rete sono identiche allo scenario [riproduzione VOD senza annunci](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
 | Viene riprodotto il primo fotogramma del contenuto. | trackPlay | Riproduzione di contenuti Heartbeat | Quando il contenuto del capitolo viene riprodotto prima del contenuto principale, gli heartbeat partono all’inizio del capitolo. |
-| Riproduzione dei contenuti |  | Heartbeat dei contenuti | Questa chiamata di rete è esattamente la stessa dello scenario [riproduzione VOD senza annunci](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
+| Riproduzione dei contenuti | | Heartbeat dei contenuti | Questa chiamata di rete è esattamente la stessa dello scenario [riproduzione VOD senza annunci](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
 | Sessione1 terminata (Episodio1 finito) | trackComplete / trackSessionEnd | Contenuto Heartbeat completato | Completata significa che la sessione1 del primo episodio è stata raggiunta e guardata completamente. Prima di iniziare la sessione dell’episodio successivo, questa sessione deve essere terminata. |
 | Episodio2 avviato (inizio Sessione2) | trackSessionStart | Avvio contenuto Analytics avvio contenuto Heartbeat | Questo perché l’utente ha visto il primo episodio e ha continuato a guardare un altro episodio |
 | 1° fotogramma dell’elemento multimediale | trackPlay | Riproduzione di contenuti Heartbeat | Questo metodo attiva il timer e da questo momento in poi, gli heartbeat verranno inviati ogni 10 secondi, a condizione che la riproduzione continui. |
-| Riproduzione dei contenuti |  | Heartbeat dei contenuti |  |
+| Riproduzione dei contenuti | | Heartbeat dei contenuti | |
 | Sessione terminata (Episodio2 finito) | trackComplete / trackSessionEnd | Contenuto Heartbeat completato | Completa significa che la Sessione2 del secondo episodio è stata raggiunta e guardata completamente. Prima di iniziare la sessione dell’episodio successivo, questa sessione deve essere terminata. |
 
 ## Parametri {#parameters}

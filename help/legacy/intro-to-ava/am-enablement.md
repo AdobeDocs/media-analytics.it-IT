@@ -5,8 +5,8 @@ exl-id: c0d73bc2-4713-498a-8882-ff66c7f3dd50
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '402'
+workflow-type: tm+mt
+source-wordcount: '397'
 ht-degree: 100%
 
 ---
@@ -33,84 +33,84 @@ Puoi utilizzare questi metodi per inviare segnali e recuperare segmenti di visit
 
 * `getVisitorProfile() -`
 
-   Restituisce il profilo del visitatore ottenuto più di recente. Restituisce un oggetto vuoto se non è stato ancora inviato alcun segnale.
+  Restituisce il profilo del visitatore ottenuto più di recente. Restituisce un oggetto vuoto se non è stato ancora inviato alcun segnale.
 
-   ```js
-   ADBMobile.audienceManager.getVisitorProfile();
-   ```
+  ```js
+  ADBMobile.audienceManager.getVisitorProfile();
+  ```
 
 * `getDpid() -`
 
-   Restituisce il profilo del visitatore ottenuto più di recente. Restituisce un oggetto vuoto se non è stato ancora inviato alcun segnale.
+  Restituisce il profilo del visitatore ottenuto più di recente. Restituisce un oggetto vuoto se non è stato ancora inviato alcun segnale.
 
-   ```js
-   ADBMobile.audienceManager.getDpid();
-   ```
+  ```js
+  ADBMobile.audienceManager.getDpid();
+  ```
 
 * `getDpuuid() -`
 
-   Restituisce il DPUUID corrente.
+  Restituisce il DPUUID corrente.
 
-   ```js
-   ADBMobile.audienceManager.getDpuuid();
-   ```
+  ```js
+  ADBMobile.audienceManager.getDpuuid();
+  ```
 
 * `setDpidAndDpuuid() -`
 
-   Imposta gli identificatori DPID e DPUUID. Se impostati, DPID e DPUUID saranno inviati congiuntamente con ogni segnale.
+  Imposta gli identificatori DPID e DPUUID. Se impostati, DPID e DPUUID saranno inviati congiuntamente con ogni segnale.
 
-   ```js
-   ADBMobile.audienceManager.setDpidAndDpuuid("myDpid", "myDpuuid");
-   ```
+  ```js
+  ADBMobile.audienceManager.setDpidAndDpuuid("myDpid", "myDpuuid");
+  ```
 
 * `submitSignal() -`
 
-   Invia al modulo Gestione dell’audience un segnale con caratteristiche.
+  Invia al modulo Gestione dell’audience un segnale con caratteristiche.
 
-   ```js
-   ADBMobile.audienceManager.submitSignal({"sampleTrait":"sampleValue"});
-   ```
+  ```js
+  ADBMobile.audienceManager.submitSignal({"sampleTrait":"sampleValue"});
+  ```
 
 ### Roku {#am-roku}
 
 * `audienceVisitorProfile -`
 
-   Restituisce il profilo del visitatore ottenuto più di recente. Restituisce un oggetto vuoto se non è stato ancora inviato alcun segnale.
+  Restituisce il profilo del visitatore ottenuto più di recente. Restituisce un oggetto vuoto se non è stato ancora inviato alcun segnale.
 
-   ```js
-   ADBMobile().audienceVisitorProfile()
-   ```
+  ```js
+  ADBMobile().audienceVisitorProfile()
+  ```
 
 * `audienceDpid -`
 
-   Restituisce il profilo del visitatore ottenuto più di recente. Restituisce un oggetto vuoto se non è stato ancora inviato alcun segnale.
+  Restituisce il profilo del visitatore ottenuto più di recente. Restituisce un oggetto vuoto se non è stato ancora inviato alcun segnale.
 
-   ```js
-   ADBMobile().audienceDpid()
-   ```
+  ```js
+  ADBMobile().audienceDpid()
+  ```
 
 * `audienceDpuuid -`
 
-   Restituisce il DPUUID corrente.
+  Restituisce il DPUUID corrente.
 
-   ```js
-   ADBMobile().audienceDpuuid()
-   ```
+  ```js
+  ADBMobile().audienceDpuuid()
+  ```
 
 * `audienceSetDpidAndDpuuid -`
 
-   Imposta gli identificatori DPID e DPUUID. Se impostati, DPID e DPUUID saranno inviati congiuntamente con ogni segnale.
+  Imposta gli identificatori DPID e DPUUID. Se impostati, DPID e DPUUID saranno inviati congiuntamente con ogni segnale.
 
-   ```js
-   ADBMobile().audienceSetDpidAndDpuuid("myDpid", "myDpuuid")
-   ```
+  ```js
+  ADBMobile().audienceSetDpidAndDpuuid("myDpid", "myDpuuid")
+  ```
 
 * `audienceSubmitSignal -`
 
-   Invia al modulo Gestione dell’audience un segnale con caratteristiche.
+  Invia al modulo Gestione dell’audience un segnale con caratteristiche.
 
-   ```js
-   traitData = {}
-   traitData["sampleTrait"] = "sampleValue"
-   ADBMobile().audienceSubmitSignal(traitData)
-   ```
+  ```js
+  traitData = {}
+  traitData["sampleTrait"] = "sampleValue"
+  ADBMobile().audienceSubmitSignal(traitData)
+  ```

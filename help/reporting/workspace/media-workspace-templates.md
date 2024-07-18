@@ -16,9 +16,9 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->*Rapporti* in Workspace erano precedentemente noti come *modelli*.
+>*I report* in Workspace erano precedentemente noti come *modelli*.
 
-Analysis Workspace offre una serie di rapporti predefiniti disponibili per impostazione predefinita e che puoi utilizzare per analizzare i dati. Per ulteriori informazioni su tutti i rapporti predefiniti disponibili, vedi [Visualizzare i rapporti](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html?lang=en#menus) in [Pagina di destinazione di Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html?lang=it).
+Analysis Workspace offre una serie di rapporti predefiniti disponibili per impostazione predefinita e che puoi utilizzare per analizzare i dati. Per ulteriori informazioni su tutti i report predefiniti disponibili, vedere [Visualizza report](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html?lang=en#menus) nella [pagina di destinazione di Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html?lang=it).
 
 Alcuni di questi rapporti sono particolarmente utili per l’analisi dei dati multimediali in streaming, come descritto nelle sezioni seguenti.
 
@@ -26,20 +26,21 @@ Alcuni di questi rapporti sono particolarmente utili per l’analisi dei dati mu
 
 Di seguito è riportato un elenco di rapporti predefiniti utili per l’analisi dei dati multimediali in streaming:
 
-* [!UICONTROL **Consumo di contenuti multimediali**]: crea un rapporto che mostra quale contenuto viene maggiormente consumato e coinvolge maggiormente gli utenti.
+* [!UICONTROL **Consumo di contenuti multimediali**]: crea un report che mostra quali contenuti vengono maggiormente consumati e coinvolge maggiormente gli utenti.
 
-* [!UICONTROL **Consumo di contenuti multimediali in streaming**]: crea un rapporto con un dashboard, come illustrato nell’esempio seguente.
+* [!UICONTROL **Consumo di contenuti multimediali in streaming**]: crea un report con un dashboard, come illustrato nell&#39;esempio seguente.
 
-* [!UICONTROL **Attualità dei contenuti multimediali, frequenza, fedeltà**]: crea un rapporto che mostra l’attualità (quanti giorni dall’ultima visita), la frequenza (quante visite per visitatore) e la fedeltà (con quale frequenza le coorti di utenti ritornano al sito)
+* [!UICONTROL **Attualità dei contenuti multimediali, frequenza, fedeltà**]: crea un rapporto che mostra l&#39;attualità (quanti giorni dall&#39;ultima visita), la frequenza (quante visite per visitatore) e la fedeltà (con quale frequenza le coorti di utenti ritornano al sito)
 
-Ad esempio, se scegli il  [!UICONTROL **Consumo di contenuti multimediali in streaming**] rapporto, viene presentato un progetto con il dashboard seguente:
+Ad esempio, se scegli il rapporto [!UICONTROL **Consumo di contenuti multimediali in streaming**], viene presentato un progetto con il dashboard seguente:
 
 ![](/help/reporting/assets/aa-workspace.png)
 
 ## Utilizza i report multimediali predefiniti
 
-Puoi utilizzare i rapporti multimediali predefiniti nei seguenti modi: quando crei un nuovo progetto. Puoi anche eseguire o modificare un progetto esistente.
+Puoi utilizzare i rapporti multimediali predefiniti nei seguenti modi:
+durante la creazione di un nuovo progetto. Puoi anche eseguire o modificare un progetto esistente.
 
-* **Durante la creazione di un nuovo progetto:** Per informazioni su come creare un nuovo progetto da un rapporto predefinito, vedi [Creare un progetto da un progetto o da un rapporto vuoto](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/create-projects.html?lang=en#create-a-project-from-a-blank-project-or-a-report) in [Creare progetti in Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/create-projects.html?lang=en#create-a-project-from-a-blank-project-or-a-report).
+* **Durante la creazione di un nuovo progetto:** Per informazioni su come creare un nuovo progetto da un report predefinito, vedere [Creare un progetto da un progetto vuoto o un report](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/create-projects.html?lang=en#create-a-project-from-a-blank-project-or-a-report) in [Creare progetti in Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/create-projects.html?lang=en#create-a-project-from-a-blank-project-or-a-report).
 
-* **Durante la creazione di un rapporto aziendale personalizzato:** Per informazioni su come creare un rapporto aziendale personalizzato, consulta [Creare un rapporto aziendale personalizzato](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html?lang=en#company-report) in [Pagina di destinazione di Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html?lang=it).
+* **Durante la creazione di un report aziendale personalizzato:** Per informazioni su come creare un report aziendale personalizzato, vedere [Creare un report aziendale personalizzato](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html?lang=en#company-report) nella [pagina di destinazione di Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html?lang=it).

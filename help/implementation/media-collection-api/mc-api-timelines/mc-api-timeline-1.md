@@ -6,9 +6,9 @@ exl-id: 16b15e03-5581-471f-ab0c-077189dd32d6
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '1064'
-ht-degree: 100%
+workflow-type: tm+mt
+source-wordcount: '1120'
+ht-degree: 98%
 
 ---
 
@@ -34,7 +34,7 @@ Questa chiamata segnala _l’intenzione dell’utente di riprodurre_ un video.
 
 Restituisce un ID sessione (`{sid}`) al client utilizzatoa per identificare tutte le chiamate di tracciamento successive all’interno della sessione. Lo stato del lettore non è ancora “in riproduzione”, ma è “in avvio”.
 
-I [Parametri di sessione obbligatori](../mc-api-ref/mc-api-sessions-req.md) devono essere inclusi nella mappa `params` nel corpo della richiesta.
+[I parametri di sessione obbligatori](../mc-api-ref/mc-api-sessions-req.md) devono essere inclusi nella mappa `params` nel corpo della richiesta.
 
 Nel backend, questa chiamata genera una chiamata di avvio Adobe Analytics.
 
@@ -65,7 +65,7 @@ Nel backend, questa chiamata genera una chiamata di avvio Adobe Analytics.
 
 | Azione | Timeline di azioni (secondi) | Posizione della testina di riproduzione (secondi) | Richiesta del client |
 | --- | :---: | :---: | --- |
-| L’app avvia il timer dell’evento ping | 0 | 0 | `/api/v1/sessions/{sid}/events` |  |
+| L’app avvia il timer dell’evento ping | 0 | 0 | `/api/v1/sessions/{sid}/events` | |
 
 Avvia il timer ping dell’app. Il primo evento ping dovrebbe quindi attivarsi in 1 secondo se ci sono annunci pre-roll, 10 secondi in caso contrario.
 

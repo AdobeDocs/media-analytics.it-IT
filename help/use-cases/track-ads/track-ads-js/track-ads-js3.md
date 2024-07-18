@@ -6,7 +6,7 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: c308dba2d7cf07b89bf124bd6e5f972c253c9f18
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '398'
 ht-degree: 88%
 
 ---
@@ -133,9 +133,9 @@ Per ulteriori informazioni, consulta lo scenario di tracciamento [Riproduzione V
 
 ## Tracciamento granulare degli annunci
 
-L&#39;intervallo predefinito di ping dell&#39;annuncio è `10 seconds`.
+L&#39;intervallo di ping predefinito dell&#39;annuncio è `10 seconds`.
 
-Puoi impostare il tracciamento granulare degli annunci per abilitare `1 second` tracciamento degli annunci.
+È possibile impostare il tracciamento granulare degli annunci per abilitare il tracciamento degli annunci `1 second`.
 
 >[!IMPORTANT]
 >

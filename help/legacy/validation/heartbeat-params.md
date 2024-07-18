@@ -26,7 +26,7 @@ Elenco dei parametri di Media Analytics che Adobe raccoglie ed elabora sul serve
 | `l:event:duration` | Media SDK | (Obbligatorio)<br/><br/>Questo valore viene impostato internamente (in millisecondi) da Media SDK, non dal lettore. Viene utilizzato per calcolare il tempo impiegato dalle metriche sul back-end. Ad esempio: a.media.totalTimePlayed viene calcolato come somma della durata di tutti gli heartbeat Play (type=play) generati. <br/>*Nota:* questo parametro è impostato su 0 per alcuni eventi perché si tratta di “eventi di modifica dello stato” (ad esempio, type=complete, type=chapter_complete o type=bitrate_change.) |
 | `l:event:playhead` | VideoInfo | (Obbligatorio)<br/><br/>La testina di riproduzione si trovava all’interno della risorsa attiva (principale o annuncio) nel momento in cui l’evento è stato registrato. |
 | `s:event:sid` | Media SDK | (Obbligatorio)<br/><br/>L’ID sessione (una stringa generata in modo casuale). Tutti gli eventi in una determinata sessione (video + annunci) devono essere gli stessi. |
-| `l:asset:duration` / `l:asset:length` <br/>(Rinominato dalla durata della lunghezza) | VideoInfo | (Obbligatorio)<br/><br/>La lunghezza della risorsa video della risorsa principale. |
+| `l:asset:duration` / `l:asset:length` <br/>(rinominato dalla durata della lunghezza) | VideoInfo | (Obbligatorio)<br/><br/>La lunghezza della risorsa video della risorsa principale. |
 | `s:asset:publisher` | MediaHeartbeatConfig | (Obbligatorio)<br/><br/>L’editore della risorsa. |
 | `s:asset:video_id` | VideoInfo | (Obbligatorio)<br/><br/>Un ID che identifica il video in modo univoco nel catalogo dell’editore. |
 | `s:asset:type` | Media SDK | (Obbligatorio)<br/><br/>Il tipo di risorsa (principale o annuncio). |

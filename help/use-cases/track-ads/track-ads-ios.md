@@ -6,8 +6,8 @@ exl-id: a352bca9-bcfc-4418-b2a2-c9b1ad226359
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '355'
+workflow-type: tm+mt
+source-wordcount: '359'
 ht-degree: 100%
 
 ---
@@ -85,12 +85,12 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione tramite gl
    * [Implementare metadati standard di annunci su iOS](/help/use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-ios.md)
    * **Metadati degli annunci personalizzati -** Per i metadati personalizzati, crea un oggetto variabile per le variabili di dati personalizzate e compila i dati per l’annuncio corrente:
 
-      ```
-      NSMutableDictionary *adDictionary = [[NSMutableDictionary alloc] init];
-      [adDictionary setObject:@"Sample affiliate" forKey:@"affiliate"];
-      [adDictionary setObject:@"Sample campaign" forKey:@"campaign"];
-      [adDictionary setObject:@"Sample creative" forKey:@"creative"];
-      ```
+     ```
+     NSMutableDictionary *adDictionary = [[NSMutableDictionary alloc] init];
+     [adDictionary setObject:@"Sample affiliate" forKey:@"affiliate"];
+     [adDictionary setObject:@"Sample campaign" forKey:@"campaign"];
+     [adDictionary setObject:@"Sample creative" forKey:@"creative"];
+     ```
 
 1. Chiamata `trackEvent()` con l’evento `AdStart` nell’istanza `MediaHeartbeat` per iniziare a tracciare la riproduzione dell’annuncio.
 

@@ -1,7 +1,7 @@
 ---
 source-git-commit: e534d44f9d03b99153fde23b2c587f8607ceea72
-workflow-type: ht
-source-wordcount: '677'
+workflow-type: tm+mt
+source-wordcount: '612'
 ht-degree: 100%
 
 ---
@@ -33,7 +33,7 @@ Questa sezione ____
 
 Nuovi corsi e tutorial su Analytics
 
-| Data di pubblicazione | Nome | Tipo | Descrizione |
+| Pubblicato | Nome | Tipo | Descrizione |
 | ----------- | ---------- | ---------- | --------- |
 | Gennaio | <a href="/docs/analytics-learn/tutorials/media-analytics/measuring-media-analytics/media-playback-time-spent-panel.html?lang=en">Pannello Tempo trascorso su contenuti multimediali</a> | Video | Scopri in che modo il pannello Tempo trascorso su contenuti multimediali consente agli utenti che usano contenuti multimediali di comprendere i propri spettatori in base al tempo di visualizzazione durante il giorno secondo una determinata granularità. |
 
@@ -58,7 +58,7 @@ Nuovi corsi e tutorial su Analytics
 
 Nuovi corsi e tutorial su Analytics
 
-| Data di pubblicazione | Nome | Tipo | Descrizione |
+| Pubblicato | Nome | Tipo | Descrizione |
 | ----------- | ---------- | ---------- | --------- |
 | 6 gennaio 2021 | [Pannello Visualizzatori simultanei di elementi multimediali in Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/analysis-workspace/using-panels/media-concurrent-viewers-panel-in-analysis-workspace.html?lang=it#analysis-workspace) | Video | Scopri dove si verificano picchi di concorrenza o abbandoni. Ottieni informazioni approfondite sulla qualità dei contenuti e sul livello di coinvolgimento dell’utente, utili anche per risolvere problemi o pianificare volumi e scala. |
 

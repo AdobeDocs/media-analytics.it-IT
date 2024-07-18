@@ -6,8 +6,8 @@ exl-id: f27ce2ba-7584-4601-8837-d8316c641708
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '448'
+workflow-type: tm+mt
+source-wordcount: '450'
 ht-degree: 100%
 
 ---
@@ -52,9 +52,9 @@ Gestisci il gap all’interno del lettore effettuando la chiamata `trackEvent:Ad
 
 * **Effettua la chiamata`trackEvent(MediaHeartbeat.Event.AdComplete);`**
 
-   >[!NOTE]
-   >
-   >Effettua questa chiamata solo se l’annuncio precedente non è stato completato. Considera un valore booleano per mantenere uno stato “`isinAd`” per l’annuncio precedente.
+  >[!NOTE]
+  >
+  >Effettua questa chiamata solo se l’annuncio precedente non è stato completato. Considera un valore booleano per mantenere uno stato “`isinAd`” per l’annuncio precedente.
 
 * Crea l’istanza dell’oggetto annuncio per la risorsa, ad esempio: `adObject`
 * Popola i metadati dell’annuncio, `adCustomMetadata`
@@ -65,9 +65,9 @@ Gestisci il gap all’interno del lettore effettuando la chiamata `trackEvent:Ad
 
 * **Non effettuare chiamate**
 
-   >[!NOTE]
-   >
-   >Se l’applicazione sa che si tratta dell’ultimo annuncio nell’interruzione pubblicitaria, effettua una chiamata `trackEvent:AdComplete` e non impostare `trackEvent:AdComplete` in `trackEvent:AdBreakComplete`
+  >[!NOTE]
+  >
+  >Se l’applicazione sa che si tratta dell’ultimo annuncio nell’interruzione pubblicitaria, effettua una chiamata `trackEvent:AdComplete` e non impostare `trackEvent:AdComplete` in `trackEvent:AdBreakComplete`
 
 **Quando l’annuncio viene saltato:**
 
@@ -77,8 +77,8 @@ Gestisci il gap all’interno del lettore effettuando la chiamata `trackEvent:Ad
 
 * **Effettua la chiamata`trackEvent(MediaHeartbeat.Event.AdComplete);`**
 
-   >[!NOTE]
-   >
-   >Se questo passaggio è già stato eseguito in precedenza nell’ambito dell’ultima chiamata `trackEvent:AdComplete` allora può essere saltato.
+  >[!NOTE]
+  >
+  >Se questo passaggio è già stato eseguito in precedenza nell’ambito dell’ultima chiamata `trackEvent:AdComplete` allora può essere saltato.
 
 * Effettua la chiamata `trackEvent(MediaHeartbeat.Event.AdBreakComplete);`

@@ -2,8 +2,8 @@
 title: Scopri le novità di Media Analytics
 description: Le novità includono informazioni sulle nuove funzioni e notifiche.
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '581'
+workflow-type: tm+mt
+source-wordcount: '575'
 ht-degree: 100%
 
 ---
@@ -29,7 +29,7 @@ Le note sulla versione di Adobe Experience Cloud descrivono nuove funzioni, corr
 | ----------- | ---------- | ---------- |
 | [Pannello Visualizzatori simultanei di contenuti multimediali](media-reports/media-workspace-panels/media-concurrent-viewers.md) | 17 settembre 2020 | Il pannello Visualizzatori simultanei di contenuti multimediali in Workspace consente di comprendere dove si è verificato un picco di simultaneità o quando i visitatori hanno abbandonato il contenuto. Fornisce informazioni utili sulla qualità dei contenuti e sul livello di coinvolgimento degli utenti che li visualizzano, e aiuta a risolvere problemi o a pianificare tenendo conto di volumi/scala. |
 | [Piattaforme e dispositivi supportati](../getting-started/supported-devices.md) | 18 giugno 2020 | La [!UICONTROL Media Launch Extension] con Mobile SDK di AEP ora supporta i seguenti dispositivi OTT:<ul><li>Apple TV (tvOS)</li><li>Fire TV (Fire OS)</li><li>Android TV</li></ul> |
-| [Tracciare lo stato del lettore](https://experienceleague.adobe.com/docs/media-analytics/using/player-state-tracking/player-state-overview.html?lang=it) | 29 maggio 2020 | I clienti di [!UICONTROL Media Analytics] possono acquisire l’interazione dell’utente durante la riproduzione utilizzando un set di variabili standard per l’intera schermata, i sottotitoli, la disattivazione dell’audio, gli effetti “picture-in-picture” e a fuoco. È inoltre possibile creare degli stati del lettore personalizzati. Le variabili [!UICONTROL Player State Tracking] sono ora disponibili per il reporting in [!UICONTROL Analysis Workspace]. Questa funzione richiede uno dei seguenti elementi: <ul><li>SDK di [!DNL JavaScript] Media 3.0 o versione successiva</li><li>Per l’utilizzo con l’SDK di [!DNL Adobe Experience Platform] (AEP):</li><li>[!UICONTROL Media Analytics Extension] (per il web): [!UICONTROL Adobe Media Analytics] (3.x SDK) for Audio and Video v1.0 o successiva</li><li>[!UICONTROL Media Analytics Extension] (per dispositivi mobili): [!UICONTROL Adobe Media Analytics for Audio] and Video v2.0 o successiva</li><li>[!UICONTROL Media Collection]</li></ul> |
+| [Tracciare lo stato del lettore](https://experienceleague.adobe.com/docs/media-analytics/using/player-state-tracking/player-state-overview.html?lang=it) | sabato 29 maggio 2020 | I clienti di [!UICONTROL Media Analytics] possono acquisire l’interazione dell’utente durante la riproduzione utilizzando un set di variabili standard per l’intera schermata, i sottotitoli, la disattivazione dell’audio, gli effetti “picture-in-picture” e a fuoco. È inoltre possibile creare degli stati del lettore personalizzati. Le variabili [!UICONTROL Player State Tracking] sono ora disponibili per il reporting in [!UICONTROL Analysis Workspace]. Questa funzione richiede uno dei seguenti elementi: <ul><li>SDK di [!DNL JavaScript] Media 3.0 o versione successiva</li><li>Per l’utilizzo con l’SDK di [!DNL Adobe Experience Platform] (AEP):</li><li>[!UICONTROL Media Analytics Extension] (per il web): [!UICONTROL Adobe Media Analytics] (3.x SDK) for Audio and Video v1.0 o successiva</li><li>[!UICONTROL Media Analytics Extension] (per dispositivi mobili): [!UICONTROL Adobe Media Analytics for Audio] and Video v2.0 o successiva</li><li>[!UICONTROL Media Collection]</li></ul> |
 
 
 ## Notifiche importanti

@@ -6,8 +6,8 @@ exl-id: aaed828d-1aba-486e-83e3-2ffd092305e2
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '295'
+workflow-type: tm+mt
+source-wordcount: '298'
 ht-degree: 100%
 
 ---
@@ -72,11 +72,11 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione tramite gl
    * [Implementare metadati standard di annunci in Roku](/help/use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-metadata-roku.md)
    * **Metadati degli annunci personalizzati**: per i metadati personalizzati, crea un oggetto variabile per le variabili dei dati personalizzate e popola i dati per la risorsa dell’annuncio corrente.
 
-      ```
-      contextData = {}
-      contextData["adinfo1"] = "adinfo2"
-      contextData["adinfo2"] = "adinfo2"
-      ```
+     ```
+     contextData = {}
+     contextData["adinfo1"] = "adinfo2"
+     contextData["adinfo2"] = "adinfo2"
+     ```
 
 1. Effettua una chiamata `trackEvent()` con un evento `AdStart` nell’istanza `MediaHeartbeat` per iniziare a tracciare la riproduzione dell’annuncio:
 

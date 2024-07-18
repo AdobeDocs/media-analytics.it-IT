@@ -81,7 +81,7 @@ Segnala un errore.
 
 Viene utilizzato per notificare al backend di Media Analytics di chiudere immediatamente la sessione quando l’utente abbandona la visualizzazione del contenuto ed è improbabile che ritorni.
 
-Se un `sessionEnd` non viene inviato, si verifica una sessione [timeout normale](../mc-api-impl/mc-api-timeout.md) (sia che non si ricevano eventi per 10 minuti, sia che non si verifichi alcun movimento della testina di riproduzione per 30 minuti). Inoltre, tutte le successive chiamate multimediali effettuate con tale ID sessione verranno eliminate.
+Se un `sessionEnd` non viene inviato, una sessione abbandonata [si interrompe normalmente](../mc-api-impl/mc-api-timeout.md) (se non vengono ricevuti eventi per 10 minuti o se non si verifica alcun movimento dell&#39;indicatore di riproduzione per 30 minuti). Inoltre, tutte le successive chiamate multimediali effettuate con tale ID sessione verranno eliminate.
 
 ## sessionComplete
 

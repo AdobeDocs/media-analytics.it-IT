@@ -6,7 +6,7 @@ exl-id: 034b5c1f-7dd9-431f-a51b-925e407a7b36
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 100%
 
@@ -25,13 +25,13 @@ Questo scenario è uguale a quello di [Riproduzione VOD con annunci pre-roll](/h
 | Trigger   | Metodo Heartbeat  | Chiamate di rete   | Note   |
 | --- | --- | --- | --- |
 | Clic utente [!UICONTROL Play] | `trackSessionStart()` | Inizio contenuto Analytics, inizio contenuto Heartbeat | La libreria di misurazione ignora l’esistenza di un annuncio pre-roll. Queste chiamate di rete sono ancora identiche a quelle dello scenario [Riproduzione VOD senza annunci](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
-| L&#39;annuncio inizia. | <ul> <li> `trackEvent:AdBreakStart` </li> <li> `trackEvent:AdStart` </li> </ul> | Analytics Ad Start, Heartbeat Ad Start |  |
+| L&#39;annuncio inizia. | <ul> <li> `trackEvent:AdBreakStart` </li> <li> `trackEvent:AdStart` </li> </ul> | Analytics Ad Start, Heartbeat Ad Start | |
 | Viene riprodotto il primo fotogramma dell’annuncio. | `trackPlay()` | Heartbeat Ad Play | Quando il contenuto dell’annuncio viene riprodotto prima del contenuto principale, gli heartbeat iniziano quando l’annuncio inizia a essere riprodotto. |
-| L’annuncio viene riprodotto. |  | Ad Heartbeats |  |
-| L’annuncio viene saltato. | `trackEvent:trackAdSkip` |  | Non viene effettuata alcuna chiamata di rete di tipo “annuncio completato”. |
-| Il contenuto viene riprodotto. |  | Heartbeat dei contenuti | Queste chiamate di rete sono identiche a quelle dello scenario [Riproduzione VOD senza annunci](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
+| L’annuncio viene riprodotto. | | Ad Heartbeats | |
+| L’annuncio viene saltato. | `trackEvent:trackAdSkip` | | Non viene effettuata alcuna chiamata di rete di tipo “annuncio completato”. |
+| Il contenuto viene riprodotto. | | Heartbeat dei contenuti | Queste chiamate di rete sono identiche a quelle dello scenario [Riproduzione VOD senza annunci](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
 | La riproduzione del contenuto viene completata. | `trackComplete()` | Contenuto Heartbeat completato | Questa chiamata di rete è esattamente la stessa dello scenario [riproduzione VOD senza annunci](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
-| La sessione viene terminata. | `trackSessionEnd()` |  | `SessionEnd` |
+| La sessione viene terminata. | `trackSessionEnd()` | | `SessionEnd` |
 
 ## Parametri {#parameters}
 

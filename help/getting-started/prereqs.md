@@ -16,13 +16,13 @@ ht-degree: 54%
 
 Prima di iniziare l’implementazione del componente aggiuntivo Streaming Media Collection di Adobe, completa le seguenti attività:
 
-1. **Panoramica del componente aggiuntivo Streaming Media Collection**<br>
-Prima di iniziare a implementare il componente aggiuntivo Streaming Media Collection, controlla [Panoramica del componente aggiuntivo Streaming Media Collection](/help/media-overview.md) per assicurarsi che soddisfi le tue esigenze.
+1. **Rivedi la panoramica del componente aggiuntivo Streaming Media Collection**<br>
+Prima di iniziare a implementare il componente aggiuntivo Streaming Media Collection, controlla [Panoramica del componente aggiuntivo Streaming Media Collection](/help/media-overview.md) per assicurarti che soddisfi le tue esigenze.
 
-1. **Conferma il modello di prezzo**<br>
+1. **Conferma il tuo modello di prezzo**<br>
 Il modello di prezzo corrente per il componente aggiuntivo Streaming Media Collection di Adobe si basa sui flussi video. Se necessario, contatta il rappresentante commerciale o il team dell’account Adobe, poiché il componente aggiuntivo viene venduto separatamente per Adobe Analytics e Adobe Experience Platform.
 
-1. **Abilitare i rapporti di Adobe Analytics**<br>
+1. **Abilita rapporti Adobe Analytics**<br>
 Per abilitare i rapporti in Analytics o Customer Journey Analytics e visualizzare il contenuto e i dati degli annunci che stai raccogliendo, devi abilitare i rapporti. Consulta [Abilitazione di rapporti multimediali](/help/reporting/media-reports-enable.md).
 
 1. **Implementazione del servizio Adobe Experience Platform Identity in Experience Cloud**
@@ -47,4 +47,4 @@ Per abilitare i rapporti in Analytics o Customer Journey Analytics e visualizzar
 
    * [Prerequisiti per le implementazioni di Edge](/help/implementation/edge/prerequisites-edge.md)
 
-   Utilizza il [Panoramica sull’implementazione](/help/implementation/overview.md) per determinare quale metodo di implementazione è più adatto alle tue esigenze.
+   Utilizza la [Panoramica sull&#39;implementazione](/help/implementation/overview.md) per determinare quale metodo di implementazione è più adatto alle tue esigenze.

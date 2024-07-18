@@ -46,7 +46,7 @@ I vantaggi del componente aggiuntivo Streaming Media Collection includono monito
 
   Il componente aggiuntivo Streaming Media Collection consente di monitorare l’intero percorso dei clienti nel sito e nelle app di streaming per visualizzare il percorso e gli interessi del cliente, fornire consigli avanzati e personalizzare l’esperienza del cliente.  La misurazione dei file multimediali consente di classificare i dati in più dimensioni e segmenti e di acquisire così tutti i metadati necessari per svolgere un’analisi completa e dettagliata. Puoi quindi analizzare i dati e attribuire criteri di successo ai file multimediali utilizzati interamente, al tempo trascorso in media e agli annunci completati.
 
-* **Metriche vitali**: misura le metriche di consegna vitali correlate alla Qualità dell’esperienza (QoE) come fotogrammi saltati, tempo impiegato nel buffering e bitrate medio.
+* **Metriche vitali**: misura le metriche di consegna vitali correlate alla qualità dell&#39;esperienza (QoE) come fotogrammi saltati, tempo impiegato nel buffering e bitrate medio.
 
 * **Maggiore granularità**: valuta il comportamento di visualizzazione a livello più granulare, inclusa l’ora del giorno del singolo visitatore, visualizzatori/ascoltatori simultanei per minuto e per quanto tempo in media vengono visualizzati i contenuti.
 
@@ -59,7 +59,7 @@ I vantaggi del componente aggiuntivo Streaming Media Collection includono monito
 
 I dati di tracciamento dei contenuti multimediali in streaming vengono raccolti da un lettore utilizzando Media, ad Edge Network SDK/Extension, Media Extension con tag, Media SDK, Media Edge API o Media Collection API.
 
-Tutti i dati granulari (fino a 10 secondi) vengono inviati al servizio Media Analytics o a Experience Edge (a seconda della [metodo di implementazione](/help/implementation/overview.md) scegliere), che raccoglie ed elabora i dati per ogni singola sessione di riproduzione.
+Tutti i dati granulari (fino a 10 secondi) vengono inviati al servizio Media Analytics o a Experience Edge (a seconda del [metodo di implementazione](/help/implementation/overview.md) scelto), che raccolgono ed elaborano i dati per ogni singola sessione di riproduzione.
 
 Al termine di una sessione di riproduzione, i dati di tracciamento calcolati vengono inviati ad Adobe Analytics o al Customer Journey Analytics per l’archiviazione e il reporting.
 
@@ -68,4 +68,4 @@ Al termine di una sessione di riproduzione, i dati di tracciamento calcolati ven
 >Con le implementazioni di Customer Journey Analytics, i dati possono essere inviati al Customer Journey Analytics utilizzando Experience Edge o Analytics Data Connector (ADC).
 
 
-Per informazioni dettagliate sui vari metodi di implementazione, consulta [Implementazione del componente aggiuntivo Streaming Media Collection per Adobe Analytics o Customer Journey Analytics](/help/implementation/overview.md).
+Per informazioni dettagliate sui vari metodi di implementazione, vedere [Implementare il componente aggiuntivo Streaming Media Collection per Adobe Analytics o Customer Journey Analytics](/help/implementation/overview.md).

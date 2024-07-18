@@ -14,19 +14,19 @@ ht-degree: 7%
 
 # Implementare il componente aggiuntivo Streaming Media Collection
 
-Esistono diversi modi per implementare il componente aggiuntivo Streaming Media Collection di Adobe. Per un confronto dettagliato dei dispositivi e delle piattaforme supportati per i metodi di implementazione descritti in questa pagina, vedi [Piattaforme e dispositivi supportati](/help/getting-started/supported-devices.md).
+Esistono diversi modi per implementare il componente aggiuntivo Streaming Media Collection di Adobe. Per un confronto dettagliato dei dispositivi e delle piattaforme supportati per i metodi di implementazione descritti in questa pagina, vedere [Piattaforme e dispositivi supportati](/help/getting-started/supported-devices.md).
 
 ## Metodi di implementazione di Edge
 
 Per tutti i nuovi clienti Adobe Analytics o Customer Journey Analytics, consigliamo di utilizzare Edge durante l’implementazione del componente aggiuntivo Streaming Media Collection.
 
-* **Media per Edge Network SDK / Estensione:** Raccoglie dati dal web, dai dispositivi iOS e Android o dai dispositivi Roku e li invia ad Edge Network. I dati possono quindi essere inviati a Customer Journey Analytics o Adobe Analytics.
+* **Media per Edge Network SDK / Estensione:** raccoglie dati dal web, dai dispositivi iOS e Android o dai dispositivi Roku e li invia ad Edge Network. I dati possono quindi essere inviati a Customer Journey Analytics o Adobe Analytics.
 
-  Per ulteriori informazioni su Media, ad Edge Network SDK/Estensione, consulta [Implementare il componente aggiuntivo Streaming Media Collection utilizzando l’Edge Network](/help/implementation/edge/implementation-edge.md).
+  Per ulteriori informazioni su Media for Edge Network SDK / Extension, consulta [Implementare il componente aggiuntivo Streaming Media Collection utilizzando l&#39;Edge Network](/help/implementation/edge/implementation-edge.md).
 
-* **API di Media Edge:** Può essere personalizzato per raccogliere dati da qualsiasi dispositivo o formato (inclusi dispositivi mobili, web e over-the-top) e invia dati ad Edge Network. I dati possono quindi essere inviati a Customer Journey Analytics o Adobe Analytics.
+* **API Media Edge:** può essere personalizzata per raccogliere dati da qualsiasi dispositivo o formato (inclusi dispositivi mobili, web e over-the-top) e invia dati ad Edge Network. I dati possono quindi essere inviati a Customer Journey Analytics o Adobe Analytics.
 
-  Per ulteriori informazioni sull’API di Media Edge, consulta [Panoramica API di Media Edge](https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/).
+  Per ulteriori informazioni sull&#39;API di Media Edge, consulta [Panoramica dell&#39;API di Media Edge](https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/).
 
 ![Flusso di lavoro in CJA](assets/streaming-media-edge.png)
 
@@ -34,13 +34,13 @@ Per tutti i nuovi clienti Adobe Analytics o Customer Journey Analytics, consigli
 
 I metodi di implementazione di Edge descritti in precedenza sono consigliati sia per il Customer Journey Analytics che per Adobe Analytics, in particolare per le nuove implementazioni.
 
-Oltre ai metodi di implementazione di Edge, sono disponibili altri metodi di implementazione. Questi metodi di implementazione sono stati progettati per l’utilizzo con Adobe Analytics. Tuttavia, i clienti esistenti con uno dei seguenti metodi di implementazione possono ancora rendere disponibili i dati nel Customer Journey Analytics creando un [Connessione sorgente Analytics](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/analytics.html?lang=it).
+Oltre ai metodi di implementazione di Edge, sono disponibili altri metodi di implementazione. Questi metodi di implementazione sono stati progettati per l’utilizzo con Adobe Analytics. Tuttavia, i clienti esistenti con uno dei seguenti metodi di implementazione possono comunque rendere disponibili i dati nel Customer Journey Analytics creando una [connessione di origine Analytics](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/analytics.html?lang=it).
 
-* **Estensione multimediale con tag:** L’estensione Adobe Medium Analytics for Audio and Video fornisce la funzionalità per aggiungere l’istanza di tracciamento Media a un sito o a un progetto abilitato per i tag. I dati vengono inviati ad Adobe Analytics.
+* **Estensione Media con tag:** L&#39;estensione Adobe Medium Analytics for Audio and Video fornisce la funzionalità necessaria per aggiungere l&#39;istanza di tracciamento Media a un sito o a un progetto abilitato per i tag. I dati vengono inviati ad Adobe Analytics.
 
-  Per informazioni sull’installazione, la configurazione e l’implementazione di Media Extension con i tag, consulta [Panoramica dell’estensione Adobe Medium Analytics (3.x SDK) for Audio and Video](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/media-analytics-3x/overview.html).
+  Per informazioni sull&#39;installazione, la configurazione e l&#39;implementazione dell&#39;estensione Media con i tag, consulta [Panoramica dell&#39;estensione Analytics (3.x SDK) for Audio and Video](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/media-analytics-3x/overview.html) di Adobe Medium Analytics.
 
-* **Media SDK:**  Media SDK consente di misurare più piattaforme multimediali, tra cui siti web, telefoni cellulari, TV connesse, tablet, dispositivi OTT, set-top box e console di gioco. (Per ulteriori informazioni, consulta [Piattaforme e dispositivi supportati](/help/getting-started/supported-devices.md).)
+* **Media SDK:** Media SDK consente di misurare più piattaforme multimediali, tra cui siti Web, telefoni cellulari, TV connesse, tablet, dispositivi OTT, set-top box e console di gioco. Per ulteriori informazioni, vedere [Piattaforme e dispositivi supportati](/help/getting-started/supported-devices.md).
 
   I Media SDK utilizzano le API Media Collection per il tracciamento. I dati vengono inviati ad Adobe Analytics.
 
@@ -51,7 +51,7 @@ Oltre ai metodi di implementazione di Edge, sono disponibili altri metodi di imp
   Per informazioni sull’utilizzo delle API Media Collection, consulta [API Media Collection](media-collection-api/mc-api-overview.md).
 
 
-![Flusso di lavoro di analisi](assets/analytics-implementation.png)
+![Flusso di lavoro di Analytics](assets/analytics-implementation.png)
 
 <!--
 (Not sure if we need the following paragraph and graphic. Paragraph is somewhat redundant with the intro paragraph of this article)

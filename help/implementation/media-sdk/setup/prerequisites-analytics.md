@@ -16,13 +16,13 @@ ht-degree: 39%
 I prerequisiti descritti in questa sezione sono specifici per l’implementazione del componente aggiuntivo Streaming Media Collection con implementazioni basate solo su Adobe Analytics (quando non si utilizza Edge).
 
 1. **Completare i prerequisiti generali**<br>
-Che tu implementi il componente aggiuntivo Streaming Media Collection per le implementazioni basate solo su Adobe Analytics o per quelle basate su Edge, assicurati di soddisfare i requisiti [prerequisiti generali](/help/getting-started/prereqs.md).
+Che tu implementi il componente aggiuntivo Streaming Media Collection per le implementazioni di sola Adobe Analytics o per quelle di Edge, accertati di soddisfare i [prerequisiti generali](/help/getting-started/prereqs.md).
 
-1. **Conferma di disporre di un’implementazione Adobe Analytics**<br>
+1. **Conferma di disporre di un&#39;implementazione Adobe Analytics**<br>
 Quando si implementa il componente aggiuntivo Streaming Media Collection con un’implementazione solo per Analytics, è necessaria anche un’implementazione di base di Adobe Analytics. Per ulteriori informazioni, consulta [Implementare Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=it).
 
 1. **Ottieni l’URL del server di tracciamento dei contenuti multimediali**<br>
-Chiedi al tuo rappresentante Adobe Analytics l’URL del server di tracciamento dei contenuti multimediali. Questo è il `collection-api-server` URL per Mobile SDK, SDK per JavaScript e il server di tracciamento non-collection-api per Roku. I nomi di dominio per l’implementazione API sono: `[your_namespace].hb-api.omtrdc.net`.
+Chiedi al tuo rappresentante Adobe Analytics l’URL del server di tracciamento dei contenuti multimediali. Questo è l&#39;URL `collection-api-server` per Mobile SDK, JavaScript SDK e il server di tracciamento non-collection-api per Roku. I nomi di dominio per l’implementazione API sono: `[your_namespace].hb-api.omtrdc.net`.
 
 1. **Scarica il Media SDK corrente o implementa le estensioni richieste**<br>
 A seconda del percorso di implementazione, [scarica l’SDK corrente](/help/getting-started/download-sdks.md) per piattaforme web, mobili o over-the-top. È necessario implementare le estensioni richieste per abilitare i percorsi delle estensioni del componente aggiuntivo Streaming Media Collection.

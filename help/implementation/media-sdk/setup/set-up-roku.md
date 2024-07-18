@@ -16,7 +16,7 @@ ht-degree: 93%
 
 ## Prerequisiti {#roku-prerequisites}
 
-* **Ottenere parametri di configurazione validi per il componente aggiuntivo Streaming Media Collection**
+* **Ottieni parametri di configurazione validi per il componente aggiuntivo Streaming Media Collection**
 
   Questi parametri possono essere ottenuti da un rappresentante di Adobe dopo la configurazione dell’account del componente aggiuntivo Adobe Streaming Media Collection.
 * **Includi le seguenti API nel lettore multimediale**

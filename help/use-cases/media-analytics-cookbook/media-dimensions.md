@@ -23,7 +23,7 @@ Per abilitare questa funzione per un rapporto specifico, riattiva la configurazi
 
 >[!NOTE]
 >
->Le metriche per i file multimediali sono _non_ è disponibile per l’utilizzo al di fuori del tracciamento dei contenuti multimediali, poiché la maggior parte di questi sono calcolati dal componente aggiuntivo Streaming Media Collection in base a eventi heartbeat. Inoltre, è importante che le metriche dei contenuti multimediali non siano gonfiate da implementazioni diverse.
+>Le metriche dei contenuti multimediali sono _not_ disponibili per l&#39;utilizzo al di fuori del tracciamento dei contenuti multimediali, poiché la maggior parte di esse è calcolata dal componente aggiuntivo Streaming Media Collection in base a eventi heartbeat. Inoltre, è importante che le metriche dei contenuti multimediali non siano gonfiate da implementazioni diverse.
 
 ## Utilizzo di Attribuzione flusso multimediale
 

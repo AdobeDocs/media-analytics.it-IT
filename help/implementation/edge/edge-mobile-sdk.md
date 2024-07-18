@@ -15,10 +15,10 @@ ht-degree: 3%
 
 Puoi utilizzare Adobe Experience Platform Mobile SDK per inviare dati multimediali in streaming su dispositivi mobili ad Experience Platform Edge.
 
-Prima di poter inviare dati multimediali in streaming su dispositivi mobili ad Edge, completa i passaggi descritti in [Installare il componente aggiuntivo Streaming Media Collection con Experience Platform Edge](/help/implementation/edge/implementation-edge.md), quindi utilizza le seguenti risorse di documentazione per completare l’implementazione sia per iOS che per Android:
+Prima di poter inviare dati multimediali in streaming mobile ad Edge, completa i passaggi in [Installare il componente aggiuntivo Streaming Media Collection con Experience Platform Edge](/help/implementation/edge/implementation-edge.md), quindi utilizza le seguenti risorse di documentazione per completare l&#39;implementazione sia per iOS che per Android:
 
 * [Introduzione](https://developer.adobe.com/client-sdks/documentation/media-for-edge-network/)
 
 * [Riferimento API](https://developer.adobe.com/client-sdks/documentation/media-for-edge-network/api-reference/)
 
-* [Migrare ad Adobe Streaming Media per estensione Edge Network](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/migration-guide/)
+* [Migra a contenuti multimediali in streaming Adobe per l&#39;estensione Edge Network](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/migration-guide/)

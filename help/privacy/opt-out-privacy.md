@@ -7,8 +7,8 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: c00c9850d5ea924cef6b4842ecb770df1e78eb21
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 93%
+source-wordcount: '346'
+ht-degree: 94%
 
 ---
 

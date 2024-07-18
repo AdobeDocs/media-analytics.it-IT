@@ -32,16 +32,16 @@ ht-degree: 90%
          + [JavaScript - da Media SDK a Launch](legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-js.md)
 + Implementazione {#implementation}
    + [Panoramica sull’implementazione](implementation/overview.md)
-   + Implementazioni di Edge (consigliato) {#edge-recommended}
+   + Implementazioni di Edge (consigliate) {#edge-recommended}
       + [Prerequisiti](/help/implementation/edge/prerequisites-edge.md)
-      + SDK/estensione di Media Edge {#media-edge-sdk}
+      + SDK di Media Edge / Estensione {#media-edge-sdk}
          + [Configurazione di SDK/estensioni di Media Edge](/help/implementation/edge/implementation-edge.md)
          + [Media Edge Web SDK](/help/implementation/edge/edge-web-sdk.md)
          + [Media Edge Mobile SDK](/help/implementation/edge/edge-mobile-sdk.md)
       + [API di Media Edge](/help/implementation/edge/implementation-edge-api.md)
-   + Implementazioni solo per Adobe Analytics {#analytics-only}
+   + Implementazioni solo Adobe Analytics {#analytics-only}
       + [Prerequisiti](/help/implementation/media-sdk/setup/prerequisites-analytics.md)
-      + Media SDK/Estensione {#media-sdk}
+      + Media SDK / Estensione {#media-sdk}
          + [JavaScript Web SDK](implementation/media-sdk/setup/web-implementation.md)
          + [Estensione Media Analytics](implementation/media-sdk/setup/web-implementation-tags.md)
          + [SDK per dispositivi mobili](implementation/media-sdk/setup/mobile-implementation.md)
@@ -82,15 +82,15 @@ ht-degree: 90%
       + [Pannello Tempo trascorso su contenuti multimediali](reporting/workspace/media-playback-time-spent.md)
    + [Rapporti multimediali in Workspace](reporting/workspace/media-workspace-templates.md)
    + [Segmenti multimediali](reporting/segments.md)
-   + Rapporti multimediali predefiniti {#media-default-reports}
+   + Report multimediali predefiniti {#media-default-reports}
       + [Panoramica dei rapporti predefiniti](reporting/reports-and-analytics/default-reports-overview.md)
       + [Panoramica dei contenuti multimediali](reporting/reports-and-analytics/media-reports-overview.md)
       + [Dettagli contenuti multimediali](reporting/reports-and-analytics/media-reports-detail.md)
-      + [Rapporto Fasce orarie dei contenuti multimediali](reporting/reports-and-analytics/media-reports-daypart.md)
+      + [Report Media Daypart](reporting/reports-and-analytics/media-reports-daypart.md)
       + [Rapporto sui visualizzatori simultanei di contenuti multimediali](reporting/reports-and-analytics/media-concurrent-viewers-reports.md)
-   + API Media {#media-api}
+   + API multimediale {#media-api}
       + [Ottieni dati visualizzatori simultanei](reporting/reports-and-analytics/get-concurrent-json20.md)
-      + [Ottieni dati sul tempo trascorso di riproduzione multimediale](reporting/reports-and-analytics/get-mediaplaybacktimespent-json20.md)
+      + [Ottieni dati sul tempo di riproduzione multimediale trascorso](reporting/reports-and-analytics/get-mediaplaybacktimespent-json20.md)
 + Casi d’uso {#media-use-cases}
    + [Casi d’uso di Media SDK](use-cases/cookbook/sdk-cookbook-overview.md)
    + Tracciare lo stato del lettore {#player-state-tracking}

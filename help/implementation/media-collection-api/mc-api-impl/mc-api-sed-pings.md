@@ -14,7 +14,7 @@ ht-degree: 50%
 
 # Invio di eventi ping {#sending-ping-events}
 
-**Devi attivare gli eventi ping ogni 10 secondi, dopo i primi 10 secondi di riproduzione, indipendentemente dagli altri eventi API inviati. Questo vale sia per il contenuto principale che per il tracciamento degli annunci.**
+**È necessario attivare gli eventi ping ogni 10 secondi, dopo i primi 10 secondi di riproduzione, indipendentemente dagli altri eventi API inviati. Questo vale sia per il contenuto principale che per il tracciamento degli annunci.**
 
 Gli eventi ping sono l’&quot;heartbeat&quot; del componente aggiuntivo Streaming Media Collection. Gli unici parametri richiesti per una chiamata ping sono `eventType: ping` insieme all’oggetto `playerTime` (posizione della testina di riproduzione e marca temporale).
 

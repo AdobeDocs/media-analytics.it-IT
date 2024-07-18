@@ -41,7 +41,7 @@ La funzione Federated Analytics rende la misurazione audio e video più efficien
 * **Contratto per i flussi multimediali:** per poter accedere ai dati audio e video in Adobe Analytics, il Destinatario e il Mittente devono aver stipulato un contratto con Adobe Analytics per i flussi di dati multimediali. Per ulteriori informazioni, contatta il team dell’account.
 * **Federated Addendum:** prima di inviare o ricevere i dati, ogni Mittente e Destinatario deve disporre di un addendum firmato insieme ad Adobe. È richiesto un addendum per cliente, non un addendum per partnership. Per ulteriori informazioni, contatta il team dell’account.
 
-* **Implementazione del componente aggiuntivo Streaming Media Collection:** Il componente aggiuntivo Streaming Media Collection del mittente deve essere implementato su tutti i lettori che faranno parte del set di dati federati. Solo i dati multimediali in streaming sono disponibili per la federazione. Per ulteriori informazioni, consulta [Adobe Panoramica del componente aggiuntivo Streaming Media Collection](/help/media-overview.md).
+* **Implementazione del componente aggiuntivo Streaming Media Collection:** il componente aggiuntivo Streaming Media Collection del mittente deve essere implementato su tutti i lettori che faranno parte del set di dati federati. Solo i dati multimediali in streaming sono disponibili per la federazione. Per ulteriori informazioni, vedere [Panoramica del componente aggiuntivo Streaming Media Collection](/help/media-overview.md) di Adobe.
 
 * **Contratto di consulenza Adobe:** per la configurazione iniziale di regole federate tra il destinatario e il mittente è utile ricorrere ai servizi di consulenza per rivedere i dati e creare l’accordo di condivisione dei dati.
 

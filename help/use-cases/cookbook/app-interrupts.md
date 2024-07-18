@@ -21,7 +21,7 @@ La riproduzione in un’applicazione multimediale può essere interrotta in dive
 
 >[!NOTE]
 >
->Chiamata `trackSessionStart` quando l’app torna in background, la riproduzione fino a quel punto può non essere conteggiata nel tempo totale di riproduzione e perdere i marcatori di avanzamento precedenti, i segmenti e così via. Invece, esegui la chiamata `trackPlay` quando l’app torna attiva e/o il contenuto multimediale riprende la riproduzione.
+>La chiamata a `trackSessionStart` quando l&#39;app torna in background può comportare la mancata conteggio della riproduzione fino a quel punto rispetto al tempo totale di riproduzione, oltre alla perdita di marcatori di avanzamento precedenti, segmenti e così via. Invece, esegui la chiamata `trackPlay` quando l’app torna attiva e/o il contenuto multimediale riprende la riproduzione.
 
 ## Domande frequenti sulla gestione delle interruzioni dell’applicazione: {#faq-about-handling-application-interrupts}
 

@@ -7,8 +7,8 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: c308dba2d7cf07b89bf124bd6e5f972c253c9f18
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 92%
+source-wordcount: '795'
+ht-degree: 88%
 
 ---
 
@@ -150,7 +150,7 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
 1. **Aggiorna il valore dell&#39;indicatore di riproduzione**
 
-   Quando l&#39;indicatore di riproduzione multimediale cambia, notifica l&#39;SDK chiamando il `mediaUpdatePlayhead` API. <br /> Per il tracciamento dei video on-demand (VOD), il valore è specificato in secondi dall’inizio dell’elemento multimediale. <br /> Per lo streaming live, se il lettore non fornisce informazioni sulla durata del contenuto, il valore può essere specificato come il numero di secondi trascorsi dalla mezzanotte UTC di quel giorno.
+   Quando l&#39;indicatore di riproduzione multimediale cambia, notifica l&#39;SDK chiamando l&#39;API `mediaUpdatePlayhead`. <br /> Per il tracciamento dei video on-demand (VOD), il valore è specificato in secondi dall’inizio dell’elemento multimediale. <br /> Per lo streaming live, se il lettore non fornisce informazioni sulla durata del contenuto, il valore può essere specificato come il numero di secondi trascorsi dalla mezzanotte UTC di quel giorno.
 
    ```
    ADBMobile().mediaUpdatePlayhead(position)
@@ -158,9 +158,9 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
    >[!NOTE]
    >
-   >Quando richiami il `mediaUpdatePlayhead` API:
+   >Quando si chiama l&#39;API `mediaUpdatePlayhead`, tenere presente quanto segue:
    >* Quando si utilizzano i marcatori di avanzamento, è necessario specificare la durata del contenuto e la testina di riproduzione deve essere aggiornata come numero di secondi dall’inizio dell’elemento multimediale, a partire da 0.
-   >* Quando utilizzi gli SDK per contenuti multimediali, devi chiamare `mediaUpdatePlayhead` API almeno una volta al secondo.
+   >* Quando si utilizzano Media SDK, è necessario chiamare l&#39;API `mediaUpdatePlayhead` almeno una volta al secondo.
 
 
 1. **Tracciare il completamento della riproduzione**

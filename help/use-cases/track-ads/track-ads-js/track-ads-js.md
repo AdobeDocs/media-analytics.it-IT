@@ -6,8 +6,8 @@ exl-id: 4404d3a6-ab98-40f0-9573-ee32f480f650
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '355'
+workflow-type: tm+mt
+source-wordcount: '359'
 ht-degree: 100%
 
 ---
@@ -83,14 +83,14 @@ Le istruzioni seguenti forniscono indicazioni per l’implementazione tramite gl
    * [Implementazione dei metadati standard di annunci in JavaScript](/help/use-cases/track-ads/impl-std-ad-metadata/impl-std-ad-md-js/impl-std-ad-metadata-js.md)
    * **Metadati degli annunci personalizzati -** Per i metadati personalizzati, crea un oggetto variabile per le variabili di dati personalizzate e compila i dati per l’annuncio corrente:
 
-      ```js
-      /* Set custom context data */
-      var adCustomMetadata = {
-          affiliate: "Sample affiliate",
-          campaign: "Sample ad campaign",
-          creative: "Sample creative"
-      };
-      ```
+     ```js
+     /* Set custom context data */
+     var adCustomMetadata = {
+         affiliate: "Sample affiliate",
+         campaign: "Sample ad campaign",
+         creative: "Sample creative"
+     };
+     ```
 
 1. Chiamata `trackEvent()` con l’evento `AdStart` nell’istanza `MediaHeartbeat` per iniziare a tracciare la riproduzione dell’annuncio.
 

@@ -6,8 +6,8 @@ exl-id: e3f5bbdb-7007-435b-920c-566d163e57ad
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '1106'
+workflow-type: tm+mt
+source-wordcount: '1159'
 ht-degree: 100%
 
 ---
@@ -60,7 +60,7 @@ Questa chiamata segnala _l’intenzione dell’utente di riprodurre_ un video. R
 
 | Azione | Timeline di azioni (secondi) | Posizione della testina di riproduzione (secondi) | Richiesta del client |
 | --- | :---: | :---: | --- |
-| L’app avvia il timer dell’evento ping | 0 | 0 |  |
+| L’app avvia il timer dell’evento ping | 0 | 0 | |
 
 Avvia il timer di ping. Il primo evento ping dovrebbe quindi attivarsi in 1 secondo se ci sono annunci pre-roll, 10 secondi in caso contrario.
 

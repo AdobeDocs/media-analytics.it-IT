@@ -7,8 +7,8 @@ feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: c308dba2d7cf07b89bf124bd6e5f972c253c9f18
 workflow-type: tm+mt
-source-wordcount: '770'
-ht-degree: 93%
+source-wordcount: '719'
+ht-degree: 88%
 
 ---
 
@@ -99,9 +99,9 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
    >[!NOTE]
    >
-   >Quando richiami il `media.updatePlayhead` API:
+   >Quando si chiama l&#39;API `media.updatePlayhead`, tenere presente quanto segue:
    >* Quando si utilizzano i marcatori di avanzamento, è necessario specificare la durata del contenuto e la testina di riproduzione deve essere aggiornata come numero di secondi dall’inizio dell’elemento multimediale, a partire da 0.
-   >* Quando utilizzi gli SDK per contenuti multimediali, devi chiamare `media.updatePlayhead` API almeno una volta al secondo.
+   >* Quando si utilizzano Media SDK, è necessario chiamare l&#39;API `media.updatePlayhead` almeno una volta al secondo.
 
 1. **Tracciare il completamento della riproduzione**
 

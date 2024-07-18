@@ -6,8 +6,8 @@ exl-id: 16b15e03-5581-471f-ab0c-077189dd32d6
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '1074'
+workflow-type: tm+mt
+source-wordcount: '1130'
 ht-degree: 100%
 
 ---
@@ -32,7 +32,7 @@ I seguenti diagrammi illustrano la timeline della testina di riproduzione e la t
 
 Questa chiamata segnala _l’intenzione dell’utente di riprodurre_ un video.
 
-Restituisce un ID sessione (`{sid}`) al client utilizzato per identificare tutte le chiamate di tracciamento successive all’interno della sessione. Lo stato del lettore non è ancora “in riproduzione”, ma è “in avvio”. 
+Restituisce un ID sessione (`{sid}`) al client utilizzatoa per identificare tutte le chiamate di tracciamento successive all’interno della sessione. Lo stato del lettore non è ancora “in riproduzione”, ma è “in avvio”. 
 
 I parametri di sessione obbligatori devono essere inclusi nella mappa `params` nel corpo della richiesta. Per informazioni sulle sessioni, consulta la documentazione delle API di Media Collection.
 
@@ -65,7 +65,7 @@ Nel backend, questa chiamata genera una chiamata di avvio Adobe Analytics.
 
 | Azione | Timeline di azioni (secondi) | Posizione della testina di riproduzione (secondi) | Richiesta del client |
 | --- | :---: | :---: | --- |
-| L’app avvia il timer dell’evento ping | 0 | 0 | `/api/v1/sessions/{sid}/events` |  |
+| L’app avvia il timer dell’evento ping | 0 | 0 | `/api/v1/sessions/{sid}/events` | |
 
 Avvia il timer ping dell’app. Il primo evento ping dovrebbe quindi attivarsi in 1 secondo se ci sono annunci pre-roll, 10 secondi in caso contrario.
 

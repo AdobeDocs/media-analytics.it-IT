@@ -6,8 +6,8 @@ exl-id: e428d3cd-dbc7-48bb-82ff-61b6b892884c
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '1169'
+workflow-type: tm+mt
+source-wordcount: '1152'
 ht-degree: 100%
 
 ---
@@ -59,42 +59,42 @@ Il ponte connettore è progettato per eseguire le seguenti operazioni:
 
 | Categoria | Nome metodo | Descrizione |
 |---|---|---|
-| **Costanti** |  |  |
+| **Costanti** | |  |
 |  | `sceneGraphConstants` | Restituisce un oggetto contenente `SceneGraphConstants`. Per ulteriori informazioni, consulta la tabella precedente. |
-|  |  |  |
-| **Registrazione debug** |  |  |
+|  | | |
+| **Registrazione debug** | | |
 |  | `setDebugLogging` | API di SceneGraph che consentono di impostare la registrazione debug sull’SDK ADBMobile. |
 |  | `getDebugLogging` | API di SceneGraph che consentono di ottenere la registrazione debug dall’SDK ADBMobile. |
-|  | Per ulteriori informazioni, consulta la sezione Registrazione debug dell’SDK legacy. |  |
-|  |  |  |
-| **Stato privacy/Rinuncia** |  |  |
+|  | Per ulteriori informazioni, consulta la sezione Registrazione debug dell’SDK legacy. | |
+|  | | |
+| **Stato privacy/Rinuncia** | | |
 |  | `setPrivacyStatus` | API di SceneGraph che consentono di impostare lo stato della privacy sull’SDK di ADBMobile. |
 |  | `getPrivacyStatus` | API di SceneGraph che consentono di ottenere lo stato della privacy dall’SDK di ADBMobile. |
-|  | Per ulteriori informazioni, consulta la sezione Stato privacy/Rinuncia dell’SDK legacy. |  |
-|  |  |  |
-| **Analytics** |  |  |
+|  | Per ulteriori informazioni, consulta la sezione Stato privacy/Rinuncia dell’SDK legacy. | |
+|  | | |
+| **Analytics** | | |
 |  | `trackState` | API di SceneGraph che consentono di tenere traccia dello stato sull’SDK di ADBMobile. |
 |  | `trackAction` | API di SceneGraph per tenere traccia dell’azione sull’SDK ADBMobile. |
 |  | `trackingIdentifier` | API di SceneGraph per ottenere un identificatore di tracciamento dall’SDK ADBMobile. |
 |  | `userIdentifier` | API di SceneGraph per ottenere un identificatore utente dall’SDK di ADBMobile. |
 |  | `setUserIdentifier` | API di SceneGraph per impostare l’identificatore utente nell’SDK ADBMobile. |
 |  | `getAllIdentifiers` | L’API di SceneGraph recupera tutte le identità utente note e mantenute dall’SDK Roku. |
-|  | Per ulteriori informazioni consulta la sezione Analytics dell’SDK legacy. |  |
-|  |  |  |
-| **Experience Cloud** |  |  |
+|  | Per ulteriori informazioni consulta la sezione Analytics dell’SDK legacy. | |
+|  | | |
+| **Experience Cloud** | | |
 |  | `visitorSyncIdentifiers` | API di SceneGraph per sincronizzare gli identificatori di Experience Cloud sull’SDK di ADBMobile. |
 |  | `visitorMarketingCloudID` | API di SceneGraph per ottenere l’Experience Cloud ID del visitatore dall’SDK ADBMobile. |
-|  | Per ulteriori informazioni consulta la sezione Experience Cloud dell’SDK legacy. |  |
-|  |  |  |
-| **Audience Manager** |  |  |
+|  | Per ulteriori informazioni consulta la sezione Experience Cloud dell’SDK legacy. | |
+|  | | |
+| **Audience Manager** | | |
 |  | `audienceSubmitSignal` | API di SceneGraph per inviare un segnale di gestione dell’audience con caratteristiche. |
 |  | `audienceVisitorProfile` | API di SceneGraph per ottenere un profilo visitatore di audience manager dall’SDK di ADBMobile. |
 |  | `audienceDpid` | API di SceneGraph per ottenere un Dpid di pubblico dall’SDK di ADBMobile. |
 |  | `audienceDpuuid` | API di SceneGraph per ottenere un pubblico Dpuuid dall’SDK di ADBMobile. |
 |  | `audienceSetDpidAndDpuuid` | API di SceneGraph per impostare audience Dpid e Dpuuid sull’SDK di ADBMobile. |
-|  | Per ulteriori informazioni consulta la sezione Audience Manager dell’SDK legacy. |  |
-|  |  |  |
-| **MediaHeartbeat** |  |  |
+|  | Per ulteriori informazioni consulta la sezione Audience Manager dell’SDK legacy. | |
+|  | | |
+| **MediaHeartbeat** | | |
 |  | `mediaTrackLoad` | API di SceneGraph per caricare contenuti video per il tracciamento MediaHeartbeat. |
 |  | mediaTrackStart | API di SceneGraph per avviare la sessione di tracciamento video utilizzando MediaHeartbeat. |
 |  | `mediaTrackUnload` | API di SceneGraph per scaricare contenuti video dal tracciamento MediaHeartbeat. |
@@ -105,7 +105,7 @@ Il ponte connettore è progettato per eseguire le seguenti operazioni:
 |  | mediaTrackEvent | API di SceneGraph per tenere traccia degli eventi di riproduzione durante il tracciamento. Ad esempio: annunci, capitoli. |
 |  | `mediaUpdatePlayhead` | API di SceneGraph per inviare aggiornamenti dell&#39;indicatore di riproduzione a MediaHeartbeat durante il tracciamento video. |
 |  | `mediaUpdateQoS` | API di SceneGraph per inviare aggiornamenti QoS a MediaHeartbeat durante il tracciamento video. |
-|  | Per ulteriori informazioni consulta la sezione MediaHeartbeat dell’SDK legacy. |  |
+|  | Per ulteriori informazioni consulta la sezione MediaHeartbeat dell’SDK legacy. | |
 
 ### SceneGraphConstants
 
@@ -193,7 +193,7 @@ Tipo di ritorno: `SceneGraphConstants`
 |---|---|---|
 | Controllo delle versioni | `version` | Costante per il recupero delle informazioni sulla versione di AdobeMobileLibrary |
 | Privacy/rinuncia | `PRIVACY_STATUS_OPT_IN` | Costante per lo stato di privacy acconsentito |
-|  | `PRIVACY_STATUS_OPT_OUT` | Costante per lo stato di privacy rifiutato |
+|   | `PRIVACY_STATUS_OPT_OUT` | Costante per lo stato di privacy rifiutato |
 | Costanti MediaHeartbeat | Consulta le costanti della pagina: <br/><br/>[Metodi per heartbeat multimediali.](/help/use-cases/track-av-playback/track-core/track-core-roku.md) | Utilizza queste costanti con le API MediaHeartbeat |
 | Metadati standard | Consulta le costanti della pagina: <br/><br/>[Parametri per i metadati standard.](/help/use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md) | Utilizza queste costanti per allegare metadati di video/annunci standard nelle API MediaHeartbeat |
 

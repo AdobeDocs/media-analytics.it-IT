@@ -6,8 +6,8 @@ exl-id: 3781f0f7-be75-43e5-a40b-a34956dce36e
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
-source-wordcount: '838'
+workflow-type: tm+mt
+source-wordcount: '847'
 ht-degree: 100%
 
 ---
@@ -43,41 +43,40 @@ Completa e registra le seguenti azioni (in ordine):
 
    * **Chiamata Start di Adobe Analytics**
 
-      | Parametro | Valore (di esempio) |
-      |---|---|
-      | `pev2` | ms_s |
-      | `mid` | 30250035503789876473484580554595324209 |
+     | Parametro | Valore (di esempio) |
+     |---|---|
+     | `pev2` | ms_s |
+     | `mid` | 30250035503789876473484580554595324209 |
 
    * **Chiamata per pagina del sito web**
 
-      | Parametro | Valore (di esempio) |
-      |---|---|
-      | `mid` | 30250035503789876473484580554595324209 |
+     | Parametro | Valore (di esempio) |
+     |---|---|
+     | `mid` | 30250035503789876473484580554595324209 |
 
    * **Chiamata Lifecycle**
 
-      | Parametro | Valore (di esempio) |
-      |---|---|
-      | `pev2` | ADBINTERNAL:Lifecycle |
-      | `mid` | 30250035503789876473484580554595324209 |
+     | Parametro | Valore (di esempio) |
+     |---|---|
+     | `pev2` | ADBINTERNAL:Lifecycle |
+     | `mid` | 30250035503789876473484580554595324209 |
 
    * **Chiamata Start di Media Analytics**
 
-      | Parametro | Valore (di esempio) |
-      |---|---|
-      | `s:event:type` | inizio |
+     | Parametro | Valore (di esempio) |
+     |---|---|
+     | `s:event:type` | inizio |
 
-      >[!NOTE]
-      >
-      >Nelle chiamate Start di Media Analytics (`s:event:type=start`) i valori `mid` potrebbero non essere presenti. Non si tratta di un errore. Potrebbero essere visualizzati solo dopo le chiamate Play di Media Analytics (`s:event:type=play`).
+     >[!NOTE]
+     >
+     >Nelle chiamate Start di Media Analytics (`s:event:type=start`) i valori `mid` potrebbero non essere presenti. Non si tratta di un errore. Potrebbero essere visualizzati solo dopo le chiamate Play di Media Analytics (`s:event:type=play`).
 
    * **Chiamata Play di Media Analytics**
 
-      | Parametro | Valore (di esempio) |
-      |---|---|
-      | `s:event:type` | play |
-      | `s:user:mid` | 30250035503789876473484580554595324209 |
-
+     | Parametro | Valore (di esempio) |
+     |---|---|
+     | `s:event:type` | play |
+     | `s:user:mid` | 30250035503789876473484580554595324209 |
 
 1. **Avviare il lettore multimediale**
 
@@ -107,13 +106,11 @@ Completa e registra le seguenti azioni (in ordine):
 
    * **Ad Play**
 
-      Durante la riproduzione di un annuncio, Media Analytics SDK invia al server eventi di riproduzione di tipo “ad” ogni secondo.
+     Durante la riproduzione di un annuncio, Media Analytics SDK invia al server eventi di riproduzione di tipo “ad” ogni secondo.
 
    * **Ad Complete**
 
-      Quando un annuncio è stato completato, deve essere inviata una chiamata di completamento di Media Analytics.
-
-
+     Quando un annuncio è stato completato, deve essere inviata una chiamata di completamento di Media Analytics.
 
 1. **Se disponibile, sospendere la riproduzione dell’annuncio per 30 secondi.**  **Ad Pause**
 
@@ -134,7 +131,7 @@ Completa e registra le seguenti azioni (in ordine):
    * La posizione della testina di riproduzione deve aumentare di 10 con ogni chiamata Play.
    * Il valore `l:event:duration` rappresenta il numero di millisecondi trascorsi dall’ultima chiamata di tracciamento e deve corrispondere approssimativamente allo stesso valore per ogni chiamata di 10 secondi.
 
-      Per i parametri e i metadati della chiamata, consulta [Dettagli della chiamata di prova.](/help/legacy/validation/test-call-details.md#play-main-content)
+     Per i parametri e i metadati della chiamata, consulta [Dettagli della chiamata di prova.](/help/legacy/validation/test-call-details.md#play-main-content)
 
 1. **Pausa durante la riproduzione per almeno 30 secondi.** Quando il lettore multimediale viene messo in pausa, l’SDK invia chiamate per l’evento Pausa al server Media Analytics ogni 10 secondi. Al termine della pausa, gli eventi Play devono riprendere.
 

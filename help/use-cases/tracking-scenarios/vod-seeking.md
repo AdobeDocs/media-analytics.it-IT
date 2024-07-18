@@ -6,7 +6,7 @@ exl-id: d77aa717-5dcb-4429-8dce-1914434f2b32
 feature: Media Analytics
 role: User, Admin, Data Engineer
 source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '274'
 ht-degree: 100%
 
@@ -24,11 +24,11 @@ Questo è lo stesso scenario della [riproduzione VOD senza annunci](/help/use-ca
 | --- | --- | --- | --- |
 | Clic utente [!UICONTROL Play] | `trackSessionStart` | Inizio contenuto Analytics, inizio contenuto Heartbeat | La libreria di misurazione non è a conoscenza dell’esistenza di un annuncio pre-roll, pertanto queste chiamate di rete sono identiche allo scenario [riproduzione VOD senza annunci](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
 | Viene riprodotto il primo fotogramma del contenuto. | `trackPlay` | Riproduzione di contenuti Heartbeat | Quando il contenuto del capitolo viene riprodotto prima del contenuto principale, gli heartbeat partono all’inizio del capitolo. |
-| Riproduzione dei contenuti |  | Heartbeat dei contenuti | Questa chiamata di rete è esattamente la stessa dello scenario [riproduzione VOD senza annunci](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
-| L’utente inizia l’operazione di ricerca nel contenuto | `trackSeekStart` |  | Non viene inviato alcun heartbeat finché la ricerca non è stata completa, per esempio `trackSeekComplete` |
-| Operazione di ricerca completata | `trackSeekComplete` |  | Gli heartbeat iniziano a essere inviati dal momento in cui la ricerca è stata completata. Suggerimento: il valore della testina di riproduzione deve rappresentare il nuovo valore corretto dopo la ricerca. |
+| Riproduzione dei contenuti | | Heartbeat dei contenuti | Questa chiamata di rete è esattamente la stessa dello scenario [riproduzione VOD senza annunci](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
+| L’utente inizia l’operazione di ricerca nel contenuto | `trackSeekStart` | | Non viene inviato alcun heartbeat finché la ricerca non è stata completa, per esempio `trackSeekComplete` |
+| Operazione di ricerca completata | `trackSeekComplete` | | Gli heartbeat iniziano a essere inviati dal momento in cui la ricerca è stata completata. Suggerimento: il valore della testina di riproduzione deve rappresentare il nuovo valore corretto dopo la ricerca. |
 | Contenuto completato | `trackComplete` | Contenuto Heartbeat completato | Questa chiamata di rete è identica a quella dello scenario [Riproduzione VOD senza annunci](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
-| Sessione terminata | `trackSessionEnd` |  | `SessionEnd` |
+| Sessione terminata | `trackSessionEnd` | | `SessionEnd` |
 
 ## Codice di esempio {#sample-code}
 
