@@ -5,7 +5,7 @@ uuid: 904dfda0-4782-41da-b4ab-212e81156633
 exl-id: b8de88d0-3a93-4776-b372-736bf979ee26
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 2ce09eafeb8def909ae2a8ae7cc09a88b2f663af
+source-git-commit: 1375fb3260d5c4ca703827b3d73174f4e475f76d
 workflow-type: tm+mt
 source-wordcount: '666'
 ht-degree: 93%
@@ -133,6 +133,7 @@ L’SDK 2.x per Roku per le soluzioni di Experience Cloud consente di misurare l
    | `visitorSyncIdentifiers` | Insieme all’ID visitatore di Experience Cloud, puoi impostare altri ID cliente da associare a ogni visitatore. L’API visitatore accetta più ID cliente per lo stesso visitatore, con un identificatore del tipo di cliente che consente di distinguere l’ambito dei diversi ID cliente. Questo metodo corrisponde a `setCustomerIDs`. Ad esempio: <br/><br/>`identifiers={}` <br/>`identifiers["idType"]="idValue"` <br/>`ADBMobile().visitorSyncIdentifiers(identifiers)` |
    | `setAdvertisingIdentifier` | Utilizzato per impostare l’ID Roku per la pubblicità (RIDA) sull’SDK. Ad esempio: <br/><br/> `ADBMobile().setAdvertisingIdentifier(`<br/>  `"<sample_roku_identifier_for_advertising>")` <br/><br/><br/>Ottenere l’ID Roku per la pubblicità (RIDA) utilizzando l’API [getRIDA()](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md#getrida-as-dynamic) dell’SDK Roku. |
    | `getAllIdentifiers` | Restituisce un elenco di tutti gli identificatori memorizzati dall’SDK, inclusi Analytics, visitatore, Audience Manager e identificatori personalizzati. <br/><br/> `identifiers = ADBMobile().getAllIdentifiers()` |
+
    <!--
     Roku Api Reference:
     * [Integrating the Roku Advertising Framework](https://sdkdocs.roku.com/display/sdkdoc/Integrating+the+Roku+Advertising+Framework)  
