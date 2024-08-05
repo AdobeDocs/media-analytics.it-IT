@@ -5,7 +5,7 @@ uuid: f83e9ef1-803d-4152-a6c7-acaa325036b9
 exl-id: a70025ec-1418-46f1-b41f-433d09f024e1
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: 0079116bcf39bb6d20b4fd5f14bd3c19137c46e3
 workflow-type: tm+mt
 source-wordcount: '1337'
 ht-degree: 100%
@@ -143,7 +143,7 @@ Passa l’ID utente Experience Cloud (noto anche come `MID` o `MCID`) alla chiam
 
 ### visitor.marketingCloudOrgId
 
-Oltre a essere necessario per la generazione di MCID se non viene fornito, questo parametro viene utilizzato anche come valore per l’ID dell’editore (in base al quale Media Analytics esegue la [corrispondenza della regola federativa.](/help/use-cases/federated-analytics.md))
+Oltre a essere necessario per la generazione di MCID se non viene fornito, questo parametro viene utilizzato anche come valore per l’ID dell’editore (in base al quale Media Analytics esegue la [corrispondenza della regola federativa.](/help/use-cases/federated-media.md))
 
 ### ID dell’utente legacy di Analytics (aid) e ID degli utenti dichiarati (customerID)
 

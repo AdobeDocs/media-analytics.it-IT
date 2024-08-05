@@ -5,7 +5,7 @@ user-guide-title: Componente aggiuntivo Streaming Media Collection
 breadcrumb-title: Guida a Streaming Media Collection
 user-guide-description: Implementare Streaming Media. Gli argomenti trattati comprendono Media SDK e Media Collection API.
 sub-product: media analytics
-source-git-commit: 240fa48bdc738425e04cd29c27625c7dd612ff18
+source-git-commit: 0079116bcf39bb6d20b4fd5f14bd3c19137c46e3
 workflow-type: tm+mt
 source-wordcount: '895'
 ht-degree: 90%
@@ -100,7 +100,7 @@ ht-degree: 90%
       + [Tracciamento di più stati del lettore](use-cases/player-state-tracking/multiple-player-states.md)
       + [Esempi di tracciamento dello stato del lettore](use-cases/player-state-tracking/player-state-examples.md)
    + [Tracciare i contenuti scaricati ](use-cases/track-downloaded-content.md)
-   + [Federated Analytics ](use-cases/federated-analytics.md)
+   + [Federated Media](use-cases/federated-media.md)
    + [Gestione degli arresti dell’applicazione durante la riproduzione](use-cases/cookbook/app-interrupts.md)
    + [Attribuzione flusso multimediale](use-cases/media-analytics-cookbook/media-dimensions.md)
    + [Ripresa di sessioni inattive](use-cases/cookbook/resuming-inactive.md)
