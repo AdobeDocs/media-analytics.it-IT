@@ -5,10 +5,10 @@ uuid: 0ff591d3-fa99-4123-9e09-c4e71ea1060b
 exl-id: 16b15e03-5581-471f-ab0c-077189dd32d6
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a1c3bdbec223ab0141d922dce07ba2128b52e794
 workflow-type: tm+mt
-source-wordcount: '1130'
-ht-degree: 100%
+source-wordcount: '1120'
+ht-degree: 99%
 
 ---
 
@@ -283,7 +283,7 @@ Traccia la fine del secondo annuncio pre-roll.
 | --- | :---: | :---: | --- |
 | Tracciamento dell’annuncio pre-roll completato | 22 | 0 | `/api/v1/sessions/{sid}/events` |
 
-L’interruzione pubblicitaria è terminata. Durante l’interruzione pubblicitaria, lo stato della riproduzione è rimasto “in esecuzione”.
+L’interruzione pubblicitaria è terminata.
 
 ```json
 {
