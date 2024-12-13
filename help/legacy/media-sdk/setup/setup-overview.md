@@ -1,14 +1,14 @@
 ---
 title: Spiegazione implementazione SDK per contenuti multimediali
-description: “Scopri come configurare Media SDK per il tracciamento dei contenuti multimediali nelle applicazioni mobili, OTT e browser (JS)”.
+description: Scopri come impostare Media SDK per il tracciamento dei contenuti multimediali nelle applicazioni mobili, OTT e browser (JS).
 uuid: 06fefedb-b0c8-4f7d-90c8-e374cdde1695
 exl-id: a175332e-0bdc-44aa-82cb-b3f879e7abfc
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
+source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
 workflow-type: tm+mt
-source-wordcount: '618'
-ht-degree: 97%
+source-wordcount: '617'
+ht-degree: 94%
 
 ---
 
@@ -19,7 +19,7 @@ Dopo aver scaricato Media SDK per la tua app video o il tuo lettore, segui le in
 
 ## Linee guida generali sull’implementazione {#general-implementation-guidelines}
 
-Esistono tre componenti SDK principali utilizzati nel tracciamento con il componente aggiuntivo Streaming Media Collection:
+Esistono tre componenti principali di SDK utilizzati nel tracciamento con Streaming Media Collection:
 * Configurazione Media Heartbeat - `MediaHeartbeatConfig` contiene le impostazioni di base per la generazione di rapporti.
 * Delegato Media Heartbeat - `MediaHeartbeatDelegate` controlla il tempo di riproduzione e l’oggetto QoS.
 * Media Heartbeat - `MediaHeartbeat` è la libreria principale contenente membri e metodi.

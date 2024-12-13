@@ -1,19 +1,19 @@
 ---
 product: adobe analytics
 audience: end-user
-user-guide-title: Componente aggiuntivo Streaming Media Collection
+user-guide-title: Raccolta di contenuti multimediali in streaming
 breadcrumb-title: Guida a Streaming Media Collection
 user-guide-description: Implementare Streaming Media. Gli argomenti trattati comprendono Media SDK e Media Collection API.
 sub-product: media analytics
-source-git-commit: 0079116bcf39bb6d20b4fd5f14bd3c19137c46e3
+source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
 workflow-type: tm+mt
-source-wordcount: '895'
-ht-degree: 90%
+source-wordcount: '893'
+ht-degree: 89%
 
 ---
 
 
-# Componente aggiuntivo Streaming Media Collection {#using}
+# Raccolta di contenuti multimediali in streaming {#using}
 
 + [Guida a Streaming Media Collection](media-overview.md)
 + Note sulla versione {#release-notes}
@@ -37,7 +37,7 @@ ht-degree: 90%
       + SDK di Media Edge / Estensione {#media-edge-sdk}
          + [Configurazione di SDK/estensioni di Media Edge](/help/implementation/edge/implementation-edge.md)
          + [Media Edge Web SDK](/help/implementation/edge/edge-web-sdk.md)
-         + [Media Edge Mobile SDK](/help/implementation/edge/edge-mobile-sdk.md)
+         + [SDK mobile di Media Edge](/help/implementation/edge/edge-mobile-sdk.md)
       + [API di Media Edge](/help/implementation/edge/implementation-edge-api.md)
    + Implementazioni solo Adobe Analytics {#analytics-only}
       + [Prerequisiti](/help/implementation/media-sdk/setup/prerequisites-analytics.md)

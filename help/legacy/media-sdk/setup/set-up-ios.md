@@ -5,16 +5,16 @@ uuid: a1c6be79-a6dc-47b6-93b3-ac7b42f1f3eb
 exl-id: fe7662b5-1700-4bd6-b542-66aa8493459d
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
+source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '731'
 ht-degree: 95%
 
 ---
 
 # Configurazione iOS {#set-up-ios}
 
-Scopri come configurare il componente aggiuntivo Streaming Media Collection per dispositivi iOS.
+Scopri come configurare Streaming Media Collection per dispositivi iOS.
 
 >[!IMPORTANT]
 >

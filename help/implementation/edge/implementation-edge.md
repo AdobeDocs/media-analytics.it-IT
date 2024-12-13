@@ -1,27 +1,27 @@
 ---
-title: Implementare il componente aggiuntivo Streaming Media Collection utilizzando l’Edge Network
-description: Scopri come implementare il componente aggiuntivo Streaming Media Collection con Experience Platform Edge.
+title: Implementare Streaming Media Collection utilizzando l’Edge Network
+description: Scopri come implementare Streaming Media Collection con Experience Platform Edge.
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: dfdb1415-105e-4c41-bedc-ecb85ed1b1d9
-source-git-commit: 380d3ea192162226816d2e269e5cca20f981ac0f
+source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
 workflow-type: tm+mt
-source-wordcount: '2154'
-ht-degree: 5%
+source-wordcount: '2146'
+ht-degree: 6%
 
 ---
 
-# Implementare il componente aggiuntivo Streaming Media Collection utilizzando l’Edge Network
+# Implementare Streaming Media Collection utilizzando l’Edge Network
 
 La rete Edge di Adobe Experience Platform consente di inviare dati destinati a più prodotti a una posizione centralizzata. Experience Edge inoltra le informazioni appropriate ai prodotti desiderati. Questo concetto consente di consolidare le attività di implementazione, in particolare per quanto riguarda più soluzioni di dati.
 
-L’immagine seguente illustra come implementare il componente aggiuntivo Adobe Streaming Media Collection per utilizzare Experience Platform Edge per rendere i dati disponibili in Analysis Workspace, in Adobe Analytics o Customer Journey Analytics:
+L’immagine seguente illustra come implementare Adobe Streaming Media Collection per utilizzare Experience Platform Edge per rendere i dati disponibili in Analysis Workspace, in Adobe Analytics o Customer Journey Analytics:
 
 ![Flusso di lavoro in CJA](assets/streaming-media-edge.png)
 
-Per una panoramica di tutte le opzioni di implementazione, inclusi i metodi di implementazione che non utilizzano Experience Platform Edge, vedere [Implementare il componente aggiuntivo Streaming Media Collection](/help/implementation/overview.md).
+Per una panoramica di tutte le opzioni di implementazione, inclusi i metodi di implementazione che non utilizzano Experience Platform Edge, vedi [Implementare Streaming Media Collection](/help/implementation/overview.md).
 
-Indipendentemente dal fatto che si utilizzi Adobe Experience Platform Web SDK, Adobe Experience Platform Mobile SDK, Adobe Experience Platform Roku SDK o l’API per implementare il componente aggiuntivo Streaming Media Collection con Experience Edge, è necessario prima completare le sezioni seguenti:
+Indipendentemente dal fatto che si utilizzi Adobe Experience Platform Web SDK, Adobe Experience Platform Mobile SDK, Adobe Experience Platform Roku SDK o l’API per implementare Streaming Media Collection con Experience Edge, è necessario prima completare le sezioni seguenti:
 
 ## Configurare lo schema in Adobe Experience Platform
 
@@ -76,7 +76,7 @@ Per creare e impostare uno schema:
 
       * Nel campo `Media Collection Details` > `Qoe Data Details`, nascondere i seguenti campi di reporting: `Average Bitrate`, `Average Bitrate Bucket`, `Bitrate Change Impacted Streams`, `Bitrate Changes`, `Buffer Impacted Streams`, `Buffer Events`, `Dropped Frame Impacted Streams`, `Drops Before Starts`, `Errors`, `External Error IDs`, `Error Impacted Streams`, `Media SDK Error IDs`, `Player SDK Error IDs`, `Stalling Impacted Streams`, `Stalling Events`, `Total Buffer Duration` e `Total Stalling Duration`.
 
-      * Nel campo `Media Collection Details` > `Session Details`, nascondere i seguenti campi di reporting: `10% Progress Marker`, `25% Progress Marker`, `50% Progress Marker`, `75% Progress Marker`, `95% Progress Marker`, `Ad Count`, `Average Minute Audience`, `Content Completes`, `Chapter Count`, `Content Starts`, `Content Time Spent`, `Estimated Streams`, `Federated Data`, `Media Segment Views`, `Media Downloaded Flag`, `Media Starts`, `Media Session ID`, `Media Session Server Timeout`, `Media Time Spent`, `Pause Events`, `Pause Impacted Streams`, `Pev3`, `Pccr`, `Total Pause Duration`, {26 e `Video Segment`.`Unique Time Played`
+      * Nel campo `Media Collection Details` > `Session Details`, nascondere i seguenti campi di reporting: `10% Progress Marker`, `25% Progress Marker`, `50% Progress Marker`, `75% Progress Marker`, `95% Progress Marker`, `Ad Count`, `Average Minute Audience`, `Content Completes`, `Chapter Count`, `Content Starts`, `Content Time Spent`, `Estimated Streams`, `Federated Data`, `Media Segment Views`, `Media Downloaded Flag`, `Media Starts`, `Media Session ID`, `Media Session Server Timeout`, `Media Time Spent`, `Pause Events`, `Pause Impacted Streams`, `Pev3`, `Pccr`, `Total Pause Duration`, `Unique Time Played` e `Video Segment`.
 
    1. Seleziona [!UICONTROL **Conferma**] per salvare le modifiche.
 
@@ -97,7 +97,7 @@ Per creare e impostare uno schema:
 
       * Nel campo `List Of Media Collection Downloaded Content Events` > `Media Details` > `Qoe Data Details`, nascondi i seguenti campi di reporting: `Average Bitrate`, `Average Bitrate Bucket`, `Bitrate Change Impacted Streams`, `Bitrate Changes`, `Buffer Events`, `Buffer Impacted Streams`, `Drops Before Starts`, `Dropped Frame Impacted Streams`, `Error Impacted Streams`, `Errors`, `External Error IDs`, `Media SDK Error IDs`, `Player SDK Error IDs`, `Stalling Events`, `Stalling Impacted Streams`, `Total Buffer Duration` e `Total Stalling Duration`.
 
-      * Nel campo `List Of Media Collection Downloaded Content Events` > `Media Details` > `Session Details`, nascondi i seguenti campi di reporting: `10% Progress Marker`, `25% Progress Marker`, `50% Progress Marker`, `75% Progress Marker`, `95% Progress Marker`, `Ad Count`, `Average Minute Audience`, `Chapter Count`, `Content Completes`, `Content Starts`, `Content Time Spent`, `Estimated Streams`, `Federated Data`, `Media Downloaded Flag`, `Media Segment Views`, `Media Session ID`, `Media Session Server Timeout`, `Media Starts`, `Media Time Spent`, `Pause Events`, `Pause Impacted Streams`, `Pccr`, `Pev3`, {26 , `Unique Time Played` e `Video Segment`.`Total Pause Duration`
+      * Nel campo `List Of Media Collection Downloaded Content Events` > `Media Details` > `Session Details`, nascondere i seguenti campi di reporting: `10% Progress Marker`, `25% Progress Marker`, `50% Progress Marker`, `75% Progress Marker`, `95% Progress Marker`, `Ad Count`, `Average Minute Audience`, `Chapter Count`, `Content Completes`, `Content Starts`, `Content Time Spent`, `Estimated Streams`, `Federated Data`, `Media Downloaded Flag`, `Media Segment Views`, `Media Session ID`, `Media Session Server Timeout`, `Media Starts`, `Media Time Spent`, `Pause Events`, `Pause Impacted Streams`, `Pccr`, `Pev3`, `Total Pause Duration`, `Unique Time Played` e `Video Segment`.
 
       * Nel campo `List Of Media Collection Downloaded Content Events` > `Media Details`, nascondi il campo `Media Session ID`.
 
@@ -179,7 +179,7 @@ Per creare e impostare uno schema:
 
      ![Opzione Media Analytics](assets/datastream-media-check.png)
 
-1. Ora puoi implementare l&#39;[API Media Edge](/help/implementation/edge/implementation-edge-api.md) o l&#39;[SDK Media Edge](/help/implementation/edge/edge-mobile-sdk.md) per iniziare a raccogliere i dati di analisi dei contenuti multimediali.
+1. Ora puoi implementare l&#39;[API Media Edge](/help/implementation/edge/implementation-edge-api.md) o [Media Edge SDK](/help/implementation/edge/edge-mobile-sdk.md) per iniziare a raccogliere i dati di analisi dei contenuti multimediali.
 
    Dopo aver raccolto alcuni dati, puoi [creare una connessione nel Customer Journey Analytics](#create-a-connection-in-customer-journey-analytics).
 
@@ -193,7 +193,7 @@ Per creare e impostare uno schema:
 
 1. In Customer Journey Analytics, creare una connessione come descritto in [Creare una connessione](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-connections/create-connection.html?lang=it).
 
-   Durante la creazione della connessione, per l’implementazione del componente aggiuntivo Streaming Media Collection sono necessarie le seguenti selezioni di configurazione:
+   Durante la creazione della connessione, per implementare Streaming Media Collection sono necessarie le seguenti selezioni di configurazione:
 
    1. Selezionare il set di dati creato in precedenza, come descritto in [Creare un set di dati in Adobe Experience Platform](#create-a-dataset-in-adobe-experience-platform).
 
@@ -211,7 +211,7 @@ Per creare e impostare uno schema:
 
 1. In Analisi Percorso clienti creare una visualizzazione dati come descritto in [Creare o modificare una visualizzazione dati](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=it).
 
-   Durante la creazione della visualizzazione dati, per implementare il componente aggiuntivo Streaming Media Collection sono necessarie le seguenti selezioni di configurazione:
+   Durante la creazione della visualizzazione dati, per implementare Streaming Media Collection sono necessarie le seguenti selezioni di configurazione:
 
    1. Nel campo [!UICONTROL **Connessione**], selezionare la connessione creata in precedenza, come descritto in [Creare una connessione nel Customer Journey Analytics](#create-a-connection-in-customer-journey-analytics).
 
@@ -353,7 +353,7 @@ A seconda del tipo di dati che desideri inviare ad Experience Platform Edge, puo
 
 * [Inviare dati web ad Edge con Adobe Experience Platform Web SDK](/help/implementation/edge/edge-web-sdk.md)
 
-* [Migra a contenuti multimediali in streaming Adobe per l&#39;estensione Edge Network](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/migration-guide/)
+* [Esegui migrazione a Adobe Streaming Media per estensione Edge Network](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/migration-guide/)
 
 ### Mobile: utilizzare Adobe Experience Platform Mobile SDK
 
@@ -363,15 +363,15 @@ Utilizza le seguenti risorse di documentazione per completare l’implementazion
 
 * [Riferimento API](https://developer.adobe.com/client-sdks/documentation/media-for-edge-network/api-reference/)
 
-* [Migra a contenuti multimediali in streaming Adobe per l&#39;estensione Edge Network](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/migration-guide/)
+* [Esegui migrazione a Adobe Streaming Media per estensione Edge Network](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/migration-guide/)
 
-### Roku: SDK per Adobe Experience Platform Roku
+### Roku: Adobe Experience Platform Roku SDK
 
 * [Introduzione](https://developer.adobe.com/client-sdks/documentation/media-for-edge-network/)
 
 * [SDK Adobe Experience Platform Roku](https://github.com/adobe/aepsdk-roku/tree/main)
 
-* [Migra a contenuti multimediali in streaming Adobe per l&#39;estensione Edge Network](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/migration-guide/) <!-- is the information here also applicable for Roku? -->
+* [Esegui migrazione a Adobe Streaming Media per l&#39;estensione di Edge Network](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/migration-guide/) <!-- is the information here also applicable for Roku? -->
 
 ### API: Web e altro
 

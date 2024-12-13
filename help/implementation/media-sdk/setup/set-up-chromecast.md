@@ -5,16 +5,16 @@ uuid: d664e394-02a2-4985-bbad-be1bcc44fb2b
 exl-id: 5dfe3407-2858-48c0-a70c-8ea87967ac47
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
+source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '570'
 ht-degree: 97%
 
 ---
 
 # Configurare Mobile SDK v3.x per Chromecast {#set-up-chromecast}
 
-In questa sezione vengono descritti i prerequisiti per la configurazione di un&#39;installazione Chromecast per il componente aggiuntivo Streaming Media Collection.
+In questa sezione vengono descritti i prerequisiti per la configurazione di un&#39;installazione Chromecast per Streaming Media Collection.
 
 ## Prerequisiti
 

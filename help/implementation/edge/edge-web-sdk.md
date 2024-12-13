@@ -1,12 +1,12 @@
 ---
 title: Inviare dati web ad Edge con Adobe Experience Platform Web SDK
-description: Scopri come inviare dati Adobe Streaming Media ad Experience Platform Edge con Adobe Experience Platform Web SDK.
+description: Scopri come inviare dati multimediali in streaming di Adobe ad Experience Platform Edge con Adobe Experience Platform Web SDK.
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: de40ebd9-46be-4a52-866f-7bb2589fce28
-source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
+source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
 workflow-type: tm+mt
-source-wordcount: '527'
+source-wordcount: '525'
 ht-degree: 0%
 
 ---
@@ -23,18 +23,18 @@ Per i clienti che utilizzano Media JS SDK, Web SDK fornisce un percorso di migra
 
 Per utilizzare il componente `streamingMedia` di Web SDK, è necessario soddisfare i seguenti prerequisiti:
 
-* Prima di poter inviare dati multimediali in streaming ad Edge, completa i passaggi in [Installare il componente aggiuntivo Streaming Media Collection con Experience Platform Edge](/help/implementation/edge/implementation-edge.md).
+* Prima di poter inviare dati multimediali in streaming ad Edge, completa i passaggi in [Installare la raccolta multimediale in streaming con Experience Platform Edge](/help/implementation/edge/implementation-edge.md).
 * Assicurati di avere accesso a Adobe Experience Platform e/o Adobe Analytics.
 * È necessario utilizzare Web SDK versione 2.20.0 o successiva. Per informazioni su come installare la versione più recente, consulta la [panoramica sull&#39;installazione di Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/overview).
 * Abilitare l&#39;opzione **[[!UICONTROL Media Analytics]](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/configure)** per lo stream di dati in uso.
 * Assicurati che lo schema utilizzato dallo stream di dati includa i campi dello schema di Media Collection.
-* Configura la funzione Streaming Media nella configurazione dell&#39;SDK Web, come illustrato in questa pagina, tramite l&#39;[estensione tag](#tag-extension) o tramite la [libreria JavaScript](#library).
+* Configura la funzione Streaming Media nella configurazione del Web SDK, come illustrato in questa pagina, tramite l&#39;[estensione tag](#tag-extension) o tramite la [libreria JavaScript](#library).
 
-Segui i passaggi descritti in questa pagina per migrare l’implementazione del componente aggiuntivo Streaming Media Collection da Media JS a Web SDK.
+Segui i passaggi descritti in questa pagina per migrare l’implementazione di Streaming Media Collection da Media JS a Web SDK.
 
 ### Passaggio 1: installare Experience Platform Web SDK
 
-Consulta la [documentazione dedicata](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/overview) per scoprire come installare Web SDK nelle proprietà web.
+Consulta la [documentazione dedicata](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/overview) per scoprire come installare Web SDK nelle proprietà Web.
 
 ### Passaggio 2: configurare il componente Web SDK `streamingMedia`.
 
@@ -54,7 +54,7 @@ mediaConfig.ssl = true;
 ADB.Media.configure(mediaConfig, appMeasurement);
 ```
 
-È invece necessario configurare il componente `streamingMedia` nell&#39;SDK Web come esemplificato di seguito.
+È invece necessario configurare il componente `streamingMedia` nel Web SDK come illustrato di seguito.
 
 ```js
 alloy("configure", {
@@ -68,9 +68,9 @@ alloy("configure", {
 });
 ```
 
-Per informazioni dettagliate su come configurarlo, consulta la [documentazione](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/configure/streamingmedia) del componente `streamingMedia` dell&#39;SDK Web.
+Per informazioni dettagliate su come configurarlo, vedere la [documentazione](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/configure/streamingmedia) del componente `streamingMedia` di Web SDK.
 
-### Passaggio 3: ottieni l’istanza di tracciamento dei contenuti multimediali durante la migrazione dall’SDK Media JS
+### Passaggio 3: ottieni l’istanza di tracciamento dei contenuti multimediali durante la migrazione dal SDK Media JS
 
 Per i clienti che utilizzano Media JS SDK, Web SDK fornisce un percorso di migrazione per passare da Media JS SDK a Web SDK, includendo al contempo il supporto per le funzionalità Media JS esistenti, come la gestione degli eventi multimediali.
 

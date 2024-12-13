@@ -5,16 +5,16 @@ uuid: null
 feature: Media Analytics
 role: User, Admin, Data Engineer
 exl-id: c37aeea2-7c8f-4815-ae28-634ae691e84f
-source-git-commit: 240fa48bdc738425e04cd29c27625c7dd612ff18
+source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
 workflow-type: tm+mt
-source-wordcount: '259'
-ht-degree: 45%
+source-wordcount: '256'
+ht-degree: 46%
 
 ---
 
-# Documentazione sull’implementazione del componente aggiuntivo Streaming Media Collection {#streaming-media-documentation}
+# Documentazione sull’implementazione di Streaming Media Collection {#streaming-media-documentation}
 
-La documentazione del componente aggiuntivo Streaming Media Collection si trova in più siti Web di prodotto. A seconda di come implementi la raccolta di contenuti multimediali in streaming, potrebbe essere necessario fare riferimento a uno o più set di documentazione.
+La documentazione per Streaming Media Collection si trova in più siti Web di prodotti. A seconda di come implementi la raccolta di contenuti multimediali in streaming, potrebbe essere necessario fare riferimento a uno o più set di documentazione.
 
 Per individuare la documentazione relativa al metodo di implementazione scelto, utilizza le informazioni nella tabella seguente.
 
@@ -23,13 +23,13 @@ Per individuare la documentazione relativa al metodo di implementazione scelto, 
 | Implementazione | Documentazione |
 |:-----------------------:|----------------|
 | **Web** | * [Inviare dati Web ad Edge con Adobe Experience Platform Web SDK](/help/implementation/edge/edge-web-sdk.md) <br> * [Implementazione Web per Streaming Media](/help/implementation/media-sdk/setup/web-implementation.md) <br>* [Implementazione Web con estensione Adobe Medium Analytics for Audio and Video](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics-3x/overview.html?lang=it) |
-| **Mobile** | * [Invia dati mobili ad Edge con l&#39;SDK di Adobe Experience Platform Mobile](/help/implementation/edge/edge-mobile-sdk.md) <br> *[Guida all&#39;SDK di Adobe Experience Platform Mobile](https://developer.adobe.com/client-sdks/documentation/) <br> *[Estensione Adobe Medium Analytics for Audio and Video](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/)<br> *[Versioni SDK Mobile correnti](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions/) <br> *[Implementazione mobile per Streaming Media](/help/implementation/media-sdk/setup/mobile-implementation.md) | |  |
-| **OTT** | *[SDK Chromecast 3.0 per soluzioni Adobe Marketing Cloud](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/)<br> *[Configura Chromecast](/help/implementation/media-sdk/setup/set-up-chromecast.md)<br> * [SDK Adobe Experience Platform Roku](/help/implementation/edge/implementation-edge.md) <br> *[Configura Roku](/help/implementation/media-sdk/setup/set-up-roku.md) |
+| **Mobile** | * [Invia dati mobili ad Edge con l&#39;estensione Adobe Experience Platform Mobile SDK](/help/implementation/edge/edge-mobile-sdk.md) <br> *[Guida di Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) <br> *[Adobi Medium Analytics per estensioni audio e video](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/)<br> *[Versioni correnti di Mobile SDK](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions/) <br> *[Implementazione mobile per Streaming Media](/help/implementation/media-sdk/setup/mobile-implementation.md) | |  |
+| **OTT** | *[Chromecast 3.0 SDK per soluzioni Adobe Marketing Cloud](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/)<br> *[Configurazione Chromecast](/help/implementation/media-sdk/setup/set-up-chromecast.md)<br> * [Adobe Experience Platform Roku SDK](/help/implementation/edge/implementation-edge.md) <br> *[Configurazione Roku](/help/implementation/media-sdk/setup/set-up-roku.md) |
 | **API di Adobe Experience Platform** | *[API Media Collection](/help/implementation/media-collection-api/mc-api-overview.md) |
 
 ## Documentazione aggiuntiva {#additional-documentation}
 
-La tabella seguente elenca la documentazione sui prodotti Adobe utilizzati con il componente aggiuntivo Streaming Media Collection.
+La tabella seguente elenca la documentazione sui prodotti Adobe utilizzati con Streaming Media Collection.
 
 | Prodotto | Documentazione |
 |:-----------------------:|----------------|

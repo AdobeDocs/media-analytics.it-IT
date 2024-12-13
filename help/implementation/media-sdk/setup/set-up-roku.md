@@ -5,10 +5,10 @@ uuid: 904dfda0-4782-41da-b4ab-212e81156633
 exl-id: b8de88d0-3a93-4776-b372-736bf979ee26
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 1375fb3260d5c4ca703827b3d73174f4e475f76d
+source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
 workflow-type: tm+mt
-source-wordcount: '666'
-ht-degree: 93%
+source-wordcount: '664'
+ht-degree: 94%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 93%
 
 ## Prerequisiti {#roku-prerequisites}
 
-* **Ottieni parametri di configurazione validi per il componente aggiuntivo Streaming Media Collection**
+* **Ottieni parametri di configurazione validi per Streaming Media Collection**
 
-  Questi parametri possono essere ottenuti da un rappresentante di Adobe dopo la configurazione dell’account del componente aggiuntivo Adobe Streaming Media Collection.
+  Questi parametri possono essere ottenuti da un rappresentante di Adobe Adobe dopo la configurazione dell’account Streaming Media Collection.
 * **Includi le seguenti API nel lettore multimediale**
 
    * _API per abbonarsi agli eventi del lettore_: Media SDK richiede di chiamare un set di API semplici quando si verificano eventi nel lettore.

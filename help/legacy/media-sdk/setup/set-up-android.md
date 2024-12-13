@@ -5,16 +5,16 @@ uuid: 3ffe3276-a104-4182-9220-038729e9f3d5
 exl-id: 261445bf-3c8b-4658-891d-9a878e0b26ea
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
+source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
 workflow-type: tm+mt
-source-wordcount: '419'
-ht-degree: 96%
+source-wordcount: '418'
+ht-degree: 97%
 
 ---
 
 # Configurazione Android {#set-up-android}
 
-Scopri come configurare il componente aggiuntivo Streaming Media Collection per dispositivi Android.
+Scopri come impostare Streaming Media Collection per dispositivi Android.
 
 >[!IMPORTANT]
 >

@@ -5,17 +5,17 @@ uuid: a82ace81-c2f6-4799-9a62-4c6a737a7dab
 exl-id: 81970370-663c-49d5-b13c-628d294be178
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 05a1335daa8164324c7f33de373d96e14cb9f4f7
+source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 60%
+source-wordcount: '571'
+ht-degree: 61%
 
 ---
 
 # Federated Media{#federated-media}
 
 Il servizio Federated Media fornisce un sistema per la condivisione di dati multimediali in streaming (audio e video) tra due partner.
-I dati di misurazione standardizzati creati dal componente aggiuntivo Streaming Media Collection sono il marchio distintivo di Federated Media, che consente il flusso degli stessi dati in un singolo rapporto da più origini.
+I dati di misurazione standardizzati creati da Streaming Media Collection sono il marchio distintivo di Federated Media, che consente di inserire gli stessi dati in un unico rapporto da più origini.
 Attraverso le regole e la logica che regolano Federated Media, i dati sono facilmente controllati e personalizzati per soddisfare le esigenze di ogni partnership.
 Federated Media rende la misurazione audio e video più efficiente, semplice e actionable.
 
@@ -44,7 +44,7 @@ Federated Media rende la misurazione audio e video più efficiente, semplice e a
 * **Contratto per i flussi multimediali:** per poter accedere ai dati audio e video in Adobe Analytics, il Destinatario e il Mittente devono aver stipulato un contratto con Adobe Analytics per i flussi di dati multimediali. Per ulteriori informazioni, contatta il team dell’account.
 * **Federated Addendum:** prima di inviare o ricevere i dati, ogni Mittente e Destinatario deve disporre di un addendum firmato insieme ad Adobe. È richiesto un addendum per cliente, non un addendum per partnership. Per ulteriori informazioni, contatta il team dell’account.
 
-* **Implementazione del componente aggiuntivo Streaming Media Collection:** il componente aggiuntivo Streaming Media Collection del mittente deve essere implementato su tutti i lettori che faranno parte del set di dati federati. Solo i dati multimediali in streaming sono disponibili per la federazione. Per ulteriori informazioni, vedere [Panoramica del componente aggiuntivo Streaming Media Collection](/help/media-overview.md) di Adobe.
+* **Implementazione della raccolta di file multimediali in streaming:** il mittente deve avere la raccolta di file multimediali in streaming implementata su tutti i lettori che faranno parte del set di dati federati. Solo i dati multimediali in streaming sono disponibili per la federazione. Per ulteriori informazioni, vedere [Panoramica sulla raccolta di file multimediali in streaming di Adobe](/help/media-overview.md).
 
 * **Contratto di consulenza Adobe:** per la configurazione iniziale di regole federate tra il destinatario e il mittente è utile ricorrere ai servizi di consulenza per rivedere i dati e creare l’accordo di condivisione dei dati.
 

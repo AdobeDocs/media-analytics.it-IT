@@ -4,18 +4,18 @@ description: Questo argomento include le domande frequenti sulla fine del suppor
 exl-id: 9601ec17-8421-49d0-9d81-1cfa5e8f37cf
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: 4ed604cb1969212421fecd40996d7b25af50a2b2
+source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '600'
 ht-degree: 76%
 
 ---
 
 # Domande frequenti su Mobile SDK di Media Analytics relative alla fine del supporto
 
-Con la fine del supporto per gli SDK per dispositivi mobili versione 4, il 31 agosto 2021, Adobe ha anche terminato il supporto per gli SDK per dispositivi mobili di Media Analytics per iOS e Android. (Questo non include Media Analytics SDK per web (JS) e piattaforme OTT come Chromecast e Roku, che sono ancora supportate.)
+Con la fine del supporto per gli SDK per dispositivi mobili versione 4, il 31 agosto 2021, Adobe ha anche terminato il supporto per gli SDK per dispositivi mobili di Media Analytics per iOS e Android. (Questo non include Media Analytics SDK for web (JS) e piattaforme OTT come Chromecast e Roku, che sono ancora supportate.)
 
-Questo significa che Adobe non fornisce più correzioni, aggiornamenti relativi al sistema operativo o supporto per l’SDK mobile di Media Analytics. Durante la migrazione ai nuovi SDK Experience Platform, tieni presente che le [Estensioni Media Analytics](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/) devono essere implementate per abilitare il componente aggiuntivo Adobe Streaming Media Collection.
+Ciò significa che Adobe non fornisce più correzioni, aggiornamenti relativi al sistema operativo o supporto per il SDK mobile di Media Analytics. Durante la migrazione ai nuovi SDK Experience Platform, tieni presente che le [Estensioni Media Analytics](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/) devono essere implementate per abilitare la raccolta multimediale Adobe Streaming.
 
 
 ## Le 5 cose più importanti da sapere
@@ -28,7 +28,7 @@ Questo significa che Adobe non fornisce più correzioni, aggiornamenti relativi 
 
 1. Gli SDK Roku e Chromecast rimangono disponibili per i clienti Analytics per Streaming Media. Gli SDK Roku e Chromecast continueranno a essere migliorati e supportati come SDK autonomi. Se utilizzi l’SDK JS per Media Analytics, puoi continuare a utilizzare l’SDK autonomo o abilitare l’estensione Media Analytics tramite Adobe Data Collection (in precedenza Adobe Launch).
 
-Per eventuali domande, contatta il tuo Account Team di Adobi.
+Per eventuali domande, contatta il tuo Account Team di Adobe.
 
 ## Domande frequenti
 
