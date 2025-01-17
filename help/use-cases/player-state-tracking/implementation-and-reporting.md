@@ -4,25 +4,25 @@ description: Scopri come implementare la funzione di tracciamento dello stato de
 exl-id: 19a97c9b-14d1-4f11-bb0a-3a1ad6f949da
 feature: Media Analytics
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: 15cc123fb44654083b6501042bdd9d4e07128b59
 workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 100%
+source-wordcount: '328'
+ht-degree: 78%
 
 ---
 
 # Implementazione e reporting
 
-Durante una sessione di riproduzione, ogni occorrenza di uno stato (dall’inizio alla fine) deve essere tracciata singolarmente. Media SDK e l’API Media Collection forniscono nuovi metodi di tracciamento per questa funzionalità.
+Durante una sessione di riproduzione, ogni occorrenza di uno stato (dall’inizio alla fine) deve essere tracciata singolarmente. Media SDK e l’API Media Collection forniscono metodi di tracciamento per questa funzionalità.
 
-Media SDK include due nuovi metodi per il tracciamento dello stato personalizzato:
+Media SDK include due metodi per il tracciamento personalizzato dello stato:
 
 `trackStateStart("state_name")`
 
 `trackStateClose("state_name")`
 
 
-L’API Media Collection include due nuovi eventi che hanno `media.stateName` come parametro richiesto:
+L&#39;API Media Collection include due eventi che hanno `media.stateName` come parametro richiesto:
 
 `stateStart` e `stateEnd`
 
@@ -91,7 +91,7 @@ Le metriche fornite per ogni singolo stato vengono calcolate e inviate ad Adobe 
 
 ## Reporting
 
-Tutte le metriche dello stato del lettore possono essere utilizzate per qualsiasi visualizzazione di reporting disponibile in Analysis Workspace o in un componente (segmento, metriche calcolate) una volta che una suite di rapporti è abilitata per il tracciamento dello stato del lettore. Le nuove metriche possono essere abilitate nell’Admin Console per ogni singolo rapporto utilizzando la configurazione Media Reporting (Modifica impostazioni > Gestione media > Media Reporting).
+Tutte le metriche dello stato del lettore possono essere utilizzate per qualsiasi visualizzazione di reporting disponibile in Analysis Workspace o in un componente (segmento, metriche calcolate) una volta che una suite di rapporti è abilitata per il tracciamento dello stato del lettore. Queste metriche possono essere abilitate nell’Admin Console per ogni singolo rapporto utilizzando la configurazione di Media Reporting (Modifica impostazioni > Gestione file multimediali > Media Reporting).
 
 ![](assets/report-setup.png)
 
