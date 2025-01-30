@@ -1,19 +1,19 @@
 ---
 product: adobe analytics
 audience: end-user
-user-guide-title: Raccolta di contenuti multimediali in streaming
+user-guide-title: Streaming Media Collection
 breadcrumb-title: Guida a Streaming Media Collection
 user-guide-description: Implementare Streaming Media. Gli argomenti trattati comprendono Media SDK e Media Collection API.
 sub-product: media analytics
 source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
 workflow-type: tm+mt
 source-wordcount: '893'
-ht-degree: 89%
+ht-degree: 90%
 
 ---
 
 
-# Raccolta di contenuti multimediali in streaming {#using}
+# Streaming Media Collection {#using}
 
 + [Guida a Streaming Media Collection](media-overview.md)
 + Note sulla versione {#release-notes}
