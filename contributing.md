@@ -15,7 +15,7 @@ Il progetto aderisce al [Codice di condotta](https://git.corp.adobe.com/OpenSour
 
 ## Contratto di licenza da collaboratore
 
-Tutti i contributi di terze parti a questo progetto devono essere accompagnati da una licenza del contributore firmata. In tal modo è concesso ad Adobe il permesso di ridistribuire i contributi come parte del progetto. Firma il CLA su [SOME LINK](link non ancora presente). È sufficiente inviare un CLA di Adobe una sola volta, quindi se ne hai già inviato uno in precedenza, probabilmente sei a posto!
+Tutti i contributi di terze parti a questo progetto devono essere accompagnati da una licenza del contributore firmata. In tal modo è concesso ad Adobe il permesso di ridistribuire i contributi come parte del progetto. Firma il CLA su [SOME LINK] (link non ancora presente). È sufficiente inviare un CLA di Adobe una sola volta, quindi se ne hai già inviato uno in precedenza, probabilmente sei a posto!
 
 ## Revisioni del codice
 
