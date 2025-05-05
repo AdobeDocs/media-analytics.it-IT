@@ -23,7 +23,7 @@ Quando implementi Streaming Media Collection con Edge, devi anche disporre di un
    * [Guida a Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-landing.html?lang=it)
    * [Implementazione di Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=it)
    * [Documentazione di Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=it)
-   * [Documentazione di Real-time Customer Data Platform](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
+   * [Documentazione di Real-time Customer Data Platform](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=it)
 
 1. **Ottieni l&#39;URL del server di tracciamento dei contenuti multimediali**<br>
 Chiedere al rappresentante del Customer Journey Analytics l&#39;URL del server di tracciamento dei contenuti multimediali. <!-- This is the `collection-api-server` URL for the Mobile SDK, the JavaScript SDK, and the non-collection-api tracking server for Roku. Domain names for API implementation is: `[your_namespace].hb-api.omtrdc.net`. -->

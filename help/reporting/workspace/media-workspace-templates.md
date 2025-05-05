@@ -18,7 +18,7 @@ ht-degree: 9%
 >
 >*I report* in Workspace erano precedentemente noti come *modelli*.
 
-Analysis Workspace offre una serie di rapporti predefiniti disponibili per impostazione predefinita e che puoi utilizzare per analizzare i dati. Per ulteriori informazioni su tutti i report predefiniti disponibili, vedere [Visualizza report](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html?lang=en#menus) nella [pagina di destinazione di Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html?lang=it).
+Analysis Workspace offre una serie di rapporti predefiniti disponibili per impostazione predefinita e che puoi utilizzare per analizzare i dati. Per ulteriori informazioni su tutti i report predefiniti disponibili, vedere [Visualizza report](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html?lang=it#menus) nella [pagina di destinazione di Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html?lang=it).
 
 Alcuni di questi rapporti sono particolarmente utili per l’analisi dei dati multimediali in streaming, come descritto nelle sezioni seguenti.
 
@@ -41,6 +41,6 @@ Ad esempio, se scegli il rapporto [!UICONTROL **Consumo di contenuti multimedial
 Puoi utilizzare i rapporti multimediali predefiniti nei seguenti modi:
 durante la creazione di un nuovo progetto. Puoi anche eseguire o modificare un progetto esistente.
 
-* **Durante la creazione di un nuovo progetto:** Per informazioni su come creare un nuovo progetto da un report predefinito, vedere [Creare un progetto da un progetto vuoto o un report](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/create-projects.html?lang=en#create-a-project-from-a-blank-project-or-a-report) in [Creare progetti in Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/create-projects.html?lang=en#create-a-project-from-a-blank-project-or-a-report).
+* **Durante la creazione di un nuovo progetto:** Per informazioni su come creare un nuovo progetto da un report predefinito, vedere [Creare un progetto da un progetto vuoto o un report](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/create-projects.html?lang=it#create-a-project-from-a-blank-project-or-a-report) in [Creare progetti in Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/create-projects.html?lang=it#create-a-project-from-a-blank-project-or-a-report).
 
-* **Durante la creazione di un report aziendale personalizzato:** Per informazioni su come creare un report aziendale personalizzato, vedere [Creare un report aziendale personalizzato](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html?lang=en#company-report) nella [pagina di destinazione di Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html?lang=it).
+* **Durante la creazione di un report aziendale personalizzato:** Per informazioni su come creare un report aziendale personalizzato, vedere [Creare un report aziendale personalizzato](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html?lang=it#company-report) nella [pagina di destinazione di Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/landing.html?lang=it).
