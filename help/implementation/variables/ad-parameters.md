@@ -37,13 +37,13 @@ Descrizione dei dati della tabella:
 >[!IMPORTANT]
 >
 >Non modificare i nomi delle classificazioni per le variabili elencate di seguito che sono
->>descritte in Variabile di generazione rapporti/riservata come “classificazione”.
->>Le classificazioni per i file multimediali vengono definite quando una suite di rapporti è abilitata per il tracciamento
->>degli elementi multimediali. Di tanto in tanto, Adobe aggiunge nuove proprietà e, quando ciò si verifica,
->>i clienti devono riabilitare le suite di rapporti per accedere alle nuove proprietà dei contenuti multimediali
->>. Durante il processo di aggiornamento Adobe determina se
->>le classificazioni vengono abilitate verificando i nomi delle variabili. Se una di esse
->>manca, Adobe aggiunge di nuovo quelle mancanti.
+>&#x200B;>descritte in Variabile di generazione rapporti/riservata come “classificazione”.
+>&#x200B;>Le classificazioni per i file multimediali vengono definite quando una suite di rapporti è abilitata per il tracciamento
+>&#x200B;>degli elementi multimediali. Di tanto in tanto, Adobe aggiunge nuove proprietà e, quando ciò si verifica,
+>&#x200B;>i clienti devono riabilitare le suite di rapporti per accedere alle nuove proprietà dei contenuti multimediali
+>&#x200B;>. Durante il processo di aggiornamento Adobe determina se
+>&#x200B;>le classificazioni vengono abilitate verificando i nomi delle variabili. Se una di esse
+>&#x200B;>manca, Adobe aggiunge di nuovo quelle mancanti.
 
 ## Dati annuncio video {#ad-video-data}
 

@@ -39,12 +39,14 @@ Puoi controllare se l’attività di tracciamento è consentita su un dispositiv
                ```
                ADBMobile.config.setPrivacyStatus(ADBMobile.config.PRIVACY_STATUS_OPT_OUT)
                ```
+
            
          * **Roku:**
 
                ```
                ADBMobile().setPrivacyStatus(ADBMobile().PRIVACY_STATUS_OPT_OUT)
                ```
+
            
            >[!IMPORTANT]
            >
@@ -57,12 +59,14 @@ Puoi controllare se l’attività di tracciamento è consentita su un dispositiv
                ```
                ADBMobile.config.setPrivacyStatus(ADBMobile.config.PRIVACY_STATUS_OPT_IN)
                ```
+
            
          * **Roku:**
 
                ```
                ADBMobile().setPrivacyStatus(ADBMobile().PRIVACY_STATUS_OPT_IN)
                ```
+
            
       * **Restituisce l’impostazione corrente:**
 
@@ -71,12 +75,14 @@ Puoi controllare se l’attività di tracciamento è consentita su un dispositiv
                ```
                ADBMobile.config.getPrivacyStatus()
                ```
+
            
          * **Roku:**
 
                ```
                ADBMobile().getPrivacyStatus()
                ```
+
            
   Dopo aver modificato l’impostazione della privacy utilizzando `setPrivacyStatus`, la modifica rimane permanente finché non viene nuovamente modificata utilizzando questo metodo, oppure finché l’app non viene disinstallata e reinstallata.
 

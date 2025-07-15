@@ -179,7 +179,7 @@ Effettua il ping del backend ogni 1 secondo all’interno di un annuncio.
 >[!NOTE]
 >
 >Per gli annunci successivi nella timeline non verrà mostrata la serie di ping di un secondo,
->>per brevità...
+>&#x200B;>per brevità...
 
 ```json
 {
