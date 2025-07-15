@@ -1,14 +1,14 @@
 ---
 title: Informazioni sul tracciamento della riproduzione dei contenuti
-description: "Scopri come tracciare la riproduzione core, compresi il caricamento, l’avvio, la messa in pausa e il completamento del contenuto multimediale. "
+description: 'Scopri come tracciare la riproduzione core, compresi il caricamento, l’avvio, la pausa e il completamento del contenuto multimediale. '
 uuid: 7b8e2f76-bc4e-4721-8933-3e4453b01788
 exl-id: 98ad2783-c9e3-48de-88df-8549f26114a0
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 0d53e62069a65b252e004e21943ecdbd011a3658
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '875'
-ht-degree: 99%
+ht-degree: 97%
 
 ---
 

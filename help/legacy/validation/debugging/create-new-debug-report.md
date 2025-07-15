@@ -1,11 +1,11 @@
 ---
-title: Creare un nuovo rapporto di debug
+title: 'Creare un nuovo rapporto di debug '
 description: Scopri come creare un nuovo rapporto di debug
 uuid: 438fde3d-98f9-46d1-9672-75d204361568
 exl-id: 047acf35-8c1c-4493-9ee7-e2bad47c351e
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 100%

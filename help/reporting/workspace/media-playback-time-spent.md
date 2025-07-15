@@ -1,10 +1,10 @@
 ---
-title: Tempo di riproduzione dei contenuti multimediali trascorso
+title: 'Tempo di riproduzione dei contenuti multimediali trascorso '
 description: Scopri come utilizzare il pannello Tempo di riproduzione multimediale trascorso per analizzare il tempo di riproduzione trascorso e per comprendere la concorrenza dei picchi e dove si sono verificati gli abbandoni.
-feature: Media Analytics, Workspace Basics
+feature: Streaming Media, Workspace Basics
 role: User, Admin
 exl-id: 958b4968-0f52-464c-81e0-5ab9b84aaa9c
-source-git-commit: 2ce09eafeb8def909ae2a8ae7cc09a88b2f663af
+source-git-commit: 67f1fa8194fa58b2c513e3136d2bc7880f9cb06b
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 91%

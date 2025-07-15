@@ -3,9 +3,9 @@ title: Informazioni sulle timeline di tracciamento del contenuti multimediale - 
 description: Scopri la timeline dell’indicatore di riproduzione e la corrispondente azione dell’utente quando una sessione video viene abbandonata. Scopri i dettagli di ogni azione e richiesta.
 uuid: 74b89e8f-ef56-4e0c-b9a8-40739e15b4cf
 exl-id: 0c6a89f4-7949-4623-8ed9-ce1d1547bdfa
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 4c68f5997a9d336e8c3545cdfb7b9cb955602b69
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 100%

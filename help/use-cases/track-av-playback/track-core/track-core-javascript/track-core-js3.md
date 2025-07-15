@@ -2,9 +2,9 @@
 title: Scopri come tenere traccia della riproduzione core utilizzando JavaScript v3.x
 description: Scopri come implementare il tracciamento di base utilizzando Media SDK in un browser utilizzando le app JavaScript 3.x.
 exl-id: f3145450-82ba-4790-91a4-9d2cc97bbaa5
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: c308dba2d7cf07b89bf124bd6e5f972c253c9f18
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '747'
 ht-degree: 87%
@@ -128,7 +128,7 @@ Questa documentazione tratta il tracciamento nella versione 3.x dell’SDK.
 
 1. **Aggiorna il valore della testina di riproduzione**
 
-   Quando l&#39;indicatore di riproduzione multimediale cambia, notifica l&#39;SDK chiamando l&#39;API `mediaUpdatePlayhead`. <br /> Per il tracciamento dei video on-demand (VOD), il valore è specificato in secondi dall’inizio dell’elemento multimediale. <br /> Per lo streaming live, se il lettore non fornisce informazioni sulla durata del contenuto, il valore può essere specificato come il numero di secondi trascorsi dalla mezzanotte UTC di quel giorno.
+   Quando l&#39;indicatore di riproduzione multimediale cambia, avvisare SDK chiamando l&#39;API `mediaUpdatePlayhead`. <br /> Per il tracciamento dei video on-demand (VOD), il valore è specificato in secondi dall’inizio dell’elemento multimediale. <br /> Per lo streaming live, se il lettore non fornisce informazioni sulla durata del contenuto, il valore può essere specificato come il numero di secondi trascorsi dalla mezzanotte UTC di quel giorno.
 
    ```
    tracker.updatePlayhead(position)

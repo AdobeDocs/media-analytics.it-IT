@@ -2,9 +2,9 @@
 title: Informazioni sui dispositivi e piattaforme supportati
 description: Scopri i principali dispositivi supportati da Streaming Media Collection, come iOS, Android, dispositivi OTT e browser JavaScript.
 exl-id: 169ff7b9-e577-45b7-8927-74bdcccc0a77
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin
-source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 51%

@@ -3,9 +3,9 @@ title: 'Parametri per gli annunci '
 description: Scopri i parametri degli annunci, tra cui l’implementazione, la rete e le variabili di reporting per i dati video sugli annunci.
 uuid: 92cd7f97-bb5a-4de6-8946-453d30271d0f
 exl-id: 949e86cb-d265-4836-8825-a06b87203b15
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: e7f17c6e8ea6e54a55f59e4e817fba07a7851496
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '2036'
 ht-degree: 89%
@@ -37,13 +37,13 @@ Descrizione dei dati della tabella:
 >[!IMPORTANT]
 >
 >Non modificare i nomi delle classificazioni per le variabili elencate di seguito che sono
->descritte in Variabile di generazione rapporti/riservata come “classificazione”.
->Le classificazioni per i file multimediali vengono definite quando una suite di rapporti è abilitata per il tracciamento
->degli elementi multimediali. Di tanto in tanto, Adobe aggiunge nuove proprietà e, quando ciò si verifica,
->i clienti devono riabilitare le suite di rapporti per accedere alle nuove proprietà dei contenuti multimediali
->. Durante il processo di aggiornamento Adobe determina se
->le classificazioni vengono abilitate verificando i nomi delle variabili. Se una di esse
->manca, Adobe aggiunge di nuovo quelle mancanti.
+>>descritte in Variabile di generazione rapporti/riservata come “classificazione”.
+>>Le classificazioni per i file multimediali vengono definite quando una suite di rapporti è abilitata per il tracciamento
+>>degli elementi multimediali. Di tanto in tanto, Adobe aggiunge nuove proprietà e, quando ciò si verifica,
+>>i clienti devono riabilitare le suite di rapporti per accedere alle nuove proprietà dei contenuti multimediali
+>>. Durante il processo di aggiornamento Adobe determina se
+>>le classificazioni vengono abilitate verificando i nomi delle variabili. Se una di esse
+>>manca, Adobe aggiunge di nuovo quelle mancanti.
 
 ## Dati annuncio video {#ad-video-data}
 

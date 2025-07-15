@@ -2,9 +2,9 @@
 title: Scopri come implementare i metadati standard utilizzando JavaScript 3.x
 description: Scopri come impostare video e metadati standard di annunci da inviare con le chiamate di tracciamento nelle app del browser (JS 3.x).
 exl-id: 228ba000-10e2-4906-8417-265a03367a9b
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '48'
 ht-degree: 100%

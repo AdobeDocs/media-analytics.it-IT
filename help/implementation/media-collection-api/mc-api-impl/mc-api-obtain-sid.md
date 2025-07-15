@@ -1,14 +1,14 @@
 ---
-title: Ottenimento di un ID sessione
+title: 'Ottenimento di un ID sessione '
 description: Scopri come codificare una Richiesta di sessioni per ottenere l’ID di sessione dall’intestazione Posizione in una risposta.
 uuid: fc8712fa-848f-4564-af5d-5dd9d6b088d8
 exl-id: 4a1c4ade-4a5e-4af0-8117-19d718dd8bda
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
-source-wordcount: '61'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

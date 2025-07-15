@@ -3,12 +3,12 @@ title: Spiegazione delle chiavi metadati Roku
 description: Scopri le chiavi metadati Roku disponibili e visualizza l’elenco completo delle costanti di metadati standard.
 uuid: 2ca6bb1d-c545-43d3-9c3e-63b890aa268d
 exl-id: 687dbaa5-4723-4b3f-ab1e-4d5bf447cddf
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '471'
-ht-degree: 100%
+ht-degree: 92%
 
 ---
 
@@ -76,7 +76,7 @@ Per tenere traccia degli eventi multimediali è possibile utilizzare le seguenti
 | --- | --- |
 | `MEDIA_STANDARD_MEDIA_METADATA` | Costante per impostare i metadati su `MediaInfo` `trackLoad` |
 | `MEDIA_STANDARD_AD_METADATA` | Costante per impostare i metadati dell’annuncio su `EventData` `trackEvent` |
-| `MEDIA_RESUMED` | Costante per l’invio di un heartbeat relativo al video ripreso. Per riprendere il tracciamento video del contenuto precedentemente interrotto, è necessario impostare la proprietà `MEDIA_RESUMED` sull’oggetto `mediaInfo` quando effettui una chiamata `mediaTrackLoad`. (`MEDIA_RESUMED` non è un evento che può essere tracciato utilizzando l’API `mediaTrackEvent`.) `MEDIA_RESUMED` deve essere impostato su true quando un’applicazione desidera continuare a tracciare il contenuto che un utente ha smesso di guardare ma di cui ora intende riprendere la visione. <br/><br/>Ad esempio, supponiamo che un utente guardi il 30% del contenuto e poi chiuda l’app. Questo porterà al termine della sessione. Successivamente, se lo stesso utente ritorna allo stesso contenuto e l’applicazione gli consente di riprendere dallo stesso punto in cui aveva interrotto, l’applicazione deve impostare `MEDIA_RESUMED` su “true” effettuando una chiamata all’API `mediaTrackLoad`. Pertanto ne consegue che queste due diverse sessioni multimediali per gli stessi contenuti video possono essere collegate tra loro. Di seguito è riportato un esempio di implementazione: <br/><br/> `mediaInfo =` <br/>   `adb_media_init_mediainfo(` <br/>     `"test_media_name",` <br/>     `"test_media_id",`<br/>      `10,` <br/>     `"vod"` <br/> `)` <br/> `mediaInfo[ADBMobile().MEDIA_RESUMED] = true` <br/> `mediaContextData = {}` <br/>  `ADBMobile().mediaTrackLoad(mediaInfo, mediaContextData)` <br/><br/>Questo creerà una nuova sessione per il video, ma farà anche sì che l’SDK invii una richiesta heartbeat con il tipo di evento “riprendi” che può essere utilizzata nella generazione di rapporti per collegare due diverse sessioni multimediali. |
+| `MEDIA_RESUMED` | Costante per l’invio di un heartbeat relativo al video ripreso. Per riprendere il tracciamento video del contenuto precedentemente interrotto, è necessario impostare la proprietà `MEDIA_RESUMED` sull’oggetto `mediaInfo` quando effettui una chiamata `mediaTrackLoad`. (`MEDIA_RESUMED` non è un evento di cui è possibile tenere traccia utilizzando l&#39;API `mediaTrackEvent`.) `MEDIA_RESUMED` deve essere impostato su true quando un&#39;applicazione desidera continuare a tenere traccia del contenuto che un utente ha interrotto di guardare ma ora intende riprendere la visualizzazione. <br/><br/>Ad esempio, supponiamo che un utente guardi il 30% del contenuto e poi chiuda l’app. Questo porterà al termine della sessione. Successivamente, se lo stesso utente ritorna allo stesso contenuto e l’applicazione gli consente di riprendere dallo stesso punto in cui aveva interrotto, l’applicazione deve impostare `MEDIA_RESUMED` su “true” effettuando una chiamata all’API `mediaTrackLoad`. Pertanto ne consegue che queste due diverse sessioni multimediali per gli stessi contenuti video possono essere collegate tra loro. Di seguito è riportato un esempio di implementazione: <br/><br/> `mediaInfo =` <br/>   `adb_media_init_mediainfo(` <br/>     `"test_media_name",` <br/>     `"test_media_id",`<br/>      `10,` <br/>     `"vod"` <br/> `)` <br/> `mediaInfo[ADBMobile().MEDIA_RESUMED] = true` <br/> `mediaContextData = {}` <br/>  `ADBMobile().mediaTrackLoad(mediaInfo, mediaContextData)` <br/><br/>Questo creerà una nuova sessione per il video, ma farà anche sì che l’SDK invii una richiesta heartbeat con il tipo di evento “riprendi” che può essere utilizzata nella generazione di rapporti per collegare due diverse sessioni multimediali. |
 
 ### Costanti del tipo di contenuto
 

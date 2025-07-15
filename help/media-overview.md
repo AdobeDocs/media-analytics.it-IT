@@ -1,18 +1,18 @@
 ---
-title: Adobe Panoramica di Streaming Media Collection
-description: Utilizza Streaming Media Collection per ottenere informazioni approfondite su contenuti, audio e annunci pubblicitari.
+title: Panoramica di Adobe Streaming Media Collection
+description: Utilizza Streaming Media Collection per ottenere contenuti, audio e annunci pubblicitari dal potente insight.
 uuid: b3cbe240-b94d-42b8-a99c-0280334aaa14
 exl-id: 826530f7-2c39-41ef-b3b4-d3f44b46858f
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '590'
 ht-degree: 36%
 
 ---
 
-# Adobe Panoramica di Streaming Media Collection
+# Panoramica di Adobe Streaming Media Collection
 
 ![Banner](./assets/media_analytics_banner.png)
 
@@ -57,15 +57,15 @@ I vantaggi di Streaming Media Collection includono monitoraggio in tempo reale, 
 
 ## Come funziona
 
-I dati di tracciamento dei contenuti multimediali in streaming vengono raccolti da un lettore che utilizza Media, ad Edge Network SDK/Extension, Media Extension con tag, Media SDK, Media Edge API o Media Collection API.
+I dati di tracciamento dei contenuti multimediali in streaming vengono raccolti da un lettore utilizzando Media for Edge Network SDK/Extension, Media Extension with Tags, Media SDKs, Media Edge API o Media Collection API.
 
 Tutti i dati granulari (fino a 10 secondi) vengono inviati al servizio Media Analytics o a Experience Edge (a seconda del [metodo di implementazione](/help/implementation/overview.md) scelto), che raccolgono ed elaborano i dati per ogni singola sessione di riproduzione.
 
-Al termine di una sessione di riproduzione, i dati di tracciamento calcolati vengono inviati ad Adobe Analytics o al Customer Journey Analytics per l’archiviazione e il reporting.
+Al termine di una sessione di riproduzione, i dati di tracciamento calcolati vengono inviati ad Adobe Analytics o Customer Journey Analytics per l’archiviazione e il reporting.
 
 >[!NOTE]
 >
->Con le implementazioni di Customer Journey Analytics, i dati possono essere inviati al Customer Journey Analytics utilizzando Experience Edge o Analytics Data Connector (ADC).
+>Con le implementazioni di Customer Journey Analytics, i dati possono essere inviati a Customer Journey Analytics utilizzando Experience Edge o Analytics Data Connector (ADC).
 
 
 Per informazioni dettagliate sui vari metodi di implementazione, vedere [Implementare Streaming Media Collection per Adobe Analytics o Customer Journey Analytics](/help/implementation/overview.md).

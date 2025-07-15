@@ -2,12 +2,12 @@
 title: Scopri come tracciare il buffering utilizzando JavaScript 3.x
 description: Scopri come tracciare gli eventi di buffering nelle app del browser (JS).
 exl-id: c6941942-02f9-4f9c-99ad-0c52ed2f793b
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
-source-wordcount: '120'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

@@ -3,9 +3,9 @@ title: Informazioni sui prerequisiti per Adobe Streaming Media Collection
 description: Introduzione a Streaming Media Collection. Scopri cosa serve per l’implementazione.
 uuid: 4c0b37f3-8615-4cc0-b9c9-eeb029067064
 exl-id: 85ab1dbd-f4a7-4f11-afc9-8d5000e2de70
-feature: "Media Analytics, System Requirements"
+feature: "Streaming Media, Workspace Basics"
 role: User, Admin, Data Engineer
-source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
+source-git-commit: 0b0b4a373b15191dcb37dc436413f68cdc70768e
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 54%
@@ -14,13 +14,13 @@ ht-degree: 54%
 
 # Prerequisiti {#prerequisites}
 
-Prima di iniziare l’implementazione di Adobe Streaming Media Collection, completa le seguenti attività:
+Prima di iniziare a implementare Adobe Streaming Media Collection, completa le seguenti attività:
 
 1. **Rivedi la panoramica di Streaming Media Collection**<br>
 Prima di iniziare a implementare Streaming Media Collection, controlla [Panoramica di Streaming Media Collection](/help/media-overview.md) per assicurarti che soddisfi le tue esigenze.
 
 1. **Conferma il tuo modello di prezzo**<br>
-Adobe Il modello di prezzo corrente per il componente aggiuntivo Streaming Media Collection si basa sui flussi video. Se necessario, contatta il rappresentante commerciale o il team dell’account Adobe, poiché il componente aggiuntivo viene venduto separatamente per Adobe Analytics e Adobe Experience Platform.
+Il modello di prezzo corrente per il componente aggiuntivo Adobe Streaming Media Collection si basa sui flussi video. Se necessario, contatta il rappresentante commerciale o il team dell’account Adobe, poiché il componente aggiuntivo viene venduto separatamente per Adobe Analytics e Adobe Experience Platform.
 
 1. **Abilita rapporti Adobe Analytics**<br>
 Per abilitare i rapporti in Analytics o Customer Journey Analytics e visualizzare il contenuto e i dati degli annunci che stai raccogliendo, devi abilitare i rapporti. Consulta [Abilitazione di rapporti multimediali](/help/reporting/media-reports-enable.md).

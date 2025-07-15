@@ -2,9 +2,9 @@
 title: Implementazione e reporting
 description: Scopri come implementare la funzione di tracciamento dello stato del lettore, tra cui
 exl-id: 19a97c9b-14d1-4f11-bb0a-3a1ad6f949da
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 15cc123fb44654083b6501042bdd9d4e07128b59
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 78%
@@ -91,7 +91,7 @@ Le metriche fornite per ogni singolo stato vengono calcolate e inviate ad Adobe 
 
 ## Reporting
 
-Tutte le metriche dello stato del lettore possono essere utilizzate per qualsiasi visualizzazione di reporting disponibile in Analysis Workspace o in un componente (segmento, metriche calcolate) una volta che una suite di rapporti è abilitata per il tracciamento dello stato del lettore. Queste metriche possono essere abilitate nell’Admin Console per ogni singolo rapporto utilizzando la configurazione di Media Reporting (Modifica impostazioni > Gestione file multimediali > Media Reporting).
+Tutte le metriche dello stato del lettore possono essere utilizzate per qualsiasi visualizzazione di reporting disponibile in Analysis Workspace o in un componente (segmento, metriche calcolate) una volta che una suite di rapporti è abilitata per il tracciamento dello stato del lettore. Queste metriche possono essere abilitate da Admin Console per ogni singolo rapporto utilizzando la configurazione di Media Reporting (Modifica impostazioni > Gestione file multimediali > Media Reporting).
 
 ![](assets/report-setup.png)
 

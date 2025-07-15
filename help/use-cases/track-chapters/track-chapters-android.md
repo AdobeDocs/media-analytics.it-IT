@@ -3,9 +3,9 @@ title: Scopri come tracciare capitoli e segmenti su Android
 description: Scopri come implementare il tracciamento di capitoli e segmenti utilizzando Media SDK su Android.
 uuid: 013815d7-4d9e-48f4-a2b9-3b70cb1149d3
 exl-id: ada2e2a7-1383-471c-9ce6-c82ea93fa79d
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '200'
 ht-degree: 100%

@@ -3,12 +3,12 @@ title: Scopri come tracciare la ricerca utilizzando JavaScript 2.x
 description: Scopri come tracciare gli eventi di inizio e di completamento della ricerca utilizzando il Media SDK nelle app del browser (JS 2.x).
 uuid: 089947fb-8bae-4ae8-b215-53793620efd7
 exl-id: 90f35376-24d8-405d-82b4-d6b737acf7b9
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

@@ -2,9 +2,9 @@
 title: Scopri come tracciare gli annunci utilizzando JavaScript 3.x
 description: Scopri come tracciare gli eventi di inizio e di completamento della ricerca utilizzando Media SDK nelle app del browser (JS 3.x).
 exl-id: b7152436-520e-4f38-a8ad-1027ca3f1f6c
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 100%

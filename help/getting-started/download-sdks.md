@@ -3,9 +3,9 @@ title: Accesso ai collegamenti per scaricare gli SDK di Media Analytics
 description: Collegamenti ai download dell’SDK per le piattaforme disponibili, inclusi Android, iOS, JavaScript, Chromecast e Roku.
 uuid: a619fbb8-693e-4583-8dad-0ff875e715f8
 exl-id: d211fa2e-d5b0-4e9f-bdb7-eda838194f3d
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '426'
 ht-degree: 71%
@@ -22,7 +22,7 @@ I tag in Adobe Experience Platform Launch costiuiscono la nuova generazione di f
 >[!NOTE]
 >
 >Per informazioni sul download degli SDK legacy, consulta [Legacy: scaricare gli SDK](/help/legacy/legacy-download-sdks.md).<br>
->Per informazioni importanti sulla fine del supporto, consulta [Domande frequenti sulla fine del supporto](/help/additional-resources/end-of-support-faqs.md).
+>>Per informazioni importanti sulla fine del supporto, consulta [Domande frequenti sulla fine del supporto](/help/additional-resources/end-of-support-faqs.md).
 
 ## Media SDK e librerie mobili {#media-sdks-libraries}
 
@@ -32,7 +32,7 @@ I tag in Adobe Experience Platform Launch costiuiscono la nuova generazione di f
 |:---:|---|---|---|---| ---| ---|
 | ![Icona JavaScript ](assets/javascript-icon.png)</br>**API JavaScript** | Adobe Analytics | Solo Analytics | Web - [Media SDK per JS v3.0.2](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/js-v3.0.2) | [Riferimento API per JavaScript](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/index.html) | [Installare Media SDK utilizzando JavaScript](/help/implementation/media-sdk/setup/web-implementation.md) | [Esempio SDK per contenuti multimediali per JS v3.0.2](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/sdks/js/3.x) |
 | ![Icona JavaScript ](assets/javascript-icon.png)</br>**API JavaScript** | Adobe Analytics | Solo Analytics | Web - Estensione Media |  | [Estensione Adobe Media Analytics (3.x SDK) for Audio and Video — utilizzando tag (raccolta dati)](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics-3x/overview.html?lang=it) | [Esempio Estensione Adobe Media Analytics (3.x SDK) for Audio and Video](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/js/3.x) |
-| </br>**Web** | Adobe Analytics<p>Customer Journey Analytics</p><p>Adobe Journey Optimizer</p><p>Real-Time CDP</p> | Edge | Web - Experience Platform Edge |  | [Implementa la raccolta di file multimediali in streaming utilizzando l&#39;Edge Network](/help/implementation/edge/implementation-edge.md) <p>e</p><p>[Inviare dati Web ad Edge con Adobe Experience Platform Web SDK](/help/implementation/edge/edge-web-sdk.md)</p> | |
+| </br>**Web** | Adobe Analytics<p>Customer Journey Analytics</p><p>Adobe Journey Optimizer</p><p>Real-Time CDP</p> | Edge | Web - Experience Platform Edge |  | [Implementa la raccolta di contenuti multimediali in streaming utilizzando Edge Network](/help/implementation/edge/implementation-edge.md) <p>e</p><p>[Inviare dati Web ad Edge con Adobe Experience Platform Web SDK](/help/implementation/edge/edge-web-sdk.md)</p> | |
 
 ### Implementazione mobile {#get-mobile-extension}
 

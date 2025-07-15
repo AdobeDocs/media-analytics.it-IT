@@ -2,9 +2,9 @@
 title: Stati standard e personalizzati
 description: Scopri la funzione di tracciamento dello stato del lettore, compresi i requisiti e le linee guida per l’implementazione e la generazione rapporti per gli stati del lettore standard e personalizzati.
 exl-id: 3c492055-d471-4147-aa78-b058d6b931f4
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: cdc5ea361829c749dfbb457288ac5ba51a530961
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 99%
@@ -35,7 +35,7 @@ I dati vengono calcolati nello stesso modo per gli stati standard e personalizza
 * È consentita qualsiasi combinazione di stati.
 * Se passano gli stati di più lettori, solo i primi 10 vengono conservati e inoltrati a valle al componente di elaborazione VA.
 * Il massimo di 10 stati è applicato a tutti gli stati, indipendentemente dalla loro chiusura o meno.
-* Uno stato può iniziare e terminare più volte e viene conteggiato come un singolo stato. Ad esempio: `closedCapationing` può essere avviato e arrestato cinque volte, ma verrà conteggiato come un singolo stato.
+* Uno stato può iniziare e terminare più volte e viene conteggiato come un singolo stato. Ad esempio: `closedCapationing` può essere avviato e interrotto cinque volte, ma verrà conteggiato come un singolo stato.
 * Ogni stato che supera il massimo di 10 stati consentiti viene eliminato.
 
 ## Stati personalizzati

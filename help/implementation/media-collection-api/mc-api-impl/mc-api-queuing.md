@@ -1,11 +1,11 @@
 ---
-title: Eventi in coda quando la risposta delle sessioni è lenta
+title: 'Eventi in coda quando la risposta delle sessioni è lenta '
 description: Scopri cosa fare quando l’ID sessione viene restituito dopo che il lettore attiva gli eventi.
 uuid: 39ea59d9-89d3-4087-a806-48a43ecf0c98
 exl-id: 2c23c378-c104-4256-b6e7-8eb6871f62da
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '205'
 ht-degree: 100%

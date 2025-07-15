@@ -3,9 +3,9 @@ title: 'Metriche calcolate '
 description: Scopri le metriche calcolate e le formule metriche nella raccolta di contenuti multimediali in streaming.
 uuid: 9dd35155-58aa-4f05-896e-c5cbc4b13d59
 exl-id: 253f6c61-70b5-4bdf-8e79-840545aeca0e
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 0088d41f557b1dc49ac2b3b6d0a812f22d8849e9
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 72%
@@ -14,7 +14,7 @@ ht-degree: 72%
 
 # Metriche calcolate{#calculated-metrics}
 
-Le metriche calcolate per Streaming Media Collection di Adobe sono metriche personalizzate che ti consentono di ottenere dati mirati sui contenuti multimediali in streaming, come la media del tempo trascorso o la media degli annunci per flusso multimediale.
+Le metriche calcolate per Adobe Streaming Media Collection sono metriche personalizzate che ti consentono di ottenere dati mirati sui contenuti multimediali in streaming, come la media del tempo trascorso o la media degli annunci per flusso multimediale.
 
 Per informazioni sulle metriche calcolate di Adobe Analytics, consulta [Metriche calcolate e metriche calcolate avanzate (derivate)](https://experienceleague.adobe.com/docs/analytics/components/calculated-metrics/cm-overview.html?lang=it) nella Guida ai componenti di Adobe Analytics.
 

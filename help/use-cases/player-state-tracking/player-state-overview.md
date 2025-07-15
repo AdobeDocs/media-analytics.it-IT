@@ -2,9 +2,9 @@
 title: Informazioni sul tracciamento dello stato del lettore
 description: Scopri la funzione di tracciamento dello stato del lettore, compresi i requisiti e le linee guida relative all’implementazione e alla generazione di report.
 exl-id: c678e182-74e4-4f46-8596-7be57e645c66
-feature: Media Analytics
+feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 100%
@@ -46,5 +46,5 @@ Prima di implementare il tracciamento dello stato del lettore, considera le segu
 * È possibile misurare più stati del lettore contemporaneamente.
 * Il numero massimo di stati del lettore che è possibile tracciare durante una riproduzione è 10.
 * Le metriche dello stato del lettore vengono inviate ad Analytics per la generazione di rapporti solo sulla chiamata Chiusura del file multimediale.
-* La conoscenza dello stato dell’applicazione non viene mantenuta dopo l’arresto di uno stato. Al termine di uno stato, è necessario riavviarlo per continuare il tracciamento. Per ogni nuovo stato di riproduzione, è necessario riavviare lo stato del lettore.
+* La conoscenza dello stato dell’applicazione non viene mantenuta dopo l’interruzione di uno stato. Al termine di uno stato, è necessario riavviarlo per continuare il tracciamento. Per ogni nuovo stato di riproduzione, è necessario riavviare lo stato del lettore.
 * Gli stati del lettore vengono acquisiti per ogni singola sessione di riproduzione poiché non vengono calcolati tra le riproduzioni.
