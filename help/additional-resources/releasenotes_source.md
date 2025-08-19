@@ -1,13 +1,13 @@
 ---
-source-git-commit: e534d44f9d03b99153fde23b2c587f8607ceea72
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
-source-wordcount: '612'
-ht-degree: 100%
+source-wordcount: '613'
+ht-degree: 98%
 
 ---
 # Note sulla versione di Streaming Media - Testo sorgente
 
-Il contenuto seguente è stato copiato dalle note sulla versione di Experience Cloud. Verrà spostato nelle nuove note sulla versione di Streaming Media.
+Il contenuto seguente è stato copiato dalle note sulla versione di Experience Cloud. Verrà spostato nelle nuove note sulla versione di Streaming Media Services.
 
 
 Scopri gli ultimi aggiornamenti sulle versioni dei [prodotti Adobe Experience Cloud](https://business.adobe.com/it/products/adobe-experience-cloud-products.html). Scopri le risorse di supporto autonomo più recenti con documentazione, tutorial e corsi su Experience League.

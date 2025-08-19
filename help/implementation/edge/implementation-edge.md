@@ -1,12 +1,12 @@
 ---
-title: Implementare Streaming Media Collection utilizzando Edge Network
-description: Scopri come implementare Streaming Media Collection con Experience Platform Edge.
+title: Implementazione dei servizi multimediali di streaming di Adobe tramite Edge Network
+description: Scopri come implementare i servizi multimediali in streaming di Adobe con Experience Platform Edge.
 feature: Streaming Media
 role: User, Admin, Data Engineer
 exl-id: dfdb1415-105e-4c41-bedc-ecb85ed1b1d9
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
-source-wordcount: '2146'
+source-wordcount: '2152'
 ht-degree: 7%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 7%
 
 La rete Edge di Adobe Experience Platform consente di inviare dati destinati a più prodotti a una posizione centralizzata. Experience Edge inoltra le informazioni appropriate ai prodotti desiderati. Questo concetto consente di consolidare le attività di implementazione, in particolare per quanto riguarda più soluzioni di dati.
 
-L’immagine seguente illustra come implementare Adobe Streaming Media Collection per utilizzare Experience Platform Edge per rendere i dati disponibili in Analysis Workspace, sia in Adobe Analytics che in Customer Journey Analytics:
+L’immagine seguente illustra come implementare il componente aggiuntivo Streaming Media Collection per utilizzare Experience Platform Edge per rendere i dati disponibili in Analysis Workspace, in Adobe Analytics o Customer Journey Analytics:
 
 ![Flusso di lavoro in CJA](assets/streaming-media-edge.png)
 
-Per una panoramica di tutte le opzioni di implementazione, inclusi i metodi di implementazione che non utilizzano Experience Platform Edge, vedi [Implementare la raccolta di contenuti multimediali in streaming](/help/implementation/overview.md).
+Per una panoramica di tutte le opzioni di implementazione, inclusi i metodi di implementazione che non utilizzano Experience Platform Edge, vedere [Implementare servizi multimediali in streaming per Adobe Analytics o Customer Journey Analytics](/help/implementation/overview.md).
 
 Indipendentemente dal fatto che si utilizzi Adobe Experience Platform Web SDK, Adobe Experience Platform Mobile SDK, Adobe Experience Platform Roku SDK o l’API per implementare Streaming Media Collection con Experience Edge, è necessario prima completare le sezioni seguenti:
 
@@ -29,7 +29,7 @@ Per standardizzare la raccolta dati da utilizzare nelle applicazioni che sfrutta
 
 Per creare e impostare uno schema:
 
-1. In Adobe Experience Platform, iniziare a creare lo schema come descritto in [Creare e modificare gli schemi nell&#39;interfaccia utente](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=it).
+1. In Adobe Experience Platform, iniziare a creare lo schema come descritto in [Creare e modificare gli schemi nell&#39;interfaccia utente](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=en).
 
 1. Nella pagina dei dettagli dello schema durante la creazione dello schema, scegliere [!UICONTROL **Evento esperienza**] quando si sceglie la classe base per lo schema.
 
@@ -52,7 +52,7 @@ Per creare e impostare uno schema:
 
 1. (Facoltativo) Puoi nascondere alcuni campi non utilizzati dall’API di Media Edge. Nascondere questi campi semplifica la lettura e la comprensione dello schema, ma non è obbligatorio. Questi campi fanno riferimento solo a quelli del gruppo di campi `MediaAnalytics Interaction Details`.
 
-+++ Espandi qui per visualizzare le istruzioni sui campi che puoi nascondere.
+   +++ Espandi qui per visualizzare le istruzioni sui campi che puoi nascondere.
 
    1. Nell&#39;area [!UICONTROL **Struttura**], selezionare il campo `Media Collection Details`, quindi selezionare [!UICONTROL **Gestisci campi correlati**].
 
@@ -111,11 +111,11 @@ Per creare e impostare uno schema:
 
    1. Seleziona [!UICONTROL **Conferma**] > [!UICONTROL **Salva**] per salvare le modifiche.
 
-+++
+   +++
 
 1. (Facoltativo) Puoi aggiungere metadati personalizzati allo schema. Questo consente di includere metadati aggiuntivi definiti dall&#39;utente che possono essere personalizzati per esigenze o contesti specifici. Questa flessibilità è utile negli scenari in cui gli schemi esistenti non coprono i punti di dati desiderati. Puoi anche lavorare con metadati personalizzati con le API di Media Edge. Per ulteriori informazioni, consulta [Creare metadati personalizzati con le API di Media Edge](https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/custom-metadata/).)
 
-+++ Espandi qui per visualizzare le istruzioni su come aggiungere metadati personalizzati allo schema.
+   +++ Espandi qui per visualizzare le istruzioni su come aggiungere metadati personalizzati allo schema.
 
    1. Individua il nome del tenant dell&#39;organizzazione selezionando [!UICONTROL **Informazioni account**] > [!UICONTROL **Organizzazioni assegnate**] > [!UICONTROL _**Nome organizzazione**_] > [!UICONTROL **Tenant**].
 
@@ -129,11 +129,11 @@ Per creare e impostare uno schema:
 
       ![add-custom-metadata](assets/add-custom-fields.png)
 
-   1. [Utilizza il percorso generato](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/ui/fields/overview#type-specific-properties) per il campo personalizzato nel payload della richiesta.
+   1. [Utilizza il percorso generato](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/fields/overview#type-specific-properties) per il campo personalizzato nel payload della richiesta.
 
       ![add-custom-metadata](assets/custom-fields-path.png)
 
-+++
+   +++
 
 1. Continua con [Crea un set di dati in Adobe Experience Platform](#create-a-dataset-in-adobe-experience-platform).
 
@@ -151,7 +151,7 @@ Per creare e impostare uno schema:
 
 1. Assicurarsi di aver creato un set di dati come descritto in [Creare un set di dati in Adobe Experience Platform](#create-a-dataset-in-adobe-experience-platform).
 
-1. Creare un nuovo stream di dati come descritto in [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=it).
+1. Creare un nuovo stream di dati come descritto in [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=en).
 
    Durante la creazione dello stream di dati, accertati di effettuare le seguenti selezioni di configurazione:
 
@@ -167,11 +167,11 @@ Per creare e impostare uno schema:
 
       * [!UICONTROL **Adobe Analytics**] (se si utilizza Adobe Analytics)
 
-        Se utilizzi Adobe Analytics, accertati di definire una suite di rapporti come descritto in [Creare una suite di rapporti](https://experienceleague.adobe.com/it/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite).
+        Se utilizzi Adobe Analytics, accertati di definire una suite di rapporti come descritto in [Creare una suite di rapporti](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite).
 
       * [!UICONTROL **Adobe Experience Platform**] (se si utilizza Customer Journey Analytics)
 
-     Per informazioni su come aggiungere un servizio a un flusso di dati, vedere la sezione &quot;Aggiungere servizi a un flusso di dati&quot; in [Configurare un flusso di dati](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=it#view-details).
+     Per informazioni su come aggiungere un servizio a un flusso di dati, vedere la sezione &quot;Aggiungere servizi a un flusso di dati&quot; in [Configurare un flusso di dati](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=en#view-details).
 
      ![Aggiungi il servizio Adobe Analytics](assets/datastream-add-service.png)
 
@@ -332,9 +332,9 @@ Per creare e impostare uno schema:
 
    >[!NOTE]
    >
-   >Se imposti Adobe Analytics come flusso a monte per lo stream di dati, i metadati personalizzati sono presenti anche in ContextData, con il nome impostato nello schema (senza il prefisso tenant, ad esempio myCustomField). In questo modo è possibile utilizzare tutte le funzionalità di Adobe Analytics disponibili per ContextData, ad esempio [la creazione di una regola di elaborazione](https://experienceleague.adobe.com/it/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/processing-rules).
+   >Se imposti Adobe Analytics come flusso a monte per lo stream di dati, i metadati personalizzati sono presenti anche in ContextData, con il nome impostato nello schema (senza il prefisso tenant, ad esempio myCustomField). In questo modo è possibile utilizzare tutte le funzionalità di Adobe Analytics disponibili per ContextData, ad esempio [la creazione di una regola di elaborazione](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/processing-rules).
 
-1. Condividi il progetto come descritto in [Condividi progetti](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/curate-share/share-projects.html?lang=it).
+1. Condividi il progetto come descritto in [Condividi progetti](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/curate-share/share-projects.html?lang=en).
 
    >[!NOTE]
    >
@@ -381,10 +381,10 @@ L’API è disponibile anche se desideri utilizzare un’implementazione persona
 
 Per ulteriori informazioni sull’API di Media Edge, consulta le risorse seguenti:
 
-* [Panoramica API di Media Edge](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/overview.html?lang=it)
+* [Panoramica API di Media Edge](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/overview.html)
 
-* [Introduzione all&#39;API di Media Edge](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/getting-started.html?lang=it)
+* [Introduzione all&#39;API di Media Edge](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/getting-started.html)
 
-* [Guida alla risoluzione dei problemi relativi all&#39;API di Media Edge](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/troubleshooting.html?lang=it)
+* [Guida alla risoluzione dei problemi relativi all&#39;API di Media Edge](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/troubleshooting.html)
 
 * [Utilizzo del file delle specifiche API Open per le API Media Edge](https://developer.adobe.com/data-collection-apis/docs/api/media-edge/)

@@ -1,27 +1,27 @@
 ---
 product: adobe analytics
 audience: end-user
-user-guide-title: Streaming Media Collection
-breadcrumb-title: Guida a Streaming Media Collection
-user-guide-description: Implementare Streaming Media. Gli argomenti trattati comprendono Media SDK e Media Collection API.
+user-guide-title: Guida ai servizi per contenuti multimediali in streaming
+breadcrumb-title: Guida ai servizi per contenuti multimediali in streaming
+user-guide-description: Implementare servizi multimediali in streaming. Gli argomenti trattati comprendono Media SDK e Media Collection API.
 sub-product: media analytics
-source-git-commit: a0a357c3fe7e958b0b6491c84f17f26a806ea205
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
-source-wordcount: '922'
-ht-degree: 75%
+source-wordcount: '926'
+ht-degree: 72%
 
 ---
 
 
-# Streaming Media Collection {#using}
+# Guida ai servizi per contenuti multimediali in streaming {#using}
 
-+ [Guida a Streaming Media Collection](media-overview.md)
++ [guida ai servizi multimediali di streaming di Adobe](media-overview.md)
 + Note sulla versione {#release-notes}
-   + [Note sulla versione di Streaming Media Collection](additional-resources/release-notes.md)
+   + [Note sulla versione di Streaming Media Services](additional-resources/release-notes.md)
 + Introduzione {#getting-started}
    + [Prerequisiti](getting-started/prereqs.md)
    + [Dispositivi supportati](getting-started/supported-devices.md)
-   + [Documentazione sull’implementazione di Streaming Media Collection](getting-started/implementation-documentation.md)
+   + [Documentazione sull’implementazione di Streaming Media Services](getting-started/implementation-documentation.md)
    + [SDK, librerie ed estensioni](getting-started/download-sdks.md)
    + Fine del supporto {#end-of-support}
       + [Fine del supporto di Mobile SDK di Media Analytics](additional-resources/end-of-support-faqs.md)

@@ -5,7 +5,7 @@ uuid: d664e394-02a2-4985-bbad-be1bcc44fb2b
 exl-id: 5dfe3407-2858-48c0-a70c-8ea87967ac47
 feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
 source-wordcount: '570'
 ht-degree: 97%
@@ -14,7 +14,7 @@ ht-degree: 97%
 
 # Configurare Mobile SDK v3.x per Chromecast {#set-up-chromecast}
 
-In questa sezione vengono descritti i prerequisiti per la configurazione di un&#39;installazione Chromecast per Streaming Media Collection.
+Questa sezione descrive i prerequisiti per configurare un’installazione Chromecast per Adobe streaming media services.
 
 ## Prerequisiti
 
@@ -153,4 +153,4 @@ La libreria mobile di Adobe per Chromecast v3.x per soluzioni Experience Cloud c
    }
    ```
 
-<!--   **Postbacks -** For more information about configuring postbacks, see [Configure Postbacks.](https://experienceleague.adobe.com/docs/mobile-services/using/manage-app-settings-ug/configuring-app/signals.html?lang=it) -->
+<!--   **Postbacks -** For more information about configuring postbacks, see [Configure Postbacks.](https://experienceleague.adobe.com/docs/mobile-services/using/manage-app-settings-ug/configuring-app/signals.html) -->

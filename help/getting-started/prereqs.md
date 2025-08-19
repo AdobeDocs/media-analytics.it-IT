@@ -1,26 +1,26 @@
 ---
-title: Informazioni sui prerequisiti per Adobe Streaming Media Collection
-description: Introduzione a Streaming Media Collection. Scopri cosa serve per l’implementazione.
+title: Informazioni sui prerequisiti per Adobe Streaming Media Services
+description: Introduzione ai servizi di streaming multimediale. Scopri cosa serve per l’implementazione.
 uuid: 4c0b37f3-8615-4cc0-b9c9-eeb029067064
 exl-id: 85ab1dbd-f4a7-4f11-afc9-8d5000e2de70
 feature: "Streaming Media, Workspace Basics"
 role: User, Admin, Data Engineer
-source-git-commit: 0b0b4a373b15191dcb37dc436413f68cdc70768e
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
-source-wordcount: '428'
-ht-degree: 54%
+source-wordcount: '436'
+ht-degree: 53%
 
 ---
 
 # Prerequisiti {#prerequisites}
 
-Prima di iniziare a implementare Adobe Streaming Media Collection, completa le seguenti attività:
+Prima di iniziare a implementare i servizi di streaming media di Adobe, completa le seguenti attività:
 
-1. **Rivedi la panoramica di Streaming Media Collection**<br>
-Prima di iniziare a implementare Streaming Media Collection, controlla [Panoramica di Streaming Media Collection](/help/media-overview.md) per assicurarti che soddisfi le tue esigenze.
+1. **Rivedi la panoramica dei servizi multimediali in streaming di Adobe**<br>
+Prima di iniziare a implementare i servizi di streaming multimediale, controlla la [panoramica dei servizi di streaming multimediale](/help/media-overview.md) di Adobe per assicurarti che soddisfi le tue esigenze.
 
 1. **Conferma il tuo modello di prezzo**<br>
-Il modello di prezzo corrente per il componente aggiuntivo Adobe Streaming Media Collection si basa sui flussi video. Se necessario, contatta il rappresentante commerciale o il team dell’account Adobe, poiché il componente aggiuntivo viene venduto separatamente per Adobe Analytics e Adobe Experience Platform.
+Il modello di prezzo corrente per il componente aggiuntivo Customer Journey Analytics Streaming Media Collection e per il componente aggiuntivo Adobe Analytics for Streaming Media si basa sui flussi video. Se necessario, contatta il rappresentante commerciale o il team dell’account Adobe, poiché il componente aggiuntivo viene venduto separatamente per Adobe Analytics e Adobe Experience Platform.
 
 1. **Abilita rapporti Adobe Analytics**<br>
 Per abilitare i rapporti in Analytics o Customer Journey Analytics e visualizzare il contenuto e i dati degli annunci che stai raccogliendo, devi abilitare i rapporti. Consulta [Abilitazione di rapporti multimediali](/help/reporting/media-reports-enable.md).
@@ -41,7 +41,7 @@ Per abilitare i rapporti in Analytics o Customer Journey Analytics e visualizzar
 
 1. **Visualizza prerequisiti aggiuntivi per il metodo di implementazione**
 
-   A seconda di come prevedi di implementare Streaming Media Collection, visualizza i prerequisiti per uno dei seguenti metodi di implementazione:
+   A seconda di come prevedi di implementare Streaming Media Services, visualizza i prerequisiti per uno dei seguenti metodi di implementazione:
 
    * [Prerequisiti per le implementazioni basate solo su Adobe Analytics](/help/implementation/media-sdk/setup/prerequisites-analytics.md)
 

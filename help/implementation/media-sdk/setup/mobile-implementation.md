@@ -1,19 +1,19 @@
 ---
-title: Come configurare Mobile SDK utilizzando i tag per Streaming Media
-description: Scopri come implementare Adobe Streaming Media per le app per dispositivi mobili.
+title: Come impostare un SDK mobile utilizzando i tag per i servizi di Streaming Media
+description: Scopri come implementare Adobe Streaming Media Services per le app mobili.
 feature: Streaming Media
 role: User, Admin, Data Engineer
 exl-id: b4944b5f-cbae-4efc-9ef7-962d3f342240
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 82%
+source-wordcount: '199'
+ht-degree: 70%
 
 ---
 
 # Installare Mobile SDK {#install-mobile-sdks}
 
-Per implementare Streaming Media Collection per le app mobili su Android o iOS, installa e configura quanto segue:
+Per implementare i servizi multimediali in streaming di Adobe per le app mobili su Android o iOS, installa e configura quanto segue:
 
 * **Adobe Experience Platform Mobile SDK**
 

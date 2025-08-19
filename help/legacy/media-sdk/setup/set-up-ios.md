@@ -5,7 +5,7 @@ uuid: a1c6be79-a6dc-47b6-93b3-ac7b42f1f3eb
 exl-id: fe7662b5-1700-4bd6-b542-66aa8493459d
 feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
 source-wordcount: '731'
 ht-degree: 95%
@@ -14,7 +14,7 @@ ht-degree: 95%
 
 # Configurazione iOS {#set-up-ios}
 
-Scopri come configurare Streaming Media Collection per dispositivi iOS.
+Scopri come configurare i servizi di streaming media per i dispositivi iOS.
 
 >[!IMPORTANT]
 >

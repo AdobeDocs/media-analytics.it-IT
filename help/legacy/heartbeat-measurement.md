@@ -4,18 +4,18 @@ description: Scopri come gli heartbeat vengono utilizzati per raccogliere le met
 feature: Streaming Media
 role: User, Admin, Data Engineer
 exl-id: 180dd9b1-877a-4ec1-8e81-c293800069c0
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '312'
 ht-degree: 75%
 
 ---
 
 # Informazioni sulla misurazione con Heartbeat
 
-La raccolta multimediale in streaming di Adobe utilizza gli &quot;heartbeat&quot; per raccogliere le metriche video. Durante la riproduzione del video gli heartbeat vengono inviati al server che li traccia per misurare il tempo di riproduzione. Le chiamate heartbeat vengono inviate ogni dieci secondi. Gli heartbeat generano metriche granulari di coinvolgimento video e rapporti di fallout video più precisi. Streaming Media misura gli heartbeat utilizzando Adobe Launch con l’estensione Media Analytics, Media SDK e l’API Media Collection. I componenti `AppMeasurement` e `VisitorID` vengono utilizzati per ricevere i dati video.
+I servizi multimediali di streaming di Adobe utilizzano gli &quot;heartbeat&quot; per raccogliere le metriche video. Durante la riproduzione del video gli heartbeat vengono inviati al server che li traccia per misurare il tempo di riproduzione. Le chiamate heartbeat vengono inviate ogni dieci secondi. Gli heartbeat generano metriche granulari di coinvolgimento video e rapporti di fallout video più precisi. i servizi di streaming media misurano gli heartbeat utilizzando Adobe Launch con l’estensione Media Analytics, Media SDK e l’API Media Collection. I componenti `AppMeasurement` e `VisitorID` vengono utilizzati per ricevere i dati video.
 
-L’utilizzo degli heartbeat in Streaming Media Collection offre i seguenti vantaggi:
+L’utilizzo di heartbeat nei servizi di streaming media offre i seguenti vantaggi:
 
 | Funzione | Descrizione |
 |---|---|

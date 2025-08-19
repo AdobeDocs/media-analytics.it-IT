@@ -4,10 +4,10 @@ description: Collegamenti ai download dell’SDK legacy per le piattaforme dispo
 feature: Streaming Media
 role: User, Admin, Data Engineer
 exl-id: d1066f05-f46f-46fa-897f-039657704d05
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
 source-wordcount: '267'
-ht-degree: 73%
+ht-degree: 70%
 
 ---
 
@@ -19,7 +19,7 @@ Per informazioni sul download degli SDK **correnti**, consulta [Scaricare gli SD
 
 Per informazioni importanti sulla fine del supporto, consulta [Domande frequenti sulla fine del supporto](/help/additional-resources/end-of-support-faqs.md).
 
-## Streaming Media ed estensione Adobe Media Analytics
+## Streaming media e estensione Adobe Media Analytics
 
 L’estensione Adobe Media Analytics aggiunge Media SDK principale per JavaScript (Media 2.x SDK) per audio e video. Questa estensione offre le funzionalità necessarie per aggiungere l’istanza di tracciamento `MediaHeartbeat` a un progetto o sito di raccolta dati.
 
@@ -27,7 +27,7 @@ La raccolta dati di Adobe con l’estensione Media Analytics richiede quanto seg
 * È necessario essere un cliente Adobe Experience Cloud.
 * È necessario distribuire sulle pagine web il codice di raccolta dati o DTM da incorporare.
 * È necessario configurare l’[Estensione Analytics](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html?lang=it).
-* Devi configurare l&#39;estensione [Adobe Media Analytics for Audio and Video](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/media-analytics/overview.html?lang=it).
+* Devi configurare l&#39;estensione [Adobe Media Analytics for Audio and Video](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/media-analytics/overview.html).
 * È necessario configurare l’[Estensione Experience Cloud ID](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/id-service/overview.html?lang=it).
 
 ## Scarica i Media SDK 2.x {#download-2x-sdks}

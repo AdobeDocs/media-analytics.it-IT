@@ -5,9 +5,9 @@ uuid: 06fefedb-b0c8-4f7d-90c8-e374cdde1695
 exl-id: a175332e-0bdc-44aa-82cb-b3f879e7abfc
 feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '616'
 ht-degree: 94%
 
 ---
@@ -19,7 +19,7 @@ Dopo aver scaricato Media SDK per la tua app video o il tuo lettore, segui le in
 
 ## Linee guida generali sull’implementazione {#general-implementation-guidelines}
 
-Esistono tre componenti principali di SDK utilizzati nel tracciamento con Streaming Media Collection:
+Esistono tre componenti principali di SDK utilizzati nel tracciamento con i servizi di streaming media:
 * Configurazione Media Heartbeat - `MediaHeartbeatConfig` contiene le impostazioni di base per la generazione di rapporti.
 * Delegato Media Heartbeat - `MediaHeartbeatDelegate` controlla il tempo di riproduzione e l’oggetto QoS.
 * Media Heartbeat - `MediaHeartbeat` è la libreria principale contenente membri e metodi.
@@ -126,7 +126,7 @@ Per ulteriori informazioni sulle opzioni del server di tracciamento, vedi [Compi
 
   Il server di tracciamento di Analytics deve terminare in “`.sc.omtrdc.net`” o essere un CNAME.
 
-* **&#x200B; Server Media Analytics (Heartbeat)** 
+* ** Server Media Analytics (Heartbeat)** 
 Questo ha sempre il formato “`[your_namespace].hb.omtrdc.net`”. Il valore di “`[your_namespace]`” specifica la società ed è fornito da Adobe.
 
 Il tracciamento dei contenuti multimediali funziona allo stesso modo su tutte le piattaforme, desktop e dispositivi mobili. Il tracciamento audio funziona attualmente sulle piattaforme mobili. Per tutte le chiamate di tracciamento sono disponibili alcune variabili universali chiave da convalidare:

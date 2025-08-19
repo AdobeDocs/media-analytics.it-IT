@@ -1,19 +1,19 @@
 ---
-title: Informazioni sui dispositivi e piattaforme supportati
-description: Scopri i principali dispositivi supportati da Streaming Media Collection, come iOS, Android, dispositivi OTT e browser JavaScript.
+title: Informazioni sui dispositivi e le piattaforme supportati
+description: Scopri i principali dispositivi supportati da Adobe Streaming Media Services, come iOS, Android, dispositivi OTT e browser JavaScript.
 exl-id: 169ff7b9-e577-45b7-8927-74bdcccc0a77
 feature: Streaming Media
 role: User, Admin
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 51%
+source-wordcount: '308'
+ht-degree: 50%
 
 ---
 
 # Piattaforme e dispositivi supportati {#devices-supported}
 
-Adobe Streaming Media Collection supporta tutti i dispositivi principali, tra cui:
+I servizi di streaming media di Adobe supportano tutti i dispositivi principali, tra cui:
 
 * Smartphone e tablet iOS e Android
 * dispositivi OTT per Roku, Fire TV e Android TV
@@ -21,7 +21,7 @@ Adobe Streaming Media Collection supporta tutti i dispositivi principali, tra cu
 
 Gli SDK vengono regolarmente aggiornati quando vengono rilasciate nuove versioni di dispositivi e puoi utilizzarli per l’integrazione con i lettori nativi di ogni singola piattaforma o qualsiasi altro lettore multimediale disponibile.
 
-Per i dispositivi che al momento non dispongono del supporto di SDK o in situazioni in cui potrebbe essere necessario personalizzare l’implementazione, puoi utilizzare l’API Media Collection o l’API Media Edge. Queste API ti consentono di effettuare chiamate RESTful API direttamente da un dispositivo al backend di Streaming Media Collection.
+Per i dispositivi che al momento non dispongono del supporto di SDK o in situazioni in cui potrebbe essere necessario personalizzare l’implementazione, puoi utilizzare l’API Media Collection o l’API Media Edge. Queste API ti consentono di effettuare chiamate RESTful API direttamente da un dispositivo al backend di Adobe Streaming Media Services.
 
 Nella tabella seguente sono elencati i dispositivi attualmente supportati. Se un dispositivo non è presente nell’elenco, contatta l’Assistenza clienti o il consulente della soluzione per ricevere informazioni sullo stato del dispositivo.
 
