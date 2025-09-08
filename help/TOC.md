@@ -5,9 +5,9 @@ user-guide-title: Guida ai servizi Streaming Media
 breadcrumb-title: Guida ai servizi Streaming Media
 user-guide-description: Implementa i servizi Streaming Media. Gli argomenti trattati comprendono Media SDK e Media Collection API.
 sub-product: media analytics
-source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
+source-git-commit: efe4605d59be2629c931e3f0faca839ccb56c495
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '929'
 ht-degree: 74%
 
 ---
@@ -99,6 +99,7 @@ ht-degree: 74%
       + [Implementazione e reporting](use-cases/player-state-tracking/implementation-and-reporting.md)
       + [Tracciamento di più stati del lettore](use-cases/player-state-tracking/multiple-player-states.md)
       + [Esempi di tracciamento dello stato del lettore](use-cases/player-state-tracking/player-state-examples.md)
+   + [Tracciare i dati di pianificazione](/help/use-cases/track-schedule-data.md)
    + [Tracciare i contenuti scaricati ](use-cases/track-downloaded-content.md)
    + [Federated Media](use-cases/federated-media.md)
    + [Gestione degli arresti dell’applicazione durante la riproduzione](use-cases/cookbook/app-interrupts.md)
