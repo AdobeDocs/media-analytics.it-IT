@@ -1,19 +1,19 @@
 ---
 product: adobe analytics
 audience: end-user
-user-guide-title: Guida ai servizi per contenuti multimediali in streaming
-breadcrumb-title: Guida ai servizi per contenuti multimediali in streaming
-user-guide-description: Implementare servizi multimediali in streaming. Gli argomenti trattati comprendono Media SDK e Media Collection API.
+user-guide-title: Guida ai servizi Streaming Media
+breadcrumb-title: Guida ai servizi Streaming Media
+user-guide-description: Implementa i servizi Streaming Media. Gli argomenti trattati comprendono Media SDK e Media Collection API.
 sub-product: media analytics
 source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
 workflow-type: tm+mt
 source-wordcount: '926'
-ht-degree: 72%
+ht-degree: 74%
 
 ---
 
 
-# Guida ai servizi per contenuti multimediali in streaming {#using}
+# Guida ai servizi Streaming Media {#using}
 
 + [guida ai servizi multimediali di streaming di Adobe](media-overview.md)
 + Note sulla versione {#release-notes}
@@ -180,7 +180,7 @@ ht-degree: 72%
          + [Configurare JavaScript 2.x](legacy/media-sdk/setup/setup-javascript/set-up-js-2.md)
    + [Informazioni sulla misurazione con Heartbeat](legacy/heartbeat-measurement.md)
    + [Adobe Primetime](legacy/intro-to-ava/implementation-paths/primetime-path.md)
-   + [Abilitazione di Adobe Audience Management](legacy/intro-to-ava/am-enablement.md)
+   + [Abilitazione di Gestione del pubblico di Adobe](legacy/intro-to-ava/am-enablement.md)
    + [Implementazione del collegamento personalizzato](legacy/measurement-options/cl-in-aa/cl-impl-guide.md)
    + Tracciamento Milestone legacy {#legacy-milestone-tracking}
       + [Tracciamento Milestone legacy](legacy/measurement-options/mm-milestone-tracking/milestone-overview.md)
