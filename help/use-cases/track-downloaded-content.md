@@ -42,7 +42,7 @@ Il tracciamento dei contenuti è supportato sui dispositivi mobili iOS e Android
 
 La funzione Contenuto scaricato è la versione offline dell’API di raccolta multimediale online (standard), pertanto i dati dell’evento che il lettore batch e invia al back-end devono utilizzare gli stessi schemi dell’evento utilizzati quando effettui chiamate online. Per informazioni su questi schemi, vedi:
 * [Panoramica;](/help/implementation/media-collection-api/mc-api-overview.md)
-* [Convalida delle richieste evento ](/help/implementation/media-collection-api/mc-api-impl/mc-api-validate-reqs.md)
+* [Convalida delle richieste evento &#x200B;](/help/implementation/media-collection-api/mc-api-impl/mc-api-validate-reqs.md)
 
 ### Ordine degli eventi
 

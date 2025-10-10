@@ -68,7 +68,7 @@ alloy("configure", {
 });
 ```
 
-Per informazioni dettagliate su come configurarlo, vedere la `streamingMedia`documentazione[ del componente ](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/configure/streamingmedia) di Web SDK.
+Per informazioni dettagliate su come configurarlo, vedere la `streamingMedia`documentazione[&#x200B; del componente &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/configure/streamingmedia) di Web SDK.
 
 ### Passaggio 3: ottieni l’istanza di tracciamento dei contenuti multimediali durante la migrazione dal SDK Media JS
 
