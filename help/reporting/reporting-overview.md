@@ -55,7 +55,7 @@ Ogni suite di rapporti che raccoglie metriche multimediali deve essere configura
 
    L’abilitazione di ogni modulo riserva un set di variabili e crea un nuovo set di rapporti. Ad eccezione di Qualità, i rapporti non conterranno alcun dato, a meno che l’implementazione corrispondente non sia stata completata. L’implementazione del modulo Core implementa anche il modulo Qualità se lo abiliti.
 
-   Se non tieni traccia degli annunci, dei capitoli o della qualità di riproduzione, puoi attivare opzioni aggiuntive in qualsiasi momento.
+   Se non tieni traccia degli annunci, dei capitoli o della qualità di riproduzione, puoi abilitare opzioni aggiuntive in qualsiasi momento.
 
 1. Fai clic su **[!UICONTROL Save].**
 

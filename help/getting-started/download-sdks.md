@@ -22,7 +22,7 @@ I tag in Adobe Experience Platform Launch costiuiscono la nuova generazione di f
 >[!NOTE]
 >
 >Per informazioni sul download degli SDK legacy, consulta [Legacy: scaricare gli SDK](/help/legacy/legacy-download-sdks.md).<br>
->&#x200B;>Per informazioni importanti sulla fine del supporto, consulta [Domande frequenti sulla fine del supporto](/help/additional-resources/end-of-support-faqs.md).
+>>Per informazioni importanti sulla fine del supporto, consulta [Domande frequenti sulla fine del supporto](/help/additional-resources/end-of-support-faqs.md).
 
 ## Media SDK e librerie mobili {#media-sdks-libraries}
 

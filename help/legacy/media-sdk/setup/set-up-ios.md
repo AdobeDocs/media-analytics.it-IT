@@ -165,7 +165,7 @@ Per informazioni sulla migrazione dalla versione 1.x alla versione 2.x, consulta
 
 Con il rilascio della nuova Apple TV, potrai creare applicazioni da eseguire nell’ambiente nativo tvOS. Puoi creare un’app esclusivamente nativa utilizzando uno dei numerosi framework disponibili in iOS, oppure puoi creare l’app utilizzando modelli XML e JavaScript. Il supporto per tvOS è disponibile a partire da MediaSDK versione 2.0. Per ulteriori informazioni su tvOS, consulta il [sito per sviluppatori tvOS.](https://developer.apple.com/tvos/)
 
-Completa i seguenti passaggi nel progetto Xcode. Questa guida è stata scritta per un progetto il cui target è un’app Apple TV destinata a tvOS:
+Completa i seguenti passaggi nel progetto Xcode. Questa guida è stata scritta per un progetto il cui target è un’app Apple TV per il targeting di tvOS:
 
 1. Trascina il file di libreria `VideoHeartbeat_TV.a` nella cartella `lib` del progetto.
 

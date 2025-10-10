@@ -43,5 +43,5 @@ Di seguito sono riportate alcune limitazioni per questo rapporto:
 * Non è possibile esportare i dati, ad esempio il ReportBuilder.
 * Non è possibile presentare i dati in un formato tabella.
 * Non puoi inviare un rapporto tramite e-mail.
-* Anche se non si tiene traccia degli annunci, è necessario riattivare il tracciamento dei contenuti multimediali e selezionare il modulo relativo all’annuncio multimediale.
+* Anche se non si tiene traccia degli annunci, è necessario abilitare di nuovo il tracciamento dei contenuti multimediali e selezionare il modulo relativo all’annuncio multimediale.
 * Questa funzionalità fornirà dati precisi quando si utilizza una libreria heartbeat con funzionalità di tracciamento in pausa.

@@ -7,22 +7,22 @@ feature: Streaming Media
 role: User, Admin, Data Engineer
 source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
-source-wordcount: '127'
-ht-degree: 88%
+source-wordcount: '124'
+ht-degree: 62%
 
 ---
 
 # Supporto per metadati personalizzati {#custom-metadata-support}
 
-Puoi fornire coppie chiave:valore personalizzate nella `sessionStart`, `chapterStart` e `adStart` eventi. Queste informazioni devono essere fornite nella chiave JSON, `customMetadata`, posizionata accanto alla chiave `params`.
+È possibile fornire coppie chiave:value personalizzate negli eventi `sessionStart`, `chapterStart` e `adStart`. Queste informazioni devono essere fornite nella chiave JSON, `customMetadata`, posizionata accanto alla chiave `params`.
 
-La chiave `customMetadata` JSON deve contenere un oggetto di coppie chiave:valore. La chiave deve contenere solo caratteri alfanumerici, sottolineatura e punto/punto.
+La chiave JSON `customMetadata` deve contenere un oggetto di coppie chiave:value. La chiave deve contenere solo caratteri alfanumerici, sottolineatura e punto/punto.
 
 [Eventi API della raccolta MA](../mc-api-ref/mc-api-events-req.md)
 
 ## Esempio
 
-Attualmente puoi inviare un evento `sessionStart` con la seguente coppia chiave:valore:
+Attualmente puoi inviare un evento `sessionStart` con la seguente coppia chiave:value:
 
 ```
 params: { "media.channel": "channel-1" },

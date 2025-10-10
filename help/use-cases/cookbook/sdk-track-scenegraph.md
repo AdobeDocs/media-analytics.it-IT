@@ -7,8 +7,8 @@ feature: Streaming Media
 role: User, Admin, Data Engineer
 source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1152'
+ht-degree: 100%
 
 ---
 
@@ -87,11 +87,11 @@ Il ponte connettore è progettato per eseguire le seguenti operazioni:
 |  | Per ulteriori informazioni consulta la sezione Experience Cloud dell’SDK legacy. | |
 |  | | |
 | **Audience Manager** | | |
-|  | `audienceSubmitSignal` | API di SceneGraph per inviare un segnale di gestione dell’audience con caratteristiche. |
+|  | `audienceSubmitSignal` | API di SceneGraph per inviare un segnale Gestione del pubblico con caratteristiche. |
 |  | `audienceVisitorProfile` | API di SceneGraph per ottenere un profilo visitatore di audience manager dall’SDK di ADBMobile. |
 |  | `audienceDpid` | API di SceneGraph per ottenere un Dpid di pubblico dall’SDK di ADBMobile. |
 |  | `audienceDpuuid` | API di SceneGraph per ottenere un pubblico Dpuuid dall’SDK di ADBMobile. |
-|  | `audienceSetDpidAndDpuuid` | API di SceneGraph per impostare audience Dpid e Dpuuid sull’SDK di ADBMobile. |
+|  | `audienceSetDpidAndDpuuid` | API di SceneGraph per impostare Dpid e Dpuuid del pubblico sull’SDK di ADBMobile. |
 |  | Per ulteriori informazioni consulta la sezione Audience Manager dell’SDK legacy. | |
 |  | | |
 | **MediaHeartbeat** | | |
@@ -142,28 +142,28 @@ Il ponte connettore è progettato per eseguire le seguenti operazioni:
 <td> Non valido </td>
 <td> Tutte le API eseguite su AdobeMobileSDK restituiranno risposte in questo campo di sola lettura. Registrati per un callback per ascoltare gli aggiornamenti a questo campo e ricevere gli oggetti di risposta. Di seguito è riportato il formato dell'oggetto di risposta:  
 <pre>
-response = &lbrace;
+response = {
   "apiName" : &lt;SceneGraphConstants.
                API_NAME&gt; 
   "returnValue : &lt;API_RESPONSE&gt;
-&rbrace;</pre>
+}</pre>
 Un’istanza di questo oggetto di risposta verrà inviata per qualsiasi chiamata API su AdobeMobileSDK che dovrebbe restituire un valore come indicato nella guida di riferimento API. Ad esempio, una chiamata API per visitorMarketingCloudID() restituirà il seguente oggetto di risposta:
 <pre>
-response = &lbrace;
+response = {
   "apiName" : m.
               adbmobileConstants.
               VISITOR_MARKETING_CLOUD_ID  
   "returnValue : "07050x25671x33760x72644x14"  
-&rbrace;
+}
 </pre>
 OPPURE, anche i dati di risposta possono non essere validi:
 <pre>
-response = &lbrace;  
+response = {  
   "apiName" : m.
               adbmobileConstants.
               VISITOR_MARKETING_CLOUD_ID  
   "returnValue : invalid
-&rbrace;
+}
 </pre>
 </td>
 </tr>

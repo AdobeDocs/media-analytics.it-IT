@@ -172,4 +172,4 @@ L’SDK 2.x per Roku per le soluzioni di Experience Cloud consente di misurare l
    | `processMediaMessages` | Responsabile del passaggio degli eventi multimediali all’SDK da gestire. <br/><br/>`ADBMobile().processMediaMessages()` |
 
 
-<!--    **Postbacks -** For more information about configuring postbacks, see [Configure Postbacks.](https://experienceleague.adobe.com/docs/mobile-services/using/manage-app-settings-ug/configuring-app/signals.html?lang=it) -->
+<!--    **Postbacks -** For more information about configuring postbacks, see [Configure Postbacks.](https://experienceleague.adobe.com/docs/mobile-services/using/manage-app-settings-ug/configuring-app/signals.html) -->

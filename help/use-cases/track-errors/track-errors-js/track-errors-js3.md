@@ -1,5 +1,5 @@
 ---
-title: Scopri come tracciare gli annunci utilizzando JavaScript 3.x
+title: Scopri come tracciare gli errori utilizzando JavaScript 3.x
 description: Scopri come implementare il tracciamento degli errori utilizzando Media SDK nelle app del browser (JS).
 exl-id: 3769fc47-fbc4-4498-9d2a-04c88cdd0e83
 feature: Streaming Media
@@ -11,7 +11,7 @@ ht-degree: 100%
 
 ---
 
-# Tracciare gli annunci utilizzando JavaScript 3.x{#track-errors-on-javascript}
+# Tracciare gli errori utilizzando JavaScript 3.x{#track-errors-on-javascript}
 
 Le istruzioni seguenti forniscono indicazioni per l’implementazione con tutti gli SDK 2.x.
 

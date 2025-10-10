@@ -65,7 +65,7 @@ Puoi utilizzare questi metodi per inviare segnali e recuperare segmenti di visit
 
 * `submitSignal() -`
 
-  Invia al modulo Gestione dell’audience un segnale con caratteristiche.
+  Invia al modulo Gestione del pubblico un segnale con caratteristiche.
 
   ```js
   ADBMobile.audienceManager.submitSignal({"sampleTrait":"sampleValue"});
@@ -107,7 +107,7 @@ Puoi utilizzare questi metodi per inviare segnali e recuperare segmenti di visit
 
 * `audienceSubmitSignal -`
 
-  Invia al modulo Gestione dell’audience un segnale con caratteristiche.
+  Invia al modulo Gestione del pubblico un segnale con caratteristiche.
 
   ```js
   traitData = {}

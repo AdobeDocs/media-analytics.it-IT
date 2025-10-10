@@ -13,7 +13,7 @@ ht-degree: 88%
 
 # Panoramica sui visualizzatori simultanei di contenuti multimediali {#media-concurrent-viewers}
 
-I visualizzatori simultanei di analisi ti permettono di capire dove si è verificato il picco di concorrenza o dove si è verificato un calo, così da fornire informazioni sulla qualità dei contenuti e sul coinvolgimento dei visualizzatori, utili per risolvere eventuali problemi o pianificare un adeguamento per volume o scala.
+L’analisi dei visualizzatori simultanei permette di capire dove si è verificato un picco o un calo di simultaneità, così da ottenere informazioni sulla qualità dei contenuti e sul coinvolgimento dei visualizzatori, utili per risolvere eventuali problemi o pianificare un adeguamento per volume o scala.
 
 ## Pannello Visualizzatori simultanei di elementi multimediali in Analysis Workspace
 

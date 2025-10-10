@@ -1,5 +1,5 @@
 ---
-title: Scopri come tracciare gli annunci su Roku
+title: Scopri come tracciare gli errori su Roku
 description: Scopri come implementare il tracciamento degli errori utilizzando Media SDK su Roku.
 uuid: 4e0165f9-9169-47ed-9f11-ea8a8778f663
 exl-id: 6a6aae4c-60c3-43ea-9954-0bb31f6456f8

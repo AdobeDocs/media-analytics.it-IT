@@ -30,10 +30,10 @@ Per informazioni sulle metriche calcolate di Adobe Analytics, consulta [Metriche
 | Media Tempo trascorso dei contenuti | Tempo trascorso contenuto per avvio contenuto (`HH:MM:SS`) | `Content Time Spent / Content Start` |
 | Media Tempo trascorso dell’annuncio | Tempo trascorso annuncio per avvio annuncio (`HH:MM:SS`) | `Ad Time Spent / Ad Start` |
 | Media Tempo trascorso capitolo | Tempo trascorso capitolo per avvio capitolo (`HH:MM:SS`) | `Chapter Time Spent / Chapter Start` |
-| Percentuale di completamento file multimediali | Percentuale di completamento dei contenuti rispetto ai file multimediali avviati (%) | `Content Completes/ Media Starts` |
-| Percentuale di completamento dei contenuti | Percentuale di completato dei contenuti rispetto all&#39;avvio dei contenuti (%) | `Content Completes / Content Starts` |
-| Percentuale di completamento degli annunci | Percentuale di completamento degli annunci rispetto all&#39;avvio degli annunci (%) | `Ad Completes / Ad Starts` |
-| Percentuale di completamento capitolo | Percentuale di completamento del capitolo rispetto all&#39;avvio del capitolo (%) | `Chapter Completes / Chapter Starts` |
+| Tasso di completamento file multimediali | Percentuale di completamento dei contenuti rispetto ai file multimediali avviati (%) | `Content Completes/ Media Starts` |
+| Tasso di completamento dei contenuti | Percentuale di completato dei contenuti rispetto all&#39;avvio dei contenuti (%) | `Content Completes / Content Starts` |
+| Tasso di completamento degli annunci | Percentuale di completamento degli annunci rispetto all&#39;avvio degli annunci (%) | `Ad Completes / Ad Starts` |
+| Tasso di completamento capitolo | Percentuale di completamento del capitolo rispetto all&#39;avvio del capitolo (%) | `Chapter Completes / Chapter Starts` |
 | Abbandono prima della percentuale di avvio | Percentuale di abbandono prima degli avvii rispetto agli avvii dei file multimediali (%) | `Drops before Starts / Media Starts` |
 | Percentuale durata pausa contenuti | Percentuale di pausa totale rispetto al tempo trascorso dei contenuti (%) | `Total Pause Duration / Content Time Spent` |
 | Percentuale durata buffer dei contenuti | Percentuale di durata totale del buffer rispetto al tempo trascorso dei contenuti (% ) | `Total Buffer Duration / Content Time Spent` |

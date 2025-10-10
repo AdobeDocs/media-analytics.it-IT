@@ -3,16 +3,17 @@ title: Migrare i tipi di pubblico al nuovo tipo di dati Adobe Analytics for Stre
 description: Scopri come migrare i tipi di pubblico al nuovo tipo di dati Adobe Analytics for Streaming Media
 feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: 3056a384535b3f5f2a9bc2d950bd5ee3410ec0a5
+exl-id: 79203a2f-8158-44f2-83b2-146179be9180
+source-git-commit: 61e5279e6d53b18955424e76d05d440b83dae07e
 workflow-type: tm+mt
 source-wordcount: '1346'
-ht-degree: 41%
+ht-degree: 42%
 
 ---
 
 # Mappatura dei parametri di Media Analytics per Adobe Experience Platform e Customer Journey Analytics
 
-Questo documento fornisce un elenco completo di tutti i parametri di Media Analytics utilizzati in Adobe Experience Platform e Customer Journey Analytics. Il suo scopo è quello di supportare l&#39;integrazione dei dati importati da Adobe Analytics a Platform tramite il [connettore Source Analytics](https://experienceleague.adobe.com/it/docs/experience-platform/sources/connectors/adobe-applications/analytics) o il [connettore Source Analytics per le classificazioni](https://experienceleague.adobe.com/it/docs/experience-platform/sources/connectors/adobe-applications/classifications), mappando ogni parametro al percorso del campo XDM corrispondente.
+Questo documento fornisce un elenco completo di tutti i parametri di Media Analytics utilizzati in Adobe Experience Platform e Customer Journey Analytics. Il suo scopo è quello di supportare l&#39;integrazione dei dati importati da Adobe Analytics a Platform tramite il [connettore Source Analytics](https://experienceleague.adobe.com/it/docs/experience-platform/sources/connectors/adobe-applications/analytics) o il [connettore Source Analytics per le classificazioni](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/adobe-applications/classifications), mappando ogni parametro al percorso del campo XDM corrispondente.
 
 ## Variabili riservate di Media Analytics
 
@@ -26,13 +27,13 @@ Poiché i team di Media Analytics e ADC stanno attualmente lavorando alla migraz
 |--------------------|---------------------------------------------------------------------------|---------------------------------------------------|-----------|-------------------|-----------------------------------------------------------------------|
 | Tipo di flusso | media.mediaTimed.primaryAssetReference.streamType | mediaReporting.sessionDetails.streamType | Dimensione | Tipo di flusso |                                                                       |
 | ID contenuto | media.mediaTimed.primaryAssetReference._id | mediaReporting.sessionDetails.name | Dimensione | ID contenuto |                                                                       |
-| Lunghezza contenuto | media.mediaTimed.primaryAssetReference._xmpDM.duration | mediaReporting.sessionDetails.length | Dimensione | Lunghezza contenuto |                                                                       |
+| Durata del contenuto | media.mediaTimed.primaryAssetReference._xmpDM.duration | mediaReporting.sessionDetails.length | Dimensione | Durata del contenuto |                                                                       |
 | Tipo di contenuto | media.mediaTimed.primaryAssetViewDetails.broadcastContentType | mediaReporting.sessionDetails.contentType | Dimensione | Tipo di contenuto |                                                                       |
 | ID sessione multimediale | media.mediaTimed.primaryAssetViewDetails._id | mediaReporting.sessionDetails.ID | Dimensione | ID sessione multimediale |                                                                       |
 | Nome del lettore di contenuti | media.mediaTimed.primaryAssetViewDetails.playerName | mediaReporting.sessionDetails.playerName | Dimensione | Nome del lettore di contenuti |                                                                       |
 | Canale del contenuto | media.mediaTimed.primaryAssetViewDetails.broadcastChannel | mediaReporting.sessionDetails.channel | Dimensione | Canale del contenuto |                                                                       |
 | Segmento di contenuto | media.mediaTimed.primaryAssetViewDetails.videoSegment | mediaReporting.sessionDetails.segment | Dimensione | Segmento di contenuto |                                                                       |
-| Nome contenuto | media.mediaTimed.primaryAssetReference._dc.title | mediaReporting.sessionDetails.friendlyName | Dimensione | Nome contenuto |                                                                       |
+| Nome del contenuto | media.mediaTimed.primaryAssetReference._dc.title | mediaReporting.sessionDetails.friendlyName | Dimensione | Nome del contenuto |                                                                       |
 | Percorso video | *Non utilizzato in AEP/CJA* |                                                   |           |                   | Proprietà specifica di Adobe Analytics |
 | Spettacolo | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Series._iptc4xmpExt.Name | mediaReporting.sessionDetails.show | Dimensione | Spettacolo |                                                                       |
 | Stagione | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Season._iptc4xmpExt.Name | mediaReporting.sessionDetails.season | Dimensione | Stagione |                                                                       |
@@ -237,9 +238,3 @@ In entrambi i casi, `<number>` corrisponde all&#39;evento specifico o al numero 
 | Durata totale dello stallo | `_experience.analytics.event<x>to<y>.event<number>.value` | Metrica |
 
 {style="table-layout:auto"}
-
-
-
-
-
-

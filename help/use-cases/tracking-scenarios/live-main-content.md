@@ -7,8 +7,8 @@ feature: Streaming Media
 role: User, Admin, Data Engineer
 source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
 workflow-type: tm+mt
-source-wordcount: '587'
-ht-degree: 100%
+source-wordcount: '586'
+ht-degree: 98%
 
 ---
 
@@ -65,7 +65,7 @@ Per i flussi LIVE, è necessario impostare il valore della testina di riproduzio
 
 Per i file multimediali LIVE, quando un utente inizia a riprodurre il flusso, è necessario impostare `l:event:playhead` al numero di secondi dalla mezzanotte UTC di quel giorno. Questo è diverso da VOD, dove la testina di riproduzione è impostata su “0”. Nota: quando si utilizzano i marcatori di avanzamento, è necessario specificare la durata del contenuto e la testina di riproduzione deve essere aggiornata come numero di secondi dall’inizio dell’elemento multimediale, a partire da 0.
 
-Ad esempio, supponiamo che un evento di streaming LIVE inizi a mezzanotte e venga eseguito per 24 ore (`a.media.length=86400`; `l:asset:length=86400`). Quindi, supponiamo che un utente inizi a riprodurre lo streaming LIVE alle 12:00. In questo scenario, devi impostare `l:event:playhead` a 43200 (12 ore dalla mezzanotte UTC di quel giorno in secondi).
+Ad esempio, supponiamo che un evento di streaming LIVE inizi a mezzanotte e venga eseguito per 24 ore (`a.media.length=86400`; `l:asset:length=86400`). Quindi, supponiamo che un utente inizi a riprodurre lo streaming LIVE a 12:00pm. In questo scenario, devi impostare `l:event:playhead` a 43200 (12 ore dalla mezzanotte UTC di quel giorno in secondi).
 
 ### In pausa
 
