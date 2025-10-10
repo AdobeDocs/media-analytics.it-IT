@@ -13,7 +13,7 @@ ht-degree: 42%
 
 # Mappatura dei parametri di Media Analytics per Adobe Experience Platform e Customer Journey Analytics
 
-Questo documento fornisce un elenco completo di tutti i parametri di Media Analytics utilizzati in Adobe Experience Platform e Customer Journey Analytics. Il suo scopo è quello di supportare l&#39;integrazione dei dati importati da Adobe Analytics a Platform tramite il [connettore Source Analytics](https://experienceleague.adobe.com/it/docs/experience-platform/sources/connectors/adobe-applications/analytics) o il [connettore Source Analytics per le classificazioni](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/adobe-applications/classifications), mappando ogni parametro al percorso del campo XDM corrispondente.
+Questo documento fornisce un elenco completo di tutti i parametri di Media Analytics utilizzati in Adobe Experience Platform e Customer Journey Analytics. Il suo scopo è quello di supportare l&#39;integrazione dei dati importati da Adobe Analytics a Platform tramite il [connettore Source Analytics](https://experienceleague.adobe.com/it/docs/experience-platform/sources/connectors/adobe-applications/analytics) o il [connettore Source Analytics per le classificazioni](https://experienceleague.adobe.com/it/docs/experience-platform/sources/connectors/adobe-applications/classifications), mappando ogni parametro al percorso del campo XDM corrispondente.
 
 ## Variabili riservate di Media Analytics
 

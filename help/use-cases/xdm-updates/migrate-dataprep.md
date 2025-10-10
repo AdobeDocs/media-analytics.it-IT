@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # Migrare la preparazione dati per i campi personalizzati ai nuovi campi multimediali in streaming
 
-Questo documento descrive il processo di migrazione del servizio di preparazione dati esistente sopra i flussi di raccolta dati di Adobe abilitati per i dati di raccolta multimediale in streaming di Adobe. La migrazione converte una mappatura della preparazione dati dal tipo di dati Adobe Streaming Media Collection denominata &quot;Media&quot; per utilizzare il nuovo tipo di dati corrispondente denominato &quot;[Media Reporting Details](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-reporting-details)&quot;.
+Questo documento descrive il processo di migrazione del servizio di preparazione dati esistente sopra i flussi di raccolta dati di Adobe abilitati per i dati di raccolta multimediale in streaming di Adobe. La migrazione converte una mappatura della preparazione dati dal tipo di dati Adobe Streaming Media Collection denominata &quot;Media&quot; per utilizzare il nuovo tipo di dati corrispondente denominato &quot;[Media Reporting Details](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/media-reporting-details)&quot;.
 
 ## Migra preparazione dati per campi personalizzati
 
-Per eseguire la migrazione delle mappature della preparazione dati dal vecchio tipo di dati denominato &quot;Media&quot; al nuovo tipo di dati denominato &quot;[Media Reporting Details](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-reporting-details)&quot;, è necessario modificare le mappature della preparazione dati:
+Per eseguire la migrazione delle mappature della preparazione dati dal vecchio tipo di dati denominato &quot;Media&quot; al nuovo tipo di dati denominato &quot;[Media Reporting Details](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/media-reporting-details)&quot;, è necessario modificare le mappature della preparazione dati:
 
 >[!IMPORTANT]
 >
@@ -35,7 +35,7 @@ Per eseguire la migrazione delle mappature della preparazione dati dal vecchio t
 
 1. Verifica che le mappature funzionino ancora come previsto.
 
-Vedi il parametro [ID contenuto](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/audio-video-parameters#content-id) nella pagina [Parametri audio e video](https://experienceleague.adobe.com/it/docs/media-analytics/using/implementation/variables/audio-video-parameters) per eseguire il mapping tra i campi precedenti e i nuovi campi. Il vecchio percorso di campo si trova nella proprietà &quot;Percorso campo XDM&quot;, mentre il nuovo percorso di campo si trova nella proprietà &quot;Percorso campo XDM per reporting&quot;.
+Vedi il parametro [ID contenuto](https://experienceleague.adobe.com/it/docs/media-analytics/using/implementation/variables/audio-video-parameters#content-id) nella pagina [Parametri audio e video](https://experienceleague.adobe.com/it/docs/media-analytics/using/implementation/variables/audio-video-parameters) per eseguire il mapping tra i campi precedenti e i nuovi campi. Il vecchio percorso di campo si trova nella proprietà &quot;Percorso campo XDM&quot;, mentre il nuovo percorso di campo si trova nella proprietà &quot;Percorso campo XDM per reporting&quot;.
 
 ## Esempio
 
@@ -77,7 +77,7 @@ Per seguire più facilmente le linee guida per la migrazione, considera il segue
 
 Nell’esempio precedente, tutti i tipi di dati interessati erano di tipo String, pertanto la mappatura veniva sostituita direttamente.
 
-Se il tipo di dati del campo di origine è diverso dal tipo di dati del campo di destinazione, è necessario seguire le linee guida della [Guida alla risoluzione dei problemi della preparazione dati](https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/troubleshooting-guide), [Gestione dei formati di dati con le funzioni di mappatura della preparazione dati](https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/data-handling) e [Funzione di mappatura della preparazione dati](https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/data-handling).
+Se il tipo di dati del campo di origine è diverso dal tipo di dati del campo di destinazione, è necessario seguire le linee guida della [Guida alla risoluzione dei problemi della preparazione dati](https://experienceleague.adobe.com/it/docs/experience-platform/data-prep/troubleshooting-guide), [Gestione dei formati di dati con le funzioni di mappatura della preparazione dati](https://experienceleague.adobe.com/it/docs/experience-platform/data-prep/data-handling) e [Funzione di mappatura della preparazione dati](https://experienceleague.adobe.com/it/docs/experience-platform/data-prep/data-handling).
 
 Ad esempio, se il tipo di origine è una stringa e il tipo di destinazione è booleano, Preparazione dati può analizzare automaticamente il valore e convertirlo in booleano.
 

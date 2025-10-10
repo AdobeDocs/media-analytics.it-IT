@@ -141,7 +141,7 @@ Dopo aver [creato un set di dati di pianificazione del programma](#create-a-prog
 
    1. Invia il file .json contenente i record di dati della pianificazione del programma utilizzando l’ID batch.
 
-      Per inviare informazioni sulla pianificazione devi utilizzare le API batch di AEP, come descritto in [Panoramica dell&#39;API di acquisizione in batch](https://experienceleague.adobe.com/en/docs/experience-platform/ingestion/batch/overview).
+      Per inviare informazioni sulla pianificazione devi utilizzare le API batch di AEP, come descritto in [Panoramica dell&#39;API di acquisizione in batch](https://experienceleague.adobe.com/it/docs/experience-platform/ingestion/batch/overview).
 
       Prendi in considerazione l’esempio seguente di utilizzo di cURL per inviare un file con i record di pianificazione:
 
@@ -301,9 +301,9 @@ L’esempio seguente è di un file .json di pianificazione con due record. Ogni 
 
    Prendi in considerazione i seguenti esempi di dimensioni che puoi creare e quindi generare rapporti in Customer Journey Analytics:
 
-   * **[&quot;_Nome episodio_&quot;](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/audio-video-parameters#episode)**: questa dimensione può aiutarti a capire quali episodi di una particolare serie hanno prestazioni migliori.
+   * **[&quot;_Nome episodio_&quot;](https://experienceleague.adobe.com/it/docs/media-analytics/using/implementation/variables/audio-video-parameters#episode)**: questa dimensione può aiutarti a capire quali episodi di una particolare serie hanno prestazioni migliori.
 
-   * **[ID risorsa](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/audio-video-parameters#asset-id)**
+   * **[ID risorsa](https://experienceleague.adobe.com/it/docs/media-analytics/using/implementation/variables/audio-video-parameters#asset-id)**
 
 1. Continua con [Analizza dati in Customer Journey Analytics](#analyze-data-in-customer-journey-analytics).
 
