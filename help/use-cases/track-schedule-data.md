@@ -3,21 +3,23 @@ title: Carica dati di pianificazione per tenere traccia del contenuto live
 description: Scopri come caricare i dati di pianificazione per tenere traccia del contenuto live.
 feature: Streaming Media
 role: User, Admin, Data Engineer
-hide: true
-hidefromtoc: true
 exl-id: 875c4513-ea4e-4c5f-bfc1-34ea175007ca
-source-git-commit: b947a1d64c7fa58e784712397b0167d4186d00c3
+source-git-commit: 65cd7987acb677b4f4c863b42dc809b5a23c2ed1
 workflow-type: tm+mt
-source-wordcount: '1334'
-ht-degree: 0%
+source-wordcount: '1381'
+ht-degree: 5%
 
 ---
 
 # Carica dati di pianificazione per tenere traccia del contenuto live
 
+>[!AVAILABILITY]
+>
+>La funzionalità descritta in questo articolo si trova nella fase di test del rilascio e potrebbe non essere ancora disponibile nell‘ambiente. Questa nota verrà rimossa non appena la funzionalità sarà disponibile a livello generale. Per informazioni sulla procedura di rilascio, vedere [Versioni delle funzionalità di Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/releases).
+
 Puoi caricare i dati di pianificazione dei contenuti multimediali live passati per monitorare più facilmente e con precisione il pubblico di contenuti live. È possibile tenere traccia dei visualizzatori per singoli programmi e persino argomenti specifici o segmenti di programmi.
 
-Di seguito sono riportati alcuni esempi di contenuti live supportati con la pianificazione del caricamento dei dati:
+Di seguito sono riportati alcuni esempi di contenuti live supportati con il caricamento dei dati di pianificazione:
 
 * Piattaforme FAST (Free Ad Supported TV)
 
@@ -141,7 +143,7 @@ Dopo aver [creato un set di dati di pianificazione del programma](#create-a-prog
 
    1. Invia il file .json contenente i record di dati della pianificazione del programma utilizzando l’ID batch.
 
-      Per inviare informazioni sulla pianificazione devi utilizzare le API batch di AEP, come descritto in [Panoramica dell&#39;API di acquisizione in batch](https://experienceleague.adobe.com/it/docs/experience-platform/ingestion/batch/overview).
+      Per inviare informazioni sulla pianificazione devi utilizzare le API batch di AEP, come descritto in [Panoramica dell&#39;API di acquisizione in batch](https://experienceleague.adobe.com/en/docs/experience-platform/ingestion/batch/overview).
 
       Prendi in considerazione l’esempio seguente di utilizzo di cURL per inviare un file con i record di pianificazione:
 
@@ -301,9 +303,9 @@ L’esempio seguente è di un file .json di pianificazione con due record. Ogni 
 
    Prendi in considerazione i seguenti esempi di dimensioni che puoi creare e quindi generare rapporti in Customer Journey Analytics:
 
-   * **[&quot;_Nome episodio_&quot;](https://experienceleague.adobe.com/it/docs/media-analytics/using/implementation/variables/audio-video-parameters#episode)**: questa dimensione può aiutarti a capire quali episodi di una particolare serie hanno prestazioni migliori.
+   * **[&quot;_Nome episodio_&quot;](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/audio-video-parameters#episode)**: questa dimensione può aiutarti a capire quali episodi di una particolare serie hanno prestazioni migliori.
 
-   * **[ID risorsa](https://experienceleague.adobe.com/it/docs/media-analytics/using/implementation/variables/audio-video-parameters#asset-id)**
+   * **[ID risorsa](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/variables/audio-video-parameters#asset-id)**
 
 1. Continua con [Analizza dati in Customer Journey Analytics](#analyze-data-in-customer-journey-analytics).
 
