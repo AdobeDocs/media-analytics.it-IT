@@ -4,7 +4,7 @@ description: Scopri come implementare il tracciamento Quality of Experience (QoE
 exl-id: b5570e9c-8fb1-4458-bd1a-86ff6fce7813
 feature: Streaming Media
 role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+source-git-commit: bdd92c855a490cae397b633a638c51c5d001a672
 workflow-type: tm+mt
 source-wordcount: '224'
 ht-degree: 90%
