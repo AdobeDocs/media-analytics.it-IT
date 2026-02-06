@@ -49,7 +49,7 @@ Per un elenco dei tipi di evento validi per questa versione, consulta [Tipi di e
 
 >[!IMPORTANT]
 >
->***Tracciamento annunci:**puoi tenere traccia degli annunci solo all’interno di un`adBreak`*.
+>***Tracciamento annunci:**&#x200B;puoi tenere traccia degli annunci solo all’interno di un`adBreak`*.
 >
 >In assenza di “bookend” `adBreakStart` e `adBreakComplete` intorno agli annunci, gli eventi `adStart` e `adComplete` verranno semplicemente ignorati e la corrispondente durata dell’annuncio verrà tracciata come durata del contenuto principale. Ciò potrebbe avere un impatto significativo sui dati aggregati che saranno disponibili in Adobe Analytics.
 

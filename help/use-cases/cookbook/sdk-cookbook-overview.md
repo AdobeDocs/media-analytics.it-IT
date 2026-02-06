@@ -17,8 +17,8 @@ ht-degree: 92%
 * [Tracciamento dei contenuti scaricati offline](/help/use-cases/track-downloaded-content.md)
 * [Gestione degli arresti dell’applicazione durante la riproduzione](/help/use-cases/cookbook/app-interrupts.md)
 * [Gestione degli spazi tra annunci](/help/use-cases/cookbook/fix-ad-play-ad.md)
-* [Ripresa di sessioni inattive ](/help/use-cases/cookbook/resuming-inactive.md)
-* [Tracciamento in SceneGraph (Roku) ](/help/use-cases/cookbook/sdk-track-scenegraph.md)
+* [Ripresa di sessioni inattive &#x200B;](/help/use-cases/cookbook/resuming-inactive.md)
+* [Tracciamento in SceneGraph (Roku) &#x200B;](/help/use-cases/cookbook/sdk-track-scenegraph.md)
 * [Attribuzione flusso multimediale](/help/use-cases/media-analytics-cookbook/media-dimensions.md)
 
 * Federated
@@ -30,8 +30,8 @@ ht-degree: 92%
    * [Abbandona la sessione](/help/use-cases/timelines/user-abandons-session.md)
 
 * Utilizzare Analytics nelle app OTT
-   * [Tracciare gli stati dell’app ](/help/use-cases/analytics-with-ott/track-app-states.md)
-   * [Tracciare le azioni eseguite nell’app ](/help/use-cases/analytics-with-ott/track-app-actions.md)
-   * [Configurare gli ID utente ](/help/use-cases/analytics-with-ott/set-user-ids.md)
-   * [OTT e Audience Manager ](/help/use-cases/analytics-with-ott/ott-am.md)
-   * [OTT ed Experience Cloud ](/help/use-cases/analytics-with-ott/ott-experience-cloud.md)
+   * [Tracciare gli stati dell’app &#x200B;](/help/use-cases/analytics-with-ott/track-app-states.md)
+   * [Tracciare le azioni eseguite nell’app &#x200B;](/help/use-cases/analytics-with-ott/track-app-actions.md)
+   * [Configurare gli ID utente &#x200B;](/help/use-cases/analytics-with-ott/set-user-ids.md)
+   * [OTT e Audience Manager &#x200B;](/help/use-cases/analytics-with-ott/ott-am.md)
+   * [OTT ed Experience Cloud &#x200B;](/help/use-cases/analytics-with-ott/ott-experience-cloud.md)

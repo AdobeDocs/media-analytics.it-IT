@@ -126,7 +126,7 @@ Per ulteriori informazioni sulle opzioni del server di tracciamento, vedi [Compi
 
   Il server di tracciamento di Analytics deve terminare in “`.sc.omtrdc.net`” o essere un CNAME.
 
-* ** Server Media Analytics (Heartbeat)** 
+* **&#x200B; Server Media Analytics (Heartbeat)** 
 Questo ha sempre il formato “`[your_namespace].hb.omtrdc.net`”. Il valore di “`[your_namespace]`” specifica la società ed è fornito da Adobe.
 
 Il tracciamento dei contenuti multimediali funziona allo stesso modo su tutte le piattaforme, desktop e dispositivi mobili. Il tracciamento audio funziona attualmente sulle piattaforme mobili. Per tutte le chiamate di tracciamento sono disponibili alcune variabili universali chiave da convalidare:
