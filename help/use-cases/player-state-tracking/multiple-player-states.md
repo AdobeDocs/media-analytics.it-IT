@@ -2,9 +2,9 @@
 title: Aggiornamento simultaneo di più stati del lettore
 description: Questo argomento descrive la funzione di tracciamento di più stati del lettore.
 feature: Streaming Media
-role: User, Admin, Data Engineer
+role: User, Admin, Developer
 exl-id: 7a512a81-a6d1-4d0c-a4fe-91e9b11419db
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 100%
@@ -25,9 +25,7 @@ L’implementazione corrente consente di eseguire entrambe gli scenari:
 - `stateStart(fullScreen)` - t1
 - `stateEnd(fullScreen)` - t2
 
-Tuttavia, questo richiede di emettere più eventi `stateStart` e `stateEnd` per segnalare più modifiche simultanee dello stato. Per
-ottimizzare questo comportamento comune, è stato implementato un nuovo tipo di evento `statesUpdate`, che termina un elenco di stati
-e ne avvia uno di nuovi stati.
+Tuttavia, questo richiede di emettere più eventi `stateStart` e `stateEnd` per segnalare più modifiche simultanee dello stato. Per ottimizzare questo comportamento comune, è stato implementato un nuovo tipo di evento `statesUpdate`, che termina un elenco di stati e ne avvia uno di nuovi stati.
 
 Utilizzando il nuovo evento `statesUpdate`, l’elenco di eventi precedente diventa:
 - `statesUpdate(statesEnd=[], statesStart=[pictureInPicture, mute])` - t0

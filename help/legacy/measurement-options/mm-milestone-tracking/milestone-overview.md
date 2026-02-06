@@ -4,11 +4,11 @@ description: Obsoleto ‐ Scopri come impostare la generazione di rapporti video
 uuid: 2f9ec6bb-8860-4863-98bc-5cffb356ccc5
 exl-id: 960785e3-f507-4f09-8f85-6eeca57dd2f3
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '3355'
-ht-degree: 99%
+ht-degree: 98%
 
 ---
 
@@ -70,7 +70,7 @@ La tabella seguente contiene ulteriori dettagli sulle variabili commerciali e su
 | Tipo di contenuto | Scadenza predefinita eVar <br/>: visualizzazione pagina | Raccoglie dati relativi al tipo di contenuto visualizzato da un visitatore. Agli hit inviati dalla misurazione video viene assegnato il tipo di contenuto `video.` <br/>Questa variabile non deve essere riservata esclusivamente al tracciamento video. Se la stessa variabile viene usata anche per ottenere il tipo di altri contenuti, è possibile analizzare la distribuzione dei visitatori per diversi tipi di contenuto. Ad esempio, puoi usare questa variabile per assegnare valori quali `article` o `product page` ad altri tipi di contenuti. <br/>Dal punto di vista della misurazione dei video, il *tipo di contenuto* permette di individuare i visitatori che guardano un video e quindi calcolare i tassi di conversioni derivanti dal video. |
 | Tempo trascorso dei contenuti | Tipo di <br/>evento: contatore | Conta il tempo, in secondi, trascorso a guardare un video dall&#39;ultimo processo di raccolta di dati di una richiesta di immagine. |
 | Inizia video | Tipo di <br/>evento: contatore | Indica che un visitatore ha visualizzato una parte del video. Tuttavia, non fornisce informazioni sulla durata della visualizzazione o sulla parte di video visualizzata dal visitatore. |
-| Completamento video | Tipo di <br/>evento: contatore | Indica che un utente ha visualizzato un video completo. Per impostazione predefinita, l&#39;evento completo è misurato 1 secondo prima della fine del video.  <br/>Durante l’implementazione, puoi specificare a quanti secondi dalla fine del video la visualizzazione potrà essere considerata come completa. Per i video in diretta e altri flussi che non hanno una fine definita, puoi specificare un punto personalizzato per misurare il completamento. Ad esempio, dopo un tempo di visualizzazione specifico. |
+| Completamento video | Tipo di <br/>evento: contatore | Indica che un utente ha visualizzato un video completo. Per impostazione predefinita, l&#39;evento completo è misurato 1 secondo prima della fine del video.  <br/>Durante l’implementazione, puoi specificare a quanti secondi dalla fine del video la visualizzazione potrà essere considerata come completa. Per i video in diretta e altri flussi che non hanno una fine definita, puoi specificare un punto personalizzato in base al quale misurare le visualizzazioni complete. Ad esempio, dopo che è stato visualizzato un orario specifico. |
 
 ## Variabili del modulo multimediale {#media-module-variables}
 

@@ -2,12 +2,12 @@
 title: Note sulla versione di Streaming Media Services
 description: Consulta le note sulla versione di Streaming Media Services.
 feature: Release Notes
-role: User, Admin, Data Engineer
+role: User, Admin, Developer
 exl-id: ef068aa6-fdf4-4a5c-b5d0-b93ad31894e8
-source-git-commit: 873515d0685074ea2302b11f72ad2b95b0dc412a
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '1353'
-ht-degree: 70%
+ht-degree: 71%
 
 ---
 

@@ -4,7 +4,7 @@ description: Scopri i principali dispositivi supportati da Adobe Streaming Media
 exl-id: 169ff7b9-e577-45b7-8927-74bdcccc0a77
 feature: Streaming Media
 role: User, Admin
-source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
+source-git-commit: 83c64e35a52921532697063d3fdf987e889b2854
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 50%
@@ -27,12 +27,12 @@ Nella tabella seguente sono elencati i dispositivi attualmente supportati. Se un
 
 Per ulteriori informazioni sull&#39;implementazione di Media su Edge, vedere [Installare Streaming Media Collection con Experience Platform Edge](/help/implementation/edge/implementation-edge.md).
 
-| Piattaforme e dispositivi di streaming | | Media per Edge Network SDK / Estensione | API di Media Edge | Estensione Media con tag o AEP mobile SDK | Media SDK | API Media Collection |
+| Piattaforme e dispositivi di streaming |  | Media per Edge Network SDK / Estensione | API di Media Edge | Estensione Media con tag o AEP mobile SDK | Media SDK | API Media Collection |
 |:---|:---|:---:|:---:|:---:|:---:|:---:|
-| Web/Web mobile | | | | | |
+| Web/Web mobile | | | | | | |
 | | Browser JavaScript | ![Supportati](/help/assets/icon-blue-check.png) | ![Supportati](/help/assets/icon-blue-check.png) | ![Supportati](/help/assets/icon-blue-check.png) | ![Supportati](/help/assets/icon-blue-check.png) | ![Supportati](/help/assets/icon-blue-check.png) |
-| App mobile | | | | | |
-| | Dispositivi iOS | ![Supportati](/help/assets/icon-blue-check.png) | ![Supportati](/help/assets/icon-blue-check.png) | ![Supportati](/help/assets/icon-blue-check.png) | | ![Supportati](/help/assets/icon-blue-check.png) | |
+| App mobile | | | | | | |
+| | Dispositivi iOS | ![Supportati](/help/assets/icon-blue-check.png) | ![Supportati](/help/assets/icon-blue-check.png) | ![Supportati](/help/assets/icon-blue-check.png) | | ![Supportati](/help/assets/icon-blue-check.png) |
 | | Dispositivi Android | ![Supportati](/help/assets/icon-blue-check.png) | ![Supportati](/help/assets/icon-blue-check.png) | ![Supportati](/help/assets/icon-blue-check.png) | | ![Supportati](/help/assets/icon-blue-check.png) |
 | | Dispositivi Windows | | ![Supportati](/help/assets/icon-blue-check.png) | | | ![Supportati](/help/assets/icon-blue-check.png) |
 | OTT | | | | | | |

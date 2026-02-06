@@ -4,11 +4,11 @@ description: Scopri le dashboard di debug di Adobe.
 uuid: 8e6f6245-d8bd-4329-89e1-4c5595e04ec5
 exl-id: fc5590a5-4d0e-4a2d-8f40-54c53eabc6f0
 feature: "Streaming Media, Analytics Dashboards"
-role: User, Admin, Data Engineer
-source-git-commit: 70900e305c3ed7a2be4069c6f296d56f1f6e0966
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '82'
+ht-degree: 100%
 
 ---
 

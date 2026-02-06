@@ -4,8 +4,8 @@ description: Segui questi passaggi per configurare l’applicazione Media SDK su
 uuid: 0269d8ad-0af8-4bf1-9d15-e06c2952a005
 exl-id: 33976096-8b86-4353-906b-e25bf4693471
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '395'
 ht-degree: 100%
@@ -14,7 +14,7 @@ ht-degree: 100%
 
 # Configurare JavaScript 2.x{#set-up-javascript}
 
-## Prerequisiti 
+## Prerequisiti
 
 * **Ottenere parametri di configurazione validi**
 Questi parametri possono essere ottenuti da un rappresentante di Adobe dopo la configurazione dell’account di analisi.

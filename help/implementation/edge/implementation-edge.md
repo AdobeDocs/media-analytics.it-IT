@@ -2,9 +2,9 @@
 title: Implementazione dei servizi multimediali di streaming di Adobe tramite Edge Network
 description: Scopri come implementare i servizi multimediali in streaming di Adobe con Experience Platform Edge.
 feature: Streaming Media
-role: User, Admin, Data Engineer
+role: User, Admin, Developer
 exl-id: dfdb1415-105e-4c41-bedc-ecb85ed1b1d9
-source-git-commit: 9b2d64e856af6a975b371d7c794197a5541997f1
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '2152'
 ht-degree: 7%
@@ -29,7 +29,7 @@ Per standardizzare la raccolta dati da utilizzare nelle applicazioni che sfrutta
 
 Per creare e impostare uno schema:
 
-1. In Adobe Experience Platform, iniziare a creare lo schema come descritto in [Creare e modificare gli schemi nell&#39;interfaccia utente](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=it).
+1. In Adobe Experience Platform, iniziare a creare lo schema come descritto in [Creare e modificare gli schemi nell&#39;interfaccia utente](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=en).
 
 1. Nella pagina dei dettagli dello schema durante la creazione dello schema, scegliere [!UICONTROL **Evento esperienza**] quando si sceglie la classe base per lo schema.
 
@@ -129,7 +129,7 @@ Per creare e impostare uno schema:
 
       ![add-custom-metadata](assets/add-custom-fields.png)
 
-   1. [Utilizza il percorso generato](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/ui/fields/overview#type-specific-properties) per il campo personalizzato nel payload della richiesta.
+   1. [Utilizza il percorso generato](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/fields/overview#type-specific-properties) per il campo personalizzato nel payload della richiesta.
 
       ![add-custom-metadata](assets/custom-fields-path.png)
 
@@ -151,7 +151,7 @@ Per creare e impostare uno schema:
 
 1. Assicurarsi di aver creato un set di dati come descritto in [Creare un set di dati in Adobe Experience Platform](#create-a-dataset-in-adobe-experience-platform).
 
-1. Creare un nuovo stream di dati come descritto in [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=it).
+1. Creare un nuovo stream di dati come descritto in [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=en).
 
    Durante la creazione dello stream di dati, accertati di effettuare le seguenti selezioni di configurazione:
 
@@ -167,11 +167,11 @@ Per creare e impostare uno schema:
 
       * [!UICONTROL **Adobe Analytics**] (se si utilizza Adobe Analytics)
 
-        Se utilizzi Adobe Analytics, accertati di definire una suite di rapporti come descritto in [Creare una suite di rapporti](https://experienceleague.adobe.com/it/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite).
+        Se utilizzi Adobe Analytics, accertati di definire una suite di rapporti come descritto in [Creare una suite di rapporti](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite).
 
       * [!UICONTROL **Adobe Experience Platform**] (se si utilizza Customer Journey Analytics)
 
-     Per informazioni su come aggiungere un servizio a un flusso di dati, vedere la sezione &quot;Aggiungere servizi a un flusso di dati&quot; in [Configurare un flusso di dati](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=it#view-details).
+     Per informazioni su come aggiungere un servizio a un flusso di dati, vedere la sezione &quot;Aggiungere servizi a un flusso di dati&quot; in [Configurare un flusso di dati](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=en#view-details).
 
      ![Aggiungi il servizio Adobe Analytics](assets/datastream-add-service.png)
 
@@ -332,9 +332,9 @@ Per creare e impostare uno schema:
 
    >[!NOTE]
    >
-   >Se imposti Adobe Analytics come flusso a monte per lo stream di dati, i metadati personalizzati sono presenti anche in ContextData, con il nome impostato nello schema (senza il prefisso tenant, ad esempio myCustomField). In questo modo è possibile utilizzare tutte le funzionalità di Adobe Analytics disponibili per ContextData, ad esempio [la creazione di una regola di elaborazione](https://experienceleague.adobe.com/it/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/processing-rules).
+   >Se imposti Adobe Analytics come flusso a monte per lo stream di dati, i metadati personalizzati sono presenti anche in ContextData, con il nome impostato nello schema (senza il prefisso tenant, ad esempio myCustomField). In questo modo è possibile utilizzare tutte le funzionalità di Adobe Analytics disponibili per ContextData, ad esempio [la creazione di una regola di elaborazione](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/processing-rules).
 
-1. Condividi il progetto come descritto in [Condividi progetti](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/curate-share/share-projects.html?lang=it).
+1. Condividi il progetto come descritto in [Condividi progetti](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/curate-share/share-projects.html?lang=en).
 
    >[!NOTE]
    >

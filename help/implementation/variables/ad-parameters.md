@@ -4,8 +4,8 @@ description: Scopri i parametri degli annunci, tra cui l’implementazione, la r
 uuid: 92cd7f97-bb5a-4de6-8946-453d30271d0f
 exl-id: 949e86cb-d265-4836-8825-a06b87203b15
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '2036'
 ht-degree: 89%
@@ -37,13 +37,13 @@ Descrizione dei dati della tabella:
 >[!IMPORTANT]
 >
 >Non modificare i nomi delle classificazioni per le variabili elencate di seguito che sono
->&#x200B;>descritte in Variabile di generazione rapporti/riservata come “classificazione”.
->&#x200B;>Le classificazioni per i file multimediali vengono definite quando una suite di rapporti è abilitata per il tracciamento
->&#x200B;>degli elementi multimediali. Di tanto in tanto, Adobe aggiunge nuove proprietà e, quando ciò si verifica,
->&#x200B;>i clienti devono riabilitare le suite di rapporti per accedere alle nuove proprietà dei contenuti multimediali
->&#x200B;>. Durante il processo di aggiornamento Adobe determina se
->&#x200B;>le classificazioni vengono abilitate verificando i nomi delle variabili. Se una di esse
->&#x200B;>manca, Adobe aggiunge di nuovo quelle mancanti.
+>descritte in Variabile di generazione rapporti/riservata come “classificazione”.
+>Le classificazioni per i file multimediali vengono definite quando una suite di rapporti è abilitata per il tracciamento
+>degli elementi multimediali. Di tanto in tanto, Adobe aggiunge nuove proprietà e, quando ciò si verifica,
+>i clienti devono riabilitare le suite di rapporti per accedere alle nuove proprietà dei contenuti multimediali
+>. Durante il processo di aggiornamento Adobe determina se
+>le classificazioni vengono abilitate verificando i nomi delle variabili. Se una di esse
+>manca, Adobe aggiunge di nuovo quelle mancanti.
 
 ## Dati annuncio video {#ad-video-data}
 

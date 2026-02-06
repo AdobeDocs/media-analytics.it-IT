@@ -2,18 +2,18 @@
 title: Migrare i tipi di pubblico al nuovo tipo di dati Adobe Analytics for Streaming Media
 description: Scopri come migrare i tipi di pubblico al nuovo tipo di dati Adobe Analytics for Streaming Media
 feature: Streaming Media
-role: User, Admin, Data Engineer
+role: User, Admin, Developer
 exl-id: 79203a2f-8158-44f2-83b2-146179be9180
-source-git-commit: 61e5279e6d53b18955424e76d05d440b83dae07e
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '1346'
-ht-degree: 42%
+ht-degree: 43%
 
 ---
 
 # Mappatura dei parametri di Media Analytics per Adobe Experience Platform e Customer Journey Analytics
 
-Questo documento fornisce un elenco completo di tutti i parametri di Media Analytics utilizzati in Adobe Experience Platform e Customer Journey Analytics. Il suo scopo è quello di supportare l&#39;integrazione dei dati importati da Adobe Analytics a Platform tramite il [connettore Source Analytics](https://experienceleague.adobe.com/it/docs/experience-platform/sources/connectors/adobe-applications/analytics) o il [connettore Source Analytics per le classificazioni](https://experienceleague.adobe.com/it/docs/experience-platform/sources/connectors/adobe-applications/classifications), mappando ogni parametro al percorso del campo XDM corrispondente.
+Questo documento fornisce un elenco completo di tutti i parametri di Media Analytics utilizzati in Adobe Experience Platform e Customer Journey Analytics. Il suo scopo è quello di supportare l&#39;integrazione dei dati importati da Adobe Analytics a Platform tramite il [connettore Source Analytics](https://experienceleague.adobe.com/it/docs/experience-platform/sources/connectors/adobe-applications/analytics) o il [connettore Source Analytics per le classificazioni](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/adobe-applications/classifications), mappando ogni parametro al percorso del campo XDM corrispondente.
 
 ## Variabili riservate di Media Analytics
 
@@ -57,11 +57,11 @@ Poiché i team di Media Analytics e ADC stanno attualmente lavorando alla migraz
 | Tempo trascorso dei contenuti | media.mediaTimed.timePlayed.value | mediaReporting.sessionDetails.timePlayed | Metrica | Tempo trascorso dei contenuti |                                                                       |
 | Tempo trascorso dei contenuti multimediali | media.mediaTimed.totalTimePlayed.value | mediaReporting.sessionDetails.totalTimePlayed | Metrica | Tempo trascorso dei contenuti multimediali |                                                                       |
 | Tempo specifico riprodotto | Non supportati | mediaReporting.sessionDetails.uniqueTimePlayed | Metrica | Tempo specifico riprodotto |                                                                       |
-| Marcatore progresso 10% | media.mediaTimed.progress10.value | mediaReporting.sessionDetails.hasProgress10 | Metrica | Marcatore progresso 10% |                                                                       |
-| Marcatore progresso 25% | media.mediaTimed.progress25.value | mediaReporting.sessionDetails.hasProgress25 | Metrica | Marcatore progresso 25% |                                                                       |
-| Marcatore progresso 50% | media.mediaTimed.progress50.value | mediaReporting.sessionDetails.hasProgress50 | Metrica | Marcatore progresso 50% |                                                                       |
-| Marcatore progresso 75% | media.mediaTimed.progress75.value | mediaReporting.sessionDetails.hasProgress75 | Metrica | Marcatore progresso 75% |                                                                       |
-| Marcatore progresso 95% | media.mediaTimed.progress95.value | mediaReporting.sessionDetails.hasProgress95 | Metrica | Marcatore progresso 95% |                                                                       |
+| Indicatore di avanzamento al 10% | media.mediaTimed.progress10.value | mediaReporting.sessionDetails.hasProgress10 | Metrica | Indicatore di avanzamento al 10% |                                                                       |
+| Indicatore di avanzamento al 25% | media.mediaTimed.progress25.value | mediaReporting.sessionDetails.hasProgress25 | Metrica | Indicatore di avanzamento al 25% |                                                                       |
+| Indicatore di avanzamento al 50% | media.mediaTimed.progress50.value | mediaReporting.sessionDetails.hasProgress50 | Metrica | Indicatore di avanzamento al 50% |                                                                       |
+| Indicatore di avanzamento al 75% | media.mediaTimed.progress75.value | mediaReporting.sessionDetails.hasProgress75 | Metrica | Indicatore di avanzamento al 75% |                                                                       |
+| Indicatore di avanzamento al 95% | media.mediaTimed.progress95.value | mediaReporting.sessionDetails.hasProgress95 | Metrica | Indicatore di avanzamento al 95% |                                                                       |
 | Pubblico medio per minuto | Non supportati | mediaReporting.sessionDetails.averageMinuteAudience | Metrica | Pubblico medio per minuto |                                                                  |
 | Secondi trascorsi dall’ultima chiamata | media.mediaTimed.primaryAssetViewDetails.sessionTimeout | mediaReporting.sessionDetails.secondsSinceLastCall | Metrica | Secondi trascorsi dall’ultima chiamata |                                                              |
 | Flussi interessati in pausa | Non supportati | mediaReporting.sessionDetails.hasPauseImpactedStreams | Metrica | Flussi interessati in pausa | copriamo mediaTimed calcolando questo valore da altri eventi |

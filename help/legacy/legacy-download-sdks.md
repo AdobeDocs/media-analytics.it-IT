@@ -2,9 +2,9 @@
 title: Accesso ai collegamenti a Legacy - Media SDK
 description: Collegamenti ai download dell’SDK legacy per le piattaforme disponibili, inclusi Android, iOS, JavaScript, Chromecast e Roku.
 feature: Streaming Media
-role: User, Admin, Data Engineer
+role: User, Admin, Developer
 exl-id: d1066f05-f46f-46fa-897f-039657704d05
-source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 70%
@@ -27,7 +27,7 @@ La raccolta dati di Adobe con l’estensione Media Analytics richiede quanto seg
 * È necessario essere un cliente Adobe Experience Cloud.
 * È necessario distribuire sulle pagine web il codice di raccolta dati o DTM da incorporare.
 * È necessario configurare l’[Estensione Analytics](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html?lang=it).
-* Devi configurare l&#39;estensione [Adobe Media Analytics for Audio and Video](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/media-analytics/overview.html?lang=it).
+* Devi configurare l&#39;estensione [Adobe Media Analytics for Audio and Video](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/media-analytics/overview.html).
 * È necessario configurare l’[Estensione Experience Cloud ID](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/id-service/overview.html?lang=it).
 
 ## Scarica i Media SDK 2.x {#download-2x-sdks}

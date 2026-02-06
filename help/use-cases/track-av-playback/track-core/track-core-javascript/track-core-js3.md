@@ -3,8 +3,8 @@ title: Scopri come tenere traccia della riproduzione core utilizzando JavaScript
 description: Scopri come implementare il tracciamento di base utilizzando Media SDK in un browser utilizzando le app JavaScript 3.x.
 exl-id: f3145450-82ba-4790-91a4-9d2cc97bbaa5
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '747'
 ht-degree: 87%

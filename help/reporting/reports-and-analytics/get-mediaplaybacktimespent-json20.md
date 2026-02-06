@@ -2,9 +2,9 @@
 title: 'Acquisire i dati del rapporto JSON sul tempo di riproduzione multimediale impiegato con le API di Analytics 2.0 '
 description: Scopri come ottenere i dati del rapporto sul tempo di riproduzione dei contenuti multimediali impiegato utilizzando le API di Analytics 2.0. Visualizza una richiesta e una risposta di esempio.
 feature: Streaming Media, Workspace Basics
-role: User, Admin, Data Engineer
+role: User, Admin, Developer
 exl-id: 65e5b67a-26fc-433e-b99b-0ebbc24428ac
-source-git-commit: 67f1fa8194fa58b2c513e3136d2bc7880f9cb06b
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '205'
 ht-degree: 100%
@@ -129,7 +129,7 @@ You can extract the Media Playback Time Spent report data using the Experience C
     * **Environment -** Select your data center.
     * Request JSON - Specify the following:
 
-        * `reportSuiteID` - For info on reports suites: [Report Suites](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/report-suites-admin.html?lang=it)
+        * `reportSuiteID` - For info on reports suites: [Report Suites](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/report-suites-admin.html)
 
         * `dateTo` - End date of the report.         
 

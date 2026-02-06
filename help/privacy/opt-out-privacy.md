@@ -4,11 +4,11 @@ description: Scopri come gestire il consenso, la rinuncia e la privacy.
 uuid: 7e60c7bd-8dba-4c7a-9c3c-0c634b815397
 exl-id: 64f5ef2b-7850-43d8-8f32-3d008ea4f156
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '346'
-ht-degree: 94%
+ht-degree: 89%
 
 ---
 
@@ -90,11 +90,11 @@ Queste informazioni sono utili per recuperare identità utente memorizzate local
 
 Le identità memorizzate localmente vengono restituite in una stringa JSON che può contenere:
 
-* Contesto aziendale - ID organizzazione IMS
+* Contesto dell’azienda - ID organizzazione IMS
 * ID utente
 * Experience Cloud ID (MCID)
-* ID di origine dati (DPID, DPUUID)
-* ID Analytics (AVID, AID, VID e RSID associati)
+* ID Data Source (DPID, DPUUID)
+* ID di Analytics (AVID, AID, VID e RSID associati)
 * ID Audience Manager (UUID)
 
 Ad esempio:

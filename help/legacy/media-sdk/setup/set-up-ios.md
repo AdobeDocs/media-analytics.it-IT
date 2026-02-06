@@ -4,8 +4,8 @@ description: Segui questi passaggi per configurare l’applicazione Media SDK su
 uuid: a1c6be79-a6dc-47b6-93b3-ac7b42f1f3eb
 exl-id: fe7662b5-1700-4bd6-b542-66aa8493459d
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '731'
 ht-degree: 95%
@@ -20,7 +20,7 @@ Scopri come configurare i servizi di streaming media per i dispositivi iOS.
 >
 >Con la fine del supporto per gli SDK della versione 4 per dispositivi mobili il 31 agosto 2021, Adobe terminerà anche il supporto per l’SDK di Media Analytics per iOS e Android.  Per ulteriori informazioni, consulta [Domande frequenti relative alla fine del supporto dell’SDK di Media Analytics](/help/additional-resources/end-of-support-faqs.md).
 
-## Prerequisiti 
+## Prerequisiti
 
 * **Ottenere parametri di configurazione validi per Media SDK**
 Questi parametri possono essere ottenuti da un rappresentante di Adobe dopo la configurazione dell’account di analisi.
@@ -87,7 +87,7 @@ Per ulteriori informazioni sulla documentazione dell’SDK di Adobe Mobile, cons
          * **AdobeMobileLibrary_TV.a**
          * **MediaSDK_TV.a**
          * **libsqlite3.0.tbd**
-         * **SystemConfiguration.framework**
+         * **ConfigurazioneSistema.framework**
 
       1. Verifica che l’app possa essere generata senza errori.
 

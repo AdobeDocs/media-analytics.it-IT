@@ -2,9 +2,9 @@
 title: Prerequisiti per le implementazioni basate solo su Adobe Analytics
 description: Scopri i prerequisiti per l’utilizzo del componente aggiuntivo Adobe Analytics for Streaming Media per le implementazioni basate solo su Adobe Analytics
 feature: Streaming Media, Workspace Basics
-role: User, Admin, Data Engineer
+role: User, Admin, Developer
 exl-id: f94a5339-f777-44ec-ba79-0a1986c52225
-source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 38%

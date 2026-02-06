@@ -3,8 +3,8 @@ title: Stati standard e personalizzati
 description: Scopri la funzione di tracciamento dello stato del lettore, compresi i requisiti e le linee guida per l’implementazione e la generazione rapporti per gli stati del lettore standard e personalizzati.
 exl-id: 3c492055-d471-4147-aa78-b058d6b931f4
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 99%

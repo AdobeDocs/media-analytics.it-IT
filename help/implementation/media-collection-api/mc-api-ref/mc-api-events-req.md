@@ -4,8 +4,8 @@ description: Quali sono i parametri e le risposte dell’endpoint della richiest
 uuid: b237f0a0-dc29-418b-89ee-04c596a27f39
 exl-id: ee0dd8a6-1529-4258-af12-0e2f5948ec38
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 95%
@@ -49,7 +49,7 @@ Per un elenco dei tipi di evento validi per questa versione, consulta [Tipi di e
 
 >[!IMPORTANT]
 >
->***Tracciamento annunci:**&#x200B;puoi tenere traccia degli annunci solo all’interno di un`adBreak`*.
+>***Tracciamento annunci:**puoi tenere traccia degli annunci solo all’interno di un`adBreak`*.
 >
 >In assenza di “bookend” `adBreakStart` e `adBreakComplete` intorno agli annunci, gli eventi `adStart` e `adComplete` verranno semplicemente ignorati e la corrispondente durata dell’annuncio verrà tracciata come durata del contenuto principale. Ciò potrebbe avere un impatto significativo sui dati aggregati che saranno disponibili in Adobe Analytics.
 

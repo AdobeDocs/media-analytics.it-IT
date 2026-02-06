@@ -4,8 +4,8 @@ description: Scopri la timeline dell’indicatore di riproduzione e la corrispon
 uuid: 74b89e8f-ef56-4e0c-b9a8-40739e15b4cf
 exl-id: 0c6a89f4-7949-4623-8ed9-ce1d1547bdfa
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 100%
@@ -16,7 +16,7 @@ ht-degree: 100%
 
 ## VOD, annunci pre-roll e mid-roll, l’utente abbandona i contenuti in anticipo
 
-I seguenti diagrammi illustrano la tempistica della testina di riproduzione e la corrispondenza con le azioni di un utente. Di seguito sono riportati i dettagli di ciascuna azione e le relative richieste.
+I seguenti diagrammi illustrano la timeline della testina di riproduzione e la corrispondenza con le azioni di un utente. Di seguito sono riportati i dettagli di ciascuna azione e le relative richieste.
 
 ![Contenuto API](assets/va_api_content_2.png)
 

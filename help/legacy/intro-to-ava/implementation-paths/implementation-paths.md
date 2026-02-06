@@ -3,8 +3,8 @@ title: Quali percorsi di implementazione di contenuti multimediali in streaming 
 description: Scopri i percorsi di implementazione di contenuti multimediali in streaming di Adobe, inclusa la raccolta dati di Adobe Experience Platform.
 exl-id: eee70e62-ba45-440a-8ce1-e151b66d2c1f
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: 0083869ae4248134dea18a87b9d4ce563eeed1a4
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '630'
 ht-degree: 90%

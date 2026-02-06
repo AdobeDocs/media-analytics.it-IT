@@ -3,11 +3,11 @@ title: Cos’è l’abilitazione di Adobe Audience Manager?
 description: Scopri come collegare le azioni dell’applicazione ai dati di tracciamento dei contenuti multimediali senza la necessità di ulteriori regole di elaborazione e variabili personalizzate.
 exl-id: c0d73bc2-4713-498a-8882-ff66c7f3dd50
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '397'
-ht-degree: 100%
+ht-degree: 93%
 
 ---
 
@@ -57,7 +57,7 @@ Puoi utilizzare questi metodi per inviare segnali e recuperare segmenti di visit
 
 * `setDpidAndDpuuid() -`
 
-  Imposta gli identificatori DPID e DPUUID. Se impostati, DPID e DPUUID saranno inviati congiuntamente con ogni segnale.
+  Imposta gli identificatori DPID e DPUUID. Se DPID e DPUUID sono impostati, verranno inviati con ciascun segnale.
 
   ```js
   ADBMobile.audienceManager.setDpidAndDpuuid("myDpid", "myDpuuid");
@@ -99,7 +99,7 @@ Puoi utilizzare questi metodi per inviare segnali e recuperare segmenti di visit
 
 * `audienceSetDpidAndDpuuid -`
 
-  Imposta gli identificatori DPID e DPUUID. Se impostati, DPID e DPUUID saranno inviati congiuntamente con ogni segnale.
+  Imposta gli identificatori DPID e DPUUID. Se DPID e DPUUID sono impostati, verranno inviati con ciascun segnale.
 
   ```js
   ADBMobile().audienceSetDpidAndDpuuid("myDpid", "myDpuuid")

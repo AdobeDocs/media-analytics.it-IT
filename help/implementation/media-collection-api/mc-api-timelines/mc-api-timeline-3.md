@@ -1,11 +1,11 @@
 ---
 title: Informazioni sul tracciamento di file multimediali Timelines‐Chapters
-description: Scopri le tempistiche della testina di riproduzione e quando inizia e termina un capitolo.
+description: Scopri la timeline della testina di riproduzione e quando inizia e termina un capitolo.
 uuid: 41b52072-e1cd-4dda-9253-31f3408924f6
 exl-id: e3f5bbdb-7007-435b-920c-566d163e57ad
 feature: Streaming Media
-role: User, Admin, Data Engineer
-source-git-commit: a6a9d550cbdf511b93eea132445607102a557823
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '1145'
 ht-degree: 100%
@@ -16,7 +16,7 @@ ht-degree: 100%
 
 ## VOD, annunci pre-roll, pausa, buffering, visualizzazione del contenuto fino alla fine
 
-I seguenti diagrammi illustrano la tempistica della testina di riproduzione e la corrispondenza con le azioni di un utente. Di seguito sono riportati i dettagli di ciascuna azione e le relative richieste.
+I seguenti diagrammi illustrano la timeline della testina di riproduzione e la corrispondenza con le azioni di un utente. Di seguito sono riportati i dettagli di ciascuna azione e le relative richieste.
 
 ![Contenuto API](assets/va_api_content_3.png)
 

@@ -4,8 +4,8 @@ description: Scopri i tipi di rapporto e le metriche utilizzati per tenere tracc
 uuid: a078aa59-3b2d-45b2-9e66-3d9c29c82f0c
 exl-id: 0040006e-cd59-48a1-b019-1feafc275fa3
 feature: "Streaming Media, Workspace Basics"
-role: User, Admin, Data Engineer
-source-git-commit: 67f1fa8194fa58b2c513e3136d2bc7880f9cb06b
+role: User, Admin, Developer
+source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
 workflow-type: tm+mt
 source-wordcount: '346'
 ht-degree: 92%
@@ -24,6 +24,6 @@ I rapporti multimediali sono elencati nella scheda **[!UICONTROL Reports]**. Pas
 | --- | --- | --- |
 | [Panoramica dei contenuti multimediali](media-reports-overview.md) | Visualizza diverse misurazioni aggregate per monitorare rapidamente le prestazioni del file multimediale come previsto. Un grafico mostra gli inizi dei file multimediali accanto alle impression degli annunci per consentirti di visualizzare e confrontare rapidamente queste metriche. | <ul> <li>Totali per le metriche principali, compresi gli avvii del contenuto, il tasso di completamento, il tempo medio in streaming e gli elementi multimediali medi per visita.  </li> <li>Il contenuto totale e gli annunci iniziano per i file multimediali filtrati per tipo di dispositivo o paese.  </li> </ul> |
 | [Dettagli contenuti multimediali](media-reports-detail.md) | Visualizza metriche dettagliate per tutti gli elementi multimediali, compresi gli avvii, i visualizzatori simultanei, il tasso di completamento, la percentuale di riproduzione e le impressioni degli annunci. | <ul> <li>Totali per le metriche principali, compresi gli inizi dei contenuti multimediali, gli inizi degli annunci e i contenuti medi per visita.  </li> <li>Il contenuto totale e gli annunci iniziano per i file multimediali filtrati per tipo di dispositivo o paese.  </li> </ul> |
-| [Daypart contenuti multimediali](media-reports-daypart.md) | Visualizza l&#39;inizio del contenuto per ora del giorno per consentirti di visualizzare rapidamente quando il pubblico è coinvolto. | <ul> <li>Partecipazione del pubblico per ora del giorno.  </li> <li>Interesse del pubblico rispetto agli intervalli di date precedenti.  </li> </ul> |
-| [Visualizzatori simultanei contenuti multimediali](media-concurrent-viewers-reports.md) | Visualizza i visualizzatori simultanei in un giorno. I dati possono essere filtrati in base al contenuto, al tipo di dispositivo o al Paese. | <ul> <li>Interazione del pubblico al minuto per un intervallo di 24 ore.  </li> </ul> |
+| [Daypart contenuti multimediali](media-reports-daypart.md) | Visualizza l&#39;inizio del contenuto per ora del giorno per consentirti di visualizzare rapidamente quando il pubblico è coinvolto. | <ul> <li>Coinvolgimento del pubblico per ora del giorno.  </li> <li>Coinvolgimento del pubblico rispetto a intervalli di date precedenti.  </li> </ul> |
+| [Visualizzatori simultanei contenuti multimediali](media-concurrent-viewers-reports.md) | Visualizza i visualizzatori simultanei in un giorno. I dati possono essere filtrati in base al contenuto, al tipo di dispositivo o al Paese. | <ul> <li>Coinvolgimento del pubblico per minuto per un intervallo di 24 ore.  </li> </ul> |
 | Eventi multimediali e variabili multimediali | Sono disponibili ulteriori rapporti. Le metriche e le dimensioni dei file multimediali sono variabili standard di Analytics che possono essere riportate direttamente e aggiunte ad altri rapporti di Analytics. | <ul> <li>Conversione dei file multimediali (eventi che si verificano dopo la visualizzazione dei file multimediali) generando un rapporto con visite che includono un tipo di contenuto multimediale.  </li> <li>Flusso del file multimediale successivo/precedente utilizzando il nome del file multimediale prop.  </li> </ul> |
