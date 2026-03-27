@@ -1,17 +1,17 @@
 ---
-title: 'Tempo di riproduzione dei contenuti multimediali trascorso '
+title: Tempo di riproduzione dei contenuti multimediali trascorso
 description: Scopri come utilizzare il pannello Tempo di riproduzione multimediale trascorso per analizzare il tempo di riproduzione trascorso e per comprendere la concorrenza dei picchi e dove si sono verificati gli abbandoni.
 feature: Streaming Media, Workspace Basics
 role: User, Admin
 exl-id: 958b4968-0f52-464c-81e0-5ab9b84aaa9c
-source-git-commit: 67f1fa8194fa58b2c513e3136d2bc7880f9cb06b
+source-git-commit: 528a82a4299370c2ef5a366b1f3fab9fd21b164f
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 91%
+source-wordcount: '232'
+ht-degree: 83%
 
 ---
 
-# Tempo di riproduzione dei contenuti multimediali trascorso  {#media-playback-time-spent}
+# Tempo di riproduzione dei contenuti multimediali trascorso {#media-playback-time-spent}
 
 L’analisi del tempo di riproduzione impiegato consente di comprendere dove si è verificato il picco di concorrenza o dove si è verificato il calo. Il tempo trascorso per la riproduzione dei contenuti multimediali fornisce informazioni utili sulla qualità dei contenuti, sul coinvolgimento degli utenti e sul modo in cui i contenuti influiscono sul pubblico nel tempo. Il tempo di riproduzione dei contenuti multimediali impiegato consente di risolvere i problemi o pianificare il volume o la scala.
 
@@ -22,6 +22,8 @@ In Analysis Workspace, Playback Time Spent (Tempo di riproduzione trascorso) cor
 
 Tempo di riproduzione trascorso consente di analizzare le riproduzioni nel tempo, con dettagli sul picco di concorrenza e con la possibilità di suddividerli e confrontarli. Per accedere al pannello Media Playback Time Spent (Tempo di riproduzione trascorso), passa a una suite di rapporti i cui sono abilitati i componenti multimediali in streaming. Fai clic sull’icona del pannello all’estrema sinistra, quindi trascina il pannello nel progetto Analysis Workspace. [Ulteriori informazioni...](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/media-playback-timespent/media-playback-time-spent.html?lang=it)
 
-<!-- ## DOES THIS APPLY Get Concurrent Viewers via Analytics Reporting API
+<!--
+## DOES THIS APPLY Get Concurrent Viewers via Analytics Reporting API
 
-REVISE You can also get concurrent viewer data for up to 1-month at a time at minute-level granularity using the Analytics Reporting API 2.0.  The reporting API uses the same definition of concurrent viewers as Analysis Workspace.  For more information see [_*Get concurrent viewers JSON report data with Analytics 2.0 APIs*_](/help/reporting/reports-and-analytics/get-concurrent-json20.md). -->
+REVISE You can also get concurrent viewer data for up to 1-month at a time at minute-level granularity using the Analytics Reporting API 2.0.  The reporting API uses the same definition of concurrent viewers as Analysis Workspace.  For more information see [_*Get concurrent viewers JSON report data with Analytics 2.0 APIs*_](/help/reporting/reports-and-analytics/get-concurrent-json20.md). 
+-->
