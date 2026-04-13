@@ -4,10 +4,10 @@ description: Scopri come implementare i servizi multimediali in streaming di Ado
 feature: Streaming Media
 role: User, Admin, Developer
 exl-id: dfdb1415-105e-4c41-bedc-ecb85ed1b1d9
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+source-git-commit: 847ea3e86c25a4aec3b12ad097d89941a5474aa3
 workflow-type: tm+mt
-source-wordcount: '2152'
-ht-degree: 7%
+source-wordcount: '2413'
+ht-degree: 8%
 
 ---
 
@@ -113,7 +113,7 @@ Per creare e impostare uno schema:
 
    +++
 
-1. (Facoltativo) Puoi aggiungere metadati personalizzati allo schema. Questo consente di includere metadati aggiuntivi definiti dall&#39;utente che possono essere personalizzati per esigenze o contesti specifici. Questa flessibilità è utile negli scenari in cui gli schemi esistenti non coprono i punti di dati desiderati. Puoi anche lavorare con metadati personalizzati con le API di Media Edge. Per ulteriori informazioni, consulta [Creare metadati personalizzati con le API di Media Edge](https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/custom-metadata/).)
+1. (Facoltativo) Puoi aggiungere metadati personalizzati allo schema. Questo consente di includere metadati aggiuntivi definiti dall&#39;utente che possono essere personalizzati per esigenze o contesti specifici. Questa flessibilità è utile negli scenari in cui gli schemi esistenti non coprono i punti di dati desiderati. Puoi anche lavorare con metadati personalizzati con le API di Media Edge. Per ulteriori informazioni, vedere [Supporto per metadati personalizzati - Formato XDM](/help/implementation/edge/implementation-edge-custom-metadata.md).
 
    +++ Espandi qui per visualizzare le istruzioni su come aggiungere metadati personalizzati allo schema.
 
@@ -353,7 +353,7 @@ A seconda del tipo di dati che desideri inviare ad Experience Platform Edge, puo
 
 * [Inviare dati web ad Edge con Adobe Experience Platform Web SDK](/help/implementation/edge/edge-web-sdk.md)
 
-* [Migrazione ad Adobe Streaming Media per l&#39;estensione Edge Network](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/migration-guide/)
+* [Migrazione ad Adobe Streaming Media per l’estensione Edge Network](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/migration-guide/)
 
 ### Mobile: utilizzare Adobe Experience Platform Mobile SDK
 
@@ -361,9 +361,9 @@ Utilizza le seguenti risorse di documentazione per completare l’implementazion
 
 * [Introduzione](https://developer.adobe.com/client-sdks/documentation/media-for-edge-network/)
 
-* [Riferimento API](https://developer.adobe.com/client-sdks/documentation/media-for-edge-network/api-reference/)
+* [Documentazione delle API](https://developer.adobe.com/client-sdks/documentation/media-for-edge-network/api-reference/)
 
-* [Migrazione ad Adobe Streaming Media per l&#39;estensione Edge Network](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/migration-guide/)
+* [Migrazione ad Adobe Streaming Media per l’estensione Edge Network](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/migration-guide/)
 
 ### Roku: Adobe Experience Platform Roku SDK
 
@@ -383,8 +383,8 @@ Per ulteriori informazioni sull’API di Media Edge, consulta le risorse seguent
 
 * [Panoramica API di Media Edge](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/overview.html)
 
-* [Introduzione all&#39;API di Media Edge](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/getting-started.html)
+* [Guida introduttiva all’API di Media Edge](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/getting-started.html)
 
-* [Guida alla risoluzione dei problemi relativi all&#39;API di Media Edge](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/troubleshooting.html)
+* [Guida alla risoluzione dei problemi API di Media Edge](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/troubleshooting.html)
 
-* [Utilizzo del file delle specifiche API Open per le API Media Edge](https://developer.adobe.com/data-collection-apis/docs/api/media-edge/)
+* [Utilizzo del file delle specifiche API Open per le API di Media Edge](https://developer.adobe.com/data-collection-apis/docs/api/media-edge/)
