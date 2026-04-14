@@ -55,7 +55,7 @@ I metadati personalizzati sono un **array di oggetti nome-valore** all&#39;inter
 }
 ```
 
-<InlineAlert variant="warning" slots="text" />
+&lt;InlineAlert variant="warning" slots="text" />
 
 `customMetadata` deve essere un **array** all&#39;interno di `mediaCollection`, non al livello principale `xdm`.
 
@@ -252,7 +252,7 @@ curl -X POST "https://edge.adobedc.net/ee/va/v1/chapterStart?configId={datastrea
 
 Utilizza l&#39;oggetto `_data` quando hai bisogno di metadati in Adobe Analytics che devono **non** essere memorizzati nei set di dati di AEP, ad esempio flag temporanei, variabili di debug o hint di elaborazione specifici per Analytics.
 
-<InlineAlert variant="warning" slots="text" />
+&lt;InlineAlert variant="warning" slots="text" />
 
 I dati inviati tramite `_data` non sono memorizzati in Adobe Experience Platform e non sono disponibili per Real-Time CDP, Journey Orchestration o altri servizi AEP.
 
@@ -308,7 +308,7 @@ In questo esempio:
 
 ## Posizione dei dati a valle
 
-<InlineAlert variant="info" slots="text" />
+&lt;InlineAlert variant="info" slots="text" />
 
 `xdm.mediaCollection.customMetadata` è il **percorso API in entrata** utilizzato per inviare metadati personalizzati con eventi. Dopo l&#39;elaborazione, i dati vengono inoltrati ad Adobe Analytics come variabili di dati di contesto e memorizzati in Adobe Experience Platform in `mediaReporting.customMetadata` e come campi appiattiti di livello superiore.
 
