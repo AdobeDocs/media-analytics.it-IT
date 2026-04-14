@@ -3,7 +3,7 @@ title: Supporto per metadati personalizzati - Formato XDM
 description: Scopri come inviare metadati personalizzati con gli eventi di tracciamento dei contenuti multimediali utilizzando il formato Experience Edge XDM.
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: 1a6ce0ddca6e52f3ad10bd69210e52e634641272
+source-git-commit: da2fe856a32f9056752b9e2c2e339d43be20372a
 workflow-type: tm+mt
 source-wordcount: '766'
 ht-degree: 2%
