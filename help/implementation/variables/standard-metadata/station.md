@@ -1,0 +1,139 @@
+---
+title: Stazione
+description: Impostare il nome o l'ID della stazione radio per il contenuto della trasmissione audio.
+feature: Streaming Media
+role: Developer
+source-git-commit: 97cae4771558fc3f4d9719074b2fcf3ba661f1cc
+workflow-type: tm+mt
+source-wordcount: '176'
+ht-degree: 7%
+
+---
+
+
+# Stazione
+
+>[!BEGINSHADEBOX]
+
+*In questa pagina viene illustrata la raccolta dati per la variabile **Station**. Vedi [Stazione](/help/reporting/dimensions/station.md) per la dimensione di reporting corrispondente.*
+
+>[!ENDSHADEBOX]
+
+La variabile della stazione è il nome o l&#39;ID della stazione radio che trasmette il contenuto audio (ad esempio, `"NPR"` o `"WXYZ-FM"`). Utilizzalo per confrontare il coinvolgimento tra le stazioni in una rete sindacata.
+
+| Proprietà | Valore |
+| --- | --- |
+| **Variabile di dati di contesto** | `a.media.station` |
+| **Campo raccolta XDM** | [`mediaCollection.sessionDetails.station`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Obbligatorio** | No |
+| **Inviato con** | Avvio della sessione, chiusura della sessione |
+
+## Web SDK
+
+Imposta `station` all&#39;interno di `mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
+
+```javascript
+alloy("sendEvent", {
+  xdm: {
+    eventType: "media.sessionStart",
+    mediaCollection: {
+      sessionDetails: {
+        station: "NPR"
+      },
+      playhead: 0
+    }
+  }
+});
+```
+
+## Mobile SDK
+
+Passa la stazione come chiave di metadati nell&#39;argomento HashMap a `trackSessionStart`. Usa `MediaConstants.AudioMetadataKeys.STATION`.
+
+**iOS (Swift)**
+
+```swift
+var metadata: [String: String] = [:]
+metadata[MediaConstants.AudioMetadataKeys.STATION] = "NPR"
+
+tracker.trackSessionStart(info: mediaObject, metadata: metadata)
+```
+
+**Android (Cotlino)**
+
+```kotlin
+val metadata = HashMap<String, String>()
+metadata[MediaConstants.AudioMetadataKeys.STATION] = "NPR"
+
+tracker.trackSessionStart(mediaInfo, metadata)
+```
+
+## Roku (BrightScript)
+
+Utilizza `createMediaSession` per impostare `station` in `sessionDetails`:
+
+```brightscript
+m.aepSdk.createMediaSession({
+    "xdm": {
+        "eventType": "media.sessionStart",
+        "mediaCollection": {
+            "sessionDetails": {
+                "station": "NPR"
+            },
+            "playhead": 0
+        }
+    }
+})
+```
+
+## API di Media Edge
+
+Chiama l&#39;endpoint [sessionStart](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/sessions/#sessionstart) con `station` in `mediaCollection.sessionDetails`:
+
+```json
+{
+  "events": [{
+    "xdm": {
+      "eventType": "media.sessionStart",
+      "mediaCollection": {
+        "sessionDetails": {
+          "name": "video-123",
+          "length": 128,
+          "contentType": "vod",
+          "playerName": "HTML5 Player",
+          "channel": "Sports",
+          "station": "NPR"
+        },
+        "playhead": 0
+      }
+    }
+  }]
+}
+```
+
+## Media SDK
+
+Passa la stazione nell&#39;oggetto `contextData` utilizzando `ADB.Media.AudioMetadataKeys.Station`:
+
+```javascript
+var contextData = {};
+contextData[ADB.Media.AudioMetadataKeys.Station] = "NPR";
+
+tracker.trackSessionStart(mediaInfo, contextData);
+```
+
+## API Media Collection
+
+Includi `media.station` nell&#39;oggetto `params`:
+
+```json
+{
+  "playerTime": { "playhead": 0, "ts": 1699523820000 },
+  "eventType": "sessionStart",
+  "params": {
+    "media.station": "NPR"
+  }
+}
+```
+
+Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-sessions-req.md).
