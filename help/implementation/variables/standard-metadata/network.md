@@ -24,13 +24,13 @@ La variabile di rete è il nome della rete di trasmissione o del canale (ad esem
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.network` |
-| **Campo raccolta XDM** | [`mediaCollection.sessionDetails.network`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`mediaCollection.sessionDetails.network`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
 | **Obbligatorio** | No |
 | **Inviato con** | Avvio della sessione, chiusura della sessione |
 
 ## Web SDK
 
-Imposta `network` all&#39;interno di `mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `network` all&#39;interno di `mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {

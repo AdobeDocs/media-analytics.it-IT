@@ -28,13 +28,13 @@ La variabile ID risorsa è l’identificatore univoco della risorsa multimediale
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.asset` |
-| **Campo raccolta XDM** | [`mediaCollection.sessionDetails.assetID`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`mediaCollection.sessionDetails.assetID`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
 | **Obbligatorio** | No |
 | **Inviato con** | Avvio della sessione, chiusura della sessione |
 
 ## Web SDK
 
-Imposta `assetID` all&#39;interno di `mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `assetID` all&#39;interno di `mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {

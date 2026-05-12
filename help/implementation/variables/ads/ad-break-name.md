@@ -24,13 +24,13 @@ La variabile del nome dell’interruzione pubblicitaria è il nome descrittivo d
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.ad.podFriendlyName` |
-| **Campo raccolta XDM** | [`mediaCollection.advertisingPodDetails.friendlyName`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/advertising-pod-details-collection) |
+| **Campo raccolta XDM** | [`mediaCollection.advertisingPodDetails.friendlyName`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-pod-details-collection) |
 | **Obbligatorio** | Sì (Mobile SDK); No (Edge, Media Collection API) |
 | **Inviato con** | Avvio annuncio, chiusura annuncio |
 
 ## Web SDK
 
-Imposta `friendlyName` in `mediaCollection.advertisingPodDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) per `media.adBreakStart`:
+Imposta `friendlyName` in `mediaCollection.advertisingPodDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) per `media.adBreakStart`:
 
 ```javascript
 alloy("sendEvent", {
