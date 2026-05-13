@@ -28,7 +28,7 @@ Il nome dell&#39;annuncio viene impostato dal lettore a ogni evento `media.adSta
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.ad.friendlyName` quando [[!UICONTROL Media Ads]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.advertisingDetails.friendlyName`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/advertising-details-reporting) |
+| Customer Journey Analytics | [`mediaReporting.advertisingDetails.friendlyName`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-details-reporting) |
 | Feed di dati | `videoadname, post_videoadname` |
 
 In Adobe Analytics, questa dimensione viene visualizzata in due modi: come **Nome annuncio (variabile)** (raccolto direttamente da `a.media.ad.friendlyName`) e come **Nome annuncio** (classificazione derivata dalla dimensione [Ad](ad.md)). Se utilizzi la classificazione, sei responsabile del popolamento e della manutenzione dei relativi valori utilizzando [Set di classificazione](https://experienceleague.adobe.com/en/docs/analytics/components/classifications/sets/overview.html). L&#39;utilizzo di **Nome annuncio (variabile)** non richiede alcuna manutenzione della classificazione, ma si perde la relazione 1:1 garantita tra il nome annuncio e la dimensione [Annuncio](ad.md) padre. Utilizza qualsiasi componente supportato maggiormente dal flusso di lavoro di implementazione.

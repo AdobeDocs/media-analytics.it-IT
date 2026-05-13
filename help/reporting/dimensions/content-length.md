@@ -28,12 +28,12 @@ La lunghezza del contenuto viene impostata dal lettore all’inizio della sessio
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.length` quando [[!UICONTROL Media Core]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.sessionDetails.length`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-reporting) |
+| Customer Journey Analytics | [`mediaReporting.sessionDetails.length`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-reporting) |
 | Feed di dati | `videolength, post_videolength` |
 
 >[!NOTE]
 >
->In Adobe Analytics, questo valore corrisponde anche a una classificazione **Video length** nella dimensione [Content](content.md). L’utente è responsabile di compilare e mantenere tale classificazione separatamente. Customer Journey Analytics utilizza direttamente questa dimensione. Se necessario, puoi utilizzare [Value bucketing](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/component-settings/value-bucketing).
+>In Adobe Analytics, questo valore corrisponde anche a una classificazione **Video length** nella dimensione [Content](content.md). L’utente è responsabile di compilare e mantenere tale classificazione separatamente. Customer Journey Analytics utilizza direttamente questa dimensione. Se necessario, puoi utilizzare [Value bucketing](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-dataviews/component-settings/value-bucketing).
 
 >[!IMPORTANT]
 >

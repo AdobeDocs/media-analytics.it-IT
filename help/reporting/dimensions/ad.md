@@ -28,7 +28,7 @@ L&#39;annuncio viene impostato dal lettore su ogni evento `media.adStart` come i
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.ad.name` quando [[!UICONTROL Media Ads]](/help/reporting/media-reports-enable.md) è abilitato. Persiste per la durata della visita. |
-| Customer Journey Analytics | [`mediaReporting.advertisingDetails.name`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/advertising-details-reporting) |
+| Customer Journey Analytics | [`mediaReporting.advertisingDetails.name`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-details-reporting) |
 | Feed di dati | `videoad, post_videoad` |
 
 >[!IMPORTANT]

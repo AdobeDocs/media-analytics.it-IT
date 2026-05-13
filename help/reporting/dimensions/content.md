@@ -28,7 +28,7 @@ All’inizio della sessione, il contenuto viene impostato dal lettore come ident
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.name` quando [[!UICONTROL Media Core]](/help/reporting/media-reports-enable.md) è abilitato. Persiste per la durata della visita. |
-| Customer Journey Analytics | [`mediaReporting.sessionDetails.name`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-reporting) |
+| Customer Journey Analytics | [`mediaReporting.sessionDetails.name`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-reporting) |
 | Feed di dati | `video, post_video` |
 
 >[!IMPORTANT]
