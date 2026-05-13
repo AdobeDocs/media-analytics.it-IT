@@ -6,10 +6,18 @@ exl-id: e428d3cd-dbc7-48bb-82ff-61b6b892884c
 feature: Streaming Media
 role: User, Admin, Developer
 TQID: https://experienceleague.adobe.com/yaQY00G4Tz-rR-Vs--nQXJ05ruXyD3oUwP2BPyocYDM
-product_v2: id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-feature_v2: id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2:
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
 workflow-type: tm+mt
 source-wordcount: 1168
@@ -147,28 +155,28 @@ Il ponte connettore è progettato per eseguire le seguenti operazioni:
 <td> Non valido </td>
 <td> Tutte le API eseguite su AdobeMobileSDK restituiranno risposte in questo campo di sola lettura. Registrati per un callback per ascoltare gli aggiornamenti a questo campo e ricevere gli oggetti di risposta. Di seguito è riportato il formato dell'oggetto di risposta:  
 <pre>
-response = {
+response = &lbrace;
   "apiName" : &lt;SceneGraphConstants.
                NOME_API&gt;
   "returnValue : &lt;RISPOSTA_API&gt;
-}</pre>
+&rbrace;</pre>
 Un’istanza di questo oggetto di risposta verrà inviata per qualsiasi chiamata API su AdobeMobileSDK che dovrebbe restituire un valore come indicato nella guida di riferimento API. Ad esempio, una chiamata API per visitorMarketingCloudID() restituirà il seguente oggetto di risposta:
 <pre>
-response = {
+response = &lbrace;
   "apiName" : m.
               adbmobileConstants
               VISITOR_MARKETING_CLOUD_ID  
   "returnValue : "07050x25671x33760x72644x14"  
-}
+&rbrace;
 </pre>
 OPPURE, anche i dati di risposta possono non essere validi:
 <pre>
-response = {  
+response = &lbrace;  
   "apiName" : m.
               adbmobileConstants
               VISITOR_MARKETING_CLOUD_ID  
   "returnValue : invalid
-}
+&rbrace;
 </pre>
 </td>
 </tr>
