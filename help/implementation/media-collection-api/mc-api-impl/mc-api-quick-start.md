@@ -5,14 +5,19 @@ uuid: ca20bad4-2c8f-406b-833e-b4883a9aa534
 exl-id: 08bb5873-f69a-4fdd-8f27-69649b4acb17
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+TQID: https://experienceleague.adobe.com/F7NHDQkJVwVc-Th-blxBP8gifT7V55xLqlI1YT-pswc
+product_v2: id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2: id: b069d60e-95f3-44d6-95a8-ddc862a4bc38id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 97%
+source-wordcount: 294
+ht-degree: 90%
 
 ---
 
-# Guida introduttiva {#quick-start}
+# Guida introduttiva{#quick-start}
 
 >[!TIP]
 >
@@ -53,7 +58,7 @@ ht-degree: 97%
 
    >[!NOTE]
    >
-   >Devi utilizzare i tipi di dati corretti nel corpo della richiesta JSON. Ad esempio, `analytics.enableSSL` richiede un valore booleano, `media.length` è numerico, ecc. Puoi controllare i tipi di parametri e i requisiti obbligatori rispetto a quelli facoltativi controllando [Schemi di convalida JSON.](mc-api-validate-reqs.md)
+   >Devi utilizzare i tipi di dati corretti nel corpo della richiesta JSON. Ad esempio, `analytics.enableSSL` richiede un valore booleano, `media.length` è numerico, ecc. Puoi controllare i tipi di parametri e i requisiti obbligatori rispetto a quelli facoltativi controllando gli [schemi di convalida JSON.](mc-api-validate-reqs.md)
 
 1. Invia richieste di sessioni all’endpoint API della raccolta MA. Se il payload della richiesta non è valido, identifica il problema e riprova fino a ottenere una risposta `201 Created`. In questo esempio `curl`, il corpo della richiesta JSON si trova in un file denominato `sample_data_session`:
 

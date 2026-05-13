@@ -5,10 +5,16 @@ uuid: ab5fab95-76ed-4ae6-aedb-2e66eece7607
 exl-id: d5f5a3f0-f1e0-4d68-af7f-88a30faed0db
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+TQID: https://experienceleague.adobe.com/W-wkhWebsd4z-eOWdqeyZgxrH4ztckDVyHejylpfkHI
+product_v2: id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2: id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7aid: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: bcc784b7-4ade-4c84-96fa-2f7631b1e5fdid: e7d92df1-c5ba-4e93-85df-f83171b889be
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
 workflow-type: tm+mt
-source-wordcount: '689'
-ht-degree: 100%
+source-wordcount: 713
+ht-degree: 99%
 
 ---
 
@@ -69,7 +75,6 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
      >Il collegamento dell’oggetto metadati standard all’oggetto multimediale è facoltativo.
 
       * Riferimento API per le chiavi di metadati multimediali - [Chiavi metadati standard - Android](https://adobe-marketing-cloud.github.io/media-sdks/reference/android/com/adobe/primetime/va/simple/MediaHeartbeat.VideoMetadataKeys.html)
-      * Vedi il set completo di metadati video disponibili qui: [Parametri audio e video](/help/implementation/variables/audio-video-parameters.md)
 
    * **Metadati personalizzati**
 
@@ -83,7 +88,7 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
      mediaMetadata.put("programmer", "Sample programmer");
      ```
 
-1. **Tracciare l’intenzione di avviare la riproduzione**
+1. **Tracciare l’intenzione di inizio riproduzione**
 
    Per iniziare a tracciare una sessione multimediale, chiama `trackSessionStart` sull’istanza Media Heartbeat. Ad esempio:
 
@@ -152,14 +157,14 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
    }
    ```
 
-   **Scenari di sospensione**
+   **Scenari di pausa**
 
-   Identifica uno scenario in cui il lettore video si interrompe e verifica che `trackPause` sia chiamato correttamente. I seguenti scenari richiedono tutti una chiamata `trackPause()` dall’app:
+   Identifica uno scenario in cui il lettore video si interrompe e verifica che `trackPause` sia chiamato correttamente. Tutti gli scenari seguenti richiedono che l’app chiami `trackPause()`:
 
    * L’utente mette esplicitamente in pausa l’app.
    * Il lettore si mette in pausa da solo.
    * (*App per dispositivi mobili*): l’utente mette l’applicazione in background, ma si desidera invece che l’app mantenga aperta la sessione.
-   * (*App per dispositivi mobili*) - Può verificarsi qualsiasi tipo di interruzione di sistema che porta l’applicazione in background. Ad esempio, l’utente riceve una chiamata oppure la notifica da un’altra applicazione, ma desideri che l’applicazione mantenga aperta la sessione per dare all’utente l’opportunità di riprendere l’elemento multimediale dal punto in cui è stato interrotto.
+   * (*App mobili*): si verifica una qualsiasi interruzione del sistema causando l’esecuzione in background dell’applicazione. Ad esempio, l’utente riceve una chiamata oppure la notifica da un’altra applicazione, ma desideri che l’applicazione mantenga aperta la sessione per dare all’utente l’opportunità di riprendere l’elemento multimediale dal punto in cui è stato interrotto.
 
 1. Identifica l’evento dal lettore relativo alla riproduzione e/o la ripresa di contenuti multimediali dalla sospensione e chiama `trackPlay`.
 

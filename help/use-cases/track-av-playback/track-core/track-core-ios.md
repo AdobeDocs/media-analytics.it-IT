@@ -5,14 +5,20 @@ uuid: bdc0e05c-4fe5-430e-aee2-f331bc59ac6b
 exl-id: 5c6b36b3-a421-45a4-a65e-4eb57513ca4a
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+TQID: https://experienceleague.adobe.com/M-BlP6PGMAzyieFg3QDJTBcKE-Tw2PFCoNlB6G1E3KI
+product_v2: id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2: id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7aid: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: bcc784b7-4ade-4c84-96fa-2f7631b1e5fdid: e7d92df1-c5ba-4e93-85df-f83171b889be
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
 workflow-type: tm+mt
-source-wordcount: '704'
-ht-degree: 100%
+source-wordcount: 707
+ht-degree: 99%
 
 ---
 
-# Tracciare la riproduzione di base su iOS {#track-core-playback-on-ios}
+# Tracciare la riproduzione di base su iOS{#track-core-playback-on-ios}
 
 Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
@@ -73,8 +79,6 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
       * **Chiavi metadati video**
         [Chiavi metadati iOS](/help/use-cases/track-av-playback/impl-std-metadata/ios-metadata-keys.md)
 
-      * Consulta l’elenco completo dei metadati video qui: [Parametri audio e video](/help/implementation/variables/audio-video-parameters.md)
-
      >[!NOTE]
      >
      >Il collegamento dell’oggetto metadati video standard all’oggetto multimediale è facoltativo.
@@ -89,9 +93,9 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
      [videoMetadata setObject:@"Sample TV station" forKey:@"tvStation"];
      ```
 
-1. **Tracciare l’intenzione di avviare la riproduzione**
+1. **Tracciare l’intenzione di inizio riproduzione**
 
-   Per iniziare a tracciare una sessione multimediale, effettua una chiamata `trackSessionStart` sull’istanza Media Heartbit.
+   Per iniziare a tracciare una sessione multimediale, chiama `trackSessionStart` sull’istanza Media Heartbeat.
 
    >[!TIP]
    >
@@ -106,7 +110,7 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
    >[!IMPORTANT]
    >
-   >`trackSessionStart` tiene traccia delle intenzioni dell’utente in merito alla riproduzione, non dell’inizio della riproduzione. Questa API viene utilizzata per caricare i dati/metadati video e per stimare la metrica QoS relativa al tempo di avvio (durata tra `trackSessionStart` e `trackPlay`).
+   >`trackSessionStart` tiene traccia delle intenzioni di riproduzione dell’utente, non dell’inizio della riproduzione. Questa API viene utilizzata per caricare i dati/metadati video e per stimare la metrica QoS relativa al tempo di avvio (durata tra `trackSessionStart` e `trackPlay`).
 
    >[!NOTE]
    >
@@ -114,7 +118,7 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
 1. **Tracciare l’inizio effettivo della riproduzione**
 
-   Identifica l’evento dal lettore video per l’inizio della riproduzione, in cui viene eseguito il rendering del primo fotogramma del video sullo schermo ed effettua una chiamata `trackPlay`.
+   Identifica l’evento dal lettore video per l’inizio della riproduzione, in cui viene eseguito il rendering del primo fotogramma del video sullo schermo, quindi effettua una chiamata `trackPlay`.
 
    ```
    - (void)onVideoPlay:(NSNotification *)notification {
@@ -158,12 +162,12 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
    **Scenari di pausa**
 
-   Identifica uno scenario in cui il lettore video si interrompe e verifica che `trackPause` sia chiamato correttamente. I seguenti scenari richiedono tutti una chiamata `trackPause()` dall’app:
+   Identifica uno scenario in cui il lettore video si interrompe e verifica che `trackPause` sia chiamato correttamente. Tutti gli scenari seguenti richiedono che l’app chiami `trackPause()`:
 
    * L’utente mette esplicitamente in pausa l’app.
    * Il lettore si mette in pausa da solo.
    * (*App per dispositivi mobili*): l’utente mette l’applicazione in background, ma si desidera invece che l’app mantenga aperta la sessione.
-   * (*App per dispositivi mobili*): si verifica una qualsiasi interruzione del sistema causando l’esecuzione in background dell’applicazione. Ad esempio, l’utente riceve una chiamata oppure la notifica da un’altra applicazione, ma desideri che l’applicazione mantenga aperta la sessione per dare all’utente l’opportunità di riprendere il video dal punto in cui è stato interrotto.
+   * (*App mobili*): si verifica una qualsiasi interruzione del sistema causando l’esecuzione in background dell’applicazione. Ad esempio, l’utente riceve una chiamata oppure la notifica da un’altra applicazione, ma desideri che l’applicazione mantenga aperta la sessione per dare all’utente l’opportunità di riprendere il video dal punto in cui è stato interrotto.
 
 1. Identifica l’evento dal lettore per la riproduzione video e/o la ripresa del video dalla pausa ed effettua una chiamata `trackPlay`.
 
@@ -175,9 +179,9 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
    >[!TIP]
    >
-   >Potrebbe trattarsi della stessa origine evento utilizzata nel passaggio 4. Assicurati che ogni chiamata API `trackPause()` sia associata alla successiva chiamata API `trackPlay()` quando la riproduzione video riprende.
+   >Potrebbe trattarsi della stessa origine evento utilizzata nel passaggio 4. Quando la riproduzione del video riprende, assicurati che ogni chiamata API `trackPause()` sia associata alla seguente chiamata API `trackPlay()`.
 
 Per ulteriori informazioni sul tracciamento della riproduzione core, consulta:
 
-* Scenari di tracciamento: [Riproduzione VOD senza annunci](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md)
+* Scenari di tracciamento: [riproduzione VOD senza annunci](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md)
 * Lettore di esempio incluso nell’SDK per iOS, con un esempio di tracciamento completo.

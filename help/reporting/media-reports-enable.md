@@ -5,14 +5,20 @@ uuid: d306068d-a308-4b6e-8a72-742dda0de428
 exl-id: 686d88a5-79b6-4936-ba9e-8f834ef330d1
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+TQID: https://experienceleague.adobe.com/2nLLlF-rFJUR3t-OMbcy5iqF42l-O7oLybXFGhdPyhU
+product_v2: id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2: id: b069d60e-95f3-44d6-95a8-ddc862a4bc38id: b3f03848-ae12-48b2-8aab-cad18567eb32id: c153fd90-23e1-4614-81d3-3cc7571227f7id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: c9bb7ea6-c04f-4262-b69c-fbb8d91e3559id: e38cbddc-1633-4cd5-bed5-9f289f2a6029id: ef60b66e-5984-4336-ba72-6d978b1b6f87id: f1f1a2d4-0976-4881-b091-c2bb8de7ffacid: f836f655-eebe-4b76-82bc-697955ec1ce3
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
 workflow-type: tm+mt
-source-wordcount: '902'
-ht-degree: 98%
+source-wordcount: 909
+ht-degree: 91%
 
 ---
 
-# Abilitazione di rapporti sui contenuti multimediali {#media-reports-enablement}
+# Abilitazione di rapporti sui contenuti multimediali{#media-reports-enablement}
 
 Ogni suite di rapporti che raccoglie metriche multimediali deve essere configurata prima dell’invio dei dati multimediali.
 
@@ -68,8 +74,8 @@ I clienti più esperti possono utilizzare i pannelli per contenuti multimediali 
    | Opzione | Note |
    | --- | --- |
    | Continua a utilizzare variabili personalizzate | Pro e contro:<ul> <li> **Pro:** la tendenza dei contenuti continua a funzionare dopo la migrazione. </li> <li> **Contro:** richiede di mantenere due eVar personalizzate e tre eventi personalizzati assegnati ai contenuti multimediali. Riutilizzi un eVar personalizzato e un evento personalizzato. </li> </ul> Per continuare a utilizzare variabili personalizzate: <ol> <li>Seleziona **[!UICONTROL Use Custom Variables,]** quindi fai clic su **[!UICONTROL Save.]** </li> <li>Quando richiesto, mappa le eVar ed eventi personalizzati correnti e fai clic su **[!UICONTROL Save:]** </li> </ol> |
-   | Migrazione a variabili della soluzione | Pro e contro:<ul> <li> **Pro:** riutilizzi tre eVar personalizzate e quattro eventi personalizzati. </li> <li> **Contro:** perdi **tutte** le tendenze storiche e il confronto per i report multimediali. Ciò significa che non è possibile impostare le visualizzazioni dei contenuti o il tempo di riproduzione dei contenuti per le date precedenti alla migrazione a heartbeat. </li> </ul> **Limitazione:**  non eseguire la migrazione alle variabili della soluzione a meno che non si sia certi di non voler mantenere questa tendenza. Tutti i clienti devono utilizzare le variabili della soluzione e le regole di elaborazione per inserire i dati multimediali nelle proprietà e eVar esistenti, solo se devono preservare la continuità storica. Per migrare alle variabili della soluzione: seleziona **[!UICONTROL Use Solution Variables]** e fai clic su **[!UICONTROL Save].** <br><br> IMPORTANTE: la migrazione alle variabili della soluzione comporta la perdita di **tutte** le tendenze storiche e il confronto per i report multimediali. |
+   | Migrazione a variabili della soluzione | Pro e contro:<ul> <li> **Pro:** riutilizzi tre eVar personalizzate e quattro eventi personalizzati. </li> <li> **Contro:** perdi **tutte** le tendenze storiche e il confronto per i report multimediali. Ciò significa che non è possibile impostare le visualizzazioni dei contenuti o il tempo di riproduzione dei contenuti per le date precedenti alla migrazione a heartbeat. </li> </ul> **Limitazione:**  non eseguire la migrazione alle variabili della soluzione a meno che non si sia certi di non voler mantenere questa tendenza. Tutti i clienti devono utilizzare le variabili della soluzione e le regole di elaborazione per inserire i dati multimediali nelle proprietà e eVar esistenti, solo se devono preservare la continuità storica. Per eseguire la migrazione alle variabili della soluzione: selezionare **[!UICONTROL Use Solution Variables]** e fare clic su **[!UICONTROL Save].** <br><br> IMPORTANTE: la migrazione alle variabili della soluzione causa la perdita di **tutte** le tendenze storiche e il confronto per i report multimediali. |
 
 >[!IMPORTANT]
 >
->Non modificare i nomi delle classificazioni per le variabili elencate nelle tabelle Metriche e metadati (ad es. [Parametri audio e video](/help/implementation/variables/audio-video-parameters.md)) che sono descritti in Reporting/Variabile riservata come “classificazione”. Le classificazioni per i file multimediali vengono definite quando una suite di rapporti è abilitata per il tracciamento dei contenuti multimediali. Di tanto in tanto, Adobe aggiunge nuove proprietà e, in questo caso, i clienti devono riabilitare le suite di rapporti per accedere alle nuove proprietà multimediali. Durante il processo di aggiornamento, l’Adobe determina se le classificazioni sono abilitate controllando i nomi delle variabili. Se manca qualcuno di questi, Adobe aggiunge di nuovo quelli mancanti.
+>Non modificare i nomi delle classificazioni per le variabili elencate nella documentazione sulle variabili dei contenuti multimediali in streaming (collegate dalla [Panoramica dei servizi multimediali in streaming](/help/media-overview.md)) qui descritte in Reporting/Variabile riservata come &quot;classificazione&quot;. Le classificazioni per i file multimediali vengono definite quando una suite di rapporti è abilitata per il tracciamento dei contenuti multimediali. Di tanto in tanto, Adobe aggiunge nuove proprietà e, in questo caso, i clienti devono riabilitare le suite di rapporti per accedere alle nuove proprietà multimediali. Durante il processo di aggiornamento, l’Adobe determina se le classificazioni sono abilitate controllando i nomi delle variabili. Se manca qualcuno di questi, Adobe aggiunge di nuovo quelli mancanti.

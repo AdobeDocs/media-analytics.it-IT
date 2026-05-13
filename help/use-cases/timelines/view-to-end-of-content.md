@@ -5,14 +5,19 @@ uuid: 0ff591d3-fa99-4123-9e09-c4e71ea1060b
 exl-id: 16b15e03-5581-471f-ab0c-077189dd32d6
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: 83c64e35a52921532697063d3fdf987e889b2854
+TQID: https://experienceleague.adobe.com/3jO1VR5n4Ft6t1F2y99PlrDoGhada-gV-5mM0o3YzkY
+product_v2: id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2: id: b069d60e-95f3-44d6-95a8-ddc862a4bc38id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
 workflow-type: tm+mt
-source-wordcount: '1120'
-ht-degree: 99%
+source-wordcount: 1142
+ht-degree: 100%
 
 ---
 
-# Timeline 1 - Visualizza fino alla fine del contenuto {#timeline-view-to-end-of-content}
+# Timeline 1 - Visualizza fino alla fine del contenuto{#timeline-view-to-end-of-content}
 
 ## VOD, annunci pre-roll, pausa, buffering, visualizzazione del contenuto fino alla fine
 
@@ -32,7 +37,7 @@ I seguenti diagrammi illustrano la timeline della testina di riproduzione e la t
 
 Questa chiamata segnala _l’intenzione dell’utente di riprodurre_ un video.
 
-Restituisce un ID sessione (`{sid}`) al client utilizzatoa per identificare tutte le chiamate di tracciamento successive all’interno della sessione. Lo stato del lettore non è ancora “in riproduzione”, ma è “in avvio”. 
+Restituisce un ID sessione (`{sid}`) al client utilizzatoa per identificare tutte le chiamate di tracciamento successive all’interno della sessione. Lo stato del lettore non è ancora “in riproduzione”, ma è “in avvio”.
 
 I parametri di sessione obbligatori devono essere inclusi nella mappa `params` nel corpo della richiesta. Per informazioni sulle sessioni, consulta la documentazione delle API di Media Collection.
 
@@ -178,8 +183,7 @@ Effettua il ping del backend ogni 1 secondo all’interno di un annuncio.
 
 >[!NOTE]
 >
->Per gli annunci successivi nella timeline non verrà mostrata la serie di ping di un secondo,
->per brevità...
+>Per gli annunci successivi nella timeline non verrà mostrata la serie di ping di un secondo,>per brevità...
 
 ```json
 {
@@ -354,7 +358,7 @@ Traccia lo spostamento del lettore allo stato di “buffering”.
 | --- | :---: | :---: | --- |
 | Buffering terminato, l’app tiene traccia della ripresa del contenuto | 36 | 11 | `/api/v1/sessions/{sid}/events` |
 
-Il buffering termina dopo 3 secondi, quindi riporta il lettore allo stato di “riproduzione”. Devi inviare un altro evento di riproduzione del tracciamento proveniente dal buffering. **La chiamata `play` dopo `bufferStart` implica una chiamata “bufferEnd” al back-end,** quindi non è necessario un evento `bufferEnd`.
+Il buffering termina dopo 3 secondi, quindi riporta il lettore allo stato di “riproduzione”. Devi inviare un altro evento di riproduzione del tracciamento proveniente dal buffering.  **La chiamata `play` dopo `bufferStart` implica una chiamata “bufferEnd” al back-end,** quindi non è necessario un evento `bufferEnd`.
 
 ```json
 {

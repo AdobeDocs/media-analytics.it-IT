@@ -4,10 +4,16 @@ description: Scopri come effettuare la migrazione da Media SDK a Launch per JS.
 exl-id: 19b506b2-3070-4a5e-9732-a5cd0867afde
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+TQID: https://experienceleague.adobe.com/N4Fcbg3R9tT9cjUcaw-kcUm6h-QT8TYwatdCe1IdsaM
+product_v2: id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2: id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7aid: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: bcc784b7-4ade-4c84-96fa-2f7631b1e5fdid: c069c44e-5426-4c1a-accc-8028662f2fdeid: df312454-73c4-43f6-a90e-18f5043f074c
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
 workflow-type: tm+mt
-source-wordcount: '412'
-ht-degree: 97%
+source-wordcount: 463
+ht-degree: 78%
 
 ---
 
@@ -25,8 +31,8 @@ ht-degree: 97%
 
 ### SDK per contenuti multimediali indipendenti
 
-In Media SDK standalone, puoi configurare le impostazioni di tracciamento nell’app
-e trasferirle all’SDK al momento della creazione del tracker.
+In Media SDK standalone, puoi configurare la configurazione di tracciamento nell’app
+e trasmettilo a SDK quando crei il tracciatore.
 
 ```javascript
 //Media Heartbeat initialization
@@ -40,15 +46,16 @@ mediaConfig.ssl = true;
 mediaConfig.debugLogging = true;
 ```
 
-Oltre alla configurazione `MediaHeartbeat`, per funzionare correttamente la pagina deve configurare e trasmettere
-l’istanza `AppMeasurement` e l’istanza `VisitorAPI` per il tracciamento dei contenuti multimediali.
+Oltre alla configurazione di `MediaHeartbeat`, la pagina deve essere configurata e passata
+l&#39;istanza `AppMeasurement` e l&#39;istanza `VisitorAPI` per il tracciamento dei contenuti multimediali in ordine
+per funzionare correttamente.
 
 ### Estensione Launch
 
-1. In Experience Platform Launch, fai clic sulla scheda [!UICONTROL Extensions] per 
-la tua proprietà web.
-1. Nella scheda [!UICONTROL Catalog], individua l’estensione Adobe Media Analytics for Audio and
-Video e fai clic su [!UICONTROL Install].
+1. In Experience Platform Launch, fai clic sulla scheda [!UICONTROL Extensions] per il
+proprietà web.
+1. Nella scheda [!UICONTROL Catalog], individua Adobe Media Analytics for Audio and
+Estensione video e fare clic su [!UICONTROL Install].
 1. Nella pagina delle impostazioni dell’estensione, configura i parametri di tracciamento.
 L’estensione Media utilizza i parametri configurati per il tracciamento.
 

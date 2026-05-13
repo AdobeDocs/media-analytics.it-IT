@@ -5,14 +5,19 @@ uuid: b237f0a0-dc29-418b-89ee-04c596a27f39
 exl-id: ee0dd8a6-1529-4258-af12-0e2f5948ec38
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+TQID: https://experienceleague.adobe.com/yFHQhj33PM209WycWdPZsV-Yi8qN1DN-DC0KyyqFK1I
+product_v2: id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2: id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
 workflow-type: tm+mt
-source-wordcount: '262'
-ht-degree: 95%
+source-wordcount: 263
+ht-degree: 76%
 
 ---
 
-# Richiesta eventi {#events-request}
+# Richiesta eventi{#events-request}
 
 `POST https://{uri}/api/v1/sessions/{sid}/events`
 
@@ -37,11 +42,11 @@ Il corpo della richiesta deve essere in formato JSON e avere la stessa struttura
 }
 ```
 
-* `playerTime` (Obbligatorio)
+* `playerTime` (obbligatorio)
    * `playhead`: deve essere in secondi, ma può essere in compensazione.
    * `ts`: marca temporale; deve essere in millisecondi.
-* `eventType` (Obbligatorio)
-* `params` (Facoltativo)
+* `eventType` (obbligatorio)
+* `params` (facoltativo)
 * `customMetadata` (Facoltativo; invia solo con i tipi di evento `adStart` e `chapterStart`)
 * `qoeData` (Facoltativo)
 
@@ -49,7 +54,7 @@ Per un elenco dei tipi di evento validi per questa versione, consulta [Tipi di e
 
 >[!IMPORTANT]
 >
->***Tracciamento annunci:**&#x200B;puoi tenere traccia degli annunci solo all’interno di un`adBreak`*.
+>***Tracciamento annunci:**puoi tenere traccia degli annunci solo all’interno di un`adBreak`*.
 >
 >In assenza di “bookend” `adBreakStart` e `adBreakComplete` intorno agli annunci, gli eventi `adStart` e `adComplete` verranno semplicemente ignorati e la corrispondente durata dell’annuncio verrà tracciata come durata del contenuto principale. Ciò potrebbe avere un impatto significativo sui dati aggregati che saranno disponibili in Adobe Analytics.
 
@@ -71,7 +76,7 @@ Access-Control-Expose-Headers Location
 | Codice di risposta HTTP | Descrizione | Elementi azione client |
 |---|---|---|
 | **204** | **Nessun contenuto.** <br/><br/>Chiamata heartbeat riuscita. | N/D |
-| **400** | **Richiesta errata.** <br/><br/>Formato della richiesta non corretto. | Controlla gli [schemi di convalida JSON](mc-api-json-validation.md) per il tipo di richiesta. |
-| **404** | **Non trovato.** <br/><br/>Impossibile trovare l’ID sessione della sessione multimediale nel servizio back-end. | L’applicazione client deve utilizzare l’API [Richiesta sessioni](mc-api-sessions-req.md) per creare un’altra sessione multimediale e segnalarne il tracciamento. |
-| **410** | **Perso.** <br/><br/>La sessione multimediale è stata trovata nel servizio back-end, ma il client non può più segnalarne l’attività. | L’applicazione client deve utilizzare l’API [Richiesta sessioni](mc-api-sessions-req.md) per creare un’altra sessione multimediale e segnalarne il tracciamento. |
+| **400** | **Richiesta non valida.** <br/><br/>Formato della richiesta non corretto. | Controlla gli [schemi di convalida JSON](mc-api-json-validation.md) per il tipo di richiesta. |
+| **404** | **Non Trovato.** <br/><br/>Impossibile trovare l&#39;ID sessione per la sessione multimediale nel servizio back-end. | L’applicazione client deve utilizzare l’API [Richiesta sessioni](mc-api-sessions-req.md) per creare un’altra sessione multimediale e segnalarne il tracciamento. |
+| **410** | **Non più.** <br/><br/>La sessione multimediale è stata trovata nel servizio back-end, ma il client non può più segnalare l&#39;attività. | L’applicazione client deve utilizzare l’API [Richiesta sessioni](mc-api-sessions-req.md) per creare un’altra sessione multimediale e segnalarne il tracciamento. |
 | **500** | **Errore del server** | N/D |

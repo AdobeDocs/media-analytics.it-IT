@@ -4,10 +4,15 @@ description: Scopri come migrare da Media SDK a Launch per Android.
 exl-id: 26764835-4781-417b-a6c0-ea6ae78d76ae
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+TQID: https://experienceleague.adobe.com/HawnzTGV1nsGCibAtXkl3cAB5NjO2VfUpQODm6-w-qk
+product_v2: id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2: id: b3f03848-ae12-48b2-8aab-cad18567eb32id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
 workflow-type: tm+mt
-source-wordcount: '379'
-ht-degree: 97%
+source-wordcount: 425
+ht-degree: 48%
 
 ---
 
@@ -21,8 +26,8 @@ ht-degree: 97%
 
 ### SDK per contenuti multimediali indipendenti
 
-In Media SDK standalone, devi configurare il tracciamento nell’app e trasmetterlo
-all’SDK quando crei il tracciatore.
+In Media SDK standalone, configura il tracciamento nell’app e trasmettilo a
+SDK quando crei il tracciatore.
 
 ```java
 MediaHeartbeatConfig config = new MediaHeartbeatConfig();
@@ -39,25 +44,25 @@ MediaHeartbeat tracker = new MediaHeartbeat(... , config);
 
 ### Estensione Launch
 
-1. In Experience Platform Launch, fai clic sulla scheda [!UICONTROL Extensions] per la
-proprietà per dispositivi mobile.
-1. Nella scheda [!UICONTROL Catalog] individua l’estensione Adobe Media Analytics for Audio
-and Video e fai clic su [!UICONTROL Install].
+1. In Experience Platform Launch, fai clic sulla scheda [!UICONTROL Extensions] per il
+proprietà mobile.
+1. Nella scheda [!UICONTROL Catalog], individua Adobe Media Analytics for Audio
+e Video e fare clic su [!UICONTROL Install].
 1. Nella pagina delle impostazioni dell’estensione, configura i parametri di tracciamento.
 L’estensione Media utilizza i parametri configurati per il tracciamento.
 
 ![](assets/launch_config_mobile.png)
 
-[Utilizzo di estensioni per dispositivi mobili](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/)
+[Utilizzo delle estensioni per dispositivi mobili](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/)
 
 ## Creazione del tracciamento
 
 ### SDK per contenuti multimediali indipendenti
 
-Nel Media SDK indipendente puoi creare manualmente l’oggetto `MediaHeartbeatConfig` e configurare
-i parametri di tracciamento. Implementa l’interfaccia delegata che espone
+In Media SDK standalone si crea manualmente l&#39;oggetto `MediaHeartbeatConfig`
+e configura i parametri di tracciamento. Implementare l’interfaccia delegata che espone
 `getQoSObject()` e `getCurrentPlaybackTime()functions.`
-Crea un’istanza `MediaHeartbeat` per il tracciamento.
+Crea un&#39;istanza `MediaHeartbeat` per il tracciamento.
 
 ```java
 MediaHeartbeatConfig config = new MediaHeartbeatConfig();
@@ -91,10 +96,10 @@ MediaHeartbeatDelegate delegate = new MediaHeartbeatDelegate() {
 
 ### Estensione Launch
 
-[Guida di riferimento dell’API Media: creare un tracciatore di elementi multimediali](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/api-reference/#createtracker)
+[Guida di riferimento dell’API Media: creare un tracciatore Media](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/api-reference/#createtracker)
 
-Prima di creare il tracciatore, è necessario registrare l’estensione Media e
-le estensioni dipendenti nel core mobile.
+Prima di creare il tracciatore, è necessario registrare l’estensione multimediale e
+estensioni dipendenti con il core mobile.
 
 ```java
 // Register the extension once during app launch
@@ -134,22 +139,22 @@ Media.createTracker(new AdobeCallback<MediaTracker>() {
 
 ### SDK per contenuti multimediali indipendenti
 
-In Media SDK standalone, trasmetti un oggetto delegato che implementa l’interfaccia
-`MediaHeartbeartDelegate` durante la creazione del tracciatore.  L’implementazione
-deve restituire l’ultimo QoE e l’ultima posizione della testina di riproduzione ogni volta che il tracciatore chiama i
-metodi di interfaccia `getQoSObject()` e `getCurrentPlaybackTime()`.
+In Media SDK standalone, trasmetti un oggetto delegato che implementa
+Interfaccia `MediaHeartbeartDelegate` durante la creazione del tracker.  Implementazione
+deve restituire il QoE e la testina di riproduzione più recente ogni volta che il tracciatore chiama
+Metodi dell&#39;interfaccia `getQoSObject()` e `getCurrentPlaybackTime()`.
 
 ### Estensione Launch
 
-L’implementazione deve aggiornare la posizione attuale della testina di riproduzione del lettore chiamando il
-metodo `updateCurrentPlayhead` esposto dal tracker. Per un tracciamento accurato 
-devi chiamare questo metodo almeno una volta al secondo.
+L’implementazione deve aggiornare la testina di riproduzione corrente del lettore chiamando il
+Metodo `updateCurrentPlayhead` esposto dal tracker. Per un tracciamento accurato
+è necessario chiamare questo metodo almeno una volta al secondo.
 
 [Guida di riferimento dell’API Media: aggiornare il lettore corrente](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/api-reference/#updatecurrentplayhead)
 
-L’implementazione deve aggiornare le informazioni QoE chiamando il metodo `updateQoEObject`
-esposto dal tracciatore. Questo metodo dovrebbe essere chiamato ogni volta che si verifica
-un cambiamento nelle metriche di qualità.
+L’implementazione deve aggiornare le informazioni QoE chiamando il `updateQoEObject`
+metodo esposto dal tracker. Ci aspettiamo che questo metodo venga chiamato ogni volta che ci
+è una modifica nelle metriche di qualità.
 
 [Guida di riferimento dell’API Media: aggiornare l’oggetto QoE](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/api-reference/#createqoeobject)
 

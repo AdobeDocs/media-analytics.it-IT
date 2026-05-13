@@ -5,18 +5,24 @@ uuid: 5d1022a8-88cb-40aa-919c-60dd592a639e
 exl-id: c77f6457-ac3b-4d7a-8eed-e7ebd357a6a5
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+TQID: https://experienceleague.adobe.com/Yw1UIjZr5ZKx6AWU4anAo5kux5EoVtnQMoFLs5T2nas
+product_v2: id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2: id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7aid: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: bcc784b7-4ade-4c84-96fa-2f7631b1e5fd
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: 543
 ht-degree: 95%
 
 ---
 
-# Riproduzione VOD con annunci pre-roll {#vod-playback-with-pre-roll-ads}
+# Riproduzione VOD con annunci pre-roll{#vod-playback-with-pre-roll-ads}
 
 In questo scenario, gli annunci pre-roll sono stati inseriti prima del contenuto principale. Se non specificato, le chiamate di rete sono identiche alle chiamate dello scenario [Riproduzione VOD senza annunci](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). Le chiamate di rete si verificano contemporaneamente, ma il payload è diverso.
 
-| Trigger | metodo Heartbeat | Chiamate di rete   | Note   |
+| Trigger | Metodo Heartbeat | Chiamate di rete   | Note   |
 | --- | --- | --- | --- |
 | L&#39;utente fa clic su [!UICONTROL Play] | `trackSessionStart` | Inizio contenuto Analytics, inizio contenuto Heartbeat | La libreria di misurazione ignora l’esistenza di un annuncio pre-roll, pertanto tali chiamate di rete sono ancora identiche allo scenario [Riproduzione VOD senza annunci](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
 | L&#39;annuncio inizia. | <ul> <li> `trackEvent:AdBreakStart` </li> <li> `trackEvent:AdStart` </li> </ul> | Analytics Ad Start, Heartbeat Ad Start | |

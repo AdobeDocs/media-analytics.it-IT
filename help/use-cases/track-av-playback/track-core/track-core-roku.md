@@ -5,14 +5,20 @@ uuid: a8aa7b3c-2d39-44d7-8ebc-b101d130101f
 exl-id: 5272c0ce-4e3d-48c6-bfa6-94066ccbf9ac
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+TQID: https://experienceleague.adobe.com/n-ox7dhsEPOQCJqHFm8ZLG-7puJ7kfn1ZE7GEg-KFas
+product_v2: id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2: id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7aid: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: e7d92df1-c5ba-4e93-85df-f83171b889be
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
 workflow-type: tm+mt
-source-wordcount: '795'
-ht-degree: 88%
+source-wordcount: 802
+ht-degree: 86%
 
 ---
 
-# Tracciare la riproduzione di base in Roku {#track-core-playback-on-roku}
+# Tracciare la riproduzione di base in Roku{#track-core-playback-on-roku}
 
 Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
@@ -24,7 +30,7 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
    Identifica quando l’utente attiva l’intenzione di riproduzione (l’utente fa clic su play e/o l’esecuzione automatica è attiva) e crea un’istanza `MediaObject`.
 
-   Specifihe di **`MediaObject`:**
+   **`MediaObject`Specifihe:**
 
    | Nome variabile | Descrizione | Obbligatorio |
    | --- | --- | :---: |
@@ -104,7 +110,7 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
    * **Metadati standard**
 
-[Implementare metadati standard in Roku](/help/use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
+     [Implementare metadati standard in Roku](/help/use-cases/track-av-playback/impl-std-metadata/impl-std-metadata-roku.md)
 
      >[!NOTE]
      >
@@ -134,7 +140,7 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
    >[!IMPORTANT]
    >
-   >`trackSessionStart` tiene traccia delle intenzioni dell’utente in merito alla riproduzione, non dell’inizio della riproduzione. Questa API viene utilizzata per caricare i dati/metadati video e per stimare la metrica QoS relativa al tempo di avvio (durata tra `trackSessionStart` e `trackPlay`).
+   >`trackSessionStart` tiene traccia delle intenzioni di riproduzione dell’utente, non dell’inizio della riproduzione. Questa API viene utilizzata per caricare i dati/metadati video e per stimare la metrica QoS relativa al tempo di avvio (durata tra `trackSessionStart` e `trackPlay`).
 
    >[!NOTE]
    >
@@ -148,9 +154,9 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
    ADBMobile().mediaTrackPlay()
    ```
 
-1. **Aggiorna il valore dell&#39;indicatore di riproduzione**
+1. **Aggiorna il valore della testina di riproduzione**
 
-   Quando l&#39;indicatore di riproduzione multimediale cambia, avvisare SDK chiamando l&#39;API `mediaUpdatePlayhead`. <br /> Per il tracciamento dei video on-demand (VOD), il valore è specificato in secondi dall’inizio dell’elemento multimediale. <br /> Per lo streaming live, se il lettore non fornisce informazioni sulla durata del contenuto, il valore può essere specificato come il numero di secondi trascorsi dalla mezzanotte UTC di quel giorno.
+   Quando l&#39;indicatore di riproduzione multimediale cambia, inviare una notifica al SDK chiamando l&#39;API `mediaUpdatePlayhead`. <br /> Per il video on-demand (VOD), il valore è specificato in secondi dall’inizio dell’elemento multimediale. <br /> Per lo streaming live, se il lettore non fornisce informazioni sulla durata del contenuto, il valore può essere specificato come il numero di secondi trascorsi dalla mezzanotte UTC di quel giorno.
 
    ```
    ADBMobile().mediaUpdatePlayhead(position)
@@ -192,12 +198,12 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
    **Scenari di pausa**
 
-   Identifica uno scenario in cui il lettore video si interrompe e verifica che `trackPause` sia chiamato correttamente. I seguenti scenari richiedono tutti una chiamata `trackPause()` dall’app:
+   Identifica uno scenario in cui il lettore video si interrompe e verifica che `trackPause` sia chiamato correttamente. Tutti gli scenari seguenti richiedono che l’app chiami `trackPause()`:
 
    * L’utente mette esplicitamente in pausa l’app.
    * Il lettore si mette in pausa da solo.
    * (*App per dispositivi mobili*): l’utente mette l’applicazione in background, ma si desidera invece che l’app mantenga aperta la sessione.
-   * (*App per dispositivi mobili*): si verifica una qualsiasi interruzione del sistema causando l’esecuzione in background dell’applicazione. Ad esempio, l’utente riceve una chiamata oppure la notifica da un’altra applicazione, ma desideri che l’applicazione mantenga aperta la sessione per dare all’utente l’opportunità di riprendere il video dal punto in cui è stato interrotto.
+   * (*App mobili*): si verifica una qualsiasi interruzione del sistema causando l’esecuzione in background dell’applicazione. Ad esempio, l’utente riceve una chiamata oppure la notifica da un’altra applicazione, ma desideri che l’applicazione mantenga aperta la sessione per dare all’utente l’opportunità di riprendere il video dal punto in cui è stato interrotto.
 
 1. Identifica l’evento dal lettore per la riproduzione video e/o la ripresa del video dalla pausa ed effettua una chiamata `trackPlay`.
 

@@ -4,9 +4,14 @@ description: Scopri come caricare i dati di pianificazione per tenere traccia de
 feature: Streaming Media
 role: User, Admin, Developer
 exl-id: 875c4513-ea4e-4c5f-bfc1-34ea175007ca
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+TQID: https://experienceleague.adobe.com/C1GFDLJp-oTQHWlFiks5oSi2Q5Ok34QxJWfiPIJ3bC4
+product_v2: id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2: id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
 workflow-type: tm+mt
-source-wordcount: '1381'
+source-wordcount: 1425
 ht-degree: 5%
 
 ---
@@ -15,7 +20,7 @@ ht-degree: 5%
 
 >[!AVAILABILITY]
 >
->La funzionalità descritta in questo articolo si trova nella fase di test del rilascio e potrebbe non essere ancora disponibile nell‘ambiente. Questa nota verrà rimossa non appena la funzionalità sarà disponibile a livello generale. Per informazioni sulla procedura di rilascio, vedere [Versioni delle funzionalità di Customer Journey Analytics](https://experienceleague.adobe.com/it/docs/analytics-platform/using/releases/releases).
+>La funzionalità descritta in questo articolo si trova nella fase di test del rilascio e potrebbe non essere ancora disponibile nell‘ambiente. Questa nota verrà rimossa non appena la funzionalità sarà disponibile a livello generale. Per informazioni sulla procedura di rilascio, vedere [Versioni delle funzionalità di Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/releases).
 
 Puoi caricare i dati di pianificazione dei contenuti multimediali live passati per monitorare più facilmente e con precisione il pubblico di contenuti live. È possibile tenere traccia dei visualizzatori per singoli programmi e persino argomenti specifici o segmenti di programmi.
 
@@ -143,7 +148,7 @@ Dopo aver [creato un set di dati di pianificazione del programma](#create-a-prog
 
    1. Invia il file .json contenente i record di dati della pianificazione del programma utilizzando l’ID batch.
 
-      Per inviare informazioni sulla pianificazione devi utilizzare le API batch di AEP, come descritto in [Panoramica dell&#39;API di acquisizione in batch](https://experienceleague.adobe.com/it/docs/experience-platform/ingestion/batch/overview).
+      Per inviare informazioni sulla pianificazione devi utilizzare le API batch di AEP, come descritto in [Panoramica dell&#39;API di acquisizione in batch](https://experienceleague.adobe.com/en/docs/experience-platform/ingestion/batch/overview).
 
       Prendi in considerazione l’esempio seguente di utilizzo di cURL per inviare un file con i record di pianificazione:
 
@@ -303,9 +308,9 @@ L’esempio seguente è di un file .json di pianificazione con due record. Ogni 
 
    Prendi in considerazione i seguenti esempi di dimensioni che puoi creare e quindi generare rapporti in Customer Journey Analytics:
 
-   * **[&quot;_Nome episodio_&quot;](https://experienceleague.adobe.com/it/docs/media-analytics/using/implementation/variables/audio-video-parameters#episode)**: questa dimensione può aiutarti a capire quali episodi di una particolare serie hanno prestazioni migliori.
+   * **[&quot;_Nome episodio_&quot;](/help/reporting/dimensions/episode.md)**: questa dimensione potrebbe aiutarti a capire quali episodi di una particolare serie hanno prestazioni migliori.
 
-   * **[ID risorsa](https://experienceleague.adobe.com/it/docs/media-analytics/using/implementation/variables/audio-video-parameters#asset-id)**
+   * **[ID risorsa](/help/reporting/dimensions/asset-id.md)**
 
 1. Continua con [Analizza dati in Customer Journey Analytics](#analyze-data-in-customer-journey-analytics).
 

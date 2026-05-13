@@ -5,10 +5,16 @@ uuid: 0269d8ad-0af8-4bf1-9d15-e06c2952a005
 exl-id: 33976096-8b86-4353-906b-e25bf4693471
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+TQID: https://experienceleague.adobe.com/mYfKt95xUE59MuMFOzGro6fPsJsdy4wcy2F2J--JaW8
+product_v2: id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2: id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7aid: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: bcc784b7-4ade-4c84-96fa-2f7631b1e5fd
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
 workflow-type: tm+mt
-source-wordcount: '395'
-ht-degree: 100%
+source-wordcount: 408
+ht-degree: 89%
 
 ---
 
@@ -16,15 +22,15 @@ ht-degree: 100%
 
 ## Prerequisiti
 
-* **Ottenere parametri di configurazione validi**
+* **Ottieni parametri di configurazione validi**
 Questi parametri possono essere ottenuti da un rappresentante di Adobe dopo la configurazione dell’account di analisi.
-* **Implementa `AppMeasurement` per JavaScript nell’applicazione multimediale**
-Per ulteriori informazioni sull’SDK di Adobe Mobile, consulta [Implementazione di Analytics tramite JavaScript.](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=it)
+* **Implementa `AppMeasurement` per JavaScript nell&#39;applicazione multimediale**
+Per ulteriori informazioni sulla documentazione di Adobe Mobile SDK, vedi [Implementazione di Analytics con JavaScript.](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=it)
 
 * **Fornisci le seguenti funzionalità nel lettore multimediale:**
 
    * *API per abbonarsi agli eventi del lettore*: Media SDK richiede di chiamare un set di API semplici quando si verificano eventi nel lettore.
-   * *API che fornisce informazioni sul lettore* - Queste informazioni includono dettagli quali il nome del file multimediale e la posizione dell&#39;indicatore di riproduzione.
+   * *API che fornisce informazioni sul lettore* - Queste informazioni includono dettagli quali il nome del supporto e la posizione della testina di riproduzione.
 
 1. Aggiungi la libreria [scaricata](/help/getting-started/download-sdks.md) al progetto. Crea riferimenti locali alle classi per comodità.
 
@@ -62,7 +68,7 @@ Per ulteriori informazioni sull’SDK di Adobe Mobile, consulta [Implementazione
 
    Questa sezione ti aiuta a capire parametri di configurazione `MediaHeartbeat` e come impostare i valori di configurazione corretti sull’istanza `MediaHeartbeat`, per un tracciamento accurato.
 
-   Esempio di inizializzazione `MediaHeartbeatConfig`:
+   Esempio di inizializzazione di `MediaHeartbeatConfig`:
 
    ```js
    //Media Heartbeat initialization

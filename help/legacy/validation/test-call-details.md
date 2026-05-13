@@ -1,24 +1,30 @@
 ---
-title: 'Dettagli della chiamata di prova '
+title: Dettagli della chiamata di prova
 description: Esplora le chiamate da effettuare per convalidare l’implementazione.
 uuid: d3a0e62f-2fc3-413d-ac56-adbbc9b3e983
 exl-id: 5e167714-3f0c-4afa-b171-7d51cff6522e
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+TQID: https://experienceleague.adobe.com/98Oa98xntOkB9Fe3NQ30FUdvVk0JNKJMyzjgSTvncdI
+product_v2: id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2: id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7aid: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: bcc784b7-4ade-4c84-96fa-2f7631b1e5fdid: e992d880-33bc-4949-a648-aa7d410276cd
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: 616
 ht-degree: 100%
 
 ---
 
-# Dettagli della chiamata di prova {#test-call-details}
+# Dettagli della chiamata di prova{#test-call-details}
 
 ## Avvia il lettore multimediale {#start-the-media-player}
 
 ### Avvio della chiamata di Adobe Analytics (AppMeasurement) {#aa-start-call}
 
-| Parametro |  Valore (campione)  |
+| Parametro |  Valore (di esempio)  |
 |---|---|
 | `pev2` | ms_s |
 | `a.media.friendlyName` | Titolo episodio |
@@ -37,7 +43,7 @@ ht-degree: 100%
 
 ### Metadati standard nella chiamata iniziale di Adobe Analytics (AppMeasurement) {#std-metadata-aa}
 
-| Parametro |  Valore (campione)  |
+| Parametro |  Valore (di esempio)  |
 |---|---|
 | `a.media.show` | Titolo spettacolo |
 | `a.media.season` | 6 |
@@ -56,14 +62,14 @@ ht-degree: 100%
 
 ### Metadati personalizzati nella chiamata iniziale di Adobe Analytics (AppMeasurement) {#custom-metadata-aa}
 
-| Parametro |  Valore (campione)  |
+| Parametro |  Valore (di esempio)  |
 |---|---|
 | `custom.metadataA` | valore |
 | `custom.metadataB` | valore |
 
 ### Media Analytics (heartbeat): avvio della chiamata {#ma-start-call}
 
-| Parametro |  Valore (campione)  |
+| Parametro |  Valore (di esempio)  |
 |---|---|
 | `s:event:type` | inizio |
 | _**`l:event:playhead`**_ | _**0**_ |
@@ -83,7 +89,7 @@ ht-degree: 100%
 
 ### Metadati standard nella chiamata iniziale di Media Analytics (heartbeat) {#std-metadata-ma}
 
-| Parametro |  Valore (campione)  |
+| Parametro |  Valore (di esempio)  |
 |---|---|
 | `s:meta:a.media.show` | Spettacolo |
 | `s:meta:a.media.season` | 6 |
@@ -102,14 +108,14 @@ ht-degree: 100%
 
 ### Metadati personalizzati nella chiamata iniziale di Media Analytics (heartbeat) {#custom-metadata-ma}
 
-| Parametro |  Valore (campione)  |
+| Parametro |  Valore (di esempio)  |
 |---|---|
 | `s:meta:custom.metadata` | valore |
 | `s:meta:custom.metadata` | valore |
 
 ### Media Analytics (heartbeat): chiamata iniziale di Adobe Analytics {#ma-aa-start}
 
-| Parametro |  Valore (campione)  |
+| Parametro |  Valore (di esempio)  |
 |---|---|
 | _**`s:event:type`**_ | _**aa_start**_ |
 | `l:event:playhead` | 0 |
@@ -129,7 +135,7 @@ ht-degree: 100%
 
 ### Chiamata inizio annuncio di Adobe Analytics (AppMeasurement) {#aa-ad-start-call}
 
-| Parametro |  Valore (campione)  |
+| Parametro |  Valore (di esempio)  |
 |---|---|
 | _**`pev2`**_ | _**msa_s**_ |
 | `a.media.name` | 123456 |
@@ -152,7 +158,7 @@ ht-degree: 100%
 
 ### Metadati standard nella chiamata di inizio annuncio di Adobe Analytics (AppMeasurement) {#std-metadata-aa-ad-start}
 
-| Parametro |  Valore (campione)  |
+| Parametro |  Valore (di esempio)  |
 |---|---|
 | `a.media.show` | Titolo spettacolo |
 | `a.media.season` | 6 |
@@ -171,14 +177,14 @@ ht-degree: 100%
 
 ### Metadati personalizzati nella chiamata di inizio annuncio di Adobe Analytics (AppMeasurement) {#custom-metadata-aa-ad-start}
 
-| Parametro |  Valore (campione)  |
+| Parametro |  Valore (di esempio)  |
 |---|---|
 | `custom.metadata` | valore |
 | `custom.metadata` | valore |
 
 ### Media Analytics (heartbeat): chiamata inizio annuncio {#ma-ad-start-call}
 
-| Parametro |  Valore (campione)  |
+| Parametro |  Valore (di esempio)  |
 |---|---|
 | _**`s:event:type`**_ | _**Inizio**_ |
 | `l:event:playhead` | 0 |
@@ -197,7 +203,7 @@ ht-degree: 100%
 
 ### Metadati standard nella chiamata di inzio annuncio Media Analytics (heartbeat) {#std-metadata-ma-ad-start}
 
-| Parametro |  Valore (campione)  |
+| Parametro |  Valore (di esempio)  |
 |---|---|
 | `s:meta:a.media.show` | Spettacolo |
 | `s:meta:a.media.season` | 6 |
@@ -216,14 +222,14 @@ ht-degree: 100%
 
 ### Metadati personalizzati nella chiamata di inzio annuncio Media Analytics (heartbeat) {#custom-metadata-ma-ad-start}
 
-| Parametro |  Valore (campione)  |
+| Parametro |  Valore (di esempio)  |
 |---|---|
 | `s:meta:custom.metadata` | valore |
 | `s:meta:custom.metadata` | valore |
 
 ### Media Analytics (heartbeat): chiamata inizio annuncio di Adobe Analytics {#ma-aa-ad-start-call}
 
-| Parametro |  Valore (campione)  |
+| Parametro |  Valore (di esempio)  |
 |---|---|
 | _**`s:event:type`**_ | _**aa_ad_start**_ |
 | `l:event:playhead` | 0 |
@@ -235,7 +241,7 @@ ht-degree: 100%
 
 ### Chiamata riproduzione annuncio di Media Analytics (heartbeat) {#ma-ad-play-call}
 
-| Parametro |  Valore (campione)  |
+| Parametro |  Valore (di esempio)  |
 |---|---|
 | _**`s:event:type`**_ | _**play**_ |
 | `l:event:playhead` | 15 |
@@ -247,7 +253,7 @@ ht-degree: 100%
 
 ### Media Analytics (heartbeat): chiamata pausa annuncio {#ma-ad-pause-call}
 
-| Parametro |  Valore (campione)  |
+| Parametro |  Valore (di esempio)  |
 |---|---|
 | _**`s:event:type`**_ | _**pausa**_ |
 | `l:event:playhead` | 15 |
@@ -259,7 +265,7 @@ ht-degree: 100%
 
 ### Media Analytics (heartbeat) Chiamata annuncio completo di Adobe Analytics {#ma-aa-ad-complete-call}
 
-| Parametro |  Valore (campione)  |
+| Parametro |  Valore (di esempio)  |
 |---|---|
 | _**`s:event:type`**_ | _**completato**_ |
 | `l:event:playhead` | 15 |
@@ -273,7 +279,7 @@ ht-degree: 100%
 
 ### Media Analytics (heartbeat) Riproduci una chiamata {#ma-play-call}
 
-| Parametro |  Valore (campione)  |
+| Parametro |  Valore (di esempio)  |
 |---|---|
 | `s:event:type` | play |
 | _**`l:event:playhead`**_ | _**29**_ |
@@ -293,7 +299,7 @@ ht-degree: 100%
 
 ### Media Analytics (heartbeat): chiamata in pausa {#ma-pause-call}
 
-| Parametro |  Valore (campione)  |
+| Parametro |  Valore (di esempio)  |
 |---|---|
 | _**`s:event:type`**_ | _**pausa**_ |
 | _**`l:event:playhead`**_ | _**29**_ |

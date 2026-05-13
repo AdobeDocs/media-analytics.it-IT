@@ -4,9 +4,15 @@ description: Scopri come implementare i servizi multimediali in streaming di Ado
 feature: Streaming Media
 role: User, Admin, Developer
 exl-id: dfdb1415-105e-4c41-bedc-ecb85ed1b1d9
-source-git-commit: 847ea3e86c25a4aec3b12ad097d89941a5474aa3
+TQID: https://experienceleague.adobe.com/l80tlPp4rXSJCoZP1FM6oQdjkqokzbMt-NetZ2vTXBc
+product_v2: id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2: id: b0ca67c6-0a35-482c-ad91-baac1bcb26d6id: b3f03848-ae12-48b2-8aab-cad18567eb32id: c153fd90-23e1-4614-81d3-3cc7571227f7id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: b0a1f9d5-5795-42a3-a6d0-bd0e2748fd06id: c9bb7ea6-c04f-4262-b69c-fbb8d91e3559id: e38cbddc-1633-4cd5-bed5-9f289f2a6029id: f1f1a2d4-0976-4881-b091-c2bb8de7ffac
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
 workflow-type: tm+mt
-source-wordcount: '2413'
+source-wordcount: 2413
 ht-degree: 8%
 
 ---
@@ -29,7 +35,7 @@ Per standardizzare la raccolta dati da utilizzare nelle applicazioni che sfrutta
 
 Per creare e impostare uno schema:
 
-1. In Adobe Experience Platform, iniziare a creare lo schema come descritto in [Creare e modificare gli schemi nell&#39;interfaccia utente](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=it).
+1. In Adobe Experience Platform, iniziare a creare lo schema come descritto in [Creare e modificare gli schemi nell&#39;interfaccia utente](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=en).
 
 1. Nella pagina dei dettagli dello schema durante la creazione dello schema, scegliere [!UICONTROL **Evento esperienza**] quando si sceglie la classe base per lo schema.
 
@@ -129,7 +135,7 @@ Per creare e impostare uno schema:
 
       ![add-custom-metadata](assets/add-custom-fields.png)
 
-   1. [Utilizza il percorso generato](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/ui/fields/overview#type-specific-properties) per il campo personalizzato nel payload della richiesta.
+   1. [Utilizza il percorso generato](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/fields/overview#type-specific-properties) per il campo personalizzato nel payload della richiesta.
 
       ![add-custom-metadata](assets/custom-fields-path.png)
 
@@ -151,7 +157,7 @@ Per creare e impostare uno schema:
 
 1. Assicurarsi di aver creato un set di dati come descritto in [Creare un set di dati in Adobe Experience Platform](#create-a-dataset-in-adobe-experience-platform).
 
-1. Creare un nuovo stream di dati come descritto in [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=it).
+1. Creare un nuovo stream di dati come descritto in [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=en).
 
    Durante la creazione dello stream di dati, accertati di effettuare le seguenti selezioni di configurazione:
 
@@ -167,11 +173,11 @@ Per creare e impostare uno schema:
 
       * [!UICONTROL **Adobe Analytics**] (se si utilizza Adobe Analytics)
 
-        Se utilizzi Adobe Analytics, accertati di definire una suite di rapporti come descritto in [Creare una suite di rapporti](https://experienceleague.adobe.com/it/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite).
+        Se utilizzi Adobe Analytics, accertati di definire una suite di rapporti come descritto in [Creare una suite di rapporti](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite).
 
       * [!UICONTROL **Adobe Experience Platform**] (se si utilizza Customer Journey Analytics)
 
-     Per informazioni su come aggiungere un servizio a un flusso di dati, vedere la sezione &quot;Aggiungere servizi a un flusso di dati&quot; in [Configurare un flusso di dati](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=it#view-details).
+     Per informazioni su come aggiungere un servizio a un flusso di dati, vedere la sezione &quot;Aggiungere servizi a un flusso di dati&quot; in [Configurare un flusso di dati](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=en#view-details).
 
      ![Aggiungi il servizio Adobe Analytics](assets/datastream-add-service.png)
 
@@ -332,9 +338,9 @@ Per creare e impostare uno schema:
 
    >[!NOTE]
    >
-   >Se imposti Adobe Analytics come flusso a monte per lo stream di dati, i metadati personalizzati sono presenti anche in ContextData, con il nome impostato nello schema (senza il prefisso tenant, ad esempio myCustomField). In questo modo è possibile utilizzare tutte le funzionalità di Adobe Analytics disponibili per ContextData, ad esempio [la creazione di una regola di elaborazione](https://experienceleague.adobe.com/it/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/processing-rules).
+   >Se imposti Adobe Analytics come flusso a monte per lo stream di dati, i metadati personalizzati sono presenti anche in ContextData, con il nome impostato nello schema (senza il prefisso tenant, ad esempio myCustomField). In questo modo è possibile utilizzare tutte le funzionalità di Adobe Analytics disponibili per ContextData, ad esempio [la creazione di una regola di elaborazione](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/processing-rules).
 
-1. Condividi il progetto come descritto in [Condividi progetti](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/curate-share/share-projects.html?lang=it).
+1. Condividi il progetto come descritto in [Condividi progetti](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/curate-share/share-projects.html?lang=en).
 
    >[!NOTE]
    >

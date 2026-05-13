@@ -3,12 +3,18 @@ title: Informazioni sui prerequisiti per Adobe Streaming Media Services
 description: Introduzione ai servizi di streaming multimediale. Scopri cosa serve per l’implementazione.
 uuid: 4c0b37f3-8615-4cc0-b9c9-eeb029067064
 exl-id: 85ab1dbd-f4a7-4f11-afc9-8d5000e2de70
-feature: "Streaming Media, Workspace Basics"
+feature: Streaming Media, Workspace Basics
 role: User, Admin, Developer
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+TQID: https://experienceleague.adobe.com/e9iYwDwT-zSSZ3hV20U1w7p-MtKaK4Q8-vGMCrnenpc
+product_v2: id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2: id: b069d60e-95f3-44d6-95a8-ddc862a4bc38id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7aid: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: c8add8f2-4250-4fd9-9cde-9707036c567d
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 53%
+source-wordcount: 491
+ht-degree: 58%
 
 ---
 
@@ -16,7 +22,7 @@ ht-degree: 53%
 
 Prima di iniziare a implementare i servizi di streaming media di Adobe, completa le seguenti attività:
 
-1. **Rivedi la panoramica dei servizi multimediali in streaming di Adobe**<br>
+1. **Consulta la panoramica dei servizi di streaming multimediale Adobe**<br>
 Prima di iniziare a implementare i servizi di streaming multimediale, controlla la [panoramica dei servizi di streaming multimediale](/help/media-overview.md) di Adobe per assicurarti che soddisfi le tue esigenze.
 
 1. **Conferma il tuo modello di prezzo**<br>

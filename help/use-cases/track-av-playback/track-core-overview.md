@@ -5,14 +5,20 @@ uuid: 7b8e2f76-bc4e-4721-8933-3e4453b01788
 exl-id: 98ad2783-c9e3-48de-88df-8549f26114a0
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+TQID: https://experienceleague.adobe.com/cHrkCe0mQm8GlHwLVgf4cjF0VM8B1r3CRt39I2LB6kk
+product_v2: id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2: id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7aid: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: e7d92df1-c5ba-4e93-85df-f83171b889beid: e992d880-33bc-4949-a648-aa7d410276cd
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: 871
 ht-degree: 97%
 
 ---
 
-# Panoramica del tracciamento {#tracking-overview}
+# Panoramica del tracciamento{#tracking-overview}
 
 Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
@@ -53,7 +59,7 @@ Il tracciamento della riproduzione core include il tracciamento degli eventi di 
 
 ### Quando termina lo scorrimento
 
-* Chiama `trackEvent(SeekComplete)`
+* Chiamata `trackEvent(SeekComplete)`
 Annulla modifiche
 
 ### Quando inizia il buffering
@@ -109,15 +115,13 @@ Annulla modifiche
 
      Crea un’istanza di un oggetto metadata standard, popola le variabili desiderate e imposta l’oggetto metadati sull’oggetto Media Heartbeat.
 
-     Per un elenco completo dei metadati, consulta [Parametri audio e video.](../../implementation/variables/audio-video-parameters.md)
-
    * **Metadati personalizzati -** Crea un oggetto variabile per le variabili personalizzate e lo popola con i dati per questo contenuto.
 
 1. **Tracciare l’intenzione di inizio riproduzione -** Per iniziare a tracciare una sessione, effettua la chiamata `trackSessionStart` sull’istanza Media Heartbeat.
 
    >[!IMPORTANT]
    >
-   >`trackSessionStart` traccia l’intenzione dell’utente di iniziare la riproduzione, ma non l’inizio della riproduzione stessa. Questa API viene utilizzata per caricare dati/metadati e per stimare la metrica di qualità del servizio relativa al tempo necessario per l’avvio (tempo che trascorre ta `trackSessionStart` e `trackPlay`).
+   >`trackSessionStart` tiene traccia delle intenzioni di riproduzione dell’utente, non dell’inizio della riproduzione. Questa API viene utilizzata per caricare dati/metadati e per stimare la metrica di qualità del servizio relativa al tempo necessario per l’avvio (tempo che trascorre ta `trackSessionStart` e `trackPlay`).
 
    >[!NOTE]
    >
