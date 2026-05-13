@@ -25,15 +25,15 @@ ht-degree: 0%
 
 # Migrare i tipi di pubblico ai nuovi campi dei contenuti multimediali in streaming
 
-In questo documento viene descritto come eseguire la migrazione di un pubblico che utilizza campi del tipo di dati di Adobe Streaming Media Services denominato &quot;Media&quot; per utilizzare il nuovo tipo di dati corrispondente denominato &quot;[Media Reporting Details](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-reporting-details)&quot;.
+In questo documento viene descritto come eseguire la migrazione di un pubblico che utilizza campi del tipo di dati di Adobe Streaming Media Services denominato &quot;Media&quot; per utilizzare il nuovo tipo di dati corrispondente denominato &quot;[Media Reporting Details](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/media-reporting-details)&quot;.
 
 ## Migrare un pubblico
 
-Per migrare un pubblico dal vecchio tipo di dati denominato &quot;Media&quot; al nuovo tipo di dati denominato &quot;[Dettagli report multimediali](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-reporting-details)&quot;, è necessario modificare il pubblico e in ogni regola sostituire il vecchio campo dal tipo di dati obsoleto con il nuovo campo corrispondente del nuovo tipo di dati:
+Per migrare un pubblico dal vecchio tipo di dati denominato &quot;Media&quot; al nuovo tipo di dati denominato &quot;[Dettagli report multimediali](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/media-reporting-details)&quot;, è necessario modificare il pubblico e in ogni regola sostituire il vecchio campo dal tipo di dati obsoleto con il nuovo campo corrispondente del nuovo tipo di dati:
 
 1. Individua le regole contenenti i campi del tipo di dati &quot;Media&quot; obsoleto. Questi sono tutti i campi che iniziano con il percorso, `media.mediaTimed`.
 
-1. Duplica tali regole utilizzando i campi del nuovo tipo di dati &quot;[Dettagli report multimediali](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-reporting-details)&quot;.
+1. Duplica tali regole utilizzando i campi del nuovo tipo di dati &quot;[Dettagli report multimediali](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/media-reporting-details)&quot;.
 
 1. Mantieni entrambe le regole attive finché non verifichi che i tipi di pubblico funzionino come previsto.
 
