@@ -3,9 +3,9 @@ title: ID sessione multimediale
 description: Identifica in modo univoco ogni sessione di riproduzione.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 186437a8669d2375caa9056dadd367ad7135f652
+source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
 workflow-type: tm+mt
-source-wordcount: '199'
+source-wordcount: '203'
 ht-degree: 5%
 
 ---
@@ -17,13 +17,14 @@ La dimensione **ID sessione multimediale** identifica in modo univoco ogni sessi
 
 ## Compilazione di questa dimensione
 
-L&#39;ID sessione viene generato automaticamente quando il backend riceve un evento `media.sessionStart`. Le implementazioni Web SDK e Mobile SDK acquisiscono e mantengono l&#39;ID per te; le implementazioni Direct API devono leggere l&#39;ID sessione dalla risposta `sessionStart` (l&#39;intestazione `Location` per l&#39;API Media Collection o l&#39;handle `media-analytics:new-session` per l&#39;API Media Edge) e includerlo negli eventi successivi.
+L&#39;ID sessione viene generato automaticamente quando il backend riceve un evento [inizio sessione](/help/implementation/events/session/session-start.md). Le implementazioni Web SDK e Mobile SDK acquisiscono e mantengono l&#39;ID per te; le implementazioni Direct API devono leggere l&#39;ID sessione dalla risposta `sessionStart` (l&#39;intestazione `Location` per l&#39;API Media Collection o l&#39;handle `media-analytics:new-session` per l&#39;API Media Edge) e includerlo negli eventi successivi.
 
 | Sistema di reporting | Origine |
 | --- | --- |
-| Adobe Analytics | Crea una [regola di elaborazione](https://experienceleague.adobe.com/it/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/processing-rules/pr-overview) che associa `a.media.vsid` a un eVar. |
-| Customer Journey Analytics | [`mediaReporting.sessionDetails.ID`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-reporting) |
-| Feed di dati | `videosessionid, post_videosessionid` |
+| Adobe Analytics | Crea una [regola di elaborazione](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/processing-rules/pr-overview) che associa `a.media.vsid` a un eVar. |
+| Customer Journey Analytics | [`mediaReporting.sessionDetails.ID`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-reporting) |
+| Feed di dati | `videosessionid`, `post_videosessionid` |
+| Audience Manager | `c_contextdata.a.media.vsid` |
 
 ## Elementi dimensionali
 

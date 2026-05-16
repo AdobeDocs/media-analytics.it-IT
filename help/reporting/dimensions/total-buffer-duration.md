@@ -3,10 +3,10 @@ title: Durata totale buffer (dimensione)
 description: Segnala i secondi cumulativi dedicati al buffering per sessione.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 186437a8669d2375caa9056dadd367ad7135f652
+source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 5%
+source-wordcount: '190'
+ht-degree: 6%
 
 ---
 
@@ -23,13 +23,14 @@ La dimensione **Durata totale buffer** riporta il tempo cumulativo, in secondi, 
 
 ## Compilazione di questa dimensione
 
-Il backend del supporto somma la durata di ogni intervallo di buffer (da `media.bufferStart` alla successiva modifica dello stato). Il valore viene segnalato nella chiamata di chiusura. Analysis Workspace mostra il valore come `HH:MM:SS`; Feed dati, Data Warehouse e API di reporting mostrano il valore in secondi.
+Il backend del supporto somma la durata di ogni intervallo di buffer (da [inizio buffer](/help/implementation/events/playback/buffer-start.md) alla successiva modifica dello stato). Il valore viene segnalato nella chiamata di chiusura. Analysis Workspace mostra il valore come `HH:MM:SS`; Feed dati, Data Warehouse e API di reporting mostrano il valore in secondi.
 
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.qoe.bufferTime` quando [[!UICONTROL Media Quality]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.qoeDataDetails.bufferTime`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
-| Feed di dati | `videoqoebuffertimeevar, post_videoqoebuffertimeevar` |
+| Customer Journey Analytics | [`mediaReporting.qoeDataDetails.bufferTime`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
+| Feed di dati | `videoqoebuffertimeevar`, `post_videoqoebuffertimeevar` |
+| Audience Manager | `c_contextdata.a.media.qoe.bufferTime` |
 
 ## Elementi dimensionali
 

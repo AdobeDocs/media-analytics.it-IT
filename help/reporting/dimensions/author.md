@@ -3,10 +3,10 @@ title: Autore
 description: Segnala l’autore del contenuto. Utilizzato principalmente per gli audiolibri.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 186437a8669d2375caa9056dadd367ad7135f652
+source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
 workflow-type: tm+mt
-source-wordcount: '115'
-ht-degree: 10%
+source-wordcount: '117'
+ht-degree: 11%
 
 ---
 
@@ -28,8 +28,9 @@ L’autore viene impostato dal lettore all’inizio della sessione per i contenu
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.author` quando [[!UICONTROL Audio Metadata]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.sessionDetails.author`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-reporting) |
+| Customer Journey Analytics | [`mediaReporting.sessionDetails.author`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-reporting) |
 | Feed di dati | `videoaudioauthor` |
+| Audience Manager | `c_contextdata.a.media.author` |
 
 ## Elementi dimensionali
 

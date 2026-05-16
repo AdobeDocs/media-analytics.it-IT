@@ -3,9 +3,9 @@ title: Stagione
 description: Imposta il numero di stagione per i contenuti episodici in modo che il coinvolgimento possa essere suddiviso per stagione.
 feature: Streaming Media
 role: Developer
-source-git-commit: 97cae4771558fc3f4d9719074b2fcf3ba661f1cc
+source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '195'
 ht-degree: 7%
 
 ---
@@ -24,13 +24,14 @@ La variabile della stagione è il numero della stagione per lo spettacolo (in ge
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.season` |
-| **Campo raccolta XDM** | [`mediaCollection.sessionDetails.season`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`mediaCollection.sessionDetails.season`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Caratteristica Audience Manager** | `c_contextdata.a.media.season` |
 | **Obbligatorio** | No |
-| **Inviato con** | Avvio della sessione, chiusura della sessione |
+| **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
 
 ## Web SDK
 
-Imposta `season` all&#39;interno di `mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `season` all&#39;interno di `mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {

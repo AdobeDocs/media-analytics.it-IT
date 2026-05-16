@@ -3,9 +3,9 @@ title: Immagine nell’immagine
 description: Monitora quando il visualizzatore entra ed esce dalla riproduzione picture-in-picture in modo che il backend possa riportare il coinvolgimento PiP.
 feature: Streaming Media
 role: Developer
-source-git-commit: 97cae4771558fc3f4d9719074b2fcf3ba661f1cc
+source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '292'
 ht-degree: 4%
 
 ---
@@ -24,13 +24,14 @@ Lo stato di picture-in-picture del lettore tiene traccia di quando il visualizza
 | Proprietà | Valore |
 | --- | --- |
 | **Variabili di dati di contesto** | `a.media.states.pictureinpicture.set`, `a.media.states.pictureinpicture.count`, `a.media.states.pictureinpicture.time` |
-| **Campo raccolta XDM** | [`mediaCollection.statesStart[]`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/media-collection-details) e [`mediaCollection.statesEnd[]`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/media-collection-details) (voci con `name: "pictureInPicture"`) |
+| **Campo raccolta XDM** | [`mediaCollection.statesStart[]`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-collection-details) e [`mediaCollection.statesEnd[]`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-collection-details) (voci con `name: "pictureInPicture"`) |
+| **Caratteristiche Audience Manager** | `c_contextdata.a.media.states.pictureinpicture.set`, `c_contextdata.a.media.states.pictureinpicture.count`, `c_contextdata.a.media.states.pictureinpicture.time` |
 | **Obbligatorio** | No |
-| **Inviato con** | Inizio stato, fine stato |
+| **Inviato con** | [Inizio stato](/help/implementation/events/player-state/state-start.md), [fine stato](/help/implementation/events/player-state/state-end.md) |
 
 ## Web SDK
 
-Utilizza [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) per inviare un evento `media.statesUpdate` con lo stato aggiunto a `statesStart`:
+Utilizza [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) per inviare un evento `media.statesUpdate` con lo stato aggiunto a `statesStart`:
 
 ```javascript
 alloy("sendEvent", {

@@ -3,9 +3,9 @@ title: Posizione annuncio nel pod
 description: Imposta la posizione di indice dell’annuncio all’interno dell’interruzione pubblicitaria principale. Il primo annuncio ha indice 0.
 feature: Streaming Media
 role: Developer
-source-git-commit: 97cae4771558fc3f4d9719074b2fcf3ba661f1cc
+source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '213'
 ht-degree: 5%
 
 ---
@@ -24,13 +24,14 @@ La variabile di posizione dell’annuncio nel pod è la posizione con indice zer
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.ad.podPosition` |
-| **Campo raccolta XDM** | [`mediaCollection.advertisingDetails.podPosition`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-details-collection) |
+| **Campo raccolta XDM** | [`mediaCollection.advertisingDetails.podPosition`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/advertising-details-collection) |
+| **Caratteristica Audience Manager** | `c_contextdata.a.media.ad.podPosition` |
 | **Obbligatorio** | Sì |
-| **Inviato con** | Avvio annuncio, chiusura annuncio |
+| **Inviato con** | [Inizio annuncio](/help/implementation/events/ads/ad-start.md), chiusura annuncio |
 
 ## Web SDK
 
-Imposta `podPosition` all&#39;interno di `mediaCollection.advertisingDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `podPosition` all&#39;interno di `mediaCollection.advertisingDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {

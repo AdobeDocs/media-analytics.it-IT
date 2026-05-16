@@ -3,9 +3,9 @@ title: Bitrate
 description: Imposta il bitrate di riproduzione corrente (in kbps) sull'oggetto QoE in modo che il backend possa calcolare le metriche del bitrate.
 feature: Streaming Media
 role: Developer
-source-git-commit: 97cae4771558fc3f4d9719074b2fcf3ba661f1cc
+source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '247'
 ht-degree: 4%
 
 ---
@@ -24,13 +24,14 @@ La variabile bitrate è il bitrate di riproduzione corrente, espresso in kilobit
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.qoe.bitrateAverageBucket` |
-| **Campo raccolta XDM** | [`mediaCollection.qoeDataDetails.bitrate`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-collection) |
+| **Campo raccolta XDM** | [`mediaCollection.qoeDataDetails.bitrate`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/qoe-data-details-collection) |
+| **Caratteristica Audience Manager** | `c_contextdata.a.media.qoe.bitrateAverageBucket` |
 | **Obbligatorio** | No |
-| **Inviato con** | Eventi di qualità (modifica del bitrate, buffer, errore), chiusura della sessione |
+| **Inviato con** | Eventi di qualità ([modifica bitrate](/help/implementation/events/playback/bitrate-change.md), [avvio buffer](/help/implementation/events/playback/buffer-start.md), [errore](/help/implementation/events/error.md)), chiusura sessione |
 
 ## Web SDK
 
-Imposta `bitrate` all&#39;interno di `mediaCollection.qoeDataDetails` il `media.bitrateChange` (o qualsiasi evento relativo alla qualità) durante la chiamata a [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `bitrate` all&#39;interno di `mediaCollection.qoeDataDetails` il `media.bitrateChange` (o qualsiasi evento relativo alla qualità) durante la chiamata a [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {

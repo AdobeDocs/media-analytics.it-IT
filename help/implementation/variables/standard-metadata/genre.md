@@ -3,9 +3,9 @@ title: Genere
 description: Imposta il genere di contenuto come stringa delimitata da virgole. Il contenuto multi-genere si suddivide tra gli elementi di riga nel reporting.
 feature: Streaming Media
 role: Developer
-source-git-commit: 97cae4771558fc3f4d9719074b2fcf3ba661f1cc
+source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '226'
 ht-degree: 6%
 
 ---
@@ -28,13 +28,14 @@ La variabile di genere è il genere di contenuto definito dal produttore (ad ese
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.genre` |
-| **Campo raccolta XDM** | [`mediaCollection.sessionDetails.genre`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`mediaCollection.sessionDetails.genre`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Caratteristica Audience Manager** | `c_contextdata.a.media.genre` |
 | **Obbligatorio** | No |
-| **Inviato con** | Avvio della sessione, chiusura della sessione |
+| **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
 
 ## Web SDK
 
-Imposta `genre` all&#39;interno di `mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `genre` all&#39;interno di `mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {

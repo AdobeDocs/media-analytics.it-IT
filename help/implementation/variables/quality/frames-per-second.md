@@ -3,10 +3,10 @@ title: Fotogrammi al secondo
 description: Imposta la frequenza fotogrammi corrente sull'oggetto QoE in modo che il backend abbia un contesto di frequenza fotogrammi per il reporting di qualità.
 feature: Streaming Media
 role: Developer
-source-git-commit: 0e6b5a8ef5738191276976ed31125016774c043d
+source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 5%
+source-wordcount: '225'
+ht-degree: 6%
 
 ---
 
@@ -18,13 +18,14 @@ La variabile frame al secondo corrisponde al frame rate corrente del flusso. Imp
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | Nessuno (Adobe Analytics non assegna una chiave di dati contestuali riservata per il frame rate) |
-| **Campo raccolta XDM** | [`mediaCollection.qoeDataDetails.framesPerSecond`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-collection) |
+| **Campo raccolta XDM** | [`mediaCollection.qoeDataDetails.framesPerSecond`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/qoe-data-details-collection) |
+| **Caratteristica Audience Manager** | N/D |
 | **Obbligatorio** | No |
-| **Inviato con** | Eventi di qualità, chiusura sessione |
+| **Inviato con** | Eventi di qualità ([modifica bitrate](/help/implementation/events/playback/bitrate-change.md), [avvio buffer](/help/implementation/events/playback/buffer-start.md), [errore](/help/implementation/events/error.md)), chiusura sessione |
 
 ## Web SDK
 
-Imposta `framesPerSecond` all&#39;interno di `mediaCollection.qoeDataDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `framesPerSecond` all&#39;interno di `mediaCollection.qoeDataDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {

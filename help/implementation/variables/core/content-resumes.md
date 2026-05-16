@@ -3,10 +3,10 @@ title: Riprende il contenuto
 description: Contrassegna una sessione che riprende una riproduzione precedentemente interrotta in modo che il backend conteggi un evento Riprende contenuto.
 feature: Streaming Media
 role: Developer
-source-git-commit: 97cae4771558fc3f4d9719074b2fcf3ba661f1cc
+source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 4%
+source-wordcount: '248'
+ht-degree: 5%
 
 ---
 
@@ -24,13 +24,14 @@ Il contenuto riprende la variabile contrassegna una sessione che riprende una ri
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.resume` |
-| **Campo raccolta XDM** | [`mediaCollection.sessionDetails.hasResume`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`mediaCollection.sessionDetails.hasResume`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Caratteristica Audience Manager** | N/D |
 | **Obbligatorio** | No |
-| **Inviato con** | Avvio sessione |
+| **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md) |
 
 ## Web SDK
 
-Imposta `hasResume` su `true` all&#39;interno di `mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) per la sessione ripresa:
+Imposta `hasResume` su `true` all&#39;interno di `mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) per la sessione ripresa:
 
 ```javascript
 alloy("sendEvent", {

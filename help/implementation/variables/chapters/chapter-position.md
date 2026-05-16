@@ -3,9 +3,9 @@ title: Posizione del capitolo
 description: Imposta l’indice del capitolo all’interno del contenuto. È necessario specificare la posizione del capitolo affinché l'ID del capitolo possa essere generato automaticamente correttamente.
 feature: Streaming Media
 role: Developer
-source-git-commit: 97cae4771558fc3f4d9719074b2fcf3ba661f1cc
+source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '208'
 ht-degree: 7%
 
 ---
@@ -24,13 +24,14 @@ La variabile di posizione del capitolo è l&#39;indice del capitolo all&#39;inte
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.chapter.position` |
-| **Campo raccolta XDM** | [`mediaCollection.chapterDetails.index`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/chapter-details-collection) |
+| **Campo raccolta XDM** | [`mediaCollection.chapterDetails.index`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/chapter-details-collection) |
+| **Caratteristica Audience Manager** | `c_contextdata.a.media.chapter.position` |
 | **Obbligatorio** | No (Mobile SDK); Sì (Edge, Media Collection API) |
-| **Inviato con** | Inizio capitolo, chiusura capitolo |
+| **Inviato con** | [Inizio capitolo](/help/implementation/events/chapters/chapter-start.md), chiusura capitolo |
 
 ## Web SDK
 
-Imposta `index` all&#39;interno di `mediaCollection.chapterDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `index` all&#39;interno di `mediaCollection.chapterDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {

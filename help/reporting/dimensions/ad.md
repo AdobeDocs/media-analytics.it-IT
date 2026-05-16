@@ -3,10 +3,10 @@ title: Annuncio
 description: Segnala ogni annuncio univoco riprodotto, identificato dall’ID annuncio.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 186437a8669d2375caa9056dadd367ad7135f652
+source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
 workflow-type: tm+mt
-source-wordcount: '176'
-ht-degree: 6%
+source-wordcount: '184'
+ht-degree: 7%
 
 ---
 
@@ -19,17 +19,18 @@ ht-degree: 6%
 
 >[!ENDSHADEBOX]
 
-La dimensione **Ad** riporta ogni annuncio univoco riprodotto, identificato dall&#39;ID annuncio impostato su `media.adStart`. La dimensione è il raggruppamento principale per i rapporti sugli annunci e la chiave di unione per le classificazioni a livello di annuncio come Nome annuncio, Lunghezza annuncio e Creative ID.
+La dimensione **Ad** riporta ogni annuncio univoco riprodotto, identificato dall&#39;ID annuncio impostato all&#39;[inizio annuncio](/help/implementation/events/ads/ad-start.md). La dimensione è il raggruppamento principale per i rapporti sugli annunci e la chiave di unione per le classificazioni a livello di annuncio come Nome annuncio, Lunghezza annuncio e Creative ID.
 
 ## Compilazione di questa dimensione
 
-L&#39;annuncio viene impostato dal lettore su ogni evento `media.adStart` come identificatore stabile per l&#39;annuncio.
+L&#39;annuncio viene impostato dal lettore a ogni evento [ad start](/help/implementation/events/ads/ad-start.md) come identificatore stabile dell&#39;annuncio.
 
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.ad.name` quando [[!UICONTROL Media Ads]](/help/reporting/media-reports-enable.md) è abilitato. Persiste per la durata della visita. |
-| Customer Journey Analytics | [`mediaReporting.advertisingDetails.name`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-details-reporting) |
-| Feed di dati | `videoad, post_videoad` |
+| Customer Journey Analytics | [`mediaReporting.advertisingDetails.name`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/advertising-details-reporting) |
+| Feed di dati | `videoad`, `post_videoad` |
+| Audience Manager | `c_contextdata.a.media.ad.name` |
 
 >[!IMPORTANT]
 >
@@ -37,4 +38,4 @@ L&#39;annuncio viene impostato dal lettore su ogni evento `media.adStart` come i
 
 ## Elementi dimensionali
 
-Ogni elemento è un ID annuncio univoco segnalato su `media.adStart`. Utilizza un identificatore stabile per creatività in modo che lo stesso annuncio venga aggregato a un singolo elemento nelle varie sessioni.
+Ogni elemento è un ID annuncio univoco segnalato al [inizio annuncio](/help/implementation/events/ads/ad-start.md). Utilizza un identificatore stabile per creatività in modo che lo stesso annuncio venga aggregato a un singolo elemento nelle varie sessioni.

@@ -3,10 +3,10 @@ title: Autore
 description: Segnala l’autore del contenuto audio.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 186437a8669d2375caa9056dadd367ad7135f652
+source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
 workflow-type: tm+mt
-source-wordcount: '110'
-ht-degree: 10%
+source-wordcount: '112'
+ht-degree: 12%
 
 ---
 
@@ -28,8 +28,9 @@ Il programma di pubblicazione viene impostato dal lettore all&#39;inizio della s
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.publisher` quando [[!UICONTROL Audio Metadata]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.sessionDetails.publisher`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-reporting) |
+| Customer Journey Analytics | [`mediaReporting.sessionDetails.publisher`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-reporting) |
 | Feed di dati | `videoaudiopublisher` |
+| Audience Manager | `c_contextdata.a.media.publisher` |
 
 ## Elementi dimensionali
 

@@ -1,18 +1,17 @@
 ---
-source-git-commit: c9c4287b4b330ebc1a1ec8b7197b42ee45f7ff48
-workflow-type: tm+mt
-source-wordcount: '1345'
-ht-degree: 61%
-
----
-﻿---
 product: adobe analytics
 audience: end-user
 user-guide-title: Guida ai servizi Streaming Media
 breadcrumb-title: Guida ai servizi Streaming Media
 user-guide-description: Implementa i servizi Streaming Media. Gli argomenti trattati comprendono Media SDK e Media Collection API.
 sub-product: media analytics
+source-git-commit: 84574afd9d39e0643e7f12f44e8729e947c2ec1b
+workflow-type: tm+mt
+source-wordcount: '1395'
+ht-degree: 59%
+
 ---
+
 
 # Guida ai servizi Streaming Media {#using}
 
@@ -33,6 +32,32 @@ sub-product: media analytics
          + [JavaScript - da Media SDK a Launch](legacy/sdk-to-launch/sdk-to-launch-migration-platforms/sdk-to-launch-migration-js.md)
 + Implementazione {#implementation}
    + [Panoramica sull’implementazione](implementation/overview.md)
+   + Eventi {#events}
+      + [Panoramica degli eventi](implementation/events/overview.md)
+      + Sessione {#session}
+         + [Avvio sessione](implementation/events/session/session-start.md)
+         + [Sessione completata](implementation/events/session/session-complete.md)
+         + [Fine sessione](implementation/events/session/session-end.md)
+      + Riproduzione {#playback}
+         + [Play](implementation/events/playback/play.md)
+         + [Inizio pausa](implementation/events/playback/pause-start.md)
+         + [Avvio buffer](implementation/events/playback/buffer-start.md)
+         + [Modifica bitrate](implementation/events/playback/bitrate-change.md)
+         + [Ping](implementation/events/playback/ping.md)
+      + Annunci {#ads}
+         + [Avvio dell’interruzione pubblicitaria](implementation/events/ads/ad-break-start.md)
+         + [Inizio annuncio](implementation/events/ads/ad-start.md)
+         + [Annuncio completato](implementation/events/ads/ad-complete.md)
+         + [Salta annuncio](implementation/events/ads/ad-skip.md)
+         + [Interruzione annuncio completata](implementation/events/ads/ad-break-complete.md)
+      + Capitoli {#chapters}
+         + [Inizio capitolo](implementation/events/chapters/chapter-start.md)
+         + [Capitolo completato](implementation/events/chapters/chapter-complete.md)
+         + [Salta capitolo](implementation/events/chapters/chapter-skip.md)
+      + Stato del lettore {#player-state}
+         + [Avvio stato](implementation/events/player-state/state-start.md)
+         + [Fine stato](implementation/events/player-state/state-end.md)
+      + [Errore](implementation/events/error.md)
    + Variabili {#variables}
       + Core {#core}
          + [Canale del contenuto](implementation/variables/core/content-channel.md)
@@ -121,7 +146,6 @@ sub-product: media analytics
          + [Richiesta sessioni](implementation/media-collection-api/mc-api-ref/mc-api-sessions-req.md)
          + [Richiesta eventi](implementation/media-collection-api/mc-api-ref/mc-api-events-req.md)
          + [Parametri di richiesta](implementation/media-collection-api/mc-api-ref/mc-api-req-params.md)
-         + [Tipi di eventi e descrizioni](implementation/media-collection-api/mc-api-ref/mc-api-event-types.md)
          + Implementazione dell’API {#mc-api-impl}
             + [Impostazione del tipo di richiesta HTTP nel lettore](implementation/media-collection-api/mc-api-impl/mc-api-set-http-req.md)
             + [Ottenimento di un ID sessione](implementation/media-collection-api/mc-api-impl/mc-api-obtain-sid.md)
@@ -239,6 +263,8 @@ sub-product: media analytics
       + [Conteggio immagini nell’immagine (Picture in Picture)](reporting/metrics/picture-in-picture-count.md)
       + [Durata totale immagine nell’immagine (Picture in Picture)](reporting/metrics/picture-in-picture-total-duration.md)
       + [Indicatori di avanzamento](reporting/metrics/progress-markers.md)
+      + [Eventi di arresto](reporting/metrics/stall-events.md)
+      + [Flussi interessati da interruzioni](reporting/metrics/stall-impacted-streams.md)
       + [Flussi interessati dalla funzione sottotitoli](reporting/metrics/closed-captioning-streams-impacted.md)
       + [Flussi interessati dallo schermo intero](reporting/metrics/full-screen-streams-impacted.md)
       + [Flussi interessati da in focus](reporting/metrics/in-focus-streams-impacted.md)
@@ -247,6 +273,7 @@ sub-product: media analytics
       + [Tempo di avvio (metrica)](reporting/metrics/time-to-start.md)
       + [Durata totale del buffer (metrica)](reporting/metrics/total-buffer-duration.md)
       + [Durata totale pausa](reporting/metrics/total-pause-duration.md)
+      + [Durata totale dello stallo](reporting/metrics/total-stalling-duration.md)
       + [Tempo di riproduzione univoco](reporting/metrics/unique-time-played.md)
    + [Metriche calcolate](reporting/calculated-metrics.md)
    + [Abilitazione di rapporti sui contenuti multimediali](reporting/media-reports-enable.md)

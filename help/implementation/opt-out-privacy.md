@@ -5,14 +5,14 @@ uuid: 7e60c7bd-8dba-4c7a-9c3c-0c634b815397
 exl-id: 64f5ef2b-7850-43d8-8f32-3d008ea4f156
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
 workflow-type: tm+mt
-source-wordcount: '347'
-ht-degree: 86%
+source-wordcount: '496'
+ht-degree: 65%
 
 ---
 
-# Rinuncia e privacy {#opt-out-and-privacy}
+# Rinuncia e privacy{#opt-out-and-privacy}
 
 ## Rinuncia / Consenso {#opt-out-opt-in}
 
@@ -110,3 +110,19 @@ Ad esempio:
   ```
   vids = ADBMobile().getAllIdentifiers()
   ```
+
+## Parametri di rinuncia di Analytics {#analytics-opt-out}
+
+Due parametri riservati consentono di eliminare i dati di Media Analytics dall’inoltro lato server ad Audience Manager e dalla condivisione di dati con terze parti. Questi vengono passati insieme ai parametri di sessione a livello API, non impostati sull’oggetto di configurazione SDK.
+
+| Parametro | Chiave API | Dati contestuali |
+| --- | --- | --- |
+| Rinuncia all’inoltro lato server | `analytics.optOutServerSideForwarding` | `cm.dmp` |
+| Rinuncia alla condivisione dei dati | `analytics.optOutSellToThirdParty` | `cm.sell` |
+
+* **`analytics.optOutServerSideForwarding`**: quando `true`, elimina l&#39;inoltro lato server dell&#39;hit ad Audience Manager e altre destinazioni Adobe.
+* **`analytics.optOutSellToThirdParty`**: quando `true`, elimina la condivisione di questi dati hit con partner di terze parti.
+
+>[!NOTE]
+>
+>Questi parametri sono documentati nel [Riferimento sessioni API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-sessions-req.md). Si applicano alle implementazioni API Media Collection e Media Edge API. I controlli di rinuncia a livello di SDK descritti sopra si applicano alle implementazioni Mobile e OTT.

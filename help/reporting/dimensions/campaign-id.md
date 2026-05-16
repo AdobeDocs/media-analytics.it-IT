@@ -3,10 +3,10 @@ title: ID campagna
 description: Segnala la campagna a cui appartiene ogni annuncio.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 186437a8669d2375caa9056dadd367ad7135f652
+source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 12%
+source-wordcount: '118'
+ht-degree: 13%
 
 ---
 
@@ -23,14 +23,15 @@ La dimensione **ID campagna** riporta la campagna pubblicitaria a cui appartiene
 
 ## Compilazione di questa dimensione
 
-L&#39;ID della campagna è impostato dal lettore a ogni evento `media.adStart`.
+L&#39;ID della campagna è impostato dal lettore a ogni evento [ad start](/help/implementation/events/ads/ad-start.md).
 
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.ad.campaign` quando [[!UICONTROL Media Ads]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.advertisingDetails.campaignID`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-details-reporting) |
-| Feed di dati | `videocampaign, post_videocampaign` |
+| Customer Journey Analytics | [`mediaReporting.advertisingDetails.campaignID`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/advertising-details-reporting) |
+| Feed di dati | `videocampaign`, `post_videocampaign` |
+| Audience Manager | `c_contextdata.a.media.ad.campaign` |
 
 ## Elementi dimensionali
 
-Ogni elemento è il valore letterale della campagna riportato su `media.adStart`.
+Ogni elemento è il valore letterale della campagna riportato al [inizio annuncio](/help/implementation/events/ads/ad-start.md).

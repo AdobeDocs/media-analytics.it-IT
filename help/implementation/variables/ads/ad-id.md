@@ -3,9 +3,9 @@ title: ID annuncio
 description: Identificare in modo univoco un annuncio.
 feature: Streaming Media
 role: Developer
-source-git-commit: 97cae4771558fc3f4d9719074b2fcf3ba661f1cc
+source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '183'
 ht-degree: 8%
 
 ---
@@ -24,13 +24,14 @@ La variabile ID annuncio identifica in modo univoco ogni annuncio. È richiesto 
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.ad.name` |
-| **Campo raccolta XDM** | [`mediaCollection.advertisingDetails.name`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-details-collection) |
+| **Campo raccolta XDM** | [`mediaCollection.advertisingDetails.name`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/advertising-details-collection) |
+| **Caratteristica Audience Manager** | `c_contextdata.a.media.ad.name` |
 | **Obbligatorio** | Sì |
-| **Inviato con** | Avvio annuncio, chiusura annuncio |
+| **Inviato con** | [Inizio annuncio](/help/implementation/events/ads/ad-start.md), chiusura annuncio |
 
 ## Web SDK
 
-Imposta `name` in `mediaCollection.advertisingDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) per `media.adStart`:
+Imposta `name` in `mediaCollection.advertisingDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) per `media.adStart`:
 
 ```javascript
 alloy("sendEvent", {

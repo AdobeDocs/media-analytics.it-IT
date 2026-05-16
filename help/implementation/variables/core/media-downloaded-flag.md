@@ -3,9 +3,9 @@ title: Flag di contenuto multimediale scaricato
 description: Contrassegna una sessione come riproduzione offline scaricata in modo che venga segnalata separatamente dalle sessioni in streaming.
 feature: Streaming Media
 role: Developer
-source-git-commit: 97cae4771558fc3f4d9719074b2fcf3ba661f1cc
+source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '244'
 ht-degree: 4%
 
 ---
@@ -24,13 +24,14 @@ Il flag Media Download indica che una sessione sta riproducendo contenuto offlin
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.downloaded` |
-| **Campo raccolta XDM** | [`mediaCollection.sessionDetails.isDownloaded`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`mediaCollection.sessionDetails.isDownloaded`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Caratteristica Audience Manager** | `c_contextdata.a.media.downloaded` |
 | **Obbligatorio** | No |
-| **Inviato con** | Avvio della sessione, chiusura della sessione |
+| **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
 
 ## Web SDK
 
-Imposta `isDownloaded` su `true` all&#39;interno di `mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `isDownloaded` su `true` all&#39;interno di `mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {

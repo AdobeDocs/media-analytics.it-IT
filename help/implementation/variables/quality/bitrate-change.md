@@ -3,7 +3,7 @@ title: Modifica bitrate
 description: Attiva un evento di modifica del bitrate ogni volta che il lettore passa a un bitrate diverso.
 feature: Streaming Media
 role: Developer
-source-git-commit: 97cae4771558fc3f4d9719074b2fcf3ba661f1cc
+source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 5%
@@ -25,12 +25,13 @@ L’evento di modifica del bitrate segnala che il lettore è passato a un bitrat
 | --- | --- |
 | **Variabile di dati di contesto** | (nessuno — conteggiato dal backend) |
 | **Tipo di evento XDM** | `media.bitrateChange` |
+| **Caratteristica Audience Manager** | `c_contextdata.a.media.qoe.bitrateChangeCount` |
 | **Obbligatorio** | No |
-| **Inviato con** | Ogni volta che il lettore cambia bitrate |
+| **Inviato con** | [Modifica bitrate](/help/implementation/events/playback/bitrate-change.md) |
 
 ## Web SDK
 
-Utilizza [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) per inviare un evento `media.bitrateChange` con il nuovo bitrate:
+Utilizza [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) per inviare un evento `media.bitrateChange` con il nuovo bitrate:
 
 ```javascript
 alloy("sendEvent", {

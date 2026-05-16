@@ -3,9 +3,9 @@ title: ID risorsa
 description: Segnala un identificatore di settore stabile per la risorsa multimediale sottostante.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 97cae4771558fc3f4d9719074b2fcf3ba661f1cc
+source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '404'
 ht-degree: 2%
 
 ---
@@ -27,11 +27,12 @@ L’ID risorsa viene impostato dal lettore all’inizio della sessione.
 
 | Sistema di reporting | Origine |
 | --- | --- |
-| Adobe Analytics (regola di elaborazione) | Crea una [regola di elaborazione](https://experienceleague.adobe.com/it/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/processing-rules/pr-overview) che associa `a.media.asset` a un eVar. |
+| Adobe Analytics (regola di elaborazione) | Crea una [regola di elaborazione](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/processing-rules/pr-overview) che associa `a.media.asset` a un eVar. |
 | Adobe Analytics (classificazione) | Classificazione della dimensione [Contenuto (ID)](content.md): Adobe crea automaticamente questa classificazione quando **[[!UICONTROL Video Metadata]](/help/reporting/media-reports-enable.md)** è abilitato per la suite di rapporti. È tua responsabilità popolare e mantenere i valori di classificazione. |
-| Customer Journey Analytics | [`mediaReporting.sessionDetails.assetID`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-reporting) |
+| Customer Journey Analytics | [`mediaReporting.sessionDetails.assetID`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-reporting) |
 | Feed di dati (regola di elaborazione) | `evar1`-`evar250`, `post_evar1`-`post_evar250` (l&#39;eVar a cui la regola di elaborazione mappa `a.media.asset`) |
 | Feed di dati (classificazione) | N/D: i feed di dati non supportano le classificazioni. |
+| Audience Manager | `c_contextdata.a.media.asset` |
 
 ## Approccio di classificazione
 
@@ -45,7 +46,7 @@ Questo approccio garantisce una relazione 1:1 tra ciascun ID contenuto e il rela
 
 ## Approccio per le regole di elaborazione
 
-Crea una [regola di elaborazione](https://experienceleague.adobe.com/it/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/processing-rules/pr-overview) che associa `a.media.asset` a un eVar. Questo approccio acquisisce l’ID risorsa come valore per hit senza richiedere la manutenzione della classificazione.
+Crea una [regola di elaborazione](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/processing-rules/pr-overview) che associa `a.media.asset` a un eVar. Questo approccio acquisisce l’ID risorsa come valore per hit senza richiedere la manutenzione della classificazione.
 
 Il compromesso è che si perde la relazione 1:1 garantita tra l&#39;ID risorsa e la dimensione [Contenuto (ID)](content.md) padre. Se l’implementazione invia valori non coerenti per lo stesso ID contenuto in più eventi, è possibile che più ID risorsa vengano visualizzati sotto lo stesso contenuto. L’aggiornamento di un valore si applica solo ai dati a partire dal momento dell’aggiornamento.
 

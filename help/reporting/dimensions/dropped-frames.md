@@ -3,10 +3,10 @@ title: Fotogrammi saltati (quota)
 description: Segnala il conteggio cumulativo di fotogrammi saltati per sessione.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 186437a8669d2375caa9056dadd367ad7135f652
+source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
 workflow-type: tm+mt
-source-wordcount: '177'
-ht-degree: 5%
+source-wordcount: '179'
+ht-degree: 6%
 
 ---
 
@@ -28,8 +28,9 @@ Il lettore aggiorna il valore `droppedFrames` dell&#39;oggetto QoE mentre accumu
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.qoe.droppedFrameCount` quando [[!UICONTROL Media Quality]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.qoeDataDetails.droppedFrames`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
-| Feed di dati | `videoqoedroppedframecountevar, post_videoqoedroppedframecountevar` |
+| Customer Journey Analytics | [`mediaReporting.qoeDataDetails.droppedFrames`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
+| Feed di dati | `videoqoedroppedframecountevar`, `post_videoqoedroppedframecountevar` |
+| Audience Manager | `c_contextdata.a.media.qoe.droppedFrameCount` |
 
 ## Elementi dimensionali
 

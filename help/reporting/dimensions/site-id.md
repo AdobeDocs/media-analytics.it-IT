@@ -3,10 +3,10 @@ title: ID sito
 description: Segnala l’identificatore del sito dell’annuncio per ogni annuncio.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 186437a8669d2375caa9056dadd367ad7135f652
+source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
 workflow-type: tm+mt
-source-wordcount: '144'
-ht-degree: 9%
+source-wordcount: '150'
+ht-degree: 10%
 
 ---
 
@@ -23,14 +23,15 @@ La dimensione **ID sito** riporta l&#39;identificatore del sito dell&#39;annunci
 
 ## Compilazione di questa dimensione
 
-L&#39;ID sito viene impostato dal lettore a ogni evento `media.adStart`.
+L&#39;ID sito viene impostato dal lettore a ogni evento [ad start](/help/implementation/events/ads/ad-start.md).
 
 | Sistema di reporting | Origine |
 | --- | --- |
-| Adobe Analytics | Crea una [regola di elaborazione](https://experienceleague.adobe.com/it/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/processing-rules/pr-overview) che associa `a.media.ad.site` a un eVar. |
-| Customer Journey Analytics | [`mediaReporting.advertisingDetails.siteID`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-details-reporting) |
+| Adobe Analytics | Crea una [regola di elaborazione](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/processing-rules/pr-overview) che associa `a.media.ad.site` a un eVar. |
+| Customer Journey Analytics | [`mediaReporting.advertisingDetails.siteID`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/advertising-details-reporting) |
 | Feed di dati | `evar1`-`evar250`, `post_evar1`-`post_evar250` (l&#39;eVar a cui la regola di elaborazione mappa `a.media.ad.site`) |
+| Audience Manager | `c_contextdata.a.media.ad.site` |
 
 ## Elementi dimensionali
 
-Ogni elemento rappresenta il valore letterale dell&#39;ID sito segnalato in `media.adStart`.
+Ogni elemento rappresenta il valore letterale dell&#39;ID sito segnalato all&#39;[inizio annuncio](/help/implementation/events/ads/ad-start.md).

@@ -3,9 +3,9 @@ title: Nome del lettore dell’annuncio
 description: Imposta il nome del lettore che genera gli annunci. Il lettore dell’annuncio può differire dal lettore del contenuto principale.
 feature: Streaming Media
 role: Developer
-source-git-commit: 97cae4771558fc3f4d9719074b2fcf3ba661f1cc
+source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '220'
 ht-degree: 5%
 
 ---
@@ -24,13 +24,14 @@ La variabile del nome del lettore dell&#39;annuncio identifica quale lettore ha 
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.ad.playerName` |
-| **Campo raccolta XDM** | [`mediaCollection.advertisingDetails.playerName`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-details-collection) |
+| **Campo raccolta XDM** | [`mediaCollection.advertisingDetails.playerName`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/advertising-details-collection) |
+| **Caratteristica Audience Manager** | `c_contextdata.a.media.ad.playerName` |
 | **Obbligatorio** | Sì |
-| **Inviato con** | Avvio annuncio, chiusura annuncio |
+| **Inviato con** | [Inizio annuncio](/help/implementation/events/ads/ad-start.md), chiusura annuncio |
 
 ## Web SDK
 
-Imposta `playerName` all&#39;interno di `mediaCollection.advertisingDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `playerName` all&#39;interno di `mediaCollection.advertisingDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {

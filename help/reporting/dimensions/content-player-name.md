@@ -3,10 +3,10 @@ title: Nome del lettore di contenuti
 description: Segnala quale lettore ha eseguito il rendering di ogni sessione multimediale.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 186437a8669d2375caa9056dadd367ad7135f652
+source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 5%
+source-wordcount: '192'
+ht-degree: 6%
 
 ---
 
@@ -28,8 +28,9 @@ Il nome del lettore viene impostato dal lettore all’inizio della sessione e pe
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.playerName` quando [[!UICONTROL Media Core]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.sessionDetails.playerName`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-reporting) |
-| Feed di dati | `videoplayername, post_videoplayername` |
+| Customer Journey Analytics | [`mediaReporting.sessionDetails.playerName`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-reporting) |
+| Feed di dati | `videoplayername`, `post_videoplayername` |
+| Audience Manager | `c_contextdata.a.media.playerName` |
 
 >[!IMPORTANT]
 >

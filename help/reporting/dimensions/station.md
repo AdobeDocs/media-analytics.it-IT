@@ -3,10 +3,10 @@ title: Stazione
 description: Segnala il nome o l'ID della stazione radio per il contenuto della trasmissione audio.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 186437a8669d2375caa9056dadd367ad7135f652
+source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 8%
+source-wordcount: '136'
+ht-degree: 10%
 
 ---
 
@@ -28,8 +28,9 @@ La stazione viene impostata dal lettore all&#39;inizio della sessione per il con
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.station` quando [[!UICONTROL Audio Metadata]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.sessionDetails.station`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-reporting) |
+| Customer Journey Analytics | [`mediaReporting.sessionDetails.station`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-reporting) |
 | Feed di dati | `videoaudiostation` |
+| Audience Manager | `c_contextdata.a.media.station` |
 
 ## Elementi dimensionali
 

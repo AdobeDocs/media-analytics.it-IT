@@ -3,10 +3,10 @@ title: Percorso file multimediale
 description: Acquisisce l’ID contenuto come variabile di traffico per l’analisi del percorso.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 186437a8669d2375caa9056dadd367ad7135f652
+source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 4%
+source-wordcount: '227'
+ht-degree: 5%
 
 ---
 
@@ -23,7 +23,12 @@ Il percorso multimediale viene derivato automaticamente dall’ID contenuto impo
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati di contesto `a.media.name` come variabile di traffico (prop) quando [[!UICONTROL Media Core]](/help/reporting/media-reports-enable.md) è abilitato. |
 | Customer Journey Analytics | N/D: utilizzare [Contenuto](content.md) per l&#39;analisi dei percorsi |
-| Feed di dati | `videopath, post_videopath` |
+| Feed di dati | `videopath`, `post_videopath` |
+| Audience Manager | `c_contextdata.a.media.name` |
+
+>[!NOTE]
+>
+>Le proprietà Adobe Analytics hanno un limite di 100 byte. I valori superiori a 100 byte vengono troncati.
 
 >[!IMPORTANT]
 >

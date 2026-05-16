@@ -3,10 +3,10 @@ title: Ad pod
 description: Segnala ogni interruzione pubblicitaria univoca, codificata da un ID pod generato automaticamente.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 186437a8669d2375caa9056dadd367ad7135f652
+source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 5%
+source-wordcount: '193'
+ht-degree: 7%
 
 ---
 
@@ -17,13 +17,14 @@ La dimensione **Ad pod** riporta ogni interruzione pubblicitaria univoca, segnal
 
 ## Compilazione di questa dimensione
 
-L&#39;ID del pod dell&#39;annuncio viene generato automaticamente da SDK quando `media.adBreakStart` viene attivato. Le implementazioni API dirette costruiscono l’ID dall’indice di interruzione e dall’ora di inizio o forniscono un ID pod personalizzato.
+L&#39;ID del pod dell&#39;annuncio viene generato automaticamente da SDK quando viene attivato un evento [inizio interruzione annuncio](/help/implementation/events/ads/ad-break-start.md). Le implementazioni API dirette costruiscono l’ID dall’indice di interruzione e dall’ora di inizio o forniscono un ID pod personalizzato.
 
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.ad.pod` quando [[!UICONTROL Media Ads]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.advertisingPodDetails.ID`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-pod-details-reporting) |
-| Feed di dati | `videoadpod, post_videoadpod` |
+| Customer Journey Analytics | [`mediaReporting.advertisingPodDetails.ID`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/advertising-pod-details-reporting) |
+| Feed di dati | `videoadpod`, `post_videoadpod` |
+| Audience Manager | N/D |
 
 ## Elementi dimensionali
 

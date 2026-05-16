@@ -3,9 +3,9 @@ title: Valutazione dei contenuti
 description: Impostare la classificazione del contenuto come definito dalle linee guida TV per genitori o dal sistema di classificazione regionale.
 feature: Streaming Media
 role: Developer
-source-git-commit: 97cae4771558fc3f4d9719074b2fcf3ba661f1cc
+source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '189'
 ht-degree: 6%
 
 ---
@@ -24,13 +24,14 @@ La variabile di valutazione del contenuto è la valutazione del pubblico definit
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.rating` |
-| **Campo raccolta XDM** | [`mediaCollection.sessionDetails.rating`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`mediaCollection.sessionDetails.rating`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Caratteristica Audience Manager** | `c_contextdata.a.media.rating` |
 | **Obbligatorio** | No |
-| **Inviato con** | Avvio della sessione, chiusura della sessione |
+| **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
 
 ## Web SDK
 
-Imposta `rating` all&#39;interno di `mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `rating` all&#39;interno di `mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {

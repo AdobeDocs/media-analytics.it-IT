@@ -3,9 +3,9 @@ title: Modifiche al bitrate (dimensione)
 description: Segnala il conteggio degli eventi di modifica del bitrate per sessione.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 186437a8669d2375caa9056dadd367ad7135f652
+source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
 workflow-type: tm+mt
-source-wordcount: '197'
+source-wordcount: '201'
 ht-degree: 5%
 
 ---
@@ -23,13 +23,14 @@ La dimensione **Modifiche bitrate** riporta il conteggio degli eventi di modific
 
 ## Compilazione di questa dimensione
 
-Il backend multimediale incrementa il conteggio su ogni evento `media.bitrateChange` ricevuto durante la sessione. Il valore viene segnalato nella chiamata di chiusura.
+Il backend multimediale incrementa il conteggio su ogni [evento di modifica del bitrate](/help/implementation/events/playback/bitrate-change.md) ricevuto durante la sessione. Il valore viene segnalato nella chiamata di chiusura.
 
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.qoe.bitrateChangeCount` quando [[!UICONTROL Media Quality]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.qoeDataDetails.bitrateChangeCount`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
-| Feed di dati | `videoqoebitratechangecountevar, post_videoqoebitratechangecountevar` |
+| Customer Journey Analytics | [`mediaReporting.qoeDataDetails.bitrateChangeCount`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
+| Feed di dati | `videoqoebitratechangecountevar`, `post_videoqoebitratechangecountevar` |
+| Audience Manager | `c_contextdata.a.media.qoe.bitrateChangeCount` |
 
 ## Elementi dimensionali
 

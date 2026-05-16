@@ -3,9 +3,9 @@ title: Nome del contenuto
 description: Imposta il nome descrittivo del contenuto (il titolo leggibile dagli utenti mostrato nella generazione rapporti).
 feature: Streaming Media
 role: Developer
-source-git-commit: 97cae4771558fc3f4d9719074b2fcf3ba661f1cc
+source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '199'
 ht-degree: 8%
 
 ---
@@ -24,13 +24,14 @@ La variabile del nome del contenuto è il titolo leggibile del contenuto, ad ese
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.friendlyName` |
-| **Campo raccolta XDM** | [`mediaCollection.sessionDetails.friendlyName`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`mediaCollection.sessionDetails.friendlyName`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Caratteristica Audience Manager** | `c_contextdata.a.media.friendlyName` |
 | **Obbligatorio** | No |
-| **Inviato con** | Avvio della sessione, chiusura della sessione |
+| **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
 
 ## Web SDK
 
-Imposta `friendlyName` all&#39;interno di `mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `friendlyName` all&#39;interno di `mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {

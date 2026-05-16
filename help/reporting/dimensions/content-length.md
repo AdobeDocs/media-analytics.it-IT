@@ -3,10 +3,10 @@ title: Durata del contenuto
 description: Riporta la durata totale in secondi di ciascuna sessione multimediale come impostato all’inizio della sessione.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 186437a8669d2375caa9056dadd367ad7135f652
+source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 6%
+source-wordcount: '227'
+ht-degree: 7%
 
 ---
 
@@ -28,12 +28,13 @@ La lunghezza del contenuto viene impostata dal lettore all’inizio della sessio
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.length` quando [[!UICONTROL Media Core]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.sessionDetails.length`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-reporting) |
-| Feed di dati | `videolength, post_videolength` |
+| Customer Journey Analytics | [`mediaReporting.sessionDetails.length`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-reporting) |
+| Feed di dati | `videolength`, `post_videolength` |
+| Audience Manager | `c_contextdata.a.media.length` |
 
 >[!NOTE]
 >
->In Adobe Analytics, questo valore corrisponde anche a una classificazione **Video length** nella dimensione [Content](content.md). L’utente è responsabile di compilare e mantenere tale classificazione separatamente. Customer Journey Analytics utilizza direttamente questa dimensione. Se necessario, puoi utilizzare [Value bucketing](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-dataviews/component-settings/value-bucketing).
+>In Adobe Analytics, questo valore corrisponde anche a una classificazione **Video length** nella dimensione [Content](content.md). L’utente è responsabile di compilare e mantenere tale classificazione separatamente. Customer Journey Analytics utilizza direttamente questa dimensione. Se necessario, puoi utilizzare [Value bucketing](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/component-settings/value-bucketing).
 
 >[!IMPORTANT]
 >

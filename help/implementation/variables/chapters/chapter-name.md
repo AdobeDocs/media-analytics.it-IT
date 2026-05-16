@@ -3,9 +3,9 @@ title: Nome del capitolo
 description: Imposta il nome descrittivo di ciascun capitolo in modo che la generazione rapporti a livello di capitolo possa suddividersi per titolo del capitolo.
 feature: Streaming Media
 role: Developer
-source-git-commit: 97cae4771558fc3f4d9719074b2fcf3ba661f1cc
+source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '187'
 ht-degree: 8%
 
 ---
@@ -24,13 +24,14 @@ La variabile del nome del capitolo è il titolo leggibile di un capitolo, ad ese
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.chapter.friendlyName` |
-| **Campo raccolta XDM** | [`mediaCollection.chapterDetails.friendlyName`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/chapter-details-collection) |
+| **Campo raccolta XDM** | [`mediaCollection.chapterDetails.friendlyName`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/chapter-details-collection) |
+| **Caratteristica Audience Manager** | `c_contextdata.a.media.chapter.friendlyName` |
 | **Obbligatorio** | No |
-| **Inviato con** | Inizio capitolo, chiusura capitolo |
+| **Inviato con** | [Inizio capitolo](/help/implementation/events/chapters/chapter-start.md), chiusura capitolo |
 
 ## Web SDK
 
-Imposta `friendlyName` all&#39;interno di `mediaCollection.chapterDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `friendlyName` all&#39;interno di `mediaCollection.chapterDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {

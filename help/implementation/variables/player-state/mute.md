@@ -3,9 +3,9 @@ title: Disattiva audio
 description: Monitora quando il visualizzatore disattiva e riattiva l’audio in modo che il backend possa segnalare il coinvolgimento della disattivazione audio.
 feature: Streaming Media
 role: Developer
-source-git-commit: 97cae4771558fc3f4d9719074b2fcf3ba661f1cc
+source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '264'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 >[!BEGINSHADEBOX]
 
-*In questa pagina viene illustrata la raccolta dati per lo stato **Disattiva audio**&#x200B;del lettore. Vedi [Flussi interessati dalla disattivazione audio](/help/reporting/metrics/mute-streams-impacted.md), [Conteggi disattivazione audio](/help/reporting/metrics/mute-count.md) e [Durata totale disattivazione audio](/help/reporting/metrics/mute-total-duration.md) per le metriche di reporting corrispondenti.*
+*In questa pagina viene illustrata la raccolta dati per lo stato **Disattiva audio**del lettore. Vedi [Flussi interessati dalla disattivazione audio](/help/reporting/metrics/mute-streams-impacted.md), [Conteggi disattivazione audio](/help/reporting/metrics/mute-count.md) e [Durata totale disattivazione audio](/help/reporting/metrics/mute-total-duration.md) per le metriche di reporting corrispondenti.*
 
 >[!ENDSHADEBOX]
 
@@ -24,13 +24,14 @@ Lo stato di disattivazione audio del lettore registra quando il visualizzatore d
 | Proprietà | Valore |
 | --- | --- |
 | **Variabili di dati di contesto** | `a.media.states.mute.set`, `a.media.states.mute.count`, `a.media.states.mute.time` |
-| **Campo raccolta XDM** | [`mediaCollection.statesStart[]`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/media-collection-details) e [`mediaCollection.statesEnd[]`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/media-collection-details) (voci con `name: "mute"`) |
+| **Campo raccolta XDM** | [`mediaCollection.statesStart[]`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-collection-details) e [`mediaCollection.statesEnd[]`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-collection-details) (voci con `name: "mute"`) |
+| **Caratteristiche Audience Manager** | `c_contextdata.a.media.states.mute.set`, `c_contextdata.a.media.states.mute.count`, `c_contextdata.a.media.states.mute.time` |
 | **Obbligatorio** | No |
-| **Inviato con** | Inizio stato, fine stato |
+| **Inviato con** | [Inizio stato](/help/implementation/events/player-state/state-start.md), [fine stato](/help/implementation/events/player-state/state-end.md) |
 
 ## Web SDK
 
-Utilizza [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) per inviare un evento `media.statesUpdate` con lo stato aggiunto a `statesStart`:
+Utilizza [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) per inviare un evento `media.statesUpdate` con lo stato aggiunto a `statesStart`:
 
 ```javascript
 alloy("sendEvent", {

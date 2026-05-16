@@ -3,9 +3,9 @@ title: ID campagna
 description: Imposta l’identificatore della campagna per ogni annuncio in modo che il coinvolgimento possa essere aggregato per campagna.
 feature: Streaming Media
 role: Developer
-source-git-commit: 97cae4771558fc3f4d9719074b2fcf3ba661f1cc
+source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
 workflow-type: tm+mt
-source-wordcount: '197'
+source-wordcount: '200'
 ht-degree: 8%
 
 ---
@@ -24,13 +24,14 @@ La variabile ID campagna identifica la campagna pubblicitaria a cui appartiene i
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.ad.campaign` |
-| **Campo raccolta XDM** | [`mediaCollection.advertisingDetails.campaignID`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-details-collection) |
+| **Campo raccolta XDM** | [`mediaCollection.advertisingDetails.campaignID`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/advertising-details-collection) |
+| **Caratteristica Audience Manager** | `c_contextdata.a.media.ad.campaign` |
 | **Obbligatorio** | No |
-| **Inviato con** | Avvio annuncio, chiusura annuncio |
+| **Inviato con** | [Inizio annuncio](/help/implementation/events/ads/ad-start.md), chiusura annuncio |
 
 ## Web SDK
 
-Imposta `campaignID` all&#39;interno di `mediaCollection.advertisingDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `campaignID` all&#39;interno di `mediaCollection.advertisingDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {

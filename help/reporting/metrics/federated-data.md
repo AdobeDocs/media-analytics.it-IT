@@ -3,9 +3,9 @@ title: Dati federati
 description: Conta le sessioni ricevute tramite una condivisione di dati federata anziché tramite l’implementazione di un cliente.
 feature: Metrics
 role: User, Admin
-source-git-commit: 186437a8669d2375caa9056dadd367ad7135f652
+source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
 workflow-type: tm+mt
-source-wordcount: '214'
+source-wordcount: '216'
 ht-degree: 6%
 
 ---
@@ -23,7 +23,7 @@ Per ulteriori informazioni, vedi il caso d&#39;uso [Federated Media](/help/use-c
 
 >[!TIP]
 >
->Se si desidera utilizzare i dati federati come dimensione, creare una [Regola di elaborazione](https://experienceleague.adobe.com/it/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/processing-rules/pr-overview) che mappi la variabile di dati di contesto `a.media.federated` a un eVar.
+>Se si desidera utilizzare i dati federati come dimensione, creare una [Regola di elaborazione](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/processing-rules/pr-overview) che mappi la variabile di dati di contesto `a.media.federated` a un eVar.
 
 ## Come è calcolata questa metrica
 
@@ -32,5 +32,6 @@ Il backend multimediale imposta `mediaReporting.sessionDetails.isFederated = tru
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.federated` quando [[!UICONTROL Video Metadata]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.sessionDetails.isFederated`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-reporting) |
-| Feed di dati | `event_list`, `post_event_list` (vedi ricerca [`event.tsv`](https://experienceleague.adobe.com/it/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-contents#lookup-files)) |
+| Customer Journey Analytics | [`mediaReporting.sessionDetails.isFederated`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-reporting) |
+| Feed di dati | `event_list`, `post_event_list` (vedi ricerca [`event.tsv`](https://experienceleague.adobe.com/en/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-contents#lookup-files)) |
+| Audience Manager | `c_contextdata.a.media.federated` |

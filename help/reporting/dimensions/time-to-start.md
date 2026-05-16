@@ -3,10 +3,10 @@ title: Tempo di avvio (dimensione)
 description: Segnala il tempo trascorso prima del rendering del primo fotogramma.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 186437a8669d2375caa9056dadd367ad7135f652
+source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 5%
+source-wordcount: '186'
+ht-degree: 6%
 
 ---
 
@@ -28,8 +28,9 @@ Il lettore imposta `timeToStart` sull&#39;oggetto QoE prima dell&#39;avvio della
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.qoe.timeToStart` quando [[!UICONTROL Media Quality]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.qoeDataDetails.timeToStart`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
-| Feed di dati | `videoqoetimetostartevar, post_videoqoetimetostartevar` |
+| Customer Journey Analytics | [`mediaReporting.qoeDataDetails.timeToStart`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
+| Feed di dati | `videoqoetimetostartevar`, `post_videoqoetimetostartevar` |
+| Audience Manager | `c_contextdata.a.media.qoe.timeToStart` |
 
 ## Elementi dimensionali
 

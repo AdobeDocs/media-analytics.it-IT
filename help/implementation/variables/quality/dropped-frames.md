@@ -3,9 +3,9 @@ title: Fotogrammi persi
 description: Imposta il conteggio corrente dei fotogrammi saltati sull'oggetto QoE in modo che il backend possa riportare la qualità del rilascio dei fotogrammi.
 feature: Streaming Media
 role: Developer
-source-git-commit: 97cae4771558fc3f4d9719074b2fcf3ba661f1cc
+source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '215'
 ht-degree: 5%
 
 ---
@@ -24,13 +24,14 @@ La variabile dei fotogrammi saltati è il conteggio corrente dei fotogrammi salt
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.qoe.droppedFrameCount` |
-| **Campo raccolta XDM** | [`mediaCollection.qoeDataDetails.droppedFrames`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-collection) |
+| **Campo raccolta XDM** | [`mediaCollection.qoeDataDetails.droppedFrames`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/qoe-data-details-collection) |
+| **Caratteristica Audience Manager** | `c_contextdata.a.media.qoe.droppedFrameCount` |
 | **Obbligatorio** | No |
-| **Inviato con** | Eventi di qualità, chiusura sessione |
+| **Inviato con** | Eventi di qualità ([modifica bitrate](/help/implementation/events/playback/bitrate-change.md), [avvio buffer](/help/implementation/events/playback/buffer-start.md), [errore](/help/implementation/events/error.md)), chiusura sessione |
 
 ## Web SDK
 
-Imposta `droppedFrames` all&#39;interno di `mediaCollection.qoeDataDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `droppedFrames` all&#39;interno di `mediaCollection.qoeDataDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {

@@ -3,9 +3,9 @@ title: Ora di inizio dell’interruzione annuncio
 description: Imposta l’ora di inizio (offset) dell’interruzione pubblicitaria all’interno del contenuto, in secondi.
 feature: Streaming Media
 role: Developer
-source-git-commit: 97cae4771558fc3f4d9719074b2fcf3ba661f1cc
+source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '210'
 ht-degree: 5%
 
 ---
@@ -24,13 +24,14 @@ La variabile del tempo di inizio dell’interruzione pubblicitaria è lo scostam
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.ad.podSecond` |
-| **Campo raccolta XDM** | [`mediaCollection.advertisingPodDetails.offset`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-pod-details-collection) |
+| **Campo raccolta XDM** | [`mediaCollection.advertisingPodDetails.offset`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/advertising-pod-details-collection) |
+| **Caratteristica Audience Manager** | `c_contextdata.a.media.ad.podSecond` |
 | **Obbligatorio** | Sì |
-| **Inviato con** | Avvio annuncio, chiusura annuncio |
+| **Inviato con** | [Inizio interruzione annuncio](/help/implementation/events/ads/ad-break-start.md), chiusura annuncio |
 
 ## Web SDK
 
-Imposta `offset` all&#39;interno di `mediaCollection.advertisingPodDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `offset` all&#39;interno di `mediaCollection.advertisingPodDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {

@@ -3,10 +3,10 @@ title: Tipo di spettacolo
 description: Segnala il formato del contenuto (episodio completo, anteprima, clip o altro).
 feature: Dimensions
 role: User, Admin
-source-git-commit: 186437a8669d2375caa9056dadd367ad7135f652
+source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 12%
+source-wordcount: '141'
+ht-degree: 13%
 
 ---
 
@@ -28,8 +28,9 @@ Il tipo di spettacolo è impostato dal lettore all’inizio della sessione.
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.type` quando [[!UICONTROL Video Metadata]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.sessionDetails.showType`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-reporting) |
-| Feed di dati | `videoshowtype, post_videoshowtype` |
+| Customer Journey Analytics | [`mediaReporting.sessionDetails.showType`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-reporting) |
+| Feed di dati | `videoshowtype`, `post_videoshowtype` |
+| Audience Manager | `c_contextdata.a.media.type` |
 
 ## Elementi dimensionali
 

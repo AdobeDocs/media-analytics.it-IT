@@ -3,10 +3,10 @@ title: Etichetta
 description: Segnala l’etichetta discografica che ha rilasciato il contenuto audio.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 186437a8669d2375caa9056dadd367ad7135f652
+source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
 workflow-type: tm+mt
-source-wordcount: '130'
-ht-degree: 9%
+source-wordcount: '132'
+ht-degree: 10%
 
 ---
 
@@ -28,8 +28,9 @@ L’etichetta viene impostata dal lettore all’inizio della sessione per il con
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.label` quando [[!UICONTROL Audio Metadata]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.sessionDetails.label`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-reporting) |
+| Customer Journey Analytics | [`mediaReporting.sessionDetails.label`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-reporting) |
 | Feed di dati | `videoaudiolabel` |
+| Audience Manager | `c_contextdata.a.media.label` |
 
 ## Elementi dimensionali
 

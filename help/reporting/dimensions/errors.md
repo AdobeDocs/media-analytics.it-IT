@@ -3,9 +3,9 @@ title: Errori
 description: Segnala il numero di eventi di errore per sessione.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 186437a8669d2375caa9056dadd367ad7135f652
+source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
 workflow-type: tm+mt
-source-wordcount: '173'
+source-wordcount: '231'
 ht-degree: 6%
 
 ---
@@ -28,9 +28,14 @@ Il backend multimediale incrementa il conteggio in base a ogni errore segnalato 
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.qoe.errorCount` quando [[!UICONTROL Media Quality]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.qoeDataDetails.errorCount`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
-| Feed di dati | `videoqoeerrorcountevar, post_videoqoeerrorcountevar` |
+| Customer Journey Analytics | [`mediaReporting.qoeDataDetails.errorCount`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
+| Feed di dati | `videoqoeerrorcountevar`, `post_videoqoeerrorcountevar` |
+| Audience Manager | `c_contextdata.a.media.qoe.errorCount` |
 
 ## Elementi dimensionali
 
 Ogni elemento è il valore letterale del conteggio degli errori segnalato nella chiamata di chiusura. Per il reporting booleano a livello di sessione (se si è verificato un errore), utilizza [Flussi interessati dall&#39;errore](/help/reporting/metrics/error-impacted-streams.md). Per ID di errore univoci, utilizzare [ID di errore esterni](external-error-ids.md) e [ID di errore del lettore SDK](player-sdk-error-ids.md).
+
+>[!NOTE]
+>
+>Se utilizzi il precedente SDK Heartbeat (Media SDK 1.5.x-2.x), gli ID di errore generati internamente da SDK vengono raccolti automaticamente nella chiave di dati contestuali `a.media.qoe.mediaSdkErrors` e accessibili in Adobe Analytics tramite una regola di elaborazione personalizzata. La caratteristica Audience Manager è `c_contextdata.a.media.qoe.mediaSdkErrors`. Questo campo non è applicabile alle implementazioni API Media Collection o Media Edge API.

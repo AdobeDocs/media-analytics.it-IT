@@ -3,10 +3,10 @@ title: Eventi buffer (dimensione)
 description: Riporta il numero di eventi di buffering per sessione.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 186437a8669d2375caa9056dadd367ad7135f652
+source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
 workflow-type: tm+mt
-source-wordcount: '169'
-ht-degree: 5%
+source-wordcount: '171'
+ht-degree: 7%
 
 ---
 
@@ -28,8 +28,9 @@ Il backend multimediale incrementa il conteggio ogni volta che il lettore entra 
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.qoe.bufferCount` quando [[!UICONTROL Media Quality]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.qoeDataDetails.bufferCount`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
-| Feed di dati | `videoqoebuffercountevar, post_videoqoebuffercountevar` |
+| Customer Journey Analytics | [`mediaReporting.qoeDataDetails.bufferCount`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
+| Feed di dati | `videoqoebuffercountevar`, `post_videoqoebuffercountevar` |
+| Audience Manager | `c_contextdata.a.media.qoe.bufferCount` |
 
 ## Elementi dimensionali
 

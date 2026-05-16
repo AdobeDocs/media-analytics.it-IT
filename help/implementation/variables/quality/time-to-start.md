@@ -3,9 +3,9 @@ title: Tempo di avvio
 description: Imposta il tempo di avvio del lettore, in millisecondi, in modo che il backend possa riportare la qualità del tempo al primo fotogramma.
 feature: Streaming Media
 role: Developer
-source-git-commit: 97cae4771558fc3f4d9719074b2fcf3ba661f1cc
+source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '216'
 ht-degree: 5%
 
 ---
@@ -24,13 +24,14 @@ La variabile &quot;time to start&quot; è il tempo trascorso, in millisecondi, t
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.qoe.timeToStart` |
-| **Campo raccolta XDM** | [`mediaCollection.qoeDataDetails.timeToStart`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-collection) |
+| **Campo raccolta XDM** | [`mediaCollection.qoeDataDetails.timeToStart`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/qoe-data-details-collection) |
+| **Caratteristica Audience Manager** | `c_contextdata.a.media.qoe.timeToStart` |
 | **Obbligatorio** | No |
-| **Inviato con** | Avvio della sessione, chiusura della sessione |
+| **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
 
 ## Web SDK
 
-Imposta `timeToStart` all&#39;interno di `mediaCollection.qoeDataDetails` su `media.sessionStart` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `timeToStart` all&#39;interno di `mediaCollection.qoeDataDetails` su `media.sessionStart` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
