@@ -17,7 +17,7 @@ La metrica **Flussi interessati dalla sospensione** conta le sessioni in cui il 
 
 ## Come è calcolata questa metrica
 
-Il backend multimediale imposta `mediaReporting.sessionDetails.hasPauseImpactedStreams = true` la prima volta che viene ricevuto un evento di [pausa ](/help/implementation/events/playback/pause-start.md) durante la sessione. La metrica viene segnalata nella chiamata di chiusura.
+Il backend multimediale imposta `mediaReporting.sessionDetails.hasPauseImpactedStreams = true` la prima volta che viene ricevuto un evento di [pausa &#x200B;](/help/implementation/events/playback/pause-start.md) durante la sessione. La metrica viene segnalata nella chiamata di chiusura.
 
 | Sistema di reporting | Origine |
 | --- | --- |
