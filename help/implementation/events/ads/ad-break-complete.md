@@ -24,7 +24,7 @@ L’evento di completamento dell’interruzione pubblicitaria segnala che tutti 
 
 ## Web SDK
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.adBreakComplete"`:
+Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.adBreakComplete"`:
 
 ```javascript
 alloy("sendEvent", {

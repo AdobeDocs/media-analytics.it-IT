@@ -20,7 +20,7 @@ L’evento di completamento della sessione segnala che il visualizzatore ha ragg
 
 ## Web SDK
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.sessionComplete"`:
+Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.sessionComplete"`:
 
 ```javascript
 alloy("sendEvent", {

@@ -22,7 +22,7 @@ Senza una fine di sessione esplicita, una sessione si chiude automaticamente dop
 
 ## Web SDK
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.sessionEnd"`:
+Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.sessionEnd"`:
 
 ```javascript
 alloy("sendEvent", {

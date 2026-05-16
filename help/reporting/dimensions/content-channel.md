@@ -28,7 +28,7 @@ Il canale viene impostato dal lettore all’inizio della sessione e persiste per
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.channel` quando [[!UICONTROL Media Core]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.sessionDetails.channel`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-reporting) |
+| Customer Journey Analytics | [`mediaReporting.sessionDetails.channel`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-reporting) |
 | Feed di dati | `videochannel`, `post_videochannel` |
 | Audience Manager | `c_contextdata.a.media.channel` |
 

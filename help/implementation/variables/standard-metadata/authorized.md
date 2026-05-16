@@ -24,14 +24,14 @@ La variabile authorized contrassegna una sessione il cui utente è stato autoriz
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.pass.auth` |
-| **Campo raccolta XDM** | [`mediaCollection.sessionDetails.authorized`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`mediaCollection.sessionDetails.authorized`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.pass.auth` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
 
 ## Web SDK
 
-Imposta `authorized` all&#39;interno di `mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `authorized` all&#39;interno di `mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {

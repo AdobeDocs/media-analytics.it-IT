@@ -24,14 +24,14 @@ La variabile MVPD (Multichannel Video Programming Distribor) è il provider via 
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.pass.mvpd` |
-| **Campo raccolta XDM** | [`mediaCollection.sessionDetails.mvpd`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`mediaCollection.sessionDetails.mvpd`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.pass.mvpd` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
 
 ## Web SDK
 
-Imposta `mvpd` all&#39;interno di `mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `mvpd` all&#39;interno di `mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {

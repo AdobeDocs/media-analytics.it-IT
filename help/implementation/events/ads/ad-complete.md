@@ -24,7 +24,7 @@ L’evento di completamento dell’annuncio segnala che un singolo annuncio ha t
 
 ## Web SDK
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.adComplete"`:
+Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.adComplete"`:
 
 ```javascript
 alloy("sendEvent", {

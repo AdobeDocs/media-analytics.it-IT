@@ -24,14 +24,14 @@ La variabile URL creativa è l’URL della creatività dell’annuncio. Utilizza
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.ad.creativeURL` |
-| **Campo raccolta XDM** | [`mediaCollection.advertisingDetails.creativeURL`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/advertising-details-collection) |
+| **Campo raccolta XDM** | [`mediaCollection.advertisingDetails.creativeURL`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.ad.creativeURL` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio annuncio](/help/implementation/events/ads/ad-start.md), chiusura annuncio |
 
 ## Web SDK
 
-Imposta `creativeURL` all&#39;interno di `mediaCollection.advertisingDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `creativeURL` all&#39;interno di `mediaCollection.advertisingDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {

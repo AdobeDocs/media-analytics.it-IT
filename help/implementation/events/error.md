@@ -22,7 +22,7 @@ La proprietà `errorDetails.source` accetta solo due valori: `player` (errori or
 
 ## Web SDK
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.error"` e il `errorDetails` richiesto:
+Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.error"` e il `errorDetails` richiesto:
 
 ```javascript
 alloy("sendEvent", {

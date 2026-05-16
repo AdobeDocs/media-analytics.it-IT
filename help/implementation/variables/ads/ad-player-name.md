@@ -24,14 +24,14 @@ La variabile del nome del lettore dell&#39;annuncio identifica quale lettore ha 
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.ad.playerName` |
-| **Campo raccolta XDM** | [`mediaCollection.advertisingDetails.playerName`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/advertising-details-collection) |
+| **Campo raccolta XDM** | [`mediaCollection.advertisingDetails.playerName`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.ad.playerName` |
 | **Obbligatorio** | Sì |
 | **Inviato con** | [Inizio annuncio](/help/implementation/events/ads/ad-start.md), chiusura annuncio |
 
 ## Web SDK
 
-Imposta `playerName` all&#39;interno di `mediaCollection.advertisingDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `playerName` all&#39;interno di `mediaCollection.advertisingDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {

@@ -24,14 +24,14 @@ La variabile dell&#39;inserzionista è l&#39;azienda o il brand visualizzato nel
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.ad.advertiser` |
-| **Campo raccolta XDM** | [`mediaCollection.advertisingDetails.advertiser`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/advertising-details-collection) |
+| **Campo raccolta XDM** | [`mediaCollection.advertisingDetails.advertiser`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.ad.advertiser` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio annuncio](/help/implementation/events/ads/ad-start.md), chiusura annuncio |
 
 ## Web SDK
 
-Imposta `advertiser` all&#39;interno di `mediaCollection.advertisingDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `advertiser` all&#39;interno di `mediaCollection.advertisingDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {

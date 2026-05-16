@@ -24,7 +24,7 @@ L’evento di avvio della pausa segnala che l’utente ha messo in pausa la ripr
 
 ## Web SDK
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.pauseStart"`:
+Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.pauseStart"`:
 
 ```javascript
 alloy("sendEvent", {
