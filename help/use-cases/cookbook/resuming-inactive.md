@@ -6,10 +6,17 @@ exl-id: ee4cf7f5-5788-4d35-a04d-4ed714ccd663
 feature: Streaming Media
 role: User, Admin, Developer
 TQID: https://experienceleague.adobe.com/KT7NfrYlagrMwAjsrbSNR8YUbj5d-ihU8AfJ6wcbgOA
-product_v2: id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-feature_v2: id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2:
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2:
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: a2c91ef63fa9320a0e47f338ce4d53b9b8e977e3
 workflow-type: tm+mt
 source-wordcount: 398
@@ -37,7 +44,7 @@ Lo stesso meccanismo di ripresa che gestisce la continuazione della sessione in 
 **Come implementare:**
 
 1. Sul dispositivo **sorgente** (ad esempio, il telefono), chiamare `trackSessionEnd` quando il visualizzatore avvia il cast. Non chiamare `trackComplete`: il contenuto non è terminato, si sta spostando su un altro dispositivo.
-2. Sul dispositivo di destinazione **** (ad esempio, Chromecast), chiamare `trackSessionStart` con il flag di ripresa impostato su `true` e gli stessi metadati di contenuto (nome, ID, lunghezza) utilizzati nel dispositivo di origine. Passa la posizione della testina di riproduzione nel punto in cui il visualizzatore si è fermato sul dispositivo sorgente.
+2. Sul dispositivo di destinazione **&#x200B;**&#x200B;(ad esempio, Chromecast), chiamare `trackSessionStart` con il flag di ripresa impostato su `true` e gli stessi metadati di contenuto (nome, ID, lunghezza) utilizzati nel dispositivo di origine. Passa la posizione della testina di riproduzione nel punto in cui il visualizzatore si è fermato sul dispositivo sorgente.
 3. Se in seguito il visualizzatore restituisce la riproduzione al dispositivo di origine, ripetere lo stesso pattern: `trackSessionEnd` sulla destinazione e `trackSessionStart` con il flag di ripresa sull&#39;origine.
 
 L&#39;impostazione del flag di ripresa fa sì che Adobe Analytics incrementi [I contenuti riprendano](/help/reporting/metrics/content-resumes.md) invece di [Avvii file multimediali](/help/reporting/metrics/media-starts.md) per la seconda e le successive parti del passaggio di consegne. Poiché non esiste un meccanismo integrato per condividere l’ID sessione tra le istanze di SDK, il flag di ripresa è una dichiarazione lato client che viene trasmessa in base alla logica dell’applicazione quando si sa che il visualizzatore continua una sessione precedente.
