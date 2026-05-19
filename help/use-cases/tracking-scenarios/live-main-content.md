@@ -6,26 +6,15 @@ exl-id: f6a00ffd-da6a-4d62-92df-15d119cfc426
 feature: Streaming Media
 role: User, Admin, Developer
 TQID: https://experienceleague.adobe.com/oOshJZEQmXqgNh5l10-qhLMO8dmph6Tz9mpH0a4FePU
-product_v2:
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-feature_v2:
-  - id: b069d60e-95f3-44d6-95a8-ddc862a4bc38
-  - id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7a
-  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-subfeature_v2:
-  - id: bcc784b7-4ade-4c84-96fa-2f7631b1e5fd
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
+product_v2: id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2: id: b069d60e-95f3-44d6-95a8-ddc862a4bc38id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7aid: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: bcc784b7-4ade-4c84-96fa-2f7631b1e5fd
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: a2c91ef63fa9320a0e47f338ce4d53b9b8e977e3
 workflow-type: tm+mt
-source-wordcount: 588
-ht-degree: 98%
+source-wordcount: 747
+ht-degree: 77%
 
 ---
 
@@ -37,7 +26,7 @@ In questo scenario, esiste una risorsa live senza annunci riprodotta per 40 seco
 
 | Trigger | metodo Heartbeat | Chiamate di rete | Note   |
 |---|---|---|---|
-| Clic utente **[!UICONTROL Play]** | `trackSessionStart` | Inizio contenuto Analytics, inizio contenuto Heartbeat | Questo può essere un clic dell’utente **[!UICONTROL Play]** o un evento di riproduzione automatica. |
+| L’utente fa clic su **[!UICONTROL Play]** | `trackSessionStart` | Inizio contenuto Analytics, inizio contenuto Heartbeat | Questo può essere un clic dell’utente **[!UICONTROL Play]** o un evento di riproduzione automatica. |
 | Viene riprodotto il primo fotogramma del file multimediale. | `trackPlay` | Riproduzione di contenuti Heartbeat | Questo metodo attiva il timer. Gli heartbeat vengono inviati ogni 10 secondi, a condizione che la riproduzione continui. |
 | Il contenuto viene riprodotto. |  | Heartbeat dei contenuti |  |
 | La sessione viene terminata. | `trackSessionEnd` |  | `SessionEnd` indica la fine di una sessione di visualizzazione. Questa API deve essere chiamata anche se l’utente non utilizza i file multimediali per il completamento. |
@@ -87,6 +76,17 @@ Ad esempio, supponiamo che un evento di streaming LIVE inizi a mezzanotte e veng
 ### In pausa
 
 Quando un utente mette in pausa la riproduzione, deve essere applicata la stessa logica della “testina di riproduzione live” applicata all&#39;inizio della riproduzione. Quando l’utente ricomincia a riprodurre lo streaming LIVE, è necessario impostare il valore `l:event:playhead` in base al nuovo numero di secondi dalla mezzanotte UTC, _non_ dal punto in cui l’utente ha messo in pausa lo streaming LIVE.
+
+## Tracciamento delle modifiche del programma in un flusso live {#live-program-changes}
+
+Quando un flusso in diretta passa da un programma o una presentazione a un altro (un modello comune per le proprietà di trasmissione e cavo), ogni programma deve essere tracciato come sessione separata. Questo consente di generare rapporti sul coinvolgimento e sul tempo trascorso per singolo titolo, anziché attribuire tutte le visualizzazioni a un singolo flusso continuo.
+
+**Approccio consigliato:**
+
+1. Al termine del programma corrente (o quando il lettore segnala un evento di modifica del programma), chiamare `trackSessionEnd` per chiudere la sessione corrente.
+2. Quando inizia il nuovo programma, chiamare `trackSessionStart` con i metadati del nuovo programma (nome, ID, tipo di contenuto e così via).
+
+Il tracciamento di ogni programma come propria sessione mantiene [il tempo di contenuto trascorso](/help/reporting/metrics/content-time-spent.md), [gli indicatori di avanzamento](/help/reporting/metrics/progress-markers.md) e le metriche di completamento definite nell&#39;ambito del singolo programma e consente di creare rapporti accurati sul pubblico per titolo. Utilizza `trackSessionEnd` anziché `trackComplete` per la transizione: `trackComplete` segnala che il visualizzatore ha guardato intenzionalmente la fine di un contenuto discreto, mentre `trackSessionEnd` è corretto qui perché il flusso continua con una programmazione diversa anziché terminare.
 
 ## Codice di esempio {#sample-code}
 

@@ -3,9 +3,9 @@ title: Flussi interessati da in focus
 description: Conta le sessioni in cui il lettore era a fuoco almeno una volta.
 feature: Metrics
 role: User, Admin
-source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
+source-git-commit: 4c4f1cc9e1c49044474e4ff34207796b2a814553
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '174'
 ht-degree: 8%
 
 ---
@@ -23,11 +23,11 @@ La metrica **Flussi interessati da in focus** conta le sessioni in cui il lettor
 
 ## Come è calcolata questa metrica
 
-Il backend multimediale imposta il flag `isSet` in `mediaReporting.states[]` per la voce `inFocus` su `true` la prima volta che viene ricevuto un evento `media.statesUpdate` con `inFocus` in `statesStart`. La metrica viene segnalata nella chiamata di chiusura.
+Il backend multimediale imposta questo flag la prima volta che viene ricevuto un evento di avvio dello stato attivo durante la sessione. La metrica viene segnalata nella chiamata di chiusura.
 
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.states.infocus.set` quando [[!UICONTROL Player State Tracking]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | Voce [`mediaReporting.states[]`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/media-reporting-details) in cui `name = "inFocus"`, campo `isSet` |
-| Feed di dati | `event_list`, `post_event_list` (vedi ricerca [`event.tsv`](https://experienceleague.adobe.com/it/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-contents#lookup-files)) |
+| Customer Journey Analytics | Voce [`mediaReporting.states[]`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-reporting-details) in cui `name = "inFocus"`, campo `isSet` |
+| Feed di dati | `event_list`, `post_event_list` (vedi ricerca [`event.tsv`](https://experienceleague.adobe.com/en/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-contents#lookup-files)) |
 | Audience Manager | `c_contextdata.a.media.states.infocus.set` |

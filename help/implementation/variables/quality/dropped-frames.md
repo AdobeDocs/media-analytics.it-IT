@@ -3,10 +3,10 @@ title: Fotogrammi persi
 description: Imposta il conteggio corrente dei fotogrammi saltati sull'oggetto QoE in modo che il backend possa riportare la qualità del rilascio dei fotogrammi.
 feature: Streaming Media
 role: Developer
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: a2c91ef63fa9320a0e47f338ce4d53b9b8e977e3
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 5%
+source-wordcount: '265'
+ht-degree: 4%
 
 ---
 
@@ -21,17 +21,21 @@ ht-degree: 5%
 
 La variabile dei fotogrammi saltati è il conteggio corrente dei fotogrammi saltati dal lettore durante la sessione. Impostalo sull’oggetto QoE e aggiorna il valore ogni volta che il lettore segnala nuove cadute. Il backend riporta il valore più recente alla chiusura della sessione.
 
+>[!NOTE]
+>
+>Passa sempre il **totale cumulativo** dei fotogrammi saltati per l&#39;intera sessione fino a quel punto, non un delta per intervallo. Se si reimposta il valore su `0` tra gli aggiornamenti, il backend riceve `0` come valore finale e segnala zero fotogrammi saltati per la sessione indipendentemente da ciò che è stato effettivamente saltato in precedenza.
+
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.qoe.droppedFrameCount` |
-| **Campo raccolta XDM** | [`mediaCollection.qoeDataDetails.droppedFrames`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-collection) |
+| **Campo raccolta XDM** | [`mediaCollection.qoeDataDetails.droppedFrames`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/qoe-data-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.qoe.droppedFrameCount` |
 | **Obbligatorio** | No |
 | **Inviato con** | Eventi di qualità ([modifica bitrate](/help/implementation/events/playback/bitrate-change.md), [avvio buffer](/help/implementation/events/playback/buffer-start.md), [errore](/help/implementation/events/error.md)), chiusura sessione |
 
 ## Web SDK
 
-Imposta `droppedFrames` all&#39;interno di `mediaCollection.qoeDataDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `droppedFrames` all&#39;interno di `mediaCollection.qoeDataDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {

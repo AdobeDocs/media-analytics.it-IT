@@ -3,9 +3,9 @@ title: Conteggio immagini nell’immagine (Picture in Picture)
 description: Segnala quante volte il visualizzatore è entrato "picture-in-picture" durante una sessione.
 feature: Metrics
 role: User, Admin
-source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
+source-git-commit: 4c4f1cc9e1c49044474e4ff34207796b2a814553
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '178'
 ht-degree: 8%
 
 ---
@@ -23,11 +23,11 @@ La metrica **Conteggi immagine nell&#39;immagine** indica quante volte il visual
 
 ## Come è calcolata questa metrica
 
-Il backend multimediale incrementa il campo `count` nella voce `pictureInPicture` di `mediaReporting.states[]` a ogni evento di avvio dello stato immagine nell&#39;immagine. La metrica viene segnalata nella chiamata di chiusura.
+Il backend multimediale incrementa questo conteggio su ogni evento di avvio dello stato immagine nell’immagine. La metrica viene segnalata nella chiamata di chiusura.
 
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.states.pictureinpicture.count` quando [[!UICONTROL Player State Tracking]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | Voce [`mediaReporting.states[]`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/media-reporting-details) in cui `name = "pictureInPicture"`, campo `count` |
-| Feed di dati | `event_list`, `post_event_list` (vedi ricerca [`event.tsv`](https://experienceleague.adobe.com/it/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-contents#lookup-files)) |
+| Customer Journey Analytics | Voce [`mediaReporting.states[]`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-reporting-details) in cui `name = "pictureInPicture"`, campo `count` |
+| Feed di dati | `event_list`, `post_event_list` (vedi ricerca [`event.tsv`](https://experienceleague.adobe.com/en/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-contents#lookup-files)) |
 | Audience Manager | `c_contextdata.a.media.states.pictureinpicture.count` |

@@ -6,25 +6,15 @@ exl-id: 034b5c1f-7dd9-431f-a51b-925e407a7b36
 feature: Streaming Media
 role: User, Admin, Developer
 TQID: https://experienceleague.adobe.com/ypN5kYhjEzqtO-Zt3mah1H5I5f9s12NnFFBk6hYy7MI
-product_v2:
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-feature_v2:
-  - id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7a
-  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-subfeature_v2:
-  - id: bcc784b7-4ade-4c84-96fa-2f7631b1e5fd
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
+product_v2: id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2: id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7aid: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: bcc784b7-4ade-4c84-96fa-2f7631b1e5fd
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+source-git-commit: a2c91ef63fa9320a0e47f338ce4d53b9b8e977e3
 workflow-type: tm+mt
-source-wordcount: 284
-ht-degree: 100%
+source-wordcount: 318
+ht-degree: 80%
 
 ---
 
@@ -40,18 +30,19 @@ Questo scenario è uguale a quello di [Riproduzione VOD con annunci pre-roll](/h
 
 | Trigger   | Metodo Heartbeat  | Chiamate di rete   | Note   |
 | --- | --- | --- | --- |
-| Clic utente [!UICONTROL Play] | `trackSessionStart()` | Inizio contenuto Analytics, inizio contenuto Heartbeat | La libreria di misurazione ignora l’esistenza di un annuncio pre-roll. Queste chiamate di rete sono ancora identiche a quelle dello scenario [Riproduzione VOD senza annunci](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
+| L’utente fa clic su [!UICONTROL Play] | `trackSessionStart()` | Inizio contenuto Analytics, inizio contenuto Heartbeat | La libreria di misurazione ignora l’esistenza di un annuncio pre-roll. Queste chiamate di rete sono ancora identiche a quelle dello scenario [Riproduzione VOD senza annunci](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
 | L&#39;annuncio inizia. | <ul> <li> `trackEvent:AdBreakStart` </li> <li> `trackEvent:AdStart` </li> </ul> | Analytics Ad Start, Heartbeat Ad Start | |
 | Viene riprodotto il primo fotogramma dell’annuncio. | `trackPlay()` | Heartbeat Ad Play | Quando il contenuto dell’annuncio viene riprodotto prima del contenuto principale, gli heartbeat iniziano quando l’annuncio inizia a essere riprodotto. |
 | L’annuncio viene riprodotto. | | Ad Heartbeats | |
 | L’annuncio viene saltato. | `trackEvent:trackAdSkip` | | Non viene effettuata alcuna chiamata di rete di tipo “annuncio completato”. |
+| L’interruzione pubblicitaria termina. | `trackEvent:AdBreakComplete` | | Obbligatorio anche quando l’annuncio è stato saltato. Senza questo evento, gli eventi pubblicitari vengono ignorati e la durata dell’annuncio saltato viene conteggiata come contenuto principale. |
 | Il contenuto viene riprodotto. | | Heartbeat dei contenuti | Queste chiamate di rete sono identiche a quelle dello scenario [Riproduzione VOD senza annunci](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
 | La riproduzione del contenuto viene completata. | `trackComplete()` | Contenuto Heartbeat completato | Questa chiamata di rete è identica a quella dello scenario [Riproduzione VOD senza annunci](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md). |
 | La sessione viene terminata. | `trackSessionEnd()` | | `SessionEnd` |
 
 ## Parametri {#parameters}
 
-I parametri sono identici ai parametri dello scenario [Riproduzione VOD con annunci pre-roll](/help/use-cases/tracking-scenarios/vod-preroll-ads.md), con una differenza: non vi sono chiamate di annuncio completato né di interruzione pubblicitaria completata.
+I parametri sono identici ai parametri dello scenario [Riproduzione VOD con annunci pre-roll](/help/use-cases/tracking-scenarios/vod-preroll-ads.md), tranne che non vi è alcuna chiamata di annuncio completato. `AdBreakComplete` è ancora necessario dopo il salto per chiudere l&#39;interruzione pubblicitaria.
 
 ## Codice di esempio {#sample-code}
 
@@ -128,14 +119,22 @@ _mediaHeartbeat.trackEvent(MediaHeartbeat.Event.AdSkip, null, null);
 ....... 
 ....... 
 
-// 6. Call trackComplete() when the playback reaches the end, i.e., when the media  
+// 6. Track the MediaHeartbeat.Event.AdBreakComplete event to close the ad break.  
+//    This is required even when the ad was skipped; omitting it causes ad events  
+//    to be ignored and the skipped-ad duration to be counted as main content.  
+_mediaHeartbeat.trackEvent(MediaHeartbeat.Event.AdBreakComplete, null, null); 
+
+....... 
+....... 
+
+// 7. Call trackComplete() when the playback reaches the end, i.e., when the media  
 //    completes and finishes playing.  
 _mediaHeartbeat.trackComplete(); 
 
 ........ 
 ........ 
 
-// 7. Call trackSessionEnd() when the playback session is over. This method must be called  
+// 8. Call trackSessionEnd() when the playback session is over. This method must be called  
 //    even if the user does not watch the media to completion.  
 _mediaHeartbeat.trackSessionEnd(); 
 
@@ -212,13 +211,20 @@ NSMutableDictionary *adDictionary = [[NSMutableDictionary alloc] init];
 ....... 
 ....... 
 
-// 6. Call trackComplete when the playback reaches the end, i.e., when the media 
+// 6. Track the ADBMediaHeartbeatEventAdBreakComplete event to close the ad break.  
+//    This is required even when the ad was skipped; omitting it causes ad events  
+//    to be ignored and the skipped-ad duration to be counted as main content. 
+[_mediaHeartbeat trackEvent:ADBMediaHeartbeatEventAdBreakComplete mediaObject:nil data:nil]; 
+....... 
+....... 
+
+// 7. Call trackComplete when the playback reaches the end, i.e., when the media 
 //    completes and finishes playing. 
 [_mediaHeartbeat trackComplete]; 
 ....... 
 ....... 
 
-// 7. Call trackSessionEnd when the playback session is over. This method must  
+// 8. Call trackSessionEnd when the playback session is over. This method must  
 //    be called even if the user does not watch the media to completion. 
 [_mediaHeartbeat trackSessionEnd]; 
 ....... 
@@ -298,14 +304,22 @@ this._mediaHeartbeat.trackEvent(MediaHeartbeat.Event.AdSkip);
 ....... 
 ....... 
 
-// 6. Call trackComplete() when the playback reaches the end, i.e., playback completes  
+// 6. Track the MediaHeartbeat.Event.AdBreakComplete event to close the ad break. 
+//    This is required even when the ad was skipped; omitting it causes ad events  
+//    to be ignored and the skipped-ad duration to be counted as main content. 
+this._mediaHeartbeat.trackEvent(MediaHeartbeat.Event.AdBreakComplete); 
+
+....... 
+....... 
+
+// 7. Call trackComplete() when the playback reaches the end, i.e., playback completes  
 //    and finishes playing. 
 this._mediaHeartbeat.trackComplete(); 
 
 ........ 
 ........ 
 
-// 7. Call trackSessionEnd() when the playback session is over. This method must be called even  
+// 8. Call trackSessionEnd() when the playback session is over. This method must be called even  
 //    if the user does not watch the media to completion. 
 this._mediaHeartbeat.trackSessionEnd(); 
 
