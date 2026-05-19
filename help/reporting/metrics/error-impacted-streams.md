@@ -3,9 +3,9 @@ title: Flussi interessati da errori
 description: Conta le sessioni in cui si è verificato almeno un errore.
 feature: Metrics
 role: User, Admin
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: a2c91ef63fa9320a0e47f338ce4d53b9b8e977e3
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '141'
 ht-degree: 10%
 
 ---
@@ -17,7 +17,7 @@ La metrica **Flussi interessati dall&#39;errore** conta le sessioni in cui si è
 
 ## Come è calcolata questa metrica
 
-Il backend multimediale imposta `mediaReporting.qoeDataDetails.hasErrorImpactedStreams = true` la prima volta che viene ricevuto un evento [error](/help/implementation/events/error.md) durante la sessione. La metrica viene segnalata nella chiamata di chiusura.
+Il backend multimediale imposta questo flag la prima volta che viene ricevuto un evento [error](/help/implementation/events/error.md) durante la sessione. La metrica viene segnalata nella chiamata di chiusura.
 
 | Sistema di reporting | Origine |
 | --- | --- |

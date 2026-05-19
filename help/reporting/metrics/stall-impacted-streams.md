@@ -3,9 +3,9 @@ title: Flussi interessati da interruzioni
 description: Conta le sessioni in cui si è verificato almeno un arresto durante la riproduzione.
 feature: Metrics
 role: User, Admin
-source-git-commit: 1278355e0bfc67c635250c426edaf865fb658c37
+source-git-commit: a2c91ef63fa9320a0e47f338ce4d53b9b8e977e3
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '178'
 ht-degree: 8%
 
 ---
@@ -17,7 +17,7 @@ La metrica **Flussi interessati dallo stallo** conta le sessioni in cui si è ve
 
 ## Come è calcolata questa metrica
 
-Il backend multimediale imposta `mediaReporting.qoeDataDetails.hasStallImpactedStreams = true` quando non viene registrato alcun movimento dell&#39;indicatore di riproduzione sul contenuto principale per almeno tre eventi consecutivi durante la sessione. La metrica viene segnalata nella chiamata di chiusura.
+Il backend multimediale imposta questo flag quando non viene registrato alcun movimento dell’indicatore di riproduzione sul contenuto principale per almeno tre eventi consecutivi durante la sessione. La metrica viene segnalata nella chiamata di chiusura.
 
 | Sistema di reporting | Origine |
 | --- | --- |

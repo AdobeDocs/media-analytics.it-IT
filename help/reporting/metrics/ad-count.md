@@ -3,9 +3,9 @@ title: Conteggio annunci
 description: Segnala il numero di annunci avviati durante una sessione.
 feature: Metrics
 role: User, Admin
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: a2c91ef63fa9320a0e47f338ce4d53b9b8e977e3
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '176'
 ht-degree: 9%
 
 ---
@@ -17,7 +17,7 @@ La metrica **Conteggio annunci** riporta il numero di annunci avviati durante un
 
 ## Come è calcolata questa metrica
 
-Il backend multimediale incrementa `mediaReporting.sessionDetails.adCount` a ogni evento [ad start](/help/implementation/events/ads/ad-start.md) ricevuto durante la sessione. La metrica viene segnalata nella chiamata di chiusura.
+Il backend multimediale incrementa questo conteggio su ogni evento [ad start](/help/implementation/events/ads/ad-start.md) ricevuto durante la sessione. La metrica viene segnalata nella chiamata di chiusura.
 
 | Sistema di reporting | Origine |
 | --- | --- |

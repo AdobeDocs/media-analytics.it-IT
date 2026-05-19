@@ -3,10 +3,10 @@ title: Tempo trascorso dei contenuti
 description: Segnala i secondi totali di riproduzione dei contenuti principali attivi per sessione.
 feature: Metrics
 role: User, Admin
-source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
+source-git-commit: a2c91ef63fa9320a0e47f338ce4d53b9b8e977e3
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 8%
+source-wordcount: '219'
+ht-degree: 6%
 
 ---
 
@@ -17,7 +17,7 @@ La metrica **Tempo contenuto trascorso** riporta i secondi totali di riproduzion
 
 ## Come è calcolata questa metrica
 
-Il backend multimediale somma il tempo wall-clock trascorso tra gli eventi mentre il lettore è nello stato `play` sul contenuto principale. È escluso il tempo durante annunci, pause, eventi buffer e blocchi. La metrica viene segnalata nella chiamata di chiusura. Il valore viene visualizzato come `HH:MM:SS` in Analysis Workspace e in secondi in Feed dati, Data Warehouse e API di reporting.
+Il backend multimediale somma il tempo wall-clock trascorso tra gli eventi mentre il lettore è nello stato `play` sul contenuto principale. È escluso il tempo durante annunci, pause, eventi buffer e blocchi. Poiché viene conteggiato solo il tempo di riproduzione attivo, la metrica può superare [la lunghezza del contenuto](/help/reporting/dimensions/content-length.md) quando un visualizzatore cerca all&#39;indietro e guarda nuovamente un segmento. Ogni passaggio attraverso un dato segmento accumula un tempo di riproduzione aggiuntivo e può durare finché l’utente consuma e riavvolge il contenuto in una sessione. La metrica viene segnalata nella chiamata di chiusura. Il valore viene visualizzato come `HH:MM:SS` in Analysis Workspace e in secondi in Feed dati, Data Warehouse e API di reporting.
 
 | Sistema di reporting | Origine |
 | --- | --- |

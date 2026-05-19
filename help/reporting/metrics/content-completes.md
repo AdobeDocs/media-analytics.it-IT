@@ -3,9 +3,9 @@ title: Completamenti contenuto
 description: Conta le sessioni la cui testina di riproduzione ha raggiunto la fine del contenuto.
 feature: Metrics
 role: User, Admin
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: a2c91ef63fa9320a0e47f338ce4d53b9b8e977e3
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '140'
 ht-degree: 10%
 
 ---
@@ -17,7 +17,7 @@ La metrica **Completamenti del contenuto** conta le sessioni la cui testina di r
 
 ## Come è calcolata questa metrica
 
-Il backend multimediale imposta `mediaReporting.sessionDetails.isCompleted = true` quando viene ricevuto un evento [sessione completata](/help/implementation/events/session/session-complete.md). La metrica viene segnalata nella chiamata di chiusura. Una sessione in timeout senza un `sessionComplete` esplicito non viene conteggiata come completamento.
+Il backend multimediale imposta questo flag quando viene ricevuto un evento [sessione completata](/help/implementation/events/session/session-complete.md). La metrica viene segnalata nella chiamata di chiusura. Una sessione in timeout senza un `sessionComplete` esplicito non viene conteggiata come completamento.
 
 | Sistema di reporting | Origine |
 | --- | --- |

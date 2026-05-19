@@ -3,9 +3,9 @@ title: Completamenti del capitolo
 description: Conta ogni capitolo riprodotto fino al completamento.
 feature: Metrics
 role: User, Admin
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: a2c91ef63fa9320a0e47f338ce4d53b9b8e977e3
 workflow-type: tm+mt
-source-wordcount: '119'
+source-wordcount: '121'
 ht-degree: 12%
 
 ---
@@ -17,7 +17,7 @@ La metrica **Chapter completes** conta ogni capitolo riprodotto fino al completa
 
 ## Come è calcolata questa metrica
 
-Il backend multimediale imposta `mediaReporting.chapterDetails.isCompleted = true` quando viene ricevuto un evento [chapter complete](/help/implementation/events/chapters/chapter-complete.md). La metrica viene segnalata nella chiamata di chiusura del capitolo. I capitoli saltati o abbandonati nel mid-play non vengono considerati completamenti.
+Il backend multimediale imposta questo flag quando viene ricevuto un evento [chapter complete](/help/implementation/events/chapters/chapter-complete.md). La metrica viene segnalata nella chiamata di chiusura del capitolo. I capitoli saltati o abbandonati nel mid-play non vengono considerati completamenti.
 
 | Sistema di reporting | Origine |
 | --- | --- |

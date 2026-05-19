@@ -3,10 +3,10 @@ title: Conteggi schermo intero
 description: Segnala quante volte il visualizzatore è entrato a schermo intero durante una sessione.
 feature: Metrics
 role: User, Admin
-source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
+source-git-commit: 4c4f1cc9e1c49044474e4ff34207796b2a814553
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 8%
+source-wordcount: '166'
+ht-degree: 9%
 
 ---
 
@@ -23,7 +23,7 @@ La metrica **Conteggi a schermo intero** indica quante volte il visualizzatore �
 
 ## Come è calcolata questa metrica
 
-Il backend multimediale incrementa il campo `count` nella voce `fullscreen` di `mediaReporting.states[]` a ogni evento di avvio dello stato a schermo intero. La metrica viene segnalata nella chiamata di chiusura.
+Il backend multimediale incrementa questo conteggio su ogni evento di avvio dello stato a schermo intero. La metrica viene segnalata nella chiamata di chiusura.
 
 | Sistema di reporting | Origine |
 | --- | --- |

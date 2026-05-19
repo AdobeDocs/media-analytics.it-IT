@@ -3,10 +3,10 @@ title: Avvio file multimediale
 description: Conta ogni sessione multimediale avviata, comprese le sessioni terminate con annunci pre-roll o buffering.
 feature: Metrics
 role: User, Admin
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: a2c91ef63fa9320a0e47f338ce4d53b9b8e977e3
 workflow-type: tm+mt
-source-wordcount: '182'
-ht-degree: 8%
+source-wordcount: '226'
+ht-degree: 6%
 
 ---
 
@@ -17,7 +17,7 @@ La metrica **Avvii file multimediali** conta ogni sessione multimediale avviata.
 
 ## Come è calcolata questa metrica
 
-Il backend multimediale imposta `mediaReporting.sessionDetails.isViewed = true` quando viene ricevuto un evento di [inizio sessione](/help/implementation/events/session/session-start.md). La metrica riportata è `1` per sessione. L’avvio del contenuto multimediale viene segnalato nella chiamata di avvio, non nella chiamata di chiusura. È l’unica metrica di Fase 1 che non attende la chiusura della sessione.
+Il backend multimediale imposta questo flag quando viene ricevuto un evento di [inizio sessione](/help/implementation/events/session/session-start.md). La metrica riportata è `1` per sessione. L’avvio del file multimediale viene segnalato nella chiamata di avvio, non nella chiamata di chiusura; è l’unica metrica che non attende la chiusura della sessione. Tutte le altre metriche multimediali, tra cui [Inizio contenuto](/help/reporting/metrics/content-starts.md), [Tempo contenuto trascorso](/help/reporting/metrics/content-time-spent.md) e [Indicatori avanzamento](/help/reporting/metrics/progress-markers.md), vengono segnalate nella chiamata di chiusura e non sono disponibili in tempo reale durante la riproduzione. [Inizio annuncio](/help/reporting/metrics/ad-starts.md) è l&#39;unica metrica aggiuntiva riportata sull&#39;evento di attivazione anziché alla chiusura.
 
 | Sistema di reporting | Origine |
 | --- | --- |

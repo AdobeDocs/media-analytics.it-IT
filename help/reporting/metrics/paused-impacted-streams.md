@@ -3,9 +3,9 @@ title: Flussi interessati in pausa
 description: Conta le sessioni in cui il visualizzatore si è fermato almeno una volta.
 feature: Metrics
 role: User, Admin
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: a2c91ef63fa9320a0e47f338ce4d53b9b8e977e3
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '150'
 ht-degree: 11%
 
 ---
@@ -17,7 +17,7 @@ La metrica **Flussi interessati dalla sospensione** conta le sessioni in cui il 
 
 ## Come è calcolata questa metrica
 
-Il backend multimediale imposta `mediaReporting.sessionDetails.hasPauseImpactedStreams = true` la prima volta che viene ricevuto un evento di [pausa &#x200B;](/help/implementation/events/playback/pause-start.md) durante la sessione. La metrica viene segnalata nella chiamata di chiusura.
+Il backend multimediale imposta questo flag la prima volta che viene ricevuto un evento di [pausa &#x200B;](/help/implementation/events/playback/pause-start.md) durante la sessione. La metrica viene segnalata nella chiamata di chiusura.
 
 | Sistema di reporting | Origine |
 | --- | --- |

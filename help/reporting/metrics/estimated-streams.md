@@ -3,9 +3,9 @@ title: Flussi stimati
 description: Approssimazione del numero di flussi audio o video per sessione.
 feature: Metrics
 role: User, Admin
-source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
+source-git-commit: a2c91ef63fa9320a0e47f338ce4d53b9b8e977e3
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '190'
 ht-degree: 10%
 
 ---
@@ -17,7 +17,7 @@ La metrica **Flussi stimati** si avvicina al numero di flussi audio o video per 
 
 ## Come è calcolata questa metrica
 
-Il backend multimediale calcola `mediaReporting.sessionDetails.estimatedStreams = FLOOR(totalTimePlayed / 1800) + 1`, dove `totalTimePlayed` è [Tempo trascorso](media-time-spent.md) in secondi. La metrica viene segnalata nella chiamata di chiusura.
+Il backend multimediale calcola questa metrica come `FLOOR(totalTimePlayed / 1800) + 1`, dove `totalTimePlayed` è [Tempo trascorso](media-time-spent.md) in secondi. La metrica viene segnalata nella chiamata di chiusura.
 
 | Tempo trascorso dei contenuti multimediali | Flussi stimati |
 | --- | --- |

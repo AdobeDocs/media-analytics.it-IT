@@ -3,9 +3,9 @@ title: Flussi interessati da picture in picture
 description: Conta le sessioni in cui il visualizzatore è entrato nell'immagine nell'immagine almeno una volta.
 feature: Metrics
 role: User, Admin
-source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
+source-git-commit: 4c4f1cc9e1c49044474e4ff34207796b2a814553
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '189'
 ht-degree: 7%
 
 ---
@@ -23,7 +23,7 @@ La metrica **Flussi interessati da immagine nell&#39;immagine** conta le session
 
 ## Come è calcolata questa metrica
 
-Il backend multimediale imposta il flag `isSet` in `mediaReporting.states[]` per la voce `pictureInPicture` su `true` la prima volta che viene ricevuto un evento `media.statesUpdate` con `pictureInPicture` in `statesStart`. La metrica viene segnalata nella chiamata di chiusura.
+Il backend multimediale imposta questo flag la prima volta che viene ricevuto un evento di avvio dello stato immagine nell’immagine durante la sessione. La metrica viene segnalata nella chiamata di chiusura.
 
 | Sistema di reporting | Origine |
 | --- | --- |

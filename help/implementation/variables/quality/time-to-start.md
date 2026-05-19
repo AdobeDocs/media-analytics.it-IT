@@ -3,10 +3,10 @@ title: Tempo di avvio
 description: Imposta il tempo di avvio del lettore, in millisecondi, in modo che il backend possa riportare la qualità del tempo al primo fotogramma.
 feature: Streaming Media
 role: Developer
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: a2c91ef63fa9320a0e47f338ce4d53b9b8e977e3
 workflow-type: tm+mt
-source-wordcount: '216'
-ht-degree: 5%
+source-wordcount: '265'
+ht-degree: 4%
 
 ---
 
@@ -20,6 +20,10 @@ ht-degree: 5%
 >[!ENDSHADEBOX]
 
 La variabile &quot;time to start&quot; è il tempo trascorso, in millisecondi, tra l’avvio della riproduzione da parte del lettore e il rendering del primo fotogramma. Impostatelo sull&#39;oggetto QoE prima che venga attivato l&#39;evento di inizio sessione. Adobe memorizza e segnala il valore in secondi, passa millisecondi e Adobe converte al momento dell’acquisizione.
+
+>[!IMPORTANT]
+>
+>Una volta che il lettore inizia il rendering dei fotogrammi di contenuto, interrompi l&#39;aggiornamento di `timeToStart`. Il valore può aumentare durante la fase di buffering iniziale o di caricamento, ma deve essere trattato come fisso nel momento in cui inizia la riproduzione. Continuando ad aggiornarla dopo il rendering del primo fotogramma, si produce una metrica [Tempo di avvio](/help/reporting/metrics/time-to-start.md) gonfiata o errata.
 
 | Proprietà | Valore |
 | --- | --- |

@@ -22,10 +22,10 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
+source-git-commit: a2c91ef63fa9320a0e47f338ce4d53b9b8e977e3
 workflow-type: tm+mt
-source-wordcount: 588
-ht-degree: 98%
+source-wordcount: 747
+ht-degree: 77%
 
 ---
 
@@ -37,7 +37,7 @@ In questo scenario, esiste una risorsa live senza annunci riprodotta per 40 seco
 
 | Trigger | metodo Heartbeat | Chiamate di rete | Note   |
 |---|---|---|---|
-| Clic utente **[!UICONTROL Play]** | `trackSessionStart` | Inizio contenuto Analytics, inizio contenuto Heartbeat | Questo può essere un clic dell’utente **[!UICONTROL Play]** o un evento di riproduzione automatica. |
+| L’utente fa clic su **[!UICONTROL Play]** | `trackSessionStart` | Inizio contenuto Analytics, inizio contenuto Heartbeat | Questo può essere un clic dell’utente **[!UICONTROL Play]** o un evento di riproduzione automatica. |
 | Viene riprodotto il primo fotogramma del file multimediale. | `trackPlay` | Riproduzione di contenuti Heartbeat | Questo metodo attiva il timer. Gli heartbeat vengono inviati ogni 10 secondi, a condizione che la riproduzione continui. |
 | Il contenuto viene riprodotto. |  | Heartbeat dei contenuti |  |
 | La sessione viene terminata. | `trackSessionEnd` |  | `SessionEnd` indica la fine di una sessione di visualizzazione. Questa API deve essere chiamata anche se l’utente non utilizza i file multimediali per il completamento. |
@@ -87,6 +87,17 @@ Ad esempio, supponiamo che un evento di streaming LIVE inizi a mezzanotte e veng
 ### In pausa
 
 Quando un utente mette in pausa la riproduzione, deve essere applicata la stessa logica della “testina di riproduzione live” applicata all&#39;inizio della riproduzione. Quando l’utente ricomincia a riprodurre lo streaming LIVE, è necessario impostare il valore `l:event:playhead` in base al nuovo numero di secondi dalla mezzanotte UTC, _non_ dal punto in cui l’utente ha messo in pausa lo streaming LIVE.
+
+## Tracciamento delle modifiche del programma in un flusso live {#live-program-changes}
+
+Quando un flusso in diretta passa da un programma o una presentazione a un altro (un modello comune per le proprietà di trasmissione e cavo), ogni programma deve essere tracciato come sessione separata. Questo consente di generare rapporti sul coinvolgimento e sul tempo trascorso per singolo titolo, anziché attribuire tutte le visualizzazioni a un singolo flusso continuo.
+
+**Approccio consigliato:**
+
+1. Al termine del programma corrente (o quando il lettore segnala un evento di modifica del programma), chiamare `trackSessionEnd` per chiudere la sessione corrente.
+2. Quando inizia il nuovo programma, chiamare `trackSessionStart` con i metadati del nuovo programma (nome, ID, tipo di contenuto e così via).
+
+Il tracciamento di ogni programma come propria sessione mantiene [il tempo di contenuto trascorso](/help/reporting/metrics/content-time-spent.md), [gli indicatori di avanzamento](/help/reporting/metrics/progress-markers.md) e le metriche di completamento definite nell&#39;ambito del singolo programma e consente di creare rapporti accurati sul pubblico per titolo. Utilizza `trackSessionEnd` anziché `trackComplete` per la transizione: `trackComplete` segnala che il visualizzatore ha guardato intenzionalmente la fine di un contenuto discreto, mentre `trackSessionEnd` è corretto qui perché il flusso continua con una programmazione diversa anziché terminare.
 
 ## Codice di esempio {#sample-code}
 

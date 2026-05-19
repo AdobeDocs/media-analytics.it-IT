@@ -3,10 +3,10 @@ title: Numero di capitoli
 description: Riporta il numero di capitoli avviati durante una sessione.
 feature: Metrics
 role: User, Admin
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: a2c91ef63fa9320a0e47f338ce4d53b9b8e977e3
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 10%
+source-wordcount: '172'
+ht-degree: 9%
 
 ---
 
@@ -17,7 +17,7 @@ La metrica **Numero di capitoli** riporta il numero di capitoli avviati durante 
 
 ## Come è calcolata questa metrica
 
-Il backend multimediale incrementa `mediaReporting.sessionDetails.chapterCount` a ogni evento [inizio capitolo](/help/implementation/events/chapters/chapter-start.md) ricevuto durante la sessione. La metrica viene segnalata nella chiamata di chiusura.
+Il backend multimediale incrementa questo conteggio su ogni evento [inizio capitolo](/help/implementation/events/chapters/chapter-start.md) ricevuto durante la sessione. La metrica viene segnalata nella chiamata di chiusura.
 
 | Sistema di reporting | Origine |
 | --- | --- |

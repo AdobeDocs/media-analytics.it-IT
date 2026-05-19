@@ -3,10 +3,10 @@ title: Perdite prima dell’inizio
 description: Conta le sessioni in cui il visualizzatore si chiude prima di eseguire il rendering di qualsiasi contenuto principale.
 feature: Metrics
 role: User, Admin
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: a2c91ef63fa9320a0e47f338ce4d53b9b8e977e3
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 9%
+source-wordcount: '209'
+ht-degree: 7%
 
 ---
 
@@ -17,7 +17,7 @@ La metrica **Perde prima dell&#39;inizio** conta le sessioni in cui il visualizz
 
 ## Come è calcolata questa metrica
 
-Il backend multimediale imposta `mediaReporting.qoeDataDetails.isDroppedBeforeStart = true` per le sessioni che si chiudono senza mai produrre un evento [play](/help/implementation/events/playback/play.md) sul contenuto principale. La metrica viene segnalata nella chiamata di chiusura.
+Il backend multimediale imposta questo flag per le sessioni che si chiudono senza mai produrre un evento [play](/help/implementation/events/playback/play.md) sul contenuto principale. La metrica viene segnalata nella chiamata di chiusura. Gli scenari comuni includono: il visualizzatore esce durante un annuncio pre-roll, il lettore si ferma indefinitamente nella fase iniziale del buffer, o un errore si attiva prima del primo evento di riproduzione del contenuto principale. In tutti questi casi la sessione registra un [Avvio file multimediale](/help/reporting/metrics/media-starts.md) ma non un [Avvio contenuto](/help/reporting/metrics/content-starts.md) e non vengono registrati [Indicatori di avanzamento](/help/reporting/metrics/progress-markers.md).
 
 | Sistema di reporting | Origine |
 | --- | --- |

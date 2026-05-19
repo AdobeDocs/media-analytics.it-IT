@@ -14,10 +14,10 @@ role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
+source-git-commit: a2c91ef63fa9320a0e47f338ce4d53b9b8e977e3
 workflow-type: tm+mt
-source-wordcount: 358
-ht-degree: 82%
+source-wordcount: 473
+ht-degree: 62%
 
 ---
 
@@ -45,3 +45,11 @@ La riproduzione in un’applicazione multimediale può essere interrotta in dive
 * _E il riavvio della stessa sessione?_
 
   Per informazioni sulla ripresa di una sessione di tracciamento, vedere [Ripresa di sessioni inattive](resuming-inactive.md).SDK invia un ping di ripresa per notificare al back-end che l’utente sta riprendendo manualmente la sessione.
+
+* _Cosa succede se `trackSessionEnd` viene chiamato due volte per la stessa sessione?_
+
+  Chiamare `trackSessionEnd` più volte per la stessa sessione è sicuro. Il backend chiude la sessione sul primo evento e rilascia automaticamente tutti gli eventi successivi per tale ID sessione, incluso un secondo `trackSessionEnd`. Ciò significa che le condizioni di gara, ad esempio il timeout di inattività di 30 minuti che si attiva nello stesso momento in cui lo spettatore chiude il lettore, non producono dati duplicati.
+
+* _Cosa succede se `trackSessionStart` viene chiamato mentre una sessione è già attiva?_
+
+  SDK ignora la seconda chiamata `trackSessionStart` se la sessione non è ancora stata chiusa. Se devi avviare una nuova sessione, chiama `trackSessionEnd` prima per chiudere esplicitamente quella corrente, quindi chiama `trackSessionStart` per la nuova sessione.

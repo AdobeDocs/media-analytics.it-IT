@@ -3,9 +3,9 @@ title: Flussi interessati dalla modifica del bitrate
 description: Conta le sessioni in cui si è verificata almeno una modifica del bitrate.
 feature: Metrics
 role: User, Admin
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: a2c91ef63fa9320a0e47f338ce4d53b9b8e977e3
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '143'
 ht-degree: 10%
 
 ---
@@ -17,7 +17,7 @@ La metrica **Flussi interessati dalla modifica del bitrate** conta le sessioni i
 
 ## Come è calcolata questa metrica
 
-Il backend multimediale imposta `mediaReporting.qoeDataDetails.hasBitrateChangeImpactedStreams = true` la prima volta che viene ricevuto un evento di [modifica del bitrate](/help/implementation/events/playback/bitrate-change.md) durante la sessione. La metrica viene segnalata nella chiamata di chiusura.
+Il backend multimediale imposta questo flag la prima volta che viene ricevuto un evento di [modifica del bitrate](/help/implementation/events/playback/bitrate-change.md) durante la sessione. La metrica viene segnalata nella chiamata di chiusura.
 
 | Sistema di reporting | Origine |
 | --- | --- |

@@ -3,10 +3,10 @@ title: Eventi di pausa
 description: Conta ogni pausa distinta che si è verificata durante una sessione.
 feature: Metrics
 role: User, Admin
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: 4c4f1cc9e1c49044474e4ff34207796b2a814553
 workflow-type: tm+mt
-source-wordcount: '133'
-ht-degree: 12%
+source-wordcount: '168'
+ht-degree: 10%
 
 ---
 
@@ -17,7 +17,7 @@ La metrica **Pause events** conta ogni evento [pause start](/help/implementation
 
 ## Come è calcolata questa metrica
 
-Il backend multimediale incrementa `mediaReporting.sessionDetails.pauseCount` a ogni evento [inizio pausa](/help/implementation/events/playback/pause-start.md). La metrica viene segnalata nella chiamata di chiusura.
+Il backend multimediale incrementa questo conteggio a ogni evento [inizio pausa](/help/implementation/events/playback/pause-start.md). Una singola pausa continua genera un incremento indipendentemente dalla sua durata. Gli heartbeat [ping](/help/implementation/events/playback/ping.md) inviati mentre il lettore rimane in pausa appartengono tutti allo stesso periodo di pausa e non incrementano nuovamente il conteggio. La metrica viene segnalata nella chiamata di chiusura.
 
 | Sistema di reporting | Origine |
 | --- | --- |

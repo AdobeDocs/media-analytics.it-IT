@@ -3,9 +3,9 @@ title: Riprende il contenuto
 description: Conta le sessioni che hanno ripreso una riproduzione precedentemente interrotta.
 feature: Metrics
 role: User, Admin
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: a2c91ef63fa9320a0e47f338ce4d53b9b8e977e3
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '169'
 ht-degree: 10%
 
 ---
@@ -23,7 +23,7 @@ La metrica **Il contenuto riprende** conta le sessioni che hanno ripreso una rip
 
 ## Come è calcolata questa metrica
 
-Il backend multimediale imposta `mediaReporting.sessionDetails.hasResume = true` quando `mediaCollection.sessionDetails.hasResume` è `true` nell&#39;evento [inizio sessione](/help/implementation/events/session/session-start.md). Il lettore deve contrassegnare esplicitamente la sessione come ripresa. La metrica viene segnalata nella chiamata di chiusura.
+Il backend multimediale imposta questo flag quando `mediaCollection.sessionDetails.hasResume` è `true` nell&#39;evento [inizio sessione](/help/implementation/events/session/session-start.md). Il lettore deve contrassegnare esplicitamente la sessione come ripresa. La metrica viene segnalata nella chiamata di chiusura.
 
 | Sistema di reporting | Origine |
 | --- | --- |

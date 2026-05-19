@@ -3,9 +3,9 @@ title: Dati federati
 description: Conta le sessioni ricevute tramite una condivisione di dati federata anziché tramite l’implementazione di un cliente.
 feature: Metrics
 role: User, Admin
-source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
+source-git-commit: a2c91ef63fa9320a0e47f338ce4d53b9b8e977e3
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '218'
 ht-degree: 6%
 
 ---
@@ -27,7 +27,7 @@ Per ulteriori informazioni, vedi il caso d&#39;uso [Federated Media](/help/use-c
 
 ## Come è calcolata questa metrica
 
-Il backend multimediale imposta `mediaReporting.sessionDetails.isFederated = true` quando la sessione arriva su un canale federato. La metrica viene incrementata una volta per sessione qualificata e indicata nella chiamata di chiusura.
+Il backend multimediale imposta questo flag quando la sessione arriva su un canale federato. La metrica viene incrementata una volta per sessione qualificata e indicata nella chiamata di chiusura.
 
 | Sistema di reporting | Origine |
 | --- | --- |
