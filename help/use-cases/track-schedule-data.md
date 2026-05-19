@@ -4,9 +4,23 @@ description: Scopri come caricare i dati di pianificazione per tenere traccia de
 feature: Streaming Media
 role: User, Admin, Developer
 exl-id: 875c4513-ea4e-4c5f-bfc1-34ea175007ca
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+TQID: https://experienceleague.adobe.com/C1GFDLJp-oTQHWlFiks5oSi2Q5Ok34QxJWfiPIJ3bC4
+product_v2:
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2:
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
 workflow-type: tm+mt
-source-wordcount: '1381'
+source-wordcount: 1425
 ht-degree: 5%
 
 ---
@@ -303,9 +317,9 @@ L’esempio seguente è di un file .json di pianificazione con due record. Ogni 
 
    Prendi in considerazione i seguenti esempi di dimensioni che puoi creare e quindi generare rapporti in Customer Journey Analytics:
 
-   * **[&quot;_Nome episodio_&quot;](https://experienceleague.adobe.com/it/docs/media-analytics/using/implementation/variables/audio-video-parameters#episode)**: questa dimensione può aiutarti a capire quali episodi di una particolare serie hanno prestazioni migliori.
+   * **[&quot;_Nome episodio_&quot;](/help/reporting/dimensions/episode.md)**: questa dimensione potrebbe aiutarti a capire quali episodi di una particolare serie hanno prestazioni migliori.
 
-   * **[ID risorsa](https://experienceleague.adobe.com/it/docs/media-analytics/using/implementation/variables/audio-video-parameters#asset-id)**
+   * **[ID risorsa](/help/reporting/dimensions/asset-id.md)**
 
 1. Continua con [Analizza dati in Customer Journey Analytics](#analyze-data-in-customer-journey-analytics).
 

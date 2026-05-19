@@ -5,14 +5,29 @@ uuid: a9fc59d8-a2f4-4889-bdec-55c42a835d06
 exl-id: 9812d06d-9efd-460c-a626-6a15f61a4c35
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+TQID: https://experienceleague.adobe.com/OOIzzdk-VT6rid11-Qzzg1qp2m1BWAsIx-aX4LXN4Gk
+product_v2:
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2:
+  - id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7a
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: e7d92df1-c5ba-4e93-85df-f83171b889be
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
 workflow-type: tm+mt
-source-wordcount: '719'
-ht-degree: 88%
+source-wordcount: 807
+ht-degree: 85%
 
 ---
 
-# Tracciare la riproduzione di base in Chromecast {#track-core-playback-on-chromecast}
+# Tracciare la riproduzione di base in Chromecast{#track-core-playback-on-chromecast}
 
 Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
@@ -32,15 +47,15 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
    mediaObject = ADBMobile.media.createMediaObject(<name>, <id>, <duration>, <streamType>, <mediaType>);
    ```
 
-   Costanti **`StreamType`:**
+   **`StreamType`Costanti:**
 
-   [Media di ADBMobile](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.StreamType)
+   [File multimediali ADBMobile](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.StreamType)
 
-   Costanti **`MediaType`:**
+   **`MediaType`Costanti:**
 
-   [Media di ADBMobile](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.MediaType)
+   [File multimediali ADBMobile](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.MediaType)
 
-1. **Allega metadati video**
+1. **Allegare metadati video**
 
    Facoltativamente, puoi allegare oggetti metadati video standard e/o personalizzati alla sessione di tracciamento video attraverso variabili dei dati di contesto.
 
@@ -75,11 +90,11 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
    >[!IMPORTANT]
    >
-   >`trackSessionStart` tiene traccia delle intenzioni di riproduzione dell’utente, non dell’inizio della riproduzione. Questa API viene utilizzata per caricare i dati/metadati video e per stimare la metrica QoS del tempo per l’avvio (la durata tra `trackSessionStart` e `trackPlay`).
+   >`trackSessionStart` tiene traccia delle intenzioni di riproduzione dell’utente, non dell’inizio della riproduzione. Questa API viene utilizzata per caricare i dati/metadati video e per stimare la metrica QoS relativa al tempo di avvio (durata tra `trackSessionStart` e `trackPlay`).
 
    >[!NOTE]
    >
-   >Il secondo valore corrisponde al nome dell’oggetto metadati video personalizzato creato nel passaggio 2. Se non utilizzi metadati video personalizzati, è sufficiente inviare un oggetto vuoto per l’argomento `data` in `trackSessionStart`, come mostrato nella riga commento nell’esempio di iOS precedente.
+   >Il secondo valore corrisponde al nome dell’oggetto metadati video personalizzato creato nel passaggio 2. Se non utilizzi metadati video personalizzati, invia semplicemente un oggetto vuoto per l’argomento `data` in `trackSessionStart`, come mostrato nella riga esterna di commento nell’esempio di iOS precedente.
 
 1. **Tracciare l’inizio effettivo della riproduzione**
 
@@ -91,7 +106,7 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
 
 1. **Aggiorna il valore della testina di riproduzione**
 
-   Aggiorna il valore della posizione di `mediaUpdatePlayhead` più volte quando la testina di riproduzione si sposta. <br /> Per il tracciamento dei video on-demand (VOD), il valore è specificato in secondi dall’inizio dell’elemento multimediale. <br /> Per lo streaming live, se il lettore non fornisce informazioni sulla durata del contenuto, il valore può essere specificato come il numero di secondi trascorsi dalla mezzanotte UTC di quel giorno.
+   Aggiorna il valore della posizione di `mediaUpdatePlayhead` più volte quando l&#39;indicatore di riproduzione cambia. <br /> Per il video on-demand (VOD), il valore è specificato in secondi dall’inizio dell’elemento multimediale. <br /> Per lo streaming live, se il lettore non fornisce informazioni sulla durata del contenuto, il valore può essere specificato come il numero di secondi trascorsi dalla mezzanotte UTC di quel giorno.
 
    ```
    ADBMobile().media.updatePlayhead(position)
@@ -131,14 +146,14 @@ Questa documentazione tratta il tracciamento nella versione 2.x dell’SDK.
    ADBMobile.media.trackPause();
    ```
 
-   **Scenari di sospensione**
+   **Scenari di pausa**
 
-   Identifica uno scenario in cui il lettore video si interrompe e verifica che `trackPause` sia chiamato correttamente. I seguenti scenari richiedono tutti una chiamata `trackPause()` dall’app:
+   Identifica uno scenario in cui il lettore video si interrompe e verifica che `trackPause` sia chiamato correttamente. Tutti gli scenari seguenti richiedono che l’app chiami `trackPause()`:
 
    * L’utente mette esplicitamente in pausa l’app.
    * Il lettore si mette in pausa da solo.
    * (*App per dispositivi mobili*): l’utente mette l’applicazione in background, ma si desidera invece che l’app mantenga aperta la sessione.
-   * (*App per dispositivi mobili*): si verifica una qualsiasi interruzione del sistema causando l’esecuzione in background dell’applicazione. Ad esempio, l’utente riceve una chiamata oppure la notifica da un’altra applicazione, ma desideri che l’applicazione mantenga aperta la sessione per dare all’utente l’opportunità di riprendere il video dal punto in cui è stato interrotto.
+   * (*App mobili*): si verifica una qualsiasi interruzione del sistema causando l’esecuzione in background dell’applicazione. Ad esempio, l’utente riceve una chiamata oppure la notifica da un’altra applicazione, ma desideri che l’applicazione mantenga aperta la sessione per dare all’utente l’opportunità di riprendere il video dal punto in cui è stato interrotto.
 
 1. Identifica l’evento dal lettore relativo alla riproduzione e/o la ripresa del video dalla sospensione e chiama [trackPlay:](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/ADBMobile.media.html#.trackComplete)
 

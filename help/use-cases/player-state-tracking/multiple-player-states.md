@@ -4,10 +4,22 @@ description: Questo argomento descrive la funzione di tracciamento di più stati
 feature: Streaming Media
 role: User, Admin, Developer
 exl-id: 7a512a81-a6d1-4d0c-a4fe-91e9b11419db
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+TQID: https://experienceleague.adobe.com/fKpr-TULVqDnK7j07e66gd-kiFLYzf7D2GmoGtP8Aqg
+product_v2:
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2:
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 100%
+source-wordcount: 186
+ht-degree: 80%
 
 ---
 
@@ -25,7 +37,9 @@ L’implementazione corrente consente di eseguire entrambe gli scenari:
 - `stateStart(fullScreen)` - t1
 - `stateEnd(fullScreen)` - t2
 
-Tuttavia, questo richiede di emettere più eventi `stateStart` e `stateEnd` per segnalare più modifiche simultanee dello stato. Per ottimizzare questo comportamento comune, è stato implementato un nuovo tipo di evento `statesUpdate`, che termina un elenco di stati e ne avvia uno di nuovi stati.
+Tuttavia, questo richiede di emettere più eventi `stateStart` e `stateEnd` per segnalare più modifiche simultanee dello stato. In entrata
+per ottimizzare questo comportamento comune, è stato implementato un nuovo tipo di evento `statesUpdate`, che termina un elenco di stati
+e avvia un elenco di nuovi stati.
 
 Utilizzando il nuovo evento `statesUpdate`, l’elenco di eventi precedente diventa:
 - `statesUpdate(statesEnd=[], statesStart=[pictureInPicture, mute])` - t0
@@ -33,7 +47,7 @@ Utilizzando il nuovo evento `statesUpdate`, l’elenco di eventi precedente dive
 - `statesUpdate(statesEnd=[fullScreen], statesStart=[])` - t2
 
 Il numero di chiamate per gli aggiornamenti di stato è stato ridotto da sei a tre per lo stesso comportamento. L’ultimo evento
-avrebbe potuto essere anche un semplice `stateEnd(fullScreen)`.
+potrebbe essere stato anche un `stateEnd(fullScreen)` semplice.
 
 ## Implementazione API Media Collection {#mpst-api}
 

@@ -4,14 +4,29 @@ description: Scopri come implementare il tracciamento di base utilizzando Media 
 exl-id: f3145450-82ba-4790-91a4-9d2cc97bbaa5
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+TQID: https://experienceleague.adobe.com/bIOfr94Q7wJLH9LfRg9VLIEJuS6JPvcgSWS62YCVguc
+product_v2:
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2:
+  - id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7a
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: e7d92df1-c5ba-4e93-85df-f83171b889be
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
 workflow-type: tm+mt
-source-wordcount: '747'
-ht-degree: 87%
+source-wordcount: 759
+ht-degree: 85%
 
 ---
 
-# Tracciare la riproduzione di base in JavaScript 3.x {#track-core-playback-on-javascript}
+# Tracciare la riproduzione di base in JavaScript 3.x{#track-core-playback-on-javascript}
 
 Questa documentazione tratta il tracciamento nella versione 3.x dell’SDK.
 
@@ -27,20 +42,20 @@ Questa documentazione tratta il tracciamento nella versione 3.x dell’SDK.
 
    | Nome variabile | Tipo | Descrizione |
    | --- | --- | --- |
-   | `name` | stringa | Stringa non vuota che indica il nome del file multimediale. |
-   | `id` | stringa | Stringa non vuota che indica un identificatore del file multimediale univoco. |
+   | `name` | string | Stringa non vuota che indica il nome del file multimediale. |
+   | `id` | string | Stringa non vuota che indica un identificatore del file multimediale univoco. |
    | `length` | numero | Numero positivo che indica la lunghezza del file multimediale in secondi. Usa 0 se la lunghezza è sconosciuta. |
-   | `streamType` | stringa |   |
+   | `streamType` | string |   |
    | `mediaType` | | Tipo di file multimediale (audio o video). |
 
-   Costanti **`StreamType`:**
+   **`StreamType`Costanti:**
 
    | Nome costante | Descrizione   |
    |---|---|
    | `VOD` | Tipo di flusso per Video on Demand. |
    | `AOD` | Tipo di flusso per audio on-demand. |
 
-   Costanti **`MediaType`:**
+   **`MediaType`Costanti:**
 
    | Nome costante | Descrizione |
    |---|---|
@@ -65,9 +80,7 @@ Questa documentazione tratta il tracciamento nella versione 3.x dell’SDK.
      >
      >L’aggiunta dei metadati standard è facoltativa.
 
-      * Riferimento API per le chiavi di metadati multimediali - [Chiavi di metadati standard - JavaScript](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript)
-
-        Consulta il set completo dei metadati disponibili qui: [Parametri audio e video](/help/implementation/variables/audio-video-parameters.md)
+      * Riferimento API per le chiavi di metadati multimediali: [Chiavi di metadati standard - JavaScript](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript)
 
    * **Metadati personalizzati**
 
@@ -112,7 +125,7 @@ Questa documentazione tratta il tracciamento nella versione 3.x dell’SDK.
 
    >[!IMPORTANT]
    >
-   >`trackSessionStart` tiene traccia delle intenzioni di riproduzione dell’utente, non dell’inizio della riproduzione. Questa API viene utilizzata per caricare dati/metadati e per stimare la metrica QoS relativa al tempo di avvio (durata tra `trackSessionStart` e `trackPlay`).
+   >`trackSessionStart` tiene traccia delle intenzioni di riproduzione dell’utente, non dell’inizio della riproduzione. Questa API viene utilizzata per caricare dati/metadati e per stimare la metrica di qualità del servizio relativa al tempo necessario per l’avvio (tempo che trascorre ta `trackSessionStart` e `trackPlay`).
 
    >[!NOTE]
    >
@@ -128,7 +141,7 @@ Questa documentazione tratta il tracciamento nella versione 3.x dell’SDK.
 
 1. **Aggiorna il valore della testina di riproduzione**
 
-   Quando l&#39;indicatore di riproduzione multimediale cambia, avvisare SDK chiamando l&#39;API `mediaUpdatePlayhead`. <br /> Per il tracciamento dei video on-demand (VOD), il valore è specificato in secondi dall’inizio dell’elemento multimediale. <br /> Per lo streaming live, se il lettore non fornisce informazioni sulla durata del contenuto, il valore può essere specificato come il numero di secondi trascorsi dalla mezzanotte UTC di quel giorno.
+   Quando l&#39;indicatore di riproduzione multimediale cambia, inviare una notifica al SDK chiamando l&#39;API `mediaUpdatePlayhead`. <br /> Per il video on-demand (VOD), il valore è specificato in secondi dall’inizio dell’elemento multimediale. <br /> Per lo streaming live, se il lettore non fornisce informazioni sulla durata del contenuto, il valore può essere specificato come il numero di secondi trascorsi dalla mezzanotte UTC di quel giorno.
 
    ```
    tracker.updatePlayhead(position)
@@ -158,7 +171,7 @@ Questa documentazione tratta il tracciamento nella versione 3.x dell’SDK.
 
    >[!IMPORTANT]
    >
-   >`trackSessionEnd` indica la fine di una sessione di tracciamento. Se la sessione è stata guardata correttamente fino al completamento, dove l’utente ha guardato il contenuto fino alla fine, assicurati che `trackComplete` venga chiamato prima di `trackSessionEnd`. Dopo `trackSessionEnd`, qualsiasi chiamata API `track*` viene ignorata, tranne la chiamata `trackSessionStart` per una nuova sessione di tracciamento video.
+   >`trackSessionEnd` indica la fine di una sessione di tracciamento. Se la sessione è stata guardata correttamente fino al completamento, dove l’utente ha guardato il contenuto fino alla fine, assicurati che `trackComplete` venga chiamato prima di `trackSessionEnd`. Qualsiasi altra chiamata API `track*` viene ignorata dopo `trackSessionEnd`, tranne `trackSessionStart` per una nuova sessione di tracciamento.
 
 1. **Tracciare tutti gli scenari di pausa possibili**
 
@@ -170,12 +183,12 @@ Questa documentazione tratta il tracciamento nella versione 3.x dell’SDK.
 
    **Scenari di pausa**
 
-   Identifica uno scenario in cui il lettore multimediale si interrompe e verifica che `trackPause` sia chiamato correttamente. I seguenti scenari richiedono tutti una chiamata `trackPause()` dall’app:
+   Identifica uno scenario in cui il lettore multimediale si interrompe e verifica che `trackPause` sia chiamato correttamente. Tutti gli scenari seguenti richiedono che l’app chiami `trackPause()`:
 
    * L’utente mette esplicitamente in pausa l’app.
    * Il lettore si mette in pausa da solo.
    * (*App per dispositivi mobili*): l’utente mette l’applicazione in background, ma si desidera invece che l’app mantenga aperta la sessione.
-   * (*App per dispositivi mobili*) - Può verificarsi qualsiasi tipo di interruzione di sistema che porta l’applicazione in background. Ad esempio, l’utente riceve una chiamata oppure la notifica da un’altra applicazione, ma desideri che l’applicazione mantenga aperta la sessione per dare all’utente l’opportunità di riprendere l’elemento multimediale dal punto in cui è stato interrotto.
+   * (*App mobili*): si verifica una qualsiasi interruzione del sistema causando l’esecuzione in background dell’applicazione. Ad esempio, l’utente riceve una chiamata oppure la notifica da un’altra applicazione, ma desideri che l’applicazione mantenga aperta la sessione per dare all’utente l’opportunità di riprendere l’elemento multimediale dal punto in cui è stato interrotto.
 
 1. Identifica l’evento dal lettore per la riproduzione e/o la ripresa dalla pausa ed effettua una chiamata `trackPlay`:
 
@@ -185,7 +198,7 @@ Questa documentazione tratta il tracciamento nella versione 3.x dell’SDK.
 
    >[!TIP]
    >
-   >Potrebbe trattarsi della stessa origine evento utilizzata nel passaggio 4. Quando la riproduzione riprende, assicurati che ogni chiamata API `trackPause()` sia associata alla seguente chiamata API `trackPlay()`.
+   >Potrebbe trattarsi della stessa origine evento utilizzata nel passaggio 4. Assicurati che ogni chiamata API `trackPause()` sia associata a una seguente `trackPlay()` quando riprende la riproduzione.
 
 * Scenari di tracciamento: [Riproduzione VOD senza annunci](/help/use-cases/tracking-scenarios/vod-no-intrs-details.md)
 * Lettore di esempio incluso con l’SDK JavaScript per un esempio di tracciamento completo.

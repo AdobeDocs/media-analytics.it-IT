@@ -4,9 +4,21 @@ description: Scopri come migrare i tipi di pubblico al nuovo tipo di dati Adobe 
 feature: Streaming Media
 role: User, Admin, Developer
 exl-id: 5664bf56-b228-430a-944c-faaab55fa108
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+TQID: https://experienceleague.adobe.com/TqsfcR2JgxVjDNx3-CBBa9n6pwvuGk9JgQ--DvWeHg0
+product_v2:
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2:
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: 516
 ht-degree: 0%
 
 ---
@@ -29,7 +41,7 @@ Per migrare un pubblico dal vecchio tipo di dati denominato &quot;Media&quot; al
 
 1. Verifica che i tipi di pubblico funzionino ancora come previsto.
 
-Vedi il parametro [ID contenuto](https://experienceleague.adobe.com/it/docs/media-analytics/using/implementation/variables/audio-video-parameters#content-id) nella pagina [Parametri audio e video](https://experienceleague.adobe.com/it/docs/media-analytics/using/implementation/variables/audio-video-parameters) per eseguire il mapping tra i campi precedenti e i nuovi campi. Il vecchio percorso di campo si trova nella proprietà &quot;Percorso campo XDM&quot;, mentre il nuovo percorso di campo si trova nella proprietà &quot;Percorso campo XDM per reporting&quot;.
+Vedere il parametro [ID contenuto](/help/reporting/dimensions/content.md) e le altre variabili dei contenuti multimediali in streaming documentate in [Servizi multimediali in streaming](/help/media-overview.md) per eseguire la mappatura tra i campi precedenti e i nuovi campi. Il vecchio percorso di campo si trova nella proprietà &quot;Percorso campo XDM&quot;, mentre il nuovo percorso di campo si trova nella proprietà &quot;Percorso campo XDM per reporting&quot;.
 
 ![Percorsi di campo XDM vecchi e nuovi](assets/field-paths-updated.jpeg)
 
@@ -57,7 +69,7 @@ Per seguire più facilmente le linee guida per la migrazione, considera l’esem
 
    ![Modifica pubblico](assets/audience-edit5.jpeg)
 
-1. Visita la pagina [Parametri audio e video](https://experienceleague.adobe.com/it/docs/media-analytics/using/implementation/variables/audio-video-parameters) per la mappatura tra i campi precedenti. Il vecchio percorso di campo si trova nella proprietà &quot;Percorso campo XDM&quot;, mentre il nuovo percorso di campo si trova nella proprietà &quot;Percorso campo XDM per reporting&quot;. Ad esempio, per il parametro [Media Starts](https://experienceleague.adobe.com/it/docs/media-analytics/using/implementation/variables/audio-video-parameters#media-starts), il corrispondente per `media.mediaTimed.impressions.value` è `mediaReporting.sessionDetails.isViewed`.
+1. Vedi le variabili dei contenuti multimediali in streaming documentate in [Servizi multimediali in streaming](/help/media-overview.md) per la mappatura tra i campi precedenti. Il vecchio percorso di campo si trova nella proprietà &quot;Percorso campo XDM&quot;, mentre il nuovo percorso di campo si trova nella proprietà &quot;Percorso campo XDM per reporting&quot;. Ad esempio, per il parametro [Media Starts](/help/reporting/metrics/media-starts.md), il corrispondente per `media.mediaTimed.impressions.value` è `mediaReporting.sessionDetails.isViewed`.
 
    ![Percorso XDM aggiornato](assets/updated-xdm-path.jpeg)
 

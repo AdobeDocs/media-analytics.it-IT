@@ -1,0 +1,110 @@
+---
+title: Inizio pausa
+description: Segnala che l’utente ha messo in pausa la riproduzione multimediale.
+feature: Streaming Media
+role: Developer
+source-git-commit: b75e50f626b85992575961ea267d0f74eda09f0a
+workflow-type: tm+mt
+source-wordcount: '121'
+ht-degree: 7%
+
+---
+
+
+# Inizio pausa
+
+L’evento di avvio della pausa segnala che l’utente ha messo in pausa la riproduzione. Non esiste un evento di ripresa separato; invia un evento [Play](play.md) quando la riproduzione riprende.
+
+* **Prerequisiti**: [Inizio sessione](../session/session-start.md)
+* **Metrica associata**: [Eventi di pausa](/help/reporting/metrics/pause-events.md)
+
+>[!NOTE]
+>
+>Non esiste un tipo di evento di ripresa. La ripresa viene dedotta quando si invia un evento [`play`](play.md) dopo `pauseStart`.
+
+## Web SDK
+
+Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.pauseStart"`:
+
+```javascript
+alloy("sendEvent", {
+  xdm: {
+    eventType: "media.pauseStart",
+    mediaCollection: {
+      sessionID: "{sid}",
+      playhead: 30
+    }
+  }
+});
+```
+
+## Mobile SDK
+
+Chiamare `trackPause` quando l&#39;utente mette in pausa la riproduzione.
+
+**iOS (Swift)**
+
+```swift
+tracker.trackPause()
+```
+
+**Android (Cotlino)**
+
+```kotlin
+tracker.trackPause()
+```
+
+## Roku (BrightScript)
+
+Chiama `sendMediaEvent` con `eventType: "media.pauseStart"`:
+
+```brightscript
+m.aepSdk.sendMediaEvent({
+    "xdm": {
+        "eventType": "media.pauseStart",
+        "mediaCollection": {
+            "playhead": 30
+        }
+    }
+})
+```
+
+## API di Media Edge
+
+Chiama l&#39;endpoint [pauseStart](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/pausestart/):
+
+```sh
+curl -X POST "https://edge.adobedc.net/ee/va/v1/pauseStart?configId={datastreamID}" \
+--header 'Content-Type: application/json' \
+--data '{
+  "events": [{
+    "xdm": {
+      "eventType": "media.pauseStart",
+      "mediaCollection": {
+        "sessionID": "{sid}",
+        "playhead": 30
+      },
+      "timestamp": "YYYY-08-20T22:41:40+00:00"
+    }
+  }]
+}'
+```
+
+## Media SDK
+
+Chiamare `trackPause` quando l&#39;utente mette in pausa la riproduzione:
+
+```javascript
+tracker.trackPause();
+```
+
+## API Media Collection
+
+Invia un POST `pauseStart` all&#39;endpoint [eventi](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md):
+
+```json
+{
+  "playerTime": { "playhead": 30, "ts": 1699523820000 },
+  "eventType": "pauseStart"
+}
+```

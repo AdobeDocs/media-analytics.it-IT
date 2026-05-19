@@ -4,10 +4,24 @@ description: Scopri come migrare da SDK per contenuti multimediali a Launch per 
 exl-id: f70b8e1b-cb9f-4230-86b2-171bdaed4615
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+TQID: https://experienceleague.adobe.com/drdnQd83UXJkMKj-isUKPeIHe9xGetwY31HzHf37IEo
+product_v2:
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2:
+  - id: b3f03848-ae12-48b2-8aab-cad18567eb32
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
 workflow-type: tm+mt
-source-wordcount: '380'
-ht-degree: 97%
+source-wordcount: 426
+ht-degree: 60%
 
 ---
 
@@ -20,8 +34,8 @@ ht-degree: 97%
 
 ### SDK per contenuti multimediali indipendenti
 
-Nell’SDK per contenuti multimediali indipendenti, configura la configurazione di tracciamento nell’app 
-e trasmettila all’SDK quando crei il tracciatore.
+In Media SDK standalone, puoi configurare la configurazione di tracciamento nell’app.
+e trasmettilo a SDK quando crei il tracciatore.
 
 ```objective-c
 ADBMediaHeartbeatConfig *config =
@@ -54,8 +68,8 @@ L’estensione Media utilizza i parametri configurati per il tracciamento.
 
 ### SDK per contenuti multimediali indipendenti
 
-Nel Media SDK indipendente puoi creare manualmente l’oggetto `ADBMediaHeartbeatConfig` e configurare
-i parametri di tracciamento. Implementa l’interfaccia di delegato che espone
+In Media SDK standalone si crea manualmente l&#39;oggetto `ADBMediaHeartbeatConfig`
+e configura i parametri di tracciamento. Implementa l’interfaccia di delegato che espone
 `getQoSObject()` e `getCurrentPlaybackTime()functions.`
 
 Crea un’istanza MediaHeartbeat per il tracciamento:
@@ -130,24 +144,25 @@ Il tracciatore seleziona automaticamente la configurazione dalla proprietà di a
 
 ### SDK per contenuti multimediali indipendenti
 
-Nell’SDK per contenuti multimediali indipendenti, un oggetto delegato che implementa il
-`ADBMediaHeartbeartDelegate` protocollo viene passato durante la creazione del tracciatore.
-L’implementazione deve restituire il QoE e la testina di riproduzione più recente ogni volta che il 
-tracciatore chiama i metodi di interfaccia `getQoSObject()` e `getCurrentPlaybackTime()`.
+In Media SDK standalone, oggetto delegato che implementa
+Protocollo `ADBMediaHeartbeartDelegate` passato durante la creazione del tracker.
+L’implementazione deve restituire il QoE e la testina di riproduzione più recente ogni volta che
+il tracker chiama l&#39;interfaccia `getQoSObject()` e `getCurrentPlaybackTime()`
+metodi.
 
 ### Estensione Launch
 
-L&#39;implementazione deve aggiornare la testina di riproduzione corrente del lettore denominato
-`updateCurrentPlayhead` metodo esposto dal tracciatore. Per un tracciamento accurato 
-devi chiamare questo metodo almeno una volta al secondo.
+L’implementazione deve aggiornare la testina di riproduzione corrente del lettore denominato
+Metodo `updateCurrentPlayhead` esposto dal tracker. Per un tracciamento accurato
+è necessario chiamare questo metodo almeno una volta al secondo.
 
-[Riferimento API Media - Aggiornare la testina di riproduzione corrente](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/api-reference/#updatecurrentplayhead)
+[Guida di riferimento dell’API Media: aggiornare la testina di riproduzione corrente](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/api-reference/#updatecurrentplayhead)
 
 L’implementazione deve aggiornare le informazioni QoE chiamando il
-`updateQoEObject` metodo esposto dal tracciatore. È necessario utilizzare questo metodo 
-ogni volta che si verifica una modifica nelle metriche di qualità.
+Metodo `updateQoEObject` esposto dal tracker. È necessario chiamare questo metodo
+ogni volta che si verifica un cambiamento nelle metriche di qualità.
 
-[Riferimento API Media - Aggiornare oggetto QoE](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/api-reference/#createqoeobject)
+[Guida di riferimento dell’API Media: aggiornare l’oggetto QoE](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/api-reference/#createqoeobject)
 
 ## Trasmissione dei contenuti multimediali e dei metadati standard di annunci
 

@@ -5,9 +5,22 @@ uuid: 2ca6bb1d-c545-43d3-9c3e-63b890aa268d
 exl-id: 687dbaa5-4723-4b3f-ab1e-4d5bf447cddf
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+TQID: https://experienceleague.adobe.com/nWQiQkx66U5JL19U4yV8o4dvm0nLivpyKq29uNlIXTc
+product_v2:
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2:
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: 472
 ht-degree: 92%
 
 ---
@@ -28,7 +41,7 @@ I metadati standard di video, audio e annunci possono essere impostati rispettiv
 | Data della prima messa in onda | `a.media.airDate` | `MEDIA_VideoMetadataKeyFIRST_AIR_DATE` |
 | Data della prima messa in onda digitale | `a.media.digitalDate` | `MEDIA_VideoMetadataKeyFIRST_DIGITAL_DATE` |
 | Classificazione | `a.media.rating` | `MEDIA_VideoMetadataKeyRATING` |
-| Creatore | `a.media.originator` | `MEDIA_VideoMetadataKeyORIGINATOR` |
+| Iniziatore | `a.media.originator` | `MEDIA_VideoMetadataKeyORIGINATOR` |
 | Rete | `a.media.network` | `MEDIA_VideoMetadataKeyNETWORK` |
 | Tipo di spettacolo | `a.media.type` | `MEDIA_VideoMetadataKeySHOW_TYPE` |
 | Caricamento annuncio | `a.media.adLoad` | `MEDIA_VideoMetadataKeyAD_LOAD` |
@@ -47,7 +60,7 @@ I metadati standard di video, audio e annunci possono essere impostati rispettiv
 | Etichetta | `a.media.label` | `MEDIA_AudioMetadataKeyLABEL` |
 | Autore | `a.media.author` | `MEDIA_AudioMetadataKeyAUTHOR` |
 | Stazione | `a.media.station` | `MEDIA_AudioMetadataKeySTATION` |
-| Editore | `a.media.publisher` | `MEDIA_AudioMetadataKeyPUBLISHER` |
+| Autore | `a.media.publisher` | `MEDIA_AudioMetadataKeyPUBLISHER` |
 
 ## Costanti di metadati dell’annuncio {#ad-metadata-constants}
 
@@ -72,11 +85,11 @@ Per tenere traccia degli eventi multimediali è possibile utilizzare le seguenti
 
 ### Costanti MediaObjectkey (utilizzate come chiavi all’interno delle istanze MediaObject)
 
-| Costante | Descrizione |
+| Costante | Descrizione   |
 | --- | --- |
 | `MEDIA_STANDARD_MEDIA_METADATA` | Costante per impostare i metadati su `MediaInfo` `trackLoad` |
 | `MEDIA_STANDARD_AD_METADATA` | Costante per impostare i metadati dell’annuncio su `EventData` `trackEvent` |
-| `MEDIA_RESUMED` | Costante per l’invio di un heartbeat relativo al video ripreso. Per riprendere il tracciamento video del contenuto precedentemente interrotto, è necessario impostare la proprietà `MEDIA_RESUMED` sull’oggetto `mediaInfo` quando effettui una chiamata `mediaTrackLoad`. (`MEDIA_RESUMED` non è un evento di cui è possibile tenere traccia utilizzando l&#39;API `mediaTrackEvent`.) `MEDIA_RESUMED` deve essere impostato su true quando un&#39;applicazione desidera continuare a tenere traccia del contenuto che un utente ha interrotto di guardare ma ora intende riprendere la visualizzazione. <br/><br/>Ad esempio, supponiamo che un utente guardi il 30% del contenuto e poi chiuda l’app. Questo porterà al termine della sessione. Successivamente, se lo stesso utente ritorna allo stesso contenuto e l’applicazione gli consente di riprendere dallo stesso punto in cui aveva interrotto, l’applicazione deve impostare `MEDIA_RESUMED` su “true” effettuando una chiamata all’API `mediaTrackLoad`. Pertanto ne consegue che queste due diverse sessioni multimediali per gli stessi contenuti video possono essere collegate tra loro. Di seguito è riportato un esempio di implementazione: <br/><br/> `mediaInfo =` <br/>   `adb_media_init_mediainfo(` <br/>     `"test_media_name",` <br/>     `"test_media_id",`<br/>      `10,` <br/>     `"vod"` <br/> `)` <br/> `mediaInfo[ADBMobile().MEDIA_RESUMED] = true` <br/> `mediaContextData = {}` <br/>  `ADBMobile().mediaTrackLoad(mediaInfo, mediaContextData)` <br/><br/>Questo creerà una nuova sessione per il video, ma farà anche sì che l’SDK invii una richiesta heartbeat con il tipo di evento “riprendi” che può essere utilizzata nella generazione di rapporti per collegare due diverse sessioni multimediali. |
+| `MEDIA_RESUMED` | Costante per l’invio di un heartbeat relativo al video ripreso. Per riprendere il tracciamento video del contenuto precedentemente interrotto, è necessario impostare la proprietà `MEDIA_RESUMED` sull’oggetto `mediaInfo` quando effettui una chiamata `mediaTrackLoad`. (`MEDIA_RESUMED` non è un evento di cui è possibile tenere traccia utilizzando l&#39;API `mediaTrackEvent`.) `MEDIA_RESUMED` deve essere impostato su true quando un&#39;applicazione desidera continuare a tenere traccia del contenuto che un utente ha smesso di guardare ma ora intende riprendere la visione. <br/><br/>Ad esempio, supponiamo che un utente guardi il 30% del contenuto e poi chiuda l’app. Questo porterà al termine della sessione. Successivamente, se lo stesso utente ritorna allo stesso contenuto e l’applicazione gli consente di riprendere dallo stesso punto in cui aveva interrotto, l’applicazione deve impostare `MEDIA_RESUMED` su “true” effettuando una chiamata all’API `mediaTrackLoad`. Pertanto ne consegue che queste due diverse sessioni multimediali per gli stessi contenuti video possono essere collegate tra loro. Di seguito è riportato un esempio di implementazione: <br/><br/> `mediaInfo =` <br/>   `adb_media_init_mediainfo(` <br/>     `"test_media_name",` <br/>     `"test_media_id",`<br/>      `10,` <br/>     `"vod"` <br/> `)` <br/> `mediaInfo[ADBMobile().MEDIA_RESUMED] = true` <br/> `mediaContextData = {}` <br/>  `ADBMobile().mediaTrackLoad(mediaInfo, mediaContextData)` <br/><br/>Questo creerà una nuova sessione per il video, ma farà anche sì che l’SDK invii una richiesta heartbeat con il tipo di evento “riprendi” che può essere utilizzata nella generazione di rapporti per collegare due diverse sessioni multimediali. |
 
 ### Costanti del tipo di contenuto
 

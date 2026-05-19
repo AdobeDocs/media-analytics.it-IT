@@ -5,10 +5,28 @@ uuid: 06fefedb-b0c8-4f7d-90c8-e374cdde1695
 exl-id: a175332e-0bdc-44aa-82cb-b3f879e7abfc
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+TQID: https://experienceleague.adobe.com/DsVDPsePWd123v5D8OdC2zUn52IWAOwh6QxcpvB1FIs
+product_v2:
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2:
+  - id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7a
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: bcc784b7-4ade-4c84-96fa-2f7631b1e5fd
+  - id: c8add8f2-4250-4fd9-9cde-9707036c567d
+  - id: e7d92df1-c5ba-4e93-85df-f83171b889be
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 94%
+source-wordcount: 626
+ht-degree: 81%
 
 ---
 
@@ -42,10 +60,10 @@ Per configurare e utilizzare Streaming Media SDK, effettua i seguenti passaggi d
 
 1. Implementa `MediaHeartbeatDelegate`.
 
-   |  Nome metodo  |  Descrizione | Obbligatorio |
+   |  Nome metodo  |  Descrizione  | Obbligatorio |
    | --- | --- | :---: |
    | `getQoSObject()` | Restituisce l&#39;istanza `MediaObject` che contiene le informazioni QoS correnti. Questo metodo verrà chiamato più volte durante una sessione di riproduzione. L&#39;implementazione del lettore deve restituire sempre i dati QoS disponibili più di recente. | Sì |
-   | `getCurrentPlaybackTime()` | Restituisce la posizione corrente dela testina di riproduzione. <br /> Per il tracciamento VOD, il valore è specificato in secondi dall&#39;inizio dell&#39;elemento multimediale. <br /> Per lo streaming live, se il lettore non fornisce informazioni sulla durata del contenuto, il valore può essere specificato come il numero di secondi trascorsi dalla mezzanotte UTC di quel giorno. <br /> Nota: quando si utilizzano gli indicatori di avanzamento, è necessario specificare la durata del contenuto e la testina di riproduzione deve essere aggiornata come numero di secondi dall’inizio dell’elemento multimediale, a partire da 0. | Sì |
+   | `getCurrentPlaybackTime()` | Restituisce la posizione corrente della testina di riproduzione. <br /> Per il tracciamento VOD, il valore è specificato in secondi dall&#39;inizio dell&#39;elemento multimediale. <br /> Per lo streaming live, se il lettore non fornisce informazioni sulla durata del contenuto, il valore può essere specificato come il numero di secondi trascorsi dalla mezzanotte UTC di quel giorno. <br /> Nota: quando si utilizzano i marcatori di avanzamento, è necessario specificare la durata del contenuto e la testina di riproduzione deve essere aggiornata come numero di secondi dall’inizio dell’elemento multimediale, a partire da 0. | Sì |
 
    >[!TIP]
    >
@@ -117,8 +135,8 @@ Le implementazioni di tracciamento di Media Analytics generano due tipi di chiam
 * Le chiamate Media e Ad Start vengono inviate direttamente al server Adobe Analytics (AppMeasurement).
 * Le chiamate Heartbeat vengono inviate al server di tracciamento di Media Analytics (heartbeat), vengono elaborate e trasmesse al server Adobe Analytics.
 
-* **Server Adobe Analytics (AppMeasurement)**
-Per ulteriori informazioni sulle opzioni del server di tracciamento, vedi [Compilare correttamente le variabili trackingServer e trackingServerSecure.](https://helpx.adobe.com/it/analytics/kb/determining-data-center.html)
+* Server **Adobe Analytics (AppMeasurement)**
+Per ulteriori informazioni sulle opzioni del server di tracciamento, vedere [Compilare correttamente le variabili trackingServer e trackingServerSecure.](https://helpx.adobe.com/it/analytics/kb/determining-data-center.html)
 
   >[!IMPORTANT]
   >
@@ -126,7 +144,7 @@ Per ulteriori informazioni sulle opzioni del server di tracciamento, vedi [Compi
 
   Il server di tracciamento di Analytics deve terminare in “`.sc.omtrdc.net`” o essere un CNAME.
 
-* **&#x200B; Server Media Analytics (Heartbeat)** 
-Questo ha sempre il formato “`[your_namespace].hb.omtrdc.net`”. Il valore di “`[your_namespace]`” specifica la società ed è fornito da Adobe.
+* **&#x200B; server Media Analytics (Heartbeat)**
+Questo ha sempre il formato &quot;`[your_namespace].hb.omtrdc.net`&quot;. Il valore di “`[your_namespace]`” specifica la società ed è fornito da Adobe.
 
 Il tracciamento dei contenuti multimediali funziona allo stesso modo su tutte le piattaforme, desktop e dispositivi mobili. Il tracciamento audio funziona attualmente sulle piattaforme mobili. Per tutte le chiamate di tracciamento sono disponibili alcune variabili universali chiave da convalidare:

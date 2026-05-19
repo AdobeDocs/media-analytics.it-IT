@@ -1,18 +1,34 @@
 ---
-title: 'Riproduzione VOD con un capitolo saltato '
+title: Riproduzione VOD con un capitolo saltato
 description: Visualizza un esempio di come tracciare il contenuto VOD in cui l’utente ha saltato un capitolo utilizzando Media SDK.
 uuid: 19fb020c-eb7a-4942-9212-94f4d47195b9
 exl-id: 5ab981bf-1195-4197-a7c0-051fa4aa11b8
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+TQID: https://experienceleague.adobe.com/hAoksavM6bSmrMzE1O99tCai7A3tBZUvRuhGPmNr4o8
+product_v2:
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2:
+  - id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7a
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: bcc784b7-4ade-4c84-96fa-2f7631b1e5fd
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: 313
 ht-degree: 100%
 
 ---
 
-# Riproduzione VOD con un capitolo saltato {#vod-playback-with-a-skipped-chapter}
+# Riproduzione VOD con un capitolo saltato{#vod-playback-with-a-skipped-chapter}
 
 ## Scenario {#scenario}
 
@@ -20,7 +36,7 @@ In questo scenario, l’utente salta un capitolo nel contenuto principale.
 
 Questo è lo stesso scenario della [Riproduzione VOD con un capitolo](/help/use-cases/tracking-scenarios/vod-one-chapter.md), tranne che l’utente in questo caso intende effettuare una ricerca all’interno del capitolo, saltando in tal modo il contenuto principale.
 
-| Trigger | metodo Heartbeat | Chiamate di rete   | Note |
+| Trigger | Metodo Heartbeat | Chiamate di rete   | Note |
 |---|---|---|---|
 | L’utente fa clic su **[!UICONTROL Play]** | `trackSessionStart` | Inizio contenuto Analytics, inizio contenuto Heartbeat | La libreria di misurazione ignora l’esistenza di un annuncio pre-roll. Queste chiamate di rete sono ancora esattamente le stesse dello scenario della [Riproduzione senza interruzioni in iOS](vod-no-intrs-details.md). |
 | Il capitolo viene avviato. | `trackEvent:ChapterStart` | Heartbeat Chapter Start |  |

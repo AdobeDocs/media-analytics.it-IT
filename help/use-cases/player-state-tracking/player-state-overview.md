@@ -4,18 +4,36 @@ description: Scopri la funzione di tracciamento dello stato del lettore, compres
 exl-id: c678e182-74e4-4f46-8596-7be57e645c66
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: afc22870fc69d8319acbff91aafc66b66ec9bdf9
+TQID: https://experienceleague.adobe.com/R4ByVgEI65JyN-LFdMX1CCBs4zVyppVgebN9OJxJNMM
+product_v2:
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2:
+  - id: b3f03848-ae12-48b2-8aab-cad18567eb32
+  - id: c153fd90-23e1-4614-81d3-3cc7571227f7
+  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2:
+  - id: f1f1a2d4-0976-4881-b091-c2bb8de7ffac
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: 409
 ht-degree: 100%
 
 ---
 
 # Informazioni sul tracciamento dello stato del lettore
 
-Per ottimizzare l’esperienza con i prodotti e promuovere l’attività aziendale, è importante comprendere il comportamento dei clienti durante la visualizzazione dei video. Questo include il tempo trascorso all’interno dei diversi stati del lettore. È anche importante avere la possibilità di creare e misurare nuovi stati ed eventi del lettore in base alle esigenze.
+Per ottimizzare l’esperienza con i prodotti e promuovere l’attività aziendale, è importante comprendere il comportamento dei clienti durante la visualizzazione dei video. Questo include il tempo trascorso all’interno dei diversi stati del lettore.  È anche importante avere la possibilità di creare e misurare nuovi stati ed eventi del lettore in base alle esigenze.
 
-Il tracciamento dello stato del lettore consente di acquisire l’interazione dell’utente durante la riproduzione utilizzando un set di variabili standard per l’intera schermata, i sottotitoli, la disattivazione dell’audio, gli effetti “picture-in-picture” e a fuoco. Il tracciamento dello stato del lettore offre anche la possibilità di creare stati del lettore personalizzati. Puoi utilizzare le variabili di tracciamento dello stato del lettore per il reporting in Analysis Workspace.
+Il tracciamento dello stato del lettore consente di acquisire l’interazione dell’utente durante la riproduzione utilizzando un set di variabili standard per l’intera schermata, i sottotitoli, la disattivazione dell’audio, gli effetti “picture-in-picture” e a fuoco.  Il tracciamento dello stato del lettore offre anche la possibilità di creare stati del lettore personalizzati. Puoi utilizzare le variabili di tracciamento dello stato del lettore per il reporting in Analysis Workspace.
 
 Per acquisire le modifiche allo stato del lettore, il tracciamento aggiorna i metadati della misurazione video. Ad esempio, per determinare il coinvolgimento video “true”, il tracciamento dello stato del lettore misura il tempo trascorso con il suono attivo rispetto alle visualizzazioni video passive con il suono disattivato, oppure il tempo trascorso in modalità normale rispetto alla modalità a schermo intero.
 
