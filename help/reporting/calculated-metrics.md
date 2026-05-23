@@ -3,19 +3,18 @@ title: Metriche calcolate
 description: Metriche calcolate personalizzate per il reporting di contenuti multimediali in streaming in Adobe Analytics e Customer Journey Analytics.
 feature: Metrics
 role: User, Admin
-source-git-commit: ea740a32bbd5e640cd437cd8c5c4f48071a0d02c
+source-git-commit: 1251b66173158b8fea92516197b3b9f444bfaaf7
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 5%
 
 ---
 
-
 # Metriche calcolate
 
 Le metriche calcolate per i servizi di contenuti multimediali in streaming di Adobe sono metriche personalizzate basate sulle metriche dei contenuti multimediali in streaming standard, che consentono di ottenere rapporti quali il tempo medio trascorso o il tasso di completamento dei contenuti multimediali senza modificare l’implementazione.
 
-Per creare queste metriche calcolate in Analysis Workspace, vedi la panoramica delle rispettive metriche calcolate in [Adobe Analytics](https://experienceleague.adobe.com/it/docs/analytics/components/calculated-metrics/cm-overview) o [Customer Journey Analytics](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-components/cja-calcmetrics/calc-metr-overview).
+Per creare queste metriche calcolate in Analysis Workspace, vedi la panoramica delle rispettive metriche calcolate in [Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/components/calculated-metrics/cm-overview) o [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-components/cja-calcmetrics/calc-metr-overview).
 
 | Metrica calcolata | Descrizione | Formula |
 | --- | --- | --- |
@@ -34,3 +33,4 @@ Per creare queste metriche calcolate in Analysis Workspace, vedi la panoramica d
 | Percentuale durata buffer dei contenuti | Percentuale di durata totale del buffer rispetto al tempo trascorso dei contenuti | [`Total Buffer Duration`](/help/reporting/metrics/total-buffer-duration.md) / [`Content Time Spent`](/help/reporting/metrics/content-time-spent.md) |
 | Percentuale tempo di avvio dei contenuti | Percentuale di tempo di avvio rispetto al tempo trascorso dei contenuti | [`Time to Start`](/help/reporting/metrics/time-to-start.md) / [`Content Time Spent`](/help/reporting/metrics/content-time-spent.md) |
 | Percentuale tempo trascorso dell’annuncio | Percentuale di tempo trascorso degli annunci rispetto al tempo trascorso dei contenuti | [`Ad Time Spent`](/help/reporting/metrics/ad-time-spent.md) / [`Content Time Spent`](/help/reporting/metrics/content-time-spent.md) |
+
