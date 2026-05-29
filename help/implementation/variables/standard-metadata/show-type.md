@@ -3,10 +3,10 @@ title: Tipo di spettacolo
 description: Identifica il formato del contenuto (episodio completo, anteprima, clip o altro) utilizzando un codice intero stringa.
 feature: Streaming Media
 role: Developer
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 8%
+source-wordcount: '233'
+ht-degree: 4%
 
 ---
 
@@ -31,14 +31,18 @@ Utilizzatela per separare la visualizzazione di un programma completo da contenu
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.type` |
-| **Campo raccolta XDM** | [`mediaCollection.sessionDetails.showType`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.showType`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.type` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
 
-## Web SDK
+## Tipi di implementazione consigliati
 
-Imposta `showType` all&#39;interno di `mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+>[!BEGINTABS]
+
+>[!TAB Web SDK]
+
+Imposta `showType` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -54,11 +58,9 @@ alloy("sendEvent", {
 });
 ```
 
-## Mobile SDK
+>[!TAB iOS]
 
 Passa il tipo di visualizzazione come chiave di metadati nell&#39;argomento HashMap a `trackSessionStart`. Usa `MediaConstants.VideoMetadataKeys.SHOW_TYPE`.
-
-**iOS (Swift)**
 
 ```swift
 var metadata: [String: String] = [:]
@@ -67,7 +69,9 @@ metadata[MediaConstants.VideoMetadataKeys.SHOW_TYPE] = "0"
 tracker.trackSessionStart(info: mediaObject, metadata: metadata)
 ```
 
-**Android (Cotlino)**
+>[!TAB Android]
+
+Passa il tipo di visualizzazione come chiave di metadati nell&#39;argomento HashMap a `trackSessionStart`. Usa `MediaConstants.VideoMetadataKeys.SHOW_TYPE`.
 
 ```kotlin
 val metadata = HashMap<String, String>()
@@ -76,7 +80,7 @@ metadata[MediaConstants.VideoMetadataKeys.SHOW_TYPE] = "0"
 tracker.trackSessionStart(mediaInfo, metadata)
 ```
 
-## Roku (BrightScript)
+>[!TAB Roku]
 
 Utilizza `createMediaSession` per impostare `showType` in `sessionDetails`:
 
@@ -94,9 +98,9 @@ m.aepSdk.createMediaSession({
 })
 ```
 
-## API di Media Edge
+>[!TAB API Media Edge]
 
-Chiama l&#39;endpoint [sessionStart](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/sessions/#sessionstart) con `showType` in `mediaCollection.sessionDetails`:
+Chiama l&#39;endpoint [sessionStart](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/sessions/#sessionstart) con `showType` in `xdm.mediaCollection.sessionDetails`:
 
 ```json
 {
@@ -119,7 +123,13 @@ Chiama l&#39;endpoint [sessionStart](https://developer.adobe.com/data-collection
 }
 ```
 
-## Media SDK
+>[!ENDTABS]
+
+## Tipi di implementazione legacy (solo Analytics)
+
+>[!BEGINTABS]
+
+>[!TAB Media SDK JS 3.x]
 
 Passa il tipo di presentazione nell&#39;oggetto `contextData` utilizzando `ADB.Media.VideoMetadataKeys.ShowType`:
 
@@ -130,7 +140,20 @@ contextData[ADB.Media.VideoMetadataKeys.ShowType] = "0";
 tracker.trackSessionStart(mediaInfo, contextData);
 ```
 
-## API Media Collection
+>[!TAB Chromecast]
+
+Utilizzare `ADBMobile.media.VideoMetadataKeys.SHOW_TYPE` per impostare il tipo di presentazione nella proprietà `StandardMediaMetadata` dell&#39;oggetto multimediale prima di chiamare `trackSessionStart`:
+
+```javascript
+var mediaInfo = ADBMobile.media.createMediaObject("My Video", "video-123", 128,
+  ADBMobile.media.StreamType.VOD, ADBMobile.media.MediaType.Video);
+var standardMetadata = {};
+standardMetadata[ADBMobile.media.VideoMetadataKeys.SHOW_TYPE] = "0";
+mediaInfo[ADBMobile.media.MediaObjectKey.StandardMediaMetadata] = standardMetadata;
+ADBMobile.media.trackSessionStart(mediaInfo, null);
+```
+
+>[!TAB API Media Collection]
 
 Includi `media.showType` nell&#39;oggetto `params`:
 
@@ -145,3 +168,5 @@ Includi `media.showType` nell&#39;oggetto `params`:
 ```
 
 Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-sessions-req.md).
+
+>[!ENDTABS]

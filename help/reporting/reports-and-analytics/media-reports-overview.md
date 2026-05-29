@@ -18,16 +18,16 @@ role_v2:
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: 109
-ht-degree: 100%
+source-wordcount: 105
+ht-degree: 84%
 
 ---
 
 # Panoramica contenuti multimediali{#media-overview}
 
-La dashboard Panoramica file multimediali è progettata per consentire il monitoraggio dei contenuti multimediali nel sito. La visualizzazione Panoramica file multimediali mostra diverse misurazioni aggregate in modo da poter monitorare rapidamente le prestazioni del supporto come previsto. Un grafico mostra il contenuto che inizia accanto all’inizio dell’annuncio e ti consente di visualizzare rapidamente queste metriche per ogni elemento multimediale.
+La dashboard Panoramica file multimediali è progettata per consentire il monitoraggio dei contenuti multimediali nel sito. La visualizzazione Panoramica file multimediali mostra diverse misurazioni aggregate in modo da poter monitorare rapidamente le prestazioni del supporto come previsto. Accanto a [[!UICONTROL Ad starts]](/help/reporting/metrics/ad-starts.md) viene visualizzato un grafico con [[!UICONTROL Content starts]](/help/reporting/metrics/content-starts.md) che consente di visualizzare rapidamente queste metriche per ogni elemento multimediale.
 
 ![](assets/media_overview.png)
 

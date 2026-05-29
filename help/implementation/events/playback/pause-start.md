@@ -3,10 +3,10 @@ title: Inizio pausa
 description: Segnala che l’utente ha messo in pausa la riproduzione multimediale.
 feature: Streaming Media
 role: Developer
-source-git-commit: b75e50f626b85992575961ea267d0f74eda09f0a
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: '121'
-ht-degree: 7%
+source-wordcount: '138'
+ht-degree: 2%
 
 ---
 
@@ -16,13 +16,17 @@ ht-degree: 7%
 L’evento di avvio della pausa segnala che l’utente ha messo in pausa la riproduzione. Non esiste un evento di ripresa separato; invia un evento [Play](play.md) quando la riproduzione riprende.
 
 * **Prerequisiti**: [Inizio sessione](../session/session-start.md)
-* **Metrica associata**: [Eventi di pausa](/help/reporting/metrics/pause-events.md)
+* **Metrica associata**: [[!UICONTROL Pause events]](/help/reporting/metrics/pause-events.md)
 
 >[!NOTE]
 >
 >Non esiste un tipo di evento di ripresa. La ripresa viene dedotta quando si invia un evento [`play`](play.md) dopo `pauseStart`.
 
-## Web SDK
+## Tipi di implementazione consigliati
+
+>[!BEGINTABS]
+
+>[!TAB Web SDK]
 
 Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.pauseStart"`:
 
@@ -38,23 +42,23 @@ alloy("sendEvent", {
 });
 ```
 
-## Mobile SDK
+>[!TAB iOS]
 
 Chiamare `trackPause` quando l&#39;utente mette in pausa la riproduzione.
-
-**iOS (Swift)**
 
 ```swift
 tracker.trackPause()
 ```
 
-**Android (Cotlino)**
+>[!TAB Android]
+
+Chiamare `trackPause` quando l&#39;utente mette in pausa la riproduzione.
 
 ```kotlin
 tracker.trackPause()
 ```
 
-## Roku (BrightScript)
+>[!TAB Roku]
 
 Chiama `sendMediaEvent` con `eventType: "media.pauseStart"`:
 
@@ -69,7 +73,7 @@ m.aepSdk.sendMediaEvent({
 })
 ```
 
-## API di Media Edge
+>[!TAB API Media Edge]
 
 Chiama l&#39;endpoint [pauseStart](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/pausestart/):
 
@@ -90,7 +94,13 @@ curl -X POST "https://edge.adobedc.net/ee/va/v1/pauseStart?configId={datastreamI
 }'
 ```
 
-## Media SDK
+>[!ENDTABS]
+
+## Tipi di implementazione legacy (solo Analytics)
+
+>[!BEGINTABS]
+
+>[!TAB Media SDK JS 3.x]
 
 Chiamare `trackPause` quando l&#39;utente mette in pausa la riproduzione:
 
@@ -98,7 +108,15 @@ Chiamare `trackPause` quando l&#39;utente mette in pausa la riproduzione:
 tracker.trackPause();
 ```
 
-## API Media Collection
+>[!TAB Chromecast]
+
+Chiamare `trackPause` quando l&#39;utente mette in pausa la riproduzione:
+
+```javascript
+ADBMobile.media.trackPause();
+```
+
+>[!TAB API Media Collection]
 
 Invia un POST `pauseStart` all&#39;endpoint [eventi](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md):
 
@@ -108,3 +126,5 @@ Invia un POST `pauseStart` all&#39;endpoint [eventi](/help/implementation/media-
   "eventType": "pauseStart"
 }
 ```
+
+>[!ENDTABS]

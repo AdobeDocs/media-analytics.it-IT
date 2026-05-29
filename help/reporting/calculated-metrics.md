@@ -3,10 +3,10 @@ title: Metriche calcolate
 description: Metriche calcolate personalizzate per il reporting di contenuti multimediali in streaming in Adobe Analytics e Customer Journey Analytics.
 feature: Metrics
 role: User, Admin
-source-git-commit: 1251b66173158b8fea92516197b3b9f444bfaaf7
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 5%
+source-wordcount: '194'
+ht-degree: 7%
 
 ---
 
@@ -18,19 +18,19 @@ Per creare queste metriche calcolate in Analysis Workspace, vedi la panoramica d
 
 | Metrica calcolata | Descrizione | Formula |
 | --- | --- | --- |
-| Media annunci per flusso multimediale | Avvio annuncio per avvio file multimediali | [`Ad Starts`](/help/reporting/metrics/ad-starts.md) / [`Media Starts`](/help/reporting/metrics/media-starts.md) |
-| Media capitoli per flusso multimediale | Avvio del capitolo per avvio del contenuto multimediale | [`Chapter Starts`](/help/reporting/metrics/chapter-starts.md) / [`Media Starts`](/help/reporting/metrics/media-starts.md) |
-| Media tempo trascorso dei contenuti multimediali | Tempo totale trascorso per avvio file multimediali (`HH:MM:SS`) | [`Media Time Spent`](/help/reporting/metrics/media-time-spent.md) / [`Media Starts`](/help/reporting/metrics/media-starts.md) |
-| Media tempo trascorso dei contenuti | Tempo trascorso contenuto per avvio contenuto (`HH:MM:SS`) | [`Content Time Spent`](/help/reporting/metrics/content-time-spent.md) / [`Content Starts`](/help/reporting/metrics/content-starts.md) |
-| Media tempo trascorso dell’annuncio | Tempo trascorso annuncio per avvio annuncio (`HH:MM:SS`) | [`Ad Time Spent`](/help/reporting/metrics/ad-time-spent.md) / [`Ad Starts`](/help/reporting/metrics/ad-starts.md) |
-| Media tempo trascorso capitolo | Tempo trascorso capitolo per avvio capitolo (`HH:MM:SS`) | [`Chapter Time Spent`](/help/reporting/metrics/chapter-time-spent.md) / [`Chapter Starts`](/help/reporting/metrics/chapter-starts.md) |
-| Percentuale di completamento file multimediali | Percentuale di completamento dei contenuti rispetto ai contenuti multimediali avviati | [`Content Completes`](/help/reporting/metrics/content-completes.md) / [`Media Starts`](/help/reporting/metrics/media-starts.md) |
-| Percentuale di completamento dei contenuti | Percentuale di completamento dei contenuti rispetto all&#39;avvio dei contenuti | [`Content Completes`](/help/reporting/metrics/content-completes.md) / [`Content Starts`](/help/reporting/metrics/content-starts.md) |
-| Percentuale di completamento degli annunci | Percentuale di completamenti e avvii degli annunci | [`Ad Completes`](/help/reporting/metrics/ad-completes.md) / [`Ad Starts`](/help/reporting/metrics/ad-starts.md) |
-| Tasso di completamento capitolo | Percentuale di completamento del capitolo rispetto all’inizio del capitolo | [`Chapter Completes`](/help/reporting/metrics/chapter-completes.md) / [`Chapter Starts`](/help/reporting/metrics/chapter-starts.md) |
-| Perdita prima della frequenza di avvio | Percentuale di cadute prima dell’avvio rispetto all’avvio del contenuto multimediale | [`Drops Before Start`](/help/reporting/metrics/drops-before-start.md) / [`Media Starts`](/help/reporting/metrics/media-starts.md) |
-| Percentuale durata pausa contenuti | Percentuale di durata totale della pausa rispetto al tempo trascorso dei contenuti | [`Total Pause Duration`](/help/reporting/metrics/total-pause-duration.md) / [`Content Time Spent`](/help/reporting/metrics/content-time-spent.md) |
-| Percentuale durata buffer dei contenuti | Percentuale di durata totale del buffer rispetto al tempo trascorso dei contenuti | [`Total Buffer Duration`](/help/reporting/metrics/total-buffer-duration.md) / [`Content Time Spent`](/help/reporting/metrics/content-time-spent.md) |
-| Percentuale tempo di avvio dei contenuti | Percentuale di tempo di avvio rispetto al tempo trascorso dei contenuti | [`Time to Start`](/help/reporting/metrics/time-to-start.md) / [`Content Time Spent`](/help/reporting/metrics/content-time-spent.md) |
-| Percentuale tempo trascorso dell’annuncio | Percentuale di tempo trascorso degli annunci rispetto al tempo trascorso dei contenuti | [`Ad Time Spent`](/help/reporting/metrics/ad-time-spent.md) / [`Content Time Spent`](/help/reporting/metrics/content-time-spent.md) |
+| Media annunci per flusso multimediale | [[!UICONTROL Ad starts]](/help/reporting/metrics/ad-starts.md) per [[!UICONTROL Media starts]](/help/reporting/metrics/media-starts.md) | `[Ad starts] / [Media starts]` |
+| Media capitoli per flusso multimediale | [[!UICONTROL Chapter starts]](/help/reporting/metrics/chapter-starts.md) per [[!UICONTROL Media starts]](/help/reporting/metrics/media-starts.md) | `[Chapter starts] / [Media starts]` |
+| Media tempo trascorso dei contenuti multimediali | [[!UICONTROL Media time spent]](/help/reporting/metrics/media-time-spent.md) per [[!UICONTROL Media starts]](/help/reporting/metrics/media-starts.md) (`HH:MM:SS`) | `[Media time spent] / [Media starts]` |
+| Media tempo trascorso dei contenuti | [[!UICONTROL Content time spent]](/help/reporting/metrics/content-time-spent.md) per [[!UICONTROL Content starts]](/help/reporting/metrics/content-starts.md) (`HH:MM:SS`) | `[Content time spent] / [Content starts]` |
+| Media tempo trascorso dell’annuncio | [[!UICONTROL Ad time spent]](/help/reporting/metrics/ad-time-spent.md) per [[!UICONTROL Ad starts]](/help/reporting/metrics/ad-starts.md) (`HH:MM:SS`) | `[Ad time spent] / [Ad starts]` |
+| Media tempo trascorso capitolo | [[!UICONTROL Chapter time spent]](/help/reporting/metrics/chapter-time-spent.md) per [[!UICONTROL Chapter starts]](/help/reporting/metrics/chapter-starts.md) (`HH:MM:SS`) | `[Chapter time spent] / [Chapter starts]` |
+| Percentuale di completamento file multimediali | Percentuale di [[!UICONTROL Content completes]](/help/reporting/metrics/content-completes.md) rispetto a [[!UICONTROL Media starts]](/help/reporting/metrics/media-starts.md) | `[Content completes] / [Media starts]` |
+| Percentuale di completamento dei contenuti | Percentuale di [[!UICONTROL Content completes]](/help/reporting/metrics/content-completes.md) rispetto a [[!UICONTROL Content starts]](/help/reporting/metrics/content-starts.md) | `[Content completes] / [Content starts]` |
+| Percentuale di completamento degli annunci | Percentuale di [[!UICONTROL Ad completes]](/help/reporting/metrics/ad-completes.md) rispetto a [[!UICONTROL Ad starts]](/help/reporting/metrics/ad-starts.md) | `[Ad completes] / [Ad starts]` |
+| Tasso di completamento capitolo | Percentuale di [[!UICONTROL Chapter completes]](/help/reporting/metrics/chapter-completes.md) rispetto a [[!UICONTROL Chapter starts]](/help/reporting/metrics/chapter-starts.md) | `[Chapter completes] / [Chapter starts]` |
+| Perdita prima della frequenza di avvio | Percentuale di [[!UICONTROL Drops before start]](/help/reporting/metrics/drops-before-start.md) rispetto a [[!UICONTROL Media starts]](/help/reporting/metrics/media-starts.md) | `[Drops before start] / [Media starts]` |
+| Percentuale durata pausa contenuti | Percentuale di [[!UICONTROL Total pause duration]](/help/reporting/metrics/total-pause-duration.md) rispetto a [[!UICONTROL Content time spent]](/help/reporting/metrics/content-time-spent.md) | `[Total pause duration] / [Content time spent]` |
+| Percentuale durata buffer dei contenuti | Percentuale di [[!UICONTROL Total buffer duration]](/help/reporting/metrics/total-buffer-duration.md) rispetto a [[!UICONTROL Content time spent]](/help/reporting/metrics/content-time-spent.md) | `[Total buffer duration] / [Content time spent]` |
+| Percentuale tempo di avvio dei contenuti | Percentuale di [[!UICONTROL Time to start]](/help/reporting/metrics/time-to-start.md) rispetto a [[!UICONTROL Content time spent]](/help/reporting/metrics/content-time-spent.md) | `[Time to start] / [Content time spent]` |
+| Percentuale tempo trascorso dell’annuncio | Percentuale di [[!UICONTROL Ad time spent]](/help/reporting/metrics/ad-time-spent.md) rispetto a [[!UICONTROL Content time spent]](/help/reporting/metrics/content-time-spent.md) | `[Ad time spent] / [Content time spent]` |
 

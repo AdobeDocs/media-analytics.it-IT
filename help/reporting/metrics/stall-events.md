@@ -3,7 +3,7 @@ title: Eventi di arresto
 description: Conta gli eventi di stallo per somme e medie tra sessioni.
 feature: Metrics
 role: User, Admin
-source-git-commit: 1278355e0bfc67c635250c426edaf865fb658c37
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 7%
@@ -15,7 +15,7 @@ ht-degree: 7%
 
 La metrica **Eventi di stallo** conta gli eventi di stallo tra sessioni, adatti a somme, medie e aggregazioni percentili. Utilizza la metrica per calcolare il volume totale di stall in un periodo di report e confrontare la stabilità di stall tra contenuti, reti o lettori.
 
-In Customer Journey Analytics, `mediaReporting.qoeDataDetails.stallCount` può essere utilizzato come metrica o come dimensione senza un componente dimensione separato.
+In Customer Journey Analytics, `xdm.mediaReporting.qoeDataDetails.stallCount` può essere utilizzato come metrica o come dimensione senza un componente dimensione separato.
 
 ## Come è calcolata questa metrica
 
@@ -24,7 +24,7 @@ Il back-end multimediale incrementa il conteggio ogni volta che non viene regist
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Crea una [regola di elaborazione](https://experienceleague.adobe.com/it/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/processing-rules/pr-overview) che mappa `a.media.qoe.stallCount` a un evento personalizzato. |
-| Customer Journey Analytics | [`mediaReporting.qoeDataDetails.stallCount`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
+| Customer Journey Analytics | [`xdm.mediaReporting.qoeDataDetails.stallCount`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
 | Feed di dati | `event_list`, `post_event_list` (l&#39;evento personalizzato mappato dalla regola di elaborazione `a.media.qoe.stallCount` a; vedi la ricerca [`event.tsv`](https://experienceleague.adobe.com/it/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-contents#lookup-files)) |
 | Audience Manager | `c_contextdata.a.media.qoe.stallCount` |
 

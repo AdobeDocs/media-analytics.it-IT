@@ -1,8 +1,8 @@
 ---
-source-git-commit: 0d5edcae0a80357247ada7f61daece9840d5c4b5
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: '438'
-ht-degree: 62%
+source-wordcount: '437'
+ht-degree: 89%
 
 ---
 # Contribuire agli articoli
@@ -21,13 +21,13 @@ Il modo in cui contribuisci dipende da chi sei e dal tipo di modifiche con le qu
 
 ### Modifiche minori
 
-Se desideri contribuire con piccoli aggiornamenti, leggi l&#39;articolo e fai clic sul collegamento **Modifica** per passare alla sorgente dell&#39;articolo su GitHub. Quindi, utilizza l’interfaccia utente di GitHub per apportare gli aggiornamenti. Per ulteriori informazioni, consulta la [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=it).
+Se desideri contribuire con piccoli aggiornamenti su base volontaria, consulta l’articolo e fai clic sul collegamento **Modifica**, che rimanda all’origine GitHub dell’articolo. Quindi, utilizza l’interfaccia utente di GitHub per apportare gli aggiornamenti. Per ulteriori informazioni, consulta la [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=it).
 
 Le correzioni o i chiarimenti minori inviati per la documentazione e gli esempi di codice in questo archivio sono coperti dalle condizioni d’uso di Adobe.
 
 ### Modifiche principali o nuovi articoli dai membri della community
 
-Se fai parte della community Adobe e desideri creare un nuovo articolo o inviare modifiche importanti, utilizza la scheda Issues (Problemi) nell’archivio Git per inviare una segnalazione e avviare una conversazione con il team addetto alla documentazione. Dopo aver concordato un piano, dovrai collaborare con un dipendente per coordinare la pubblicazione dei nuovi contenuti attraverso una combinazione di interventi negli archivi pubblici e privati.
+Se fai parte della community Adobe e desideri creare un nuovo articolo o inviare modifiche importanti, utilizza la scheda Problemi nell’archivio Git per inviare una segnalazione e avviare una conversazione con il team addetto alla documentazione. Dopo aver concordato un piano, dovrai collaborare con un dipendente per introdurre i nuovi contenuti attraverso una combinazione di interventi negli archivi pubblici e privati.
 
 <!--
 If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). We need you to complete the online form before we can review your pull request.
@@ -35,7 +35,7 @@ If you submit a pull request with significant changes to documentation and code 
 
 ### Modifiche principali da dipendenti Adobe
 
-Se sei un autore tecnico, un responsabile di programma o uno sviluppatore del team di prodotto per una soluzione Adobe Experience Cloud ed è tuo compito creare o contribuire ad articoli tecnici, devi utilizzare l&#39;archivio privato [git.corp.adobe.com/AdobeDocs](https://git.corp.adobe.com/AdobeDocs). <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
+Se sei un autore tecnico, un responsabile di programma o uno sviluppatore del team di prodotto per una soluzione CX Enterprise ed è tuo compito creare o contribuire ad articoli tecnici, devi utilizzare l&#39;archivio privato [git.corp.adobe.com/AdobeDocs](https://git.corp.adobe.com/AdobeDocs). <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
 ## Strumenti e configurazione
 
@@ -48,7 +48,7 @@ Per informazioni, consulta la [Guida collaboratore per i documenti di Adobe](htt
 Tutti gli articoli in questo archivio utilizzano GitHub Flavored Markdown. Se non conosci Markdown, consulta:
 
 * [Nozioni di base su Markdown](https://help.github.com/articles/markdown-basics/)
-* [Foglio di riferimento per markdown stampabile](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
+* [Scheda di riferimento stampabile su Markdown](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 
 ## Etichette
 

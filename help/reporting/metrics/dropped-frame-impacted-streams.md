@@ -3,7 +3,7 @@ title: Flussi interessati da fotogrammi saltati
 description: Conta le sessioni in cui è stato eliminato almeno un frame.
 feature: Metrics
 role: User, Admin
-source-git-commit: a2c91ef63fa9320a0e47f338ce4d53b9b8e977e3
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 11%
@@ -22,6 +22,6 @@ Il backend multimediale imposta questo flag se il valore `droppedFrames` dell’
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.qoe.droppedFrames` quando [[!UICONTROL Media Quality]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.qoeDataDetails.hasDroppedFrameImpactedStreams`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
+| Customer Journey Analytics | [`xdm.mediaReporting.qoeDataDetails.hasDroppedFrameImpactedStreams`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
 | Feed di dati | `event_list`, `post_event_list` (vedi ricerca [`event.tsv`](https://experienceleague.adobe.com/it/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-contents#lookup-files)) |
 | Audience Manager | `c_contextdata.a.media.qoe.droppedFrames` |

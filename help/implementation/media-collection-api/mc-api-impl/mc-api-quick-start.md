@@ -17,10 +17,10 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
 source-wordcount: 294
-ht-degree: 90%
+ht-degree: 82%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 90%
 >
 >Raccogliere i dati della richiesta necessari per completare una [Richiesta di sessione](../mc-api-ref/mc-api-sessions-req.md) al server back-end API di Media Analytics (MA) Collection. Puoi verificare rapidamente i dati della richiesta inviando manualmente le richieste (con `curl`, o Postman, ecc.). Questo ti darà un feedback immediato su eventuali problemi relativi a tipi di dati errati o informazioni errate nella tua richiesta. Utilizza gli [schemi di convalida JSON](../mc-api-ref/mc-api-json-validation.md) per verificare di aver fornito dati di richiesta corretti.
 
-1. Raccogli i dati standard e richiesti di Adobe Analytics e Visitor da fornire per eseguire una qualsiasi delle applicazioni Experience Cloud:
+1. Raccogliere i dati standard e richiesti di Adobe Analytics e Visitor che è necessario fornire per eseguire una qualsiasi delle applicazioni CX Enterprise:
 
    * ID visitatore organizzazione Experience Cloud
    * ID utente visitatore Experience Cloud

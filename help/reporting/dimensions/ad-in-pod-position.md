@@ -3,7 +3,7 @@ title: Posizione annuncio nel pod
 description: Segnala la posizione con indice zero di ogni annuncio all’interno dell’interruzione pubblicitaria principale.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 7%
@@ -28,7 +28,7 @@ La posizione dell&#39;annuncio nel pod viene impostata dal lettore a ogni evento
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.ad.podPosition` quando [[!UICONTROL Media Ads]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.advertisingDetails.podPosition`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-details-reporting) |
+| Customer Journey Analytics | [`xdm.mediaReporting.advertisingDetails.podPosition`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-details-reporting) |
 | Feed di dati | `videoadinpod`, `post_videoadinpod` |
 | Audience Manager | `c_contextdata.a.media.ad.podPosition` |
 

@@ -3,7 +3,7 @@ title: Errori
 description: Segnala il numero di eventi di errore per sessione.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
 source-wordcount: '231'
 ht-degree: 6%
@@ -15,7 +15,7 @@ ht-degree: 6%
 
 >[!BEGINSHADEBOX]
 
-*In questa pagina è inclusa la dimensione **Errori**. Adobe Analytics compila automaticamente una metrica di [eventi di errore](/help/reporting/metrics/error-events.md) associata dalla stessa variabile di dati di contesto `a.media.qoe.errorCount`. Customer Journey Analytics espone un singolo campo `mediaReporting.qoeDataDetails.errorCount` che è possibile utilizzare come dimensione o come metrica.*
+*In questa pagina è inclusa la dimensione **Errori**. Adobe Analytics compila automaticamente una metrica di [eventi di errore](/help/reporting/metrics/error-events.md) associata dalla stessa variabile di dati di contesto `a.media.qoe.errorCount`. Customer Journey Analytics espone un singolo campo `xdm.mediaReporting.qoeDataDetails.errorCount` che è possibile utilizzare come dimensione o come metrica.*
 
 >[!ENDSHADEBOX]
 
@@ -28,7 +28,7 @@ Il backend multimediale incrementa il conteggio in base a ogni errore segnalato 
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.qoe.errorCount` quando [[!UICONTROL Media Quality]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.qoeDataDetails.errorCount`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
+| Customer Journey Analytics | [`xdm.mediaReporting.qoeDataDetails.errorCount`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
 | Feed di dati | `videoqoeerrorcountevar`, `post_videoqoeerrorcountevar` |
 | Audience Manager | `c_contextdata.a.media.qoe.errorCount` |
 

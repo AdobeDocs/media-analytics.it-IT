@@ -16,14 +16,18 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: 131
-ht-degree: 82%
+source-wordcount: 153
+ht-degree: 70%
 
 ---
 
 # Installare i servizi di Streaming Media tramite l’estensione Media Analytics
+
+>[!IMPORTANT]
+>
+>Questa pagina descrive l’implementazione dell’estensione Media Analytics solo per Analytics. Per l&#39;implementazione consigliata, vedere [Implementare Streaming Media utilizzando Edge Network](/help/implementation/edge/edge-web-sdk.md).
 
 Puoi utilizzare l’estensione Adobe Media Analytics per implementare Adobe Streaming Media Services. L’estensione Media Analytics aggiunge Media SDK principale per JavaScript (Media 3.x SDK). Questa estensione offre le funzionalità necessarie per aggiungere l’istanza di tracciamento multimediale a un sito o a un progetto abilitato per i tag.
 

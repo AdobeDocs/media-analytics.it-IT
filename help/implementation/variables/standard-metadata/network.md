@@ -3,10 +3,10 @@ title: Rete
 description: Imposta il nome della rete di trasmissione o del canale.
 feature: Streaming Media
 role: Developer
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: '171'
-ht-degree: 8%
+source-wordcount: '207'
+ht-degree: 4%
 
 ---
 
@@ -24,14 +24,18 @@ La variabile di rete è il nome della rete di trasmissione o del canale (ad esem
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.network` |
-| **Campo raccolta XDM** | [`mediaCollection.sessionDetails.network`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.network`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.network` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
 
-## Web SDK
+## Tipi di implementazione consigliati
 
-Imposta `network` all&#39;interno di `mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+>[!BEGINTABS]
+
+>[!TAB Web SDK]
+
+Imposta `network` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -47,11 +51,9 @@ alloy("sendEvent", {
 });
 ```
 
-## Mobile SDK
+>[!TAB iOS]
 
 Passare il nome di rete come chiave di metadati nell&#39;argomento HashMap a `trackSessionStart`. Usa `MediaConstants.VideoMetadataKeys.NETWORK`.
-
-**iOS (Swift)**
 
 ```swift
 var metadata: [String: String] = [:]
@@ -60,7 +62,9 @@ metadata[MediaConstants.VideoMetadataKeys.NETWORK] = "ESPN"
 tracker.trackSessionStart(info: mediaObject, metadata: metadata)
 ```
 
-**Android (Cotlino)**
+>[!TAB Android]
+
+Passare il nome di rete come chiave di metadati nell&#39;argomento HashMap a `trackSessionStart`. Usa `MediaConstants.VideoMetadataKeys.NETWORK`.
 
 ```kotlin
 val metadata = HashMap<String, String>()
@@ -69,7 +73,7 @@ metadata[MediaConstants.VideoMetadataKeys.NETWORK] = "ESPN"
 tracker.trackSessionStart(mediaInfo, metadata)
 ```
 
-## Roku (BrightScript)
+>[!TAB Roku]
 
 Utilizza `createMediaSession` per impostare `network` in `sessionDetails`:
 
@@ -87,9 +91,9 @@ m.aepSdk.createMediaSession({
 })
 ```
 
-## API di Media Edge
+>[!TAB API Media Edge]
 
-Chiama l&#39;endpoint [sessionStart](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/sessions/#sessionstart) con `network` in `mediaCollection.sessionDetails`:
+Chiama l&#39;endpoint [sessionStart](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/sessions/#sessionstart) con `network` in `xdm.mediaCollection.sessionDetails`:
 
 ```json
 {
@@ -112,7 +116,13 @@ Chiama l&#39;endpoint [sessionStart](https://developer.adobe.com/data-collection
 }
 ```
 
-## Media SDK
+>[!ENDTABS]
+
+## Tipi di implementazione legacy (solo Analytics)
+
+>[!BEGINTABS]
+
+>[!TAB Media SDK JS 3.x]
 
 Passa la rete nell&#39;oggetto `contextData` utilizzando `ADB.Media.VideoMetadataKeys.Network`:
 
@@ -123,7 +133,20 @@ contextData[ADB.Media.VideoMetadataKeys.Network] = "ESPN";
 tracker.trackSessionStart(mediaInfo, contextData);
 ```
 
-## API Media Collection
+>[!TAB Chromecast]
+
+Utilizzare `ADBMobile.media.VideoMetadataKeys.NETWORK` per impostare il nome di rete nella proprietà `StandardMediaMetadata` dell&#39;oggetto multimediale prima di chiamare `trackSessionStart`:
+
+```javascript
+var mediaInfo = ADBMobile.media.createMediaObject("My Video", "video-123", 128,
+  ADBMobile.media.StreamType.VOD, ADBMobile.media.MediaType.Video);
+var standardMetadata = {};
+standardMetadata[ADBMobile.media.VideoMetadataKeys.NETWORK] = "ESPN";
+mediaInfo[ADBMobile.media.MediaObjectKey.StandardMediaMetadata] = standardMetadata;
+ADBMobile.media.trackSessionStart(mediaInfo, null);
+```
+
+>[!TAB API Media Collection]
 
 Includi `media.network` nell&#39;oggetto `params`:
 
@@ -138,3 +161,5 @@ Includi `media.network` nell&#39;oggetto `params`:
 ```
 
 Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-sessions-req.md).
+
+>[!ENDTABS]

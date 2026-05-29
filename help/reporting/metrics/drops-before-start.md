@@ -3,7 +3,7 @@ title: Perdite prima dell’inizio
 description: Conta le sessioni in cui il visualizzatore si chiude prima di eseguire il rendering di qualsiasi contenuto principale.
 feature: Metrics
 role: User, Admin
-source-git-commit: a2c91ef63fa9320a0e47f338ce4d53b9b8e977e3
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 7%
@@ -22,6 +22,6 @@ Il backend multimediale imposta questo flag per le sessioni che si chiudono senz
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.qoe.dropBeforeStart` quando [[!UICONTROL Media Quality]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.qoeDataDetails.isDroppedBeforeStart`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
+| Customer Journey Analytics | [`xdm.mediaReporting.qoeDataDetails.isDroppedBeforeStart`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
 | Feed di dati | `event_list`, `post_event_list` (vedi ricerca [`event.tsv`](https://experienceleague.adobe.com/it/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-contents#lookup-files)) |
 | Audience Manager | `c_contextdata.a.media.qoe.dropBeforeStart` |

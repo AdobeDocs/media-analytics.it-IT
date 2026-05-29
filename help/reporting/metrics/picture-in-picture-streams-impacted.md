@@ -3,7 +3,7 @@ title: Flussi interessati da picture in picture
 description: Conta le sessioni in cui il visualizzatore è entrato nell'immagine nell'immagine almeno una volta.
 feature: Metrics
 role: User, Admin
-source-git-commit: 4c4f1cc9e1c49044474e4ff34207796b2a814553
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
 source-wordcount: '189'
 ht-degree: 7%
@@ -28,6 +28,6 @@ Il backend multimediale imposta questo flag la prima volta che viene ricevuto un
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.states.pictureinpicture.set` quando [[!UICONTROL Player State Tracking]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | Voce [`mediaReporting.states[]`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/media-reporting-details) in cui `name = "pictureInPicture"`, campo `isSet` |
+| Customer Journey Analytics | Voce [`xdm.mediaReporting.states[]`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/media-reporting-details) in cui `name = "pictureInPicture"`, campo `isSet` |
 | Feed di dati | `event_list`, `post_event_list` (vedi ricerca [`event.tsv`](https://experienceleague.adobe.com/it/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-contents#lookup-files)) |
 | Audience Manager | `c_contextdata.a.media.states.pictureinpicture.set` |

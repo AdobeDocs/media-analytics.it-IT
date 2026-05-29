@@ -3,10 +3,10 @@ title: Durata del contenuto
 description: Imposta la lunghezza del contenuto in secondi all’avvio della sessione. Guida i marcatori di avanzamento e il pubblico medio per minuto.
 feature: Streaming Media
 role: Developer
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 6%
+source-wordcount: '265'
+ht-degree: 4%
 
 ---
 
@@ -24,14 +24,18 @@ La variabile della lunghezza del contenuto corrisponde alla durata totale del co
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.length` |
-| **Campo raccolta XDM** | [`mediaCollection.sessionDetails.length`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.length`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.length` |
 | **Obbligatorio** | Sì |
 | **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
 
-## Web SDK
+## Tipi di implementazione consigliati
 
-Imposta `length` all&#39;interno di `mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+>[!BEGINTABS]
+
+>[!TAB Web SDK]
+
+Imposta `length` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -52,11 +56,9 @@ alloy("sendEvent", {
 });
 ```
 
-## Mobile SDK
+>[!TAB iOS]
 
 Passa la lunghezza del contenuto in secondi come argomento `length` a `createMediaObject`.
-
-**iOS (Swift)**
 
 ```swift
 let mediaObject = Media.createMediaObjectWith(name: "My Video",
@@ -68,7 +70,9 @@ let mediaObject = Media.createMediaObjectWith(name: "My Video",
 tracker.trackSessionStart(info: mediaObject, metadata: nil)
 ```
 
-**Android (Cotlino)**
+>[!TAB Android]
+
+Passa la lunghezza del contenuto in secondi come argomento `length` a `createMediaObject`.
 
 ```kotlin
 var mediaInfo = Media.createMediaObject("My Video",
@@ -80,9 +84,9 @@ var mediaInfo = Media.createMediaObject("My Video",
 tracker.trackSessionStart(mediaInfo, null)
 ```
 
-## Roku (BrightScript)
+>[!TAB Roku]
 
-Imposta `length` in `mediaCollection.sessionDetails` quando chiama `createMediaSession`:
+Imposta `length` in `xdm.mediaCollection.sessionDetails` quando chiama `createMediaSession`:
 
 ```brightscript
 m.aepSdk.createMediaSession({
@@ -104,9 +108,9 @@ m.aepSdk.createMediaSession({
 })
 ```
 
-## API di Media Edge
+>[!TAB API Media Edge]
 
-Chiama l&#39;endpoint [sessionStart](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/sessions/#sessionstart) con `length` in `mediaCollection.sessionDetails`:
+Chiama l&#39;endpoint [sessionStart](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/sessions/#sessionstart) con `length` in `xdm.mediaCollection.sessionDetails`:
 
 ```json
 {
@@ -128,7 +132,13 @@ Chiama l&#39;endpoint [sessionStart](https://developer.adobe.com/data-collection
 }
 ```
 
-## Media SDK
+>[!ENDTABS]
+
+## Tipi di implementazione legacy (solo Analytics)
+
+>[!BEGINTABS]
+
+>[!TAB Media SDK JS 3.x]
 
 Passa la lunghezza del contenuto in secondi come terzo argomento a `ADB.Media.createMediaObject`:
 
@@ -144,7 +154,22 @@ var mediaInfo = ADB.Media.createMediaObject(
 tracker.trackSessionStart(mediaInfo, contextData);
 ```
 
-## API Media Collection
+>[!TAB Chromecast]
+
+Passa la lunghezza del contenuto in secondi come terzo argomento a `ADBMobile.media.createMediaObject`:
+
+```javascript
+var mediaInfo = ADBMobile.media.createMediaObject(
+  "My Video",
+  "video-123",
+  128,
+  ADBMobile.media.StreamType.VOD,
+  ADBMobile.media.MediaType.Video
+);
+ADBMobile.media.trackSessionStart(mediaInfo, null);
+```
+
+>[!TAB API Media Collection]
 
 Includi `media.length` nell&#39;oggetto `params` della richiesta POST `sessionStart`:
 
@@ -159,3 +184,5 @@ Includi `media.length` nell&#39;oggetto `params` della richiesta POST `sessionSt
 ```
 
 Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-sessions-req.md).
+
+>[!ENDTABS]

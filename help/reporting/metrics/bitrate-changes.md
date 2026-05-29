@@ -3,7 +3,7 @@ title: Modifiche al bitrate (metrica)
 description: Conta gli eventi di modifica del bitrate per somme e medie tra sessioni.
 feature: Metrics
 role: User, Admin
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 7%
@@ -15,7 +15,7 @@ ht-degree: 7%
 
 >[!BEGINSHADEBOX]
 
-*In questa pagina è inclusa la metrica **Modifiche bitrate**. Adobe Analytics compila automaticamente una coppia di [modifiche del bitrate (dimensione)](/help/reporting/dimensions/bitrate-changes.md) dalla stessa variabile di dati di contesto `a.media.qoe.bitrateChangeCount`. Customer Journey Analytics espone un singolo campo `mediaReporting.qoeDataDetails.bitrateChangeCount` che è possibile utilizzare come dimensione o come metrica. Consulta [Modifica bitrate](/help/implementation/variables/quality/bitrate-change.md) per informazioni su come attivare gli eventi di modifica bitrate.*
+*In questa pagina è inclusa la metrica **Modifiche bitrate**. Adobe Analytics compila automaticamente una coppia di [modifiche del bitrate (dimensione)](/help/reporting/dimensions/bitrate-changes.md) dalla stessa variabile di dati di contesto `a.media.qoe.bitrateChangeCount`. Customer Journey Analytics espone un singolo campo `xdm.mediaReporting.qoeDataDetails.bitrateChangeCount` che è possibile utilizzare come dimensione o come metrica. Consulta [Modifica bitrate](/help/implementation/variables/quality/bitrate-change.md) per informazioni su come attivare gli eventi di modifica bitrate.*
 
 >[!ENDSHADEBOX]
 
@@ -28,7 +28,7 @@ Il backend multimediale incrementa il conteggio su ogni [evento di modifica del 
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.qoe.bitrateChangeCount` quando [[!UICONTROL Media Quality]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.qoeDataDetails.bitrateChangeCount`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
+| Customer Journey Analytics | [`xdm.mediaReporting.qoeDataDetails.bitrateChangeCount`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
 | Feed di dati | `event_list`, `post_event_list` (vedi ricerca [`event.tsv`](https://experienceleague.adobe.com/it/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-contents#lookup-files)) |
 | Audience Manager | `c_contextdata.a.media.qoe.bitrateChangeCount` |
 

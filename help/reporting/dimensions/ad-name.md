@@ -3,7 +3,7 @@ title: Nome annuncio
 description: Riporta il titolo leggibile di ciascun annuncio.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
 source-wordcount: '189'
 ht-degree: 6%
@@ -28,7 +28,7 @@ Il nome dell&#39;annuncio è impostato dal lettore a ogni evento [inizio annunci
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.ad.friendlyName` quando [[!UICONTROL Media Ads]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.advertisingDetails.friendlyName`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-details-reporting) |
+| Customer Journey Analytics | [`xdm.mediaReporting.advertisingDetails.friendlyName`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-details-reporting) |
 | Feed di dati | `videoadname`, `post_videoadname` |
 | Audience Manager | `c_contextdata.a.media.ad.friendlyName` |
 

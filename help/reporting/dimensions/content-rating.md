@@ -3,7 +3,7 @@ title: Valutazione dei contenuti
 description: Riporta la valutazione del pubblico come definito dalle Linee guida TV per genitori o da un sistema di valutazione regionale.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 2%
@@ -29,7 +29,7 @@ La classificazione del contenuto viene impostata dal lettore all’inizio della 
 | --- | --- |
 | Adobe Analytics (regola di elaborazione) | Crea una [regola di elaborazione](https://experienceleague.adobe.com/it/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/processing-rules/pr-overview) che associa `a.media.rating` a un eVar. |
 | Adobe Analytics (classificazione) | Classificazione della dimensione [Contenuto (ID)](content.md): Adobe crea automaticamente questa classificazione quando **[[!UICONTROL Video Metadata]](/help/reporting/media-reports-enable.md)** è abilitato per la suite di rapporti. È tua responsabilità popolare e mantenere i valori di classificazione. |
-| Customer Journey Analytics | [`mediaReporting.sessionDetails.rating`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-reporting) |
+| Customer Journey Analytics | [`xdm.mediaReporting.sessionDetails.rating`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-reporting) |
 | Feed di dati (regola di elaborazione) | `evar1`-`evar250`, `post_evar1`-`post_evar250` (l&#39;eVar a cui la regola di elaborazione mappa `a.media.rating`) |
 | Feed di dati (classificazione) | N/D: i feed di dati non supportano le classificazioni. |
 | Audience Manager | `c_contextdata.a.media.rating` |

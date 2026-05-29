@@ -3,10 +3,10 @@ title: Errore
 description: Segnala che il lettore multimediale ha riscontrato un errore.
 feature: Streaming Media
 role: Developer
-source-git-commit: b75e50f626b85992575961ea267d0f74eda09f0a
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 7%
+source-wordcount: '165'
+ht-degree: 3%
 
 ---
 
@@ -16,11 +16,15 @@ ht-degree: 7%
 L’evento di errore segnala che il lettore multimediale ha riscontrato un errore. Il tracciamento di un errore non chiude la sessione. Se l&#39;errore impedisce il proseguimento della riproduzione, chiamare [Session end](session/session-end.md) dopo l&#39;evento di errore.
 
 * **Prerequisiti**: [Inizio sessione](session/session-start.md)
-* **Metrica associata**: [Flussi interessati dall&#39;errore](/help/reporting/metrics/error-impacted-streams.md)
+* **Metrica associata**: [[!UICONTROL Error impacted streams]](/help/reporting/metrics/error-impacted-streams.md)
 
 La proprietà `errorDetails.source` accetta solo due valori: `player` (errori originati nel lettore multimediale) e `external` (errori provenienti da un&#39;origine esterna, ad esempio una rete o una rete CDN).
 
-## Web SDK
+## Tipi di implementazione consigliati
+
+>[!BEGINTABS]
+
+>[!TAB Web SDK]
 
 Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.error"` e il `errorDetails` richiesto:
 
@@ -40,23 +44,23 @@ alloy("sendEvent", {
 });
 ```
 
-## Mobile SDK
+>[!TAB iOS]
 
 Chiamare `trackError` con una stringa ID errore.
-
-**iOS (Swift)**
 
 ```swift
 tracker.trackError(errorId: "media-error-001")
 ```
 
-**Android (Cotlino)**
+>[!TAB Android]
+
+Chiamare `trackError` con una stringa ID errore.
 
 ```kotlin
 tracker.trackError("media-error-001")
 ```
 
-## Roku (BrightScript)
+>[!TAB Roku]
 
 Chiama `sendMediaEvent` con `eventType: "media.error"` e il `errorDetails` richiesto:
 
@@ -75,7 +79,7 @@ m.aepSdk.sendMediaEvent({
 })
 ```
 
-## API di Media Edge
+>[!TAB API Media Edge]
 
 Chiama l&#39;endpoint [error](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/error/) con `errorDetails` richiesto:
 
@@ -100,7 +104,13 @@ curl -X POST "https://edge.adobedc.net/ee/va/v1/error?configId={datastreamID}" \
 }'
 ```
 
-## Media SDK
+>[!ENDTABS]
+
+## Tipi di implementazione legacy (solo Analytics)
+
+>[!BEGINTABS]
+
+>[!TAB Media SDK JS 3.x]
 
 Chiamare `trackError` con una stringa ID errore:
 
@@ -108,7 +118,15 @@ Chiamare `trackError` con una stringa ID errore:
 tracker.trackError("media-error-001");
 ```
 
-## API Media Collection
+>[!TAB Chromecast]
+
+Chiamare `trackError` con una stringa ID errore:
+
+```javascript
+ADBMobile.media.trackError("media-error-001");
+```
+
+>[!TAB API Media Collection]
 
 Invia un POST `error` all&#39;endpoint [eventi](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md):
 
@@ -122,3 +140,5 @@ Invia un POST `error` all&#39;endpoint [eventi](/help/implementation/media-colle
   }
 }
 ```
+
+>[!ENDTABS]

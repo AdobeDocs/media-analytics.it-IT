@@ -3,7 +3,7 @@ title: Rete
 description: Segnala il nome della rete di trasmissione o del canale.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 11%
@@ -28,7 +28,7 @@ La rete viene impostata dal lettore all&#39;avvio della sessione.
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.network` quando [[!UICONTROL Video Metadata]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.sessionDetails.network`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-reporting) |
+| Customer Journey Analytics | [`xdm.mediaReporting.sessionDetails.network`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-reporting) |
 | Feed di dati | `videonetwork`, `post_videonetwork` |
 | Audience Manager | `c_contextdata.a.media.network` |
 

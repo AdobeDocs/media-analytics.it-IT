@@ -20,10 +20,10 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: 1344
-ht-degree: 98%
+source-wordcount: 1337
+ht-degree: 86%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 98%
 
 ## Dati di Analytics
 
-| Chiave della richiesta  | Obbligatorio | Chiave tipo di richiesta | Impostata su... |  Descrizione  |
+| Chiave richiesta | Obbligatorio | Chiave tipo di richiesta | Impostato su... | Descrizione |
 | --- | :---: | :---: | :---: | --- |
 | `analytics.trackingServer` | S | string | `sessionStart` | URL del server Adobe Analytics |
 | `analytics.reportSuite` | S | string | `sessionStart` | ID che identifica i dati di reporting di Analytics |
@@ -40,16 +40,16 @@ ht-degree: 98%
 
 ## Dati del visitatore
 
-| Chiave della richiesta  | Obbligatorio | Chiave tipo di richiesta | Impostata su... |  Descrizione  |
+| Chiave richiesta | Obbligatorio | Chiave tipo di richiesta | Impostato su... | Descrizione |
 | --- | :---: | :---: | :---: | --- |
-| `visitor.marketingCloudOrgId` | S | string | `sessionStart` | L’ID organizzazione di Experience Cloud permette di identificare la tua organizzazione nell’ecosistema Adobe Experience Cloud |
-| `visitor.marketingCloudUserId` | N | string | `sessionStart` | Questo è l’ID utente di Experience Cloud (ECID). Nella maggior parte degli scenari è l’ID da utilizzare per identificare un utente. `marketingCloudUserId` dell’heartbeat è uguale a `MID` in Adobe Analytics. Anche se tecnicamente non è necessario, questo parametro è richiesto per accedere alla famiglia di app di Experience Cloud. |
+| `visitor.marketingCloudOrgId` | S | string | `sessionStart` | ID organizzazione IMS; identifica la tua organizzazione in Adobe CX Enterprise |
+| `visitor.marketingCloudUserId` | N | string | `sessionStart` | L’ID utente di Experience Cloud (ECID). Nella maggior parte degli scenari è l’ID da utilizzare per identificare un utente. `marketingCloudUserId` dell’heartbeat è uguale a `MID` in Adobe Analytics. Anche se tecnicamente non è necessario, questo parametro è necessario per accedere alle app e ai servizi di CX Enterprise. |
 | `visitor.aamLocationHint` | N | numero intero | `sessionStart` | Fornisce dati edge di Adobe Audience Manager; se non viene inserito un valore, il valore è nullo. |
 | `appInstallationId` | N | string | `sessionStart` | L’appInstallationId identifica in modo univoco l’app e il dispositivo |
 
 ## Dati del contenuto
 
-| Chiave della richiesta  | Obbligatorio | Chiave tipo di richiesta | Impostata su... |  Descrizione  |
+| Chiave richiesta | Obbligatorio | Chiave tipo di richiesta | Impostato su... | Descrizione |
 | --- | :---: | :---: | :---: | --- |
 | `media.id` | S | string | `sessionStart` | Identificativo univoco per il contenuto |
 | `media.name` | N | string | `sessionStart` | Nome leggibile per il contenuto |
@@ -62,7 +62,7 @@ ht-degree: 98%
 
 ## Metadati standard del contenuto
 
-| Chiave della richiesta  | Obbligatorio | Chiave tipo di richiesta | Impostata su... |  Descrizione  |
+| Chiave richiesta | Obbligatorio | Chiave tipo di richiesta | Impostato su... | Descrizione |
 | --- | :---: | :---: | :---: | --- |
 | `media.streamFormat` | N | string | `sessionStart` | Formato flusso, ad esempio “HD“ |
 | `media.show` | N | string | `sessionStart` | Nome del programma o della serie |
@@ -84,7 +84,7 @@ ht-degree: 98%
 
 ## Dati dell’annuncio
 
-| Chiave della richiesta  | Obbligatorio | Chiave tipo di richiesta | Impostata su... |  Descrizione  |
+| Chiave richiesta | Obbligatorio | Chiave tipo di richiesta | Impostato su... | Descrizione |
 | --- | :---: | :---: | :---: | --- |
 | `media.ad.podFriendlyName` | N | string | `adBreakStart` | Nome descrittivo dell’interruzione pubblicitaria |
 | `media.ad.podIndex` | S | numero intero | `adBreakStart` | Indice del pod dell&#39;annuncio nel video |
@@ -97,7 +97,7 @@ ht-degree: 98%
 
 ## Metadati standard dell’annuncio
 
-| Chiave della richiesta  | Obbligatorio | Chiave tipo di richiesta | Impostata su... |  Descrizione  |
+| Chiave richiesta | Obbligatorio | Chiave tipo di richiesta | Impostato su... | Descrizione |
 | --- | :---: | :---: | :---: | --- |
 | `media.ad.advertiser` | N | string | `adStart` | Azienda o marchio il cui prodotto è inserito nell’annuncio |
 | `media.ad.campaignId` | N | string | `adStart` | ID della campagna pubblicitaria |
@@ -108,7 +108,7 @@ ht-degree: 98%
 
 ## Dati sui capitoli
 
-| Chiave della richiesta  | Obbligatorio | Chiave tipo di richiesta | Impostata su... |  Descrizione  |
+| Chiave richiesta | Obbligatorio | Chiave tipo di richiesta | Impostato su... | Descrizione |
 | --- | :---: | :---: | :---: | --- |
 | `media.chapter.index` | S | numero intero | `chapterStart` | Identifica la posizione del capitolo nel contenuto |
 | `media.chapter.offset` | S | number | `chapterStart` | Il secondo nella riproduzione da cui inizia il capitolo |
@@ -117,7 +117,7 @@ ht-degree: 98%
 
 ## Dati sulla qualità
 
-| Chiave della richiesta  | Obbligatorio | Chiave tipo di richiesta | Impostata su... |  Descrizione  |
+| Chiave richiesta | Obbligatorio | Chiave tipo di richiesta | Impostato su... | Descrizione |
 | --- | :---: | :---: | :---: | --- |
 | `media.qoe.bitrate` | N | numero intero | Qualsiasi | Velocità in bit media (in bps). Il bitrate medio è calcolato come media ponderata di tutti i valori del bitrate relativi alla durata di riproduzione che si è verificata durante una sessione di riproduzione. |
 | `media.qoe.droppedFrames` | N | numero intero | Qualsiasi | Numero di fotogrammi non elaborati nel flusso |
@@ -126,20 +126,20 @@ ht-degree: 98%
 
 ## Parametri relativi al California Consumer Privacy Act (CCPA) {#ccpa-params}
 
-| Chiave della richiesta  | Obbligatorio | Chiave tipo di richiesta | Impostata su... |  Descrizione  |
+| Chiave richiesta | Obbligatorio | Chiave tipo di richiesta | Impostato su... | Descrizione |
 | --- | :---: | :---: | :---: | --- |
-| `analytics.optOutServerSideForwarding` | N | booleano | `sessionStart` | Impostato su true se l’utente finale rinuncia alla condivisione dei dati tra Adobe Analytics e altre soluzioni di Experience Cloud (ad esempio Audience Manager). |
+| `analytics.optOutServerSideForwarding` | N | booleano | `sessionStart` | Impostato su true se l&#39;utente finale rinuncia alla condivisione dei dati tra Adobe Analytics e altre soluzioni CX Enterprise (ad esempio, Audience Manager). |
 | `analytics.optOutShare` | N | booleano | `sessionStart` | Impostato su true se l’utente finale rinuncia alla federazione dei propri dati (ad esempio ad altri clienti di Adobe Analytics). |
 
 ## Dettagli aggiuntivi {#additional-details}
 
 ### visitor.marketingCloudUserId
 
-Passa l’ID utente Experience Cloud (noto anche come `MID` o `MCID`) alla chiamata `sessionStart` includendolo all’interno della mappa `params` e utilizzando la seguente chiave: **visitor.marketingCloudUserId**. Questa è una funzione utile se è già stata effettuata l’integrazione con altri prodotti Experience Cloud ed è già stato ottenuto il MCID.
+Passa l’ID utente Experience Cloud (noto anche come `MID` o `MCID`) alla chiamata `sessionStart` includendolo all’interno della mappa `params` e utilizzando la seguente chiave: **visitor.marketingCloudUserId**. Si tratta di una funzione utile se è già stata effettuata l&#39;integrazione con altri prodotti CX Enterprise ed è già stato ottenuto il MCID.
 
 >[!NOTE]
 >
->Media Analytics (MA) è integrato con la famiglia di app di Experience Cloud (Adobe Analytics, Audience Manager, Target e così via). È necessario un Experience Cloud ID per accedere a queste app. _Nella maggior parte degli scenari, per identificare gli utenti dovrai usare l’ECID._
+>Media Analytics (MA) è integrato con la famiglia di app CX Enterprise (Adobe Analytics, Audience Manager, Target e così via). È necessario un Experience Cloud ID per accedere a queste app. _Nella maggior parte degli scenari, per identificare gli utenti dovrai usare l’ECID._
 
 ### appInstallationId
 

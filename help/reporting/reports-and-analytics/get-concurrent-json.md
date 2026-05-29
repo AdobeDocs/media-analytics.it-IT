@@ -2,10 +2,10 @@
 title: Acquisiire i dati del rapporto JSON sui visualizzatori simultanei
 description: Acquisiire i dati del rapporto JSON sui visualizzatori simultanei
 uuid: 9168f114-2459-4951-a06c-57b735d09dc0
-source-git-commit: a73ba98e025e0a915a5136bb9e0d5bcbde875b0a
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 100%
+source-wordcount: '150'
+ht-degree: 84%
 
 ---
 
@@ -20,8 +20,8 @@ Puoi acquisire i dati del rapporto sui visualizzatori simultanei utilizzando la 
 1. Imposta `elements` -> `id` nel corpo della richiesta su `videoconcurrentviewers`.
 1. Richiedi una quantità sufficiente di dati. Per garantire che non vi siano lacune nei dati, Adobe consiglia 3200 punti di dati.
 
-   * L’intervallo di dati specificato nel rapporto raccoglie tutti i dati del visualizzatore simultaneo _nel momento in cui termina la sessione video._
-Quindi devi tenere conto delle sessioni che iniziano in un giorno e terminano dopo la mezzanotte (cioè il giorno successivo).
+   * L&#39;intervallo di dati specificato nel report raccoglie tutti i dati del visualizzatore simultaneo _al termine della sessione video._
+Quindi, devi tenere conto delle sessioni che iniziano in un giorno e terminano dopo la mezzanotte (cioè il giorno successivo).
 
    * Richiedi più di una giornata di dati, ma nella tua analisi _*utilizza solo il primo giorno dei dati.*_
 
@@ -56,7 +56,7 @@ Un esempio di payload di richiesta per questo scenario sarà simile al seguente:
 ```
 
 <!--
-You can extract the concurrent viewers report data using the Experience Cloud API Explorer as follows. 
+You can extract the concurrent viewers report data using the API Explorer as follows. 
 
 1. Navigate to: [https://www.adobe.io.](https://www.adobe.io)
 1. Select and enter the following information in the API Explorer form:

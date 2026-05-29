@@ -3,7 +3,7 @@ title: Tipo di flusso
 description: Rileva se ogni sessione multimediale era costituita da contenuti audio o video.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
+source-git-commit: da289f8d425fcbaece42519a9ea7d061f80e4591
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 6%
@@ -19,7 +19,7 @@ ht-degree: 6%
 
 >[!ENDSHADEBOX]
 
-La dimensione **Tipo di flusso** acquisisce se ogni sessione multimediale era costituita da contenuto audio o video. È disponibile in Adobe Analytics dopo che [Media Core è abilitato](/help/reporting/media-reports-enable.md) per la suite di rapporti e in Customer Journey Analytics per qualsiasi set di dati che include dati multimediali in streaming.
+La dimensione **Tipo di flusso** acquisisce se ogni sessione multimediale era costituita da contenuto audio o video. È disponibile in Adobe Analytics dopo che [Media Core è abilitato](/help/implementation/media-sdk/setup/media-reports-enable.md) per la suite di rapporti e in Customer Journey Analytics per qualsiasi set di dati che include dati multimediali in streaming.
 
 ## Compilazione di questa dimensione
 
@@ -28,7 +28,7 @@ Il tipo di flusso viene impostato dal lettore all’inizio della sessione e tras
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.streamType` quando [[!UICONTROL Media Core]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.sessionDetails.streamType`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-reporting) |
+| Customer Journey Analytics | [`xdm.mediaReporting.sessionDetails.streamType`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-reporting) |
 | Feed di dati | `videostreamtype` |
 | Audience Manager | `c_contextdata.a.media.streamType` |
 

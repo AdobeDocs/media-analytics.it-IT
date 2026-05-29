@@ -3,10 +3,10 @@ title: Salta annuncio
 description: Segnala che il visualizzatore ha saltato un annuncio.
 feature: Streaming Media
 role: Developer
-source-git-commit: b75e50f626b85992575961ea267d0f74eda09f0a
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 6%
+source-wordcount: '167'
+ht-degree: 2%
 
 ---
 
@@ -22,7 +22,11 @@ L’evento di salto dell’annuncio segnala che il visualizzatore ha saltato un 
 >
 >Questo evento deve essere circondato da `adBreakStart` e `adBreakComplete` bookend, anche quando viene riprodotto un singolo annuncio. Senza questi bookend, gli eventi pubblicitari vengono ignorati e la durata dell’annuncio viene conteggiata come durata del contenuto principale.
 
-## Web SDK
+## Tipi di implementazione consigliati
+
+>[!BEGINTABS]
+
+>[!TAB Web SDK]
 
 Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.adSkip"`:
 
@@ -38,23 +42,23 @@ alloy("sendEvent", {
 });
 ```
 
-## Mobile SDK
+>[!TAB iOS]
 
 Chiamare `trackEvent` con il tipo di evento `AdSkip`.
-
-**iOS (Swift)**
 
 ```swift
 tracker.trackEvent(event: MediaEvent.AdSkip, info: nil, metadata: nil)
 ```
 
-**Android (Cotlino)**
+>[!TAB Android]
+
+Chiamare `trackEvent` con il tipo di evento `AdSkip`.
 
 ```kotlin
 tracker.trackEvent(Media.Event.AdSkip, null, null)
 ```
 
-## Roku (BrightScript)
+>[!TAB Roku]
 
 Chiama `sendMediaEvent` con `eventType: "media.adSkip"`:
 
@@ -69,7 +73,7 @@ m.aepSdk.sendMediaEvent({
 })
 ```
 
-## API di Media Edge
+>[!TAB API Media Edge]
 
 Chiama l&#39;endpoint [adSkip](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/ads/#adskip):
 
@@ -90,7 +94,13 @@ curl -X POST "https://edge.adobedc.net/ee/va/v1/adSkip?configId={datastreamID}" 
 }'
 ```
 
-## Media SDK
+>[!ENDTABS]
+
+## Tipi di implementazione legacy (solo Analytics)
+
+>[!BEGINTABS]
+
+>[!TAB Media SDK JS 3.x]
 
 Chiamare `trackEvent` con il tipo di evento `AdSkip`:
 
@@ -98,7 +108,15 @@ Chiamare `trackEvent` con il tipo di evento `AdSkip`:
 tracker.trackEvent(ADB.Media.Event.AdSkip, null, null);
 ```
 
-## API Media Collection
+>[!TAB Chromecast]
+
+Chiamare `trackEvent` con il tipo di evento `AdSkip`:
+
+```javascript
+ADBMobile.media.trackEvent(ADBMobile.media.Event.AdSkip);
+```
+
+>[!TAB API Media Collection]
 
 Invia un POST `adSkip` all&#39;endpoint [eventi](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md):
 
@@ -108,3 +126,5 @@ Invia un POST `adSkip` all&#39;endpoint [eventi](/help/implementation/media-coll
   "eventType": "adSkip"
 }
 ```
+
+>[!ENDTABS]

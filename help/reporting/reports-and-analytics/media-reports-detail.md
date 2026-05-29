@@ -17,15 +17,15 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: 50
-ht-degree: 56%
+source-wordcount: 46
+ht-degree: 8%
 
 ---
 
 # Dettagli dei contenuti multimediali{#media-detail}
 
-La dashboard Dettagli contenuti multimediali visualizza metriche dettagliate per tutti i contenuti, compresi visualizzatori o ascoltatori simultanei, avvii dei contenuti, tasso di completamento, tempo trascorso e inizi degli annunci.
+Il dashboard Dettagli contenuti multimediali visualizza metriche dettagliate per tutti i contenuti, inclusi visualizzatori o ascoltatori simultanei, [[!UICONTROL Content starts]](/help/reporting/metrics/content-starts.md), tasso di completamento, tempo trascorso e [[!UICONTROL Ad starts]](/help/reporting/metrics/ad-starts.md).
 
 ![](assets/media_detail.png)

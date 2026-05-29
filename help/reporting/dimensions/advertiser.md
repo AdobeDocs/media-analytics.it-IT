@@ -3,7 +3,7 @@ title: Inserzionista
 description: Segnala l’azienda o il brand presente in ogni annuncio.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 12%
@@ -28,7 +28,7 @@ L&#39;inserzionista è impostato dal lettore a ogni evento [inizio annuncio](/he
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.ad.advertiser` quando [[!UICONTROL Media Ads]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.advertisingDetails.advertiser`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-details-reporting) |
+| Customer Journey Analytics | [`xdm.mediaReporting.advertisingDetails.advertiser`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-details-reporting) |
 | Feed di dati | `videoadvertiser`, `post_videoadvertiser` |
 | Audience Manager | `c_contextdata.a.media.ad.advertiser` |
 

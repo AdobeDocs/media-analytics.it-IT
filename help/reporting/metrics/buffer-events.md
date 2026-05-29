@@ -3,7 +3,7 @@ title: Eventi buffer (metrica)
 description: Conta gli eventi di buffering per somme e medie tra sessioni.
 feature: Metrics
 role: User, Admin
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
 source-wordcount: '189'
 ht-degree: 7%
@@ -15,7 +15,7 @@ ht-degree: 7%
 
 >[!BEGINSHADEBOX]
 
-*In questa pagina è inclusa la metrica **Eventi buffer**. Adobe Analytics compila automaticamente [eventi buffer (dimensione)](/help/reporting/dimensions/buffer-events.md) associati dalla stessa variabile di dati di contesto `a.media.qoe.bufferCount`. Customer Journey Analytics espone un singolo campo `mediaReporting.qoeDataDetails.bufferCount` che è possibile utilizzare come dimensione o come metrica.*
+*In questa pagina è inclusa la metrica **Eventi buffer**. Adobe Analytics compila automaticamente [eventi buffer (dimensione)](/help/reporting/dimensions/buffer-events.md) associati dalla stessa variabile di dati di contesto `a.media.qoe.bufferCount`. Customer Journey Analytics espone un singolo campo `xdm.mediaReporting.qoeDataDetails.bufferCount` che è possibile utilizzare come dimensione o come metrica.*
 
 >[!ENDSHADEBOX]
 
@@ -28,7 +28,7 @@ Il backend multimediale incrementa il conteggio ogni volta che il lettore entra 
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.qoe.bufferCount` quando [[!UICONTROL Media Quality]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.qoeDataDetails.bufferCount`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
+| Customer Journey Analytics | [`xdm.mediaReporting.qoeDataDetails.bufferCount`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
 | Feed di dati | `event_list`, `post_event_list` (vedi ricerca [`event.tsv`](https://experienceleague.adobe.com/it/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-contents#lookup-files)) |
 | Audience Manager | `c_contextdata.a.media.qoe.bufferCount` |
 

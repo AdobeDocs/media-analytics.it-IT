@@ -20,7 +20,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
+source-git-commit: da289f8d425fcbaece42519a9ea7d061f80e4591
 workflow-type: tm+mt
 source-wordcount: 243
 ht-degree: 9%
@@ -44,4 +44,4 @@ Chiedi al tuo rappresentante Adobe Analytics l’URL del server di tracciamento 
 A seconda del percorso di implementazione, [scarica il SDK](/help/getting-started/download-sdks.md) corrente per piattaforme web, mobili o over-the-top. È necessario implementare le estensioni richieste per abilitare il componente aggiuntivo Adobe Analytics for Streaming Media.
 
 1. **Abilita rapporti Adobe Analytics**<br>
-Per abilitare i rapporti in Analytics e visualizzare il contenuto e i dati degli annunci che stai raccogliendo, devi abilitare i rapporti in Analytics. Consulta [Abilitazione di rapporti multimediali](/help/reporting/media-reports-enable.md).
+Per abilitare i rapporti in Analytics e visualizzare il contenuto e i dati degli annunci che stai raccogliendo, devi abilitare i rapporti in Analytics. Consulta [Abilitazione di rapporti multimediali](/help/implementation/media-sdk/setup/media-reports-enable.md).

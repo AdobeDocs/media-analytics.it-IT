@@ -18,10 +18,10 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: 582
-ht-degree: 6%
+source-wordcount: 561
+ht-degree: 5%
 
 ---
 
@@ -88,9 +88,7 @@ Per informazioni dettagliate su come configurarlo, vedere la [documentazione](ht
 
 Per i clienti che utilizzano Media JS SDK, Web SDK fornisce un percorso di migrazione per passare da Media JS SDK a Web SDK, includendo al contempo il supporto per le funzionalità Media JS esistenti, come la gestione degli eventi multimediali.
 
-[!DNL Web SDK] include un comando per recuperare un tracciatore di Media Analytics. È possibile utilizzare questo comando per creare un&#39;istanza dell&#39;oggetto e quindi, utilizzando le stesse API fornite dalla [libreria Media JS](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html), tenere traccia degli eventi multimediali.
-
-Per informazioni complete sui metodi supportati, consulta la documentazione di [`getMediaAnalyticsTracker`](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/commands/getmediaanalyticstracker).
+Il Web SDK include un comando [`getMediaAnalyticsTracker`](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/commands/getmediaanalyticstracker) che è possibile utilizzare per creare un&#39;istanza dell&#39;oggetto. È quindi possibile tenere traccia degli eventi multimediali utilizzando le stesse API fornite da [3.x Media SDK](/help/implementation/media-sdk/setup/js-3x-api-reference.md).
 
 Lo snippet seguente mostra come recuperare l’istanza di tracciamento dei contenuti multimediali in Media JS.
 

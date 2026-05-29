@@ -3,9 +3,9 @@ title: Panoramica degli eventi multimediali in streaming
 description: Scopri i tipi di evento multimediale e l’ordine in cui devono essere inviati.
 feature: Streaming Media
 role: Developer
-source-git-commit: 6534e4c76dcb4113bbbb99aed2a0e350f9256b15
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: '1078'
+source-wordcount: '1040'
 ht-degree: 0%
 
 ---
@@ -69,10 +69,3 @@ I cinque stati tracciabili sono: `fullscreen`, `mute`, `closedCaptioning`, `pict
 ## Eventi di errore
 
 L&#39;evento [Error](error.md) registra un errore di riproduzione durante una sessione: una richiesta di flusso non riuscita, un errore di codec o un errore di consegna esterno. Invialo ogni volta che si verifica un errore significativo. Un evento di errore non chiude la sessione; la riproduzione può continuare e gli eventi successivi vengono tracciati nella stessa sessione. Se l’errore non è recuperabile, eseguilo insieme a Session end (Fine sessione) per chiudere esplicitamente la sessione.
-
->[!MORELIKETHIS]
->
->* [Schemi di convalida JSON](/help/implementation/media-collection-api/mc-api-ref/mc-api-json-validation.md): verifica la struttura del payload per ogni tipo di evento
->* [Endpoint richiesta eventi](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md): riferimento endpoint API di raccolta multimediale
->* [Endpoint richiesta sessioni](/help/implementation/media-collection-api/mc-api-ref/mc-api-sessions-req.md): crea una sessione prima di inviare eventi
->* [Tracciamento dello stato del lettore](/help/use-cases/player-state-tracking/implementation-and-reporting.md): dettagli sull&#39;implementazione di inizio e fine stato

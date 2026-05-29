@@ -3,7 +3,7 @@ title: Eventi buffer (dimensione)
 description: Riporta il numero di eventi di buffering per sessione.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 7%
@@ -15,7 +15,7 @@ ht-degree: 7%
 
 >[!BEGINSHADEBOX]
 
-*In questa pagina sono inclusi **eventi buffer**. Adobe Analytics compila automaticamente un [evento buffer (metrica)](/help/reporting/metrics/buffer-events.md) associato dalla stessa variabile di dati di contesto `a.media.qoe.bufferCount`. Customer Journey Analytics espone un singolo campo `mediaReporting.qoeDataDetails.bufferCount` che è possibile utilizzare come dimensione o come metrica.*
+*In questa pagina sono inclusi **eventi buffer**. Adobe Analytics compila automaticamente un [evento buffer (metrica)](/help/reporting/metrics/buffer-events.md) associato dalla stessa variabile di dati di contesto `a.media.qoe.bufferCount`. Customer Journey Analytics espone un singolo campo `xdm.mediaReporting.qoeDataDetails.bufferCount` che è possibile utilizzare come dimensione o come metrica.*
 
 >[!ENDSHADEBOX]
 
@@ -28,7 +28,7 @@ Il backend multimediale incrementa il conteggio ogni volta che il lettore entra 
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.qoe.bufferCount` quando [[!UICONTROL Media Quality]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.qoeDataDetails.bufferCount`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
+| Customer Journey Analytics | [`xdm.mediaReporting.qoeDataDetails.bufferCount`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
 | Feed di dati | `videoqoebuffercountevar`, `post_videoqoebuffercountevar` |
 | Audience Manager | `c_contextdata.a.media.qoe.bufferCount` |
 

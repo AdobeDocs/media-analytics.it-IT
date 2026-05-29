@@ -3,7 +3,7 @@ title: Capitolo
 description: Segnala ogni capitolo univoco riprodotto, codificato da un ID capitolo generato automaticamente.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 8%
@@ -22,7 +22,7 @@ L&#39;ID del capitolo viene generato automaticamente quando viene attivato un ev
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.chapter.name` quando [[!UICONTROL Media Chapters]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.chapterDetails.ID`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/chapter-details-reporting) |
+| Customer Journey Analytics | [`xdm.mediaReporting.chapterDetails.ID`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/chapter-details-reporting) |
 | Feed di dati | `videochapter`, `post_videochapter` |
 | Audience Manager | N/D |
 

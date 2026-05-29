@@ -3,10 +3,10 @@ title: Ora di inizio dell’interruzione annuncio
 description: Imposta l’ora di inizio (offset) dell’interruzione pubblicitaria all’interno del contenuto, in secondi.
 feature: Streaming Media
 role: Developer
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 5%
+source-wordcount: '239'
+ht-degree: 2%
 
 ---
 
@@ -24,14 +24,18 @@ La variabile del tempo di inizio dell’interruzione pubblicitaria è lo scostam
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.ad.podSecond` |
-| **Campo raccolta XDM** | [`mediaCollection.advertisingPodDetails.offset`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-pod-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.advertisingPodDetails.offset`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-pod-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.ad.podSecond` |
 | **Obbligatorio** | Sì |
 | **Inviato con** | [Inizio interruzione annuncio](/help/implementation/events/ads/ad-break-start.md), chiusura annuncio |
 
-## Web SDK
+## Tipi di implementazione consigliati
 
-Imposta `offset` all&#39;interno di `mediaCollection.advertisingPodDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+>[!BEGINTABS]
+
+>[!TAB Web SDK]
+
+Imposta `offset` all&#39;interno di `xdm.mediaCollection.advertisingPodDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -50,11 +54,9 @@ alloy("sendEvent", {
 });
 ```
 
-## Mobile SDK
+>[!TAB iOS]
 
 Passa il tempo di avvio in secondi come terzo argomento a `createAdBreakObject`.
-
-**iOS (Swift)**
 
 ```swift
 let adBreakObject = Media.createAdBreakObjectWith(name: "mid-roll-1",
@@ -64,7 +66,9 @@ let adBreakObject = Media.createAdBreakObjectWith(name: "mid-roll-1",
 tracker.trackEvent(event: MediaEvent.AdBreakStart, info: adBreakObject, metadata: nil)
 ```
 
-**Android (Cotlino)**
+>[!TAB Android]
+
+Passa il tempo di avvio in secondi come terzo argomento a `createAdBreakObject`.
 
 ```kotlin
 val adBreakObject = Media.createAdBreakObject("mid-roll-1",
@@ -74,9 +78,9 @@ val adBreakObject = Media.createAdBreakObject("mid-roll-1",
 tracker.trackEvent(Media.Event.AdBreakStart, adBreakObject, null)
 ```
 
-## Roku (BrightScript)
+>[!TAB Roku]
 
-Imposta `offset` in `mediaCollection.advertisingPodDetails` quando chiama `sendMediaEvent` per `media.adBreakStart`:
+Imposta `offset` in `xdm.mediaCollection.advertisingPodDetails` quando chiama `sendMediaEvent` per `media.adBreakStart`:
 
 ```brightscript
 m.aepSdk.sendMediaEvent({
@@ -94,9 +98,9 @@ m.aepSdk.sendMediaEvent({
 })
 ```
 
-## API di Media Edge
+>[!TAB API Media Edge]
 
-Chiama l&#39;endpoint [adBreakStart](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/ads/#adbreakstart) con `offset` in `mediaCollection.advertisingPodDetails`:
+Chiama l&#39;endpoint [adBreakStart](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/ads/#adbreakstart) con `offset` in `xdm.mediaCollection.advertisingPodDetails`:
 
 ```json
 {
@@ -116,7 +120,13 @@ Chiama l&#39;endpoint [adBreakStart](https://developer.adobe.com/data-collection
 }
 ```
 
-## Media SDK
+>[!ENDTABS]
+
+## Tipi di implementazione legacy (solo Analytics)
+
+>[!BEGINTABS]
+
+>[!TAB Media SDK JS 3.x]
 
 Passa l&#39;ora di inizio come terzo argomento a `ADB.Media.createAdBreakObject`:
 
@@ -130,7 +140,20 @@ var adBreakInfo = ADB.Media.createAdBreakObject(
 tracker.trackEvent(ADB.Media.Event.AdBreakStart, adBreakInfo, null);
 ```
 
-## API Media Collection
+>[!TAB Chromecast]
+
+Passa il tempo di avvio in secondi come terzo argomento a `ADBMobile.media.createAdBreakObject`:
+
+```javascript
+var adBreakInfo = ADBMobile.media.createAdBreakObject(
+  "mid-roll-1",
+  2,
+  90
+);
+ADBMobile.media.trackEvent(ADBMobile.media.Event.AdBreakStart, adBreakInfo);
+```
+
+>[!TAB API Media Collection]
 
 Includi `media.ad.podSecond` nell&#39;oggetto `params` della richiesta POST `adBreakStart`:
 
@@ -145,3 +168,5 @@ Includi `media.ad.podSecond` nell&#39;oggetto `params` della richiesta POST `adB
 ```
 
 Per la struttura completa delle richieste, consulta il [Riferimento eventi API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md).
+
+>[!ENDTABS]

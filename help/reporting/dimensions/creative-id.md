@@ -3,7 +3,7 @@ title: ID creatività
 description: Segnala l’identificatore creativo dell’annuncio.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
 source-wordcount: '372'
 ht-degree: 3%
@@ -27,7 +27,7 @@ La dimensione **Creative ID** riporta l&#39;identificatore creativo dell&#39;ann
 | --- | --- |
 | Adobe Analytics (regola di elaborazione) | Crea una [regola di elaborazione](https://experienceleague.adobe.com/it/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/processing-rules/pr-overview) che associa `a.media.ad.creative` a un eVar. |
 | Adobe Analytics (classificazione) | Classificazione della dimensione [Ad](ad.md): Adobe crea automaticamente questa classificazione quando **[[!UICONTROL Media Ads]](/help/reporting/media-reports-enable.md)** è abilitato per la suite di rapporti. È tua responsabilità popolare e mantenere i valori di classificazione. |
-| Customer Journey Analytics | [`mediaReporting.advertisingDetails.creativeID`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-details-reporting) |
+| Customer Journey Analytics | [`xdm.mediaReporting.advertisingDetails.creativeID`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-details-reporting) |
 | Feed di dati (regola di elaborazione) | `evar1`-`evar250`, `post_evar1`-`post_evar250` (l&#39;eVar a cui la regola di elaborazione mappa `a.media.ad.creative`) |
 | Feed di dati (classificazione) | N/D: i feed di dati non supportano le classificazioni. |
 | Audience Manager | `c_contextdata.a.media.ad.creative` |

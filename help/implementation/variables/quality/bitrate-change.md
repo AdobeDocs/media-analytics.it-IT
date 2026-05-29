@@ -3,10 +3,10 @@ title: Modifica bitrate
 description: Attiva un evento di modifica del bitrate ogni volta che il lettore passa a un bitrate diverso.
 feature: Streaming Media
 role: Developer
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 5%
+source-wordcount: '250'
+ht-degree: 2%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 5%
 
 >[!BEGINSHADEBOX]
 
-*In questa pagina viene illustrato come implementare gli eventi di modifica del bitrate. Vedi [Modifiche bitrate (dimensione)](/help/reporting/dimensions/bitrate-changes.md) e [Modifiche bitrate (metrica)](/help/reporting/metrics/bitrate-changes.md) per le variabili di reporting corrispondenti.*
+*In questa pagina viene illustrato come implementare gli eventi di modifica del bitrate. Vedere [[!UICONTROL Bitrate changes] (dimensione)](/help/reporting/dimensions/bitrate-changes.md) e [[!UICONTROL Bitrate changes] (metrica)](/help/reporting/metrics/bitrate-changes.md) per le variabili di reporting corrispondenti.*
 
 >[!ENDSHADEBOX]
 
-L’evento di modifica del bitrate segnala che il lettore è passato a un bitrate diverso. Aggiorna prima il valore [Bitrate](/help/implementation/variables/quality/bitrate.md) nell&#39;oggetto QoE, quindi attiva l&#39;evento di modifica del bitrate. Il backend utilizza il conteggio di questi eventi per calcolare la dimensione e la metrica delle modifiche del bitrate, e i valori del bitrate risultanti vengono inseriti nel valore Bitrate medio.
+L’evento di modifica del bitrate segnala che il lettore è passato a un bitrate diverso. Aggiorna prima il valore [Bitrate](/help/implementation/variables/quality/bitrate.md) nell&#39;oggetto QoE, quindi attiva l&#39;evento di modifica del bitrate. Il backend utilizza il conteggio di questi eventi per calcolare la dimensione [[!UICONTROL Bitrate changes]](/help/reporting/dimensions/bitrate-changes.md) e la metrica [[!UICONTROL Bitrate changes]](/help/reporting/metrics/bitrate-changes.md) e i valori bitrate risultanti vengono inseriti nel feed [[!UICONTROL Average bitrate]](/help/reporting/metrics/average-bitrate.md).
 
 | Proprietà | Valore |
 | --- | --- |
@@ -29,7 +29,11 @@ L’evento di modifica del bitrate segnala che il lettore è passato a un bitrat
 | **Obbligatorio** | No |
 | **Inviato con** | [Modifica bitrate](/help/implementation/events/playback/bitrate-change.md) |
 
-## Web SDK
+## Tipi di implementazione consigliati
+
+>[!BEGINTABS]
+
+>[!TAB Web SDK]
 
 Utilizza [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) per inviare un evento `media.bitrateChange` con il nuovo bitrate:
 
@@ -51,11 +55,9 @@ alloy("sendEvent", {
 });
 ```
 
-## Mobile SDK
+>[!TAB iOS]
 
 Aggiorna l’oggetto QoE con il nuovo bitrate, quindi attiva l’evento di modifica del bitrate.
-
-**iOS (Swift)**
 
 ```swift
 let qoeObject = Media.createQoEObjectWith(bitrate: 4500,
@@ -66,7 +68,9 @@ tracker.updateQoEObject(qoe: qoeObject)
 tracker.trackEvent(event: MediaEvent.BitrateChange, info: nil, metadata: nil)
 ```
 
-**Android (Cotlino)**
+>[!TAB Android]
+
+Aggiorna l’oggetto QoE con il nuovo bitrate, quindi attiva l’evento di modifica del bitrate.
 
 ```kotlin
 val qoeObject = Media.createQoEObject(4500L, 0.0, 24.0, 0L)
@@ -74,7 +78,7 @@ tracker.updateQoEObject(qoeObject)
 tracker.trackEvent(Media.Event.BitrateChange, null, null)
 ```
 
-## Roku (BrightScript)
+>[!TAB Roku]
 
 Utilizza `sendMediaEvent` con `media.bitrateChange` per segnalare una modifica del bitrate. Includi il nuovo bitrate in `qoeDataDetails`:
 
@@ -95,7 +99,7 @@ m.aepSdk.sendMediaEvent({
 })
 ```
 
-## API di Media Edge
+>[!TAB API Media Edge]
 
 Chiama l&#39;endpoint [bitrateChange](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/bitratechange/#bitratechange) con `qoeDataDetails` aggiornato:
 
@@ -116,7 +120,13 @@ Chiama l&#39;endpoint [bitrateChange](https://developer.adobe.com/data-collectio
 }
 ```
 
-## Media SDK
+>[!ENDTABS]
+
+## Tipi di implementazione legacy (solo Analytics)
+
+>[!BEGINTABS]
+
+>[!TAB Media SDK JS 3.x]
 
 Aggiorna l’oggetto QoE e attiva l’evento:
 
@@ -126,7 +136,22 @@ tracker.updateQoEObject(qoeObject);
 tracker.trackEvent(ADB.Media.Event.BitrateChange);
 ```
 
-## API Media Collection
+>[!TAB Chromecast]
+
+Aggiorna l’oggetto QoS con il nuovo bitrate, quindi attiva l’evento di modifica del bitrate:
+
+```javascript
+var qosInfo = ADBMobile.media.createQoSObject(
+  4500,  // bitrate (kbps)
+  0,     // startupTime
+  24,    // fps
+  0      // droppedFrames
+);
+ADBMobile.media.updateQoSObject(qosInfo);
+ADBMobile.media.trackEvent(ADBMobile.media.Event.BitrateChange);
+```
+
+>[!TAB API Media Collection]
 
 Invia una richiesta POST `bitrateChange` con il nuovo bitrate:
 
@@ -141,3 +166,5 @@ Invia una richiesta POST `bitrateChange` con il nuovo bitrate:
 ```
 
 Per la struttura completa delle richieste, consulta il [Riferimento eventi API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md).
+
+>[!ENDTABS]

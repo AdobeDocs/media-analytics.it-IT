@@ -3,10 +3,10 @@ title: Capitolo completato
 description: Segnala che la riproduzione di un segmento di capitolo è terminata.
 feature: Streaming Media
 role: Developer
-source-git-commit: b75e50f626b85992575961ea267d0f74eda09f0a
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: '115'
-ht-degree: 7%
+source-wordcount: '130'
+ht-degree: 3%
 
 ---
 
@@ -16,9 +16,13 @@ ht-degree: 7%
 L’evento di completamento del capitolo segnala che la riproduzione di un capitolo è terminata. Inviala quando il visualizzatore raggiunge la fine di un capitolo. Se il visualizzatore ignora il capitolo, invia invece [Salta capitolo](chapter-skip.md).
 
 * **Prerequisiti**: [Inizio sessione](../session/session-start.md), [Inizio capitolo](chapter-start.md)
-* **Metrica associata**: [Completamenti capitolo](/help/reporting/metrics/chapter-completes.md)
+* **Metrica associata**: [[!UICONTROL Chapter completes]](/help/reporting/metrics/chapter-completes.md)
 
-## Web SDK
+## Tipi di implementazione consigliati
+
+>[!BEGINTABS]
+
+>[!TAB Web SDK]
 
 Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.chapterComplete"`:
 
@@ -34,23 +38,23 @@ alloy("sendEvent", {
 });
 ```
 
-## Mobile SDK
+>[!TAB iOS]
 
 Chiamare `trackEvent` con il tipo di evento `ChapterComplete`.
-
-**iOS (Swift)**
 
 ```swift
 tracker.trackEvent(event: MediaEvent.ChapterComplete, info: nil, metadata: nil)
 ```
 
-**Android (Cotlino)**
+>[!TAB Android]
+
+Chiamare `trackEvent` con il tipo di evento `ChapterComplete`.
 
 ```kotlin
 tracker.trackEvent(Media.Event.ChapterComplete, null, null)
 ```
 
-## Roku (BrightScript)
+>[!TAB Roku]
 
 Chiama `sendMediaEvent` con `eventType: "media.chapterComplete"`:
 
@@ -65,7 +69,7 @@ m.aepSdk.sendMediaEvent({
 })
 ```
 
-## API di Media Edge
+>[!TAB API Media Edge]
 
 Chiama l&#39;endpoint [chapterComplete](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/chapters/#chaptercomplete):
 
@@ -86,7 +90,13 @@ curl -X POST "https://edge.adobedc.net/ee/va/v1/chapterComplete?configId={datast
 }'
 ```
 
-## Media SDK
+>[!ENDTABS]
+
+## Tipi di implementazione legacy (solo Analytics)
+
+>[!BEGINTABS]
+
+>[!TAB Media SDK JS 3.x]
 
 Chiamare `trackEvent` con il tipo di evento `ChapterComplete`:
 
@@ -94,7 +104,15 @@ Chiamare `trackEvent` con il tipo di evento `ChapterComplete`:
 tracker.trackEvent(ADB.Media.Event.ChapterComplete, null, null);
 ```
 
-## API Media Collection
+>[!TAB Chromecast]
+
+Chiamare `trackEvent` con il tipo di evento `ChapterComplete`:
+
+```javascript
+ADBMobile.media.trackEvent(ADBMobile.media.Event.ChapterComplete);
+```
+
+>[!TAB API Media Collection]
 
 Invia un POST `chapterComplete` all&#39;endpoint [eventi](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md):
 
@@ -104,3 +122,5 @@ Invia un POST `chapterComplete` all&#39;endpoint [eventi](/help/implementation/m
   "eventType": "chapterComplete"
 }
 ```
+
+>[!ENDTABS]

@@ -17,10 +17,10 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: 210
-ht-degree: 90%
+source-wordcount: 191
+ht-degree: 89%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 90%
 1. Imposta `elements` -> `id` nel corpo della richiesta a `metrics/playback_time_spent_seconds` oppure a `metrics/playback_time_spent_minutes` a seconda che si desideri ottenere l&#39;output in secondi o minuti.
 1. Richiedi una quantità sufficiente di dati.
 
-   * L’intervallo di dati specificato nel rapporto raccoglie tutti i dati del visualizzatore simultaneo _al termine della sessione video._
+   * L&#39;intervallo di dati specificato nel report raccoglie tutti i dati del visualizzatore simultaneo _al termine della sessione video._
 Devi tenere conto delle sessioni che iniziano in un giorno e terminano dopo la mezzanotte, cioè il giorno successivo.
 
    * Richiedi dati per un’altra giornata secondo il periodo previsto nella tua richiesta, ma nella tua analisi _*utilizza solo i dati previsti.*_
@@ -132,7 +132,7 @@ Un payload di richiesta per i dati di una giornata sarà simile al seguente esem
 
 
 <!--
-You can extract the Media Playback Time Spent report data using the Experience Cloud API Explorer as follows.
+You can extract the Media Playback Time Spent report data using the API Explorer as follows.
 
 1. Navigate to: [https://www.adobe.io.](https://www.adobe.io)
 1. Select and enter the following information in the API Explorer form:
