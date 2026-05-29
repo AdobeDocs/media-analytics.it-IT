@@ -23,7 +23,7 @@ Il backend multimediale valuta l&#39;indicatore di riproduzione riportato rispet
 
 >[!IMPORTANT]
 >
->I marcatori di avanzamento richiedono una lunghezza del contenuto ](/help/reporting/dimensions/content-length.md) diversa da zero e un report accurato della testina di riproduzione. [Se la lunghezza del contenuto non è impostata, è uguale a zero o non è corretta, gli indicatori possono essere attivati al momento sbagliato o non attivati affatto.
+>I marcatori di avanzamento richiedono una lunghezza del contenuto [&#128279;](/help/reporting/dimensions/content-length.md) diversa da zero e un report accurato della testina di riproduzione. Se la lunghezza del contenuto non è impostata, è uguale a zero o non è corretta, gli indicatori possono essere attivati al momento sbagliato o non attivati affatto.
 
 ### Indicatore di avanzamento al 10% {#progress-10}
 

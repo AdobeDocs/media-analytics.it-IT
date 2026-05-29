@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!BEGINSHADEBOX]
 
-*In questa pagina viene illustrata la raccolta dati per lo stato **Disattiva audio**del lettore. Vedi [Flussi interessati dalla disattivazione audio](/help/reporting/metrics/mute-streams-impacted.md), [Conteggi disattivazione audio](/help/reporting/metrics/mute-count.md) e [Durata totale disattivazione audio](/help/reporting/metrics/mute-total-duration.md) per le metriche di reporting corrispondenti.*
+*In questa pagina viene illustrata la raccolta dati per lo stato **Disattiva audio**&#x200B;del lettore. Vedi [Flussi interessati dalla disattivazione audio](/help/reporting/metrics/mute-streams-impacted.md), [Conteggi disattivazione audio](/help/reporting/metrics/mute-count.md) e [Durata totale disattivazione audio](/help/reporting/metrics/mute-total-duration.md) per le metriche di reporting corrispondenti.*
 
 >[!ENDSHADEBOX]
 
