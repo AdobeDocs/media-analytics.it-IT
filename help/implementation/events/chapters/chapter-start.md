@@ -24,7 +24,7 @@ L’evento di inizio capitolo segnala l’inizio di un capitolo all’interno de
 
 >[!TAB Web SDK]
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.chapterStart"` e il `chapterDetails` richiesto:
+Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.chapterStart"` e il `chapterDetails` richiesto:
 
 ```javascript
 alloy("sendEvent", {

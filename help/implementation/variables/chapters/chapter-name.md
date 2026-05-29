@@ -24,7 +24,7 @@ La variabile del nome del capitolo è il titolo leggibile di un capitolo, ad ese
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.chapter.friendlyName` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.chapterDetails.friendlyName`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/chapter-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.chapterDetails.friendlyName`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/chapter-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.chapter.friendlyName` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio capitolo](/help/implementation/events/chapters/chapter-start.md), chiusura capitolo |
@@ -35,7 +35,7 @@ La variabile del nome del capitolo è il titolo leggibile di un capitolo, ad ese
 
 >[!TAB Web SDK]
 
-Imposta `friendlyName` all&#39;interno di `xdm.mediaCollection.chapterDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `friendlyName` all&#39;interno di `xdm.mediaCollection.chapterDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {

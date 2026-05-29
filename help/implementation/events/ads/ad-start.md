@@ -28,7 +28,7 @@ L’evento di inizio annuncio segnala l’inizio della riproduzione di un singol
 
 >[!TAB Web SDK]
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.adStart"` e il `advertisingDetails` richiesto:
+Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.adStart"` e il `advertisingDetails` richiesto:
 
 ```javascript
 alloy("sendEvent", {

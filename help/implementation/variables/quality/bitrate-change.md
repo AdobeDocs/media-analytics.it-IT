@@ -35,7 +35,7 @@ L’evento di modifica del bitrate segnala che il lettore è passato a un bitrat
 
 >[!TAB Web SDK]
 
-Utilizza [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) per inviare un evento `media.bitrateChange` con il nuovo bitrate:
+Utilizza [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) per inviare un evento `media.bitrateChange` con il nuovo bitrate:
 
 ```javascript
 alloy("sendEvent", {

@@ -24,7 +24,7 @@ L’evento di riproduzione segnala che il lettore multimediale ha cambiato stato
 
 >[!TAB Web SDK]
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.play"`:
+Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.play"`:
 
 ```javascript
 alloy("sendEvent", {

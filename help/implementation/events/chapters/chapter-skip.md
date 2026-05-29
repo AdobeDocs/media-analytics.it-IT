@@ -24,7 +24,7 @@ Il capitolo ignora l’evento segnala che il visualizzatore ha saltato un capito
 
 >[!TAB Web SDK]
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.chapterSkip"`:
+Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.chapterSkip"`:
 
 ```javascript
 alloy("sendEvent", {
