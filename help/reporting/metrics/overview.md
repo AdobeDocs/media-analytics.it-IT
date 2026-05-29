@@ -3,9 +3,9 @@ title: Panoramica delle metriche dei contenuti multimediali in streaming
 description: Scopri come vengono calcolate e organizzate le metriche dei contenuti multimediali in streaming in Adobe Analytics e Customer Journey Analytics.
 feature: Metrics
 role: User, Admin
-source-git-commit: da289f8d425fcbaece42519a9ea7d061f80e4591
+source-git-commit: 3dbbd5228fcd91cf78c0597dea656c06f367dd40
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '437'
 ht-degree: 3%
 
 ---
@@ -31,13 +31,12 @@ Le metriche dei contenuti multimediali in streaming seguono quattro modelli di c
 
 | Sistema di reporting | Arrivo delle metriche |
 | --- | --- |
-| Adobe Analytics | Compilato utilizzando [Variabili di dati di contesto](https://experienceleague.adobe.com/it/docs/analytics/implementation/vars/page-vars/contextdata). Alcune metriche compilano automaticamente gli eventi della soluzione utilizzando queste variabili di dati di contesto, mentre altre devono essere mappate a un evento personalizzato utilizzando [Regole di elaborazione](https://experienceleague.adobe.com/it/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/processing-rules/pr-overview). Per le metriche che compilano automaticamente i valori, deve essere prima abilitata l&#39;impostazione [suite di rapporti per Streaming Media](../../implementation/media-sdk/setup/media-reports-enable.md). |
-| Customer Journey Analytics | Campi XDM in `xdm.mediaReporting.sessionDetails` e nodi correlati, originati da qualsiasi set di dati che include dati multimediali in streaming. È necessario creare ogni metrica con le impostazioni desiderate nelle [impostazioni del componente Visualizzazione dati](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-dataviews/component-settings/overview). |
+| Adobe Analytics | Compilato utilizzando [Variabili di dati di contesto](https://experienceleague.adobe.com/it/docs/analytics/implementation/vars/page-vars/contextdata). Alcune metriche compilano automaticamente gli eventi della soluzione utilizzando queste variabili di dati di contesto, mentre altre devono essere mappate a un evento personalizzato utilizzando [Regole di elaborazione](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/processing-rules/pr-overview). Per le metriche che compilano automaticamente i valori, deve essere prima abilitata l&#39;impostazione [suite di rapporti per Streaming Media](../../implementation/media-sdk/setup/media-reports-enable.md). |
+| Customer Journey Analytics | Campi XDM in `xdm.mediaReporting.sessionDetails` e nodi correlati, originati da qualsiasi set di dati che include dati multimediali in streaming. È necessario creare ogni metrica con le impostazioni desiderate nelle [impostazioni del componente Visualizzazione dati](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/component-settings/overview). |
 | Feed dati | Le metriche vengono visualizzate nelle colonne `event_list` e `post_event_list` come ID evento. Ogni file di feed contiene un file `events.csv` contenente la ricerca di tutte le metriche, incluse quelle relative ai contenuti multimediali in streaming. |
 
 >[!MORELIKETHIS]
 >
->* [Panoramica delle dimensioni](../dimensions/overview.md): riferimento alle dimensioni multimediali in streaming
->* [Metriche calcolate](/help/reporting/calculated-metrics.md): rapporti e metriche derivate create dalle metriche di base precedenti
->* [Mappatura parametri](/help/implementation/parameters-mapping.md): riferimento completo da evento a colonna a XDM
->* [Panoramica eventi](/help/implementation/events/overview.md): gli eventi del lettore che determinano il calcolo della metrica
+>* [Panoramica eventi](/help/implementation/events/overview.md): gli eventi del lettore che popolano le metriche
+>* [Panoramica delle variabili](/help/implementation/variables/overview.md): dati trasferiti dagli eventi ad Adobe
+>* [Panoramica delle dimensioni](/help/reporting/dimensions/overview.md): dimensioni di reporting popolate dalle variabili
