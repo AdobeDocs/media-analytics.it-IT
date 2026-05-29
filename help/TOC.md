@@ -5,10 +5,10 @@ user-guide-title: Guida ai servizi Streaming Media
 breadcrumb-title: Guida ai servizi Streaming Media
 user-guide-description: Implementa i servizi Streaming Media. Gli argomenti trattati comprendono Media SDK e Media Collection API.
 sub-product: media analytics
-source-git-commit: 3dbbd5228fcd91cf78c0597dea656c06f367dd40
+source-git-commit: 267532dfbe6dc3f7bcff0991536ae3baf6eff053
 workflow-type: tm+mt
-source-wordcount: '755'
-ht-degree: 36%
+source-wordcount: '753'
+ht-degree: 37%
 
 ---
 
@@ -130,7 +130,7 @@ ht-degree: 36%
          + [SDK mobile di Media Edge](/help/implementation/edge/edge-mobile-sdk.md)
       + [API di Media Edge](/help/implementation/edge/implementation-edge-api.md)
       + [Supporto per metadati personalizzati](implementation/edge/implementation-edge-custom-metadata.md)
-      + [Mappatura e convalida dei dati di AEP](/help/implementation/edge/platform-data.md)
+      + [Schema di reporting XDM](/help/implementation/edge/platform-data.md)
    + Implementazioni solo per Adobe Analytics {#analytics-only}
       + [Prerequisiti](/help/implementation/media-sdk/setup/prerequisites-analytics.md)
       + [Abilitazione di rapporti sui contenuti multimediali](implementation/media-sdk/setup/media-reports-enable.md)
