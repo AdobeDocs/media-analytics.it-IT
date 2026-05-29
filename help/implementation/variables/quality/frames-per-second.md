@@ -3,10 +3,10 @@ title: Fotogrammi al secondo
 description: Imposta la frequenza fotogrammi corrente sull'oggetto QoE in modo che il backend abbia un contesto di frequenza fotogrammi per il reporting di qualità.
 feature: Streaming Media
 role: Developer
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 6%
+source-wordcount: '254'
+ht-degree: 3%
 
 ---
 
@@ -18,14 +18,18 @@ La variabile frame al secondo corrisponde al frame rate corrente del flusso. Imp
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | Nessuno (Adobe Analytics non assegna una chiave di dati contestuali riservata per il frame rate) |
-| **Campo raccolta XDM** | [`mediaCollection.qoeDataDetails.framesPerSecond`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.qoeDataDetails.framesPerSecond`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/qoe-data-details-collection) |
 | **Caratteristica Audience Manager** | N/D |
 | **Obbligatorio** | No |
 | **Inviato con** | Eventi di qualità ([modifica bitrate](/help/implementation/events/playback/bitrate-change.md), [avvio buffer](/help/implementation/events/playback/buffer-start.md), [errore](/help/implementation/events/error.md)), chiusura sessione |
 
-## Web SDK
+## Tipi di implementazione consigliati
 
-Imposta `framesPerSecond` all&#39;interno di `mediaCollection.qoeDataDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+>[!BEGINTABS]
+
+>[!TAB Web SDK]
+
+Imposta `framesPerSecond` all&#39;interno di `xdm.mediaCollection.qoeDataDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -43,11 +47,9 @@ alloy("sendEvent", {
 });
 ```
 
-## Mobile SDK
+>[!TAB iOS]
 
 Passa la frequenza fotogrammi come terzo argomento (`fps`) a `createQoEObject`.
-
-**iOS (Swift)**
 
 ```swift
 let qoeObject = Media.createQoEObjectWith(bitrate: 3200,
@@ -58,7 +60,9 @@ let qoeObject = Media.createQoEObjectWith(bitrate: 3200,
 tracker.updateQoEObject(qoe: qoeObject)
 ```
 
-**Android (Cotlino)**
+>[!TAB Android]
+
+Passa la frequenza fotogrammi come terzo argomento (`fps`) a `createQoEObject`.
 
 ```kotlin
 val qoeObject = Media.createQoEObject(3200L,
@@ -69,9 +73,9 @@ val qoeObject = Media.createQoEObject(3200L,
 tracker.updateQoEObject(qoeObject)
 ```
 
-## Roku (BrightScript)
+>[!TAB Roku]
 
-Imposta `framesPerSecond` in `mediaCollection.qoeDataDetails` quando chiama `sendMediaEvent`:
+Imposta `framesPerSecond` in `xdm.mediaCollection.qoeDataDetails` quando chiama `sendMediaEvent`:
 
 ```brightscript
 m.aepSdk.sendMediaEvent({
@@ -88,9 +92,9 @@ m.aepSdk.sendMediaEvent({
 })
 ```
 
-## API di Media Edge
+>[!TAB API Media Edge]
 
-Chiama l&#39;endpoint [bitrateChange](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/bitratechange/#bitratechange) con `framesPerSecond` all&#39;interno di `mediaCollection.qoeDataDetails`:
+Chiama l&#39;endpoint [bitrateChange](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/bitratechange/#bitratechange) con `framesPerSecond` all&#39;interno di `xdm.mediaCollection.qoeDataDetails`:
 
 ```json
 {
@@ -109,7 +113,13 @@ Chiama l&#39;endpoint [bitrateChange](https://developer.adobe.com/data-collectio
 }
 ```
 
-## Media SDK
+>[!ENDTABS]
+
+## Tipi di implementazione legacy (solo Analytics)
+
+>[!BEGINTABS]
+
+>[!TAB Media SDK JS 3.x]
 
 Passa la frequenza fotogrammi come terzo argomento a `ADB.Media.createQoEObject`:
 
@@ -118,7 +128,21 @@ var qoeObject = ADB.Media.createQoEObject(3200, 0, 24, 0);
 tracker.updateQoEObject(qoeObject);
 ```
 
-## API Media Collection
+>[!TAB Chromecast]
+
+Passa la frequenza fotogrammi come terzo argomento (`fps`) a `ADBMobile.media.createQoSObject` e aggiorna il tracciatore:
+
+```javascript
+var qosInfo = ADBMobile.media.createQoSObject(
+  3200,  // bitrate
+  0,     // startupTime
+  24,    // fps
+  0      // droppedFrames
+);
+ADBMobile.media.updateQoSObject(qosInfo);
+```
+
+>[!TAB API Media Collection]
 
 Includi `media.qoe.framesPerSecond` nell&#39;oggetto `params`:
 
@@ -133,3 +157,5 @@ Includi `media.qoe.framesPerSecond` nell&#39;oggetto `params`:
 ```
 
 Per la struttura completa delle richieste, consulta il [Riferimento eventi API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md).
+
+>[!ENDTABS]

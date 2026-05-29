@@ -3,7 +3,7 @@ title: Nome del lettore dell’annuncio
 description: Segnala quale lettore ha eseguito il rendering di ciascun annuncio.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 9%
@@ -28,7 +28,7 @@ Il nome del lettore dell&#39;annuncio è impostato dal lettore a ogni evento [in
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.ad.playerName` quando [[!UICONTROL Media Ads]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.advertisingDetails.playerName`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-details-reporting) |
+| Customer Journey Analytics | [`xdm.mediaReporting.advertisingDetails.playerName`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/advertising-details-reporting) |
 | Feed di dati | `videoadplayername`, `post_videoadplayername` |
 | Audience Manager | `c_contextdata.a.media.ad.playerName` |
 

@@ -3,7 +3,7 @@ title: Tipo di feed multimediale
 description: Segnala il feed del broadcast (ad esempio, East-HD o West-SD) quando lo stesso contenuto viene distribuito tramite più feed.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
 source-wordcount: '155'
 ht-degree: 7%
@@ -28,7 +28,7 @@ Il tipo di feed multimediale viene impostato dal lettore all’inizio della sess
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.feed` quando [[!UICONTROL Video Metadata]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.sessionDetails.feed`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-reporting) |
+| Customer Journey Analytics | [`xdm.mediaReporting.sessionDetails.feed`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-reporting) |
 | Feed di dati | `videofeedtype`, `post_videofeedtype` |
 | Audience Manager | `c_contextdata.a.media.feed` |
 

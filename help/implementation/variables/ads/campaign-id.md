@@ -3,10 +3,10 @@ title: ID campagna
 description: Imposta l’identificatore della campagna per ogni annuncio in modo che il coinvolgimento possa essere aggregato per campagna.
 feature: Streaming Media
 role: Developer
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 8%
+source-wordcount: '232'
+ht-degree: 4%
 
 ---
 
@@ -24,14 +24,18 @@ La variabile ID campagna identifica la campagna pubblicitaria a cui appartiene i
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.ad.campaign` |
-| **Campo raccolta XDM** | [`mediaCollection.advertisingDetails.campaignID`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.advertisingDetails.campaignID`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/advertising-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.ad.campaign` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio annuncio](/help/implementation/events/ads/ad-start.md), chiusura annuncio |
 
-## Web SDK
+## Tipi di implementazione consigliati
 
-Imposta `campaignID` all&#39;interno di `mediaCollection.advertisingDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+>[!BEGINTABS]
+
+>[!TAB Web SDK]
+
+Imposta `campaignID` all&#39;interno di `xdm.mediaCollection.advertisingDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -49,11 +53,9 @@ alloy("sendEvent", {
 });
 ```
 
-## Mobile SDK
+>[!TAB iOS]
 
 Passa l&#39;ID campagna come chiave di metadati nell&#39;argomento HashMap a `trackEvent(AdStart)`. Usa `MediaConstants.AdMetadataKeys.CAMPAIGN_ID`.
-
-**iOS (Swift)**
 
 ```swift
 var metadata: [String: String] = [:]
@@ -62,7 +64,9 @@ metadata[MediaConstants.AdMetadataKeys.CAMPAIGN_ID] = "fall-2024"
 tracker.trackEvent(event: MediaEvent.AdStart, info: adObject, metadata: metadata)
 ```
 
-**Android (Cotlino)**
+>[!TAB Android]
+
+Passa l&#39;ID campagna come chiave di metadati nell&#39;argomento HashMap a `trackEvent(AdStart)`. Usa `MediaConstants.AdMetadataKeys.CAMPAIGN_ID`.
 
 ```kotlin
 val metadata = HashMap<String, String>()
@@ -71,9 +75,9 @@ metadata[MediaConstants.AdMetadataKeys.CAMPAIGN_ID] = "fall-2024"
 tracker.trackEvent(Media.Event.AdStart, adObject, metadata)
 ```
 
-## Roku (BrightScript)
+>[!TAB Roku]
 
-Imposta `campaignID` in `mediaCollection.advertisingDetails` quando chiama `sendMediaEvent` per `media.adStart`:
+Imposta `campaignID` in `xdm.mediaCollection.advertisingDetails` quando chiama `sendMediaEvent` per `media.adStart`:
 
 ```brightscript
 m.aepSdk.sendMediaEvent({
@@ -90,9 +94,9 @@ m.aepSdk.sendMediaEvent({
 })
 ```
 
-## API di Media Edge
+>[!TAB API Media Edge]
 
-Chiama l&#39;endpoint [adStart](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/ads/#adstart) con `campaignID` in `mediaCollection.advertisingDetails`:
+Chiama l&#39;endpoint [adStart](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/ads/#adstart) con `campaignID` in `xdm.mediaCollection.advertisingDetails`:
 
 ```json
 {
@@ -115,7 +119,13 @@ Chiama l&#39;endpoint [adStart](https://developer.adobe.com/data-collection-apis
 }
 ```
 
-## Media SDK
+>[!ENDTABS]
+
+## Tipi di implementazione legacy (solo Analytics)
+
+>[!BEGINTABS]
+
+>[!TAB Media SDK JS 3.x]
 
 Passa l&#39;ID della campagna nell&#39;oggetto `contextData` utilizzando `ADB.Media.AdMetadataKeys.CampaignId`:
 
@@ -126,7 +136,19 @@ contextData[ADB.Media.AdMetadataKeys.CampaignId] = "fall-2024";
 tracker.trackEvent(ADB.Media.Event.AdStart, adInfo, contextData);
 ```
 
-## API Media Collection
+>[!TAB Chromecast]
+
+Imposta l&#39;ID campagna utilizzando `ADBMobile.media.AdMetadataKeys.CAMPAIGN_ID` nell&#39;oggetto metadati standard dell&#39;annuncio:
+
+```javascript
+var adInfo = ADBMobile.media.createAdObject("Ford F-150", "ad-2125", 1, 30);
+var standardAdMetadata = {};
+standardAdMetadata[ADBMobile.media.AdMetadataKeys.CAMPAIGN_ID] = "fall-2024";
+adInfo[ADBMobile.media.MediaObjectKey.StandardAdMetadata] = standardAdMetadata;
+ADBMobile.media.trackEvent(ADBMobile.media.Event.AdStart, adInfo, null);
+```
+
+>[!TAB API Media Collection]
 
 Includi `media.ad.campaignId` nell&#39;oggetto `params`:
 
@@ -141,3 +163,5 @@ Includi `media.ad.campaignId` nell&#39;oggetto `params`:
 ```
 
 Per la struttura completa delle richieste, consulta il [Riferimento eventi API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md).
+
+>[!ENDTABS]

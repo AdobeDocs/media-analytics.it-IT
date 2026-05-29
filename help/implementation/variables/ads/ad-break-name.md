@@ -3,10 +3,10 @@ title: Nome interruzione annuncio
 description: Imposta il nome descrittivo dell’interruzione pubblicitaria principale.
 feature: Streaming Media
 role: Developer
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 5%
+source-wordcount: '248'
+ht-degree: 2%
 
 ---
 
@@ -24,14 +24,18 @@ La variabile del nome dell’interruzione pubblicitaria è il nome descrittivo d
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.ad.podFriendlyName` |
-| **Campo raccolta XDM** | [`mediaCollection.advertisingPodDetails.friendlyName`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-pod-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.advertisingPodDetails.friendlyName`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/advertising-pod-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.ad.podFriendlyName` |
 | **Obbligatorio** | Sì (Mobile SDK); No (Edge, Media Collection API) |
 | **Inviato con** | [Inizio interruzione annuncio](/help/implementation/events/ads/ad-break-start.md), chiusura annuncio |
 
-## Web SDK
+## Tipi di implementazione consigliati
 
-Imposta `friendlyName` in `mediaCollection.advertisingPodDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) per `media.adBreakStart`:
+>[!BEGINTABS]
+
+>[!TAB Web SDK]
+
+Imposta `friendlyName` in `xdm.mediaCollection.advertisingPodDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) per `media.adBreakStart`:
 
 ```javascript
 alloy("sendEvent", {
@@ -50,11 +54,9 @@ alloy("sendEvent", {
 });
 ```
 
-## Mobile SDK
+>[!TAB iOS]
 
 Passa il nome dell&#39;interruzione pubblicitaria come primo argomento (`name`) a `createAdBreakObject`, quindi tieni traccia dell&#39;evento di avvio dell&#39;annuncio prima dell&#39;evento di inizio annuncio.
-
-**iOS (Swift)**
 
 ```swift
 let adBreakObject = Media.createAdBreakObjectWith(name: "pre-roll",
@@ -64,7 +66,9 @@ let adBreakObject = Media.createAdBreakObjectWith(name: "pre-roll",
 tracker.trackEvent(event: MediaEvent.AdBreakStart, info: adBreakObject, metadata: nil)
 ```
 
-**Android (Cotlino)**
+>[!TAB Android]
+
+Passa il nome dell&#39;interruzione pubblicitaria come primo argomento (`name`) a `createAdBreakObject`, quindi tieni traccia dell&#39;evento di avvio dell&#39;annuncio prima dell&#39;evento di inizio annuncio.
 
 ```kotlin
 val adBreakObject = Media.createAdBreakObject("pre-roll",
@@ -74,9 +78,9 @@ val adBreakObject = Media.createAdBreakObject("pre-roll",
 tracker.trackEvent(Media.Event.AdBreakStart, adBreakObject, null)
 ```
 
-## Roku (BrightScript)
+>[!TAB Roku]
 
-Imposta `friendlyName` in `mediaCollection.advertisingPodDetails` quando chiama `sendMediaEvent` per `media.adBreakStart`:
+Imposta `friendlyName` in `xdm.mediaCollection.advertisingPodDetails` quando chiama `sendMediaEvent` per `media.adBreakStart`:
 
 ```brightscript
 m.aepSdk.sendMediaEvent({
@@ -94,9 +98,9 @@ m.aepSdk.sendMediaEvent({
 })
 ```
 
-## API di Media Edge
+>[!TAB API Media Edge]
 
-Chiama l&#39;endpoint [adBreakStart](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/ads/#adbreakstart) con `friendlyName` in `mediaCollection.advertisingPodDetails`:
+Chiama l&#39;endpoint [adBreakStart](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/ads/#adbreakstart) con `friendlyName` in `xdm.mediaCollection.advertisingPodDetails`:
 
 ```json
 {
@@ -117,7 +121,13 @@ Chiama l&#39;endpoint [adBreakStart](https://developer.adobe.com/data-collection
 }
 ```
 
-## Media SDK
+>[!ENDTABS]
+
+## Tipi di implementazione legacy (solo Analytics)
+
+>[!BEGINTABS]
+
+>[!TAB Media SDK JS 3.x]
 
 Passa il nome dell&#39;interruzione pubblicitaria come primo argomento a `ADB.Media.createAdBreakObject`:
 
@@ -131,7 +141,20 @@ var adBreakInfo = ADB.Media.createAdBreakObject(
 tracker.trackEvent(ADB.Media.Event.AdBreakStart, adBreakInfo, null);
 ```
 
-## API Media Collection
+>[!TAB Chromecast]
+
+Passa il nome dell&#39;interruzione pubblicitaria come primo argomento a `ADBMobile.media.createAdBreakObject`:
+
+```javascript
+var adBreakInfo = ADBMobile.media.createAdBreakObject(
+  "pre-roll",
+  1,
+  0
+);
+ADBMobile.media.trackEvent(ADBMobile.media.Event.AdBreakStart, adBreakInfo);
+```
+
+>[!TAB API Media Collection]
 
 Includi `media.ad.podFriendlyName` nell&#39;oggetto `params` della richiesta POST `adBreakStart`:
 
@@ -146,3 +169,5 @@ Includi `media.ad.podFriendlyName` nell&#39;oggetto `params` della richiesta POS
 ```
 
 Per la struttura completa delle richieste, consulta il [Riferimento eventi API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md).
+
+>[!ENDTABS]

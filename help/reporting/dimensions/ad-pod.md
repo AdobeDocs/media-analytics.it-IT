@@ -3,7 +3,7 @@ title: Ad pod
 description: Segnala ogni interruzione pubblicitaria univoca, codificata da un ID pod generato automaticamente.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
 source-wordcount: '193'
 ht-degree: 7%
@@ -22,7 +22,7 @@ L&#39;ID del pod dell&#39;annuncio viene generato automaticamente da SDK quando 
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.ad.pod` quando [[!UICONTROL Media Ads]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.advertisingPodDetails.ID`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-pod-details-reporting) |
+| Customer Journey Analytics | [`xdm.mediaReporting.advertisingPodDetails.ID`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/advertising-pod-details-reporting) |
 | Feed di dati | `videoadpod`, `post_videoadpod` |
 | Audience Manager | N/D |
 

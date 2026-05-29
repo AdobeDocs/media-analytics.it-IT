@@ -3,10 +3,10 @@ title: ID contenuto
 description: Identificare in modo univoco un contenuto multimediale.
 feature: Streaming Media
 role: Developer
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 8%
+source-wordcount: '221'
+ht-degree: 4%
 
 ---
 
@@ -24,14 +24,18 @@ La variabile ID contenuto identifica in modo univoco ogni elemento del contenuto
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.name` |
-| **Campo raccolta XDM** | [`mediaCollection.sessionDetails.name`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.name`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.name` |
 | **Obbligatorio** | Sì |
 | **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
 
-## Web SDK
+## Tipi di implementazione consigliati
 
-Imposta `name` all&#39;interno di `mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+>[!BEGINTABS]
+
+>[!TAB Web SDK]
+
+Imposta `name` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -53,11 +57,9 @@ alloy("sendEvent", {
 });
 ```
 
-## Mobile SDK
+>[!TAB iOS]
 
 Passa l&#39;ID contenuto come argomento `mediaId` a `createMediaObject`.
-
-**iOS (Swift)**
 
 ```swift
 let mediaObject = Media.createMediaObjectWith(name: "My Video",
@@ -69,7 +71,9 @@ let mediaObject = Media.createMediaObjectWith(name: "My Video",
 tracker.trackSessionStart(info: mediaObject, metadata: nil)
 ```
 
-**Android (Cotlino)**
+>[!TAB Android]
+
+Passa l&#39;ID contenuto come argomento `mediaId` a `createMediaObject`.
 
 ```kotlin
 var mediaInfo = Media.createMediaObject("My Video",
@@ -81,9 +85,9 @@ var mediaInfo = Media.createMediaObject("My Video",
 tracker.trackSessionStart(mediaInfo, null)
 ```
 
-## Roku (BrightScript)
+>[!TAB Roku]
 
-Imposta `name` in `mediaCollection.sessionDetails` quando chiama `createMediaSession`:
+Imposta `name` in `xdm.mediaCollection.sessionDetails` quando chiama `createMediaSession`:
 
 ```brightscript
 m.aepSdk.createMediaSession({
@@ -105,9 +109,9 @@ m.aepSdk.createMediaSession({
 })
 ```
 
-## API di Media Edge
+>[!TAB API Media Edge]
 
-Chiama l&#39;endpoint [sessionStart](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/sessions/#sessionstart) con `name` (ID contenuto) in `mediaCollection.sessionDetails`:
+Chiama l&#39;endpoint [sessionStart](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/sessions/#sessionstart) con `name` (ID contenuto) in `xdm.mediaCollection.sessionDetails`:
 
 ```json
 {
@@ -129,7 +133,13 @@ Chiama l&#39;endpoint [sessionStart](https://developer.adobe.com/data-collection
 }
 ```
 
-## Media SDK
+>[!ENDTABS]
+
+## Tipi di implementazione legacy (solo Analytics)
+
+>[!BEGINTABS]
+
+>[!TAB Media SDK JS 3.x]
 
 Passa l&#39;ID contenuto come secondo argomento a `ADB.Media.createMediaObject`:
 
@@ -145,7 +155,22 @@ var mediaInfo = ADB.Media.createMediaObject(
 tracker.trackSessionStart(mediaInfo, contextData);
 ```
 
-## API Media Collection
+>[!TAB Chromecast]
+
+Passa l&#39;ID contenuto come secondo argomento a `ADBMobile.media.createMediaObject`:
+
+```javascript
+var mediaInfo = ADBMobile.media.createMediaObject(
+  "My Video",
+  "video-123",
+  128,
+  ADBMobile.media.StreamType.VOD,
+  ADBMobile.media.MediaType.Video
+);
+ADBMobile.media.trackSessionStart(mediaInfo, null);
+```
+
+>[!TAB API Media Collection]
 
 Includi `media.id` nell&#39;oggetto `params` della richiesta POST `sessionStart`:
 
@@ -160,3 +185,5 @@ Includi `media.id` nell&#39;oggetto `params` della richiesta POST `sessionStart`
 ```
 
 Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-sessions-req.md).
+
+>[!ENDTABS]

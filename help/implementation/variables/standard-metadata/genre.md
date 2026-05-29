@@ -3,10 +3,10 @@ title: Genere
 description: Imposta il genere di contenuto come stringa delimitata da virgole. Il contenuto multi-genere si suddivide tra gli elementi di riga nel reporting.
 feature: Streaming Media
 role: Developer
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 6%
+source-wordcount: '261'
+ht-degree: 3%
 
 ---
 
@@ -23,19 +23,23 @@ La variabile di genere è il genere di contenuto definito dal produttore (ad ese
 
 >[!NOTE]
 >
->Nella pipeline di reporting, il valore del genere è esposto come `mediaReporting.sessionDetails.genreList` (un campo elenco). Il percorso `mediaReporting.sessionDetails.genre` precedente rimane funzionante, ma si consiglia `genreList`.
+>Nella pipeline di reporting, il valore del genere è esposto come `xdm.mediaReporting.sessionDetails.genreList` (un campo elenco). Il percorso `xdm.mediaReporting.sessionDetails.genre` precedente rimane funzionante, ma si consiglia `genreList`.
 
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.genre` |
-| **Campo raccolta XDM** | [`mediaCollection.sessionDetails.genre`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.genre`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.genre` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
 
-## Web SDK
+## Tipi di implementazione consigliati
 
-Imposta `genre` all&#39;interno di `mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+>[!BEGINTABS]
+
+>[!TAB Web SDK]
+
+Imposta `genre` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -51,11 +55,9 @@ alloy("sendEvent", {
 });
 ```
 
-## Mobile SDK
+>[!TAB iOS]
 
 Passa la stringa del genere come chiave di metadati nell&#39;argomento HashMap a `trackSessionStart`. Usa `MediaConstants.VideoMetadataKeys.GENRE`.
-
-**iOS (Swift)**
 
 ```swift
 var metadata: [String: String] = [:]
@@ -64,7 +66,9 @@ metadata[MediaConstants.VideoMetadataKeys.GENRE] = "Drama,Action"
 tracker.trackSessionStart(info: mediaObject, metadata: metadata)
 ```
 
-**Android (Cotlino)**
+>[!TAB Android]
+
+Passa la stringa del genere come chiave di metadati nell&#39;argomento HashMap a `trackSessionStart`. Usa `MediaConstants.VideoMetadataKeys.GENRE`.
 
 ```kotlin
 val metadata = HashMap<String, String>()
@@ -73,7 +77,7 @@ metadata[MediaConstants.VideoMetadataKeys.GENRE] = "Drama,Action"
 tracker.trackSessionStart(mediaInfo, metadata)
 ```
 
-## Roku (BrightScript)
+>[!TAB Roku]
 
 Utilizza `createMediaSession` per impostare `genre` in `sessionDetails`:
 
@@ -91,9 +95,9 @@ m.aepSdk.createMediaSession({
 })
 ```
 
-## API di Media Edge
+>[!TAB API Media Edge]
 
-Chiama l&#39;endpoint [sessionStart](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/sessions/#sessionstart) con `genre` in `mediaCollection.sessionDetails`:
+Chiama l&#39;endpoint [sessionStart](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/sessions/#sessionstart) con `genre` in `xdm.mediaCollection.sessionDetails`:
 
 ```json
 {
@@ -116,7 +120,13 @@ Chiama l&#39;endpoint [sessionStart](https://developer.adobe.com/data-collection
 }
 ```
 
-## Media SDK
+>[!ENDTABS]
+
+## Tipi di implementazione legacy (solo Analytics)
+
+>[!BEGINTABS]
+
+>[!TAB Media SDK JS 3.x]
 
 Passa il genere nell&#39;oggetto `contextData` utilizzando `ADB.Media.VideoMetadataKeys.Genre`:
 
@@ -127,7 +137,20 @@ contextData[ADB.Media.VideoMetadataKeys.Genre] = "Drama,Action";
 tracker.trackSessionStart(mediaInfo, contextData);
 ```
 
-## API Media Collection
+>[!TAB Chromecast]
+
+Utilizzare `ADBMobile.media.VideoMetadataKeys.GENRE` per impostare il genere nella proprietà `StandardMediaMetadata` dell&#39;oggetto multimediale prima di chiamare `trackSessionStart`:
+
+```javascript
+var mediaInfo = ADBMobile.media.createMediaObject("My Video", "video-123", 128,
+  ADBMobile.media.StreamType.VOD, ADBMobile.media.MediaType.Video);
+var standardMetadata = {};
+standardMetadata[ADBMobile.media.VideoMetadataKeys.GENRE] = "Drama,Action";
+mediaInfo[ADBMobile.media.MediaObjectKey.StandardMediaMetadata] = standardMetadata;
+ADBMobile.media.trackSessionStart(mediaInfo, null);
+```
+
+>[!TAB API Media Collection]
 
 Includi `media.genre` nell&#39;oggetto `params`:
 
@@ -142,3 +165,5 @@ Includi `media.genre` nell&#39;oggetto `params`:
 ```
 
 Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-sessions-req.md).
+
+>[!ENDTABS]

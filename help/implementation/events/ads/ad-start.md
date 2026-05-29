@@ -3,10 +3,10 @@ title: Inizio annuncio
 description: Segnala l’inizio della riproduzione di un singolo annuncio.
 feature: Streaming Media
 role: Developer
-source-git-commit: b75e50f626b85992575961ea267d0f74eda09f0a
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: '159'
-ht-degree: 5%
+source-wordcount: '185'
+ht-degree: 2%
 
 ---
 
@@ -16,15 +16,19 @@ ht-degree: 5%
 L’evento di inizio annuncio segnala l’inizio della riproduzione di un singolo annuncio. Deve verificarsi all&#39;interno di una coppia [Inizio interruzione annuncio](ad-break-start.md) / [Interruzione annuncio completata](ad-break-complete.md).
 
 * **Prerequisiti**: [Inizio sessione](../session/session-start.md), [Inizio interruzione annuncio](ad-break-start.md)
-* **Metrica associata**: [Inizio annuncio](/help/reporting/metrics/ad-starts.md)
+* **Metrica associata**: [[!UICONTROL Ad starts]](/help/reporting/metrics/ad-starts.md)
 
 >[!IMPORTANT]
 >
 >Questo evento deve essere circondato da `adBreakStart` e `adBreakComplete` bookend, anche quando viene riprodotto un singolo annuncio. Senza questi bookend, gli eventi pubblicitari vengono ignorati e la durata dell’annuncio viene conteggiata come durata del contenuto principale.
 
-## Web SDK
+## Tipi di implementazione consigliati
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.adStart"` e il `advertisingDetails` richiesto:
+>[!BEGINTABS]
+
+>[!TAB Web SDK]
+
+Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.adStart"` e il `advertisingDetails` richiesto:
 
 ```javascript
 alloy("sendEvent", {
@@ -45,11 +49,9 @@ alloy("sendEvent", {
 });
 ```
 
-## Mobile SDK
+>[!TAB iOS]
 
 Passa il nome, l&#39;ID, la posizione e la lunghezza dell&#39;annuncio a `createAdObject`, quindi chiama `trackEvent`.
-
-**iOS (Swift)**
 
 ```swift
 let adObject = Media.createAdObjectWith(name: "Ford F-150",
@@ -60,7 +62,9 @@ let adObject = Media.createAdObjectWith(name: "Ford F-150",
 tracker.trackEvent(event: MediaEvent.AdStart, info: adObject, metadata: nil)
 ```
 
-**Android (Cotlino)**
+>[!TAB Android]
+
+Passa il nome, l&#39;ID, la posizione e la lunghezza dell&#39;annuncio a `createAdObject`, quindi chiama `trackEvent`.
 
 ```kotlin
 val adObject = Media.createAdObject("Ford F-150",
@@ -71,7 +75,7 @@ val adObject = Media.createAdObject("Ford F-150",
 tracker.trackEvent(Media.Event.AdStart, adObject, null)
 ```
 
-## Roku (BrightScript)
+>[!TAB Roku]
 
 Chiama `sendMediaEvent` con `eventType: "media.adStart"` e il `advertisingDetails` richiesto:
 
@@ -93,7 +97,7 @@ m.aepSdk.sendMediaEvent({
 })
 ```
 
-## API di Media Edge
+>[!TAB API Media Edge]
 
 Chiama l&#39;endpoint [adStart](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/ads/#adstart) con `advertisingDetails` richiesto:
 
@@ -120,7 +124,13 @@ curl -X POST "https://edge.adobedc.net/ee/va/v1/adStart?configId={datastreamID}"
 }'
 ```
 
-## Media SDK
+>[!ENDTABS]
+
+## Tipi di implementazione legacy (solo Analytics)
+
+>[!BEGINTABS]
+
+>[!TAB Media SDK JS 3.x]
 
 Passa il nome, l&#39;ID, la posizione e la lunghezza dell&#39;annuncio a `ADB.Media.createAdObject`:
 
@@ -135,7 +145,22 @@ var adInfo = ADB.Media.createAdObject(
 tracker.trackEvent(ADB.Media.Event.AdStart, adInfo, null);
 ```
 
-## API Media Collection
+>[!TAB Chromecast]
+
+Passa il nome, l&#39;ID, la posizione e la lunghezza dell&#39;annuncio a `ADBMobile.media.createAdObject`:
+
+```javascript
+var adInfo = ADBMobile.media.createAdObject(
+  "Ford F-150",  // name (friendly name)
+  "ad-2125",     // ad ID
+  0,             // position in pod
+  15             // length (seconds)
+);
+
+ADBMobile.media.trackEvent(ADBMobile.media.Event.AdStart, adInfo, null);
+```
+
+>[!TAB API Media Collection]
 
 Invia un POST `adStart` all&#39;endpoint [eventi](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md):
 
@@ -151,3 +176,5 @@ Invia un POST `adStart` all&#39;endpoint [eventi](/help/implementation/media-col
   }
 }
 ```
+
+>[!ENDTABS]

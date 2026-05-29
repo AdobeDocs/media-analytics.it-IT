@@ -3,7 +3,7 @@ title: Fotogrammi persi (metrica)
 description: Riporta i fotogrammi saltati cumulativi per somme e medie tra sessioni.
 feature: Metrics
 role: User, Admin
-source-git-commit: 034d7736c2f6e15592f4f6a0313c78275c4fea50
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 7%
@@ -15,7 +15,7 @@ ht-degree: 7%
 
 >[!BEGINSHADEBOX]
 
-*In questa pagina è inclusa la metrica **Frame saltati**. Adobe Analytics compila automaticamente un [fotogramma (dimensione)](/help/reporting/dimensions/dropped-frames.md) accoppiato dalla stessa variabile di dati di contesto `a.media.qoe.droppedFrameCount`. Customer Journey Analytics espone un singolo campo `mediaReporting.qoeDataDetails.droppedFrames` che è possibile utilizzare come dimensione o come metrica. Per informazioni su come raccogliere questa variabile, vedere [Frame rilasciati](/help/implementation/variables/quality/dropped-frames.md).*
+*In questa pagina è inclusa la metrica **Frame saltati**. Adobe Analytics compila automaticamente un [fotogramma (dimensione)](/help/reporting/dimensions/dropped-frames.md) accoppiato dalla stessa variabile di dati di contesto `a.media.qoe.droppedFrameCount`. Customer Journey Analytics espone un singolo campo `xdm.mediaReporting.qoeDataDetails.droppedFrames` che è possibile utilizzare come dimensione o come metrica. Per informazioni su come raccogliere questa variabile, vedere [Frame rilasciati](/help/implementation/variables/quality/dropped-frames.md).*
 
 >[!ENDSHADEBOX]
 
@@ -28,8 +28,8 @@ Il lettore aggiorna il valore `droppedFrames` dell&#39;oggetto QoE mentre si acc
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.qoe.droppedFrameCount` quando [[!UICONTROL Media Quality]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.qoeDataDetails.droppedFrames`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
-| Feed di dati | `event_list`, `post_event_list` (vedi ricerca [`event.tsv`](https://experienceleague.adobe.com/it/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-contents#lookup-files)) |
+| Customer Journey Analytics | [`xdm.mediaReporting.qoeDataDetails.droppedFrames`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/qoe-data-details-reporting) |
+| Feed di dati | `event_list`, `post_event_list` (vedi ricerca [`event.tsv`](https://experienceleague.adobe.com/en/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-contents#lookup-files)) |
 | Audience Manager | `c_contextdata.a.media.qoe.droppedFrameCount` |
 
 Per il reporting booleano a livello di sessione (se sono stati eliminati dei fotogrammi), utilizza [Flussi interessati da fotogrammi saltati](dropped-frame-impacted-streams.md).

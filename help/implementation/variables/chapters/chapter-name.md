@@ -3,10 +3,10 @@ title: Nome del capitolo
 description: Imposta il nome descrittivo di ciascun capitolo in modo che la generazione rapporti a livello di capitolo possa suddividersi per titolo del capitolo.
 feature: Streaming Media
 role: Developer
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: '187'
-ht-degree: 8%
+source-wordcount: '212'
+ht-degree: 5%
 
 ---
 
@@ -24,14 +24,18 @@ La variabile del nome del capitolo è il titolo leggibile di un capitolo, ad ese
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.chapter.friendlyName` |
-| **Campo raccolta XDM** | [`mediaCollection.chapterDetails.friendlyName`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/chapter-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.chapterDetails.friendlyName`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/chapter-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.chapter.friendlyName` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio capitolo](/help/implementation/events/chapters/chapter-start.md), chiusura capitolo |
 
-## Web SDK
+## Tipi di implementazione consigliati
 
-Imposta `friendlyName` all&#39;interno di `mediaCollection.chapterDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+>[!BEGINTABS]
+
+>[!TAB Web SDK]
+
+Imposta `friendlyName` all&#39;interno di `xdm.mediaCollection.chapterDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -51,11 +55,9 @@ alloy("sendEvent", {
 });
 ```
 
-## Mobile SDK
+>[!TAB iOS]
 
 Passa il nome del capitolo come primo argomento (`name`) a `createChapterObject`.
-
-**iOS (Swift)**
 
 ```swift
 let chapterObject = Media.createChapterObjectWith(name: "Pilot Episode - Opening",
@@ -66,7 +68,9 @@ let chapterObject = Media.createChapterObjectWith(name: "Pilot Episode - Opening
 tracker.trackEvent(event: MediaEvent.ChapterStart, info: chapterObject, metadata: nil)
 ```
 
-**Android (Cotlino)**
+>[!TAB Android]
+
+Passa il nome del capitolo come primo argomento (`name`) a `createChapterObject`.
 
 ```kotlin
 val chapterObject = Media.createChapterObject("Pilot Episode - Opening",
@@ -77,9 +81,9 @@ val chapterObject = Media.createChapterObject("Pilot Episode - Opening",
 tracker.trackEvent(Media.Event.ChapterStart, chapterObject, null)
 ```
 
-## Roku (BrightScript)
+>[!TAB Roku]
 
-Imposta `friendlyName` in `mediaCollection.chapterDetails` quando chiama `sendMediaEvent` per `media.chapterStart`:
+Imposta `friendlyName` in `xdm.mediaCollection.chapterDetails` quando chiama `sendMediaEvent` per `media.chapterStart`:
 
 ```brightscript
 m.aepSdk.sendMediaEvent({
@@ -98,9 +102,9 @@ m.aepSdk.sendMediaEvent({
 })
 ```
 
-## API di Media Edge
+>[!TAB API Media Edge]
 
-Chiama l&#39;endpoint [chapterStart](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/chapters/#chapterstart) con `friendlyName` in `mediaCollection.chapterDetails`:
+Chiama l&#39;endpoint [chapterStart](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/chapters/#chapterstart) con `friendlyName` in `xdm.mediaCollection.chapterDetails`:
 
 ```json
 {
@@ -122,7 +126,13 @@ Chiama l&#39;endpoint [chapterStart](https://developer.adobe.com/data-collection
 }
 ```
 
-## Media SDK
+>[!ENDTABS]
+
+## Tipi di implementazione legacy (solo Analytics)
+
+>[!BEGINTABS]
+
+>[!TAB Media SDK JS 3.x]
 
 Passa il nome del capitolo come primo argomento a `ADB.Media.createChapterObject`:
 
@@ -137,7 +147,21 @@ var chapterInfo = ADB.Media.createChapterObject(
 tracker.trackEvent(ADB.Media.Event.ChapterStart, chapterInfo, contextData);
 ```
 
-## API Media Collection
+>[!TAB Chromecast]
+
+Passa il nome del capitolo come primo argomento (`name`) a `ADBMobile.media.createChapterObject`:
+
+```javascript
+var chapterInfo = ADBMobile.media.createChapterObject(
+  "Pilot Episode - Opening",  // name
+  1,                          // position
+  240,                        // length
+  0                           // startTime
+);
+ADBMobile.media.trackEvent(ADBMobile.media.Event.ChapterStart, chapterInfo, null);
+```
+
+>[!TAB API Media Collection]
 
 Includi `media.chapter.friendlyName` nell&#39;oggetto `params` della richiesta POST `chapterStart`:
 
@@ -152,3 +176,5 @@ Includi `media.chapter.friendlyName` nell&#39;oggetto `params` della richiesta P
 ```
 
 Per la struttura completa delle richieste, consulta il [Riferimento eventi API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md).
+
+>[!ENDTABS]

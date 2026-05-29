@@ -3,10 +3,10 @@ title: Durata capitolo
 description: Imposta la lunghezza di ciascun capitolo, in secondi.
 feature: Streaming Media
 role: Developer
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: '179'
-ht-degree: 8%
+source-wordcount: '208'
+ht-degree: 4%
 
 ---
 
@@ -24,14 +24,18 @@ La variabile di lunghezza del capitolo è la durata del capitolo, in secondi. Im
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.chapter.length` |
-| **Campo raccolta XDM** | [`mediaCollection.chapterDetails.length`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/chapter-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.chapterDetails.length`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/chapter-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.chapter.length` |
 | **Obbligatorio** | No (Mobile SDK); Sì (Edge, Media Collection API) |
 | **Inviato con** | [Inizio capitolo](/help/implementation/events/chapters/chapter-start.md), chiusura capitolo |
 
-## Web SDK
+## Tipi di implementazione consigliati
 
-Imposta `length` all&#39;interno di `mediaCollection.chapterDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+>[!BEGINTABS]
+
+>[!TAB Web SDK]
+
+Imposta `length` all&#39;interno di `xdm.mediaCollection.chapterDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -51,11 +55,9 @@ alloy("sendEvent", {
 });
 ```
 
-## Mobile SDK
+>[!TAB iOS]
 
 Passa la lunghezza del capitolo in secondi come terzo argomento a `createChapterObject`.
-
-**iOS (Swift)**
 
 ```swift
 let chapterObject = Media.createChapterObjectWith(name: "Pilot Episode - Opening",
@@ -66,7 +68,9 @@ let chapterObject = Media.createChapterObjectWith(name: "Pilot Episode - Opening
 tracker.trackEvent(event: MediaEvent.ChapterStart, info: chapterObject, metadata: nil)
 ```
 
-**Android (Cotlino)**
+>[!TAB Android]
+
+Passa la lunghezza del capitolo in secondi come terzo argomento a `createChapterObject`.
 
 ```kotlin
 val chapterObject = Media.createChapterObject("Pilot Episode - Opening",
@@ -77,9 +81,9 @@ val chapterObject = Media.createChapterObject("Pilot Episode - Opening",
 tracker.trackEvent(Media.Event.ChapterStart, chapterObject, null)
 ```
 
-## Roku (BrightScript)
+>[!TAB Roku]
 
-Imposta `length` in `mediaCollection.chapterDetails` quando chiama `sendMediaEvent` per `media.chapterStart`:
+Imposta `length` in `xdm.mediaCollection.chapterDetails` quando chiama `sendMediaEvent` per `media.chapterStart`:
 
 ```brightscript
 m.aepSdk.sendMediaEvent({
@@ -98,9 +102,9 @@ m.aepSdk.sendMediaEvent({
 })
 ```
 
-## API di Media Edge
+>[!TAB API Media Edge]
 
-Chiama l&#39;endpoint [chapterStart](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/chapters/#chapterstart) con `length` in `mediaCollection.chapterDetails`:
+Chiama l&#39;endpoint [chapterStart](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/chapters/#chapterstart) con `length` in `xdm.mediaCollection.chapterDetails`:
 
 ```json
 {
@@ -121,7 +125,13 @@ Chiama l&#39;endpoint [chapterStart](https://developer.adobe.com/data-collection
 }
 ```
 
-## Media SDK
+>[!ENDTABS]
+
+## Tipi di implementazione legacy (solo Analytics)
+
+>[!BEGINTABS]
+
+>[!TAB Media SDK JS 3.x]
 
 Passa la lunghezza del capitolo come terzo argomento a `ADB.Media.createChapterObject`:
 
@@ -136,7 +146,21 @@ var chapterInfo = ADB.Media.createChapterObject(
 tracker.trackEvent(ADB.Media.Event.ChapterStart, chapterInfo, contextData);
 ```
 
-## API Media Collection
+>[!TAB Chromecast]
+
+Passa la lunghezza del capitolo in secondi come terzo argomento (`length`) a `ADBMobile.media.createChapterObject`:
+
+```javascript
+var chapterInfo = ADBMobile.media.createChapterObject(
+  "Pilot Episode - Opening",  // name
+  1,                          // position
+  240,                        // length (seconds)
+  0                           // startTime
+);
+ADBMobile.media.trackEvent(ADBMobile.media.Event.ChapterStart, chapterInfo, null);
+```
+
+>[!TAB API Media Collection]
 
 Includi `media.chapter.length` nell&#39;oggetto `params` della richiesta POST `chapterStart`:
 
@@ -151,3 +175,5 @@ Includi `media.chapter.length` nell&#39;oggetto `params` della richiesta POST `c
 ```
 
 Per la struttura completa delle richieste, consulta il [Riferimento eventi API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md).
+
+>[!ENDTABS]

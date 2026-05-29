@@ -3,10 +3,10 @@ title: Tempo di avvio
 description: Imposta il tempo di avvio del lettore, in millisecondi, in modo che il backend possa riportare la qualità del tempo al primo fotogramma.
 feature: Streaming Media
 role: Developer
-source-git-commit: a2c91ef63fa9320a0e47f338ce4d53b9b8e977e3
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 4%
+source-wordcount: '288'
+ht-degree: 2%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 >[!BEGINSHADEBOX]
 
-*In questa pagina viene illustrata la raccolta dati per la variabile **Time to start**. Vedi [Ora di inizio](/help/reporting/dimensions/time-to-start.md) per la dimensione e la metrica di reporting corrispondenti.*
+*In questa pagina viene illustrata la raccolta dati per la variabile **Time to start**. Vedere [[!UICONTROL Time to start]](/help/reporting/dimensions/time-to-start.md) per la dimensione e la metrica di reporting corrispondenti.*
 
 >[!ENDSHADEBOX]
 
@@ -23,19 +23,23 @@ La variabile &quot;time to start&quot; è il tempo trascorso, in millisecondi, t
 
 >[!IMPORTANT]
 >
->Una volta che il lettore inizia il rendering dei fotogrammi di contenuto, interrompi l&#39;aggiornamento di `timeToStart`. Il valore può aumentare durante la fase di buffering iniziale o di caricamento, ma deve essere trattato come fisso nel momento in cui inizia la riproduzione. Continuando ad aggiornarla dopo il rendering del primo fotogramma, si produce una metrica [Tempo di avvio](/help/reporting/metrics/time-to-start.md) gonfiata o errata.
+>Una volta che il lettore inizia il rendering dei fotogrammi di contenuto, interrompi l&#39;aggiornamento di `timeToStart`. Il valore può aumentare durante la fase di buffering iniziale o di caricamento, ma deve essere trattato come fisso nel momento in cui inizia la riproduzione. Continuando ad aggiornarla dopo il rendering del primo fotogramma, si produce una metrica [[!UICONTROL Time to start]](/help/reporting/metrics/time-to-start.md) gonfiata o errata.
 
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.qoe.timeToStart` |
-| **Campo raccolta XDM** | [`mediaCollection.qoeDataDetails.timeToStart`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.qoeDataDetails.timeToStart`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/qoe-data-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.qoe.timeToStart` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
 
-## Web SDK
+## Tipi di implementazione consigliati
 
-Imposta `timeToStart` all&#39;interno di `mediaCollection.qoeDataDetails` su `media.sessionStart` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+>[!BEGINTABS]
+
+>[!TAB Web SDK]
+
+Imposta `timeToStart` all&#39;interno di `xdm.mediaCollection.qoeDataDetails` su `media.sessionStart` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -59,11 +63,9 @@ alloy("sendEvent", {
 });
 ```
 
-## Mobile SDK
+>[!TAB iOS]
 
 Passa l&#39;ora di avvio come secondo argomento (`startupTime`) a `createQoEObject`.
-
-**iOS (Swift)**
 
 ```swift
 let qoeObject = Media.createQoEObjectWith(bitrate: 3200,
@@ -74,7 +76,9 @@ let qoeObject = Media.createQoEObjectWith(bitrate: 3200,
 tracker.updateQoEObject(qoe: qoeObject)
 ```
 
-**Android (Cotlino)**
+>[!TAB Android]
+
+Passa l&#39;ora di avvio come secondo argomento (`startupTime`) a `createQoEObject`.
 
 ```kotlin
 val qoeObject = Media.createQoEObject(3200L,
@@ -85,9 +89,9 @@ val qoeObject = Media.createQoEObject(3200L,
 tracker.updateQoEObject(qoeObject)
 ```
 
-## Roku (BrightScript)
+>[!TAB Roku]
 
-Imposta `timeToStart` all&#39;interno di `mediaCollection.qoeDataDetails` su `media.sessionStart` durante la chiamata a `createMediaSession`:
+Imposta `timeToStart` all&#39;interno di `xdm.mediaCollection.qoeDataDetails` su `media.sessionStart` durante la chiamata a `createMediaSession`:
 
 ```brightscript
 m.aepSdk.createMediaSession({
@@ -111,9 +115,9 @@ m.aepSdk.createMediaSession({
 })
 ```
 
-## API di Media Edge
+>[!TAB API Media Edge]
 
-Chiama l&#39;endpoint [sessionStart](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/sessions/#sessionstart) con `timeToStart` in `mediaCollection.qoeDataDetails`:
+Chiama l&#39;endpoint [sessionStart](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/sessions/#sessionstart) con `timeToStart` in `xdm.mediaCollection.qoeDataDetails`:
 
 ```json
 {
@@ -138,7 +142,13 @@ Chiama l&#39;endpoint [sessionStart](https://developer.adobe.com/data-collection
 }
 ```
 
-## Media SDK
+>[!ENDTABS]
+
+## Tipi di implementazione legacy (solo Analytics)
+
+>[!BEGINTABS]
+
+>[!TAB Media SDK JS 3.x]
 
 Passare il tempo per iniziare come secondo argomento a `ADB.Media.createQoEObject`:
 
@@ -147,7 +157,21 @@ var qoeObject = ADB.Media.createQoEObject(3200, 30000, 24, 0);
 tracker.updateQoEObject(qoeObject);
 ```
 
-## API Media Collection
+>[!TAB Chromecast]
+
+Passare il tempo di avvio in millisecondi come secondo argomento (`startupTime`) a `ADBMobile.media.createQoSObject` e aggiornare il tracker:
+
+```javascript
+var qosInfo = ADBMobile.media.createQoSObject(
+  3200,   // bitrate
+  0,      // startupTime (ms)
+  24,     // fps
+  0       // droppedFrames
+);
+ADBMobile.media.updateQoSObject(qosInfo);
+```
+
+>[!TAB API Media Collection]
 
 Includi `media.qoe.timeToStart` nell&#39;oggetto `params` in `sessionStart`:
 
@@ -162,3 +186,5 @@ Includi `media.qoe.timeToStart` nell&#39;oggetto `params` in `sessionStart`:
 ```
 
 Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-sessions-req.md).
+
+>[!ENDTABS]

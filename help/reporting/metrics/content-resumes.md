@@ -3,7 +3,7 @@ title: Riprende il contenuto
 description: Conta le sessioni che hanno ripreso una riproduzione precedentemente interrotta.
 feature: Metrics
 role: User, Admin
-source-git-commit: a2c91ef63fa9320a0e47f338ce4d53b9b8e977e3
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 10%
@@ -23,11 +23,11 @@ La metrica **Il contenuto riprende** conta le sessioni che hanno ripreso una rip
 
 ## Come è calcolata questa metrica
 
-Il backend multimediale imposta questo flag quando `mediaCollection.sessionDetails.hasResume` è `true` nell&#39;evento [inizio sessione](/help/implementation/events/session/session-start.md). Il lettore deve contrassegnare esplicitamente la sessione come ripresa. La metrica viene segnalata nella chiamata di chiusura.
+Il backend multimediale imposta questo flag quando `xdm.mediaCollection.sessionDetails.hasResume` è `true` nell&#39;evento [inizio sessione](/help/implementation/events/session/session-start.md). Il lettore deve contrassegnare esplicitamente la sessione come ripresa. La metrica viene segnalata nella chiamata di chiusura.
 
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.resume` quando [[!UICONTROL Media Core]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`mediaReporting.sessionDetails.hasResume`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-reporting) |
-| Feed di dati | `event_list`, `post_event_list` (vedi ricerca [`event.tsv`](https://experienceleague.adobe.com/it/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-contents#lookup-files)) |
+| Customer Journey Analytics | [`xdm.mediaReporting.sessionDetails.hasResume`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-reporting) |
+| Feed di dati | `event_list`, `post_event_list` (vedi ricerca [`event.tsv`](https://experienceleague.adobe.com/en/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-contents#lookup-files)) |
 | Audience Manager | N/D |

@@ -3,10 +3,10 @@ title: Bitrate
 description: Imposta il bitrate di riproduzione corrente (in kbps) sull'oggetto QoE in modo che il backend possa calcolare le metriche del bitrate.
 feature: Streaming Media
 role: Developer
-source-git-commit: 41cea9e0a166549f2f4b1cfbceb52ba2b16bf543
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 4%
+source-wordcount: '280'
+ht-degree: 2%
 
 ---
 
@@ -15,23 +15,27 @@ ht-degree: 4%
 
 >[!BEGINSHADEBOX]
 
-*In questa pagina viene illustrata la raccolta dati per la variabile **Bitrate**. Vedi [Bitrate medio (dimensione)](/help/reporting/dimensions/average-bitrate.md) e [Bitrate medio (metrica)](/help/reporting/metrics/average-bitrate.md) per le variabili di reporting corrispondenti.*
+*In questa pagina viene illustrata la raccolta dati per la variabile **Bitrate**. Vedere [[!UICONTROL Average bitrate] (dimensione)](/help/reporting/dimensions/average-bitrate.md) e [[!UICONTROL Average bitrate] (metrica)](/help/reporting/metrics/average-bitrate.md) per le variabili di reporting corrispondenti.*
 
 >[!ENDSHADEBOX]
 
-La variabile bitrate è il bitrate di riproduzione corrente, espresso in kilobit al secondo. Impostatelo sull&#39;oggetto QoE ogni volta che il lettore negozia un bitrate, e aggiornate l&#39;oggetto QoE quando il bitrate cambia. Il backend utilizza i valori del bitrate per calcolare il bitrate medio, la dimensione del bucket per bitrate e la metrica delle modifiche del bitrate.
+La variabile bitrate è il bitrate di riproduzione corrente, espresso in kilobit al secondo. Impostatelo sull&#39;oggetto QoE ogni volta che il lettore negozia un bitrate, e aggiornate l&#39;oggetto QoE quando il bitrate cambia. Il back-end utilizza i valori del bitrate per calcolare [[!UICONTROL Average bitrate]](/help/reporting/metrics/average-bitrate.md), la dimensione del bucket per bitrate e la metrica [[!UICONTROL Bitrate changes]](/help/reporting/metrics/bitrate-changes.md).
 
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.qoe.bitrateAverageBucket` |
-| **Campo raccolta XDM** | [`mediaCollection.qoeDataDetails.bitrate`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.qoeDataDetails.bitrate`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/qoe-data-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.qoe.bitrateAverageBucket` |
 | **Obbligatorio** | No |
 | **Inviato con** | Eventi di qualità ([modifica bitrate](/help/implementation/events/playback/bitrate-change.md), [avvio buffer](/help/implementation/events/playback/buffer-start.md), [errore](/help/implementation/events/error.md)), chiusura sessione |
 
-## Web SDK
+## Tipi di implementazione consigliati
 
-Imposta `bitrate` all&#39;interno di `mediaCollection.qoeDataDetails` il `media.bitrateChange` (o qualsiasi evento relativo alla qualità) durante la chiamata a [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+>[!BEGINTABS]
+
+>[!TAB Web SDK]
+
+Imposta `bitrate` all&#39;interno di `xdm.mediaCollection.qoeDataDetails` il `media.bitrateChange` (o qualsiasi evento relativo alla qualità) durante la chiamata a [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -51,11 +55,9 @@ alloy("sendEvent", {
 });
 ```
 
-## Mobile SDK
+>[!TAB iOS]
 
 Passa il bitrate come primo argomento a `createQoEObject`. Aggiorna l’oggetto QoE sul tracciatore prima che venga attivato qualsiasi evento di qualità.
-
-**iOS (Swift)**
 
 ```swift
 let qoeObject = Media.createQoEObjectWith(bitrate: 3200,
@@ -66,7 +68,9 @@ let qoeObject = Media.createQoEObjectWith(bitrate: 3200,
 tracker.updateQoEObject(qoe: qoeObject)
 ```
 
-**Android (Cotlino)**
+>[!TAB Android]
+
+Passa il bitrate come primo argomento a `createQoEObject`. Aggiorna l’oggetto QoE sul tracciatore prima che venga attivato qualsiasi evento di qualità.
 
 ```kotlin
 val qoeObject = Media.createQoEObject(3200L,
@@ -77,9 +81,9 @@ val qoeObject = Media.createQoEObject(3200L,
 tracker.updateQoEObject(qoeObject)
 ```
 
-## Roku (BrightScript)
+>[!TAB Roku]
 
-Impostare `bitrate` all&#39;interno di `mediaCollection.qoeDataDetails` quando si chiama `sendMediaEvent` per eventi di qualità come `media.bitrateChange`:
+Impostare `bitrate` all&#39;interno di `xdm.mediaCollection.qoeDataDetails` quando si chiama `sendMediaEvent` per eventi di qualità come `media.bitrateChange`:
 
 ```brightscript
 m.aepSdk.sendMediaEvent({
@@ -98,9 +102,9 @@ m.aepSdk.sendMediaEvent({
 })
 ```
 
-## API di Media Edge
+>[!TAB API Media Edge]
 
-Chiama l&#39;endpoint [bitrateChange](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/bitratechange/#bitratechange) con `bitrate` all&#39;interno di `mediaCollection.qoeDataDetails`:
+Chiama l&#39;endpoint [bitrateChange](https://developer.adobe.com/data-collection-apis/docs/endpoints/media/bitratechange/#bitratechange) con `bitrate` all&#39;interno di `xdm.mediaCollection.qoeDataDetails`:
 
 ```json
 {
@@ -119,7 +123,13 @@ Chiama l&#39;endpoint [bitrateChange](https://developer.adobe.com/data-collectio
 }
 ```
 
-## Media SDK
+>[!ENDTABS]
+
+## Tipi di implementazione legacy (solo Analytics)
+
+>[!BEGINTABS]
+
+>[!TAB Media SDK JS 3.x]
 
 Passa il bitrate come primo argomento a `ADB.Media.createQoEObject` e aggiorna il tracker:
 
@@ -134,7 +144,21 @@ var qoeObject = ADB.Media.createQoEObject(
 tracker.updateQoEObject(qoeObject);
 ```
 
-## API Media Collection
+>[!TAB Chromecast]
+
+Passa il bitrate in kbps come primo argomento a `ADBMobile.media.createQoSObject` e aggiorna il tracciatore:
+
+```javascript
+var qosInfo = ADBMobile.media.createQoSObject(
+  3200,  // bitrate (kbps)
+  0,     // startupTime
+  24,    // fps
+  0      // droppedFrames
+);
+ADBMobile.media.updateQoSObject(qosInfo);
+```
+
+>[!TAB API Media Collection]
 
 Includi `media.qoe.bitrate` nell&#39;oggetto `params` della richiesta POST `bitrateChange`:
 
@@ -149,3 +173,5 @@ Includi `media.qoe.bitrate` nell&#39;oggetto `params` della richiesta POST `bitr
 ```
 
 Per la struttura completa delle richieste, consulta il [Riferimento eventi API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md).
+
+>[!ENDTABS]

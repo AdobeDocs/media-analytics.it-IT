@@ -5,31 +5,15 @@ feature: Release Notes
 role: User, Admin, Developer
 exl-id: ef068aa6-fdf4-4a5c-b5d0-b93ad31894e8
 TQID: https://experienceleague.adobe.com/yNfosiewndKE7c-VjoVM6D3ifYlgX3eJGgYQWcBC9no
-product_v2:
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-feature_v2:
-  - id: b069d60e-95f3-44d6-95a8-ddc862a4bc38
-  - id: b3f03848-ae12-48b2-8aab-cad18567eb32
-  - id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7a
-  - id: f73667dc-d296-4875-8975-ac3fdc3adc42
-  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-subfeature_v2:
-  - id: ac8a38fa-dec3-4581-8f64-178fde9f64e8
-  - id: c77ba355-6681-41fe-b719-563d3f507fdb
-  - id: e7d92df1-c5ba-4e93-85df-f83171b889be
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
+product_v2: id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2: id: b069d60e-95f3-44d6-95a8-ddc862a4bc38id: b3f03848-ae12-48b2-8aab-cad18567eb32id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7aid: f73667dc-d296-4875-8975-ac3fdc3adc42id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+subfeature_v2: id: ac8a38fa-dec3-4581-8f64-178fde9f64e8id: c77ba355-6681-41fe-b719-563d3f507fdbid: e7d92df1-c5ba-4e93-85df-f83171b889be
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
 workflow-type: tm+mt
-source-wordcount: 1521
-ht-degree: 73%
+source-wordcount: 1516
+ht-degree: 72%
 
 ---
 
@@ -43,7 +27,7 @@ Per informazioni sulle nuove funzioni e correzioni, nonché informazioni importa
 
 * [Note sulla versione di Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/release-notes/latest.html?lang=it)
 * [Note sulla versione di Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/releases/latest.html?lang=it)
-* Scopri gli ultimi aggiornamenti sulle versioni dei [prodotti Adobe Experience Cloud](https://business.adobe.com/it/products/adobe-experience-cloud-products.html)
+* Aggiornamenti più recenti della versione di [Adobe CX Enterprise](https://business.adobe.com/it/products/adobe-experience-cloud-products.html)
 
 * [Tutorial su Adobe Analytics](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/overview.html?lang=it)
 
@@ -54,7 +38,7 @@ Per informazioni sulle nuove funzioni e correzioni, nonché informazioni importa
 | Funzione | Descrizione | Data prevista |
 | ----------- | ---------- | ------- |
 | **Servizi di contenuti multimediali in streaming: supporto dei dati di pianificazione** | Ora puoi caricare dati pianificati di contenuti multimediali live in streaming precedenti per tracciare in modo più semplice e preciso il pubblico.<p>Di seguito sono riportati alcuni esempi di contenuti live supportati con il caricamento dei dati di pianificazione:</p><ul><li>Piattaforme FAST (Free Ad Supported TV)</li><li>Flussi locali</li><li>Sport live</li></ul><p>Il caricamento dei dati di pianificazione ti consente di tenere traccia dei dati sul pubblico per i singoli programmi eseguiti durante il periodo di tempo indicato nel file di caricamento. Puoi anche raccogliere i dati sul pubblico per argomenti o segmenti di programma specifici.</p><p>Queste funzionalità sono disponibili indipendentemente da come hai implementato Streaming Media Collection.</p><p>In precedenza, era difficile collegare con precisione una determinata sessione a programmi specifici durante l’analisi di contenuti live, a singoli argomenti o a segmenti di programma.</p><p>Per ulteriori informazioni, consulta [Caricare i dati di pianificazione per tenere traccia del contenuto live](/help/use-cases/track-schedule-data.md)</p> | Inizio rollout: 29 ottobre 2025<p>Disponibilità generale: prima metà del 2026</p><p>(Originariamente previsto per la disponibilità generale il 29 ottobre 2025)</p> |
-| Campi XDM aggiornati per la raccolta di dati multimediali in streaming in Adobe Experience Platform | Durante la raccolta di dati multimediali in streaming in Adobe Experience Platform, i percorsi dei campi XDM mostrati nell’intestazione &quot;Percorso campo XDM&quot; della documentazione sui parametri dei contenuti multimediali in streaming non devono più essere utilizzati. Al contrario, i clienti che hanno implementato il connettore di origine di Analytics per raccogliere i dati multimediali in streaming in Platform prima del 9 maggio 2025 devono migrare le configurazioni esistenti ai percorsi dei campi mediaReporting, come illustrato nell’intestazione &quot;Percorso campo XDM per reporting&quot; della documentazione sui parametri dei contenuti multimediali in streaming.<p> Questi percorsi dei campi sono documentati nelle pagine delle variabili dei contenuti multimediali in streaming collegate dalla [Panoramica di Streaming Media Services](../media-overview.md) e sono contrassegnati come &quot;Obsoleti&quot;. Per la clientela che implementa il connettore di origine di Analytics dopo il 9 maggio 2025 e sta già utilizzando solo i percorsi XDM mediaReporting, non è richiesta alcuna azione.</p><p>L’acquisizione dei dati sui percorsi dei campi XDM obsoleti continuerà fino alla fine di ottobre 2025. Dopo tale periodo, i percorsi dei campi obsoleti verranno completamente rimossi e non saranno più visibili nell’interfaccia utente dello schema di Adobe Experience Platform e i dati verranno inviati solo utilizzando i percorsi dei campi mediaReporting.</p><p>Per ulteriori informazioni, consulta [Migrare un&#39;implementazione del connettore Source di Analytics ai campi XDM Streaming Media aggiornati](/help/use-cases/xdm-updates/updated-xdm-fields.md).</p><p>Contatta i servizi Adobe Consulting o il team del tuo account per ricevere supporto alla migrazione. </p> | Ottobre 2025 |
+| Campi XDM aggiornati per la raccolta di dati multimediali in streaming in Adobe Experience Platform | Durante la raccolta di dati multimediali in streaming in Adobe Experience Platform, i percorsi dei campi XDM mostrati nell’intestazione &quot;Percorso campo XDM&quot; della documentazione sui parametri dei contenuti multimediali in streaming non devono più essere utilizzati. Al contrario, i clienti che hanno implementato il connettore di origine di Analytics per raccogliere i dati multimediali in streaming in Platform prima del 9 maggio 2025 devono migrare le configurazioni esistenti ai percorsi dei campi mediaReporting, come illustrato nell’intestazione &quot;Percorso campo XDM per reporting&quot; della documentazione sui parametri dei contenuti multimediali in streaming.<p> Questi percorsi dei campi sono documentati nelle pagine delle variabili dei contenuti multimediali in streaming collegate dalla [Panoramica di Streaming Media Services](../media-overview.md) e sono contrassegnati come &quot;Obsoleti&quot;. Per la clientela che implementa il connettore di origine di Analytics dopo il 9 maggio 2025 e sta già utilizzando solo i percorsi XDM mediaReporting, non è richiesta alcuna azione.</p><p>L’acquisizione dei dati sui percorsi dei campi XDM obsoleti continuerà fino alla fine di ottobre 2025. Dopo tale periodo, i percorsi dei campi obsoleti verranno completamente rimossi e non saranno più visibili nell’interfaccia utente dello schema di Adobe Experience Platform e i dati verranno inviati solo utilizzando i percorsi dei campi mediaReporting.</p><p>Per ulteriori informazioni, vedere [Mappatura dei parametri di Media Analytics per Adobe Experience Platform e Customer Journey Analytics](/help/implementation/parameters-mapping.md).</p><p>Contatta i servizi Adobe Consulting o il team del tuo account per ricevere supporto alla migrazione. </p> | Ottobre 2025 |
 | Inviare dati web a Adobe Experience Platform Edge Network con il Web SDK | È ora possibile [utilizzare Adobe Experience Platform Web SDK per inviare dati Web multimediali in streaming a Adobe Experience Platform Edge Network](/help/implementation/edge/edge-web-sdk.md), consentendo di creare più campagne personalizzate e fornire più contenuti personalizzati, con conseguente aumento dei dati di tracciamento da includere nei rapporti.<p>Questo miglioramento fornisce un metodo di raccolta unificato per le implementazioni web in tutte le soluzioni Platform, come Customer Journey Analytics, RT-CDP, AJO e inoltro eventi. In precedenza, l’unico modo per inviare i dati web multimediali in streaming alla rete Edge era utilizzare l’API Media Edge. | 29 maggio 2024 |
 | Inviare dati Roku a Adobe Experience Platform Edge | Ora, quando [installi Customer Journey Analytics Streaming Media Collection con Experience Platform Edge](/help/implementation/edge/implementation-edge.md), puoi utilizzare Adobe Experience Platform Roku SDK per inviare dati multimediali in streaming a Adobe Experience Platform. | 12 aprile 2024 |
 | Media Collection: integrazione con Experience Edge (API e Mobile SDK) | Ora puoi utilizzare l’API di Experience Edge e Mobile SDK per implementare Customer Journey Analytics Streaming Media Collection, consentendoti di creare campagne più personalizzate e fornire contenuti più personalizzati, con conseguente aumento dei dati di tracciamento da includere nei rapporti.<p>Questo miglioramento fornisce un metodo di raccolta unificato in tutte le soluzioni, ad esempio reporting di Customer Journey Analytics, RT-CDP, AJO e inoltro di eventi.  [Ulteriori informazioni](/help/implementation/edge/implementation-edge.md) | sabato 12 maggio 2023 |
@@ -70,9 +54,9 @@ Per informazioni sulle nuove funzioni e correzioni, nonché informazioni importa
 
 | Funzione | Descrizione | Data prevista |
 | ----------- | ---------- | ------- |
-| Tracciamento di più stati del lettore | Utilizza l’API Media Collection per implementare il tracciamento di più stati del lettore. [Ulteriori informazioni](/help/use-cases/player-state-tracking/multiple-player-states.md) | Settembre 2022 |
+| Tracciamento di più stati del lettore | Utilizza l’API Media Collection per implementare il tracciamento di più stati del lettore. [Ulteriori informazioni](/help/implementation/events/player-state/overview.md) | Settembre 2022 |
 | Campi XDM rinominati | Nomi di campi XDM rinominati per coerenza:<br>* Parametri per audio e video<br>* Parametri per annunci<br>* Parametri per capitoli<br>* Parametri per lo stato del lettore<br>* Parametri di qualità | Settembre 2022 |
-| Riferimento a Device Co-op | È stato rimosso il riferimento ad Adobe Experience Cloud Device Co-op e ai requisiti del servizio Experience Cloud ID. | Agosto 2022 |
+| Riferimento a Device Co-op | È stato rimosso il riferimento a Device Co-op e al requisito del servizio ID. | Agosto 2022 |
 | Nomi di campi e percorsi XDM aggiornati per la raccolta e il reporting | È stato aggiornato quanto segue:<br>* Parametri per audio e video<br>* Parametri per annunci<br>* Parametri per capitoli<br>* Parametri per lo stato del lettore<br>* Parametri di qualità | Agosto 2022 |
 | Pubblico medio per minuto | I clienti Media Analytics possono utilizzare il pannello Pubblico medio per minuto per comprendere meglio il consumo medio dei loro contenuti. <br>Il pubblico medio per minuto consente di confrontare la programmazione di qualsiasi durata o genere. Inoltre, i clienti possono confrontare o aggiungere questo pubblico medio per minuto digitale alle metriche medie per minuto per TV lineare. Questo pannello offre maggiore flessibilità per misurare il pubblico medio in periodi di tempo personalizzati, nonché quando la classificazione della durata è stata aggiornata.  [Ulteriori informazioni](/help/reporting/workspace/average-minute-audience.md) | 16 marzo 2022 |
 | Pannello Tempo trascorso su contenuti multimediali | Scopri in che modo il pannello Tempo trascorso su contenuti multimediali consente agli utenti che usano contenuti multimediali di comprendere i propri spettatori in base al tempo di visualizzazione durante il giorno secondo una determinata granularità. <br>[Pannello Tempo trascorso su contenuti multimediali (tutorial)](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/media-analytics/measuring-media-analytics/media-playback-time-spent-panel.html?lang=it) | Gennaio 2022 |
