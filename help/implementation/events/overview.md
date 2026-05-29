@@ -3,9 +3,9 @@ title: Panoramica degli eventi multimediali in streaming
 description: Scopri i tipi di evento multimediale e l’ordine in cui devono essere inviati.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: 3dbbd5228fcd91cf78c0597dea656c06f367dd40
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '1065'
 ht-degree: 0%
 
 ---
@@ -69,3 +69,9 @@ I cinque stati tracciabili sono: `fullscreen`, `mute`, `closedCaptioning`, `pict
 ## Eventi di errore
 
 L&#39;evento [Error](error.md) registra un errore di riproduzione durante una sessione: una richiesta di flusso non riuscita, un errore di codec o un errore di consegna esterno. Invialo ogni volta che si verifica un errore significativo. Un evento di errore non chiude la sessione; la riproduzione può continuare e gli eventi successivi vengono tracciati nella stessa sessione. Se l’errore non è recuperabile, eseguilo insieme a Session end (Fine sessione) per chiudere esplicitamente la sessione.
+
+>[!MORELIKETHIS]
+>
+>* [Panoramica delle variabili](/help/implementation/variables/overview.md): dati trasferiti dagli eventi ad Adobe
+>* [Panoramica delle dimensioni](/help/reporting/dimensions/overview.md): dimensioni di reporting compilate dagli eventi
+>* [Panoramica delle metriche](/help/reporting/metrics/overview.md): le metriche di reporting compilate dagli eventi

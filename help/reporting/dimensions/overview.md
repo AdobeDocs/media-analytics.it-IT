@@ -3,7 +3,7 @@ title: Panoramica delle dimensioni dei contenuti multimediali in streaming
 description: Scopri come le dimensioni dei contenuti multimediali in streaming vengono popolate e organizzate in Adobe Analytics e Customer Journey Analytics.
 feature: Dimensions
 role: User, Admin
-source-git-commit: da289f8d425fcbaece42519a9ea7d061f80e4591
+source-git-commit: 3dbbd5228fcd91cf78c0597dea656c06f367dd40
 workflow-type: tm+mt
 source-wordcount: '413'
 ht-degree: 6%
@@ -36,6 +36,6 @@ Le dimensioni dei contenuti multimediali in streaming seguono tre pattern di pop
 
 >[!MORELIKETHIS]
 >
->* [Panoramica delle metriche](../metrics/overview.md): riferimento alle metriche dei contenuti multimediali in streaming
->* [Mappatura parametri](/help/implementation/parameters-mapping.md): riferimento completo da variabile a colonna a XDM
->* [Segmenti multimediali](/help/reporting/segments.md): segmenti incorporati che utilizzano dimensioni multimediali in streaming
+>* [Panoramica eventi](/help/implementation/events/overview.md): eventi del lettore che popolano le dimensioni
+>* [Panoramica delle variabili](/help/implementation/variables/overview.md): dati trasferiti dagli eventi ad Adobe
+>* [Panoramica delle metriche](/help/reporting/metrics/overview.md): le metriche di reporting compilate dalle variabili

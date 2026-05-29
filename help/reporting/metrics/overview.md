@@ -3,9 +3,9 @@ title: Panoramica delle metriche dei contenuti multimediali in streaming
 description: Scopri come vengono calcolate e organizzate le metriche dei contenuti multimediali in streaming in Adobe Analytics e Customer Journey Analytics.
 feature: Metrics
 role: User, Admin
-source-git-commit: da289f8d425fcbaece42519a9ea7d061f80e4591
+source-git-commit: 3dbbd5228fcd91cf78c0597dea656c06f367dd40
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '437'
 ht-degree: 3%
 
 ---
@@ -37,7 +37,6 @@ Le metriche dei contenuti multimediali in streaming seguono quattro modelli di c
 
 >[!MORELIKETHIS]
 >
->* [Panoramica delle dimensioni](../dimensions/overview.md): riferimento alle dimensioni multimediali in streaming
->* [Metriche calcolate](/help/reporting/calculated-metrics.md): rapporti e metriche derivate create dalle metriche di base precedenti
->* [Mappatura parametri](/help/implementation/parameters-mapping.md): riferimento completo da evento a colonna a XDM
->* [Panoramica eventi](/help/implementation/events/overview.md): gli eventi del lettore che determinano il calcolo della metrica
+>* [Panoramica eventi](/help/implementation/events/overview.md): gli eventi del lettore che popolano le metriche
+>* [Panoramica delle variabili](/help/implementation/variables/overview.md): dati trasferiti dagli eventi ad Adobe
+>* [Panoramica delle dimensioni](/help/reporting/dimensions/overview.md): dimensioni di reporting popolate dalle variabili
