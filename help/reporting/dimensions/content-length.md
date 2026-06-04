@@ -3,7 +3,7 @@ title: Durata del contenuto
 description: Riporta la durata totale in secondi di ciascuna sessione multimediale come impostato all’inizio della sessione.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 7%
@@ -27,14 +27,14 @@ La lunghezza del contenuto viene impostata dal lettore all’inizio della sessio
 
 | Sistema di reporting | Origine |
 | --- | --- |
-| Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.length` quando [[!UICONTROL Media Core]](/help/reporting/media-reports-enable.md) è abilitato. |
-| Customer Journey Analytics | [`xdm.mediaReporting.sessionDetails.length`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-reporting) |
+| Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.length` quando [[!UICONTROL Media Core]](/help/reporting/setup/analytics-reporting.md) è abilitato. |
+| Customer Journey Analytics | [`xdm.mediaReporting.sessionDetails.length`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-reporting) |
 | Feed di dati | `videolength`, `post_videolength` |
 | Audience Manager | `c_contextdata.a.media.length` |
 
 >[!NOTE]
 >
->In Adobe Analytics, questo valore corrisponde anche a una classificazione **Video length** nella dimensione [Content](content.md). L’utente è responsabile di compilare e mantenere tale classificazione separatamente. Customer Journey Analytics utilizza direttamente questa dimensione. Se necessario, puoi utilizzare [Value bucketing](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-dataviews/component-settings/value-bucketing).
+>In Adobe Analytics, questo valore corrisponde anche a una classificazione **Video length** nella dimensione [Content](content.md). L’utente è responsabile di compilare e mantenere tale classificazione separatamente. Customer Journey Analytics utilizza direttamente questa dimensione. Se necessario, puoi utilizzare [Value bucketing](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/component-settings/value-bucketing).
 
 >[!IMPORTANT]
 >

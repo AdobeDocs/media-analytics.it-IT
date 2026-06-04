@@ -6,19 +6,11 @@ exl-id: 64f5ef2b-7850-43d8-8f32-3d008ea4f156
 feature: Streaming Media
 role: User, Admin, Developer
 TQID: https://experienceleague.adobe.com/eF09wxu2mIUoFph5EdHz5y0XtcpXHHLINqSGLQEMoHU
-product_v2:
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-feature_v2:
-  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: da289f8d425fcbaece42519a9ea7d061f80e4591
+product_v2: id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+feature_v2: id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
 workflow-type: tm+mt
 source-wordcount: 750
 ht-degree: 4%
@@ -41,7 +33,7 @@ I controlli di rinuncia funzionano per dispositivo o browser. Il rispetto del co
 
 Il Web SDK rispetta le preferenze di consenso impostate utilizzando il comando `setConsent`. Quando il consenso è impostato su `"out"`, Web SDK smette di inoltrare tutti gli eventi, incluse le chiamate di tracciamento dei contenuti multimediali in streaming, ad Edge Network. Lo stato di consenso persiste nell’archiviazione del browser tra le sessioni.
 
-Prima di implementare la rinuncia, accertati che il Web SDK sia configurato con il componente Streaming Media. Per ulteriori informazioni, vedere [Configurare Web SDK](../implementation/edge/edge-web-sdk.md).
+Prima di implementare la rinuncia, accertati che il Web SDK sia configurato con il componente Streaming Media. Per ulteriori informazioni, vedere [Configurare Web SDK](../implementation/edge/web-sdk.md).
 
 Imposta il consenso alla rinuncia utilizzando lo standard di consenso Adobe 2.0:
 
@@ -65,7 +57,7 @@ Valori di consenso:
 
 Per ripristinare il tracciamento, chiamare di nuovo `setConsent` con `"y"` come valore `collect.val`.
 
-Per altri formati, incluso IAB TCF 2.0, vedere il comando [setConsent](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/commands/setconsent) nella documentazione di Web SDK.
+Per altri formati, incluso IAB TCF 2.0, vedere il comando [setConsent](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/setconsent) nella documentazione di Web SDK.
 
 >[!TAB iOS]
 
@@ -217,7 +209,7 @@ Per le rinunce parziali in base al CCPA, includere i flag di rinuncia nell&#39;o
 }
 ```
 
-* `analytics.optOutServerSideForwarding`: Imposta su `true` per rifiutare la condivisione dei dati tra Adobe Analytics e altre soluzioni Experience Cloud (come Audience Manager).
+* `analytics.optOutServerSideForwarding`: impostato su `true` per rifiutare la condivisione dei dati tra Adobe Analytics e altre soluzioni Experience Cloud (come Audience Manager).
 * `analytics.optOutShare`: impostato su `true` per rinunciare alla condivisione di dati federati con altri client Adobe Analytics.
 
 Per un elenco completo dei parametri disponibili, consulta il [Riferimento dei parametri della richiesta API di Media Collection](../implementation/media-collection-api/mc-api-ref/mc-api-req-params.md).
