@@ -16,7 +16,7 @@ L&#39;estensione tag Adobe Experience Platform Web SDK consente di configurare l
 
 * **Prerequisiti**:
    * Completa la [Panoramica sull&#39;implementazione di Edge](overview.md) (schema, set di dati, flusso di dati con [!UICONTROL Media Analytics] abilitato).
-   * Installa e configura l’estensione tag Web SDK. Consulta la [panoramica dell&#39;estensione tag Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/web-sdk/overview).
+   * Installa e configura l’estensione tag Web SDK. Consulta la [panoramica dell&#39;estensione tag Web SDK](https://experienceleague.adobe.com/it/docs/experience-platform/tags/extensions/client/web-sdk/overview).
 
 ## Configurare i contenuti multimediali in streaming nell’estensione
 
@@ -39,6 +39,6 @@ Una volta completata l&#39;implementazione, puoi [Configurare la generazione di 
 
 >[!MORELIKETHIS]
 >
->* [Panoramica dell&#39;estensione tag Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/web-sdk/overview)
+>* [Panoramica dell&#39;estensione tag Web SDK](https://experienceleague.adobe.com/it/docs/experience-platform/tags/extensions/client/web-sdk/overview)
 >* [Configurazione del Web SDK per lo streaming di file multimediali (nel codice)](web-sdk.md)
 >* [Panoramica eventi](/help/implementation/events/overview.md)

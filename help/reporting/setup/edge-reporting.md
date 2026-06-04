@@ -127,7 +127,7 @@ Dopo aver implementato Streaming Media Collection tramite Edge Network, configur
 
 1. (Condizionale) Se hai aggiunto metadati personalizzati allo schema, imposta la persistenza per i campi personalizzati, come descritto in [Impostazioni dei componenti di persistenza](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-dataviews/component-settings/persistence) nella guida di Customer Journey Analytics.
 
-1. Condividi il progetto come descritto in [Condividi progetti](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/curate-share/share-projects.html?lang=en).
+1. Condividi il progetto come descritto in [Condividi progetti](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/curate-share/share-projects.html?lang=it).
 
    >[!NOTE]
    >

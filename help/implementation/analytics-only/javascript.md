@@ -16,7 +16,7 @@ Media SDK for JavaScript (3.x) invia i dati multimediali in streaming direttamen
 
 * **Prerequisiti**:
    * Completa la [Panoramica sull&#39;implementazione di sola Analytics](overview.md).
-   * Implementa [AppMeasurement](https://experienceleague.adobe.com/it/docs/analytics/implementation/js/overview) e il [Servizio ID visitatore](https://experienceleague.adobe.com/en/docs/analytics/implementation/id/appmeasurement).
+   * Implementa [AppMeasurement](https://experienceleague.adobe.com/it/docs/analytics/implementation/js/overview) e il [Servizio ID visitatore](https://experienceleague.adobe.com/it/docs/analytics/implementation/id/appmeasurement).
    * [Scarica Media SDK per JavaScript](/help/getting-started/download-sdks.md).
 
 ## Installare e configurare SDK

@@ -26,11 +26,11 @@ ht-degree: 0%
 
 # Migrare i profili ai nuovi campi dei contenuti multimediali in streaming
 
-Questo documento descrive il processo di migrazione del servizio di filtro profili esistente sopra i flussi di raccolta dati di Adobe abilitati per Adobe Analytics per i dati multimediali in streaming. La migrazione converte il servizio di filtro dei profili dall&#39;utilizzo del tipo di dati Adobe Streaming Media Services denominato &quot;Media&quot; per l&#39;utilizzo del nuovo tipo di dati corrispondente denominato &quot;[Media Reporting Details](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-reporting-details)&quot;.
+Questo documento descrive il processo di migrazione del servizio di filtro profili esistente sopra i flussi di raccolta dati di Adobe abilitati per Adobe Analytics per i dati multimediali in streaming. La migrazione converte il servizio di filtro dei profili dall&#39;utilizzo del tipo di dati Adobe Streaming Media Services denominato &quot;Media&quot; per l&#39;utilizzo del nuovo tipo di dati corrispondente denominato &quot;[Media Reporting Details](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/media-reporting-details)&quot;.
 
 ## Migrare i profili
 
-Per migrare il filtro dei profili dal vecchio tipo di dati denominato &quot;Media&quot; al nuovo tipo di dati denominato &quot;[Media Reporting Details](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-reporting-details)&quot;, è necessario modificare le regole di filtro dei profili esistenti:
+Per migrare il filtro dei profili dal vecchio tipo di dati denominato &quot;Media&quot; al nuovo tipo di dati denominato &quot;[Media Reporting Details](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/media-reporting-details)&quot;, è necessario modificare le regole di filtro dei profili esistenti:
 
 1. In Adobe Experience Platform, nella sezione **[!UICONTROL Sources]**, vai alla scheda **[!UICONTROL Dataflows]**.
 
