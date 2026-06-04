@@ -14,7 +14,7 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
+source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
 workflow-type: tm+mt
 source-wordcount: 308
 ht-degree: 50%
@@ -35,7 +35,7 @@ Per i dispositivi che al momento non dispongono del supporto di SDK o in situazi
 
 Nella tabella seguente sono elencati i dispositivi attualmente supportati. Se un dispositivo non è presente nell’elenco, contatta l’Assistenza clienti o il consulente della soluzione per ricevere informazioni sullo stato del dispositivo.
 
-Per ulteriori informazioni sull&#39;implementazione di Media su Edge, vedere [Installare Streaming Media Collection con Experience Platform Edge](/help/implementation/edge/implementation-edge.md).
+Per ulteriori informazioni sull&#39;implementazione di Media su Edge, vedere [Installare Streaming Media Collection con Experience Platform Edge](/help/implementation/edge/overview.md).
 
 | Piattaforme e dispositivi di streaming |  | Media per Edge Network SDK / Estensione | API di Media Edge | Estensione Media con tag o AEP mobile SDK | Media SDK | API Media Collection |
 |:---|:---|:---:|:---:|:---:|:---:|:---:|

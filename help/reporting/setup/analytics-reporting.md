@@ -1,41 +1,22 @@
 ---
-title: Abilitazione di rapporti sui contenuti multimediali
-description: Scopri la suite di rapporti sui file multimediali che raccoglie le metriche sui file multimediali.  Per configurare i rapporti sui file multimediali prima dell’invio dei dati multimediali, effettua le seguenti operazioni.
-uuid: d306068d-a308-4b6e-8a72-742dda0de428
-exl-id: 686d88a5-79b6-4936-ba9e-8f834ef330d1
+title: Configurare la generazione di rapporti per le implementazioni solo Analytics
+description: Abilita i moduli suite per report multimediali in Adobe Analytics in modo che i dati multimediali in streaming possano essere raccolti e segnalati.
 feature: Streaming Media
-role: User, Admin, Developer
-TQID: https://experienceleague.adobe.com/2nLLlF-rFJUR3t-OMbcy5iqF42l-O7oLybXFGhdPyhU
-product_v2:
-  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
-feature_v2:
-  - id: b069d60e-95f3-44d6-95a8-ddc862a4bc38
-  - id: b3f03848-ae12-48b2-8aab-cad18567eb32
-  - id: c153fd90-23e1-4614-81d3-3cc7571227f7
-  - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
-subfeature_v2:
-  - id: c9bb7ea6-c04f-4262-b69c-fbb8d91e3559
-  - id: e38cbddc-1633-4cd5-bed5-9f289f2a6029
-  - id: ef60b66e-5984-4336-ba72-6d978b1b6f87
-  - id: f1f1a2d4-0976-4881-b091-c2bb8de7ffac
-  - id: f836f655-eebe-4b76-82bc-697955ec1ce3
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+role: User, Admin
+source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
 workflow-type: tm+mt
-source-wordcount: 220
-ht-degree: 40%
+source-wordcount: '297'
+ht-degree: 13%
 
 ---
 
-# Abilitazione di rapporti sui contenuti multimediali
+# Configurare la generazione di rapporti per le implementazioni solo Analytics
+
+Prima che un’implementazione basata solo su Analytics possa raccogliere dati multimediali in streaming, ogni suite di rapporti che riceve tali dati deve essere configurata per abilitare i moduli multimediali appropriati. Questa pagina descrive come abilitare tali moduli e dove trovare i rapporti risultanti.
+
+* **Prerequisiti**: un&#39;implementazione Adobe Analytics. Consulta la [Panoramica sull&#39;implementazione di sola Analytics](/help/implementation/analytics-only/overview.md) e il metodo di implementazione scelto.
+
+## Abilitare il reporting sui contenuti multimediali in una suite di rapporti
 
 Ogni suite di rapporti che raccoglie metriche multimediali deve essere configurata prima dell’invio dei dati multimediali.
 
@@ -44,11 +25,11 @@ Ogni suite di rapporti che raccoglie metriche multimediali deve essere configura
 
    ![Schermata del menu di Report Suite Manager](assets/media-reporting.png)
 
-1. Nella pagina **[!UICONTROL Media Reporting]**, abilita i componenti multimediali di streaming desiderati (vedi di seguito).
+1. Nella pagina **[!UICONTROL Media Reporting]**, abilitare i moduli di Streaming Media desiderati (vedere di seguito).
 
 1. Seleziona **[!UICONTROL Save].**
 
-   Se questa suite di rapporti è già configurata per la raccolta dei dati multimediali, dopo aver fatto clic su **[!UICONTROL Save]**, viene visualizzata una pagina di configurazione aggiuntiva. Se vedi la pagina **[!UICONTROL Media Core measurement]**, continua con il passaggio successivo.
+   Se questa suite di rapporti è già configurata per la raccolta dei dati multimediali, dopo aver selezionato **[!UICONTROL Save]**, verrà visualizzata una pagina di configurazione aggiuntiva. Se vedi la pagina **[!UICONTROL Media Core measurement]**, continua con il passaggio successivo.
 
 ## Moduli multimediali in streaming disponibili
 
@@ -141,7 +122,7 @@ La misurazione dei file multimediali include i seguenti moduli:
       * [[!UICONTROL Total buffer duration]](/help/reporting/metrics/total-buffer-duration.md)
 * **[!UICONTROL Video Metadata]**: consente il tracciamento degli attributi di contenuto video standard come spettacolo, stagione e genere.
    * **Dimensioni:**
-      * [!UICONTROL Ad loads]
+      * [[!UICONTROL Ad loads]](/help/reporting/dimensions/ad-load-type.md)
       * [[!UICONTROL Day part]](/help/reporting/dimensions/day-part.md)
       * [[!UICONTROL Episode]](/help/reporting/dimensions/episode.md)
       * [[!UICONTROL Genre]](/help/reporting/dimensions/genre.md)
@@ -178,3 +159,9 @@ La misurazione dei file multimediali include i seguenti moduli:
       * [[!UICONTROL Streams impacted by in focus]](/help/reporting/metrics/in-focus-streams-impacted.md)
       * [[!UICONTROL Streams impacted by mute]](/help/reporting/metrics/mute-streams-impacted.md)
       * [[!UICONTROL Streams impacted by picture in picture]](/help/reporting/metrics/picture-in-picture-streams-impacted.md)
+
+>[!MORELIKETHIS]
+>
+>* [Report multimediali in Workspace](/help/reporting/workspace/media-workspace-templates.md)
+>* [Panoramica delle dimensioni](/help/reporting/dimensions/overview.md)
+>* [Panoramica delle metriche](/help/reporting/metrics/overview.md)

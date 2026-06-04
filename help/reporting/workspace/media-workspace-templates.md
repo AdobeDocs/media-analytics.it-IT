@@ -19,9 +19,9 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
+source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
 workflow-type: tm+mt
-source-wordcount: 369
+source-wordcount: 356
 ht-degree: 10%
 
 ---
@@ -40,13 +40,13 @@ Alcuni di questi rapporti sono particolarmente utili per l’analisi dei dati mu
 
 Di seguito è riportato un elenco di rapporti predefiniti utili per l’analisi dei dati multimediali in streaming:
 
-* [!UICONTROL **Consumo di contenuti multimediali**]: crea un report che mostra quali contenuti vengono maggiormente consumati e coinvolge maggiormente gli utenti.
+* **[!UICONTROL Media content consumption]**: crea un report che mostra quale contenuto viene maggiormente utilizzato e coinvolge maggiormente gli utenti.
 
-* [!UICONTROL **Consumo di contenuti multimediali in streaming**]: crea un report con un dashboard, come illustrato nell&#39;esempio seguente.
+* **[!UICONTROL Streaming Media Consumption]**: crea un report con un dashboard, come illustrato nell&#39;esempio seguente.
 
-* [!UICONTROL **Attualità dei contenuti multimediali, frequenza, fedeltà**]: crea un rapporto che mostra l&#39;attualità (quanti giorni dall&#39;ultima visita), la frequenza (quante visite per visitatore) e la fedeltà (con quale frequenza le coorti di utenti ritornano al sito)
+* **[!UICONTROL Media recency, frequency, loyalty]**: crea un report che mostra l&#39;attualità (quanti giorni dall&#39;ultima visita), la frequenza (quante visite per visitatore) e la fedeltà (con quale frequenza le coorti di utenti ritornano al sito)
 
-Ad esempio, se scegli il rapporto [!UICONTROL **Consumo di contenuti multimediali in streaming**], viene presentato un progetto con il dashboard seguente:
+Ad esempio, se scegli il rapporto **[!UICONTROL Streaming Media Consumption]**, viene presentato un progetto con il dashboard seguente:
 
 ![](/help/reporting/assets/aa-workspace.png)
 

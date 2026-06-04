@@ -16,10 +16,10 @@ role_v2:
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
 workflow-type: tm+mt
-source-wordcount: 947
-ht-degree: 23%
+source-wordcount: 953
+ht-degree: 22%
 
 ---
 
@@ -33,7 +33,7 @@ Questo documento fornisce un elenco completo di tutti i parametri di Media Analy
 
 ## Variabili riservate di Media Analytics
 
-A partire da ottobre 2025, il percorso del campo XDM `media.mediaTimed` è diventato completamente obsoleto e sostituito da `mediaReporting`. I dati acquisiti dopo ottobre 2025 includono solo `mediaReporting` campi. I dati precedenti rimangono disponibili nel percorso del campo legacy, riportato nelle tabelle seguenti in **Campo XDM legacy**.
+A partire da ottobre 2025, il percorso del campo XDM `media.mediaTimed` utilizzato dal connettore di origine di Analytics è completamente obsoleto e sostituito da `mediaReporting`. I dati acquisiti dopo ottobre 2025 includono solo `mediaReporting` campi. I dati precedenti rimangono disponibili nel percorso del campo legacy, riportato nelle tabelle seguenti in **Campo XDM legacy**.
 
 ### Comportamento di chiamata keep-alive
 

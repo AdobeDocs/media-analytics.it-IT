@@ -3,7 +3,7 @@ title: Tipo di spettacolo
 description: Identifica il formato del contenuto (episodio completo, anteprima, clip o altro) utilizzando un codice intero stringa.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 4%
@@ -21,10 +21,10 @@ ht-degree: 4%
 
 La variabile show type identifica il formato del contenuto utilizzando un codice intero stringa:
 
-- `"0"`: episodio completo
-- `"1"`: anteprima o trailer
-- `"2"`: Clip
-- `"3"`: Altro
+* `"0"`: episodio completo
+* `"1"`: anteprima o trailer
+* `"2"`: Clip
+* `"3"`: Altro
 
 Utilizzatela per separare la visualizzazione di un programma completo da contenuti brevi come trailer e clip durante la misurazione del coinvolgimento.
 

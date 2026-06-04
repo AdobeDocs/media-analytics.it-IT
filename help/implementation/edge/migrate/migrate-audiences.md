@@ -16,9 +16,9 @@ role_v2:
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: 92e1a77339d29b0ef7ec8adc76817b2ac61ee900
 workflow-type: tm+mt
-source-wordcount: 516
+source-wordcount: 512
 ht-degree: 0%
 
 ---
@@ -43,49 +43,49 @@ Per migrare un pubblico dal vecchio tipo di dati denominato &quot;Media&quot; al
 
 Vedere il parametro [ID contenuto](/help/reporting/dimensions/content.md) e le altre variabili dei contenuti multimediali in streaming documentate in [Servizi multimediali in streaming](/help/media-overview.md) per eseguire la mappatura tra i campi precedenti e i nuovi campi. Il vecchio percorso di campo si trova nella proprietà &quot;Percorso campo XDM&quot;, mentre il nuovo percorso di campo si trova nella proprietà &quot;Percorso campo XDM per reporting&quot;.
 
-![Percorsi di campo XDM vecchi e nuovi](assets/field-paths-updated.jpeg)
+![Percorsi di campo XDM vecchi e nuovi](../../assets/field-paths-updated.jpeg)
 
 ## Esempio
 
 Per seguire più facilmente le linee guida per la migrazione, considera l’esempio seguente che contiene un pubblico con una singola regola. Poiché il pubblico dispone di una singola regola, è necessario applicare le linee guida per la migrazione una sola volta.
 
-1. Seleziona il pulsante [!UICONTROL **Modifica pubblico**] nell&#39;angolo superiore destro.
+1. Selezionare il pulsante **[!UICONTROL Edit audience]** nell&#39;angolo superiore destro.
 
 1. Individua le regole configurate per il pubblico.
 
-   ![Modifica pubblico](assets/audience-edit.jpeg)
+   ![Modifica pubblico](../../assets/audience-edit.jpeg)
 
-   ![Modifica pubblico](assets/audience-edit2.jpeg)
+   ![Modifica pubblico](../../assets/audience-edit2.jpeg)
 
 1. Seleziona la regola per aprirne la configurazione.
 
-   ![Modifica pubblico](assets/audience-edit3.jpeg)
+   ![Modifica pubblico](../../assets/audience-edit3.jpeg)
 
 1. (Facoltativo) Per visualizzare il percorso del campo utilizzato nella regola, seleziona il pulsante Info accanto al nome del campo.
 
-   ![Modifica pubblico](assets/audience-edit4.jpeg)
+   ![Modifica pubblico](../../assets/audience-edit4.jpeg)
 
 1. Identifica il nome del campo (in questo caso &quot;Media Starts&quot;).
 
-   ![Modifica pubblico](assets/audience-edit5.jpeg)
+   ![Modifica pubblico](../../assets/audience-edit5.jpeg)
 
 1. Vedi le variabili dei contenuti multimediali in streaming documentate in [Servizi multimediali in streaming](/help/media-overview.md) per la mappatura tra i campi precedenti. Il vecchio percorso di campo si trova nella proprietà &quot;Percorso campo XDM&quot;, mentre il nuovo percorso di campo si trova nella proprietà &quot;Percorso campo XDM per reporting&quot;. Ad esempio, per il parametro [Media Starts](/help/reporting/metrics/media-starts.md), il corrispondente per `media.mediaTimed.impressions.value` è `xdm.mediaReporting.sessionDetails.isViewed`.
 
-   ![Percorso XDM aggiornato](assets/updated-xdm-path.jpeg)
+   ![Percorso XDM aggiornato](../../assets/updated-xdm-path.jpeg)
 
 1. Aggiungi la stessa regola di quella esistente utilizzando il nuovo campo.
 
-   ![Aggiungi regola](assets/add-rule.jpeg)
+   ![Aggiungi regola](../../assets/add-rule.jpeg)
 
-   ![Aggiungi regola](assets/add-rule2.jpeg)
+   ![Aggiungi regola](../../assets/add-rule2.jpeg)
 
-   ![Aggiungi regola](assets/add-rule3.jpeg)
+   ![Aggiungi regola](../../assets/add-rule3.jpeg)
 
-1. Seleziona [!UICONTROL **Salva**] per salvare il pubblico. Puoi mantenere questa configurazione per il tempo necessario a verificare che il pubblico funzioni ancora come previsto.
+1. Seleziona **[!UICONTROL Save]** per salvare il pubblico. Puoi mantenere questa configurazione per il tempo necessario a verificare che il pubblico funzioni ancora come previsto.
 
-1. Al termine della convalida, rimuovi il campo precedente, quindi seleziona [!UICONTROL **Salva**] per salvare il pubblico.
+1. Al termine della convalida, rimuovere il campo precedente, quindi selezionare **[!UICONTROL Save]** per salvare il pubblico.
 
-   ![Aggiungi regola](assets/add-rule4.jpeg)
+   ![Aggiungi regola](../../assets/add-rule4.jpeg)
 
 1. Convalida di nuovo il pubblico.
 

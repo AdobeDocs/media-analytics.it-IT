@@ -18,7 +18,7 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 10026f71b2092be536340ba4a48d7fd71fbc7d8e
+source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
 workflow-type: tm+mt
 source-wordcount: 449
 ht-degree: 7%
@@ -31,7 +31,7 @@ L&#39;API Media Collection consente di inviare coppie chiave-valore personalizza
 
 Per rendere questi dati disponibili in Analysis Workspace, i clienti devono definire eVar personalizzate e configurare le regole di elaborazione per compilarle in base al proprio caso d’uso. Una volta mappati a eVar o proprietà, i dati diventano disponibili in Adobe Experience Platform anche tramite i percorsi eVar corrispondenti, a condizione che il [connettore di origine Analytics](https://experienceleague.adobe.com/it/docs/experience-platform/sources/connectors/adobe-applications/analytics) sia configurato.
 
-Per le implementazioni basate su XDM che utilizzano Experience Edge, consulta [Supporto metadati personalizzati - Formato XDM](/help/implementation/edge/implementation-edge-custom-metadata.md).
+Per le implementazioni basate su XDM che utilizzano Experience Edge, consulta [Supporto metadati personalizzati - Formato XDM](/help/implementation/edge/custom-metadata.md).
 
 ## Panoramica
 
@@ -80,8 +80,8 @@ I metadati personalizzati sono un **oggetto** (coppie chiave-valore) piatto a li
 
 ### Requisiti principali per la denominazione
 
-- Evita di usare il prefisso `media.` nelle chiavi di metadati personalizzate: viene mappato sui campi multimediali standard e potrebbe sovrascriverlo nei rapporti di Analytics
-- Il prefisso `a.` è riservato per i metadati standard di Adobe e non deve essere utilizzato
+* Evita di usare il prefisso `media.` nelle chiavi di metadati personalizzate: viene mappato sui campi multimediali standard e potrebbe sovrascriverlo nei rapporti di Analytics
+* Il prefisso `a.` è riservato per i metadati standard di Adobe e non deve essere utilizzato
 
 ## Metadati personalizzati del contenuto principale
 
@@ -173,19 +173,19 @@ curl -X POST "https://{uri}/api/v1/sessions/{sid}/events" \
 
 ## Comportamento
 
-- Tutti i valori dei metadati personalizzati devono essere **stringhe**. Converti numeri e booleani prima dell’invio.
-- I metadati personalizzati vengono visualizzati in Analytics con il prefisso `c.` (ad esempio, `contentCategory` → `c.contentCategory`)
-- Mappa i metadati personalizzati su eVar, prop o variabili di dati di contesto tramite le regole di elaborazione di Analytics
-- I metadati di `sessionStart` persistono per l&#39;intera sessione; gli aggiornamenti richiedono una nuova sessione
-- Ogni evento `adStart` e `chapterStart` può contenere metadati personalizzati diversi
+* Tutti i valori dei metadati personalizzati devono essere **stringhe**. Converti numeri e booleani prima dell’invio.
+* I metadati personalizzati vengono visualizzati in Analytics con il prefisso `c.` (ad esempio, `contentCategory` → `c.contentCategory`)
+* Mappa i metadati personalizzati su eVar, prop o variabili di dati di contesto tramite le regole di elaborazione di Analytics
+* I metadati di `sessionStart` persistono per l&#39;intera sessione; gli aggiornamenti richiedono una nuova sessione
+* Ogni evento `adStart` e `chapterStart` può contenere metadati personalizzati diversi
 
 ## Documentazione correlata
 
-- [Supporto per metadati personalizzati - Formato XDM](/help/implementation/edge/implementation-edge-custom-metadata.md) — Invio di metadati personalizzati tramite Experience Edge ad Analytics e AEP
-- [Connettore di origine di Adobe Analytics per i dati della suite di rapporti](https://experienceleague.adobe.com/it/docs/experience-platform/sources/connectors/adobe-applications/analytics) — Importa dati di Analytics in Adobe Experience Platform
+* [Supporto per metadati personalizzati - Formato XDM](/help/implementation/edge/custom-metadata.md) — Invio di metadati personalizzati tramite Experience Edge ad Analytics e AEP
+* [Connettore di origine di Adobe Analytics per i dati della suite di rapporti](https://experienceleague.adobe.com/it/docs/experience-platform/sources/connectors/adobe-applications/analytics) — Importa dati di Analytics in Adobe Experience Platform
 
 <!--
-- [Session endpoints](sessions.md) — Session lifecycle management
-- [Ad endpoints](ads.md) — Track advertising impressions
-- [Chapter endpoints](chapters.md) — Segment content into chapters
+* [Session endpoints](sessions.md) — Session lifecycle management
+* [Ad endpoints](ads.md) — Track advertising impressions
+* [Chapter endpoints](chapters.md) — Segment content into chapters
 -->

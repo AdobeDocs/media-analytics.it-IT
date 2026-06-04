@@ -20,7 +20,7 @@ role_v2:
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
 workflow-type: tm+mt
 source-wordcount: 513
 ht-degree: 3%
@@ -72,8 +72,8 @@ Se si verificano `main:play` chiamate tra annunci consecutivi, esiste un interva
 
 **Risoluzione:** ritarda la chiamata AdComplete per ogni annuncio (tranne l&#39;ultimo) anziché chiamarla immediatamente al termine dell&#39;annuncio. Eseguire il batch delle chiamate come segue:
 
-- A ogni **inizio annuncio**: se esiste un annuncio precedente che non è stato ancora contrassegnato come completato, chiamare AdComplete *prima* chiamando AdStart per il nuovo annuncio.
-- A ogni **fine risorsa annuncio**: non chiamare AdComplete immediatamente, rinvialo.
-- All&#39;**interruzione annuncio completata**: chiama AdComplete per l&#39;ultimo annuncio (se non già chiamato), quindi chiama AdBreakComplete.
+* A ogni **inizio annuncio**: se esiste un annuncio precedente che non è stato ancora contrassegnato come completato, chiamare AdComplete *prima* chiamando AdStart per il nuovo annuncio.
+* A ogni **fine risorsa annuncio**: non chiamare AdComplete immediatamente, rinvialo.
+* All&#39;**interruzione annuncio completata**: chiama AdComplete per l&#39;ultimo annuncio (se non già chiamato), quindi chiama AdBreakComplete.
 
 Questo modello assicura che AdComplete e il successivo AdStart vengano attivati in modalità back-to-back, eliminando così qualsiasi lacuna.

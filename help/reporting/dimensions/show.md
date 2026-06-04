@@ -3,7 +3,7 @@ title: Spettacolo
 description: Segnala il nome del programma o della serie per il contenuto video che fa parte di una serie.
 feature: Dimensions
 role: User, Admin
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 9%
@@ -27,7 +27,7 @@ Lo spettacolo è impostato dal lettore all’inizio della sessione quando il con
 
 | Sistema di reporting | Origine |
 | --- | --- |
-| Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.show` quando [[!UICONTROL Video Metadata]](/help/reporting/media-reports-enable.md) è abilitato. |
+| Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.show` quando [[!UICONTROL Video Metadata]](/help/reporting/setup/analytics-reporting.md) è abilitato. |
 | Customer Journey Analytics | [`xdm.mediaReporting.sessionDetails.show`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-reporting) |
 | Feed di dati | `videoshow`, `post_videoshow` |
 | Audience Manager | `c_contextdata.a.media.show` |

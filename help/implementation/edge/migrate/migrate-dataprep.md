@@ -18,9 +18,9 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: 92e1a77339d29b0ef7ec8adc76817b2ac61ee900
 workflow-type: tm+mt
-source-wordcount: 691
+source-wordcount: 685
 ht-degree: 0%
 
 ---
@@ -37,11 +37,11 @@ Per eseguire la migrazione delle mappature della preparazione dati dal vecchio t
 >
 >Per evitare la perdita di dati, assicurati che il connettore di origine di Analytics sia stato distribuito utilizzando i nuovi campi `mediaReporting` prima di completare i passaggi in questa sezione.
 
-1. In Adobe Experience Platform, nella sezione [!UICONTROL **Origini**], vai alla scheda [!UICONTROL **Flussi dati**].
+1. In Adobe Experience Platform, nella sezione **[!UICONTROL Sources]**, vai alla scheda **[!UICONTROL Dataflows]**.
 
 1. Individua il flusso di dati responsabile dell’importazione di dati multimediali in streaming da Adobe Analytics a Adobe Experience Platform tramite Raccolta dati di Adobe.
 
-1. Seleziona [!UICONTROL **Aggiorna flusso di dati**] per modificare la configurazione della preparazione dati sostituendo ogni mappatura di origine personalizzata contenente un campo obsoleto con il nuovo campo corrispondente del nuovo oggetto XDM.
+1. Selezionare **[!UICONTROL Update dataflow]** per modificare la configurazione della preparazione dati sostituendo ogni mappatura di origine personalizzata contenente un campo obsoleto con il nuovo campo corrispondente del nuovo oggetto XDM.
 
 1. Individua le mappature contenenti i campi sorgente dall’oggetto &quot;Media&quot; obsoleto.
 
@@ -55,19 +55,19 @@ Vedere il parametro [ID contenuto](/help/reporting/dimensions/content.md) e le a
 
 Per seguire più facilmente le linee guida per la migrazione, considera il seguente flusso di dati di esempio che contiene una singola mappatura. In questo caso, è necessario applicare le linee guida sulla migrazione una sola volta.
 
-1. In Adobe Experience Platform, nella sezione [!UICONTROL **Origini**], vai alla scheda [!UICONTROL **Flussi dati**].
+1. In Adobe Experience Platform, nella sezione **[!UICONTROL Sources]**, vai alla scheda **[!UICONTROL Dataflows]**.
 
 1. Individua il flusso di dati responsabile dell’importazione di dati multimediali in streaming da Adobe Analytics a Adobe Experience Platform tramite Raccolta dati di Adobe.
 
 1. Selezionare **[!UICONTROL Update dataflow]** per accedere all&#39;interfaccia utente di modifica, come illustrato nell&#39;immagine seguente.
 
-   ![Flusso di dati di AEP](assets/aep-dataflow.jpeg)
+   ![Flusso di dati di AEP](../../assets/aep-dataflow.jpeg)
 
 1. Nella scheda **[!UICONTROL Mapping]**, selezionare **[!UICONTROL Custom]**.
 
 1. Identificare i mapping personalizzati che si basano sui campi `media.mediaTimed` come origini.
 
-   ![Flusso di dati di AEP continuato](assets/aep-dataflow2.jpeg)
+   ![Flusso di dati di AEP continuato](../../assets/aep-dataflow2.jpeg)
 
    In questo esempio, poiché hai creato un gruppo di campi personalizzato sullo schema nell&#39;organizzazione di sviluppo, il campo di destinazione si trova in `_dcbl`. Il percorso del gruppo di campi personalizzato varia in base al nome dell’organizzazione.
 
@@ -75,17 +75,17 @@ Per seguire più facilmente le linee guida per la migrazione, considera il segue
 
    Ad esempio, per Rete, il corrispondente per `media.mediaTimed.primaryAssetViewDetails`.broadcastNetwork è `xdm.mediaReporting.sessionDetails.network`.
 
-   ![Percorso campo XDM aggiornato](assets/xdm-field-path-old-and-new.jpeg)
+   ![Percorso campo XDM aggiornato](../../assets/xdm-field-path-old-and-new.jpeg)
 
 1. Nel campo **[!UICONTROL Source field]**, sostituire il percorso `media.mediaTimed` con il percorso `mediaReporting`. Il campo di destinazione rimane invariato.
 
-   ![Flusso di dati di AEP continuato](assets/aep-dataflow3.jpeg)
+   ![Flusso di dati di AEP continuato](../../assets/aep-dataflow3.jpeg)
 
 1. Seleziona **[!UICONTROL Next]** per salvare le modifiche.
 
    Lo stato visualizzato è **[!UICONTROL Processing]**. Dopo l&#39;applicazione delle modifiche, lo stato visualizzato è **[!UICONTROL Enabled]**.
 
-   ![Flusso di dati di AEP continuato](assets/aep-dataflow5.jpeg)
+   ![Flusso di dati di AEP continuato](../../assets/aep-dataflow5.jpeg)
 
 ## Esempio con tipi di dati diversi
 
@@ -99,8 +99,8 @@ Se il tipo di origine è un numero e il tipo di destinazione è booleano, è nec
 
 Mappatura con `media.mediaTimed` a un campo personalizzato.
 
-![Flusso di dati di AEP continuato](assets/aep-dataflow6.jpeg)
+![Flusso di dati di AEP continuato](../../assets/aep-dataflow6.jpeg)
 
 Mappatura con `mediaReporting` allo stesso campo personalizzato:
 
-![Flusso di dati di AEP continuato](assets/aep-dataflow7.jpeg)
+![Flusso di dati di AEP continuato](../../assets/aep-dataflow7.jpeg)

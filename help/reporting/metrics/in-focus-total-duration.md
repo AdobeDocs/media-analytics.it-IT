@@ -3,7 +3,7 @@ title: Durata totale in focus
 description: Segnala i secondi cumulativi in cui il lettore era attivo durante una sessione.
 feature: Metrics
 role: User, Admin
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
 workflow-type: tm+mt
 source-wordcount: '174'
 ht-degree: 8%
@@ -27,7 +27,7 @@ Il backend multimediale somma il tempo trascorso su tutti gli intervalli in focu
 
 | Sistema di reporting | Origine |
 | --- | --- |
-| Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.states.infocus.time` quando [[!UICONTROL Player State Tracking]](/help/reporting/media-reports-enable.md) è abilitato. |
+| Adobe Analytics | Raccolta automatica dai dati contestuali `a.media.states.infocus.time` quando [[!UICONTROL Player State Tracking]](/help/reporting/setup/analytics-reporting.md) è abilitato. |
 | Customer Journey Analytics | Voce [`xdm.mediaReporting.states[]`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/media-reporting-details) in cui `name = "inFocus"`, campo `time` |
 | Feed di dati | `event_list`, `post_event_list` (vedi ricerca [`event.tsv`](https://experienceleague.adobe.com/it/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-contents#lookup-files)) |
 | Audience Manager | `c_contextdata.a.media.states.infocus.time` |

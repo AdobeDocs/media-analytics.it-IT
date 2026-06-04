@@ -23,9 +23,9 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
 workflow-type: tm+mt
-source-wordcount: 522
+source-wordcount: 524
 ht-degree: 73%
 
 ---
@@ -42,9 +42,9 @@ I tag in Adobe Experience Platform Launch costiuiscono la nuova generazione di f
 
 | Piattaforma supportata | Soluzioni supportate | Metodo di implementazione | Versione |  API   |  Documentazione  |  Esempio  |
 |:---:|---|---|---|---| ---| ---|
-| ![Icona JavaScript &#x200B;](assets/javascript-icon.png)</br>**API JavaScript** | Adobe Analytics | Solo Analytics | Web - [Media SDK per JS v3.0.2](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/js-v3.0.2) | [Riferimento API per JavaScript](/help/implementation/media-sdk/setup/js-3x-api-reference.md) | [Installare Media SDK utilizzando JavaScript](/help/implementation/media-sdk/setup/web-implementation.md) | [Esempio SDK per contenuti multimediali per JS v3.0.2](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/sdks/js/3.x) |
+| ![Icona JavaScript &#x200B;](assets/javascript-icon.png)</br>**API JavaScript** | Adobe Analytics | Solo Analytics | Web - [Media SDK per JS v3.0.2](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/js-v3.0.2) | [Riferimento API per JavaScript](https://github.com/Adobe-Marketing-Cloud/media-sdks/blob/master/sdks/js/3.x/docs/APIReference.md) | [Configura JavaScript per Streaming Media](/help/implementation/analytics-only/javascript.md) | [Esempio SDK per contenuti multimediali per JS v3.0.2](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/sdks/js/3.x) |
 | ![Icona JavaScript &#x200B;](assets/javascript-icon.png)</br>**API JavaScript** | Adobe Analytics | Solo Analytics | Web - Estensione Media |  | [Estensione Adobe Media Analytics (3.x SDK) for Audio and Video — utilizzando tag (raccolta dati)](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics-3x/overview.html?lang=it) | [Esempio Estensione Adobe Media Analytics (3.x SDK) for Audio and Video](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/js/3.x) |
-| </br>**Web** | Adobe Analytics<p>Customer Journey Analytics</p><p>Adobe Journey Optimizer</p><p>Real-Time CDP</p> | Edge | Web - Experience Platform Edge |  | [Implementa la raccolta di file multimediali in streaming di Customer Journey Analytics utilizzando Edge Network](/help/implementation/edge/implementation-edge.md) <p>e</p><p>[Inviare dati Web ad Edge con Adobe Experience Platform Web SDK](/help/implementation/edge/edge-web-sdk.md)</p> | |
+| </br>**Web** | Adobe Analytics<p>Customer Journey Analytics</p><p>Adobe Journey Optimizer</p><p>Real-Time CDP</p> | Edge | Web - Experience Platform Edge |  | [Panoramica sull&#39;implementazione di Edge](/help/implementation/edge/overview.md) <p>e</p><p>[Configura Web SDK per Streaming Media](/help/implementation/edge/web-sdk.md)</p> | |
 
 ### Implementazione mobile {#get-mobile-extension}
 
@@ -52,12 +52,12 @@ I tag in Adobe Experience Platform Launch costiuiscono la nuova generazione di f
 |:---:|---|---|---|---|---|
 | ![Icona Android &#x200B;](assets/android-icon.png)</br>**Android** | Adobe Analytics | Solo Analytics | Android - Estensione Media | [Documentazione di Mobile SDK](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/) | [Adobe Analytics - Esempio Estensione Media Analytics for Audio and Video](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/mobile/android) |
 | ![Icona Apple iOS &#x200B;](assets/ios-icon.png)<br>**tvOS** | Adobe Analytics | Solo Analytics | iOS / tvOS - Estensione Media | [Documentazione di Mobile SDK](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/) | [Adobe Analytics - Esempio Estensione Media Analytics for Audio and Video](https://github.com/adobe/aepsdk-media-ios/tree/main/TestApp) |
-| ![Icona Android &#x200B;](assets/android-icon.png)</br>**Android** | <p>Adobe Analytics</p><p>Customer Journey Analytics</p><p>Adobe Journey Optimizer</p><p>Real-Time CDP</p> | Edge | ANDROID - EXPERIENCE PLATFORM EDGE | [Installare Media SDK utilizzando JavaScript](/help/implementation/edge/implementation-edge.md) | |
-| ![Icona Apple iOS &#x200B;](assets/ios-icon.png)<br>**tvOS** | <p>Adobe Analytics</p><p>Customer Journey Analytics</p><p>Adobe Journey Optimizer</p><p>Real-Time CDP</p> | Edge | iOS / tvOS - Experience Platform Edge | [Installare Media SDK utilizzando JavaScript](/help/implementation/edge/implementation-edge.md) |  |
+| ![Icona Android &#x200B;](assets/android-icon.png)</br>**Android** | <p>Adobe Analytics</p><p>Customer Journey Analytics</p><p>Adobe Journey Optimizer</p><p>Real-Time CDP</p> | Edge | ANDROID - EXPERIENCE PLATFORM EDGE | [Configura Android per Streaming Media](/help/implementation/edge/android.md) | |
+| ![Icona Apple iOS &#x200B;](assets/ios-icon.png)<br>**tvOS** | <p>Adobe Analytics</p><p>Customer Journey Analytics</p><p>Adobe Journey Optimizer</p><p>Real-Time CDP</p> | Edge | iOS / tvOS - Experience Platform Edge | [Configura iOS per Streaming Media](/help/implementation/edge/ios.md) |  |
 
 ### Implementazione Over-The-Top {#download-ott-libraries}
 
 | Piattaforma supportata | Soluzioni supportate | Metodo di implementazione | Versione |  API   |  Documentazione  |
 |:---:|---|---|---|---|---|
 | ![Icona Chromecast &#x200B;](assets/chromecast-icon.png)</br>**Chromecast** | Adobe Analytics | Solo Analytics | [SDK per Chromecast v3.0.3](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/chromecast-v3.0.3) | [Riferimento API per Chromecast](https://adobe-marketing-cloud.github.io/media-sdks/reference/chromecast/) | [Imposta SDK Chromecast](https://github.com/Adobe-Marketing-Cloud/media-sdks/blob/master/docs/2.x/chromecast-setup.md) |
-| ![Icona Roku &#x200B;](assets/roku-icon.png)</br>**Roku** | <p>Adobe Analytics</p><p>Customer Journey Analytics</p><p>Adobe Journey Optimizer</p><p>Real-Time CDP</p> | Edge | [SDK Adobe Experience Platform Roku](https://github.com/adobe/aepsdk-roku/tree/main) |  | [Installare Media SDK utilizzando JavaScript](/help/implementation/edge/implementation-edge.md) |
+| ![Icona Roku &#x200B;](assets/roku-icon.png)</br>**Roku** | <p>Adobe Analytics</p><p>Customer Journey Analytics</p><p>Adobe Journey Optimizer</p><p>Real-Time CDP</p> | Edge | [SDK Adobe Experience Platform Roku](https://github.com/adobe/aepsdk-roku/tree/main) |  | [Configura Roku per Streaming Media](/help/implementation/edge/roku.md) |
