@@ -22,7 +22,7 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: b18eab3deb3d15a08adf2f7ecf61d73235bbc6e5
 workflow-type: tm+mt
 source-wordcount: 331
 ht-degree: 53%
@@ -37,7 +37,7 @@ Oltre alle metriche e alle dimensioni disponibili quando si abilita ciascuno dei
 
 I rapporti multimediali sono elencati nella scheda **[!UICONTROL Reports]**. Passa a > **[!UICONTROL Media]** > **[!UICONTROL Media Engagement]** e seleziona tra:
 
-| Report multimediali | Descrizione     | Informazioni aziendali comuni       |
+| Report multimediali | Descrizione | Informazioni aziendali comuni |
 | --- | --- | --- |
 | [Panoramica dei contenuti multimediali](media-reports-overview.md) | Visualizza diverse misurazioni aggregate per monitorare rapidamente le prestazioni del file multimediale come previsto. Accanto alle impression pubblicitarie, un grafico mostra [[!UICONTROL Media starts]](/help/reporting/metrics/media-starts.md) per consentirti di visualizzare e confrontare rapidamente queste metriche. | <ul> <li>Totali per le metriche principali, tra cui [[!UICONTROL Content starts]](/help/reporting/metrics/content-starts.md), tasso di completamento, tempo medio in streaming e media degli elementi multimediali per visita.  </li> <li>Totale [[!UICONTROL Content starts]](/help/reporting/metrics/content-starts.md) e [[!UICONTROL Ad starts]](/help/reporting/metrics/ad-starts.md) per i file multimediali filtrati per tipo di dispositivo o paese.  </li> </ul> |
 | [Dettagli contenuti multimediali](media-reports-detail.md) | Visualizza metriche dettagliate per tutti gli elementi multimediali, compresi gli avvii, i visualizzatori simultanei, il tasso di completamento, la percentuale di riproduzione e le impressioni degli annunci. | <ul> <li>Totali per le metriche principali, tra cui [[!UICONTROL Media starts]](/help/reporting/metrics/media-starts.md), [[!UICONTROL Content starts]](/help/reporting/metrics/content-starts.md) e [[!UICONTROL Ad starts]](/help/reporting/metrics/ad-starts.md), e contenuto medio per visita.  </li> <li>Totale [[!UICONTROL Content starts]](/help/reporting/metrics/content-starts.md) e [[!UICONTROL Ad starts]](/help/reporting/metrics/ad-starts.md) per i file multimediali filtrati per tipo di dispositivo o paese.  </li> </ul> |
