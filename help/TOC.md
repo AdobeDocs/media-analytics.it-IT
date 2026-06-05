@@ -5,9 +5,9 @@ user-guide-title: Guida ai servizi Streaming Media
 breadcrumb-title: Guida ai servizi Streaming Media
 user-guide-description: Implementa i servizi Streaming Media. Gli argomenti trattati comprendono Media SDK e Media Collection API.
 sub-product: media analytics
-source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
+source-git-commit: b18eab3deb3d15a08adf2f7ecf61d73235bbc6e5
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '749'
 ht-degree: 37%
 
 ---
@@ -16,13 +16,11 @@ ht-degree: 37%
 # Guida ai servizi Streaming Media {#using}
 
 + [guida ai servizi multimediali di streaming di Adobe](media-overview.md)
-+ Note sulla versione {#release-notes}
-   + [Note sulla versione di Streaming Media Services](additional-resources/release-notes.md)
++ [Note sulla versione di Streaming Media Services](release-notes.md)
 + Introduzione {#getting-started}
    + [Prerequisiti](getting-started/prereqs.md)
    + [Dispositivi supportati](getting-started/supported-devices.md)
-   + [Documentazione sull’implementazione di Streaming Media Services](getting-started/implementation-documentation.md)
-   + [SDK, librerie ed estensioni](getting-started/download-sdks.md)
+   + [Ottenere Media SDK, estensioni e API](getting-started/download-sdks.md)
 + Implementazione {#implementation}
    + [Panoramica sull’implementazione](implementation/overview.md)
    + Eventi {#events}
