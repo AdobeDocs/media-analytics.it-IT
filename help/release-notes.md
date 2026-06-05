@@ -26,9 +26,9 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: b18eab3deb3d15a08adf2f7ecf61d73235bbc6e5
+source-git-commit: f1339bc993b0df14a6fe0b80168c5333e580a1bb
 workflow-type: tm+mt
-source-wordcount: 789
+source-wordcount: 793
 ht-degree: 60%
 
 ---
@@ -37,12 +37,17 @@ ht-degree: 60%
 
 **Ultimo aggiornamento**: 4 giugno 2026
 
-## 2025
+## 2026
 
 | Funzione | Descrizione | Data |
 | --- | --- | --- |
 | **Dati pianificazione supporto** | Carica i dati pianificati per contenuti live passati per tenere traccia del pubblico per programma o segmento. I tipi di contenuto supportati includono:<ul><li>Piattaforme FAST (Free Ad Supported TV)</li><li>Flussi locali</li><li>Sport live</li></ul>Per ulteriori informazioni, vedi il caso d&#39;uso [Carica dati di pianificazione per tenere traccia del contenuto live](/help/use-cases/track-schedule-data.md). | Inizio rollout: 29 ottobre 2025<p>Disponibilità generale: ottobre 2026</p> |
-| `mediaTimed` campo XDM obsoleto | L&#39;oggetto XDM `mediaTimed` è obsoleto a favore di `mediaReporting` percorsi di campo. I clienti che hanno implementato il connettore di origine di Analytics prima del 9 maggio 2025 devono migrare le proprie configurazioni. Per ulteriori informazioni, consulta le seguenti guide alla migrazione:<ul><li>[Migra i tipi di pubblico ai nuovi campi dei contenuti multimediali in streaming](/help/implementation/edge/migrate/migrate-audiences.md)</li><li>[Esegui la migrazione di Customer Journey Analytics per utilizzare i nuovi campi per contenuti multimediali in streaming](/help/implementation/edge/migrate/migrate-cja-setup.md)</li><li>[Migra la preparazione dati per i campi personalizzati ai nuovi campi multimediali in streaming](/help/implementation/edge/migrate/migrate-dataprep.md)</li><li>[Migrare i profili ai nuovi campi dei contenuti multimediali in streaming](/help/implementation/edge/migrate/migrate-profiles.md)</li></ul> | Ottobre 2025 |
+
+## 2025
+
+| Funzione | Descrizione | Data |
+| --- | --- | --- |
+| **`mediaTimed`campo XDM obsoleto** | L&#39;oggetto XDM `mediaTimed` è obsoleto a favore di `mediaReporting` percorsi di campo. I clienti che hanno implementato il connettore di origine di Analytics prima del 9 maggio 2025 devono migrare le proprie configurazioni. Per ulteriori informazioni, consulta le seguenti guide alla migrazione:<ul><li>[Migra i tipi di pubblico ai nuovi campi dei contenuti multimediali in streaming](/help/implementation/edge/migrate/migrate-audiences.md)</li><li>[Esegui la migrazione di Customer Journey Analytics per utilizzare i nuovi campi per contenuti multimediali in streaming](/help/implementation/edge/migrate/migrate-cja-setup.md)</li><li>[Migra la preparazione dati per i campi personalizzati ai nuovi campi multimediali in streaming](/help/implementation/edge/migrate/migrate-dataprep.md)</li><li>[Migrare i profili ai nuovi campi dei contenuti multimediali in streaming](/help/implementation/edge/migrate/migrate-profiles.md)</li></ul> | Ottobre 2025 |
 
 ## 2024
 
