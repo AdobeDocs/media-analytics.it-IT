@@ -26,7 +26,7 @@ ht-degree: 75%
 
 # Segmenti multimediali{#segments}
 
-I segmenti ti consentono di identificare sottoinsiemi di visitatori in base a caratteristiche o interazioni con siti web. I segmenti multimediali in streaming ti consentono di identificare il tipo di flusso del visitatore, ad esempio audio, in diretta o in podcast. Per informazioni sui segmenti di Adobe Analytics, consulta [Informazioni sui segmenti](https://experienceleague.adobe.com/en/docs/analytics/components/segmentation/seg-overview) nella Guida ai componenti di Adobe Analytics.
+I segmenti ti consentono di identificare sottoinsiemi di visitatori in base a caratteristiche o interazioni con siti web. I segmenti multimediali in streaming ti consentono di identificare il tipo di flusso del visitatore, ad esempio audio, in diretta o in podcast. Per informazioni sui segmenti di Adobe Analytics, consulta [Informazioni sui segmenti](https://experienceleague.adobe.com/it/docs/analytics/components/segmentation/seg-overview) nella Guida ai componenti di Adobe Analytics.
 
 | Segmento | Descrizione | Regola |
 |---|---|---|

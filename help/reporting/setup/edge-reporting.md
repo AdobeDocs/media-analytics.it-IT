@@ -26,7 +26,7 @@ Dopo aver implementato Streaming Media Collection tramite Edge Network, configur
 
 ## Creare una visualizzazione dati in Customer Journey Analytics
 
-1. In Customer Journey Analytics creare una visualizzazione dati come descritto in [Creare o modificare una visualizzazione dati](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/create-dataview).
+1. In Customer Journey Analytics creare una visualizzazione dati come descritto in [Creare o modificare una visualizzazione dati](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-dataviews/create-dataview).
 
    1. Nel campo **[!UICONTROL Connection]** selezionare la connessione creata in precedenza. La visualizzazione delle nuove connessioni può richiedere fino a 15 minuti.
 
@@ -50,7 +50,7 @@ Dopo aver implementato Streaming Media Collection tramite Edge Network, configur
 
       >[!IMPORTANT]
       >
-      >Le etichette di contesto in questa tabella sono necessarie per il funzionamento dei pannelli per contenuti multimediali in streaming. Customer Journey Analytics li utilizza per calcolare automaticamente le metriche derivate da **Visualizzatori simultanei** e **Tempo di riproduzione trascorso** (utilizzate dai pannelli [Visualizzatori simultanei di contenuti multimediali](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-workspace/panels/media-concurrent-viewers) e [Tempo di riproduzione trascorso](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-workspace/panels/media-playback-time-spent)) e per popolare le opzioni di reporting nel pannello [Pubblico medio per minuto dei contenuti multimediali](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-workspace/panels/average-minute-audience-panel).
+      >Le etichette di contesto in questa tabella sono necessarie per il funzionamento dei pannelli per contenuti multimediali in streaming. Customer Journey Analytics li utilizza per calcolare automaticamente le metriche derivate da **Visualizzatori simultanei** e **Tempo di riproduzione trascorso** (utilizzate dai pannelli [Visualizzatori simultanei di contenuti multimediali](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-workspace/panels/media-concurrent-viewers) e [Tempo di riproduzione trascorso](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-workspace/panels/media-playback-time-spent)) e per popolare le opzioni di reporting nel pannello [Pubblico medio per minuto dei contenuti multimediali](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-workspace/panels/average-minute-audience-panel).
 
       A questo punto puoi aggiungere altre [dimensioni](/help/reporting/dimensions/overview.md) o [metriche](/help/reporting/metrics/overview.md) alla visualizzazione dati. Ogni pagina elenca il percorso XDM per quel componente.
 
@@ -70,7 +70,7 @@ Dopo aver implementato Streaming Media Collection tramite Edge Network, configur
 
 1. (Condizionale) Se hai aggiunto metadati personalizzati allo schema, imposta la persistenza per i campi personalizzati, come descritto in [Impostazioni dei componenti di persistenza](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-dataviews/component-settings/persistence) nella guida di Customer Journey Analytics.
 
-1. Condividi il progetto come descritto in [Condividi progetti](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/curate-share/share-projects.html?lang=en).
+1. Condividi il progetto come descritto in [Condividi progetti](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/curate-share/share-projects.html?lang=it).
 
    >[!NOTE]
    >
@@ -80,9 +80,9 @@ Dopo aver implementato Streaming Media Collection tramite Edge Network, configur
 
 Analysis Workspace in Customer Journey Analytics include tre pannelli multimediali dedicati per i clienti con il componente aggiuntivo Streaming Media Collection. Questi pannelli forniscono visualizzazioni predefinite per le esigenze di reporting di contenuti multimediali in streaming più comuni.
 
-* **[Pubblico medio per minuto](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-workspace/panels/average-minute-audience-panel)**: confronta il consumo medio di contenuto tra programmi di qualsiasi durata o genere. Supporta sia le modalità di contenuto specifico (basato sulla durata) che le modalità di periodo di tempo personalizzate e consente di aggiornare le classificazioni di durata dopo il fatto.
-* **[Visualizzatori simultanei di contenuti multimediali](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-workspace/panels/media-concurrent-viewers)**: analizza i visualizzatori simultanei nel tempo per identificare i picchi di concorrenza e i punti di rilascio. Supporta granularità configurabile e suddivisione per serie per segmenti, dimensioni o intervalli di date.
-* **[Tempo di riproduzione dei contenuti multimediali trascorso](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-workspace/panels/media-playback-time-spent)**: analizza la durata della riproduzione nel tempo con dettagli sui periodi di picco e minimo. Supporta granularità e formato di output configurabili (ore o minuti).
+* **[Pubblico medio per minuto](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-workspace/panels/average-minute-audience-panel)**: confronta il consumo medio di contenuto tra programmi di qualsiasi durata o genere. Supporta sia le modalità di contenuto specifico (basato sulla durata) che le modalità di periodo di tempo personalizzate e consente di aggiornare le classificazioni di durata dopo il fatto.
+* **[Visualizzatori simultanei di contenuti multimediali](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-workspace/panels/media-concurrent-viewers)**: analizza i visualizzatori simultanei nel tempo per identificare i picchi di concorrenza e i punti di rilascio. Supporta granularità configurabile e suddivisione per serie per segmenti, dimensioni o intervalli di date.
+* **[Tempo di riproduzione dei contenuti multimediali trascorso](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-workspace/panels/media-playback-time-spent)**: analizza la durata della riproduzione nel tempo con dettagli sui periodi di picco e minimo. Supporta granularità e formato di output configurabili (ore o minuti).
 
 >[!MORELIKETHIS]
 >
