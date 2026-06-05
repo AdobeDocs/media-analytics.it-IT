@@ -118,7 +118,7 @@ Per standardizzare la raccolta dei dati tra le applicazioni che utilizzano Adobe
 
    +++ Espandi per visualizzare le istruzioni sull’aggiunta di metadati personalizzati allo schema.
 
-   1. Individuare il nome tenant dell&#39;organizzazione selezionando **[!UICONTROL Account info]** > **[!UICONTROL Assigned orgs]** > [!UICONTROL _**nome organizzazione**_] > **[!UICONTROL tenant]**.
+   1. Individuare il nome tenant dell&#39;organizzazione selezionando **[!UICONTROL Account info]** > **[!UICONTROL Assigned orgs]** > [!UICONTROL _&#x200B;**nome organizzazione**&#x200B;_] > **[!UICONTROL tenant]**.
 
       I campi personalizzati vengono ricevuti tramite questo percorso. Ad esempio, nome tenant: _dcbl → percorso myCustomField: _dcbl.myCustomField.
 
