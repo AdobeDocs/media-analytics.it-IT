@@ -3,9 +3,9 @@ title: Percorso file multimediale
 description: Acquisisce l’ID contenuto come variabile di traffico per l’analisi del percorso.
 feature: Dimensions
 role: User, Admin
-source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
+source-git-commit: 7b5232f25f3aa26e8566783557163f316af3fe57
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '215'
 ht-degree: 5%
 
 ---
@@ -22,7 +22,7 @@ Il percorso multimediale viene derivato automaticamente dall’ID contenuto impo
 | Sistema di reporting | Origine |
 | --- | --- |
 | Adobe Analytics | Raccolta automatica dai dati di contesto `a.media.name` come variabile di traffico (prop) quando [[!UICONTROL Media Core]](/help/reporting/setup/analytics-reporting.md) è abilitato. |
-| Customer Journey Analytics | N/D: utilizzare [Contenuto](content.md) per l&#39;analisi dei percorsi |
+| Customer Journey Analytics | N/D: utilizzare [Contenuto](content.md) per l&#39;analisi dei percorsi. |
 | Feed di dati | `videopath`, `post_videopath` |
 | Audience Manager | `c_contextdata.a.media.name` |
 
@@ -36,4 +36,4 @@ Il percorso multimediale viene derivato automaticamente dall’ID contenuto impo
 
 ## Elementi dimensionali
 
-Ogni elemento è un ID di contenuto segnalato durante una visita. Utilizza i rapporti Flusso pagina successivo e Flusso pagina precedente in Contenuto > Percorso file multimediali in Adobe Analytics per visualizzare i percorsi di navigazione da contenuto a contenuto.
+Ogni elemento è un ID di contenuto segnalato durante una visita. Puoi utilizzare i pannelli Flusso per visualizzare i percorsi di navigazione tra contenuti.

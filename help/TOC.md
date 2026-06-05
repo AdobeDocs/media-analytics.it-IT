@@ -5,9 +5,9 @@ user-guide-title: Guida ai servizi Streaming Media
 breadcrumb-title: Guida ai servizi Streaming Media
 user-guide-description: Implementa i servizi Streaming Media. Gli argomenti trattati comprendono Media SDK e Media Collection API.
 sub-product: media analytics
-source-git-commit: b18eab3deb3d15a08adf2f7ecf61d73235bbc6e5
+source-git-commit: 7b5232f25f3aa26e8566783557163f316af3fe57
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '698'
 ht-degree: 37%
 
 ---
@@ -289,21 +289,7 @@ ht-degree: 37%
       + [Durata totale dello stallo](reporting/metrics/total-stalling-duration.md)
       + [Tempo di riproduzione univoco](reporting/metrics/unique-time-played.md)
    + [Metriche calcolate](reporting/calculated-metrics.md)
-   + Pannelli multimediali in Workspace {#media-workspace-panels}
-      + [Pannello Pubblico medio per minuto](reporting/workspace/average-minute-audience.md)
-      + [Pannello Visualizzatori simultanei di contenuti multimediali](reporting/workspace/media-concurrent-viewers-overview.md)
-      + [Pannello Tempo trascorso su contenuti multimediali](reporting/workspace/media-playback-time-spent.md)
-   + [Rapporti multimediali in Workspace](reporting/workspace/media-workspace-templates.md)
    + [Segmenti multimediali](reporting/segments.md)
-   + Rapporti multimediali predefiniti {#media-default-reports}
-      + [Panoramica dei rapporti predefiniti](reporting/reports-and-analytics/default-reports-overview.md)
-      + [Panoramica dei contenuti multimediali](reporting/reports-and-analytics/media-reports-overview.md)
-      + [Dettagli contenuti multimediali](reporting/reports-and-analytics/media-reports-detail.md)
-      + [Report Media Daypart](reporting/reports-and-analytics/media-reports-daypart.md)
-      + [Rapporto sui visualizzatori simultanei di contenuti multimediali](reporting/reports-and-analytics/media-concurrent-viewers-reports.md)
-   + API Media {#media-api}
-      + [Ottieni dati visualizzatori simultanei](reporting/reports-and-analytics/get-concurrent-json20.md)
-      + [Ottieni dati sul tempo trascorso di riproduzione multimediale](reporting/reports-and-analytics/get-mediaplaybacktimespent-json20.md)
 + Casi di utilizzo {#media-use-cases}
    + [Tracciare i dati di pianificazione](/help/use-cases/track-schedule-data.md)
    + [Tracciare i contenuti scaricati](use-cases/track-downloaded-content.md)

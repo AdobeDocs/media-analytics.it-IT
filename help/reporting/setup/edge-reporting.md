@@ -3,16 +3,16 @@ title: Configurare il reporting per le implementazioni di Edge
 description: Configura Customer Journey Analytics per generare rapporti sui dati multimediali in streaming raccolti tramite Edge Network.
 feature: Streaming Media
 role: User, Admin
-source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
+source-git-commit: 7b5232f25f3aa26e8566783557163f316af3fe57
 workflow-type: tm+mt
-source-wordcount: '723'
-ht-degree: 18%
+source-wordcount: '796'
+ht-degree: 7%
 
 ---
 
 # Configurare il reporting per le implementazioni di Edge
 
-Dopo aver implementato Streaming Media Collection tramite Edge Network, configura Customer Journey Analytics per creare rapporti sui dati raccolti. Questa pagina descrive come creare una connessione, una visualizzazione dati e un progetto per contenuti multimediali in streaming.
+Dopo aver implementato Streaming Media Collection tramite Edge Network, configura Customer Journey Analytics per creare rapporti sui dati raccolti.
 
 >[!NOTE]
 >
@@ -22,108 +22,51 @@ Dopo aver implementato Streaming Media Collection tramite Edge Network, configur
 
 ## Creare una connessione in Customer Journey Analytics
 
-1. In Customer Journey Analytics creare una connessione come descritto in [Creare una connessione](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-connections/create-connection.html?lang=it).
-
-   Durante la creazione della connessione, per lo streaming multimediale sono necessarie le seguenti selezioni:
-
-   1. Seleziona il set di dati creato durante l’implementazione.
-
-   1. Verificare che l&#39;impostazione **[!UICONTROL Import all new data]** sia abilitata.
-
-1. Continua con [Crea una visualizzazione dati in Customer Journey Analytics](#create-a-data-view-in-customer-journey-analytics).
+1. In Customer Journey Analytics creare una connessione come descritto in [Creare una connessione](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-connections/create-connection). Durante la creazione della connessione, verificare che la casella di controllo **[!UICONTROL Import all new data]** sia abilitata.
 
 ## Creare una visualizzazione dati in Customer Journey Analytics
 
-1. In Customer Journey Analytics creare una visualizzazione dati come descritto in [Creare o modificare una visualizzazione dati](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=it).
+1. In Customer Journey Analytics creare una visualizzazione dati come descritto in [Creare o modificare una visualizzazione dati](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-dataviews/create-dataview).
 
-   1. Nel campo **[!UICONTROL Connection]** selezionare la connessione creata in precedenza.
+   1. Nel campo **[!UICONTROL Connection]** selezionare la connessione creata in precedenza. La visualizzazione delle nuove connessioni può richiedere fino a 15 minuti.
 
-      La selezione di una nuova connessione può richiedere fino a 15 minuti.
+   1. Nella scheda **[!UICONTROL Components]**, nella sezione **[!UICONTROL Schema fields]**, cerca ogni componente della tabella seguente e trascinalo nel pannello **[!UICONTROL Dimensions]** o **[!UICONTROL Metrics]** appropriato. Se esistono più campi con lo stesso nome, utilizza il percorso XDM per confermare il campo corretto. Applicare l&#39;etichetta di contesto visualizzata nell&#39;elenco a discesa **[!UICONTROL Context labels]** nelle impostazioni del componente.
 
-   1. Nella scheda **[!UICONTROL Components]**, nella sezione **[!UICONTROL Schema fields]**, cerca ogni componente nelle tabelle seguenti e trascinalo nel pannello **[!UICONTROL Metrics]**. Se esistono più campi con lo stesso nome, utilizza il percorso XDM per confermare il campo corretto.
+      | Componente | Tipo | Percorso XDM | Etichetta contesto |
+      |---|---|---|---|
+      | [Contenuto](/help/reporting/dimensions/content.md) | Dimensione | `mediaReporting.sessionDetails.name` | Media: ID contenuto |
+      | [Nome contenuto](/help/reporting/dimensions/content-name.md) | Dimensione | `mediaReporting.sessionDetails.friendlyName` | Media: nome video |
+      | [Lunghezza contenuto](/help/reporting/dimensions/content-length.md) | Dimensione | `mediaReporting.sessionDetails.length` | Media: lunghezza video |
+      | [Mostra](/help/reporting/dimensions/show.md) | Dimensione | `mediaReporting.sessionDetails.show` | Contenuti multimediali: Mostra |
+      | [Stagione](/help/reporting/dimensions/season.md) | Dimensione | `mediaReporting.sessionDetails.season` | Media: Season |
+      | [Episodio](/help/reporting/dimensions/episode.md) | Dimensione | `mediaReporting.sessionDetails.episode` | Media: Episodio |
+      | Tipo di evento | Dimensione | `eventType` | Media: tipo evento |
+      | [Tempo di contenuto trascorso](/help/reporting/metrics/content-time-spent.md) | Metrica | `mediaReporting.sessionDetails.timePlayed` | Media: tempo trascorso sui contenuti |
+      | [Tempo trascorso per contenuti multimediali](/help/reporting/metrics/media-time-spent.md) | Metrica | `mediaReporting.sessionDetails.totalTimePlayed` | Media: tempo trascorso contenuti multimediali |
+      | [Durata totale pausa](/help/reporting/metrics/total-pause-duration.md) | Metrica | `mediaReporting.sessionDetails.pauseTime` | Media: durata totale pausa |
+      | [Ora di inizio](/help/reporting/metrics/time-to-start.md) | Metrica | `mediaReporting.qoeDataDetails.timeToStart` | Media: ora di inizio |
+      | [Durata totale buffer](/help/reporting/metrics/total-buffer-duration.md) | Metrica | `mediaReporting.qoeDataDetails.bufferTime` | Media: durata totale buffer |
+      | Timeout del server della sessione multimediale | Metrica | `mediaReporting.sessionDetails.secondsSinceLastCall` | Media: secondi dall’ultima chiamata |
 
-      **Contenuto principale - Metriche del contenuto**
+      >[!IMPORTANT]
+      >
+      >Le etichette di contesto in questa tabella sono necessarie per il funzionamento dei pannelli per contenuti multimediali in streaming. Customer Journey Analytics li utilizza per calcolare automaticamente le metriche derivate da **Visualizzatori simultanei** e **Tempo di riproduzione trascorso** (utilizzate dai pannelli [Visualizzatori simultanei di contenuti multimediali](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-workspace/panels/media-concurrent-viewers) e [Tempo di riproduzione trascorso](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-workspace/panels/media-playback-time-spent)) e per popolare le opzioni di reporting nel pannello [Pubblico medio per minuto dei contenuti multimediali](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-workspace/panels/average-minute-audience-panel).
 
-      | Nome componente | Percorso XDM |
-      |----------|---------|
-      | Avvio file multimediale | mediaReporting.sessionDetails.isViewed |
-      | Visualizzazioni segmento multimediale | mediaReporting.sessionDetails.hasSegmentView |
-      | Avvio contenuti | mediaReporting.sessionDetails.isPlayed |
-      | Completamenti contenuti | mediaReporting.sessionDetails.isCompleted |
-      | Tempo trascorso dei contenuti | mediaReporting.sessionDetails.timePlayed |
-      | Tempo trascorso dei contenuti multimediali | mediaReporting.sessionDetails.totalTimePlayed |
-      | Tempo specifico riprodotto | mediaReporting.sessionDetails.uniqueTimePlayed |
-      | Indicatore di avanzamento al 10% | mediaReporting.sessionDetails.hasProgress10 |
-      | Pubblico medio per minuto | mediaReporting.sessionDetails.averageMinuteAudience |
+      A questo punto puoi aggiungere altre [dimensioni](/help/reporting/dimensions/overview.md) o [metriche](/help/reporting/metrics/overview.md) alla visualizzazione dati. Ogni pagina elenca il percorso XDM per quel componente.
 
-      **Capitolo e annunci - Metriche capitolo e annunci**
-
-      | Nome componente | Percorso XDM |
-      |----------|---------|
-      | Capitolo avviato | mediaReporting.chapterDetails.isStarted |
-      | Capitolo completato | mediaReporting.chapterDetails.isCompleted |
-      | Tempo capitolo riprodotto | mediaReporting.chapterDetails.timePlayed |
-      | Annuncio avviato | mediaReporting.advertisingDetails.isStarted |
-      | Annuncio completato | mediaReporting.advertisingDetails.isCompleted |
-      | Tempo di riproduzione dell’annuncio | mediaReporting.advertisingDetails.timePlayed |
-
-      **QoE - Metriche QoE**
-
-      | Nome componente | Percorso XDM |
-      |----------|---------|
-      | Ora di inizio | mediaReporting.qoeDataDetails.timeToStart |
-      | Perdite prima degli inizi | mediaReporting.qoeDataDetails.isDroppedBeforeStart |
-      | Flussi interessati dal buffer | mediaReporting.qoeDataDetails.hasBufferImpactedStreams |
-      | Flussi interessati dalla modifica del bitrate | mediaReporting.qoeDataDetails.hasBitrateChangeImpactedStreams |
-      | Modifiche bitrate | mediaReporting.qoeDataDetails.bitrateChangeCount |
-      | Bitrate medio | mediaReporting.qoeDataDetails.bitrateAverage |
-      | Frame rilasciati | mediaReporting.qoeDataDetails.droppedFrames |
-      | Errori | mediaReporting.qoeDataDetails.errorCount |
-      | Flussi interessati dall’errore | mediaReporting.qoeDataDetails.hasErrorImpactedStreams |
-      | Flussi interessati da fotogrammi saltati | mediaReporting.qoeDataDetails.hasDroppedFrameImpactedStreams |
-
-      **Stato del lettore - Metriche dello stato del lettore**
-
-      | Nome componente | Percorso XDM |
-      |----------|---------|
-      | Stato del lettore impostato | mediaReporting.states.isSet |
-      | Conteggio dello stato del lettore | mediaReporting.states.count |
-      | Ora stato lettore | mediaReporting.states.time |
-
-   1. Aggiornare le etichette (nel menu a discesa **[!UICONTROL Context labels]**) per i componenti nella tabella seguente. Cerca e trascina nel pannello i componenti che non sono già presenti nel pannello metriche.
-
-      | Nome componente | Etichetta contesto |
-      |---------|----------|
-      | Timeout del server della sessione multimediale | Media: secondi dall’ultima chiamata |
-      | Tempo trascorso dei contenuti multimediali | Media: tempo trascorso contenuti multimediali |
-      | Durata totale buffer | Media: durata totale buffer |
-      | Tempo prima dell’inizio | Media: tempo di avvio |
-      | Durata totale pausa | Media: durata totale pausa |
-
-   1. Per aggiungere suddivisioni al progetto, aggiungi le dimensioni seguenti al pannello **[!UICONTROL Dimensions]**:
-
-      | Percorso XDM | Nome componente |
-      |---------|----------|
-      | mediaReporting.states.name | Nome stato lettore |
-      | mediaReporting.sessionDetails.ID | ID sessione multimediale |
-
-      Oltre alle dimensioni in questa tabella, puoi aggiungere qualsiasi altra dimensione in base alla quale desideri filtrare i dati nei progetti.
-
-1. Seleziona **[!UICONTROL Save and continue]** > **[!UICONTROL Save and finish]** per salvare le modifiche.
-
-1. Continua con [Crea e configura un progetto in Customer Journey Analytics](#create-and-configure-a-project-in-customer-journey-analytics).
+1. Seleziona **[!UICONTROL Save and continue]** → **[!UICONTROL Save and finish]** per salvare le modifiche.
 
 ## Creare e configurare un progetto in Customer Journey Analytics
 
 1. In Customer Journey Analytics, nella scheda **[!UICONTROL Workspace]**, nell&#39;area **[!UICONTROL Projects]**, selezionare **[!UICONTROL Create project]**.
 
-1. Seleziona **[!UICONTROL Blank project]** > **[!UICONTROL Create]**.
+1. Selezionare **[!UICONTROL Blank project]** → **[!UICONTROL Create]**.
 
 1. Nel nuovo progetto, seleziona la visualizzazione dati creata in precedenza.
 
    Quando crei i pannelli nel progetto, puoi utilizzare tutti i componenti aggiunti alla visualizzazione dati.
 
-1. Seleziona l&#39;icona **Panels** nella barra a sinistra, quindi trascina il pannello **[!UICONTROL Media concurrent viewers]** e il pannello **[!UICONTROL Media playback time spent]**.
+1. Seleziona l&#39;icona **Panels** nella barra a sinistra, quindi trascina i pannelli **[!UICONTROL Media average minute audience]**, **[!UICONTROL Media concurrent viewers]** e **[!UICONTROL Media playback time spent]**.
 
 1. (Condizionale) Se hai aggiunto metadati personalizzati allo schema, imposta la persistenza per i campi personalizzati, come descritto in [Impostazioni dei componenti di persistenza](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-dataviews/component-settings/persistence) nella guida di Customer Journey Analytics.
 
@@ -133,8 +76,15 @@ Dopo aver implementato Streaming Media Collection tramite Edge Network, configur
    >
    >Se gli utenti con cui desideri condividere il file non sono disponibili, assicurati che abbiano accesso come utenti e amministratori a Customer Journey Analytics da Adobe Admin Console.
 
+## Pannelli multimediali disponibili in Customer Journey Analytics
+
+Analysis Workspace in Customer Journey Analytics include tre pannelli multimediali dedicati per i clienti con il componente aggiuntivo Streaming Media Collection. Questi pannelli forniscono visualizzazioni predefinite per le esigenze di reporting di contenuti multimediali in streaming più comuni.
+
+* **[Pubblico medio per minuto](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-workspace/panels/average-minute-audience-panel)**: confronta il consumo medio di contenuto tra programmi di qualsiasi durata o genere. Supporta sia le modalità di contenuto specifico (basato sulla durata) che le modalità di periodo di tempo personalizzate e consente di aggiornare le classificazioni di durata dopo il fatto.
+* **[Visualizzatori simultanei di contenuti multimediali](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-workspace/panels/media-concurrent-viewers)**: analizza i visualizzatori simultanei nel tempo per identificare i picchi di concorrenza e i punti di rilascio. Supporta granularità configurabile e suddivisione per serie per segmenti, dimensioni o intervalli di date.
+* **[Tempo di riproduzione dei contenuti multimediali trascorso](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-workspace/panels/media-playback-time-spent)**: analizza la durata della riproduzione nel tempo con dettagli sui periodi di picco e minimo. Supporta granularità e formato di output configurabili (ore o minuti).
+
 >[!MORELIKETHIS]
 >
->* [Pannelli multimediali in Workspace](/help/reporting/workspace/media-concurrent-viewers-overview.md)
 >* [Panoramica delle dimensioni](/help/reporting/dimensions/overview.md)
 >* [Panoramica delle metriche](/help/reporting/metrics/overview.md)
