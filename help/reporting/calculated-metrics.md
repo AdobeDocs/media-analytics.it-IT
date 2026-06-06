@@ -3,18 +3,18 @@ title: Metriche calcolate
 description: Metriche calcolate personalizzate per il reporting di contenuti multimediali in streaming in Adobe Analytics e Customer Journey Analytics.
 feature: Metrics
 role: User, Admin
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: cb3770abd06eb8debe4ff92641835f04f62471f7
 workflow-type: tm+mt
-source-wordcount: '194'
-ht-degree: 7%
+source-wordcount: '196'
+ht-degree: 6%
 
 ---
 
-# Metriche calcolate
+# Metriche calcolate per contenuti multimediali in streaming
 
 Le metriche calcolate per i servizi di contenuti multimediali in streaming di Adobe sono metriche personalizzate basate sulle metriche dei contenuti multimediali in streaming standard, che consentono di ottenere rapporti quali il tempo medio trascorso o il tasso di completamento dei contenuti multimediali senza modificare l’implementazione.
 
-Per creare queste metriche calcolate in Analysis Workspace, vedi la panoramica delle rispettive metriche calcolate in [Adobe Analytics](https://experienceleague.adobe.com/it/docs/analytics/components/calculated-metrics/cm-overview) o [Customer Journey Analytics](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-components/cja-calcmetrics/calc-metr-overview).
+Per creare queste metriche calcolate in Analysis Workspace, vedi la panoramica delle rispettive metriche calcolate in [Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/components/calculated-metrics/cm-overview) o [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-components/cja-calcmetrics/calc-metr-overview).
 
 | Metrica calcolata | Descrizione | Formula |
 | --- | --- | --- |
