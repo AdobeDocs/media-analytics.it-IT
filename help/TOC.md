@@ -5,9 +5,9 @@ user-guide-title: Guida ai servizi Streaming Media
 breadcrumb-title: Guida ai servizi Streaming Media
 user-guide-description: Implementa i servizi Streaming Media. Gli argomenti trattati comprendono Media SDK e Media Collection API.
 sub-product: media analytics
-source-git-commit: c25d3cd6248f547e5a32a080eb89c5ad8f58c474
+source-git-commit: cb3770abd06eb8debe4ff92641835f04f62471f7
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '693'
 ht-degree: 36%
 
 ---
@@ -290,7 +290,7 @@ ht-degree: 36%
       + [Durata totale dello stallo](reporting/metrics/total-stalling-duration.md)
       + [Tempo di riproduzione univoco](reporting/metrics/unique-time-played.md)
    + [Metriche calcolate](reporting/calculated-metrics.md)
-   + [Segmenti multimediali](reporting/segments.md)
+   + [Segmenti](reporting/segments.md)
 + Casi di utilizzo {#media-use-cases}
    + [Tracciare i dati di pianificazione](/help/use-cases/track-schedule-data.md)
    + [Tracciare i contenuti scaricati](use-cases/track-downloaded-content.md)

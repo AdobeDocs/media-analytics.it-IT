@@ -17,14 +17,14 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-source-git-commit: 7b5232f25f3aa26e8566783557163f316af3fe57
+source-git-commit: cb3770abd06eb8debe4ff92641835f04f62471f7
 workflow-type: tm+mt
-source-wordcount: 188
+source-wordcount: 189
 ht-degree: 75%
 
 ---
 
-# Segmenti multimediali{#segments}
+# Segmenti di contenuti multimediali in streaming
 
 I segmenti ti consentono di identificare sottoinsiemi di visitatori in base a caratteristiche o interazioni con siti web. I segmenti multimediali in streaming ti consentono di identificare il tipo di flusso del visitatore, ad esempio audio, in diretta o in podcast. Per informazioni sui segmenti di Adobe Analytics, consulta [Informazioni sui segmenti](https://experienceleague.adobe.com/it/docs/analytics/components/segmentation/seg-overview) nella Guida ai componenti di Adobe Analytics.
 
