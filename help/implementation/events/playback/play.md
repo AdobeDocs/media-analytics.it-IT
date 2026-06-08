@@ -3,9 +3,9 @@ title: Play
 description: Segnala che il lettore multimediale è entrato nello stato di riproduzione.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '176'
 ht-degree: 3%
 
 ---
@@ -54,7 +54,7 @@ Chiamare `trackPlay` quando il lettore multimediale inizia o riprende la riprodu
 tracker.trackPlay()
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Chiama `sendMediaEvent` con `eventType: "media.play"`:
 
@@ -110,6 +110,14 @@ Chiamare `trackPlay` quando il lettore multimediale inizia o riprende la riprodu
 
 ```javascript
 ADBMobile.media.trackPlay();
+```
+
+>[!TAB Roku 2.x]
+
+Chiamare `mediaTrackPlay` quando il lettore multimediale inizia o riprende la riproduzione:
+
+```brightscript
+ADBMobile().mediaTrackPlay()
 ```
 
 >[!TAB API Media Collection]

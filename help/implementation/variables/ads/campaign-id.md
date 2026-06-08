@@ -3,9 +3,9 @@ title: ID campagna
 description: Imposta l’identificatore della campagna per ogni annuncio in modo che il coinvolgimento possa essere aggregato per campagna.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '247'
 ht-degree: 4%
 
 ---
@@ -75,7 +75,7 @@ metadata[MediaConstants.AdMetadataKeys.CAMPAIGN_ID] = "fall-2024"
 tracker.trackEvent(Media.Event.AdStart, adObject, metadata)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Imposta `campaignID` in `xdm.mediaCollection.advertisingDetails` quando chiama `sendMediaEvent` per `media.adStart`:
 
@@ -146,6 +146,21 @@ var standardAdMetadata = {};
 standardAdMetadata[ADBMobile.media.AdMetadataKeys.CAMPAIGN_ID] = "fall-2024";
 adInfo[ADBMobile.media.MediaObjectKey.StandardAdMetadata] = standardAdMetadata;
 ADBMobile.media.trackEvent(ADBMobile.media.Event.AdStart, adInfo, null);
+```
+
+>[!TAB Roku 2.x]
+
+Imposta l&#39;ID campagna utilizzando `MEDIA_AdMetadataKeyCAMPAIGN_ID` nell&#39;oggetto metadati standard dell&#39;annuncio:
+
+```brightscript
+adb = ADBMobile()
+adInfo = adb_media_init_adinfo("Ford F-150", "ad-2125", 1, 30.0)
+
+standardAdMetadata = {}
+standardAdMetadata[adb.MEDIA_AdMetadataKeyCAMPAIGN_ID] = "fall-2024"
+adInfo[adb.MEDIA_STANDARD_AD_METADATA] = standardAdMetadata
+
+adb.mediaTrackEvent(adb.MEDIA_AD_START, adInfo)
 ```
 
 >[!TAB API Media Collection]

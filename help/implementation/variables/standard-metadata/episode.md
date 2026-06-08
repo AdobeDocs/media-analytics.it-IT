@@ -3,10 +3,10 @@ title: Episodio
 description: Impostare il numero di episodio per il contenuto episodico in modo che i singoli episodi possano essere riportati separatamente.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '218'
-ht-degree: 4%
+source-wordcount: '238'
+ht-degree: 3%
 
 ---
 
@@ -73,7 +73,7 @@ metadata[MediaConstants.VideoMetadataKeys.EPISODE] = "13"
 tracker.trackSessionStart(mediaInfo, metadata)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Utilizza `createMediaSession` per impostare `episode` in `sessionDetails`:
 
@@ -144,6 +144,21 @@ var standardMetadata = {};
 standardMetadata[ADBMobile.media.VideoMetadataKeys.EPISODE] = "13";
 mediaInfo[ADBMobile.media.MediaObjectKey.StandardMediaMetadata] = standardMetadata;
 ADBMobile.media.trackSessionStart(mediaInfo, null);
+```
+
+>[!TAB Roku 2.x]
+
+Utilizzare `MEDIA_VideoMetadataKeyEPISODE` per impostare il numero di episodio nei metadati standard dell&#39;oggetto multimediale prima di chiamare `mediaTrackSessionStart`:
+
+```brightscript
+adb = ADBMobile()
+mediaInfo = adb_media_init_mediainfo("My Video", "video-123", 128.0, adb.MEDIA_STREAM_TYPE_VOD, adb.MEDIA_TYPE_VIDEO)
+
+standardMetadata = {}
+standardMetadata[adb.MEDIA_VideoMetadataKeyEPISODE] = "13"
+mediaInfo[adb.MEDIA_STANDARD_MEDIA_METADATA] = standardMetadata
+
+adb.mediaTrackSessionStart(mediaInfo, invalid)
 ```
 
 >[!TAB API Media Collection]

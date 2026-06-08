@@ -3,10 +3,10 @@ title: Artista
 description: Imposta il nome dell'artista esecutore per il contenuto audio.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '211'
-ht-degree: 4%
+source-wordcount: '231'
+ht-degree: 3%
 
 ---
 
@@ -73,7 +73,7 @@ metadata[MediaConstants.AudioMetadataKeys.ARTIST] = "Crested Larks"
 tracker.trackSessionStart(mediaInfo, metadata)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Utilizza `createMediaSession` per impostare `artist` in `sessionDetails`:
 
@@ -144,6 +144,21 @@ var standardMetadata = {};
 standardMetadata[ADBMobile.media.AudioMetadataKeys.ARTIST] = "Crested Larks";
 mediaInfo[ADBMobile.media.MediaObjectKey.StandardMediaMetadata] = standardMetadata;
 ADBMobile.media.trackSessionStart(mediaInfo, null);
+```
+
+>[!TAB Roku 2.x]
+
+Utilizzare `MEDIA_AudioMetadataKeyARTIST` per impostare il nome dell&#39;artista nei metadati standard dell&#39;oggetto multimediale prima di chiamare `mediaTrackSessionStart`:
+
+```brightscript
+adb = ADBMobile()
+mediaInfo = adb_media_init_mediainfo("My Track", "audio-123", 240.0, adb.MEDIA_STREAM_TYPE_AOD, adb.MEDIA_TYPE_AUDIO)
+
+standardMetadata = {}
+standardMetadata[adb.MEDIA_AudioMetadataKeyARTIST] = "Crested Larks"
+mediaInfo[adb.MEDIA_STANDARD_MEDIA_METADATA] = standardMetadata
+
+adb.mediaTrackSessionStart(mediaInfo, invalid)
 ```
 
 >[!TAB API Media Collection]

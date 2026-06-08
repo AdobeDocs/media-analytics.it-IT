@@ -3,7 +3,7 @@ title: Flussi interessati da interruzioni
 description: Conta le sessioni in cui si è verificato almeno un arresto durante la riproduzione.
 feature: Metrics
 role: User, Admin
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 8%
@@ -13,7 +13,7 @@ ht-degree: 8%
 
 # Flussi interessati da interruzioni
 
-La metrica **Flussi interessati dallo stallo** conta le sessioni in cui si è verificato almeno un arresto durante la riproduzione. La metrica è un valore booleano a livello di sessione: più blocchi all’interno dello stesso conteggio di sessioni come un flusso interessato. Per il volume totale di stall, utilizzare [Eventi di stall](stall-events.md).
+La metrica **Flussi interessati dallo stallo** conta le sessioni in cui si è verificato almeno un arresto durante la riproduzione. La metrica è un valore booleano a livello di sessione; più blocchi all’interno dello stesso numero di sessioni corrispondono a un flusso interessato. Per il volume totale di stall, utilizzare [Eventi di stall](stall-events.md).
 
 ## Come è calcolata questa metrica
 

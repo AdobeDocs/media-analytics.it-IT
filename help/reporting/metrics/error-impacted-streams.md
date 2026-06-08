@@ -3,7 +3,7 @@ title: Flussi interessati da errori
 description: Conta le sessioni in cui si è verificato almeno un errore.
 feature: Metrics
 role: User, Admin
-source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 10%
@@ -13,7 +13,7 @@ ht-degree: 10%
 
 # Flussi interessati da errori
 
-La metrica **Flussi interessati dall&#39;errore** conta le sessioni in cui si è verificato almeno un errore (`trackError` è stato chiamato o un evento [error](/help/implementation/events/error.md) generato). La metrica è un valore booleano a livello di sessione: più errori all’interno dello stesso conteggio di sessioni come un flusso interessato. Per il volume totale degli errori, utilizzare [Errori](/help/reporting/dimensions/errors.md).
+La metrica **Flussi interessati dall&#39;errore** conta le sessioni in cui si è verificato almeno un errore (`trackError` è stato chiamato o un evento [error](/help/implementation/events/error.md) generato). La metrica è un valore booleano a livello di sessione; più errori all’interno dello stesso numero di sessioni corrispondono a un flusso interessato. Per il volume totale degli errori, utilizzare [Errori](/help/reporting/dimensions/errors.md).
 
 ## Come è calcolata questa metrica
 

@@ -3,7 +3,7 @@ title: Flussi interessati da fotogrammi saltati
 description: Conta le sessioni in cui è stato eliminato almeno un frame.
 feature: Metrics
 role: User, Admin
-source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 11%
@@ -13,7 +13,7 @@ ht-degree: 11%
 
 # Flussi interessati da fotogrammi saltati
 
-La metrica **Flussi interessati da fotogrammi saltati** conta le sessioni in cui è stato eliminato almeno un fotogramma. La metrica è un valore booleano a livello di sessione: più cadute all’interno dello stesso conteggio di sessioni di un flusso interessato. Per il volume di rilascio totale, utilizzare [Frame rilasciati](dropped-frames.md).
+La metrica **Flussi interessati da fotogrammi saltati** conta le sessioni in cui è stato eliminato almeno un fotogramma. La metrica è un valore booleano a livello di sessione; più rilasci all’interno dello stesso numero di sessioni corrispondono a un flusso interessato. Per il volume di rilascio totale, utilizzare [Frame rilasciati](dropped-frames.md).
 
 ## Come è calcolata questa metrica
 

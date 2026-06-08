@@ -23,10 +23,10 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: b18eab3deb3d15a08adf2f7ecf61d73235bbc6e5
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: 575
-ht-degree: 32%
+source-wordcount: 625
+ht-degree: 30%
 
 ---
 
@@ -44,7 +44,7 @@ Le implementazioni di Edge raccolgono i dati una volta e li distribuiscono trami
 | [![Icona Apple iOS](assets/apple.png)](https://github.com/adobe/aepsdk-media-ios)<br>[iOS / tvOS SDK](https://github.com/adobe/aepsdk-media-ios) | [Configura iOS per Streaming Media](/help/implementation/edge/ios.md) | [Esempio](https://github.com/adobe/aepsdk-media-ios/tree/main/TestApp) |
 | [![Icona estensione](assets/plug.svg)](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/)<br>[Estensione tag Android](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/) | [Configura l&#39;estensione tag Android per Streaming Media](/help/implementation/edge/android-tags.md) | |
 | [![Icona estensione](assets/plug.svg)](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/)<br>[Estensione tag iOS / tvOS](https://developer.adobe.com/client-sdks/documentation/adobe-media-analytics/) | [Configura l&#39;estensione tag iOS per Streaming Media](/help/implementation/edge/ios-tags.md) | |
-| [![Icona Roku](assets/roku-icon.png)](https://github.com/adobe/aepsdk-roku)<br>[SDK Roku](https://github.com/adobe/aepsdk-roku) | [Configura Roku per Streaming Media](/help/implementation/edge/roku.md) | [Esempio](https://github.com/adobe/aepsdk-roku/tree/main/sample/simple-videoplayer-channel) |
+| [![Icona Roku](assets/roku-icon.png)](https://github.com/adobe/aepsdk-roku)<br>[Roku Edge SDK](https://github.com/adobe/aepsdk-roku) | [Configura Roku Edge per Streaming Media](/help/implementation/edge/roku.md) | [Esempio](https://github.com/adobe/aepsdk-roku/tree/main/sample/simple-videoplayer-channel) |
 | [![Icona API](assets/api.png)](https://developer.adobe.com/data-collection-apis/docs/api/media-edge)<br>[API Media Edge](https://developer.adobe.com/data-collection-apis/docs/api/media-edge) | [Configura API Media Edge](/help/implementation/edge/media-edge-api.md) | [Esempio](https://developer.adobe.com/data-collection-apis/docs/getting-started/media-edge-examples) |
 
 ## Implementazioni solo per Analytics {#analytics-only-sdks}
@@ -56,4 +56,5 @@ Questi SDK ed estensioni inviano i dati direttamente ad Adobe Analytics. Per le 
 | [![Icona JavaScript](assets/javascript-icon.png)](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/js-v3.0.2)<br>[Media SDK 3.x](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/js-v3.0.2) | [Configura JavaScript per Streaming Media](/help/implementation/analytics-only/javascript.md) | [Esempio](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/sdks/js/3.x) |
 | [![Icona estensione](assets/plug.svg)](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics-3x/overview.html?lang=it)<br>[Estensione file multimediali](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/media-analytics-3x/overview.html?lang=it) | [Configura JavaScript utilizzando i tag per i contenuti multimediali in streaming](/help/implementation/analytics-only/javascript-tags.md) | [Esempio](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/js/3.x) |
 | [![Icona Chromecast](assets/chromecast-icon.png)](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/chromecast-v3.0.3)<br>[SDK Chromecast 3.x](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/chromecast-v3.0.3) | [Configura Chromecast per contenuti multimediali in streaming](/help/implementation/analytics-only/chromecast.md) | [Esempio](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/sdks/chromecast/samples/BasicPlayerSample) |
+| [![Icona Roku](assets/roku-icon.png)](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/roku-v2.2.7)<br>[SDK Roku 2.x](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases/tag/roku-v2.2.7) | [Configura Roku 2.x per Streaming Media](/help/implementation/analytics-only/roku-2x.md) | [Esempio](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/sdks/roku/samples) |
 | [![Icona API](assets/api.png)](/help/implementation/media-collection-api/mc-api-overview.md)<br>[API Media Collection](/help/implementation/media-collection-api/mc-api-overview.md) | [Configura API Media Collection](/help/implementation/analytics-only/media-collection-api.md) | |

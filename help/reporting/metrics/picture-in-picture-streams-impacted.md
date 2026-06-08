@@ -3,7 +3,7 @@ title: Flussi interessati da picture in picture
 description: Conta le sessioni in cui il visualizzatore è entrato nell'immagine nell'immagine almeno una volta.
 feature: Metrics
 role: User, Admin
-source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
 source-wordcount: '189'
 ht-degree: 7%
@@ -19,7 +19,7 @@ ht-degree: 7%
 
 >[!ENDSHADEBOX]
 
-La metrica **Flussi interessati da immagine nell&#39;immagine** conta le sessioni in cui il visualizzatore è entrato almeno una volta nella riproduzione immagine nell&#39;immagine. La metrica è un valore booleano a livello di sessione: più voci &quot;picture-in-picture&quot; all’interno dello stesso numero di sessioni corrispondono a un flusso interessato. Per il volume totale di ingresso immagine nell&#39;immagine, utilizzare [Conteggi immagine nell&#39;immagine](picture-in-picture-count.md).
+La metrica **Flussi interessati da immagine nell&#39;immagine** conta le sessioni in cui il visualizzatore è entrato almeno una volta nella riproduzione immagine nell&#39;immagine. La metrica è un valore booleano a livello di sessione; più voci picture-in-picture all’interno della stessa sessione vengono conteggiate come un flusso interessato. Per il volume totale di ingresso immagine nell&#39;immagine, utilizzare [Conteggi immagine nell&#39;immagine](picture-in-picture-count.md).
 
 ## Come è calcolata questa metrica
 

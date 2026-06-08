@@ -3,9 +3,9 @@ title: Riprende il contenuto
 description: Contrassegna una sessione che riprende una riproduzione precedentemente interrotta in modo che il backend conteggi un evento Riprende contenuto.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '289'
 ht-degree: 3%
 
 ---
@@ -87,7 +87,7 @@ mediaInfo[MediaConstants.MediaObjectKey.RESUMED] = true
 tracker.trackSessionStart(mediaInfo, null)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Imposta `hasResume` su `true` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama `createMediaSession` per la sessione ripresa:
 
@@ -168,6 +168,18 @@ var mediaInfo = ADBMobile.media.createMediaObject("My Video", "video-123", 128,
   ADBMobile.media.StreamType.VOD, ADBMobile.media.MediaType.Video);
 mediaInfo[ADBMobile.media.MediaObjectKey.MediaResumed] = true;
 ADBMobile.media.trackSessionStart(mediaInfo, null);
+```
+
+>[!TAB Roku 2.x]
+
+Impostare la chiave `resumed` sull&#39;oggetto multimediale prima di chiamare `mediaTrackSessionStart`:
+
+```brightscript
+adb = ADBMobile()
+mediaInfo = adb_media_init_mediainfo("My Video", "video-123", 128.0, adb.MEDIA_STREAM_TYPE_VOD, adb.MEDIA_TYPE_VIDEO)
+mediaInfo.resumed = true
+
+adb.mediaTrackSessionStart(mediaInfo, invalid)
 ```
 
 >[!TAB API Media Collection]

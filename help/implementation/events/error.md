@@ -3,9 +3,9 @@ title: Errore
 description: Segnala che il lettore multimediale ha riscontrato un errore.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '184'
 ht-degree: 3%
 
 ---
@@ -60,7 +60,7 @@ Chiamare `trackError` con una stringa ID errore.
 tracker.trackError("media-error-001")
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Chiama `sendMediaEvent` con `eventType: "media.error"` e il `errorDetails` richiesto:
 
@@ -124,6 +124,15 @@ Chiamare `trackError` con una stringa ID errore:
 
 ```javascript
 ADBMobile.media.trackError("media-error-001");
+```
+
+>[!TAB Roku 2.x]
+
+Chiamare `mediaTrackError` con un ID di errore e l&#39;origine dell&#39;errore. Usa la costante `ERROR_SOURCE_PLAYER` per gli errori del lettore:
+
+```brightscript
+adb = ADBMobile()
+adb.mediaTrackError("media-error-001", adb.ERROR_SOURCE_PLAYER)
 ```
 
 >[!TAB API Media Collection]

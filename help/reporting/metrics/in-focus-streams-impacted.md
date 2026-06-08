@@ -3,7 +3,7 @@ title: Flussi interessati da in focus
 description: Conta le sessioni in cui il lettore era a fuoco almeno una volta.
 feature: Metrics
 role: User, Admin
-source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
 source-wordcount: '174'
 ht-degree: 8%
@@ -19,7 +19,7 @@ ht-degree: 8%
 
 >[!ENDSHADEBOX]
 
-La metrica **Flussi interessati da in focus** conta le sessioni in cui il lettore era attivo almeno una volta. La metrica è un valore booleano a livello di sessione: più eventi di attivazione all’interno dello stesso conteggio di sessione come un flusso interessato. Per il volume totale degli eventi di attivazione, utilizzare [Conteggi attivazione](in-focus-count.md).
+La metrica **Flussi interessati da in focus** conta le sessioni in cui il lettore era attivo almeno una volta. La metrica è un valore booleano a livello di sessione; più eventi di attivazione all’interno della stessa sessione vengono conteggiati come un flusso interessato. Per il volume totale degli eventi di attivazione, utilizzare [Conteggi attivazione](in-focus-count.md).
 
 ## Come è calcolata questa metrica
 

@@ -26,9 +26,9 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7b5232f25f3aa26e8566783557163f316af3fe57
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: 720
+source-wordcount: 722
 ht-degree: 36%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 36%
 | Funzione | Descrizione | Data |
 | --- | --- | --- |
 | **Supporto Web SDK** | Invia dati web di contenuti multimediali in streaming a Adobe Experience Platform Edge Network utilizzando l’estensione tag Web SDK o Web SDK, abilitando un metodo di raccolta unificato tra le soluzioni Platform come Customer Journey Analytics, Real-time CDP, Journey Optimizer e l’inoltro di eventi. Per ulteriori informazioni, vedere [Configurare Web SDK per Streaming Media](/help/implementation/edge/web-sdk.md) o [Configurare l&#39;estensione tag Web SDK per Streaming Media](/help/implementation/edge/web-sdk-tags.md). | 29 maggio 2024 |
-| **Supporto Roku** | Invia dati multimediali in streaming a Adobe Experience Platform utilizzando il SDK Roku. Per ulteriori informazioni, vedere [Configurare Roku per Streaming Media](/help/implementation/edge/roku.md). | 12 aprile 2024 |
+| **Supporto Roku** | Invia dati multimediali in streaming a Adobe Experience Platform utilizzando Roku Edge SDK. Per ulteriori informazioni, vedere [Configurare Roku Edge per Streaming Media](/help/implementation/edge/roku.md). | 12 aprile 2024 |
 
 ## 2023
 

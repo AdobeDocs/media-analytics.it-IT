@@ -21,9 +21,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: 230
+source-wordcount: 231
 ht-degree: 2%
 
 ---
@@ -50,4 +50,4 @@ Gli eventi di riproduzione tengono traccia delle transizioni di stato nel lettor
 1. **Chiama [Pausa avvio](pause-start.md)** quando l&#39;utente mette in pausa la riproduzione. Invia riproduzione quando riprende la riproduzione.
 1. **Chiama [Avvio buffer](buffer-start.md)** quando il lettore non attende più i dati. Nelle API basate su XDM, la fine del buffer viene dedotta quando invii l’evento Play successivo. Su Mobile SDK, chiama esplicitamente `BufferComplete` anche quando viene risolto il buffering.
 1. **Chiama [Ping](ping.md)** ogni 10 secondi durante la riproduzione del contenuto principale e ogni 1 secondo durante la riproduzione dell&#39;annuncio. Ping mantiene viva la sessione e registra il movimento della testina di riproduzione. Gli SDK per dispositivi mobili inviano automaticamente i ping; tutte le altre piattaforme devono inviarli manualmente.
-1. **Chiama [Modifica bitrate](bitrate-change.md)** ogni volta che il lettore negozia un nuovo bitrate. Includi i dati QoE correnti, bitrate, fotogrammi al secondo, fotogrammi saltati, in modo che il backend possa calcolare [bitrate medio](/help/reporting/metrics/average-bitrate.md) e le metriche di qualità correlate.
+1. **Chiama [Modifica bitrate](bitrate-change.md)** ogni volta che il lettore negozia un nuovo bitrate. Includi i dati QoE correnti (bitrate, fotogrammi al secondo, fotogrammi saltati) in modo che il backend possa calcolare [bitrate medio](/help/reporting/metrics/average-bitrate.md) e le metriche di qualità correlate.

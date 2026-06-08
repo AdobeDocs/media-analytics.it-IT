@@ -3,7 +3,7 @@ title: Flussi interessati dallo schermo intero
 description: Conta le sessioni in cui il visualizzatore è entrato a schermo intero almeno una volta.
 feature: Metrics
 role: User, Admin
-source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 8%
@@ -19,7 +19,7 @@ ht-degree: 8%
 
 >[!ENDSHADEBOX]
 
-La metrica **Flussi interessati dallo schermo intero** conta le sessioni in cui il visualizzatore è entrato a schermo intero almeno una volta. La metrica è un valore booleano a livello di sessione: più voci a schermo intero all’interno dello stesso conteggio di sessioni di un flusso interessato. Per il volume totale delle voci a schermo intero, utilizzare [Conteggi a schermo intero](full-screen-count.md).
+La metrica **Flussi interessati dallo schermo intero** conta le sessioni in cui il visualizzatore è entrato a schermo intero almeno una volta. La metrica è un valore booleano a livello di sessione; più voci a schermo intero all’interno dello stesso numero di sessioni corrispondono a un flusso interessato. Per il volume totale delle voci a schermo intero, utilizzare [Conteggi a schermo intero](full-screen-count.md).
 
 ## Come è calcolata questa metrica
 

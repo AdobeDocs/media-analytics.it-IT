@@ -3,9 +3,9 @@ title: Avvio buffer
 description: Segnala che il lettore multimediale è entrato in uno stato di buffering.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '194'
 ht-degree: 2%
 
 ---
@@ -68,7 +68,7 @@ tracker.trackEvent(Media.Event.BufferStart, null, null)
 tracker.trackEvent(Media.Event.BufferComplete, null, null)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Chiama `sendMediaEvent` con `eventType: "media.bufferStart"`:
 
@@ -128,6 +128,20 @@ ADBMobile.media.trackEvent(ADBMobile.media.Event.BufferStart);
 
 // Buffer ends
 ADBMobile.media.trackEvent(ADBMobile.media.Event.BufferComplete);
+```
+
+>[!TAB Roku 2.x]
+
+Chiama `mediaTrackEvent` con `MEDIA_BUFFER_START` quando il lettore entra in uno stato di buffering e `MEDIA_BUFFER_COMPLETE` quando esce:
+
+```brightscript
+adb = ADBMobile()
+
+' Buffer starts
+adb.mediaTrackEvent(adb.MEDIA_BUFFER_START)
+
+' Buffer ends
+adb.mediaTrackEvent(adb.MEDIA_BUFFER_COMPLETE)
 ```
 
 >[!TAB API Media Collection]

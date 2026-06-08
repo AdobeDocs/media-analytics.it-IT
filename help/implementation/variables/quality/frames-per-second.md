@@ -3,9 +3,9 @@ title: Fotogrammi al secondo
 description: Imposta la frequenza fotogrammi corrente sull'oggetto QoE in modo che il backend abbia un contesto di frequenza fotogrammi per il reporting di qualità.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '272'
 ht-degree: 3%
 
 ---
@@ -73,7 +73,7 @@ val qoeObject = Media.createQoEObject(3200L,
 tracker.updateQoEObject(qoeObject)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Imposta `framesPerSecond` in `xdm.mediaCollection.qoeDataDetails` quando chiama `sendMediaEvent`:
 
@@ -140,6 +140,17 @@ var qosInfo = ADBMobile.media.createQoSObject(
   0      // droppedFrames
 );
 ADBMobile.media.updateQoSObject(qosInfo);
+```
+
+>[!TAB Roku 2.x]
+
+Passa la frequenza fotogrammi come terzo argomento (`fps`) a `adb_media_init_qosinfo` e aggiorna il tracciatore con `mediaUpdateQoS`:
+
+```brightscript
+adb = ADBMobile()
+qosInfo = adb_media_init_qosinfo(3200.0, 0.0, 24.0, 0.0)  ' bitrate, startupTime, fps, droppedFrames
+
+adb.mediaUpdateQoS(qosInfo)
 ```
 
 >[!TAB API Media Collection]

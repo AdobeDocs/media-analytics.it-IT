@@ -3,9 +3,9 @@ title: Flag di contenuto multimediale scaricato
 description: Contrassegna una sessione come riproduzione offline scaricata in modo che venga segnalata separatamente dalle sessioni in streaming.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '304'
 ht-degree: 2%
 
 ---
@@ -85,7 +85,7 @@ config[MediaConstants.TrackerConfig.DOWNLOADED_CONTENT] = true
 val tracker = Media.createTracker(config)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Imposta `isDownloaded` su `true` all&#39;interno di `xdm.mediaCollection.sessionDetails` durante la chiamata a `createMediaSession`:
 
@@ -176,6 +176,10 @@ var mediaInfo = ADBMobile.media.createMediaObject("My Video", "video-123", 128,
 mediaInfo[ADBMobile.media.MediaObjectKey.MediaDownloaded] = true;
 ADBMobile.media.trackSessionStart(mediaInfo, null);
 ```
+
+>[!TAB Roku 2.x]
+
+Il tracciamento dei contenuti scaricati non è disponibile in Roku 2.x SDK. Per segnalare la riproduzione di file multimediali scaricata, utilizza [Roku Edge SDK](/help/implementation/edge/roku.md) o l&#39;[API Media Collection](/help/implementation/analytics-only/media-collection-api.md).
 
 >[!TAB API Media Collection]
 

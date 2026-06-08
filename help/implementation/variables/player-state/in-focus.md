@@ -3,9 +3,9 @@ title: In focus
 description: Monitora quando il lettore è a fuoco sullo schermo del visualizzatore in modo che il backend possa segnalare il coinvolgimento a fuoco.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '339'
 ht-degree: 2%
 
 ---
@@ -87,7 +87,7 @@ tracker.trackPlayerStateStart(stateObject)
 tracker.trackPlayerStateEnd(stateObject)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Utilizza `sendMediaEvent` per inviare un evento `media.statesUpdate` con lo stato aggiunto a `statesStart`:
 
@@ -163,6 +163,10 @@ ADBMobile.media.trackEvent(ADBMobile.media.Event.StateStart, stateObject);
 // When the player loses focus:
 ADBMobile.media.trackEvent(ADBMobile.media.Event.StateEnd, stateObject);
 ```
+
+>[!TAB Roku 2.x]
+
+Il tracciamento dello stato del lettore non è disponibile nel SDK Roku 2.x. Per tenere traccia degli stati del lettore, utilizza [Roku Edge SDK](/help/implementation/edge/roku.md).
 
 >[!TAB API Media Collection]
 

@@ -3,9 +3,9 @@ title: Tipo di flusso
 description: Imposta il tipo di flusso per identificare se un flusso multimediale è un contenuto audio o video.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '323'
 ht-degree: 3%
 
 ---
@@ -87,7 +87,7 @@ var mediaInfo = Media.createMediaObject("video-123",
 tracker.trackSessionStart(mediaInfo, null)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Imposta `streamType` in `xdm.mediaCollection.sessionDetails` quando chiama `createMediaSession`:
 
@@ -171,6 +171,17 @@ var mediaInfo = ADBMobile.media.createMediaObject(
   ADBMobile.media.MediaType.Video
 );
 ADBMobile.media.trackSessionStart(mediaInfo, null);
+```
+
+>[!TAB Roku 2.x]
+
+Passa `MEDIA_TYPE_VIDEO` o `MEDIA_TYPE_AUDIO` come quinto argomento (`mediaType`) a `adb_media_init_mediainfo`:
+
+```brightscript
+adb = ADBMobile()
+mediaInfo = adb_media_init_mediainfo("My Video", "video-123", 128.0, adb.MEDIA_STREAM_TYPE_VOD, adb.MEDIA_TYPE_VIDEO)
+
+adb.mediaTrackSessionStart(mediaInfo, invalid)
 ```
 
 >[!TAB API Media Collection]

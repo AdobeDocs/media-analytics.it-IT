@@ -3,9 +3,9 @@ title: Salta capitolo
 description: Segnala che il visualizzatore ha saltato un capitolo.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '148'
 ht-degree: 2%
 
 ---
@@ -54,7 +54,7 @@ Chiamare `trackEvent` con il tipo di evento `ChapterSkip`.
 tracker.trackEvent(Media.Event.ChapterSkip, null, null)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Chiama `sendMediaEvent` con `eventType: "media.chapterSkip"`:
 
@@ -110,6 +110,15 @@ Chiamare `trackEvent` con il tipo di evento `ChapterSkip`:
 
 ```javascript
 ADBMobile.media.trackEvent(ADBMobile.media.Event.ChapterSkip);
+```
+
+>[!TAB Roku 2.x]
+
+Chiamare `mediaTrackEvent` con il tipo di evento `MEDIA_CHAPTER_SKIP`:
+
+```brightscript
+adb = ADBMobile()
+adb.mediaTrackEvent(adb.MEDIA_CHAPTER_SKIP)
 ```
 
 >[!TAB API Media Collection]

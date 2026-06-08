@@ -3,7 +3,7 @@ title: Caricamenti degli annunci
 description: Segnala il tipo di caricamento dell’annuncio utilizzato per ogni sessione di contenuti multimediali in streaming.
 feature: Dimensions
 role: User, Admin
-source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
 source-wordcount: '157'
 ht-degree: 7%
@@ -34,4 +34,4 @@ Il tipo di caricamento dell’annuncio viene impostato dal lettore all’inizio 
 
 ## Elementi dimensionali
 
-Ogni elemento è la stringa letterale del tipo di caricamento dell’annuncio impostata all’inizio della sessione. I valori non sono vincolati a un’enumerazione standard: definisci una tassonomia coerente nelle implementazioni in modo che i valori vengano aggregati in modo prevedibile nei rapporti.
+Ogni elemento è la stringa letterale del tipo di caricamento dell’annuncio impostata all’inizio della sessione. I valori non sono vincolati a un’enumerazione standard. Definisci una tassonomia coerente nelle implementazioni in modo che i valori vengano aggregati in modo prevedibile nei rapporti.

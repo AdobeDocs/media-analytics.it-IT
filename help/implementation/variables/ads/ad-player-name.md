@@ -3,9 +3,9 @@ title: Nome del lettore dell’annuncio
 description: Imposta il nome del lettore che genera gli annunci. Il lettore dell’annuncio può differire dal lettore del contenuto principale.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '277'
 ht-degree: 2%
 
 ---
@@ -75,7 +75,7 @@ metadata[MediaConstants.AdMetadataKeys.AD_PLAYER] = "Freewheel"
 tracker.trackEvent(Media.Event.AdStart, adObject, metadata)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Imposta `playerName` in `xdm.mediaCollection.advertisingDetails` quando chiama `sendMediaEvent` per `media.adStart`:
 
@@ -145,6 +145,18 @@ Passa il nome del lettore dell’annuncio nell’oggetto metadati contestuali du
 var adInfo = ADBMobile.media.createAdObject("Ford F-150", "ad-2125", 1, 30);
 var metadata = { "a.media.ad.playerName": "Chromecast Player" };
 ADBMobile.media.trackEvent(ADBMobile.media.Event.AdStart, adInfo, metadata);
+```
+
+>[!TAB Roku 2.x]
+
+Passa il nome del lettore dell’annuncio nell’oggetto dati contestuali durante il tracciamento dell’evento di inizio annuncio:
+
+```brightscript
+adb = ADBMobile()
+adInfo = adb_media_init_adinfo("Ford F-150", "ad-2125", 1, 30.0)
+
+contextData = { "a.media.ad.playerName": "Roku Player" }
+adb.mediaTrackEvent(adb.MEDIA_AD_START, adInfo, contextData)
 ```
 
 >[!TAB API Media Collection]

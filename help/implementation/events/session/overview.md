@@ -21,10 +21,10 @@ role_v2:
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: 803
-ht-degree: 2%
+source-wordcount: 807
+ht-degree: 3%
 
 ---
 
@@ -51,7 +51,7 @@ Il tracciamento della riproduzione di base riguarda il caricamento dei contenuti
 ## Passaggi di implementazione
 
 1. **Identifica quando l&#39;utente attiva la riproduzione** (l&#39;utente fa clic su play o viene attivata la riproduzione automatica). Crea un oggetto multimediale con nome del contenuto, ID, lunghezza, tipo di flusso e tipo di file multimediale. Per le definizioni dei campi, vedere [Nome contenuto](/help/implementation/variables/core/content-name.md), [ID contenuto](/help/implementation/variables/core/content-id.md), [Lunghezza contenuto](/help/implementation/variables/core/content-length.md), [Tipo flusso](/help/implementation/variables/core/stream-type.md) e [Tipo contenuto](/help/implementation/variables/core/content-type.md).
-1. **Allega facoltativamente metadati** — metadati standard (spettacolo, stagione, episodio, ecc.) e variabili di dati di contesto personalizzate. Vedi [Show](/help/implementation/variables/standard-metadata/show.md), [Season](/help/implementation/variables/standard-metadata/season.md), [Episode](/help/implementation/variables/standard-metadata/episode.md), [Genre](/help/implementation/variables/standard-metadata/genre.md) e [Network](/help/implementation/variables/standard-metadata/network.md) per i riferimenti alle chiavi di metadati standard.
+1. **Allega facoltativamente metadati**: metadati standard (spettacolo, stagione, episodio, ecc.) e variabili di dati di contesto personalizzate. Vedi [Show](/help/implementation/variables/standard-metadata/show.md), [Season](/help/implementation/variables/standard-metadata/season.md), [Episode](/help/implementation/variables/standard-metadata/episode.md), [Genre](/help/implementation/variables/standard-metadata/genre.md) e [Network](/help/implementation/variables/standard-metadata/network.md) per i riferimenti alle chiavi di metadati standard.
 1. **Chiamare [Avvio sessione](/help/implementation/events/session/session-start.md)** per iniziare a tenere traccia della sessione. In questo modo vengono caricati i dati e i metadati e viene avviata la misurazione QoS del tempo di avvio. SessionStart tiene traccia dell&#39;*intento* da riprodurre, non del primo fotogramma.
 1. **Chiama [Play](/help/implementation/events/playback/play.md)** quando viene eseguito il rendering del primo fotogramma del contenuto sullo schermo.
 1. **Chiama [Avvia pausa](/help/implementation/events/playback/pause-start.md)** quando il lettore si interrompe. Richiama di nuovo Play quando la riproduzione riprende. Non esiste un evento di ripresa separato.
@@ -64,7 +64,7 @@ Il tracciamento della riproduzione di base riguarda il caricamento dei contenuti
 
 ## Riproduzione core
 
-Gli esempi seguenti mostrano un flusso di sessione completo, dall’inizio alla fine della sessione, fino al completamento del contenuto e alla fine della sessione.
+Gli esempi seguenti mostrano un flusso di sessione completo dall’inizio alla fine della sessione, fino al completamento del contenuto e alla fine della sessione.
 
 Per informazioni dettagliate sull&#39;implementazione per piattaforma, vedere [Inizio sessione](/help/implementation/events/session/session-start.md), [Riproduci](/help/implementation/events/playback/play.md), [Inizio pausa](/help/implementation/events/playback/pause-start.md), [Sessione completata](/help/implementation/events/session/session-complete.md) e [Fine sessione](/help/implementation/events/session/session-end.md).
 
@@ -82,7 +82,7 @@ Per informazioni dettagliate sull&#39;implementazione, vedere [Inizio pausa](/he
 
 ## Gestione degli arresti dell’app
 
-La riproduzione in un’applicazione multimediale può essere interrotta in diversi modi: l’utente preme la pausa, l’app va in background, arriva una telefonata. Indipendentemente dalla causa, le istruzioni di tracciamento sono le stesse:
+La riproduzione in un’applicazione multimediale può essere interrotta in diversi modi. Alcuni esempi includono quando l’utente preme la pausa, l’app va in background o arriva una telefonata. Indipendentemente dalla causa, le istruzioni di tracciamento sono le stesse:
 
 1. Chiama **PauseStart** quando l&#39;applicazione viene interrotta (passa in background, il contenuto multimediale è messo in pausa, ecc.).
 1. Chiama **Play** quando l&#39;applicazione torna in primo piano e/o il contenuto multimediale riprende la riproduzione.

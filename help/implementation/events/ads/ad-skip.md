@@ -3,9 +3,9 @@ title: Salta annuncio
 description: Segnala che il visualizzatore ha saltato un annuncio.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '176'
 ht-degree: 2%
 
 ---
@@ -58,7 +58,7 @@ Chiamare `trackEvent` con il tipo di evento `AdSkip`.
 tracker.trackEvent(Media.Event.AdSkip, null, null)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Chiama `sendMediaEvent` con `eventType: "media.adSkip"`:
 
@@ -114,6 +114,15 @@ Chiamare `trackEvent` con il tipo di evento `AdSkip`:
 
 ```javascript
 ADBMobile.media.trackEvent(ADBMobile.media.Event.AdSkip);
+```
+
+>[!TAB Roku 2.x]
+
+Chiamare `mediaTrackEvent` con il tipo di evento `MEDIA_AD_SKIP`:
+
+```brightscript
+adb = ADBMobile()
+adb.mediaTrackEvent(adb.MEDIA_AD_SKIP)
 ```
 
 >[!TAB API Media Collection]

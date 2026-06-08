@@ -3,7 +3,7 @@ title: Flussi interessati dalla disattivazione audio
 description: Conta le sessioni in cui il visualizzatore ha disattivato l'audio almeno una volta.
 feature: Metrics
 role: User, Admin
-source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 9%
@@ -19,7 +19,7 @@ ht-degree: 9%
 
 >[!ENDSHADEBOX]
 
-La metrica **Flussi interessati dalla disattivazione audio** conta le sessioni in cui il visualizzatore ha disattivato l&#39;audio almeno una volta. La metrica è un valore booleano a livello di sessione: più attivazioni della disattivazione audio all’interno dello stesso conteggio di sessioni di un flusso interessato. Per il volume totale disattivato, utilizzare [Conteggi disattivati](mute-count.md).
+La metrica **Flussi interessati dalla disattivazione audio** conta le sessioni in cui il visualizzatore ha disattivato l&#39;audio almeno una volta. La metrica è un valore booleano a livello di sessione; più disattivazioni audio all’interno dello stesso conteggio di sessioni di un flusso interessato. Per il volume totale disattivato, utilizzare [Conteggi disattivati](mute-count.md).
 
 ## Come è calcolata questa metrica
 

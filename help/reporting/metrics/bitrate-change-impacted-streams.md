@@ -3,7 +3,7 @@ title: Flussi interessati dalla modifica del bitrate
 description: Conta le sessioni in cui si è verificata almeno una modifica del bitrate.
 feature: Metrics
 role: User, Admin
-source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 10%
@@ -13,7 +13,7 @@ ht-degree: 10%
 
 # Flussi interessati dalla modifica del bitrate
 
-La metrica **Flussi interessati dalla modifica del bitrate** conta le sessioni in cui si è verificata almeno una modifica del bitrate. La metrica è un valore booleano a livello di sessione: più modifiche del bitrate all’interno dello stesso conteggio di sessioni rispetto a un flusso interessato. Per il volume totale con modifica del bitrate, utilizzare [Modifiche del bitrate](/help/reporting/dimensions/bitrate-changes.md).
+La metrica **Flussi interessati dalla modifica del bitrate** conta le sessioni in cui si è verificata almeno una modifica del bitrate. La metrica è un valore booleano a livello di sessione; più modifiche del bitrate all’interno dello stesso conteggio di sessioni di un flusso interessato. Per il volume totale con modifica del bitrate, utilizzare [Modifiche del bitrate](/help/reporting/dimensions/bitrate-changes.md).
 
 ## Come è calcolata questa metrica
 

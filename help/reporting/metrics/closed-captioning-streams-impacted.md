@@ -3,7 +3,7 @@ title: Flussi interessati dalla funzione sottotitoli
 description: Conta le sessioni in cui il visualizzatore ha abilitato i sottotitoli almeno una volta.
 feature: Metrics
 role: User, Admin
-source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 8%
@@ -19,7 +19,7 @@ ht-degree: 8%
 
 >[!ENDSHADEBOX]
 
-La metrica **Flussi interessati dai sottotitoli** conta le sessioni in cui il visualizzatore ha abilitato i sottotitoli almeno una volta. La metrica è un valore booleano a livello di sessione: più sottotitoli vengono alternati, all’interno dello stesso conteggio di sessioni, a un flusso interessato. Per il volume totale abilitato per i sottotitoli, utilizzare [Conteggi sottotitoli](closed-captioning-count.md).
+La metrica **Flussi interessati dai sottotitoli** conta le sessioni in cui il visualizzatore ha abilitato i sottotitoli almeno una volta. La metrica è un valore booleano a livello di sessione; più didascalie vengono conteggiate nello stesso numero di sessioni di un flusso interessato. Per il volume totale abilitato per i sottotitoli, utilizzare [Conteggi sottotitoli](closed-captioning-count.md).
 
 ## Come è calcolata questa metrica
 

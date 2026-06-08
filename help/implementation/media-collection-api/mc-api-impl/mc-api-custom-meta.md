@@ -1,5 +1,5 @@
 ---
-title: Supporto per metadati personalizzati
+title: Supporto per metadati personalizzati API di Media Collection
 description: Scopri come fornire coppie chiave:valore personalizzate negli eventi sessionStart, chapterStart e adStart.
 uuid: df4109dd-9fca-4c33-a7d5-8e6eec257527
 exl-id: 672fa804-4a4f-4f06-b29b-b0aad27ca2f3
@@ -18,14 +18,14 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: 449
-ht-degree: 7%
+source-wordcount: 435
+ht-degree: 5%
 
 ---
 
-# Supporto per metadati personalizzati{#custom-metadata-support}
+# Supporto per metadati personalizzati API di Media Collection
 
 L&#39;API Media Collection consente di inviare coppie chiave-valore personalizzate insieme ai parametri standard negli eventi `sessionStart`, `adStart` e `chapterStart`. I metadati personalizzati vengono inoltrati a **Adobe Analytics** con i rispettivi eventi di chiusura dei contenuti multimediali.
 
@@ -80,7 +80,7 @@ I metadati personalizzati sono un **oggetto** (coppie chiave-valore) piatto a li
 
 ### Requisiti principali per la denominazione
 
-* Evita di usare il prefisso `media.` nelle chiavi di metadati personalizzate: viene mappato sui campi multimediali standard e potrebbe sovrascriverlo nei rapporti di Analytics
+* Evita di usare il prefisso `media.` nelle chiavi di metadati personalizzate. Viene mappato sui campi multimediali standard e potrebbe sovrascriverli nei rapporti di Analytics
 * Il prefisso `a.` è riservato per i metadati standard di Adobe e non deve essere utilizzato
 
 ## Metadati personalizzati del contenuto principale
@@ -179,13 +179,6 @@ curl -X POST "https://{uri}/api/v1/sessions/{sid}/events" \
 * I metadati di `sessionStart` persistono per l&#39;intera sessione; gli aggiornamenti richiedono una nuova sessione
 * Ogni evento `adStart` e `chapterStart` può contenere metadati personalizzati diversi
 
-## Documentazione correlata
-
-* [Supporto per metadati personalizzati - Formato XDM](/help/implementation/edge/custom-metadata.md) — Invio di metadati personalizzati tramite Experience Edge ad Analytics e AEP
-* [Connettore di origine di Adobe Analytics per i dati della suite di rapporti](https://experienceleague.adobe.com/it/docs/experience-platform/sources/connectors/adobe-applications/analytics) — Importa dati di Analytics in Adobe Experience Platform
-
-<!--
-* [Session endpoints](sessions.md) — Session lifecycle management
-* [Ad endpoints](ads.md) — Track advertising impressions
-* [Chapter endpoints](chapters.md) — Segment content into chapters
--->
+>[!MORELIKETHIS]
+>* [Supporto metadati personalizzati - Formato XDM](/help/implementation/edge/custom-metadata.md)
+>* [Connettore di origine di Adobe Analytics per i dati della suite di rapporti](https://experienceleague.adobe.com/it/docs/experience-platform/sources/connectors/adobe-applications/analytics)

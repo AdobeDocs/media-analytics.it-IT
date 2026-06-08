@@ -3,9 +3,9 @@ title: Inizio capitolo
 description: Segnala l’inizio di un segmento di capitolo all’interno del contenuto.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '189'
 ht-degree: 2%
 
 ---
@@ -70,7 +70,7 @@ val chapterObject = Media.createChapterObject("Pilot Episode - Opening",
 tracker.trackEvent(Media.Event.ChapterStart, chapterObject, null)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Chiama `sendMediaEvent` con `eventType: "media.chapterStart"` e il `chapterDetails` richiesto:
 
@@ -151,6 +151,17 @@ var chapterInfo = ADBMobile.media.createChapterObject(
 );
 
 ADBMobile.media.trackEvent(ADBMobile.media.Event.ChapterStart, chapterInfo, null);
+```
+
+>[!TAB Roku 2.x]
+
+Genera un oggetto capitolo con `adb_media_init_chapterinfo`, quindi tieni traccia dell&#39;evento:
+
+```brightscript
+adb = ADBMobile()
+chapterInfo = adb_media_init_chapterinfo("Pilot Episode - Opening", 1, 240.0, 0.0)  ' name, position, length, startTime
+
+adb.mediaTrackEvent(adb.MEDIA_CHAPTER_START, chapterInfo)
 ```
 
 >[!TAB API Media Collection]

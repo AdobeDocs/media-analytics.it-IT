@@ -3,10 +3,10 @@ title: Fine stato
 description: Segnala che il lettore multimediale è uscito da uno stato del lettore tracciato.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 2%
+source-wordcount: '220'
+ht-degree: 1%
 
 ---
 
@@ -77,7 +77,7 @@ val stateObject = Media.createStateObject(MediaConstants.PlayerState.FULLSCREEN)
 tracker.trackEvent(Media.Event.StateEnd, stateObject, null)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Chiamare `sendMediaEvent` con `eventType: "media.statesUpdate"` e il nome dello stato in `statesEnd`:
 
@@ -140,6 +140,10 @@ var stateObject = ADBMobile.media.createStateObject(ADBMobile.media.PlayerState.
 
 ADBMobile.media.trackEvent(ADBMobile.media.Event.StateEnd, stateObject);
 ```
+
+>[!TAB Roku 2.x]
+
+Il tracciamento dello stato del lettore non è disponibile nel SDK Roku 2.x. Per tenere traccia degli stati del lettore, utilizza [Roku Edge SDK](/help/implementation/edge/roku.md).
 
 >[!TAB API Media Collection]
 

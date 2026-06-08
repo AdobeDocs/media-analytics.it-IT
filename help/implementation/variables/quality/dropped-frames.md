@@ -3,9 +3,9 @@ title: Fotogrammi persi
 description: Imposta il conteggio corrente dei fotogrammi saltati sull'oggetto QoE in modo che il backend possa riportare la qualità del rilascio dei fotogrammi.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '303'
+source-wordcount: '323'
 ht-degree: 2%
 
 ---
@@ -83,7 +83,7 @@ val qoeObject = Media.createQoEObject(3200L,
 tracker.updateQoEObject(qoeObject)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Imposta `droppedFrames` in `xdm.mediaCollection.qoeDataDetails` quando chiama `sendMediaEvent`:
 
@@ -150,6 +150,17 @@ var qosInfo = ADBMobile.media.createQoSObject(
   0      // droppedFrames (cumulative total)
 );
 ADBMobile.media.updateQoSObject(qosInfo);
+```
+
+>[!TAB Roku 2.x]
+
+Passa il conteggio cumulativo dei fotogrammi saltati come quarto argomento (`droppedFrames`) a `adb_media_init_qosinfo` e aggiorna il tracciatore con `mediaUpdateQoS`:
+
+```brightscript
+adb = ADBMobile()
+qosInfo = adb_media_init_qosinfo(3200.0, 0.0, 24.0, 0.0)  ' bitrate, startupTime, fps, droppedFrames
+
+adb.mediaUpdateQoS(qosInfo)
 ```
 
 >[!TAB API Media Collection]

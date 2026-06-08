@@ -3,7 +3,7 @@ title: Configurare l’estensione tag Web SDK per contenuti multimediali in stre
 description: Configura la raccolta di file multimediali in streaming nell’estensione tag Adobe Experience Platform Web SDK.
 feature: Streaming Media
 role: Developer
-source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 0%
@@ -23,10 +23,10 @@ L&#39;estensione tag Adobe Experience Platform Web SDK consente di configurare l
 1. Nell&#39;interfaccia utente di Data Collection, apri la proprietà Web e seleziona **[!UICONTROL Extensions]**.
 1. Nell&#39;estensione **Adobe Experience Platform Web SDK** installata, selezionare **[!UICONTROL Configure]**.
 1. Espandere la sezione **[!UICONTROL Streaming Media]** e impostare quanto segue:
-   * **[!UICONTROL Channel]** — il nome del canale riportato per ogni sessione.
-   * **[!UICONTROL Player name]** — nome del lettore multimediale in uso.
+   * **[!UICONTROL Channel]**: nome del canale segnalato per ogni sessione.
+   * **[!UICONTROL Player name]**: nome del lettore multimediale in uso.
    * **[!UICONTROL Application version]**: versione dell&#39;applicazione lettore.
-   * **[!UICONTROL Main ping interval]** e **[!UICONTROL Ad ping interval]** — la cadenza di ping (in secondi) per il contenuto principale e gli annunci.
+   * **[!UICONTROL Main ping interval]** e **[!UICONTROL Ad ping interval]**: la cadenza del ping (in secondi) per il contenuto principale e gli annunci.
 1. Salva la configurazione dell’estensione e pubblica le modifiche.
 
 ## Tracciare gli eventi multimediali

@@ -3,9 +3,9 @@ title: Offset capitolo
 description: Imposta lo scostamento del capitolo all’interno del contenuto, in secondi dall’inizio.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '243'
 ht-degree: 2%
 
 ---
@@ -81,7 +81,7 @@ val chapterObject = Media.createChapterObject("Act II",
 tracker.trackEvent(Media.Event.ChapterStart, chapterObject, null)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Imposta `offset` in `xdm.mediaCollection.chapterDetails` quando chiama `sendMediaEvent` per `media.chapterStart`:
 
@@ -158,6 +158,17 @@ var chapterInfo = ADBMobile.media.createChapterObject(
   0                           // startTime (seconds from content start)
 );
 ADBMobile.media.trackEvent(ADBMobile.media.Event.ChapterStart, chapterInfo, null);
+```
+
+>[!TAB Roku 2.x]
+
+Passare l&#39;offset del capitolo in secondi come quarto argomento (`startTime`) a `adb_media_init_chapterinfo`:
+
+```brightscript
+adb = ADBMobile()
+chapterInfo = adb_media_init_chapterinfo("Pilot Episode - Opening", 1, 240.0, 0.0)  ' name, position, length, startTime
+
+adb.mediaTrackEvent(adb.MEDIA_CHAPTER_START, chapterInfo)
 ```
 
 >[!TAB API Media Collection]
