@@ -15,7 +15,7 @@ ht-degree: 2%
 
 >[!BEGINSHADEBOX]
 
-*In questa pagina viene illustrata la raccolta dati per lo stato **Sottotitoli**del lettore. Vedi [Flussi interessati dai sottotitoli](/help/reporting/metrics/closed-captioning-streams-impacted.md), [Conteggi sottotitoli](/help/reporting/metrics/closed-captioning-count.md) e [Durata totale sottotitoli](/help/reporting/metrics/closed-captioning-total-duration.md) per le metriche di reporting corrispondenti.*
+*In questa pagina viene illustrata la raccolta dati per lo stato **Sottotitoli**&#x200B;del lettore. Vedi [Flussi interessati dai sottotitoli](/help/reporting/metrics/closed-captioning-streams-impacted.md), [Conteggi sottotitoli](/help/reporting/metrics/closed-captioning-count.md) e [Durata totale sottotitoli](/help/reporting/metrics/closed-captioning-total-duration.md) per le metriche di reporting corrispondenti.*
 
 >[!ENDSHADEBOX]
 
