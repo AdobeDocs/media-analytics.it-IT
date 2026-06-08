@@ -24,7 +24,7 @@ L’evento di modifica del bitrate segnala che il lettore ha negoziato un nuovo 
 
 >[!TAB Web SDK]
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.bitrateChange"` e il nuovo bitrate in `qoeDataDetails`:
+Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.bitrateChange"` e il nuovo bitrate in `qoeDataDetails`:
 
 ```javascript
 alloy("sendEvent", {

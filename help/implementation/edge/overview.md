@@ -25,13 +25,13 @@ Indipendentemente dal codebase utilizzato, devi prima completare la configurazio
 1. **Conferma una soluzione Adobe compatibile.** È necessaria un&#39;implementazione funzionante di almeno uno dei seguenti elementi:
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-landing.html?lang=it): la destinazione di reporting principale per i dati multimediali basati su Edge
    * [Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=it): supportato insieme o al posto di CJA tramite lo stesso flusso di dati
-   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=it) o [Real-Time Customer Data Platform](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html): aggiungi il servizio **[!UICONTROL Adobe Experience Platform]** allo stream di dati durante la configurazione di uno di questi
+   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=it) o [Real-Time Customer Data Platform](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=it): aggiungi il servizio **[!UICONTROL Adobe Experience Platform]** allo stream di dati durante la configurazione di uno di questi
 
 ## Configurare lo schema in Adobe Experience Platform
 
 Per standardizzare la raccolta dei dati tra le applicazioni che utilizzano Adobe Experience Platform, Adobe ha creato lo standard Experience Data Model (XDM) aperto e documentato pubblicamente.
 
-1. In Adobe Experience Platform, iniziare a creare lo schema come descritto in [Creare e modificare gli schemi nell&#39;interfaccia utente](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=en).
+1. In Adobe Experience Platform, iniziare a creare lo schema come descritto in [Creare e modificare gli schemi nell&#39;interfaccia utente](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=it).
 
 1. Nella pagina Dettagli schema, scegliere **[!UICONTROL Experience Event]** come classe base per lo schema.
 
@@ -130,7 +130,7 @@ Per standardizzare la raccolta dei dati tra le applicazioni che utilizzano Adobe
 
       ![add-custom-metadata](assets/add-custom-fields.png)
 
-   1. [Utilizza il percorso generato](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/fields/overview#type-specific-properties) per il campo personalizzato nel payload della richiesta.
+   1. [Utilizza il percorso generato](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/ui/fields/overview#type-specific-properties) per il campo personalizzato nel payload della richiesta.
 
       ![add-custom-metadata](assets/custom-fields-path.png)
 
@@ -144,7 +144,7 @@ Per standardizzare la raccolta dei dati tra le applicazioni che utilizzano Adobe
 
 ## Configurare uno stream di dati in Adobe Experience Platform
 
-1. Creare un nuovo stream di dati come descritto in [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=en).
+1. Creare un nuovo stream di dati come descritto in [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=it).
 
    Durante la creazione dello stream di dati, effettua le seguenti selezioni:
 
@@ -156,9 +156,9 @@ Per standardizzare la raccolta dei dati tra le applicazioni che utilizzano Adobe
 
      ![Crea un flusso di dati e seleziona uno schema](assets/datastream-create-schema.png)
 
-   * Aggiungi i servizi appropriati al flusso di dati in base alla soluzione Adobe. Per informazioni sull&#39;aggiunta di un servizio, vedere &quot;Aggiungere servizi a uno stream di dati&quot; in [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=en#view-details).
+   * Aggiungi i servizi appropriati al flusso di dati in base alla soluzione Adobe. Per informazioni sull&#39;aggiunta di un servizio, vedere &quot;Aggiungere servizi a uno stream di dati&quot; in [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=it#view-details).
 
-      * **[!UICONTROL Adobe Analytics]** (se si utilizza Adobe Analytics): definire una suite di rapporti come descritto in [Creare una suite di rapporti](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite).
+      * **[!UICONTROL Adobe Analytics]** (se si utilizza Adobe Analytics): definire una suite di rapporti come descritto in [Creare una suite di rapporti](https://experienceleague.adobe.com/it/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite).
 
       * **[!UICONTROL Adobe Experience Platform]** (se si utilizza Customer Journey Analytics, Adobe Journey Optimizer o Real-Time Customer Data Platform)
 
@@ -172,7 +172,7 @@ Per standardizzare la raccolta dei dati tra le applicazioni che utilizzano Adobe
 
 Con lo schema, il set di dati e lo stream di dati impostati, implementa una delle seguenti basi di codice per iniziare a inviare dati multimediali in streaming ad Edge Network. Ogni pagina descrive la configurazione specifica per i contenuti multimediali in streaming; il codice per evento e per variabile risiede in [Eventi](/help/implementation/events/overview.md) e [Variabili](/help/implementation/variables/overview.md).
 
-Le implementazioni di **In-code** scrivono le chiamate SDK direttamente nel codice sorgente dell&#39;applicazione. **Utilizzo delle implementazioni Tags** utilizza [Tag Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/tags/home) che consente di configurare e distribuire le regole di tracciamento senza modificare il codice dell&#39;applicazione. Scegli quale approccio si adatta al flusso di lavoro di distribuzione.
+Le implementazioni di **In-code** scrivono le chiamate SDK direttamente nel codice sorgente dell&#39;applicazione. **Utilizzo delle implementazioni Tags** utilizza [Tag Adobe Experience Platform](https://experienceleague.adobe.com/it/docs/experience-platform/tags/home) che consente di configurare e distribuire le regole di tracciamento senza modificare il codice dell&#39;applicazione. Scegli quale approccio si adatta al flusso di lavoro di distribuzione.
 
 | Codebase | In-code | Utilizzo dei tag |
 |---|---|---|

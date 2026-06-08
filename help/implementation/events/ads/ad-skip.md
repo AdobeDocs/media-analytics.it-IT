@@ -28,7 +28,7 @@ L’evento di salto dell’annuncio segnala che il visualizzatore ha saltato un 
 
 >[!TAB Web SDK]
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.adSkip"`:
+Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.adSkip"`:
 
 ```javascript
 alloy("sendEvent", {

@@ -26,7 +26,7 @@ Nomi di stato validi: `fullscreen`, `mute`, `closedCaptioning`, `pictureInPictur
 
 >[!TAB Web SDK]
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.statesUpdate"` e il nome dello stato in `statesEnd`:
+Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.statesUpdate"` e il nome dello stato in `statesEnd`:
 
 ```javascript
 alloy("sendEvent", {

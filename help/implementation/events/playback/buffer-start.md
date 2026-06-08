@@ -30,7 +30,7 @@ L’evento di avvio del buffer segnala che il lettore multimediale è entrato in
 
 >[!TAB Web SDK]
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.bufferStart"`:
+Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.bufferStart"`:
 
 ```javascript
 alloy("sendEvent", {

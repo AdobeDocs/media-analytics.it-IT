@@ -26,7 +26,7 @@ Una sessione scade automaticamente se **non vengono ricevuti eventi per 10 minut
 
 >[!TAB Web SDK]
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.sessionStart"` e il `sessionDetails` richiesto. La risposta include l&#39;ID sessione in `handle[].payload[].sessionId` (tipo `media-analytics:new-session`). Memorizzare questo valore e passarlo come `sessionID` in tutti gli eventi successivi.
+Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.sessionStart"` e il `sessionDetails` richiesto. La risposta include l&#39;ID sessione in `handle[].payload[].sessionId` (tipo `media-analytics:new-session`). Memorizzare questo valore e passarlo come `sessionID` in tutti gli eventi successivi.
 
 ```javascript
 alloy("sendEvent", {

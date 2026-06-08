@@ -24,7 +24,7 @@ L’evento di completamento del capitolo segnala che la riproduzione di un capit
 
 >[!TAB Web SDK]
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.chapterComplete"`:
+Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.chapterComplete"`:
 
 ```javascript
 alloy("sendEvent", {

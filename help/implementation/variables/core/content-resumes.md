@@ -24,7 +24,7 @@ Il contenuto riprende la variabile contrassegna una sessione che riprende una ri
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.resume` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.hasResume`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.hasResume`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
 | **Caratteristica Audience Manager** | N/D |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md) |
@@ -35,7 +35,7 @@ Il contenuto riprende la variabile contrassegna una sessione che riprende una ri
 
 >[!TAB Web SDK]
 
-Imposta `hasResume` su `true` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) per la sessione ripresa:
+Imposta `hasResume` su `true` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) per la sessione ripresa:
 
 ```javascript
 alloy("sendEvent", {
