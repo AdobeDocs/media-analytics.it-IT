@@ -3,9 +3,9 @@ title: Tipo di caricamento dell’annuncio
 description: Imposta il tipo di caricamento dell’annuncio per la sessione di streaming.
 feature: Streaming Media
 role: Developer
-source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '269'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ La variabile del tipo di caricamento dell’annuncio identifica il tipo di annun
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.adLoad` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.adLoad`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.adLoad`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.adLoad` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
@@ -35,7 +35,7 @@ La variabile del tipo di caricamento dell’annuncio identifica il tipo di annun
 
 >[!TAB Web SDK]
 
-Imposta `adLoad` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`createMediaSession`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/createmediasession):
+Imposta `adLoad` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`createMediaSession`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/createmediasession):
 
 ```javascript
 alloy("createMediaSession", {
@@ -79,7 +79,7 @@ videoMetadata[MediaConstants.VideoMetadataKeys.AD_LOAD] = "linear"
 tracker.trackSessionStart(mediaInfo, videoMetadata)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Utilizza `createMediaSession` per impostare `adLoad` in `sessionDetails`:
 
@@ -150,6 +150,21 @@ var standardMetadata = {};
 standardMetadata[ADBMobile.media.VideoMetadataKeys.AD_LOAD] = "linear";
 mediaInfo[ADBMobile.media.MediaObjectKey.StandardMediaMetadata] = standardMetadata;
 ADBMobile.media.trackSessionStart(mediaInfo, null);
+```
+
+>[!TAB Roku 2.x]
+
+Utilizzare `MEDIA_VideoMetadataKeyAD_LOAD` per impostare il tipo di caricamento dell&#39;annuncio nei metadati standard dell&#39;oggetto multimediale prima di chiamare `mediaTrackSessionStart`:
+
+```brightscript
+adb = ADBMobile()
+mediaInfo = adb_media_init_mediainfo("My Video", "video-123", 128.0, adb.MEDIA_STREAM_TYPE_VOD, adb.MEDIA_TYPE_VIDEO)
+
+standardMetadata = {}
+standardMetadata[adb.MEDIA_VideoMetadataKeyAD_LOAD] = "linear"
+mediaInfo[adb.MEDIA_STANDARD_MEDIA_METADATA] = standardMetadata
+
+adb.mediaTrackSessionStart(mediaInfo, invalid)
 ```
 
 >[!TAB API Media Collection]

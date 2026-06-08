@@ -3,10 +3,10 @@ title: Inizio annuncio
 description: Segnala l’inizio della riproduzione di un singolo annuncio.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 2%
+source-wordcount: '207'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +28,7 @@ L’evento di inizio annuncio segnala l’inizio della riproduzione di un singol
 
 >[!TAB Web SDK]
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.adStart"` e il `advertisingDetails` richiesto:
+Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.adStart"` e il `advertisingDetails` richiesto:
 
 ```javascript
 alloy("sendEvent", {
@@ -75,7 +75,7 @@ val adObject = Media.createAdObject("Ford F-150",
 tracker.trackEvent(Media.Event.AdStart, adObject, null)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Chiama `sendMediaEvent` con `eventType: "media.adStart"` e il `advertisingDetails` richiesto:
 
@@ -158,6 +158,17 @@ var adInfo = ADBMobile.media.createAdObject(
 );
 
 ADBMobile.media.trackEvent(ADBMobile.media.Event.AdStart, adInfo, null);
+```
+
+>[!TAB Roku 2.x]
+
+Crea un oggetto annuncio con `adb_media_init_adinfo`, quindi tieni traccia dell&#39;evento. La posizione dell’annuncio all’interno del pod è basata su 1.
+
+```brightscript
+adb = ADBMobile()
+adInfo = adb_media_init_adinfo("Ford F-150", "ad-2125", 1, 15.0)  ' name, id, position, length
+
+adb.mediaTrackEvent(adb.MEDIA_AD_START, adInfo)
 ```
 
 >[!TAB API Media Collection]

@@ -3,9 +3,9 @@ title: Fascia oraria
 description: Imposta il periodo fisso dell’ora del giorno (Mattina, Pomeriggio, Primetime, Late Night) in cui il contenuto è stato trasmesso o riprodotto.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '256'
 ht-degree: 4%
 
 ---
@@ -24,7 +24,7 @@ La variabile della parte giorno è il bucket dell&#39;ora del giorno in cui il c
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.dayPart` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.dayPart`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.dayPart`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.dayPart` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
@@ -35,7 +35,7 @@ La variabile della parte giorno è il bucket dell&#39;ora del giorno in cui il c
 
 >[!TAB Web SDK]
 
-Imposta `dayPart` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `dayPart` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -73,7 +73,7 @@ metadata[MediaConstants.VideoMetadataKeys.DAY_PART] = "Primetime"
 tracker.trackSessionStart(mediaInfo, metadata)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Utilizza `createMediaSession` per impostare `dayPart` in `sessionDetails`:
 
@@ -144,6 +144,21 @@ var standardMetadata = {};
 standardMetadata[ADBMobile.media.VideoMetadataKeys.DAY_PART] = "Primetime";
 mediaInfo[ADBMobile.media.MediaObjectKey.StandardMediaMetadata] = standardMetadata;
 ADBMobile.media.trackSessionStart(mediaInfo, null);
+```
+
+>[!TAB Roku 2.x]
+
+Utilizzare `MEDIA_VideoMetadataKeyDAY_PART` per impostare la parte giorno nei metadati standard dell&#39;oggetto multimediale prima di chiamare `mediaTrackSessionStart`:
+
+```brightscript
+adb = ADBMobile()
+mediaInfo = adb_media_init_mediainfo("My Video", "video-123", 128.0, adb.MEDIA_STREAM_TYPE_VOD, adb.MEDIA_TYPE_VIDEO)
+
+standardMetadata = {}
+standardMetadata[adb.MEDIA_VideoMetadataKeyDAY_PART] = "Primetime"
+mediaInfo[adb.MEDIA_STANDARD_MEDIA_METADATA] = standardMetadata
+
+adb.mediaTrackSessionStart(mediaInfo, invalid)
 ```
 
 >[!TAB API Media Collection]

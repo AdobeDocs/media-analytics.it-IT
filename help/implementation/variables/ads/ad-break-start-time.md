@@ -3,9 +3,9 @@ title: Ora di inizio dell’interruzione annuncio
 description: Imposta l’ora di inizio (offset) dell’interruzione pubblicitaria all’interno del contenuto, in secondi.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '259'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ La variabile del tempo di inizio dell’interruzione pubblicitaria è lo scostam
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.ad.podSecond` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.advertisingPodDetails.offset`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-pod-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.advertisingPodDetails.offset`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/advertising-pod-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.ad.podSecond` |
 | **Obbligatorio** | Sì |
 | **Inviato con** | [Inizio interruzione annuncio](/help/implementation/events/ads/ad-break-start.md), chiusura annuncio |
@@ -35,7 +35,7 @@ La variabile del tempo di inizio dell’interruzione pubblicitaria è lo scostam
 
 >[!TAB Web SDK]
 
-Imposta `offset` all&#39;interno di `xdm.mediaCollection.advertisingPodDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `offset` all&#39;interno di `xdm.mediaCollection.advertisingPodDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -78,7 +78,7 @@ val adBreakObject = Media.createAdBreakObject("mid-roll-1",
 tracker.trackEvent(Media.Event.AdBreakStart, adBreakObject, null)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Imposta `offset` in `xdm.mediaCollection.advertisingPodDetails` quando chiama `sendMediaEvent` per `media.adBreakStart`:
 
@@ -151,6 +151,17 @@ var adBreakInfo = ADBMobile.media.createAdBreakObject(
   90
 );
 ADBMobile.media.trackEvent(ADBMobile.media.Event.AdBreakStart, adBreakInfo);
+```
+
+>[!TAB Roku 2.x]
+
+Passa il tempo di avvio in secondi come secondo argomento a `adb_media_init_adbreakinfo`. Prendere nota dell&#39;ordine dei parametri Roku: `name, startTime, position`.
+
+```brightscript
+adb = ADBMobile()
+adBreakInfo = adb_media_init_adbreakinfo("mid-roll-1", 90.0, 2)  ' name, startTime, position
+
+adb.mediaTrackEvent(adb.MEDIA_AD_BREAK_START, adBreakInfo)
 ```
 
 >[!TAB API Media Collection]

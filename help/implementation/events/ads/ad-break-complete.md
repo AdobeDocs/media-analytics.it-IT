@@ -3,9 +3,9 @@ title: Interruzione annuncio completata
 description: Segnala il completamento di tutti gli annunci in un’interruzione pubblicitaria.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '156'
+source-wordcount: '165'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ L’evento di completamento dell’interruzione pubblicitaria segnala che tutti 
 
 >[!TAB Web SDK]
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.adBreakComplete"`:
+Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.adBreakComplete"`:
 
 ```javascript
 alloy("sendEvent", {
@@ -58,7 +58,7 @@ Chiamare `trackEvent` con il tipo di evento `AdBreakComplete`.
 tracker.trackEvent(Media.Event.AdBreakComplete, null, null)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Chiama `sendMediaEvent` con `eventType: "media.adBreakComplete"`:
 
@@ -114,6 +114,15 @@ Chiamare `trackEvent` con il tipo di evento `AdBreakComplete`:
 
 ```javascript
 ADBMobile.media.trackEvent(ADBMobile.media.Event.AdBreakComplete);
+```
+
+>[!TAB Roku 2.x]
+
+Chiamare `mediaTrackEvent` con il tipo di evento `MEDIA_AD_BREAK_COMPLETE`:
+
+```brightscript
+adb = ADBMobile()
+adb.mediaTrackEvent(adb.MEDIA_AD_BREAK_COMPLETE)
 ```
 
 >[!TAB API Media Collection]

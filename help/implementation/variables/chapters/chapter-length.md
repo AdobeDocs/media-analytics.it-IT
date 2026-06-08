@@ -3,9 +3,9 @@ title: Durata capitolo
 description: Imposta la lunghezza di ciascun capitolo, in secondi.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '223'
 ht-degree: 4%
 
 ---
@@ -24,7 +24,7 @@ La variabile di lunghezza del capitolo è la durata del capitolo, in secondi. Im
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.chapter.length` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.chapterDetails.length`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/chapter-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.chapterDetails.length`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/chapter-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.chapter.length` |
 | **Obbligatorio** | No (Mobile SDK); Sì (Edge, Media Collection API) |
 | **Inviato con** | [Inizio capitolo](/help/implementation/events/chapters/chapter-start.md), chiusura capitolo |
@@ -35,7 +35,7 @@ La variabile di lunghezza del capitolo è la durata del capitolo, in secondi. Im
 
 >[!TAB Web SDK]
 
-Imposta `length` all&#39;interno di `xdm.mediaCollection.chapterDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `length` all&#39;interno di `xdm.mediaCollection.chapterDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -81,7 +81,7 @@ val chapterObject = Media.createChapterObject("Pilot Episode - Opening",
 tracker.trackEvent(Media.Event.ChapterStart, chapterObject, null)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Imposta `length` in `xdm.mediaCollection.chapterDetails` quando chiama `sendMediaEvent` per `media.chapterStart`:
 
@@ -158,6 +158,17 @@ var chapterInfo = ADBMobile.media.createChapterObject(
   0                           // startTime
 );
 ADBMobile.media.trackEvent(ADBMobile.media.Event.ChapterStart, chapterInfo, null);
+```
+
+>[!TAB Roku 2.x]
+
+Passa la lunghezza del capitolo in secondi come terzo argomento (`length`) a `adb_media_init_chapterinfo`:
+
+```brightscript
+adb = ADBMobile()
+chapterInfo = adb_media_init_chapterinfo("Pilot Episode - Opening", 1, 240.0, 0.0)  ' name, position, length, startTime
+
+adb.mediaTrackEvent(adb.MEDIA_CHAPTER_START, chapterInfo)
 ```
 
 >[!TAB API Media Collection]

@@ -3,9 +3,9 @@ title: Avvio sessione
 description: Segnala l’inizio di una sessione multimediale e ottieni l’ID sessione richiesto per tutti gli eventi successivi.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '382'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ Una sessione scade automaticamente se **non vengono ricevuti eventi per 10 minut
 
 >[!TAB Web SDK]
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.sessionStart"` e il `sessionDetails` richiesto. La risposta include l&#39;ID sessione in `handle[].payload[].sessionId` (tipo `media-analytics:new-session`). Memorizzare questo valore e passarlo come `sessionID` in tutti gli eventi successivi.
+Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.sessionStart"` e il `sessionDetails` richiesto. La risposta include l&#39;ID sessione in `handle[].payload[].sessionId` (tipo `media-analytics:new-session`). Memorizzare questo valore e passarlo come `sessionID` in tutti gli eventi successivi.
 
 ```javascript
 alloy("sendEvent", {
@@ -75,7 +75,7 @@ val mediaObject = Media.createMediaObject("video-123",
 tracker.trackSessionStart(mediaObject, null)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Chiama `createMediaSession` con i dettagli di sessione richiesti:
 
@@ -162,6 +162,17 @@ var mediaInfo = ADBMobile.media.createMediaObject(
 ADBMobile.media.trackSessionStart(mediaInfo, null);
 ```
 
+>[!TAB Roku 2.x]
+
+Genera un oggetto multimediale con `adb_media_init_mediainfo` e chiama `mediaTrackSessionStart`. Il secondo argomento facoltativo accetta un array associativo di `a.media.*` chiavi di metadati o `invalid`:
+
+```brightscript
+adb = ADBMobile()
+mediaInfo = adb_media_init_mediainfo("video-123", "video-id-123", 128.0, adb.MEDIA_STREAM_TYPE_VOD, adb.MEDIA_TYPE_VIDEO)
+
+adb.mediaTrackSessionStart(mediaInfo, invalid)
+```
+
 >[!TAB API Media Collection]
 
 Invia un POST `sessionStart` all&#39;endpoint [sessioni](/help/implementation/media-collection-api/mc-api-ref/mc-api-sessions-req.md). L&#39;intestazione di risposta `Location` contiene l&#39;ID sessione da utilizzare in tutte le richieste di eventi successive.
@@ -184,7 +195,7 @@ Invia un POST `sessionStart` all&#39;endpoint [sessioni](/help/implementation/me
 
 ## Ripresa di una sessione
 
-Quando si riprende una sessione precedentemente chiusa, ad esempio dopo un handoff tra dispositivi o dopo il ripristino dello stato di riproduzione salvato da parte dell’applicazione, impostare il flag di ripresa all’avvio della sessione. In questo modo Analytics incrementa [[!UICONTROL Content resumes]](/help/reporting/metrics/content-resumes.md) anziché [[!UICONTROL Media starts]](/help/reporting/metrics/media-starts.md).
+Quando si riprende una sessione precedentemente chiusa (ad esempio, dopo un handoff tra dispositivi o dopo il ripristino dello stato di riproduzione salvato da parte dell’applicazione), impostare il flag di ripresa all’avvio della sessione. In questo modo Analytics incrementa [[!UICONTROL Content resumes]](/help/reporting/metrics/content-resumes.md) anziché [[!UICONTROL Media starts]](/help/reporting/metrics/media-starts.md).
 
 ## Tipi di implementazione consigliati
 
@@ -242,7 +253,7 @@ mediaObject[Media.MediaObjectKey.RESUMED] = true
 tracker.trackSessionStart(mediaObject, null)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Aggiungi `"hasResume": true` a `sessionDetails`:
 
@@ -325,6 +336,18 @@ var mediaObject = ADBMobile.media.createMediaObject(
 
 mediaObject[ADBMobile.media.MediaObjectKey.MediaResumed] = true;
 ADBMobile.media.trackSessionStart(mediaObject, null);
+```
+
+>[!TAB Roku 2.x]
+
+Impostare la chiave `resumed` sull&#39;oggetto multimediale prima di chiamare `mediaTrackSessionStart`:
+
+```brightscript
+adb = ADBMobile()
+mediaInfo = adb_media_init_mediainfo("video-123", "video-id-123", 128.0, adb.MEDIA_STREAM_TYPE_VOD, adb.MEDIA_TYPE_VIDEO)
+mediaInfo.resumed = true
+
+adb.mediaTrackSessionStart(mediaInfo, invalid)
 ```
 
 >[!TAB API Media Collection]

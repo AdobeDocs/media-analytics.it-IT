@@ -3,9 +3,9 @@ title: Genere
 description: Imposta il genere di contenuto come stringa delimitata da virgole. Il contenuto multi-genere si suddivide tra gli elementi di riga nel reporting.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '280'
 ht-degree: 3%
 
 ---
@@ -28,7 +28,7 @@ La variabile di genere è il genere di contenuto definito dal produttore (ad ese
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.genre` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.genre`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.genre`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.genre` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
@@ -39,7 +39,7 @@ La variabile di genere è il genere di contenuto definito dal produttore (ad ese
 
 >[!TAB Web SDK]
 
-Imposta `genre` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `genre` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -77,7 +77,7 @@ metadata[MediaConstants.VideoMetadataKeys.GENRE] = "Drama,Action"
 tracker.trackSessionStart(mediaInfo, metadata)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Utilizza `createMediaSession` per impostare `genre` in `sessionDetails`:
 
@@ -148,6 +148,21 @@ var standardMetadata = {};
 standardMetadata[ADBMobile.media.VideoMetadataKeys.GENRE] = "Drama,Action";
 mediaInfo[ADBMobile.media.MediaObjectKey.StandardMediaMetadata] = standardMetadata;
 ADBMobile.media.trackSessionStart(mediaInfo, null);
+```
+
+>[!TAB Roku 2.x]
+
+Utilizzare `MEDIA_VideoMetadataKeyGENRE` per impostare il genere nei metadati standard dell&#39;oggetto multimediale prima di chiamare `mediaTrackSessionStart`:
+
+```brightscript
+adb = ADBMobile()
+mediaInfo = adb_media_init_mediainfo("My Video", "video-123", 128.0, adb.MEDIA_STREAM_TYPE_VOD, adb.MEDIA_TYPE_VIDEO)
+
+standardMetadata = {}
+standardMetadata[adb.MEDIA_VideoMetadataKeyGENRE] = "Drama,Action"
+mediaInfo[adb.MEDIA_STANDARD_MEDIA_METADATA] = standardMetadata
+
+adb.mediaTrackSessionStart(mediaInfo, invalid)
 ```
 
 >[!TAB API Media Collection]

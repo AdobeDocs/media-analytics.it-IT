@@ -3,9 +3,9 @@ title: Annuncio completato
 description: Segnala che un singolo annuncio ha terminato la riproduzione.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '162'
+source-wordcount: '171'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ L’evento di completamento dell’annuncio segnala che un singolo annuncio ha t
 
 >[!TAB Web SDK]
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.adComplete"`:
+Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.adComplete"`:
 
 ```javascript
 alloy("sendEvent", {
@@ -58,7 +58,7 @@ Chiamare `trackEvent` con il tipo di evento `AdComplete`.
 tracker.trackEvent(Media.Event.AdComplete, null, null)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Chiama `sendMediaEvent` con `eventType: "media.adComplete"`:
 
@@ -114,6 +114,15 @@ Chiamare `trackEvent` con il tipo di evento `AdComplete`:
 
 ```javascript
 ADBMobile.media.trackEvent(ADBMobile.media.Event.AdComplete);
+```
+
+>[!TAB Roku 2.x]
+
+Chiamare `mediaTrackEvent` con il tipo di evento `MEDIA_AD_COMPLETE`:
+
+```brightscript
+adb = ADBMobile()
+adb.mediaTrackEvent(adb.MEDIA_AD_COMPLETE)
 ```
 
 >[!TAB API Media Collection]

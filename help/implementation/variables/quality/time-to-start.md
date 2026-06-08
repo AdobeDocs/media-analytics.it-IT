@@ -3,9 +3,9 @@ title: Tempo di avvio
 description: Imposta il tempo di avvio del lettore, in millisecondi, in modo che il backend possa riportare la qualità del tempo al primo fotogramma.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '306'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ La variabile &quot;time to start&quot; è il tempo trascorso, in millisecondi, t
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.qoe.timeToStart` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.qoeDataDetails.timeToStart`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.qoeDataDetails.timeToStart`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/qoe-data-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.qoe.timeToStart` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
@@ -39,7 +39,7 @@ La variabile &quot;time to start&quot; è il tempo trascorso, in millisecondi, t
 
 >[!TAB Web SDK]
 
-Imposta `timeToStart` all&#39;interno di `xdm.mediaCollection.qoeDataDetails` su `media.sessionStart` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `timeToStart` all&#39;interno di `xdm.mediaCollection.qoeDataDetails` su `media.sessionStart` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -89,7 +89,7 @@ val qoeObject = Media.createQoEObject(3200L,
 tracker.updateQoEObject(qoeObject)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Imposta `timeToStart` all&#39;interno di `xdm.mediaCollection.qoeDataDetails` su `media.sessionStart` durante la chiamata a `createMediaSession`:
 
@@ -169,6 +169,17 @@ var qosInfo = ADBMobile.media.createQoSObject(
   0       // droppedFrames
 );
 ADBMobile.media.updateQoSObject(qosInfo);
+```
+
+>[!TAB Roku 2.x]
+
+Passa l&#39;ora di avvio come secondo argomento (`startupTime`) a `adb_media_init_qosinfo` e aggiorna il tracker con `mediaUpdateQoS`:
+
+```brightscript
+adb = ADBMobile()
+qosInfo = adb_media_init_qosinfo(3200.0, 0.0, 24.0, 0.0)  ' bitrate, startupTime, fps, droppedFrames
+
+adb.mediaUpdateQoS(qosInfo)
 ```
 
 >[!TAB API Media Collection]

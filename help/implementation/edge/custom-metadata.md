@@ -3,9 +3,9 @@ title: Supporto per metadati personalizzati - Formato XDM
 description: Scopri come inviare metadati personalizzati con gli eventi di tracciamento dei contenuti multimediali utilizzando il formato Experience Edge XDM.
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '754'
 ht-degree: 2%
 
 ---
@@ -55,7 +55,7 @@ I metadati personalizzati sono un **array di oggetti nome-valore** all&#39;inter
 }
 ```
 
-&lt;InlineAlert variant="warning" slots="text" />
+<InlineAlert variant="warning" slots="text" />
 
 `customMetadata` deve essere un **array** all&#39;interno di `mediaCollection`, non al livello principale `xdm`.
 
@@ -113,7 +113,7 @@ A differenza di `xdm.mediaCollection.customMetadata` che utilizza un **array di 
 ### Convenzioni di denominazione
 
 * **Formato XDM:** prefisso con spazio dei nomi tenant che utilizza un carattere di sottolineatura. È inoltre possibile creare strutture nel gruppo di campi personalizzato del tenant, ad esempio `_<tenant>.<struct_name>.<field_name>`.
-* Formato **`_data`:** campi sono posizionati in `_data.__adobe.analytics.contextData` — non è richiesto alcun prefisso di sottolineatura nel nome del campo (ad esempio, `debugFlag`)
+* Formato **`_data`:** campi inseriti in `_data.__adobe.analytics.contextData`. Non è richiesto alcun prefisso di sottolineatura nel nome del campo (ad esempio, `debugFlag`).
 
 ## Metadati personalizzati del contenuto principale
 
@@ -250,9 +250,9 @@ curl -X POST "https://edge.adobedc.net/ee/va/v1/chapterStart?configId={datastrea
 
 ## Utilizzo dell&#39;oggetto `_data` (metadati solo Analytics)
 
-Utilizza l&#39;oggetto `_data` quando hai bisogno di metadati in Adobe Analytics che devono **non** essere memorizzati nei set di dati di AEP, ad esempio flag temporanei, variabili di debug o hint di elaborazione specifici per Analytics.
+Utilizza l&#39;oggetto `_data` quando hai bisogno di metadati in Adobe Analytics che dovrebbero **non** essere memorizzati nel set di dati di AEP. Alcuni esempi includono flag temporanei, variabili di debug o hint di elaborazione specifici per Analytics.
 
-&lt;InlineAlert variant="warning" slots="text" />
+<InlineAlert variant="warning" slots="text" />
 
 I dati inviati tramite `_data` non sono memorizzati in Adobe Experience Platform e non sono disponibili per Real-Time CDP, Journey Orchestration o altri servizi AEP.
 
@@ -308,7 +308,7 @@ In questo esempio:
 
 ## Posizione dei dati a valle
 
-&lt;InlineAlert variant="info" slots="text" />
+<InlineAlert variant="info" slots="text" />
 
 `xdm.mediaCollection.customMetadata` è il **percorso API in entrata** utilizzato per inviare metadati personalizzati con eventi. Dopo l&#39;elaborazione, i dati vengono inoltrati ad Adobe Analytics come variabili di dati di contesto e memorizzati in Adobe Experience Platform in `xdm.mediaReporting.customMetadata` e come campi appiattiti di livello superiore.
 
@@ -316,7 +316,7 @@ In questo esempio:
 
 * Dopo l’elaborazione, i metadati personalizzati vengono inoltrati ad Adobe Analytics come variabili di dati di contesto. Il prefisso `_tenant` viene rimosso automaticamente, pertanto le regole di elaborazione fanno riferimento solo al percorso del campo dopo `_tenant` (ad esempio, `_mycompany.contentCategory` diventa `contentCategory`)
 * I dati inviati tramite `_data` vengono inoltrati anche ad Adobe Analytics e sono disponibili tramite le regole di elaborazione
-* Utilizza le regole di elaborazione per mappare le variabili di dati di contesto su eVar, prop o altre variabili di Analytics. Per informazioni dettagliate, consulta [Mappatura delle variabili di dati per Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/it/docs/analytics/implementation/aep-edge/data-var-mapping).
+* Utilizza le regole di elaborazione per mappare le variabili di dati di contesto su eVar, prop o altre variabili di Analytics. Per informazioni dettagliate, consulta [Mappatura delle variabili di dati per Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping).
 
 **Adobe Experience Platform:**
 
@@ -335,12 +335,6 @@ In questo esempio:
 
 >[!MORELIKETHIS]
 >
->* [Supporto per metadati personalizzati](/help/implementation/media-collection-api/mc-api-impl/mc-api-custom-meta.md). — API MC (formato JSON)
->* [Tipo di dati Dettagli raccolta multimediale](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/media-collection-details) — Riferimento schema XDM
->* [Mappatura variabile dati per Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/it/docs/analytics/implementation/aep-edge/data-var-mapping) — Mappatura dati contestuali di Analytics per campi XDM
-
-<!--
-* [Session endpoints](sessions.md) — Session lifecycle management
-* [Ad endpoints](ads.md) — Track advertising impressions
-* [Chapter endpoints](chapters.md) — Segment content into chapters
--->
+>* [Supporto metadati personalizzati API di Media Collection](/help/implementation/media-collection-api/mc-api-impl/mc-api-custom-meta.md)
+>* [Tipo di dati Dettagli raccolta multimediale](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-collection-details)
+>* [Mappatura variabile dati per Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping)

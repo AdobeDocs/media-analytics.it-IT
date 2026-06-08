@@ -3,10 +3,10 @@ title: Disattiva audio
 description: Monitora quando il visualizzatore disattiva e riattiva l’audio in modo che il backend possa segnalare il coinvolgimento della disattivazione audio.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '288'
-ht-degree: 3%
+source-wordcount: '313'
+ht-degree: 2%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!BEGINSHADEBOX]
 
-*In questa pagina viene illustrata la raccolta dati per lo stato **Disattiva audio**&#x200B;del lettore. Vedi [Flussi interessati dalla disattivazione audio](/help/reporting/metrics/mute-streams-impacted.md), [Conteggi disattivazione audio](/help/reporting/metrics/mute-count.md) e [Durata totale disattivazione audio](/help/reporting/metrics/mute-total-duration.md) per le metriche di reporting corrispondenti.*
+*In questa pagina viene illustrata la raccolta dati per lo stato **Disattiva audio**del lettore. Vedi [Flussi interessati dalla disattivazione audio](/help/reporting/metrics/mute-streams-impacted.md), [Conteggi disattivazione audio](/help/reporting/metrics/mute-count.md) e [Durata totale disattivazione audio](/help/reporting/metrics/mute-total-duration.md) per le metriche di reporting corrispondenti.*
 
 >[!ENDSHADEBOX]
 
@@ -24,7 +24,7 @@ Lo stato di disattivazione audio del lettore registra quando il visualizzatore d
 | Proprietà | Valore |
 | --- | --- |
 | **Variabili di dati di contesto** | `a.media.states.mute.set`, `a.media.states.mute.count`, `a.media.states.mute.time` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.statesStart[]`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/media-collection-details) e [`xdm.mediaCollection.statesEnd[]`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/media-collection-details) (voci con `name: "mute"`) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.statesStart[]`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-collection-details) e [`xdm.mediaCollection.statesEnd[]`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-collection-details) (voci con `name: "mute"`) |
 | **Caratteristiche Audience Manager** | `c_contextdata.a.media.states.mute.set`, `c_contextdata.a.media.states.mute.count`, `c_contextdata.a.media.states.mute.time` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio stato](/help/implementation/events/player-state/state-start.md), [fine stato](/help/implementation/events/player-state/state-end.md) |
@@ -35,7 +35,7 @@ Lo stato di disattivazione audio del lettore registra quando il visualizzatore d
 
 >[!TAB Web SDK]
 
-Utilizza [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) per inviare un evento `media.statesUpdate` con lo stato aggiunto a `statesStart`:
+Utilizza [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) per inviare un evento `media.statesUpdate` con lo stato aggiunto a `statesStart`:
 
 ```javascript
 alloy("sendEvent", {
@@ -87,7 +87,7 @@ tracker.trackPlayerStateStart(stateObject)
 tracker.trackPlayerStateEnd(stateObject)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Utilizza `sendMediaEvent` per inviare un evento `media.statesUpdate` con lo stato aggiunto a `statesStart`:
 
@@ -163,6 +163,10 @@ ADBMobile.media.trackEvent(ADBMobile.media.Event.StateStart, stateObject);
 // When the viewer unmutes:
 ADBMobile.media.trackEvent(ADBMobile.media.Event.StateEnd, stateObject);
 ```
+
+>[!TAB Roku 2.x]
+
+Il tracciamento dello stato del lettore non è disponibile nel SDK Roku 2.x. Per tenere traccia degli stati del lettore, utilizza [Roku Edge SDK](/help/implementation/edge/roku.md).
 
 >[!TAB API Media Collection]
 

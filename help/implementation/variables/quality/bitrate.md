@@ -3,9 +3,9 @@ title: Bitrate
 description: Imposta il bitrate di riproduzione corrente (in kbps) sull'oggetto QoE in modo che il backend possa calcolare le metriche del bitrate.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '299'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ La variabile bitrate è il bitrate di riproduzione corrente, espresso in kilobit
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.qoe.bitrateAverageBucket` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.qoeDataDetails.bitrate`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/qoe-data-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.qoeDataDetails.bitrate`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/qoe-data-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.qoe.bitrateAverageBucket` |
 | **Obbligatorio** | No |
 | **Inviato con** | Eventi di qualità ([modifica bitrate](/help/implementation/events/playback/bitrate-change.md), [avvio buffer](/help/implementation/events/playback/buffer-start.md), [errore](/help/implementation/events/error.md)), chiusura sessione |
@@ -35,7 +35,7 @@ La variabile bitrate è il bitrate di riproduzione corrente, espresso in kilobit
 
 >[!TAB Web SDK]
 
-Imposta `bitrate` all&#39;interno di `xdm.mediaCollection.qoeDataDetails` il `media.bitrateChange` (o qualsiasi evento relativo alla qualità) durante la chiamata a [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `bitrate` all&#39;interno di `xdm.mediaCollection.qoeDataDetails` il `media.bitrateChange` (o qualsiasi evento relativo alla qualità) durante la chiamata a [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -81,7 +81,7 @@ val qoeObject = Media.createQoEObject(3200L,
 tracker.updateQoEObject(qoeObject)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Impostare `bitrate` all&#39;interno di `xdm.mediaCollection.qoeDataDetails` quando si chiama `sendMediaEvent` per eventi di qualità come `media.bitrateChange`:
 
@@ -156,6 +156,17 @@ var qosInfo = ADBMobile.media.createQoSObject(
   0      // droppedFrames
 );
 ADBMobile.media.updateQoSObject(qosInfo);
+```
+
+>[!TAB Roku 2.x]
+
+Passa il bitrate in kbps come primo argomento a `adb_media_init_qosinfo` e aggiorna il tracciatore con `mediaUpdateQoS`:
+
+```brightscript
+adb = ADBMobile()
+qosInfo = adb_media_init_qosinfo(3200.0, 0.0, 24.0, 0.0)  ' bitrate, startupTime, fps, droppedFrames
+
+adb.mediaUpdateQoS(qosInfo)
 ```
 
 >[!TAB API Media Collection]

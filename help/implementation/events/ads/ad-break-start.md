@@ -3,9 +3,9 @@ title: Avvio dell’interruzione pubblicitaria
 description: Segnala l’inizio di un’interruzione pubblicitaria (una sequenza di uno o più annunci).
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '220'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ L’evento di inizio dell’interruzione pubblicitaria segnala l’inizio di un�
 
 >[!TAB Web SDK]
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.adBreakStart"` e il `advertisingPodDetails` richiesto:
+Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.adBreakStart"` e il `advertisingPodDetails` richiesto:
 
 ```javascript
 alloy("sendEvent", {
@@ -71,7 +71,7 @@ val adBreakObject = Media.createAdBreakObject("pre-roll",
 tracker.trackEvent(Media.Event.AdBreakStart, adBreakObject, null)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Chiama `sendMediaEvent` con `eventType: "media.adBreakStart"` e il `advertisingPodDetails` richiesto:
 
@@ -148,6 +148,17 @@ var adBreakInfo = ADBMobile.media.createAdBreakObject(
 );
 
 ADBMobile.media.trackEvent(ADBMobile.media.Event.AdBreakStart, adBreakInfo);
+```
+
+>[!TAB Roku 2.x]
+
+Crea un oggetto di interruzione pubblicitaria con `adb_media_init_adbreakinfo`, quindi tieni traccia dell’evento. Prendere nota dell&#39;ordine dei parametri Roku: `name, startTime, position`.
+
+```brightscript
+adb = ADBMobile()
+adBreakInfo = adb_media_init_adbreakinfo("pre-roll", 0.0, 1)  ' name, startTime, position
+
+adb.mediaTrackEvent(adb.MEDIA_AD_BREAK_START, adBreakInfo)
 ```
 
 >[!TAB API Media Collection]

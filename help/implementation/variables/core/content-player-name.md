@@ -3,9 +3,9 @@ title: Nome del lettore di contenuti
 description: Imposta il nome del lettore per identificare quale lettore ha eseguito il rendering del contenuto.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '285'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ La variabile del nome del lettore di contenuto identifica quale lettore ha esegu
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.playerName` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.playerName`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.playerName`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.playerName` |
 | **Obbligatorio** | Sì |
 | **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
@@ -35,7 +35,7 @@ La variabile del nome del lettore di contenuto identifica quale lettore ha esegu
 
 >[!TAB Web SDK]
 
-Imposta `playerName` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `playerName` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -82,7 +82,7 @@ config[MediaConstants.TrackerConfig.CHANNEL] = "Sports"
 val tracker = Media.createTracker(config)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 Imposta `playerName` in `xdm.mediaCollection.sessionDetails` quando chiama `createMediaSession`:
 
@@ -157,6 +157,16 @@ var mediaInfo = ADBMobile.media.createMediaObject("My Video", "video-123", 128,
   ADBMobile.media.StreamType.VOD, ADBMobile.media.MediaType.Video);
 var metadata = { "a.media.playerName": "Chromecast Player" };
 ADBMobile.media.trackSessionStart(mediaInfo, metadata);
+```
+
+>[!TAB Roku 2.x]
+
+Imposta `playerName` nella sezione `mediaHeartbeat` di `ADBMobileConfig.json`. Il nome del lettore è un valore di configurazione, non un valore per sessione:
+
+```json
+"mediaHeartbeat": {
+  "playerName": "Roku Player"
+}
 ```
 
 >[!TAB API Media Collection]

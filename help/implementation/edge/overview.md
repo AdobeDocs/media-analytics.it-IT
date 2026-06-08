@@ -3,20 +3,20 @@ title: Panoramica sull’implementazione di Edge
 description: Imposta lo schema, il set di dati e lo stream di dati di Adobe Experience Platform necessari per raccogliere i dati multimediali in streaming tramite Edge Network.
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: 7b5232f25f3aa26e8566783557163f316af3fe57
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1212'
 ht-degree: 4%
 
 ---
 
 # Panoramica sull’implementazione di Edge
 
-L’Edge Network di Adobe Experience Platform consente di inviare dati destinati a più prodotti a un singolo endpoint, che inoltra le informazioni appropriate a ciascun prodotto. Si tratta del modo consigliato per implementare Streaming Media Collection, ed è l’unico approccio che supporta sia Adobe Analytics che Customer Journey Analytics da un’unica strumentazione.
+L’Edge Network di Adobe Experience Platform consente di inviare dati destinati a più prodotti a un singolo endpoint, che inoltra le informazioni appropriate a ciascun prodotto. Questo è il modo consigliato per implementare Streaming Media Collection ed è l’unico approccio che supporta sia Adobe Analytics che Customer Journey Analytics da una singola implementazione.
 
 A differenza dell’approccio legacy di Media SDK, che richiedeva strumenti specifici per ogni soluzione Adobe, un’implementazione Edge utilizza un modello di dati XDM condiviso e un singolo stream di dati. I dati scorrono da SDK o API a Edge Network, che li indirizza quindi a qualsiasi prodotto Adobe configurato nel flusso di dati (Analytics, CJA, AJO o RTCDP). Ciò significa che il passaggio a un altro prodotto o l’aggiunta di prodotti a valle in un secondo momento non richiede la ristrumentazione degli eventi multimediali.
 
-Indipendentemente dalla base di codice utilizzata, ovvero Web SDK, Mobile SDK (iOS o Android), Roku SDK o l’API di Media Edge, è innanzitutto necessario completare la configurazione della piattaforma descritta in questa pagina: crea uno schema, crea un set di dati e configura un datastream.
+Indipendentemente dal codebase utilizzato, devi prima completare la configurazione della piattaforma descritta in questa pagina: crea uno schema, crea un set di dati e configura un flusso di dati.
 
 ## Prerequisiti
 
@@ -24,14 +24,14 @@ Indipendentemente dalla base di codice utilizzata, ovvero Web SDK, Mobile SDK (i
 
 1. **Conferma una soluzione Adobe compatibile.** È necessaria un&#39;implementazione funzionante di almeno uno dei seguenti elementi:
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-landing.html?lang=it): la destinazione di reporting principale per i dati multimediali basati su Edge
-   * [Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=it): supportato insieme a CJA o al suo posto tramite lo stesso flusso di dati
-   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=it) o [Real-Time Customer Data Platform](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=it) — aggiungi il servizio **[!UICONTROL Adobe Experience Platform]** allo stream di dati durante la configurazione di uno di questi
+   * [Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=it): supportato insieme o al posto di CJA tramite lo stesso flusso di dati
+   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=it) o [Real-Time Customer Data Platform](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html): aggiungi il servizio **[!UICONTROL Adobe Experience Platform]** allo stream di dati durante la configurazione di uno di questi
 
 ## Configurare lo schema in Adobe Experience Platform
 
 Per standardizzare la raccolta dei dati tra le applicazioni che utilizzano Adobe Experience Platform, Adobe ha creato lo standard Experience Data Model (XDM) aperto e documentato pubblicamente.
 
-1. In Adobe Experience Platform, iniziare a creare lo schema come descritto in [Creare e modificare gli schemi nell&#39;interfaccia utente](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=it).
+1. In Adobe Experience Platform, iniziare a creare lo schema come descritto in [Creare e modificare gli schemi nell&#39;interfaccia utente](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=en).
 
 1. Nella pagina Dettagli schema, scegliere **[!UICONTROL Experience Event]** come classe base per lo schema.
 
@@ -118,7 +118,7 @@ Per standardizzare la raccolta dei dati tra le applicazioni che utilizzano Adobe
 
    +++ Espandi per visualizzare le istruzioni sull’aggiunta di metadati personalizzati allo schema.
 
-   1. Individuare il nome tenant dell&#39;organizzazione selezionando **[!UICONTROL Account info]** > **[!UICONTROL Assigned orgs]** > [!UICONTROL _&#x200B;**nome organizzazione**&#x200B;_] > **[!UICONTROL tenant]**.
+   1. Individuare il nome tenant dell&#39;organizzazione selezionando **[!UICONTROL Account info]** > **[!UICONTROL Assigned orgs]** > [!UICONTROL _**nome organizzazione**_] > **[!UICONTROL tenant]**.
 
       I campi personalizzati vengono ricevuti tramite questo percorso. Ad esempio, nome tenant: _dcbl → percorso myCustomField: _dcbl.myCustomField.
 
@@ -130,7 +130,7 @@ Per standardizzare la raccolta dei dati tra le applicazioni che utilizzano Adobe
 
       ![add-custom-metadata](assets/add-custom-fields.png)
 
-   1. [Utilizza il percorso generato](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/ui/fields/overview#type-specific-properties) per il campo personalizzato nel payload della richiesta.
+   1. [Utilizza il percorso generato](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/fields/overview#type-specific-properties) per il campo personalizzato nel payload della richiesta.
 
       ![add-custom-metadata](assets/custom-fields-path.png)
 
@@ -144,7 +144,7 @@ Per standardizzare la raccolta dei dati tra le applicazioni che utilizzano Adobe
 
 ## Configurare uno stream di dati in Adobe Experience Platform
 
-1. Creare un nuovo stream di dati come descritto in [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=it).
+1. Creare un nuovo stream di dati come descritto in [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=en).
 
    Durante la creazione dello stream di dati, effettua le seguenti selezioni:
 
@@ -156,9 +156,9 @@ Per standardizzare la raccolta dei dati tra le applicazioni che utilizzano Adobe
 
      ![Crea un flusso di dati e seleziona uno schema](assets/datastream-create-schema.png)
 
-   * Aggiungi i servizi appropriati al flusso di dati in base alla soluzione Adobe. Per informazioni sull&#39;aggiunta di un servizio, vedere &quot;Aggiungere servizi a uno stream di dati&quot; in [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=it#view-details).
+   * Aggiungi i servizi appropriati al flusso di dati in base alla soluzione Adobe. Per informazioni sull&#39;aggiunta di un servizio, vedere &quot;Aggiungere servizi a uno stream di dati&quot; in [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=en#view-details).
 
-      * **[!UICONTROL Adobe Analytics]** (se si utilizza Adobe Analytics): definire una suite di rapporti come descritto in [Creare una suite di rapporti](https://experienceleague.adobe.com/it/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite).
+      * **[!UICONTROL Adobe Analytics]** (se si utilizza Adobe Analytics): definire una suite di rapporti come descritto in [Creare una suite di rapporti](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite).
 
       * **[!UICONTROL Adobe Experience Platform]** (se si utilizza Customer Journey Analytics, Adobe Journey Optimizer o Real-Time Customer Data Platform)
 
@@ -172,14 +172,14 @@ Per standardizzare la raccolta dei dati tra le applicazioni che utilizzano Adobe
 
 Con lo schema, il set di dati e lo stream di dati impostati, implementa una delle seguenti basi di codice per iniziare a inviare dati multimediali in streaming ad Edge Network. Ogni pagina descrive la configurazione specifica per i contenuti multimediali in streaming; il codice per evento e per variabile risiede in [Eventi](/help/implementation/events/overview.md) e [Variabili](/help/implementation/variables/overview.md).
 
-Le implementazioni di **In-code** scrivono le chiamate SDK direttamente nel codice sorgente dell&#39;applicazione. **Utilizzo delle implementazioni Tags** utilizza [Tag Adobe Experience Platform](https://experienceleague.adobe.com/it/docs/experience-platform/tags/home) che consente di configurare e distribuire le regole di tracciamento senza modificare il codice dell&#39;applicazione. Scegli quale approccio si adatta al flusso di lavoro di distribuzione.
+Le implementazioni di **In-code** scrivono le chiamate SDK direttamente nel codice sorgente dell&#39;applicazione. **Utilizzo delle implementazioni Tags** utilizza [Tag Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/tags/home) che consente di configurare e distribuire le regole di tracciamento senza modificare il codice dell&#39;applicazione. Scegli quale approccio si adatta al flusso di lavoro di distribuzione.
 
 | Codebase | In-code | Utilizzo dei tag |
 |---|---|---|
 | Web | [Web SDK](web-sdk.md) | [Estensione tag Web SDK](web-sdk-tags.md) |
 | iOS | [iOS](ios.md) | [iOS (Tag)](ios-tags.md) |
 | Android | [Android](android.md) | [Android (Tag)](android-tags.md) |
-| Roku | [Roku](roku.md) | — |
+| Roku | [Edge Roku](roku.md) | — |
 | API | [API Media Edge](media-edge-api.md) | — |
 
 ## Passaggio successivo

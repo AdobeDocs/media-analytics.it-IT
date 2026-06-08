@@ -3,9 +3,9 @@ title: Tracciare gli stati del lettore
 description: Scopri gli eventi dello stato del lettore e come tenere traccia degli stati a schermo intero, muto, sottotitoli, immagine nell’immagine e messa a fuoco.
 feature: Streaming Media
 role: Developer
-source-git-commit: 031ecfceee8b2f200fd217c8b53232ff100a7002
+source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '656'
 ht-degree: 12%
 
 ---
@@ -149,7 +149,7 @@ tracker.trackEvent(Media.Event.StateStart, fullscreenState, null)
 tracker.trackEvent(Media.Event.StateEnd, fullscreenState, null)
 ```
 
->[!TAB Roku]
+>[!TAB Edge Roku]
 
 ```brightscript
 ' t0 — start mute and picture-in-picture together
@@ -290,6 +290,10 @@ ADBMobile.media.trackEvent(ADBMobile.media.Event.StateStart, fullscreenState, nu
 // t2 — end full screen
 ADBMobile.media.trackEvent(ADBMobile.media.Event.StateEnd, fullscreenState, null);
 ```
+
+>[!TAB Roku 2.x]
+
+Il tracciamento dello stato del lettore non è disponibile nel SDK Roku 2.x. Per tenere traccia degli stati del lettore, utilizza [Roku Edge SDK](/help/implementation/edge/roku.md).
 
 >[!TAB API Media Collection]
 
