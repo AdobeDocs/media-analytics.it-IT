@@ -316,7 +316,7 @@ In questo esempio:
 
 * Dopo l’elaborazione, i metadati personalizzati vengono inoltrati ad Adobe Analytics come variabili di dati di contesto. Il prefisso `_tenant` viene rimosso automaticamente, pertanto le regole di elaborazione fanno riferimento solo al percorso del campo dopo `_tenant` (ad esempio, `_mycompany.contentCategory` diventa `contentCategory`)
 * I dati inviati tramite `_data` vengono inoltrati anche ad Adobe Analytics e sono disponibili tramite le regole di elaborazione
-* Utilizza le regole di elaborazione per mappare le variabili di dati di contesto su eVar, prop o altre variabili di Analytics. Per informazioni dettagliate, consulta [Mappatura delle variabili di dati per Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping).
+* Utilizza le regole di elaborazione per mappare le variabili di dati di contesto su eVar, prop o altre variabili di Analytics. Per informazioni dettagliate, consulta [Mappatura delle variabili di dati per Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/it/docs/analytics/implementation/aep-edge/data-var-mapping).
 
 **Adobe Experience Platform:**
 
@@ -336,5 +336,5 @@ In questo esempio:
 >[!MORELIKETHIS]
 >
 >* [Supporto metadati personalizzati API di Media Collection](/help/implementation/media-collection-api/mc-api-impl/mc-api-custom-meta.md)
->* [Tipo di dati Dettagli raccolta multimediale](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-collection-details)
->* [Mappatura variabile dati per Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping)
+>* [Tipo di dati Dettagli raccolta multimediale](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/media-collection-details)
+>* [Mappatura variabile dati per Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/it/docs/analytics/implementation/aep-edge/data-var-mapping)
