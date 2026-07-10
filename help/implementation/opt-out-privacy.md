@@ -65,7 +65,7 @@ Valori di consenso:
 
 Per ripristinare il tracciamento, chiamare di nuovo `setConsent` con `"y"` come valore `collect.val`.
 
-Per altri formati, incluso IAB TCF 2.0, vedere il comando [setConsent](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/setconsent) nella documentazione di Web SDK.
+Per altri formati, incluso IAB TCF 2.0, vedere il comando [setConsent](https://experienceleague.adobe.com/it/docs/experience-platform/web-sdk/commands/setconsent) nella documentazione di Web SDK.
 
 >[!TAB iOS]
 
