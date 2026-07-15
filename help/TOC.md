@@ -5,10 +5,10 @@ user-guide-title: Guida ai servizi Streaming Media
 breadcrumb-title: Guida ai servizi Streaming Media
 user-guide-description: Implementa i servizi Streaming Media. Gli argomenti trattati comprendono Media SDK e Media Collection API.
 sub-product: media analytics
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: caf61bd76e2911ae5be31c4b1d8265b1df002acf
 workflow-type: tm+mt
-source-wordcount: '697'
-ht-degree: 36%
+source-wordcount: '692'
+ht-degree: 37%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 36%
 # Guida ai servizi Streaming Media {#using}
 
 + [guida ai servizi multimediali di streaming di Adobe](media-overview.md)
-+ [Note sulla versione di Streaming Media Services](release-notes.md)
++ [Note sulla versione dei servizi di contenuti multimediali in streaming](release-notes.md)
 + Introduzione {#getting-started}
    + [Prerequisiti](getting-started/prereqs.md)
    + [Dispositivi supportati](getting-started/supported-devices.md)
@@ -165,7 +165,6 @@ ht-degree: 36%
             + [Condizioni di timeout](implementation/media-collection-api/mc-api-impl/mc-api-timeout.md)
             + [Controllo dell’ordine degli eventi](implementation/media-collection-api/mc-api-impl/mc-api-ctrl-order.md)
             + [Eventi in coda quando la risposta delle sessioni è lenta](implementation/media-collection-api/mc-api-impl/mc-api-queuing.md)
-   + [Impostazioni di privacy e rinuncia](implementation/opt-out-privacy.md)
 + Reporting {#reporting}
    + Configurare la generazione di rapporti {#reporting-setup}
       + [Implementazioni di Edge](reporting/setup/edge-reporting.md)
@@ -300,3 +299,8 @@ ht-degree: 36%
       + [Timeline: Capitoli](use-cases/scenarios/chapter-start-end.md)
       + [Timeline: visualizza fino alla fine](use-cases/scenarios/view-to-end-of-content.md)
       + [Timeline: l’utente abbandona la sessione](use-cases/scenarios/user-abandons-session.md)
+
+<!--
+Removed from before the Reporting section:
+  + [Opt-out and privacy settings](implementation/opt-out-privacy.md)
+-->
