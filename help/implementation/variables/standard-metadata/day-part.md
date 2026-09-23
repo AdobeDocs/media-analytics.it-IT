@@ -3,13 +3,11 @@ title: Fascia oraria
 description: Imposta il periodo fisso dell’ora del giorno (Mattina, Pomeriggio, Primetime, Late Night) in cui il contenuto è stato trasmesso o riprodotto.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '265'
 ht-degree: 4%
-
 ---
-
 
 # Fascia oraria
 
@@ -24,7 +22,7 @@ La variabile della parte giorno è il bucket dell&#39;ora del giorno in cui il c
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.dayPart` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.dayPart`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.dayPart`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.dayPart` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
@@ -35,7 +33,7 @@ La variabile della parte giorno è il bucket dell&#39;ora del giorno in cui il c
 
 >[!TAB Web SDK]
 
-Imposta `dayPart` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `dayPart` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -175,6 +173,6 @@ Includi `media.dayPart` nell&#39;oggetto `params`:
 }
 ```
 
-Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-sessions-req.md).
+Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/sessions).
 
 >[!ENDTABS]

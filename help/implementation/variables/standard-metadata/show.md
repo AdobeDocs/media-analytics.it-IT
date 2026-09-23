@@ -3,13 +3,11 @@ title: Spettacolo
 description: Imposta il nome dello spettacolo per il contenuto video che fa parte di una serie, in modo che gli episodi vengano aggregati a un singolo programma nella reportistica.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '277'
+source-wordcount: '286'
 ht-degree: 3%
-
 ---
-
 
 # Spettacolo
 
@@ -24,7 +22,7 @@ La variabile show è il nome del programma o della serie, ad esempio `"Blinding 
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.show` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.show`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.show`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.show` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
@@ -35,7 +33,7 @@ La variabile show è il nome del programma o della serie, ad esempio `"Blinding 
 
 >[!TAB Web SDK]
 
-Imposta `show` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `show` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -175,6 +173,6 @@ Includi `media.show` nell&#39;oggetto `params` della richiesta POST `sessionStar
 }
 ```
 
-Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-sessions-req.md).
+Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/sessions).
 
 >[!ENDTABS]

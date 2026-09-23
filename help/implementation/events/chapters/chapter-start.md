@@ -3,13 +3,11 @@ title: Inizio capitolo
 description: Segnala l’inizio di un segmento di capitolo all’interno del contenuto.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '198'
 ht-degree: 2%
-
 ---
-
 
 # Inizio capitolo
 
@@ -24,7 +22,7 @@ L’evento di inizio capitolo segnala l’inizio di un capitolo all’interno de
 
 >[!TAB Web SDK]
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.chapterStart"` e il `chapterDetails` richiesto:
+Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.chapterStart"` e il `chapterDetails` richiesto:
 
 ```javascript
 alloy("sendEvent", {
@@ -166,7 +164,7 @@ adb.mediaTrackEvent(adb.MEDIA_CHAPTER_START, chapterInfo)
 
 >[!TAB API Media Collection]
 
-Invia un POST `chapterStart` all&#39;endpoint [eventi](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md):
+Invia un POST `chapterStart` all&#39;endpoint [eventi](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/events):
 
 ```json
 {

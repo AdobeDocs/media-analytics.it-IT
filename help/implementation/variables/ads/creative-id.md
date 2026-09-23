@@ -3,13 +3,11 @@ title: ID creatività
 description: Imposta l’identificatore creativo per ogni annuncio.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '231'
 ht-degree: 4%
-
 ---
-
 
 # ID creatività
 
@@ -24,7 +22,7 @@ La variabile ID creativo identifica l’annuncio creativo specifico. Qualsiasi v
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.ad.creative` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.advertisingDetails.creativeID`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.advertisingDetails.creativeID`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/advertising-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.ad.creative` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio annuncio](/help/implementation/events/ads/ad-start.md), chiusura annuncio |
@@ -35,7 +33,7 @@ La variabile ID creativo identifica l’annuncio creativo specifico. Qualsiasi v
 
 >[!TAB Web SDK]
 
-Imposta `creativeID` all&#39;interno di `xdm.mediaCollection.advertisingDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `creativeID` all&#39;interno di `xdm.mediaCollection.advertisingDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -177,6 +175,6 @@ Includi `media.ad.creativeId` nell&#39;oggetto `params`:
 }
 ```
 
-Per la struttura completa delle richieste, consulta il [Riferimento eventi API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md).
+Per la struttura completa delle richieste, consulta il [Riferimento eventi API di Media Collection](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/events).
 
 >[!ENDTABS]

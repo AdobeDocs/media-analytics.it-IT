@@ -3,13 +3,11 @@ title: Nome del capitolo
 description: Imposta il nome descrittivo di ciascun capitolo in modo che la generazione rapporti a livello di capitolo possa suddividersi per titolo del capitolo.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '234'
 ht-degree: 4%
-
 ---
-
 
 # Nome del capitolo
 
@@ -24,7 +22,7 @@ La variabile del nome del capitolo è il titolo leggibile di un capitolo, ad ese
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.chapter.friendlyName` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.chapterDetails.friendlyName`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/chapter-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.chapterDetails.friendlyName`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/chapter-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.chapter.friendlyName` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio capitolo](/help/implementation/events/chapters/chapter-start.md), chiusura capitolo |
@@ -35,7 +33,7 @@ La variabile del nome del capitolo è il titolo leggibile di un capitolo, ad ese
 
 >[!TAB Web SDK]
 
-Imposta `friendlyName` all&#39;interno di `xdm.mediaCollection.chapterDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `friendlyName` all&#39;interno di `xdm.mediaCollection.chapterDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -186,6 +184,6 @@ Includi `media.chapter.friendlyName` nell&#39;oggetto `params` della richiesta P
 }
 ```
 
-Per la struttura completa delle richieste, consulta il [Riferimento eventi API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md).
+Per la struttura completa delle richieste, consulta il [Riferimento eventi API di Media Collection](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/events).
 
 >[!ENDTABS]

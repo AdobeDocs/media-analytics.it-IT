@@ -3,13 +3,11 @@ title: Valutazione dei contenuti
 description: Impostare la classificazione del contenuto come definito dalle linee guida TV per genitori o dal sistema di classificazione regionale.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '253'
 ht-degree: 2%
-
 ---
-
 
 # Valutazione dei contenuti
 
@@ -24,7 +22,7 @@ La variabile di valutazione del contenuto è la valutazione del pubblico definit
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.rating` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.rating`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.rating`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.rating` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
@@ -35,7 +33,7 @@ La variabile di valutazione del contenuto è la valutazione del pubblico definit
 
 >[!TAB Web SDK]
 
-Imposta `rating` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `rating` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -175,6 +173,6 @@ Includi `media.rating` nell&#39;oggetto `params`:
 }
 ```
 
-Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-sessions-req.md).
+Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/sessions).
 
 >[!ENDTABS]

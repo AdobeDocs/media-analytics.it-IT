@@ -3,13 +3,11 @@ title: Tipo di feed multimediale
 description: Identifica il tipo di feed (ad esempio, East-HD o West-SD) per contenuti che variano in base all’area geografica o alla qualità.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '270'
 ht-degree: 2%
-
 ---
-
 
 # Tipo di feed multimediale
 
@@ -24,7 +22,7 @@ La variabile del tipo di feed multimediale identifica il feed di trasmissione (a
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.feed` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.feed`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.feed`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.feed` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
@@ -35,7 +33,7 @@ La variabile del tipo di feed multimediale identifica il feed di trasmissione (a
 
 >[!TAB Web SDK]
 
-Imposta `feed` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `feed` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -175,6 +173,6 @@ Includi `media.feed` nell&#39;oggetto `params`:
 }
 ```
 
-Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-sessions-req.md).
+Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/sessions).
 
 >[!ENDTABS]

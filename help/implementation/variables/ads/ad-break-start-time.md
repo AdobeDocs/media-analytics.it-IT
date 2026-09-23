@@ -3,13 +3,11 @@ title: Ora di inizio dell’interruzione annuncio
 description: Imposta l’ora di inizio (offset) dell’interruzione pubblicitaria all’interno del contenuto, in secondi.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '268'
 ht-degree: 2%
-
 ---
-
 
 # Ora di inizio dell’interruzione annuncio
 
@@ -24,7 +22,7 @@ La variabile del tempo di inizio dell’interruzione pubblicitaria è lo scostam
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.ad.podSecond` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.advertisingPodDetails.offset`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-pod-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.advertisingPodDetails.offset`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/advertising-pod-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.ad.podSecond` |
 | **Obbligatorio** | Sì |
 | **Inviato con** | [Inizio interruzione annuncio](/help/implementation/events/ads/ad-break-start.md), chiusura annuncio |
@@ -35,7 +33,7 @@ La variabile del tempo di inizio dell’interruzione pubblicitaria è lo scostam
 
 >[!TAB Web SDK]
 
-Imposta `offset` all&#39;interno di `xdm.mediaCollection.advertisingPodDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `offset` all&#39;interno di `xdm.mediaCollection.advertisingPodDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -178,6 +176,6 @@ Includi `media.ad.podSecond` nell&#39;oggetto `params` della richiesta POST `adB
 }
 ```
 
-Per la struttura completa delle richieste, consulta il [Riferimento eventi API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md).
+Per la struttura completa delle richieste, consulta il [Riferimento eventi API di Media Collection](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/events).
 
 >[!ENDTABS]

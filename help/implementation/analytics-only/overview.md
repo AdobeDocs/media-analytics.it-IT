@@ -3,13 +3,11 @@ title: Panoramica sull’implementazione solo per Analytics
 description: Prerequisiti e metodi di implementazione per il componente aggiuntivo Adobe Analytics for Streaming Media, utilizzato per le implementazioni basate solo su Analytics.
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '243'
 ht-degree: 5%
-
 ---
-
 # Panoramica sull’implementazione solo per Analytics
 
 Le implementazioni basate solo su Analytics utilizzano il componente aggiuntivo Adobe Analytics for Streaming Media per inviare dati direttamente ad Adobe Analytics, senza Edge Network. Questi metodi rimangono completamente supportati. Per le nuove implementazioni, Adobe consiglia invece l&#39;implementazione [Edge](/help/implementation/edge/overview.md), perché rende i dati disponibili per Customer Journey Analytics, Adobe Journey Optimizer e Real-Time CDP oltre ad Adobe Analytics.
@@ -33,7 +31,7 @@ Ogni pagina descrive la configurazione specifica per i contenuti multimediali in
 | Web (JavaScript) | [JavaScript](javascript.md) | [Estensione tag di Media Analytics](javascript-tags.md) |
 | Chromecast | [Chromecast](chromecast.md) | — |
 | Roku | [Roku 2.x](roku-2x.md) | — |
-| API | [API Media Collection](media-collection-api.md) | — |
+| API | [API Media Collection](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/implementation) | — |
 
 ## Passaggio successivo
 

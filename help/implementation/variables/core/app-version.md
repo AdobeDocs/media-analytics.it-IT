@@ -3,13 +3,11 @@ title: Versione app
 description: Configura la stringa di versione dell’applicazione lettore multimediale.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '297'
 ht-degree: 2%
-
 ---
-
 
 # Versione app
 
@@ -27,7 +25,7 @@ La variabile di versione dell’app identifica la versione dell’applicazione l
 
 | Proprietà | Valore |
 | --- | --- |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.appVersion`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.appVersion`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
 | **Parametro API Media Collection** | `media.sdkVersion` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md) |
@@ -38,7 +36,7 @@ La variabile di versione dell’app identifica la versione dell’applicazione l
 
 >[!TAB Web SDK]
 
-Imposta `appVersion` nell&#39;oggetto di configurazione `streamingMedia` durante la chiamata a [`configure`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/configure/streamingmedia):
+Imposta `appVersion` nell&#39;oggetto di configurazione `streamingMedia` durante la chiamata a [`configure`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/configure/streamingmedia):
 
 ```javascript
 alloy("configure", {
@@ -177,6 +175,6 @@ Includi `media.sdkVersion` nell&#39;oggetto `params` della richiesta POST `sessi
 }
 ```
 
-Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-sessions-req.md).
+Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/sessions).
 
 >[!ENDTABS]

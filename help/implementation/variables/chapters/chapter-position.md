@@ -3,13 +3,11 @@ title: Posizione del capitolo
 description: Imposta l’indice del capitolo all’interno del contenuto. È necessario specificare la posizione del capitolo affinché l'ID del capitolo possa essere generato automaticamente correttamente.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 4%
-
+source-wordcount: '255'
+ht-degree: 3%
 ---
-
 
 # Posizione del capitolo
 
@@ -24,7 +22,7 @@ La variabile di posizione del capitolo è l&#39;indice del capitolo all&#39;inte
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.chapter.position` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.chapterDetails.index`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/chapter-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.chapterDetails.index`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/chapter-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.chapter.position` |
 | **Obbligatorio** | No (Mobile SDK); Sì (Edge, Media Collection API) |
 | **Inviato con** | [Inizio capitolo](/help/implementation/events/chapters/chapter-start.md), chiusura capitolo |
@@ -35,7 +33,7 @@ La variabile di posizione del capitolo è l&#39;indice del capitolo all&#39;inte
 
 >[!TAB Web SDK]
 
-Imposta `index` all&#39;interno di `xdm.mediaCollection.chapterDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `index` all&#39;interno di `xdm.mediaCollection.chapterDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -185,6 +183,6 @@ Includi `media.chapter.index` nell&#39;oggetto `params` della richiesta POST `ch
 }
 ```
 
-Per la struttura completa delle richieste, consulta il [Riferimento eventi API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md).
+Per la struttura completa delle richieste, consulta il [Riferimento eventi API di Media Collection](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/events).
 
 >[!ENDTABS]

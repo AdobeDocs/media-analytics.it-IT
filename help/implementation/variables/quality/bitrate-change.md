@@ -3,13 +3,11 @@ title: Modifica bitrate
 description: Attiva un evento di modifica del bitrate ogni volta che il lettore passa a un bitrate diverso.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '277'
 ht-degree: 2%
-
 ---
-
 
 # Modifica bitrate
 
@@ -35,7 +33,7 @@ L’evento di modifica del bitrate segnala che il lettore è passato a un bitrat
 
 >[!TAB Web SDK]
 
-Utilizza [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) per inviare un evento `media.bitrateChange` con il nuovo bitrate:
+Utilizza [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) per inviare un evento `media.bitrateChange` con il nuovo bitrate:
 
 ```javascript
 alloy("sendEvent", {
@@ -177,6 +175,6 @@ Invia una richiesta POST `bitrateChange` con il nuovo bitrate:
 }
 ```
 
-Per la struttura completa delle richieste, consulta il [Riferimento eventi API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md).
+Per la struttura completa delle richieste, consulta il [Riferimento eventi API di Media Collection](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/events).
 
 >[!ENDTABS]

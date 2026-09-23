@@ -3,19 +3,17 @@ title: Supporto per metadati personalizzati - Formato XDM
 description: Scopri come inviare metadati personalizzati con gli eventi di tracciamento dei contenuti multimediali utilizzando il formato Experience Edge XDM.
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '774'
 ht-degree: 2%
-
 ---
-
 
 # Supporto per metadati personalizzati: formato XDM
 
 L&#39;API di Experience Edge consente di inviare metadati personalizzati per contenuti multimediali insieme ai campi XDM standard negli eventi API `sessionStart`, `adStart` e `chapterStart`. I metadati personalizzati dei contenuti multimediali inviati tramite il formato XDM possono essere inoltrati sia ad **Adobe Analytics** che a **Adobe Experience Platform**.
 
-Per le implementazioni API di Media Collection, vedere [Supporto metadati personalizzati](/help/implementation/media-collection-api/mc-api-impl/mc-api-custom-meta.md).
+Per le implementazioni API di Media Collection, vedere [Supporto metadati personalizzati](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/custom-metadata).
 
 ## Panoramica
 
@@ -316,7 +314,7 @@ In questo esempio:
 
 * Dopo l’elaborazione, i metadati personalizzati vengono inoltrati ad Adobe Analytics come variabili di dati di contesto. Il prefisso `_tenant` viene rimosso automaticamente, pertanto le regole di elaborazione fanno riferimento solo al percorso del campo dopo `_tenant` (ad esempio, `_mycompany.contentCategory` diventa `contentCategory`)
 * I dati inviati tramite `_data` vengono inoltrati anche ad Adobe Analytics e sono disponibili tramite le regole di elaborazione
-* Utilizza le regole di elaborazione per mappare le variabili di dati di contesto su eVar, prop o altre variabili di Analytics. Per informazioni dettagliate, consulta [Mappatura delle variabili di dati per Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/it/docs/analytics/implementation/aep-edge/data-var-mapping).
+* Utilizza le regole di elaborazione per mappare le variabili di dati di contesto su eVar, prop o altre variabili di Analytics. Per informazioni dettagliate, consulta [Mappatura delle variabili di dati per Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping).
 
 **Adobe Experience Platform:**
 
@@ -335,6 +333,6 @@ In questo esempio:
 
 >[!MORELIKETHIS]
 >
->* [Supporto metadati personalizzati API di Media Collection](/help/implementation/media-collection-api/mc-api-impl/mc-api-custom-meta.md)
->* [Tipo di dati Dettagli raccolta multimediale](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/media-collection-details)
->* [Mappatura variabile dati per Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/it/docs/analytics/implementation/aep-edge/data-var-mapping)
+>* [Supporto metadati personalizzati API di Media Collection](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/custom-metadata)
+>* [Tipo di dati Dettagli raccolta multimediale](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-collection-details)
+>* [Mappatura variabile dati per Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping)

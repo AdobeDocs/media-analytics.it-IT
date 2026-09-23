@@ -3,13 +3,11 @@ title: Fine stato
 description: Segnala che il lettore multimediale è uscito da uno stato del lettore tracciato.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '229'
 ht-degree: 1%
-
 ---
-
 
 # Fine stato
 
@@ -26,7 +24,7 @@ Nomi di stato validi: `fullscreen`, `mute`, `closedCaptioning`, `pictureInPictur
 
 >[!TAB Web SDK]
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.statesUpdate"` e il nome dello stato in `statesEnd`:
+Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.statesUpdate"` e il nome dello stato in `statesEnd`:
 
 ```javascript
 alloy("sendEvent", {
@@ -147,7 +145,7 @@ Il tracciamento dello stato del lettore non è disponibile nel SDK Roku 2.x. Per
 
 >[!TAB API Media Collection]
 
-Invia un POST `stateEnd` all&#39;endpoint [eventi](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md):
+Invia un POST `stateEnd` all&#39;endpoint [eventi](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/events):
 
 ```json
 {

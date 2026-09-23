@@ -3,13 +3,11 @@ title: Flag di contenuto multimediale scaricato
 description: Contrassegna una sessione come riproduzione offline scaricata in modo che venga segnalata separatamente dalle sessioni in streaming.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '322'
 ht-degree: 2%
-
 ---
-
 
 # Flag di contenuto multimediale scaricato
 
@@ -24,7 +22,7 @@ Il flag Media Download indica che una sessione sta riproducendo contenuto offlin
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.downloaded` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.isDownloaded`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.isDownloaded`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.downloaded` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
@@ -35,7 +33,7 @@ Il flag Media Download indica che una sessione sta riproducendo contenuto offlin
 
 >[!TAB Web SDK]
 
-Imposta `isDownloaded` su `true` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `isDownloaded` su `true` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -179,7 +177,7 @@ ADBMobile.media.trackSessionStart(mediaInfo, null);
 
 >[!TAB Roku 2.x]
 
-Il tracciamento dei contenuti scaricati non è disponibile in Roku 2.x SDK. Per segnalare la riproduzione di file multimediali scaricata, utilizza [Roku Edge SDK](/help/implementation/edge/roku.md) o l&#39;[API Media Collection](/help/implementation/analytics-only/media-collection-api.md).
+Il tracciamento dei contenuti scaricati non è disponibile in Roku 2.x SDK. Per segnalare la riproduzione di file multimediali scaricata, utilizza [Roku Edge SDK](/help/implementation/edge/roku.md) o l&#39;[API Media Collection](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/implementation).
 
 >[!TAB API Media Collection]
 
@@ -195,6 +193,6 @@ Includi `media.downloaded` nell&#39;oggetto `params` della richiesta POST `sessi
 }
 ```
 
-Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-sessions-req.md).
+Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/sessions).
 
 >[!ENDTABS]

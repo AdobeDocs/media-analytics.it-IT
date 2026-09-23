@@ -3,13 +3,11 @@ title: Avvio sessione
 description: Segnala l’inizio di una sessione multimediale e ottieni l’ID sessione richiesto per tutti gli eventi successivi.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '382'
-ht-degree: 2%
-
+source-wordcount: '391'
+ht-degree: 3%
 ---
-
 
 # Avvio sessione
 
@@ -26,7 +24,7 @@ Una sessione scade automaticamente se **non vengono ricevuti eventi per 10 minut
 
 >[!TAB Web SDK]
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.sessionStart"` e il `sessionDetails` richiesto. La risposta include l&#39;ID sessione in `handle[].payload[].sessionId` (tipo `media-analytics:new-session`). Memorizzare questo valore e passarlo come `sessionID` in tutti gli eventi successivi.
+Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.sessionStart"` e il `sessionDetails` richiesto. La risposta include l&#39;ID sessione in `handle[].payload[].sessionId` (tipo `media-analytics:new-session`). Memorizzare questo valore e passarlo come `sessionID` in tutti gli eventi successivi.
 
 ```javascript
 alloy("sendEvent", {
@@ -175,7 +173,7 @@ adb.mediaTrackSessionStart(mediaInfo, invalid)
 
 >[!TAB API Media Collection]
 
-Invia un POST `sessionStart` all&#39;endpoint [sessioni](/help/implementation/media-collection-api/mc-api-ref/mc-api-sessions-req.md). L&#39;intestazione di risposta `Location` contiene l&#39;ID sessione da utilizzare in tutte le richieste di eventi successive.
+Invia un POST `sessionStart` all&#39;endpoint [sessioni](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/sessions). L&#39;intestazione di risposta `Location` contiene l&#39;ID sessione da utilizzare in tutte le richieste di eventi successive.
 
 ```json
 {

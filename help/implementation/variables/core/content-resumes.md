@@ -3,13 +3,11 @@ title: Riprende il contenuto
 description: Contrassegna una sessione che riprende una riproduzione precedentemente interrotta in modo che il backend conteggi un evento Riprende contenuto.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '298'
 ht-degree: 3%
-
 ---
-
 
 # Riprende il contenuto
 
@@ -24,7 +22,7 @@ Il contenuto riprende la variabile contrassegna una sessione che riprende una ri
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.resume` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.hasResume`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.hasResume`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
 | **Caratteristica Audience Manager** | N/D |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md) |
@@ -35,7 +33,7 @@ Il contenuto riprende la variabile contrassegna una sessione che riprende una ri
 
 >[!TAB Web SDK]
 
-Imposta `hasResume` su `true` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) per la sessione ripresa:
+Imposta `hasResume` su `true` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) per la sessione ripresa:
 
 ```javascript
 alloy("sendEvent", {
@@ -196,6 +194,6 @@ Includi `media.resume` nell&#39;oggetto `params` della richiesta POST `sessionSt
 }
 ```
 
-Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-sessions-req.md).
+Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/sessions).
 
 >[!ENDTABS]

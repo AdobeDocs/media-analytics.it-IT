@@ -3,13 +3,11 @@ title: Avvio buffer
 description: Segnala che il lettore multimediale è entrato in uno stato di buffering.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '194'
-ht-degree: 2%
-
+source-wordcount: '203'
+ht-degree: 1%
 ---
-
 
 # Avvio buffer
 
@@ -30,7 +28,7 @@ L’evento di avvio del buffer segnala che il lettore multimediale è entrato in
 
 >[!TAB Web SDK]
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.bufferStart"`:
+Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.bufferStart"`:
 
 ```javascript
 alloy("sendEvent", {
@@ -146,7 +144,7 @@ adb.mediaTrackEvent(adb.MEDIA_BUFFER_COMPLETE)
 
 >[!TAB API Media Collection]
 
-Invia un POST `bufferStart` all&#39;endpoint [eventi](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md):
+Invia un POST `bufferStart` all&#39;endpoint [eventi](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/events):
 
 ```json
 {

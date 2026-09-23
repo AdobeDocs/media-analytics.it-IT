@@ -3,13 +3,11 @@ title: Tipo di caricamento dell’annuncio
 description: Imposta il tipo di caricamento dell’annuncio per la sessione di streaming.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '278'
 ht-degree: 2%
-
 ---
-
 
 # Tipo di caricamento dell’annuncio
 
@@ -24,7 +22,7 @@ La variabile del tipo di caricamento dell’annuncio identifica il tipo di annun
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.adLoad` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.adLoad`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.adLoad`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.adLoad` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
@@ -35,7 +33,7 @@ La variabile del tipo di caricamento dell’annuncio identifica il tipo di annun
 
 >[!TAB Web SDK]
 
-Imposta `adLoad` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`createMediaSession`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/createmediasession):
+Imposta `adLoad` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`createMediaSession`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/createmediasession):
 
 ```javascript
 alloy("createMediaSession", {
@@ -181,6 +179,6 @@ Includi `media.adLoad` nell&#39;oggetto `params` della richiesta POST `sessionSt
 }
 ```
 
-Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-sessions-req.md).
+Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/sessions).
 
 >[!ENDTABS]

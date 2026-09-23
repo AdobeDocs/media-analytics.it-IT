@@ -3,19 +3,17 @@ title: Sottotitoli codificati
 description: Monitora quando il visualizzatore attiva e disattiva i sottotitoli in modo che il backend possa creare rapporti sul coinvolgimento dei sottotitoli.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '327'
-ht-degree: 2%
-
+source-wordcount: '342'
+ht-degree: 3%
 ---
-
 
 # Sottotitoli codificati
 
 >[!BEGINSHADEBOX]
 
-*In questa pagina viene illustrata la raccolta dati per lo stato **Sottotitoli**&#x200B;del lettore. Vedi [Flussi interessati dai sottotitoli](/help/reporting/metrics/closed-captioning-streams-impacted.md), [Conteggi sottotitoli](/help/reporting/metrics/closed-captioning-count.md) e [Durata totale sottotitoli](/help/reporting/metrics/closed-captioning-total-duration.md) per le metriche di reporting corrispondenti.*
+*In questa pagina viene illustrata la raccolta dati per lo stato **Sottotitoli**del lettore. Vedi [Flussi interessati dai sottotitoli](/help/reporting/metrics/closed-captioning-streams-impacted.md), [Conteggi sottotitoli](/help/reporting/metrics/closed-captioning-count.md) e [Durata totale sottotitoli](/help/reporting/metrics/closed-captioning-total-duration.md) per le metriche di reporting corrispondenti.*
 
 >[!ENDSHADEBOX]
 
@@ -24,7 +22,7 @@ Lo stato del lettore di sottotitoli codificati tiene traccia di quando il visual
 | Proprietà | Valore |
 | --- | --- |
 | **Variabili di dati di contesto** | `a.media.states.closedcaptioning.set`, `a.media.states.closedcaptioning.count`, `a.media.states.closedcaptioning.time` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.statesStart[]`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/media-collection-details) e [`xdm.mediaCollection.statesEnd[]`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/media-collection-details) (voci con `name: "closedCaptioning"`) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.statesStart[]`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-collection-details) e [`xdm.mediaCollection.statesEnd[]`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-collection-details) (voci con `name: "closedCaptioning"`) |
 | **Caratteristiche Audience Manager** | `c_contextdata.a.media.states.closedcaptioning.set`, `c_contextdata.a.media.states.closedcaptioning.count`, `c_contextdata.a.media.states.closedcaptioning.time` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio stato](/help/implementation/events/player-state/state-start.md), [fine stato](/help/implementation/events/player-state/state-end.md) |
@@ -35,7 +33,7 @@ Lo stato del lettore di sottotitoli codificati tiene traccia di quando il visual
 
 >[!TAB Web SDK]
 
-Utilizza [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) per inviare un evento `media.statesUpdate` con lo stato aggiunto a `statesStart`:
+Utilizza [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) per inviare un evento `media.statesUpdate` con lo stato aggiunto a `statesStart`:
 
 ```javascript
 alloy("sendEvent", {
@@ -182,6 +180,6 @@ Invia una richiesta POST `stateStart` quando i sottotitoli sono abilitati e un P
 }
 ```
 
-Per la struttura completa delle richieste, consulta il [Riferimento eventi API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md).
+Per la struttura completa delle richieste, consulta il [Riferimento eventi API di Media Collection](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/events).
 
 >[!ENDTABS]

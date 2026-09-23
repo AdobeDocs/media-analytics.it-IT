@@ -3,13 +3,11 @@ title: Tipo di flusso
 description: Imposta il tipo di flusso per identificare se un flusso multimediale è un contenuto audio o video.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '332'
 ht-degree: 3%
-
 ---
-
 
 # Tipo di flusso
 
@@ -26,7 +24,7 @@ L’impostazione corretta del tipo di flusso è fondamentale per i rapporti mult
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.streamType` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.streamType`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.streamType`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.streamType` |
 | **Obbligatorio** | Sì |
 | **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
@@ -37,7 +35,7 @@ L’impostazione corretta del tipo di flusso è fondamentale per i rapporti mult
 
 >[!TAB Web SDK]
 
-Imposta `streamType` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `streamType` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -198,6 +196,6 @@ Includi `media.streamType` nell&#39;oggetto `params` della richiesta POST `sessi
 }
 ```
 
-Per la struttura completa delle richieste e per tutti i campi obbligatori, consulta il [riferimento alle sessioni API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-sessions-req.md).
+Per la struttura completa delle richieste e per tutti i campi obbligatori, consulta il [riferimento alle sessioni API di Media Collection](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/sessions).
 
 >[!ENDTABS]

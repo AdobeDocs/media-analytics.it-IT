@@ -3,13 +3,11 @@ title: Tipo di contenuto
 description: Imposta il tipo di contenuto per identificare il formato del flusso (VOD, Live, Lineare, podcast, canzone e così via).
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '343'
 ht-degree: 2%
-
 ---
-
 
 # Tipo di contenuto
 
@@ -29,7 +27,7 @@ Valori consigliati:
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.contentType` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.contentType`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.contentType`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.contentType` |
 | **Obbligatorio** | Sì |
 | **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
@@ -40,7 +38,7 @@ Valori consigliati:
 
 >[!TAB Web SDK]
 
-Imposta `contentType` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `contentType` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
@@ -198,6 +196,6 @@ Includi `media.contentType` nell&#39;oggetto `params` della richiesta POST `sess
 }
 ```
 
-Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-sessions-req.md).
+Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/sessions).
 
 >[!ENDTABS]

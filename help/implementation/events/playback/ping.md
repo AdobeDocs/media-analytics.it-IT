@@ -3,13 +3,11 @@ title: Ping
 description: Invia un heartbeat per mantenere attiva la sessione multimediale e tenere traccia dell’avanzamento della riproduzione a intervalli regolari.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '292'
 ht-degree: 1%
-
 ---
-
 
 # Ping
 
@@ -111,7 +109,7 @@ ADBMobile().mediaUpdatePlayhead(10)
 
 >[!TAB API Media Collection]
 
-Invia un POST `ping` all&#39;endpoint [eventi](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md) in un timer. Non includere un oggetto `params`:
+Invia un POST `ping` all&#39;endpoint [eventi](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/events) in un timer. Non includere un oggetto `params`:
 
 ```json
 {

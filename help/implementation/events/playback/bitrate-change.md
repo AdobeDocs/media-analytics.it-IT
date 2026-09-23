@@ -3,13 +3,11 @@ title: Modifica bitrate
 description: Segnala che il bitrate di riproduzione è cambiato.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '231'
 ht-degree: 1%
-
 ---
-
 
 # Modifica bitrate
 
@@ -24,7 +22,7 @@ L’evento di modifica del bitrate segnala che il lettore ha negoziato un nuovo 
 
 >[!TAB Web SDK]
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.bitrateChange"` e il nuovo bitrate in `qoeDataDetails`:
+Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.bitrateChange"` e il nuovo bitrate in `qoeDataDetails`:
 
 ```javascript
 alloy("sendEvent", {
@@ -166,7 +164,7 @@ adb.mediaTrackEvent(adb.MEDIA_BITRATE_CHANGE)
 
 >[!TAB API Media Collection]
 
-Invia un POST `bitrateChange` all&#39;endpoint [events](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md) con il nuovo bitrate in `qoeData`:
+Invia un POST `bitrateChange` all&#39;endpoint [events](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/events) con il nuovo bitrate in `qoeData`:
 
 ```json
 {
