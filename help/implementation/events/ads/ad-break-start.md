@@ -26,7 +26,7 @@ L’evento di inizio dell’interruzione pubblicitaria segnala l’inizio di un�
 
 >[!TAB Web SDK]
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.adBreakStart"` e il `advertisingPodDetails` richiesto:
+Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.adBreakStart"` e il `advertisingPodDetails` richiesto:
 
 ```javascript
 alloy("sendEvent", {

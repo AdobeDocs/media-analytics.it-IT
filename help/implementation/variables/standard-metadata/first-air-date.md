@@ -22,7 +22,7 @@ La prima variabile di data di trasmissione è la data in cui il contenuto è and
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.airDate` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.firstAirDate`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/session-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.sessionDetails.firstAirDate`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/session-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.airDate` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio sessione](/help/implementation/events/session/session-start.md), chiusura sessione |
@@ -33,7 +33,7 @@ La prima variabile di data di trasmissione è la data in cui il contenuto è and
 
 >[!TAB Web SDK]
 
-Imposta `firstAirDate` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview):
+Imposta `firstAirDate` all&#39;interno di `xdm.mediaCollection.sessionDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview):
 
 ```javascript
 alloy("sendEvent", {
