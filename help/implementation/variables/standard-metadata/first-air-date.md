@@ -3,13 +3,11 @@ title: Data della prima messa in onda
 description: Imposta la data in cui il contenuto è andato in onda per la prima volta in televisione. Adobe consiglia il formato AAAA-MM-GG.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '259'
-ht-degree: 5%
-
+source-wordcount: '268'
+ht-degree: 4%
 ---
-
 
 # Data della prima messa in onda
 
@@ -175,6 +173,6 @@ Includi `media.firstAirDate` nell&#39;oggetto `params`:
 }
 ```
 
-Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-sessions-req.md).
+Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/sessions).
 
 >[!ENDTABS]

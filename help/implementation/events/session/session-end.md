@@ -3,13 +3,11 @@ title: Fine sessione
 description: Chiudi immediatamente una sessione multimediale quando il visualizzatore abbandona il contenuto.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 1%
-
+source-wordcount: '323'
+ht-degree: 2%
 ---
-
 
 # Fine sessione
 
@@ -128,7 +126,7 @@ ADBMobile().mediaTrackSessionEnd()
 
 >[!TAB API Media Collection]
 
-Invia un POST `sessionEnd` all&#39;endpoint [eventi](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md):
+Invia un POST `sessionEnd` all&#39;endpoint [eventi](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/events):
 
 ```json
 {

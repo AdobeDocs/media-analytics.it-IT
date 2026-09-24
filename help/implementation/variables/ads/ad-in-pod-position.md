@@ -3,13 +3,11 @@ title: Posizione annuncio nel pod
 description: Imposta la posizione di indice dell’annuncio all’interno dell’interruzione pubblicitaria principale. Il primo annuncio ha indice 0.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '266'
 ht-degree: 2%
-
 ---
-
 
 # Posizione annuncio nel pod
 
@@ -184,6 +182,6 @@ Includi `media.ad.podPosition` nell&#39;oggetto `params`:
 }
 ```
 
-Per la struttura completa delle richieste, consulta il [Riferimento eventi API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md).
+Per la struttura completa delle richieste, consulta il [Riferimento eventi API di Media Collection](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/events).
 
 >[!ENDTABS]

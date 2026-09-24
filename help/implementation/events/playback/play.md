@@ -3,13 +3,11 @@ title: Play
 description: Segnala che il lettore multimediale è entrato nello stato di riproduzione.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '185'
 ht-degree: 3%
-
 ---
-
 
 # Play
 
@@ -122,7 +120,7 @@ ADBMobile().mediaTrackPlay()
 
 >[!TAB API Media Collection]
 
-Invia un POST `play` all&#39;endpoint [eventi](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md):
+Invia un POST `play` all&#39;endpoint [eventi](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/events):
 
 ```json
 {

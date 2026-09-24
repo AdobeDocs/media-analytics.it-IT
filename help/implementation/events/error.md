@@ -3,13 +3,11 @@ title: Errore
 description: Segnala che il lettore multimediale ha riscontrato un errore.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '193'
 ht-degree: 3%
-
 ---
-
 
 # Errore
 
@@ -137,7 +135,7 @@ adb.mediaTrackError("media-error-001", adb.ERROR_SOURCE_PLAYER)
 
 >[!TAB API Media Collection]
 
-Invia un POST `error` all&#39;endpoint [eventi](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md):
+Invia un POST `error` all&#39;endpoint [eventi](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/events):
 
 ```json
 {

@@ -3,13 +3,11 @@ title: Salta annuncio
 description: Segnala che il visualizzatore ha saltato un annuncio.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '185'
 ht-degree: 2%
-
 ---
-
 
 # Salta annuncio
 
@@ -127,7 +125,7 @@ adb.mediaTrackEvent(adb.MEDIA_AD_SKIP)
 
 >[!TAB API Media Collection]
 
-Invia un POST `adSkip` all&#39;endpoint [eventi](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md):
+Invia un POST `adSkip` all&#39;endpoint [eventi](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/events):
 
 ```json
 {

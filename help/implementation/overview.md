@@ -8,26 +8,34 @@ exl-id: ed9297b1-6487-4099-bc62-0c3a40572255
 TQID: https://experienceleague.adobe.com/aFrxbzBLlf1ngetaM-GsNFXz6TUXi6Pic3quLVI297c
 product_v2:
   - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
 feature_v2:
   - id: e9dbdbc5-3e52-40f0-a7bc-e18542967b7a
+    internal-label: Implementations
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+    internal-label: API
 subfeature_v2:
   - id: bcc784b7-4ade-4c84-96fa-2f7631b1e5fd
+    internal-label: Media Analytics
   - id: c8add8f2-4250-4fd9-9cde-9707036c567d
+    internal-label: Methods
   - id: df312454-73c4-43f6-a90e-18f5043f074c
+    internal-label: Tags
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
+    internal-label: Implementation
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: 518
+source-wordcount: '526'
 ht-degree: 8%
-
 ---
-
 # Implementazione dei servizi di streaming media per Adobe Analytics o Customer Journey Analytics
 
 Esistono diversi modi per implementare Adobe Streaming Media Services. Per un confronto dettagliato dei dispositivi e delle piattaforme supportati per i metodi di implementazione descritti in questa pagina, vedere [Piattaforme e dispositivi supportati](/help/getting-started/supported-devices.md).
@@ -66,7 +74,7 @@ I metodi di implementazione solo per Adobe Analytics utilizzano il componente ag
 
 * **API Media Collection:** Poiché le API Media Collection sono personalizzabili, possono essere utilizzate per applicazioni che richiedono funzionalità di tracciamento personalizzate e per dispositivi non supportati da Media SDK. Le API Media Collection tengono traccia degli eventi audio e video utilizzando le chiamate HTTP RESTful. I dati vengono inviati ad Adobe Analytics.
 
-  Per informazioni sull’utilizzo delle API Media Collection, consulta [API Media Collection](media-collection-api/mc-api-overview.md).
+  Per informazioni sull’utilizzo delle API Media Collection, consulta [API Media Collection](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/).
 
 
 ![Flusso di lavoro di Analytics](assets/analytics-implementation.png)

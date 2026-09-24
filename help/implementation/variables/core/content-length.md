@@ -3,13 +3,11 @@ title: Durata del contenuto
 description: Imposta la lunghezza del contenuto in secondi all’avvio della sessione. Guida i marcatori di avanzamento e il pubblico medio per minuto.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '289'
 ht-degree: 3%
-
 ---
-
 
 # Durata del contenuto
 
@@ -194,6 +192,6 @@ Includi `media.length` nell&#39;oggetto `params` della richiesta POST `sessionSt
 }
 ```
 
-Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-sessions-req.md).
+Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/sessions).
 
 >[!ENDTABS]

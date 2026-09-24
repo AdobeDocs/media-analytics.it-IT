@@ -3,13 +3,11 @@ title: Inizio pausa
 description: Segnala che l’utente ha messo in pausa la riproduzione multimediale.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '157'
 ht-degree: 2%
-
 ---
-
 
 # Inizio pausa
 
@@ -126,7 +124,7 @@ ADBMobile().mediaTrackPause()
 
 >[!TAB API Media Collection]
 
-Invia un POST `pauseStart` all&#39;endpoint [eventi](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md):
+Invia un POST `pauseStart` all&#39;endpoint [eventi](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/events):
 
 ```json
 {

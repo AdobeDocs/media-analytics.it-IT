@@ -3,13 +3,11 @@ title: Fascia oraria
 description: Imposta il periodo fisso dell’ora del giorno (Mattina, Pomeriggio, Primetime, Late Night) in cui il contenuto è stato trasmesso o riprodotto.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '265'
 ht-degree: 4%
-
 ---
-
 
 # Fascia oraria
 
@@ -175,6 +173,6 @@ Includi `media.dayPart` nell&#39;oggetto `params`:
 }
 ```
 
-Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-sessions-req.md).
+Per la struttura completa delle richieste, consulta il [Riferimento sessioni API di Media Collection](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/sessions).
 
 >[!ENDTABS]

@@ -3,13 +3,11 @@ title: In focus
 description: Monitora quando il lettore è a fuoco sullo schermo del visualizzatore in modo che il backend possa segnalare il coinvolgimento a fuoco.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '339'
-ht-degree: 2%
-
+source-wordcount: '354'
+ht-degree: 3%
 ---
-
 
 # In focus
 
@@ -182,6 +180,6 @@ Invia una richiesta POST `stateStart` quando il lettore diventa attivo e un POST
 }
 ```
 
-Per la struttura completa delle richieste, consulta il [Riferimento eventi API di Media Collection](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md).
+Per la struttura completa delle richieste, consulta il [Riferimento eventi API di Media Collection](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/events).
 
 >[!ENDTABS]

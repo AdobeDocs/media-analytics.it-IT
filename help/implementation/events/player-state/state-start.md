@@ -3,13 +3,11 @@ title: Avvio stato
 description: Segnala che il lettore multimediale è entrato in uno stato del lettore tracciato.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '226'
 ht-degree: 1%
-
 ---
-
 
 # Avvio stato
 
@@ -149,7 +147,7 @@ Il tracciamento dello stato del lettore non è disponibile nel SDK Roku 2.x. Per
 
 >[!TAB API Media Collection]
 
-Invia un POST `stateStart` all&#39;endpoint [eventi](/help/implementation/media-collection-api/mc-api-ref/mc-api-events-req.md):
+Invia un POST `stateStart` all&#39;endpoint [eventi](https://developer.adobe.com/analytics-collection-apis/methods/media-collection/events):
 
 ```json
 {
