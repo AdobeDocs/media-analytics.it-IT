@@ -3,20 +3,30 @@ title: Configurare il Web SDK per lo streaming di file multimediali
 description: Configura Adobe Experience Platform Web SDK (alloy.js) per inviare dati multimediali in streaming ad Edge Network.
 feature: Streaming Media
 role: Developer
-source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
+product_v2:
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
+feature_v2:
+  - id: c153fd90-23e1-4614-81d3-3cc7571227f7
+    internal-label: Analysis Workspace
+subfeature_v2:
+  - id: c9bb7ea6-c04f-4262-b69c-fbb8d91e3559
+    internal-label: Streaming Media
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: beb51916dece77213e1b7346573c4377d62d2b2c
 workflow-type: tm+mt
 source-wordcount: '281'
 ht-degree: 1%
-
 ---
-
 # Configurare il Web SDK per lo streaming di file multimediali
 
 Il componente `streamingMedia` di Adobe Experience Platform [Web SDK](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/js-overview) (`alloy.js`, versione 2.20.0 o successiva) raccoglie i dati della sessione multimediale sul sito Web e li invia ad Edge Network. Questa pagina descrive la configurazione nel codice (`alloy.js`). Per configurare il Web SDK tramite i tag, vedere [Configurare l&#39;estensione tag Web SDK per lo streaming di file multimediali](web-sdk-tags.md).
 
 * **Prerequisiti**:
-   * Completa la [Panoramica sull&#39;implementazione di Edge](overview.md) (schema, set di dati, flusso di dati con [!UICONTROL Media Analytics] abilitato).
-   * Installare Web SDK 2.20.0 o versione successiva. Vedere [Installare Web SDK](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/install/overview).
+  * Completa la [Panoramica sull&#39;implementazione di Edge](overview.md) (schema, set di dati, flusso di dati con [!UICONTROL Media Analytics] abilitato).
+  * Installare Web SDK 2.20.0 o versione successiva. Vedere [Installare Web SDK](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/install/overview).
 
 ## Configurare il componente streamingMedia
 

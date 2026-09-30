@@ -3,20 +3,30 @@ title: Configurare Roku Edge per lo streaming di file multimediali
 description: Configura Adobe Experience Platform Roku SDK per inviare i dati multimediali in streaming ad Edge Network.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+product_v2:
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
+feature_v2:
+  - id: c153fd90-23e1-4614-81d3-3cc7571227f7
+    internal-label: Analysis Workspace
+subfeature_v2:
+  - id: c9bb7ea6-c04f-4262-b69c-fbb8d91e3559
+    internal-label: Streaming Media
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: beb51916dece77213e1b7346573c4377d62d2b2c
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 0%
-
 ---
-
 # Configurare Roku Edge per lo streaming di file multimediali
 
 [Adobe Experience Platform Roku SDK](https://github.com/adobe/aepsdk-roku) (BrightScript) raccoglie i dati della sessione multimediale nel tuo canale Roku e li invia ad Edge Network. Roku è configurato nel codice; non utilizza i tag.
 
 * **Prerequisiti**:
-   * Completa la [Panoramica sull&#39;implementazione di Edge](overview.md) (schema, set di dati, flusso di dati con [!UICONTROL Media Analytics] abilitato).
-   * Scarica il SDK dalle [versioni di GitHub](https://github.com/adobe/aepsdk-roku/releases) e aggiungilo al tuo canale, come descritto nella [guida introduttiva](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/getting-started.md).
+  * Completa la [Panoramica sull&#39;implementazione di Edge](overview.md) (schema, set di dati, flusso di dati con [!UICONTROL Media Analytics] abilitato).
+  * Scarica il SDK dalle [versioni di GitHub](https://github.com/adobe/aepsdk-roku/releases) e aggiungilo al tuo canale, come descritto nella [guida introduttiva](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/getting-started.md).
 
 ## Configurare Roku Edge SDK per i file multimediali
 
