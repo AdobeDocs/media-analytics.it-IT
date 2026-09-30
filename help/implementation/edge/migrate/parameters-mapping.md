@@ -4,28 +4,38 @@ description: Mappatura del percorso del campo XDM per i parametri Media Analytic
 feature: Streaming Media
 role: User, Admin, Developer
 exl-id: 79203a2f-8158-44f2-83b2-146179be9180
-TQID: https://experienceleague.adobe.com/ct8mDbIpg15Jzvf1MRaG4XFtuxbq-EUKPe106zyO7zQ
+TQID: 'https://experienceleague.adobe.com/ct8mDbIpg15Jzvf1MRaG4XFtuxbq-EUKPe106zyO7zQ'
 product_v2:
   - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
 feature_v2:
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+    internal-label: API
+  - id: c153fd90-23e1-4614-81d3-3cc7571227f7
+    internal-label: Analysis Workspace
+subfeature_v2:
+  - id: c9bb7ea6-c04f-4262-b69c-fbb8d91e3559
+    internal-label: Streaming Media
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
+    internal-label: Implementation
+source-git-commit: beb51916dece77213e1b7346573c4377d62d2b2c
 workflow-type: tm+mt
-source-wordcount: 953
+source-wordcount: '953'
 ht-degree: 22%
-
 ---
-
 # Mappatura dei parametri di Media Analytics per Adobe Experience Platform e Customer Journey Analytics
 
-Questo documento fornisce un elenco completo di tutti i parametri di Media Analytics utilizzati in Adobe Experience Platform e Customer Journey Analytics. Il suo scopo è quello di supportare l&#39;integrazione dei dati importati da Adobe Analytics a Platform tramite il [connettore Source Analytics](https://experienceleague.adobe.com/it/docs/experience-platform/sources/connectors/adobe-applications/analytics) o il [connettore Source Analytics per le classificazioni](https://experienceleague.adobe.com/it/docs/experience-platform/sources/connectors/adobe-applications/classifications), mappando ogni parametro al percorso del campo XDM corrispondente.
+Questo documento fornisce un elenco completo di tutti i parametri di Media Analytics utilizzati in Adobe Experience Platform e Customer Journey Analytics. Il suo scopo è quello di supportare l&#39;integrazione dei dati importati da Adobe Analytics a Platform tramite il [connettore Source Analytics](https://experienceleague.adobe.com/it/docs/experience-platform/sources/connectors/adobe-applications/analytics) o il [connettore Source Analytics per le classificazioni](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/adobe-applications/classifications), mappando ogni parametro al percorso del campo XDM corrispondente.
 
 >[!NOTE]
 >
@@ -161,24 +171,24 @@ Per impostare la connessione in Customer Journey Analytics:
 Per ogni set di dati di ricerca (set di dati di classificazione), configura come segue:
 
 * **set di dati video**:
-   * Chiave: `_sandbox.key`
-   * Chiave corrispondente: `Asset ID (media.mediaTimed.primaryAssetReference._id)`
-   * Tipo di origine dati: `Web Data`
+  * Chiave: `_sandbox.key`
+  * Chiave corrispondente: `Asset ID (media.mediaTimed.primaryAssetReference._id)`
+  * Tipo di origine dati: `Web Data`
 
 * **set di dati videoad**:
-   * Chiave: `_sandbox.key`
-   * Chiave corrispondente: `Ad ID (advertising.adAssetReference._id)`
-   * Tipo di origine dati: `Web Data`
+  * Chiave: `_sandbox.key`
+  * Chiave corrispondente: `Ad ID (advertising.adAssetReference._id)`
+  * Tipo di origine dati: `Web Data`
 
 * **set di dati videoadpod**:
-   * Chiave: `_sandbox.key`
-   * Chiave corrispondente: `Ad Pod ID (advertising.adAssetViewDetails.adBreak._id)`
-   * Tipo di origine dati: `Web Data`
+  * Chiave: `_sandbox.key`
+  * Chiave corrispondente: `Ad Pod ID (advertising.adAssetViewDetails.adBreak._id)`
+  * Tipo di origine dati: `Web Data`
 
 * **set di dati videochapter**:
-   * Chiave: `_sandbox.key`
-   * Chiave corrispondente: `Chapter identity (media.mediaTimed.mediaChapter.chapterAssetReference._id)`
-   * Tipo di origine dati: `Web Data`
+  * Chiave: `_sandbox.key`
+  * Chiave corrispondente: `Chapter identity (media.mediaTimed.mediaChapter.chapterAssetReference._id)`
+  * Tipo di origine dati: `Web Data`
 
 ### Considerazioni sul reporting
 

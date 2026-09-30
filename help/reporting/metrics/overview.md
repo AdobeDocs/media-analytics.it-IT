@@ -3,13 +3,22 @@ title: Panoramica delle metriche dei contenuti multimediali in streaming
 description: Scopri come vengono calcolate e organizzate le metriche dei contenuti multimediali in streaming in Adobe Analytics e Customer Journey Analytics.
 feature: Metrics
 role: User, Admin
-source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
+product_v2:
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
+feature_v2:
+  - id: b3f03848-ae12-48b2-8aab-cad18567eb32
+    internal-label: Metrics
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: beb51916dece77213e1b7346573c4377d62d2b2c
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 3%
-
 ---
-
 
 # Panoramica delle metriche dei contenuti multimediali in streaming
 
@@ -31,8 +40,8 @@ Le metriche dei contenuti multimediali in streaming seguono quattro modelli di c
 
 | Sistema di reporting | Arrivo delle metriche |
 | --- | --- |
-| Adobe Analytics | Compilato utilizzando [Variabili di dati di contesto](https://experienceleague.adobe.com/it/docs/analytics/implementation/vars/page-vars/contextdata). Alcune metriche compilano automaticamente gli eventi della soluzione utilizzando queste variabili di dati di contesto, mentre altre devono essere mappate a un evento personalizzato utilizzando [Regole di elaborazione](https://experienceleague.adobe.com/it/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/processing-rules/pr-overview). Per le metriche che compilano automaticamente i valori, deve essere prima abilitata l&#39;impostazione [suite di rapporti per Streaming Media](../setup/analytics-reporting.md). |
-| Customer Journey Analytics | Campi XDM in `xdm.mediaReporting.sessionDetails` e nodi correlati, originati da qualsiasi set di dati che include dati multimediali in streaming. È necessario creare ogni metrica con le impostazioni desiderate nelle [impostazioni del componente Visualizzazione dati](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-dataviews/component-settings/overview). |
+| Adobe Analytics | Compilato utilizzando [Variabili di dati di contesto](https://experienceleague.adobe.com/it/docs/analytics/implementation/vars/page-vars/contextdata). Alcune metriche compilano automaticamente gli eventi della soluzione utilizzando queste variabili di dati di contesto, mentre altre devono essere mappate a un evento personalizzato utilizzando [Regole di elaborazione](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/processing-rules/pr-overview). Per le metriche che compilano automaticamente i valori, deve essere prima abilitata l&#39;impostazione [suite di rapporti per Streaming Media](../setup/analytics-reporting.md). |
+| Customer Journey Analytics | Campi XDM in `xdm.mediaReporting.sessionDetails` e nodi correlati, originati da qualsiasi set di dati che include dati multimediali in streaming. È necessario creare ogni metrica con le impostazioni desiderate nelle [impostazioni del componente Visualizzazione dati](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/component-settings/overview). |
 | Feed dati | Le metriche vengono visualizzate nelle colonne `event_list` e `post_event_list` come ID evento. Ogni file di feed contiene un file `events.csv` contenente la ricerca di tutte le metriche, incluse quelle relative ai contenuti multimediali in streaming. |
 
 >[!MORELIKETHIS]

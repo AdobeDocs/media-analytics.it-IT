@@ -3,13 +3,27 @@ title: Panoramica sull’implementazione di Edge
 description: Imposta lo schema, il set di dati e lo stream di dati di Adobe Experience Platform necessari per raccogliere i dati multimediali in streaming tramite Edge Network.
 feature: Streaming Media
 role: User, Admin, Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+product_v2:
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
+feature_v2:
+  - id: c153fd90-23e1-4614-81d3-3cc7571227f7
+    internal-label: Analysis Workspace
+subfeature_v2:
+  - id: c9bb7ea6-c04f-4262-b69c-fbb8d91e3559
+    internal-label: Streaming Media
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: beb51916dece77213e1b7346573c4377d62d2b2c
 workflow-type: tm+mt
 source-wordcount: '1212'
-ht-degree: 4%
-
+ht-degree: 5%
 ---
-
 # Panoramica sull’implementazione di Edge
 
 L’Edge Network di Adobe Experience Platform consente di inviare dati destinati a più prodotti a un singolo endpoint, che inoltra le informazioni appropriate a ciascun prodotto. Questo è il modo consigliato per implementare Streaming Media Collection ed è l’unico approccio che supporta sia Adobe Analytics che Customer Journey Analytics da una singola implementazione.
@@ -25,13 +39,13 @@ Indipendentemente dal codebase utilizzato, devi prima completare la configurazio
 1. **Conferma una soluzione Adobe compatibile.** È necessaria un&#39;implementazione funzionante di almeno uno dei seguenti elementi:
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-landing.html?lang=it): la destinazione di reporting principale per i dati multimediali basati su Edge
    * [Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=it): supportato insieme o al posto di CJA tramite lo stesso flusso di dati
-   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=it) o [Real-Time Customer Data Platform](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=it): aggiungi il servizio **[!UICONTROL Adobe Experience Platform]** allo stream di dati durante la configurazione di uno di questi
+   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=it) o [Real-Time Customer Data Platform](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html): aggiungi il servizio **[!UICONTROL Adobe Experience Platform]** allo stream di dati durante la configurazione di uno di questi
 
 ## Configurare lo schema in Adobe Experience Platform
 
 Per standardizzare la raccolta dei dati tra le applicazioni che utilizzano Adobe Experience Platform, Adobe ha creato lo standard Experience Data Model (XDM) aperto e documentato pubblicamente.
 
-1. In Adobe Experience Platform, iniziare a creare lo schema come descritto in [Creare e modificare gli schemi nell&#39;interfaccia utente](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=it).
+1. In Adobe Experience Platform, iniziare a creare lo schema come descritto in [Creare e modificare gli schemi nell&#39;interfaccia utente](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=en).
 
 1. Nella pagina Dettagli schema, scegliere **[!UICONTROL Experience Event]** come classe base per lo schema.
 
@@ -118,7 +132,7 @@ Per standardizzare la raccolta dei dati tra le applicazioni che utilizzano Adobe
 
    +++ Espandi per visualizzare le istruzioni sull’aggiunta di metadati personalizzati allo schema.
 
-   1. Individuare il nome tenant dell&#39;organizzazione selezionando **[!UICONTROL Account info]** > **[!UICONTROL Assigned orgs]** > [!UICONTROL _&#x200B;**nome organizzazione**&#x200B;_] > **[!UICONTROL tenant]**.
+   1. Individuare il nome tenant dell&#39;organizzazione selezionando **[!UICONTROL Account info]** > **[!UICONTROL Assigned orgs]** > [!UICONTROL _**nome organizzazione**_] > **[!UICONTROL tenant]**.
 
       I campi personalizzati vengono ricevuti tramite questo percorso. Ad esempio, nome tenant: _dcbl → percorso myCustomField: _dcbl.myCustomField.
 
@@ -130,7 +144,7 @@ Per standardizzare la raccolta dei dati tra le applicazioni che utilizzano Adobe
 
       ![add-custom-metadata](assets/add-custom-fields.png)
 
-   1. [Utilizza il percorso generato](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/ui/fields/overview#type-specific-properties) per il campo personalizzato nel payload della richiesta.
+   1. [Utilizza il percorso generato](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/fields/overview#type-specific-properties) per il campo personalizzato nel payload della richiesta.
 
       ![add-custom-metadata](assets/custom-fields-path.png)
 
@@ -144,7 +158,7 @@ Per standardizzare la raccolta dei dati tra le applicazioni che utilizzano Adobe
 
 ## Configurare uno stream di dati in Adobe Experience Platform
 
-1. Creare un nuovo stream di dati come descritto in [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=it).
+1. Creare un nuovo stream di dati come descritto in [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=en).
 
    Durante la creazione dello stream di dati, effettua le seguenti selezioni:
 
@@ -156,11 +170,11 @@ Per standardizzare la raccolta dei dati tra le applicazioni che utilizzano Adobe
 
      ![Crea un flusso di dati e seleziona uno schema](assets/datastream-create-schema.png)
 
-   * Aggiungi i servizi appropriati al flusso di dati in base alla soluzione Adobe. Per informazioni sull&#39;aggiunta di un servizio, vedere &quot;Aggiungere servizi a uno stream di dati&quot; in [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=it#view-details).
+   * Aggiungi i servizi appropriati al flusso di dati in base alla soluzione Adobe. Per informazioni sull&#39;aggiunta di un servizio, vedere &quot;Aggiungere servizi a uno stream di dati&quot; in [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=en#view-details).
 
-      * **[!UICONTROL Adobe Analytics]** (se si utilizza Adobe Analytics): definire una suite di rapporti come descritto in [Creare una suite di rapporti](https://experienceleague.adobe.com/it/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite).
+     * **[!UICONTROL Adobe Analytics]** (se si utilizza Adobe Analytics): definire una suite di rapporti come descritto in [Creare una suite di rapporti](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite).
 
-      * **[!UICONTROL Adobe Experience Platform]** (se si utilizza Customer Journey Analytics, Adobe Journey Optimizer o Real-Time Customer Data Platform)
+     * **[!UICONTROL Adobe Experience Platform]** (se si utilizza Customer Journey Analytics, Adobe Journey Optimizer o Real-Time Customer Data Platform)
 
      ![Aggiungi il servizio Adobe Analytics](assets/datastream-add-service.png)
 

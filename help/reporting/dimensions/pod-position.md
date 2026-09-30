@@ -3,13 +3,25 @@ title: Posizione del pod
 description: Segnala l’offset di ogni interruzione pubblicitaria all’interno del contenuto.
 feature: Dimensions
 role: User, Admin
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+product_v2:
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
+feature_v2:
+  - id: b8734a57-d5fb-44a8-8ee1-65225cecaeae
+    internal-label: Data configuration and collection
+subfeature_v2:
+  - id: b22bc0f7-b089-4966-95a1-31e7b3b69b79
+    internal-label: Dimensions
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: beb51916dece77213e1b7346573c4377d62d2b2c
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '399'
 ht-degree: 2%
-
 ---
-
 
 # Posizione del pod
 
@@ -27,9 +39,9 @@ La posizione del pod è impostata dal valore [Ora di inizio interruzione annunci
 
 | Sistema di reporting | Origine |
 | --- | --- |
-| Adobe Analytics (regola di elaborazione) | Crea una [regola di elaborazione](https://experienceleague.adobe.com/it/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/processing-rules/pr-overview) che associa `a.media.ad.podSecond` a un eVar. |
+| Adobe Analytics (regola di elaborazione) | Crea una [regola di elaborazione](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/processing-rules/pr-overview) che associa `a.media.ad.podSecond` a un eVar. |
 | Adobe Analytics (classificazione) | Classificazione della dimensione [Ad pod](ad-pod.md). Adobe crea automaticamente questa classificazione quando **[[!UICONTROL Media Ads]](/help/reporting/setup/analytics-reporting.md)** è abilitato per la suite di rapporti. È tua responsabilità popolare e mantenere i valori di classificazione. |
-| Customer Journey Analytics | [`xdm.mediaReporting.advertisingPodDetails.offset`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-pod-details-reporting) |
+| Customer Journey Analytics | [`xdm.mediaReporting.advertisingPodDetails.offset`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/advertising-pod-details-reporting) |
 | Feed di dati (regola di elaborazione) | `evar1`-`evar250`, `post_evar1`-`post_evar250` (l&#39;eVar a cui la regola di elaborazione mappa `a.media.ad.podSecond`) |
 | Feed di dati (classificazione) | N/D: i feed di dati non supportano le classificazioni. |
 | Audience Manager | `c_contextdata.a.media.ad.podSecond` |
@@ -46,7 +58,7 @@ Questo approccio garantisce una relazione 1:1 tra ciascun ID ad pod e la relativ
 
 ## Approccio per le regole di elaborazione
 
-Crea una [regola di elaborazione](https://experienceleague.adobe.com/it/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/processing-rules/pr-overview) che associa `a.media.ad.podSecond` a un eVar. Questo approccio acquisisce la posizione del pod come valore per hit senza richiedere la manutenzione della classificazione.
+Crea una [regola di elaborazione](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/processing-rules/pr-overview) che associa `a.media.ad.podSecond` a un eVar. Questo approccio acquisisce la posizione del pod come valore per hit senza richiedere la manutenzione della classificazione.
 
 Il compromesso è che si perde la relazione 1:1 garantita tra la posizione del pod e la dimensione [Ad pod](ad-pod.md) padre. Se l’implementazione invia valori non coerenti per lo stesso ID pod in più eventi, è possibile che più posizioni vengano visualizzate sotto lo stesso pod annuncio. L’aggiornamento di un valore si applica solo ai dati a partire dal momento dell’aggiornamento.
 

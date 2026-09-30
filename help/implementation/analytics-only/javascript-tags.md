@@ -3,13 +3,23 @@ title: Configurare l’estensione tag di Media Analytics
 description: Utilizza l’estensione tag Adobe Media Analytics (3.x SDK) for Audio and Video per implementare contenuti multimediali in streaming solo per Analytics.
 feature: Streaming Media
 role: Developer
-source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
+product_v2:
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
+feature_v2:
+  - id: c153fd90-23e1-4614-81d3-3cc7571227f7
+    internal-label: Analysis Workspace
+subfeature_v2:
+  - id: c9bb7ea6-c04f-4262-b69c-fbb8d91e3559
+    internal-label: Streaming Media
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: beb51916dece77213e1b7346573c4377d62d2b2c
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 12%
-
 ---
-
 # Configurare l’estensione tag di Media Analytics
 
 L’estensione tag Adobe Media Analytics (3.x SDK) for Audio and Video distribuisce Media SDK for JavaScript (3.x) tramite Tag, senza l’installazione manuale di JavaScript. Questa pagina descrive la configurazione dei tag. Per installare SDK nel codice, vedere [Configurare JavaScript per Streaming Media](javascript.md). Per le nuove implementazioni, considera il percorso Edge consigliato per l&#39;[estensione tag Web SDK](/help/implementation/edge/web-sdk-tags.md).

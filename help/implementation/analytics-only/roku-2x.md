@@ -3,13 +3,23 @@ title: Configurare Roku 2.x per contenuti multimediali in streaming
 description: Installa e configura Adobe Media SDK 2.x per Roku per implementazioni di contenuti multimediali in streaming solo per Analytics, inclusi i canali SceneGraph.
 feature: Streaming Media
 role: Developer
-source-git-commit: e392a66367cbdd8ada2432a5d3762e805dae676c
+product_v2:
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
+feature_v2:
+  - id: c153fd90-23e1-4614-81d3-3cc7571227f7
+    internal-label: Analysis Workspace
+subfeature_v2:
+  - id: c9bb7ea6-c04f-4262-b69c-fbb8d91e3559
+    internal-label: Streaming Media
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: beb51916dece77213e1b7346573c4377d62d2b2c
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 2%
-
 ---
-
 # Configurare Roku 2.x per contenuti multimediali in streaming
 
 Adobe Media SDK 2.x per Roku (`adbmobile.brs`) invia i dati multimediali in streaming dai canali Roku scritti in BrightScript direttamente ad Adobe Analytics. Raccoglie inoltre dati sul pubblico tramite Audience Manager e misura il coinvolgimento attraverso gli eventi multimediali.
@@ -19,9 +29,9 @@ Adobe Media SDK 2.x per Roku (`adbmobile.brs`) invia i dati multimediali in stre
 >Questa pagina descrive Media SDK 2.x per Roku, disponibile solo in Analytics. Per le nuove implementazioni, Adobe consiglia l&#39;[Roku Edge SDK](/help/implementation/edge/roku.md), che rende i dati disponibili per Customer Journey Analytics, Adobe Journey Optimizer e Real-Time CDP oltre ad Adobe Analytics.
 
 * **Prerequisiti**:
-   * Completa la [Panoramica sull&#39;implementazione di sola Analytics](overview.md).
-   * [Scarica Media SDK per Roku](/help/getting-started/download-sdks.md).
-   * Includi un’API nel lettore multimediale per abbonarti agli eventi del lettore e un’API che fornisce informazioni sul lettore come il nome del file multimediale e la posizione della testina di riproduzione.
+  * Completa la [Panoramica sull&#39;implementazione di sola Analytics](overview.md).
+  * [Scarica Media SDK per Roku](/help/getting-started/download-sdks.md).
+  * Includi un’API nel lettore multimediale per abbonarti agli eventi del lettore e un’API che fornisce informazioni sul lettore come il nome del file multimediale e la posizione della testina di riproduzione.
 
 ## Installare SDK
 

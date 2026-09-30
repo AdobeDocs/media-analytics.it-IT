@@ -3,7 +3,19 @@ title: Nome interruzione annuncio
 description: Imposta il nome descrittivo dell’interruzione pubblicitaria principale.
 feature: Streaming Media
 role: Developer
-source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
+product_v2:
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
+feature_v2:
+  - id: c153fd90-23e1-4614-81d3-3cc7571227f7
+    internal-label: Analysis Workspace
+subfeature_v2:
+  - id: c9bb7ea6-c04f-4262-b69c-fbb8d91e3559
+    internal-label: Streaming Media
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: beb51916dece77213e1b7346573c4377d62d2b2c
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 2%
@@ -22,7 +34,7 @@ La variabile del nome dell’interruzione pubblicitaria è il nome descrittivo d
 | Proprietà | Valore |
 | --- | --- |
 | **Variabile di dati di contesto** | `a.media.ad.podFriendlyName` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.advertisingPodDetails.friendlyName`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/advertising-pod-details-collection) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.advertisingPodDetails.friendlyName`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/advertising-pod-details-collection) |
 | **Caratteristica Audience Manager** | `c_contextdata.a.media.ad.podFriendlyName` |
 | **Obbligatorio** | Sì (Mobile SDK); No (Edge, Media Collection API) |
 | **Inviato con** | [Inizio interruzione annuncio](/help/implementation/events/ads/ad-break-start.md), chiusura annuncio |
@@ -33,7 +45,7 @@ La variabile del nome dell’interruzione pubblicitaria è il nome descrittivo d
 
 >[!TAB Web SDK]
 
-Imposta `friendlyName` in `xdm.mediaCollection.advertisingPodDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) per `media.adBreakStart`:
+Imposta `friendlyName` in `xdm.mediaCollection.advertisingPodDetails` quando chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) per `media.adBreakStart`:
 
 ```javascript
 alloy("sendEvent", {

@@ -1,11 +1,11 @@
 ---
 title: Implementazione dei servizi di streaming media per Adobe Analytics o Customer Journey Analytics
 description: Scopri i percorsi di implementazione per i servizi multimediali di streaming di Adobe.
-uuid: null
+uuid:
 feature: Streaming Media
 role: User, Admin, Developer
 exl-id: ed9297b1-6487-4099-bc62-0c3a40572255
-TQID: https://experienceleague.adobe.com/aFrxbzBLlf1ngetaM-GsNFXz6TUXi6Pic3quLVI297c
+TQID: 'https://experienceleague.adobe.com/aFrxbzBLlf1ngetaM-GsNFXz6TUXi6Pic3quLVI297c'
 product_v2:
   - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
     internal-label: Analytics
@@ -14,6 +14,8 @@ feature_v2:
     internal-label: Implementations
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
     internal-label: API
+  - id: c153fd90-23e1-4614-81d3-3cc7571227f7
+    internal-label: Analysis Workspace
 subfeature_v2:
   - id: bcc784b7-4ade-4c84-96fa-2f7631b1e5fd
     internal-label: Media Analytics
@@ -21,6 +23,8 @@ subfeature_v2:
     internal-label: Methods
   - id: df312454-73c4-43f6-a90e-18f5043f074c
     internal-label: Tags
+  - id: c9bb7ea6-c04f-4262-b69c-fbb8d91e3559
+    internal-label: Streaming Media
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
@@ -31,7 +35,7 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
     internal-label: Implementation
-source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
+source-git-commit: beb51916dece77213e1b7346573c4377d62d2b2c
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 8%
@@ -64,7 +68,7 @@ I metodi di implementazione solo per Adobe Analytics utilizzano il componente ag
 
 * **Estensione Media con tag:** L&#39;estensione Adobe Media Analytics for Audio and Video fornisce la funzionalità per aggiungere l&#39;istanza di tracciamento Media a un sito o a un progetto abilitato per i tag. I dati vengono inviati ad Adobe Analytics.
 
-  Per informazioni sull&#39;installazione, la configurazione e l&#39;implementazione dell&#39;estensione Media con i tag, consulta [Panoramica dell&#39;estensione Adobe Media Analytics (3.x SDK) for Audio and Video](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/media-analytics-3x/overview.html?lang=it).
+  Per informazioni sull&#39;installazione, la configurazione e l&#39;implementazione dell&#39;estensione Media con i tag, consulta [Panoramica dell&#39;estensione Adobe Media Analytics (3.x SDK) for Audio and Video](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/media-analytics-3x/overview.html).
 
 * **Media SDK:** Media SDK consente di misurare più piattaforme multimediali, tra cui siti Web, telefoni cellulari, TV connesse, tablet, dispositivi OTT, set-top box e console di gioco. Per ulteriori informazioni, vedere [Piattaforme e dispositivi supportati](/help/getting-started/supported-devices.md).
 

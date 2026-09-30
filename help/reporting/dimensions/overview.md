@@ -3,13 +3,25 @@ title: Panoramica delle dimensioni dei contenuti multimediali in streaming
 description: Scopri come le dimensioni dei contenuti multimediali in streaming vengono popolate e organizzate in Adobe Analytics e Customer Journey Analytics.
 feature: Dimensions
 role: User, Admin
-source-git-commit: d223e36dcf7a906a3184f3602addbbb58c20ce13
+product_v2:
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
+feature_v2:
+  - id: b8734a57-d5fb-44a8-8ee1-65225cecaeae
+    internal-label: Data configuration and collection
+subfeature_v2:
+  - id: b22bc0f7-b089-4966-95a1-31e7b3b69b79
+    internal-label: Dimensions
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: beb51916dece77213e1b7346573c4377d62d2b2c
 workflow-type: tm+mt
 source-wordcount: '413'
 ht-degree: 6%
-
 ---
-
 
 # Panoramica delle dimensioni dei contenuti multimediali in streaming
 
@@ -23,14 +35,14 @@ Le dimensioni dei contenuti multimediali in streaming seguono tre pattern di pop
 
 * **Valori derivati**: dimensioni calcolate dal back-end del contenuto multimediale in base allo stato di riproduzione accumulato anziché in base al valore fornito dal lettore. [[!UICONTROL Content segment]](/help/reporting/dimensions/content-segment.md) viene calcolato dalla posizione della testina di riproduzione nel corso della riproduzione. [[!UICONTROL Media path]](/help/reporting/dimensions/media-path.md) tiene traccia delle transizioni tra il contenuto e gli stati degli annunci durante la sessione. Queste dimensioni non possono essere ignorate dal lettore.
 
-* **Classificazioni**: facoltativo. Invece di popolare dimensioni separate, puoi gestire i dati di classificazione utilizzando [Set di classificazione](https://experienceleague.adobe.com/it/docs/analytics/components/classifications/sets/overview) (Adobe Analytics) o [Set di dati di ricerca](https://experienceleague.adobe.com/it/docs/analytics-platform/using/compare-aa-cja/upgrade-to-cja/create-datasets/cja-upgrade-dataset-lookup) (Customer Journey Analytics).
+* **Classificazioni**: facoltativo. Invece di popolare dimensioni separate, puoi gestire i dati di classificazione utilizzando [Set di classificazione](https://experienceleague.adobe.com/it/docs/analytics/components/classifications/sets/overview) (Adobe Analytics) o [Set di dati di ricerca](https://experienceleague.adobe.com/en/docs/analytics-platform/using/compare-aa-cja/upgrade-to-cja/create-datasets/cja-upgrade-dataset-lookup) (Customer Journey Analytics).
 
 ## Disponibilità per sistema di reporting
 
 | Sistema di reporting | Come arrivano le dimensioni |
 | --- | --- |
-| Adobe Analytics | Compilato utilizzando [Variabili di dati di contesto](https://experienceleague.adobe.com/it/docs/analytics/implementation/vars/page-vars/contextdata). Alcune dimensioni compilano automaticamente le dimensioni utilizzando queste variabili di dati di contesto, mentre altre devono essere compilate utilizzando [Regole di elaborazione](https://experienceleague.adobe.com/it/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/processing-rules/pr-overview). Le dimensioni che compilano automaticamente i valori devono prima aver abilitato le rispettive impostazioni della suite di rapporti [Streaming Media](../setup/analytics-reporting.md). |
-| Customer Journey Analytics | Campi XDM in genere in `xdm.mediaReporting.sessionDetails`, originati da qualsiasi set di dati che include dati multimediali in streaming. È necessario creare ogni dimensione con le impostazioni desiderate nelle [impostazioni del componente Visualizzazione dati](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-dataviews/component-settings/overview). |
+| Adobe Analytics | Compilato utilizzando [Variabili di dati di contesto](https://experienceleague.adobe.com/it/docs/analytics/implementation/vars/page-vars/contextdata). Alcune dimensioni compilano automaticamente le dimensioni utilizzando queste variabili di dati di contesto, mentre altre devono essere compilate utilizzando [Regole di elaborazione](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/processing-rules/pr-overview). Le dimensioni che compilano automaticamente i valori devono prima aver abilitato le rispettive impostazioni della suite di rapporti [Streaming Media](../setup/analytics-reporting.md). |
+| Customer Journey Analytics | Campi XDM in genere in `xdm.mediaReporting.sessionDetails`, originati da qualsiasi set di dati che include dati multimediali in streaming. È necessario creare ogni dimensione con le impostazioni desiderate nelle [impostazioni del componente Visualizzazione dati](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/component-settings/overview). |
 | Feed dati | Le dimensioni popolate automaticamente hanno nomi di colonna propri del feed di dati (come `videostreamtype`, `videoname` o `videolength`). Le dimensioni che richiedono regole di elaborazione utilizzano i nomi di colonna `evar`. |
 | Audience Manager | Dati contestuali inoltrati da Adobe Analytics. Disponibile solo quando è configurato l’inoltro lato server da Analytics ad Audience Manager. |
 

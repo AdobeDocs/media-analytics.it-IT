@@ -3,7 +3,19 @@ title: In focus
 description: Monitora quando il lettore è a fuoco sullo schermo del visualizzatore in modo che il backend possa segnalare il coinvolgimento a fuoco.
 feature: Streaming Media
 role: Developer
-source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
+product_v2:
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
+feature_v2:
+  - id: c153fd90-23e1-4614-81d3-3cc7571227f7
+    internal-label: Analysis Workspace
+subfeature_v2:
+  - id: c9bb7ea6-c04f-4262-b69c-fbb8d91e3559
+    internal-label: Streaming Media
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: beb51916dece77213e1b7346573c4377d62d2b2c
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 3%
@@ -22,7 +34,7 @@ Lo stato in focus del lettore tiene traccia di quando il lettore ha l’attenzio
 | Proprietà | Valore |
 | --- | --- |
 | **Variabili di dati di contesto** | `a.media.states.infocus.set`, `a.media.states.infocus.count`, `a.media.states.infocus.time` |
-| **Campo raccolta XDM** | [`xdm.mediaCollection.statesStart[]`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/media-collection-details) e [`xdm.mediaCollection.statesEnd[]`](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/media-collection-details) (voci con `name: "inFocus"`) |
+| **Campo raccolta XDM** | [`xdm.mediaCollection.statesStart[]`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-collection-details) e [`xdm.mediaCollection.statesEnd[]`](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-collection-details) (voci con `name: "inFocus"`) |
 | **Caratteristiche Audience Manager** | `c_contextdata.a.media.states.infocus.set`, `c_contextdata.a.media.states.infocus.count`, `c_contextdata.a.media.states.infocus.time` |
 | **Obbligatorio** | No |
 | **Inviato con** | [Inizio stato](/help/implementation/events/player-state/state-start.md), [fine stato](/help/implementation/events/player-state/state-end.md) |
@@ -33,7 +45,7 @@ Lo stato in focus del lettore tiene traccia di quando il lettore ha l’attenzio
 
 >[!TAB Web SDK]
 
-Utilizza [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) per inviare un evento `media.statesUpdate` con lo stato aggiunto a `statesStart`:
+Utilizza [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) per inviare un evento `media.statesUpdate` con lo stato aggiunto a `statesStart`:
 
 ```javascript
 alloy("sendEvent", {

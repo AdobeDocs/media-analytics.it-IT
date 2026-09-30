@@ -3,7 +3,19 @@ title: Fine stato
 description: Segnala che il lettore multimediale è uscito da uno stato del lettore tracciato.
 feature: Streaming Media
 role: Developer
-source-git-commit: 1a499f8948bb649bb61df42e4056ac869e04faa9
+product_v2:
+  - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
+feature_v2:
+  - id: c153fd90-23e1-4614-81d3-3cc7571227f7
+    internal-label: Analysis Workspace
+subfeature_v2:
+  - id: c9bb7ea6-c04f-4262-b69c-fbb8d91e3559
+    internal-label: Streaming Media
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: beb51916dece77213e1b7346573c4377d62d2b2c
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 1%
@@ -24,7 +36,7 @@ Nomi di stato validi: `fullscreen`, `mute`, `closedCaptioning`, `pictureInPictur
 
 >[!TAB Web SDK]
 
-Chiama [`sendEvent`](https://experienceleague.adobe.com/it/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.statesUpdate"` e il nome dello stato in `statesEnd`:
+Chiama [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/collection/js/commands/sendevent/overview) con `eventType: "media.statesUpdate"` e il nome dello stato in `statesEnd`:
 
 ```javascript
 alloy("sendEvent", {

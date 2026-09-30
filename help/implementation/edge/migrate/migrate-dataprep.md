@@ -4,34 +4,46 @@ description: Scopri come migrare il tipo di dati Preparazione dati per i campi p
 feature: Streaming Media
 role: User, Admin, Developer
 exl-id: 7294b147-2bef-463f-bada-cb67c16d01b0
-TQID: https://experienceleague.adobe.com/57wAwVCwAUlRcMAbFW-X6T6Fe7Ap6leOaQw2Vx9r3OA
+TQID: 'https://experienceleague.adobe.com/57wAwVCwAUlRcMAbFW-X6T6Fe7Ap6leOaQw2Vx9r3OA'
 product_v2:
   - id: e55547f1-a1ff-40c6-8978-026e40ab7fa4
+    internal-label: Analytics
 feature_v2:
   - id: fd307ce7-56f5-4ee3-af68-a7833ff6e85e
+    internal-label: API
+  - id: c153fd90-23e1-4614-81d3-3cc7571227f7
+    internal-label: Analysis Workspace
+subfeature_v2:
+  - id: c9bb7ea6-c04f-4262-b69c-fbb8d91e3559
+    internal-label: Streaming Media
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 92e1a77339d29b0ef7ec8adc76817b2ac61ee900
+    internal-label: Data collection
+source-git-commit: beb51916dece77213e1b7346573c4377d62d2b2c
 workflow-type: tm+mt
-source-wordcount: 685
+source-wordcount: '685'
 ht-degree: 0%
-
 ---
-
 # Migrare la preparazione dati per i campi personalizzati ai nuovi campi multimediali in streaming
 
-Questo documento descrive il processo di migrazione del servizio di preparazione dati esistente sopra i flussi di raccolta dati di Adobe abilitati per i dati di raccolta multimediale in streaming di Adobe. La migrazione converte una mappatura della preparazione dati dal tipo di dati Adobe Streaming Media Collection denominata &quot;Media&quot; per utilizzare il nuovo tipo di dati corrispondente denominato &quot;[Media Reporting Details](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/media-reporting-details)&quot;.
+Questo documento descrive il processo di migrazione del servizio di preparazione dati esistente sopra i flussi di raccolta dati di Adobe abilitati per i dati di raccolta multimediale in streaming di Adobe. La migrazione converte una mappatura della preparazione dati dal tipo di dati Adobe Streaming Media Collection denominata &quot;Media&quot; per utilizzare il nuovo tipo di dati corrispondente denominato &quot;[Media Reporting Details](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-reporting-details)&quot;.
 
 ## Migra preparazione dati per campi personalizzati
 
-Per eseguire la migrazione delle mappature della preparazione dati dal vecchio tipo di dati denominato &quot;Media&quot; al nuovo tipo di dati denominato &quot;[Media Reporting Details](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/data-types/media-reporting-details)&quot;, è necessario modificare le mappature della preparazione dati:
+Per eseguire la migrazione delle mappature della preparazione dati dal vecchio tipo di dati denominato &quot;Media&quot; al nuovo tipo di dati denominato &quot;[Media Reporting Details](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/data-types/media-reporting-details)&quot;, è necessario modificare le mappature della preparazione dati:
 
 >[!IMPORTANT]
 >
@@ -91,7 +103,7 @@ Per seguire più facilmente le linee guida per la migrazione, considera il segue
 
 Nell’esempio precedente, tutti i tipi di dati interessati erano di tipo String, pertanto la mappatura veniva sostituita direttamente.
 
-Se il tipo di dati del campo di origine è diverso dal tipo di dati del campo di destinazione, è necessario seguire le linee guida della [Guida alla risoluzione dei problemi della preparazione dati](https://experienceleague.adobe.com/it/docs/experience-platform/data-prep/troubleshooting-guide), [Gestione dei formati di dati con le funzioni di mappatura della preparazione dati](https://experienceleague.adobe.com/it/docs/experience-platform/data-prep/data-handling) e [Funzione di mappatura della preparazione dati](https://experienceleague.adobe.com/it/docs/experience-platform/data-prep/data-handling).
+Se il tipo di dati del campo di origine è diverso dal tipo di dati del campo di destinazione, è necessario seguire le linee guida della [Guida alla risoluzione dei problemi della preparazione dati](https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/troubleshooting-guide), [Gestione dei formati di dati con le funzioni di mappatura della preparazione dati](https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/data-handling) e [Funzione di mappatura della preparazione dati](https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/data-handling).
 
 Ad esempio, se il tipo di origine è una stringa e il tipo di destinazione è booleano, Preparazione dati può analizzare automaticamente il valore e convertirlo in booleano.
 
